@@ -1,0 +1,17 @@
+{
+  "phase": "v4 builder added, verifier pending",
+  "live_jobs": [],
+  "owner": "/root/motionforge_c02b2_coder",
+  "model": "gpt-6-sol/max/no-fallback",
+  "next": "add complete verifier and dispatch; producer not yet enabled",
+  "task": "CODEX-C02B2-PER-ACTOR-VERIFIED-REUSE",
+  "files": [
+    {
+      "bytes": 12768,
+      "sha256": "f8ce30a55cd068bae3d0f675a516abf4ccfa2a0244f91425f74009782e50b573",
+      "lines": 271,
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py"
+    }
+  ],
+  "verification": "AST parse exit0"
+}

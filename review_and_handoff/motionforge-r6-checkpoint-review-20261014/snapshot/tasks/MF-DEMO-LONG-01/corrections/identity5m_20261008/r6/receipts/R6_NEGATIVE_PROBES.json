@@ -1,0 +1,65 @@
+{
+ "at": "2026-10-12T08:10:48Z",
+ "probes": [
+  {
+   "probe": "zero_actors_vs_missing_ledger",
+   "expected_block_ok": true,
+   "detail": "zero_explicit=True; missing ledger raises (no stale fallback)"
+  },
+  {
+   "probe": "partially_visible_vs_fully_occluded",
+   "expected_block_ok": true,
+   "detail": "S73 E2 partial=True; demand-table ok=True"
+  },
+  {
+   "probe": "duplicate_full_overlap_masks",
+   "expected_block_ok": true,
+   "detail": "IoU=1.000 (duplicate >0.9 detected)"
+  },
+  {
+   "probe": "empty_mask_while_visible",
+   "expected_block_ok": true,
+   "detail": "visible->block:EMPTY_MASK_WHILE_VISIBLE(blank) S0062 E1; not_present->allow:True"
+  },
+  {
+   "probe": "same_ref_path_mutation",
+   "expected_block_ok": true,
+   "detail": "before ok=True; after mutation ok=False (casts:C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20)"
+  },
+  {
+   "probe": "mismatched_semantic_hash",
+   "expected_block_ok": true,
+   "detail": "match ok; tamper:SEMANTIC_REVIEW_TAMPERED artifact hash mismatch keys:FX_key_; stale:SEMANTIC_REVIEW_STALE input deps_sha changed keys:FX_key_t"
+  },
+  {
+   "probe": "source_copy_rejected",
+   "expected_block_ok": true,
+   "detail": "byte-identical copy detected=True (pipeline must reject before review)"
+  },
+  {
+   "probe": "reencoded_known_bad_r5",
+   "expected_block_ok": true,
+   "detail": "review FAIL blocks: SEMANTIC_REVIEW_FAIL keys:FX_bad_reenc"
+  },
+  {
+   "probe": "engine_rc_fail_or_stale_output",
+   "expected_block_ok": true,
+   "detail": "BLEND_STALE S0099blend: no outputs written during this run (tail-fill suspected)"
+  },
+  {
+   "probe": "event_key_off_grid",
+   "expected_block_ok": true,
+   "detail": "event fids from contacts: 0 (block when absent=True)"
+  },
+  {
+   "probe": "nested_manifest_stale_terminal",
+   "expected_block_ok": true,
+   "detail": "stale entries detected=1"
+  },
+  {
+   "probe": "valid_unchanged_reuse_control",
+   "expected_block_ok": true,
+   "detail": "reuse=True (verified-reuse)"
+  }
+ ]
+}

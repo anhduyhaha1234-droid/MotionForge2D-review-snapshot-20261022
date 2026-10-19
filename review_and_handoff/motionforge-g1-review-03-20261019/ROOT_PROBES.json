@@ -1,0 +1,327 @@
+{
+  "at_utc": "2026-10-19T11:40:07.019537+00:00",
+  "probes": [
+    {
+      "probe": "cli_help",
+      "expected": "exit0 usage",
+      "actual": {
+        "exit": 0,
+        "usage": true
+      }
+    },
+    {
+      "probe": "asset_valid_control",
+      "expected": "accept genuine actual-producer deps",
+      "actual": [
+        true,
+        "ok"
+      ]
+    },
+    {
+      "probe": "asset_grey_missing",
+      "expected": "reject resealed invalid consumed reference",
+      "actual": [
+        false,
+        "complete asset deps invalid: restyle mode missing consumed grey_ref"
+      ]
+    },
+    {
+      "probe": "asset_grey_null",
+      "expected": "reject resealed invalid consumed reference",
+      "actual": [
+        false,
+        "complete asset deps invalid: restyle mode missing consumed grey_ref"
+      ]
+    },
+    {
+      "probe": "asset_grey_wrong_role",
+      "expected": "reject resealed invalid consumed reference",
+      "actual": [
+        false,
+        "complete asset deps invalid: grey_ref file record malformed"
+      ]
+    },
+    {
+      "probe": "asset_grey_wrong_path",
+      "expected": "reject resealed invalid consumed reference",
+      "actual": [
+        false,
+        "complete asset deps invalid: grey_ref differs from current canonical path"
+      ]
+    },
+    {
+      "probe": "asset_graph_sampler",
+      "expected": "reject effective graph mutation despite resealed digest",
+      "actual": [
+        false,
+        "complete asset deps invalid: generated asset graph sampler 'heun' differs from recipe 'euler'"
+      ]
+    },
+    {
+      "probe": "asset_graph_wrong_grey_path",
+      "expected": "reject effective graph mutation despite resealed digest",
+      "actual": [
+        false,
+        "complete asset deps invalid: generated asset graph R1_LOAD does not reference canonical grey ref 'identity5m_20261008/r6/_grey_64.png': wrong_invocation/fake_grey.png"
+      ]
+    },
+    {
+      "probe": "asset_graph_missing_R1",
+      "expected": "reject effective graph mutation despite resealed digest",
+      "actual": [
+        false,
+        "complete asset deps invalid: generated asset graph missing required node R1_LOAD"
+      ]
+    },
+    {
+      "probe": "matrix_empty",
+      "expected": "UNKNOWN",
+      "actual": {
+        "Q01": "UNKNOWN",
+        "Q05": "UNKNOWN",
+        "Q07": "UNKNOWN",
+        "Q08": "UNKNOWN"
+      }
+    },
+    {
+      "probe": "matrix_fake_evidence",
+      "expected": "no PASS for invalid media, nonexistent tests, fake deps, stale receipts",
+      "actual": {
+        "Q01": "UNKNOWN",
+        "Q05": "UNKNOWN",
+        "Q07": "UNKNOWN",
+        "Q08": "UNKNOWN"
+      }
+    },
+    {
+      "probe": "engineering_no_proof",
+      "expected": "GateBlock",
+      "actual": {
+        "exception": "GateBlock",
+        "detail": "ENGINEERING_BATCH_NO_PROOF: missing supporting proof"
+      }
+    },
+    {
+      "probe": "unknown_mode",
+      "expected": "GateBlock",
+      "actual": {
+        "exception": "GateBlock",
+        "detail": "UNKNOWN_BATCH_MODE: finla"
+      }
+    },
+    {
+      "probe": "final_missing_artifacts",
+      "expected": "GateBlock",
+      "actual": {
+        "exception": "GateBlock",
+        "detail": "ARTIFACT_KIND master=None"
+      }
+    },
+    {
+      "probe": "manifest_work_ancestor",
+      "expected": "includes must_include.json, skips internal work",
+      "actual": [
+        "must_include.json"
+      ]
+    },
+    {
+      "probe": "matrix_gate_before_publish",
+      "expected": "blocked candidate must not be published as submission",
+      "actual": {
+        "result": {
+          "exception": "GateBlock",
+          "detail": "ENGINEERING_BATCH_Q_NOT_PASS Q05=UNKNOWN, Q07=UNKNOWN"
+        },
+        "matrix_written": false,
+        "manifest_written": false
+      }
+    },
+    {
+      "probe": "tracker_empty",
+      "expected": "accept only valid",
+      "actual": {
+        "returned": [
+          false,
+          "expected_T and expected_N must be strictly positive"
+        ]
+      }
+    },
+    {
+      "probe": "tracker_vis_nan",
+      "expected": "accept only valid",
+      "actual": {
+        "returned": [
+          false,
+          "vis contains non-finite values (NaN or Inf)"
+        ]
+      }
+    },
+    {
+      "probe": "tracker_vis9",
+      "expected": "accept only valid",
+      "actual": {
+        "returned": [
+          false,
+          "vis values must be binary or within [0, 1] range"
+        ]
+      }
+    },
+    {
+      "probe": "tracker_valid",
+      "expected": "accept only valid",
+      "actual": {
+        "returned": [
+          true,
+          "ok"
+        ]
+      }
+    },
+    {
+      "probe": "event_boundaries",
+      "expected": "include20/50",
+      "actual": [
+        10,
+        20,
+        29,
+        30,
+        43,
+        50
+      ]
+    },
+    {
+      "probe": "event_conflict",
+      "expected": "reject",
+      "actual": {
+        "exception": "ValueError",
+        "detail": "conflicting event f (9) vs frame (43) in S0021"
+      }
+    },
+    {
+      "probe": "event_invalid_contact",
+      "expected": "reject",
+      "actual": {
+        "exception": "ValueError",
+        "detail": "contact from=-10 (fid=-9) out of range [1, 60] in S0021"
+      }
+    },
+    {
+      "probe": "tracker_actual_cli_frame43",
+      "expected": "frame43 preserved; out-of-range event rejected",
+      "actual": {
+        "status": {
+          "returned": null
+        },
+        "windows": [
+          {
+            "kind": "event",
+            "event": "entry",
+            "fid": 43,
+            "before": [
+              38,
+              43
+            ],
+            "contact": [
+              43,
+              46
+            ],
+            "hold": [
+              46,
+              50
+            ],
+            "release": [
+              50,
+              50
+            ],
+            "drift_contact_mean": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "probe": "tracker_actual_cli_out_of_range",
+      "expected": "frame43 preserved; out-of-range event rejected",
+      "actual": {
+        "status": {
+          "exception": "SystemExit",
+          "detail": "COTRACKER_INVALID_EVENT S0034: event fid 701 out of range [1, 50] in S0034"
+        },
+        "windows": null
+      }
+    },
+    {
+      "probe": "propagate_actual_cut_caller",
+      "expected": "cuts argument passed or intra-shot cuts explicitly rejected",
+      "actual": {
+        "fids": [
+          1,
+          11,
+          21,
+          31,
+          41
+        ],
+        "m": 41,
+        "cuts": []
+      }
+    },
+    {
+      "probe": "propagate_real_child_rc7",
+      "expected": "valid rc0; all invalid nonzero with invalidated stale manifest",
+      "actual": {
+        "exit": 1,
+        "stdout": "BLOCK S0021: PROPAGATE BLOCK [S0021] run 0 rc=7\n",
+        "stderr": "PROPAGATE_FAILED: 1 shots failed: [('S0021', 'PROPAGATE BLOCK [S0021] run 0 rc=7')]\n",
+        "manifest_exists": false,
+        "manifest_stale": false,
+        "receipt_exists": true
+      }
+    },
+    {
+      "probe": "propagate_real_child_valid",
+      "expected": "valid rc0; all invalid nonzero with invalidated stale manifest",
+      "actual": {
+        "exit": 1,
+        "stdout": "BLOCK S0021: PROPAGATE BLOCK [S0021] name 'Image' is not defined\n",
+        "stderr": "PROPAGATE_FAILED: 1 shots failed: [('S0021', \"PROPAGATE BLOCK [S0021] name 'Image' is not defined\")]\n",
+        "manifest_exists": false,
+        "manifest_stale": false,
+        "receipt_exists": true
+      }
+    },
+    {
+      "probe": "propagate_real_child_wrong",
+      "expected": "valid rc0; all invalid nonzero with invalidated stale manifest",
+      "actual": {
+        "exit": 1,
+        "stdout": "BLOCK S0021: PROPAGATE BLOCK [S0021] run 0 missing expected frame 0001.jpg, got ['9001.jpg', '9002.jpg']\n",
+        "stderr": "PROPAGATE_FAILED: 1 shots failed: [('S0021', \"PROPAGATE BLOCK [S0021] run 0 missing expected frame 0001.jpg, got ['9001.jpg', '9002.jpg']\")]\n",
+        "manifest_exists": false,
+        "manifest_stale": false,
+        "receipt_exists": true
+      }
+    },
+    {
+      "probe": "propagate_real_child_extra",
+      "expected": "valid rc0; all invalid nonzero with invalidated stale manifest",
+      "actual": {
+        "exit": 1,
+        "stdout": "BLOCK S0021: PROPAGATE BLOCK [S0021] run 0 partial/extra frames 3/2: ['0000.jpg', '0001.jpg', '0002.jpg']\n",
+        "stderr": "PROPAGATE_FAILED: 1 shots failed: [('S0021', \"PROPAGATE BLOCK [S0021] run 0 partial/extra frames 3/2: ['0000.jpg', '0001.jpg', '0002.jpg']\")]\n",
+        "manifest_exists": false,
+        "manifest_stale": false,
+        "receipt_exists": true
+      }
+    },
+    {
+      "probe": "propagate_real_child_corrupt",
+      "expected": "valid rc0; all invalid nonzero with invalidated stale manifest",
+      "actual": {
+        "exit": 1,
+        "stdout": "BLOCK S0021: PROPAGATE BLOCK [S0021] name 'Image' is not defined\n",
+        "stderr": "PROPAGATE_FAILED: 1 shots failed: [('S0021', \"PROPAGATE BLOCK [S0021] name 'Image' is not defined\")]\n",
+        "manifest_exists": false,
+        "manifest_stale": false,
+        "receipt_exists": true
+      }
+    }
+  ]
+}

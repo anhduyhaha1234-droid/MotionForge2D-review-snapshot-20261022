@@ -1,0 +1,17 @@
+{
+  "verification": "AST parse exit0",
+  "owner": "/root/motionforge_c02b2_coder",
+  "task": "CODEX-C02B2-PER-ACTOR-VERIFIED-REUSE",
+  "next": "run actual producer replay with complete fixture facts",
+  "live_jobs": [],
+  "files": [
+    {
+      "sha256": "f421ecdd8701e41d8c036ec6ded6f55811b91b3c32426dc75b4ad800b7120bfd",
+      "bytes": 4673,
+      "lines": 60,
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b2-worker\\probe_c02b2_v4.py"
+    }
+  ],
+  "phase": "fixture-only probe extension",
+  "model": "gpt-6-sol/max/no-fallback"
+}

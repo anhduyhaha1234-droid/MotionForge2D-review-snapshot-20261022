@@ -1,0 +1,30 @@
+{
+ "shots": 54,
+ "zero_explicit": [
+  "S0032",
+  "S0035",
+  "S0037",
+  "S0040",
+  "S0042",
+  "S0045",
+  "S0047",
+  "S0049",
+  "S0050",
+  "S0052",
+  "S0054",
+  "S0058",
+  "S0059",
+  "S0060",
+  "S0065",
+  "S0066",
+  "S0074"
+ ],
+ "unknown_entities": [
+  "S0021"
+ ],
+ "visible_actors": 74,
+ "partially_visible_actors": 3,
+ "not_present_windows": 7,
+ "ledger": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\source_actor_ledger.jsonl",
+ "at": "2026-10-12"
+}

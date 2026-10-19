@@ -1,0 +1,170 @@
+{
+  "utc": "2026-10-12T10:45:05.745281+00:00",
+  "scope": "synthetic reference contract only; no MotionForge production import or media render",
+  "passed": 20,
+  "total": 20,
+  "cases": [
+    {
+      "name": "synthetic source-locked valid",
+      "passed": true,
+      "errors": [],
+      "expected_error": null
+    },
+    {
+      "name": "fractional rate retains exact frame count",
+      "passed": true,
+      "errors": [],
+      "expected_error": null
+    },
+    {
+      "name": "bool is not a frame rate",
+      "passed": true,
+      "errors": [
+        "FPS_NUM_INVALID"
+      ],
+      "expected_error": "FPS_NUM_INVALID"
+    },
+    {
+      "name": "zero denominator",
+      "passed": true,
+      "errors": [
+        "FPS_DEN_INVALID"
+      ],
+      "expected_error": "FPS_DEN_INVALID"
+    },
+    {
+      "name": "locked missing last frame",
+      "passed": true,
+      "errors": [
+        "SOURCE_LOCK_FRAME_COUNT_MISMATCH"
+      ],
+      "expected_error": "SOURCE_LOCK_FRAME_COUNT_MISMATCH"
+    },
+    {
+      "name": "locked cut forbidden",
+      "passed": true,
+      "errors": [
+        "CUE[0]:SOURCE_LOCK_MUTATION_FORBIDDEN"
+      ],
+      "expected_error": "SOURCE_LOCK_MUTATION_FORBIDDEN"
+    },
+    {
+      "name": "locked overlay forbidden",
+      "passed": true,
+      "errors": [
+        "CUE[0]:SOURCE_LOCK_MUTATION_FORBIDDEN"
+      ],
+      "expected_error": "SOURCE_LOCK_MUTATION_FORBIDDEN"
+    },
+    {
+      "name": "locked audio rewrite forbidden",
+      "passed": true,
+      "errors": [
+        "SOURCE_LOCK_POLICY_VIOLATION"
+      ],
+      "expected_error": "SOURCE_LOCK_POLICY_VIOLATION"
+    },
+    {
+      "name": "cue outside final boundary",
+      "passed": true,
+      "errors": [
+        "CUE[0]:FRAME_RANGE_INVALID"
+      ],
+      "expected_error": "FRAME_RANGE_INVALID"
+    },
+    {
+      "name": "fractional frame forbidden",
+      "passed": true,
+      "errors": [
+        "CUE[0]:FRAME_RANGE_INVALID"
+      ],
+      "expected_error": "FRAME_RANGE_INVALID"
+    },
+    {
+      "name": "last frame valid",
+      "passed": true,
+      "errors": [],
+      "expected_error": null
+    },
+    {
+      "name": "duplicate cue id",
+      "passed": true,
+      "errors": [
+        "CUE[1]:ID_DUPLICATE"
+      ],
+      "expected_error": "ID_DUPLICATE"
+    },
+    {
+      "name": "stale source evidence",
+      "passed": true,
+      "errors": [
+        "CUE[0]:SOURCE_EVENT_HASH_MISMATCH"
+      ],
+      "expected_error": "SOURCE_EVENT_HASH_MISMATCH"
+    },
+    {
+      "name": "measured launch word",
+      "passed": true,
+      "errors": [],
+      "expected_error": null
+    },
+    {
+      "name": "estimated word cannot claim sync",
+      "passed": true,
+      "errors": [
+        "CUE[0]:WORD_TIMING_NOT_MEASURED"
+      ],
+      "expected_error": "WORD_TIMING_NOT_MEASURED"
+    },
+    {
+      "name": "missing evidence",
+      "passed": true,
+      "errors": [
+        "CUE[0]:FIELDS_MISMATCH",
+        "CUE[0]:EVIDENCE_REQUIRED"
+      ],
+      "expected_error": "EVIDENCE_REQUIRED"
+    },
+    {
+      "name": "unrecognized extra field",
+      "passed": true,
+      "errors": [
+        "PLAN_FIELDS_MISMATCH"
+      ],
+      "expected_error": "PLAN_FIELDS_MISMATCH"
+    },
+    {
+      "name": "unknown mode fails closed",
+      "passed": true,
+      "errors": [
+        "MODE_INVALID"
+      ],
+      "expected_error": "MODE_INVALID"
+    },
+    {
+      "name": "malformed mode list fails closed",
+      "passed": true,
+      "errors": [
+        "MODE_INVALID"
+      ],
+      "expected_error": "MODE_INVALID"
+    },
+    {
+      "name": "footage edit requires mapped audio",
+      "passed": true,
+      "errors": [
+        "EDIT_MAP_REQUIRED"
+      ],
+      "expected_error": "EDIT_MAP_REQUIRED"
+    }
+  ],
+  "cli_exit_code": 0,
+  "cli_result": {
+    "contract_valid": true,
+    "errors": [],
+    "media_verified": false,
+    "quality_accepted": false
+  },
+  "production_test_suite_run": false,
+  "video_quality_verified": false
+}

@@ -1,0 +1,148 @@
+{
+  "created_utc": "2026-10-18T04:55:52.065528+00:00",
+  "submission_id": "g1-candidate-02",
+  "total_rows": 20,
+  "passed_rows": 20,
+  "rows": [
+    {
+      "row": "M01",
+      "finding": "R01",
+      "name": "test_asset_missing_ref_rejected",
+      "verdict": "PASS",
+      "detail": "Missing grey_ref in consumed rejected with ValueError"
+    },
+    {
+      "row": "M02",
+      "finding": "R01",
+      "name": "test_asset_effective_graph_mismatch",
+      "verdict": "PASS",
+      "detail": "Graph sampler 'heun' vs recipe 'euler' strictly rejected"
+    },
+    {
+      "row": "M03",
+      "finding": "R01",
+      "name": "test_asset_actual_producer_consumer_contract",
+      "verdict": "PASS",
+      "detail": "Actual run_key generates valid v4 asset deps; graph mutation blocks"
+    },
+    {
+      "row": "M04",
+      "finding": "R01",
+      "name": "test_asset_controls_and_regressions",
+      "verdict": "PASS",
+      "detail": "Restyle and black passthrough controls pass; 14 A1 + 10 A2 + 40 regressions pass"
+    },
+    {
+      "row": "M05",
+      "finding": "R02",
+      "name": "test_cotracker_cli_help_and_fixture_entry",
+      "verdict": "PASS",
+      "detail": "r6_cotracker.py --help exits 0 with usage"
+    },
+    {
+      "row": "M06",
+      "finding": "R03",
+      "name": "test_cotracker_invalid_tensor_matrix",
+      "verdict": "PASS",
+      "detail": "T=0, N=0, empty arrays, tracks NaN, vis NaN, vis > 1.0 (9.0) rejected"
+    },
+    {
+      "row": "M07",
+      "finding": "R03",
+      "name": "test_cotracker_window_coverage_controls",
+      "verdict": "PASS",
+      "detail": "Windows with no visible pairs output None, JSON contains no NaN"
+    },
+    {
+      "row": "M08",
+      "finding": "R04",
+      "name": "test_propagate_cli_child_nonzero",
+      "verdict": "PASS",
+      "detail": "Child rc=7 causes run_shot SystemExit and main() nonzero exit"
+    },
+    {
+      "row": "M09",
+      "finding": "R04",
+      "name": "test_propagate_partial_stale_retry",
+      "verdict": "PASS",
+      "detail": "Stale blend_manifest.json unlinked immediately on child failure, failure receipt written"
+    },
+    {
+      "row": "M10",
+      "finding": "R05",
+      "name": "test_event_transition_end_to_end",
+      "verdict": "PASS",
+      "detail": "Canonical event_fids_for extracts all transition boundaries (10, 20, 29, 30, 43, 50)"
+    },
+    {
+      "row": "M11",
+      "finding": "R05",
+      "name": "test_event_bounds_and_cut_call_path",
+      "verdict": "PASS",
+      "detail": "Conflicting f vs frame rejected; plan_runs splits cleanly across hard cuts"
+    },
+    {
+      "row": "M12",
+      "finding": "R06",
+      "name": "test_matrix_empty_stale_wrong_evidence",
+      "verdict": "PASS",
+      "detail": "0-byte files produce UNKNOWN; real parsed evidence required for PASS"
+    },
+    {
+      "row": "M13",
+      "finding": "R06",
+      "name": "test_batch_gate_strict_modes_and_evidence",
+      "verdict": "PASS",
+      "detail": "Unknown mode raises UNKNOWN_BATCH_MODE GateBlock; final mode enforces full artifacts"
+    },
+    {
+      "row": "M14",
+      "finding": "R06",
+      "name": "test_submit_actual_caller_gate",
+      "verdict": "PASS",
+      "detail": "gate_submit calls gate_batch_conformance in final mode"
+    },
+    {
+      "row": "M15",
+      "finding": "R07",
+      "name": "test_manifest_work_ancestor",
+      "verdict": "PASS",
+      "detail": "Manifest relative filtering preserves files under Codex/work, only excludes internal R6/work"
+    },
+    {
+      "row": "M16",
+      "finding": "R07",
+      "name": "test_manifest_namespace_and_finalization",
+      "verdict": "PASS",
+      "detail": "Manifest writes to invocation NS/R6G_MANIFEST.json and excludes self-hash"
+    },
+    {
+      "row": "M17",
+      "finding": "R08",
+      "name": "test_q11_existing_proof_binding",
+      "verdict": "PASS",
+      "detail": "Hashes of invocation_runtime.py, dispatch_long.py, terminal_contract.py match 34/34 proof"
+    },
+    {
+      "row": "M18",
+      "finding": "R08",
+      "name": "test_q11_actual_race_and_lifecycle",
+      "verdict": "PASS",
+      "detail": "2 live multiprocessing.Process rendezvous barrier proves exactly 1 winner and 1 loser"
+    },
+    {
+      "row": "M19",
+      "finding": "R09",
+      "name": "test_candidate_identity_reconciliation",
+      "verdict": "PASS",
+      "detail": "27 protected files reconciled: 19 baseline match, 8 authorized G1-R1 modified"
+    },
+    {
+      "row": "M20",
+      "finding": "R09",
+      "name": "test_resume_state_truth",
+      "verdict": "PASS",
+      "detail": "STATE.json, CHECKPOINT.json, RESUME.md, LIVE_JOBS.json reconciled and consistent"
+    }
+  ]
+}

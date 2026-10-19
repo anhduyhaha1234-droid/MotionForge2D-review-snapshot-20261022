@@ -1,0 +1,104 @@
+ M app/api/app.py
+ M app/api/deps.py
+ M app/persistence/models.py
+ M channels.json
+ M docs/pm/CODEX_PM_HANDOFF.md
+ M docs/pm/HERMES_AUTOPILOT_RULES.md
+ M docs/pm/ROADMAP.md
+ M docs/pm/sessions/S04-T01-ui-tokens-navigation/LOG.md
+ M docs/pm/sessions/S04-T03-channel-management/LOG.md
+ M docs/pm/sessions/S04-T03-channel-management/REPORT.md
+ M docs/pm/sessions/S06-T05-pack-publish-ux/LOG.md
+ M docs/pm/sessions/S06-T05-pack-publish-ux/REPORT.md
+ M frontend/src/app/(app)/channels/page.tsx
+ M frontend/src/app/(app)/characters/page.tsx
+ M frontend/src/app/(app)/page.tsx
+ M frontend/src/app/(app)/projects/[id]/page.tsx
+ M frontend/src/app/(app)/projects/page.tsx
+ M frontend/src/components/Dashboard.tsx
+ M frontend/src/components/LegacyWorkspace.tsx
+ M frontend/src/components/layout/AppNav.tsx
+ M frontend/src/components/layout/AppShell.tsx
+ M frontend/src/components/layout/StageRail.tsx
+ M frontend/src/lib/api.ts
+ M frontend/src/stores/project.ts
+ M tests/test_durable_job_persistence.py
+ M tests/test_persistence_bootstrap.py
+?? .codex-review/
+?? app/api/routes/durable_characters.py
+?? app/persistence/characters.py
+?? app/schemas/characters.py
+?? app/workflow/character_preset_importer.py
+?? app/workflow/character_validator.py
+?? data/
+?? diagnostics/
+?? docs/pm/CODEX_SESSION_HANDOFF_20261002.md
+?? docs/pm/prompts/CODEX_PROJECT_PM_CONTINUATION_S11_C4_REVIEW_2026-09-05.md
+?? docs/pm/prompts/CODEX_S11_C4_R1_REVIEW_2026-09-05.md
+?? docs/pm/prompts/S11_C1_FULL_SCOPE_READINESS_RESTART_EXIT_MANAGER_2026-09-04.md
+?? docs/pm/prompts/S11_C2_COMPLETION_AUTHORITY_TARGETED_RESTART_OWNER_EXIT_MANAGER_2026-09-04.md
+?? docs/pm/prompts/S11_C3_EXACT_IDENTITY_RESTART_PROOF_FAIL_FAST_EXIT_MANAGER_2026-09-04.md
+?? docs/pm/prompts/S11_C4_PRODUCTION_REGISTRY_FAIL_CLOSED_FINAL_EXIT_MANAGER_2026-09-05.md
+?? docs/pm/prompts/S11_C4_R1_BOOTSTRAP_ATOMICITY_ROUTE_BLOCKED_2026-09-05.md
+?? docs/pm/prompts/S11_C4_R2_BOOTSTRAP_TRANSACTION_OWNER_TRANSFER_MANAGER_2026-09-05.md
+?? docs/pm/prompts/S11_C4_R3_DURABLE_CONTENTION_EVIDENCE_CLOSURE_MANAGER_2026-09-05.md
+?? docs/pm/prompts/S11_C4_R4_DETERMINISTIC_LOCK_EVIDENCE_CLOSURE_MANAGER_2026-09-06.md
+?? docs/pm/prompts/S11_C4_R5_LIVE_LEDGER_EVIDENCE_ONLY_MANAGER_2026-09-06.md
+?? docs/pm/reviews/S11_C1_PM_REREVIEW_2026-09-04.md
+?? docs/pm/reviews/S11_C2_PM_REREVIEW_2026-09-04.md
+?? docs/pm/reviews/S11_C3_PM_REREVIEW_2026-09-05.md
+?? docs/pm/reviews/S11_C4_PM_REREVIEW_2026-09-05.md
+?? docs/pm/reviews/S11_C4_R1_PM_REREVIEW_2026-09-05.md
+?? docs/pm/reviews/S11_C4_R2_PM_REREVIEW_2026-09-05.md
+?? docs/pm/reviews/S11_C4_R3_PM_REREVIEW_2026-09-06.md
+?? docs/pm/reviews/S11_C4_R4_PM_REREVIEW_2026-09-06.md
+?? docs/pm/reviews/S11_T02_T06_PM_REVIEW_2026-09-04.md
+?? docs/pm/reviews/WORKER_MODEL_MUSE13_FREE_DEFERRED_DIRECTIVE_2026-09-03.md
+?? docs/pm/sessions/S04-T05-guided-shell/
+?? frontend/e2e/ui-correction.spec.ts
+?? migrations/versions/d5e6f7a8b9c0_character_library_schema.py
+?? notepad-session-backup-20260910/
+?? notification-full-reset-20260912-021511/
+?? notification-full-reset-20260912-021526/
+?? scripts/watch-s08-a01-c1.sh
+?? scripts/watch-s08-a01.sh
+?? scripts/watch-s08-h01.sh
+?? scripts/watch-s08-h02.sh
+?? scripts/watch-s08-h02c1.sh
+?? scripts/watch-s08-h02c2.sh
+?? scripts/watch-s08-h02c3.sh
+?? scripts/watch-s08-h02c4.sh
+?? scripts/watch-s08-h02c4c5.sh
+?? scripts/watch-s08-r01.sh
+?? scripts/watch-s08-t01.sh
+?? scripts/watch-s08-t01c2.sh
+?? scripts/watch-s08-t02-c1-exit.sh
+?? scripts/watch-s08-t02.sh
+?? scripts/watch-s08-t02c1.sh
+?? scripts/watch-s08-t02c2.sh
+?? scripts/watch-s08-t03.sh
+?? scripts/watch-s08-t03c1.sh
+?? scripts/watch-s08-t03c2.sh
+?? scripts/watch-s08-t04.sh
+?? scripts/watch-s08-t04c1.sh
+?? scripts/watch-s08-t04c2.sh
+?? scripts/watch-s08-t05.sh
+?? scripts/watch-s08-t05c1.sh
+?? scripts/watch-s08-t05c2.sh
+?? scripts/watch-s08-t06.sh
+?? scripts/watch-s08-t06c1.sh
+?? scripts/watch-s08-t06c2.sh
+?? start-cache-backup-20260912-025407/
+?? tests/fixtures/legacy_import/corrupt/projects/
+?? tests/fixtures/legacy_import/valid/projects/
+?? tests/test_character_domain.py
+?? tests/test_character_preset_importer.py
+?? tests/test_character_validator.py
+?? tests/test_pack_publish_ux.py
+?? tools/
+?? windows-notification-db-backup-20260912-011517/
+?? windows-notifications-backup-20260910.reg
+?? wpn-inspect-20260914-144145/
+?? wpndatabase-inspect-20260912-012000.db
+?? wpndatabase-inspect-20260912-012000.db-shm
+?? wpndatabase-inspect-20260912-012000.db-wal

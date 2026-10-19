@@ -1,0 +1,443 @@
+{
+  "observed_at": "2026-10-17T23:29:51.717413+07:00",
+  "gap": {
+    "last_before": {
+      "id": 63324,
+      "timestamp": "2026-10-17T08:55:33.986Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 405934,
+      "completionTokens": 797
+    },
+    "first_after": {
+      "id": 63325,
+      "timestamp": "2026-10-17T16:25:08.824Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 369668,
+      "completionTokens": 378
+    },
+    "seconds": 26974.838,
+    "last_before_local": "2026-10-17T15:55:33.986000+07:00",
+    "first_after_local": "2026-10-17T23:25:08.824000+07:00",
+    "all_router_usage_rows_strictly_between": 0
+  },
+  "recent_rows": [
+    {
+      "id": 63299,
+      "timestamp": "2026-10-17T08:50:29.279Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 344690,
+      "completionTokens": 5733
+    },
+    {
+      "id": 63300,
+      "timestamp": "2026-10-17T08:50:38.331Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 350668,
+      "completionTokens": 184
+    },
+    {
+      "id": 63301,
+      "timestamp": "2026-10-17T08:50:48.695Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 357545,
+      "completionTokens": 563
+    },
+    {
+      "id": 63302,
+      "timestamp": "2026-10-17T08:50:55.036Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 358752,
+      "completionTokens": 180
+    },
+    {
+      "id": 63303,
+      "timestamp": "2026-10-17T08:51:11.845Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 362579,
+      "completionTokens": 1373
+    },
+    {
+      "id": 63304,
+      "timestamp": "2026-10-17T08:51:19.289Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 364640,
+      "completionTokens": 177
+    },
+    {
+      "id": 63305,
+      "timestamp": "2026-10-17T08:51:32.256Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 368211,
+      "completionTokens": 387
+    },
+    {
+      "id": 63306,
+      "timestamp": "2026-10-17T08:51:40.012Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 369165,
+      "completionTokens": 180
+    },
+    {
+      "id": 63307,
+      "timestamp": "2026-10-17T08:51:54.386Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 372297,
+      "completionTokens": 249
+    },
+    {
+      "id": 63308,
+      "timestamp": "2026-10-17T08:52:11.590Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 378873,
+      "completionTokens": 408
+    },
+    {
+      "id": 63309,
+      "timestamp": "2026-10-17T08:52:21.519Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 381310,
+      "completionTokens": 434
+    },
+    {
+      "id": 63310,
+      "timestamp": "2026-10-17T08:52:55.169Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 381778,
+      "completionTokens": 5031
+    },
+    {
+      "id": 63311,
+      "timestamp": "2026-10-17T08:53:01.184Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 386994,
+      "completionTokens": 135
+    },
+    {
+      "id": 63312,
+      "timestamp": "2026-10-17T08:53:06.867Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 387518,
+      "completionTokens": 184
+    },
+    {
+      "id": 63313,
+      "timestamp": "2026-10-17T08:53:12.540Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 387814,
+      "completionTokens": 112
+    },
+    {
+      "id": 63314,
+      "timestamp": "2026-10-17T08:53:30.681Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 388264,
+      "completionTokens": 1753
+    },
+    {
+      "id": 63315,
+      "timestamp": "2026-10-17T08:53:52.527Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 384263,
+      "completionTokens": 805
+    },
+    {
+      "id": 63316,
+      "timestamp": "2026-10-17T08:54:09.619Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 385114,
+      "completionTokens": 31
+    },
+    {
+      "id": 63317,
+      "timestamp": "2026-10-17T08:54:14.153Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 392335,
+      "completionTokens": 78
+    },
+    {
+      "id": 63318,
+      "timestamp": "2026-10-17T08:54:27.251Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 398365,
+      "completionTokens": 1042
+    },
+    {
+      "id": 63319,
+      "timestamp": "2026-10-17T08:54:37.553Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 399940,
+      "completionTokens": 372
+    },
+    {
+      "id": 63320,
+      "timestamp": "2026-10-17T08:55:00.270Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 400845,
+      "completionTokens": 2352
+    },
+    {
+      "id": 63321,
+      "timestamp": "2026-10-17T08:55:06.508Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 403297,
+      "completionTokens": 230
+    },
+    {
+      "id": 63322,
+      "timestamp": "2026-10-17T08:55:14.827Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 403563,
+      "completionTokens": 640
+    },
+    {
+      "id": 63323,
+      "timestamp": "2026-10-17T08:55:22.953Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 404267,
+      "completionTokens": 411
+    },
+    {
+      "id": 63324,
+      "timestamp": "2026-10-17T08:55:33.986Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 405934,
+      "completionTokens": 797
+    },
+    {
+      "id": 63325,
+      "timestamp": "2026-10-17T16:25:08.824Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 369668,
+      "completionTokens": 378
+    },
+    {
+      "id": 63326,
+      "timestamp": "2026-10-17T16:25:30.468Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 381281,
+      "completionTokens": 679
+    },
+    {
+      "id": 63327,
+      "timestamp": "2026-10-17T16:25:37.498Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 382012,
+      "completionTokens": 222
+    },
+    {
+      "id": 63328,
+      "timestamp": "2026-10-17T16:26:00.169Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 382321,
+      "completionTokens": 1947
+    },
+    {
+      "id": 63329,
+      "timestamp": "2026-10-17T16:26:25.680Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 385098,
+      "completionTokens": 2398
+    },
+    {
+      "id": 63330,
+      "timestamp": "2026-10-17T16:26:32.411Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 387559,
+      "completionTokens": 46
+    },
+    {
+      "id": 63331,
+      "timestamp": "2026-10-17T16:26:39.121Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 387810,
+      "completionTokens": 58
+    },
+    {
+      "id": 63332,
+      "timestamp": "2026-10-17T16:27:02.271Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 388006,
+      "completionTokens": 2031
+    },
+    {
+      "id": 63333,
+      "timestamp": "2026-10-17T16:27:17.468Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 390076,
+      "completionTokens": 48
+    },
+    {
+      "id": 63334,
+      "timestamp": "2026-10-17T16:27:38.885Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 390159,
+      "completionTokens": 2622
+    },
+    {
+      "id": 63335,
+      "timestamp": "2026-10-17T16:27:46.318Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 392961,
+      "completionTokens": 199
+    },
+    {
+      "id": 63336,
+      "timestamp": "2026-10-17T16:27:53.185Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 393421,
+      "completionTokens": 217
+    },
+    {
+      "id": 63337,
+      "timestamp": "2026-10-17T16:27:58.386Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 393821,
+      "completionTokens": 111
+    },
+    {
+      "id": 63338,
+      "timestamp": "2026-10-17T16:28:04.326Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 394557,
+      "completionTokens": 104
+    },
+    {
+      "id": 63339,
+      "timestamp": "2026-10-17T16:28:25.443Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 395083,
+      "completionTokens": 1922
+    },
+    {
+      "id": 63340,
+      "timestamp": "2026-10-17T16:28:44.228Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 391620,
+      "completionTokens": 380
+    },
+    {
+      "id": 63341,
+      "timestamp": "2026-10-17T16:28:55.297Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 399190,
+      "completionTokens": 165
+    },
+    {
+      "id": 63342,
+      "timestamp": "2026-10-17T16:29:09.224Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 405307,
+      "completionTokens": 1438
+    },
+    {
+      "id": 63343,
+      "timestamp": "2026-10-17T16:29:28.567Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 406893,
+      "completionTokens": 222
+    },
+    {
+      "id": 63344,
+      "timestamp": "2026-10-17T16:29:35.244Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 407237,
+      "completionTokens": 208
+    }
+  ]
+}

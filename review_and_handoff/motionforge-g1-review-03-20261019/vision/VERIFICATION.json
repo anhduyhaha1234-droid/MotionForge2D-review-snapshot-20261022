@@ -1,0 +1,48 @@
+{
+  "direct_image": "PASS 7/7",
+  "installed_helper_image_checks": {
+    "code": true,
+    "left_shape": true,
+    "left_color": true,
+    "center_shape": true,
+    "center_color": true,
+    "right_shape_count": true,
+    "right_color": true
+  },
+  "helper_pass": true,
+  "native_Hermes_tool_envelope_test": "INCOMPLETE: one request timed out after90s; no capability override applied; does not prove model lacks vision",
+  "config_sha256": "442333a3092b6349f54aaae495e7bed0b6b7fc15ffe87c653b3a2b867a2feb05",
+  "config_unchanged": true,
+  "native_video_audio": "UNVERIFIED; helper accepts sampled frames only",
+  "usage_observed_not_all_attributed_to_review": [
+    {
+      "id": 64367,
+      "timestamp": "2026-10-19T11:33:51.367Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 1154,
+      "completionTokens": 85
+    },
+    {
+      "id": 64368,
+      "timestamp": "2026-10-19T11:44:08.633Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 1162,
+      "completionTokens": 85
+    },
+    {
+      "id": 64369,
+      "timestamp": "2026-10-19T11:44:51.580Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "status": "ok",
+      "promptTokens": 13538,
+      "completionTokens": 114
+    }
+  ],
+  "main_session_dispatched": false,
+  "fallback": false
+}

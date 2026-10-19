@@ -1,0 +1,97 @@
+{
+ "utc": "2026-10-12T07:51:35Z",
+ "contract_must_hold": [
+  "fallback keeps CAST refs",
+  "one UNKNOWN actor never voids the whole shot",
+  "source-copy is not reskin",
+  "file exists/hash is not quality",
+  "RECORD-LAST: terminal record refresh is the final write",
+  "all outputs r6; R4/R5 frozen"
+ ],
+ "db_counts": {
+  "20261007_234033_cc0b6d": {
+   "messages": 4106,
+   "by_role": {
+    "assistant": 1822,
+    "tool": 2240,
+    "user": 44
+   },
+   "max_msg_id": 293120
+  },
+  "20261012_002032_daa36c": {
+   "messages": 532,
+   "by_role": {
+    "assistant": 238,
+    "tool": 281,
+    "user": 13
+   },
+   "max_msg_id": 293355
+  },
+  "20261011_123932_c101dc": {
+   "messages": 395,
+   "by_role": {
+    "assistant": 167,
+    "tool": 217,
+    "user": 11
+   },
+   "max_msg_id": 291918
+  }
+ },
+ "db_note": "counts are messages, not tokens (per proposal/§4). Worker compaction history is long (5 R5 invocations) but records stayed honest+valid at each terminal; drift found so far is MECHANISM-LEVEL in code/packet paths, listed above.",
+ "drift_inventory": [
+  {
+   "item": "visible actor -> absent / stale actors kept",
+   "where": "r5_storyboard.py:45 fallback; S74 paper scene -> 2 people",
+   "class": "worker code mechanism (P1 R5-F01/R5-F03)",
+   "fixed_in": "R6 scope (ledger correct + gates)"
+  },
+  {
+   "item": "custom compositor instead of upstream stitch",
+   "where": "r5_keygen.py:187 composite_diff_limited; upstream stitch un-called",
+   "class": "worker code mechanism (P1 R5-F02)",
+   "fixed_in": "R6 scope"
+  },
+  {
+   "item": "unsupported PASS / false closure",
+   "where": "R5e step4 moved residual out of remaining_work; self-QC 12 PASS",
+   "class": "Manager packet + worker record (P1 R5-F08)",
+   "fixed_in": "R6 scope (remaining_work keeps open P1s)"
+  },
+  {
+   "item": "16 frozen R4 evidence files rewritten",
+   "where": "manager/evidence/r4 (report+15 receipts) by R4 regression rerun in R5 round",
+   "class": "MANAGER-side mechanism (old suite hardcodes r4 outputs); reviewer: motive not attributed",
+   "fixed_in": "R6: preserved + guard protected + r6-only outputs (this evidence tree)"
+  },
+  {
+   "item": "R5d terminal stale in nested manifest",
+   "where": "R5_MANIFEST.json entry 40df34d2 vs current ff93e3c2",
+   "class": "protocol gap fixed mid-R5 (RECORD-LAST added after R5c)",
+   "fixed_in": "R6 manifest-after-record rule"
+  },
+  {
+   "item": "SAM2 runner wrote R4/tracks",
+   "where": "r5_sam2_excerpt.py:148 output path",
+   "class": "worker code path (T-F01)",
+   "fixed_in": "R6 scope; guard now includes R4 tracks/masks"
+  },
+  {
+   "item": "mixed canvas mask provenance",
+   "where": "S61 reused masks 104x640x368 + 252x640x360 from f0105",
+   "class": "data contract (T-F02)",
+   "fixed_in": "R6 canonical 640x360 + explicit pad"
+  },
+  {
+   "item": "VACE graph missing TrimVideoLatent",
+   "where": "r5_vace.py:89 KSampler->VAEDecode; 81->85",
+   "class": "worker graph (T-F05/R5-F06)",
+   "fixed_in": "R6 scope"
+  }
+ ],
+ "decision": {
+  "owner_transfer_required": false,
+  "basis": "§4: single generic signals (long session, many compactions, code defects) do NOT prove a broken context. Evidence of *repeated contract-inability* would. Current evidence: (a) every R5 invocation produced a VALID terminal record with honest matrix (UNKNOWN rows kept); (b) the frozen-R4 write incident is MANAGER-side (regression rerun), disclosed + preserved, (c) worker code defects (ledger fallback, custom compositor, graph trim) are specific, enumerable, and already fixable via R6 scope; reviewer explicitly says keep owner unless audit proves otherwise and proposes ONE guarded continuation after preservation+isolation.",
+  "action": "KEEP owner 20261007_234033_cc0b6d; guarded continuation R6 with compacted contract packet; worker must restate gates before first mutation; outputs isolation provable (r6-only).",
+  "incident_count_note": "This lineage records ONE scope incident (frozen-R4 rewrite, manager-side). Not a second violation => no owner-transfer trigger. A NEW scope violation in R6 would make it the second => OWNER_TRANSFER_REVIEW."
+ }
+}

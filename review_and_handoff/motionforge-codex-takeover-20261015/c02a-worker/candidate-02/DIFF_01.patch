@@ -1,0 +1,61 @@
+--- candidate01/scripts/r6_cache.py
++++ candidate02/scripts/r6_cache.py
+@@ -81,18 +81,35 @@
+         return None, f"deps unreadable/malformed: {exc}"
+ 
+ 
++MAX_DEPS_JSON_DEPTH = 256
++
++
+ def _json_value(value):
+-    """Reject Python-only and non-finite values before the v3 digest is computed."""
+-    if value is None or type(value) in (str, bool, int):
+-        return True
+-    if type(value) is float:
+-        return math.isfinite(value)
+-    if type(value) is list:
+-        return all(_json_value(item) for item in value)
+-    if type(value) is dict:
+-        return all(type(key) is str and bool(key.strip()) and _json_value(item)
+-                   for key, item in value.items())
+-    return False
++    """Reject non-JSON values and deep records without recursive Python calls."""
++    pending = [(value, 0)]
++    while pending:
++        item, depth = pending.pop()
++        if item is None or type(item) in (str, bool, int):
++            continue
++        if type(item) is float:
++            if not math.isfinite(item):
++                return False
++            continue
++        if type(item) is list:
++            if depth >= MAX_DEPS_JSON_DEPTH:
++                return False
++            pending.extend((child, depth + 1) for child in item)
++            continue
++        if type(item) is dict:
++            if depth >= MAX_DEPS_JSON_DEPTH:
++                return False
++            for key, child in item.items():
++                if type(key) is not str or not key.strip():
++                    return False
++                pending.append((child, depth + 1))
++            continue
++        return False
++    return True
+ 
+ 
+ def verify_deps(dep: dict, sid: str | None = None, fid: int | None = None) -> tuple[bool, str]:
+@@ -150,7 +167,10 @@
+     if not _json_value(dep):
+         return False, "deps contain non-JSON or non-finite values"
+     body = {key: value for key, value in dep.items() if key != "deps_sha"}
+-    actual_sha = hashlib.sha256(json.dumps(body, sort_keys=True).encode()).hexdigest()
++    try:
++        actual_sha = hashlib.sha256(json.dumps(body, sort_keys=True).encode()).hexdigest()
++    except (RecursionError, TypeError, ValueError, OverflowError) as exc:
++        return False, f"deps digest unencodable: {exc}"
+     if recorded_sha.lower() != actual_sha:
+         return False, "deps_sha self-digest mismatch"
+ 

@@ -1,0 +1,46 @@
+{
+ "kind": "r6_key_deps_v3",
+ "shot": "S0021",
+ "fid": 1,
+ "source": {
+  "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b2-worker\\baseline-repro-01\\task\\source\\source_full.mp4",
+  "sha256": "373b52bd748856658b14638b35b522d5621183f87270f98cd130d58b8d30ee66",
+  "gframe": 0,
+  "span": [
+   0,
+   3
+  ]
+ },
+ "model": {
+  "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b2-worker\\baseline-repro-01\\model.bin",
+  "sha256": "ccdbfb9993be88c536b0b7cd2abe60eda83c7ce1ad530c6a2ada81510ff1548c"
+ },
+ "casts": [
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b2-worker\\baseline-repro-01\\task\\input\\identity5m_20261008\\r6\\keys\\cast_refs\\B01_Khang_front_bust.png",
+   "sha256": "97316597f442490b4f8bb7b3be3f16b452c31f12a37cbe03bed54e97e6430fd7"
+  },
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b2-worker\\baseline-repro-01\\task\\input\\identity5m_20261008\\r6\\keys\\cast_refs\\B01_Khang_profile.png",
+   "sha256": "0b32e59d54c338edd92b1e0221315153109616b1c1053397ccdd6e8d2006bfbc"
+  }
+ ],
+ "masks": [
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b2-worker\\baseline-repro-01\\task\\corrections\\identity\\r6\\masks\\S0021\\E1\\f_0001.png",
+   "sha256": "c57609a26891dfac9284889316b78f3e624db17f3f18f22855cd9f34281fba11"
+  }
+ ],
+ "graph": {
+  "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b2-worker\\baseline-repro-01\\task\\corrections\\identity\\r6\\workflows\\r6_crop_S0021_f1_E1.json",
+  "sha256": "f5e0ee1ccf09814b6fa2b7f24942b5ef495cf6c1629b991229ba52e0f493aca1"
+ },
+ "settings": {
+  "model": "flux-2-klein-4b-fp8",
+  "steps": 4,
+  "sampler": "euler",
+  "cfg": 1.0,
+  "seed": 2026122401
+ },
+ "deps_sha": "7a8d33347c3426a94997dffd27bf0a183a63427f6864a3df7570c1957135d1e5"
+}

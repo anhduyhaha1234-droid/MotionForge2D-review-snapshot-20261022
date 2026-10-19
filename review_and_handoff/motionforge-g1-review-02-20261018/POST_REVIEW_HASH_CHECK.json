@@ -1,0 +1,92 @@
+[
+  {
+    "relative": "scripts/r6_cache.py",
+    "expected": "ab63e2381b44249773d03ed9489bbc3923d0dfb1382e9aa4e4c4c862a9190405",
+    "snapshot": "ab63e2381b44249773d03ed9489bbc3923d0dfb1382e9aa4e4c4c862a9190405",
+    "live": "ab63e2381b44249773d03ed9489bbc3923d0dfb1382e9aa4e4c4c862a9190405"
+  },
+  {
+    "relative": "scripts/r6_keygen.py",
+    "expected": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+    "snapshot": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+    "live": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282"
+  },
+  {
+    "relative": "scripts/r6_key_recipe.py",
+    "expected": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9",
+    "snapshot": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9",
+    "live": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9"
+  },
+  {
+    "relative": "scripts/r6_keygen_asset.py",
+    "expected": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e",
+    "snapshot": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e",
+    "live": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e"
+  },
+  {
+    "relative": "scripts/r6_propagate.py",
+    "expected": "2b76bf83312417f8645a07657301fe8fe62042931ed3f6bdb0823079e6df152c",
+    "snapshot": "2b76bf83312417f8645a07657301fe8fe62042931ed3f6bdb0823079e6df152c",
+    "live": "2b76bf83312417f8645a07657301fe8fe62042931ed3f6bdb0823079e6df152c"
+  },
+  {
+    "relative": "scripts/r6_cotracker.py",
+    "expected": "a868eed7b1d75b6eae54b44fea6a567fbab363f711fae7145f767538d4eee3cb",
+    "snapshot": "a868eed7b1d75b6eae54b44fea6a567fbab363f711fae7145f767538d4eee3cb",
+    "live": "a868eed7b1d75b6eae54b44fea6a567fbab363f711fae7145f767538d4eee3cb"
+  },
+  {
+    "relative": "scripts/r6_ledger.py",
+    "expected": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200",
+    "snapshot": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200",
+    "live": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200"
+  },
+  {
+    "relative": "scripts/r6_gate.py",
+    "expected": "30bd2757bb8e62eb0c3dc76c23e90e60bbf7bfa4f8b0edad872986a1f02d0c5b",
+    "snapshot": "30bd2757bb8e62eb0c3dc76c23e90e60bbf7bfa4f8b0edad872986a1f02d0c5b",
+    "live": "30bd2757bb8e62eb0c3dc76c23e90e60bbf7bfa4f8b0edad872986a1f02d0c5b"
+  },
+  {
+    "relative": "scripts/r6_assemble.py",
+    "expected": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910",
+    "snapshot": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910",
+    "live": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910"
+  },
+  {
+    "relative": "scripts/r6_matrix.py",
+    "expected": "a52cfb3df2cfa8bbefa7068d4082c86fad597a545ed4d267529dc571565fde64",
+    "snapshot": "a52cfb3df2cfa8bbefa7068d4082c86fad597a545ed4d267529dc571565fde64",
+    "live": "a52cfb3df2cfa8bbefa7068d4082c86fad597a545ed4d267529dc571565fde64"
+  },
+  {
+    "relative": "tests/test_codex_c02b2_per_actor_reuse.py",
+    "expected": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24",
+    "snapshot": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24",
+    "live": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24"
+  },
+  {
+    "relative": "tests/test_gemini_c02b3_asset_reuse.py",
+    "expected": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b",
+    "snapshot": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b",
+    "live": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b"
+  },
+  {
+    "relative": "tests/test_gemini_a3_event_tracking.py",
+    "expected": "cc9fe10b065738dd18fa9c6626f54c4d0da3f996833145fe45db031aaa6a6584",
+    "snapshot": "cc9fe10b065738dd18fa9c6626f54c4d0da3f996833145fe45db031aaa6a6584",
+    "live": "cc9fe10b065738dd18fa9c6626f54c4d0da3f996833145fe45db031aaa6a6584"
+  },
+  {
+    "relative": "tests/test_gemini_a4_evidence_conformance.py",
+    "expected": "94cf31f4e8d5ee78fd5b6ae6a204aacec54952acc307deb7c8a302a47ebf02b7",
+    "snapshot": "94cf31f4e8d5ee78fd5b6ae6a204aacec54952acc307deb7c8a302a47ebf02b7",
+    "live": "94cf31f4e8d5ee78fd5b6ae6a204aacec54952acc307deb7c8a302a47ebf02b7"
+  },
+  {
+    "relative": "tests/test_g1_r1_correction.py",
+    "expected": "f4d2a714232b2f291b138e9da2ffc748f1df7d606f247a7cb4f9a3585ebcec75",
+    "snapshot": "f4d2a714232b2f291b138e9da2ffc748f1df7d606f247a7cb4f9a3585ebcec75",
+    "live": "f4d2a714232b2f291b138e9da2ffc748f1df7d606f247a7cb4f9a3585ebcec75"
+  }
+]

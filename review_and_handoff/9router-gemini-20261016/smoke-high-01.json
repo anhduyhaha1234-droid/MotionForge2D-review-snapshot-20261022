@@ -1,0 +1,143 @@
+{
+  "utc": "2026-10-16T16:02:10.244008+00:00",
+  "mode": "smoke",
+  "accounts": [
+    {
+      "id": "6c18a210-37e6-4bc8-99ce-12d41065bb2a",
+      "active": true,
+      "testStatus": "unavailable"
+    },
+    {
+      "id": "68c0064d-0dfc-4ce9-9f71-6d441222d646",
+      "active": true,
+      "testStatus": "active"
+    }
+  ],
+  "tests": [
+    {
+      "test": "stream_high",
+      "status": 200,
+      "seconds": 3.735,
+      "response": {
+        "model": "gemini-3.8-flash-n",
+        "content": "STREAM_OK_17ace49b",
+        "done": false,
+        "finish_reasons": [
+          "stop"
+        ],
+        "usage": {
+          "prompt_tokens": 2013,
+          "completion_tokens": 132,
+          "total_tokens": 2145,
+          "completion_tokens_details": {
+            "reasoning_tokens": 122
+          }
+        }
+      },
+      "pass": false
+    },
+    {
+      "test": "tool_call",
+      "status": 200,
+      "seconds": 4.531,
+      "response": {
+        "id": "chatcmpl-UkrSavraHPvBjuMPyqP00QU",
+        "object": "chat.completion",
+        "created": 1792166538,
+        "model": "gemini-3.8-flash-n",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "reasoning_content": "Okay, here's what's going through my mind:\n\n**Function Call Planning**\n\nAlright, I need to use `router_ping`. The goal is simple: I've got the token `TOOL_OK_994a388e`, and I need to pass it to `router_ping`. The objective, as I understand it, is to get the same token back. I need to get the response, and then reply, *exactly*, with that token.\n\nLet me just quickly verify the function signature to be certain. Yes, `router_ping` takes a single string parameter called `token`, and its description confirms that it just echoes back the input. Perfect. I'm ready to proceed with the call now.\n\n\n",
+              "tool_calls": [
+                {
+                  "id": "call_router_ping_1792166538509_0",
+                  "type": "function",
+                  "function": {
+                    "name": "router_ping",
+                    "arguments": "{\"token\":\"TOOL_OK_994a388e\"}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 2156,
+          "completion_tokens": 27,
+          "total_tokens": 2183,
+          "completion_tokens_details": {
+            "reasoning_tokens": 82
+          }
+        }
+      },
+      "pass": true
+    },
+    {
+      "test": "tool_result_roundtrip",
+      "status": 200,
+      "seconds": 3.453,
+      "response": {
+        "id": "chatcmpl-VkrSavSvGNb5juMP4KKsgAw",
+        "object": "chat.completion",
+        "created": 1792166541,
+        "model": "gemini-3.8-flash-n",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "TOOL_OK_994a388e"
+            },
+            "finish_reason": "stop"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 2186,
+          "completion_tokens": 12,
+          "total_tokens": 2198,
+          "completion_tokens_details": {
+            "reasoning_tokens": 58
+          }
+        }
+      },
+      "pass": true
+    }
+  ],
+  "usage_evidence": [
+    {
+      "id": 63136,
+      "timestamp": "2026-10-16T16:02:13.965Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "connectionId": "6c18a210-37e6-4bc8-99ce-12d41065bb2a",
+      "status": "ok",
+      "promptTokens": 13,
+      "completionTokens": 132
+    },
+    {
+      "id": 63137,
+      "timestamp": "2026-10-16T16:02:18.509Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "connectionId": "68c0064d-0dfc-4ce9-9f71-6d441222d646",
+      "status": "ok",
+      "promptTokens": 74,
+      "completionTokens": 27
+    },
+    {
+      "id": 63138,
+      "timestamp": "2026-10-16T16:02:21.948Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "connectionId": "6c18a210-37e6-4bc8-99ce-12d41065bb2a",
+      "status": "ok",
+      "promptTokens": 128,
+      "completionTokens": 12
+    }
+  ],
+  "pass": false
+}

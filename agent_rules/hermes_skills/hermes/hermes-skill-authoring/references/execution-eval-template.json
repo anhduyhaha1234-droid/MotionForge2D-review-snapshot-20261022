@@ -1,0 +1,16 @@
+{
+  "_schema": "Execution eval format — tests structured output quality",
+  "evals": [
+    {
+      "id": "exec-01",
+      "skill": "example-skill",
+      "input": "Test input that should produce structured output",
+      "expected_output": {
+        "field_exists": true,
+        "count_min": 3,
+        "has_required_labels": true
+      },
+      "pass_criteria": "Human-readable description of what constitutes a pass"
+    }
+  ]
+}

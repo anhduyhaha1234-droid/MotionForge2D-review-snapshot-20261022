@@ -1,0 +1,15 @@
+test_failed_extractor_and_empty_result_preserve_previous_pair (test_codex_c02b1_staged_source.StagedSourceTests.test_failed_extractor_and_empty_result_preserve_previous_pair) ... ok
+test_first_extract_and_unchanged_reuse (test_codex_c02b1_staged_source.StagedSourceTests.test_first_extract_and_unchanged_reuse) ... ok
+test_legacy_empty_missing_and_copied_receipts (test_codex_c02b1_staged_source.StagedSourceTests.test_legacy_empty_missing_and_copied_receipts) ... ok
+test_malformed_and_wrong_receipts_reextract (test_codex_c02b1_staged_source.StagedSourceTests.test_malformed_and_wrong_receipts_reextract) ... ok
+test_missing_unreadable_source_and_invalid_frames (test_codex_c02b1_staged_source.StagedSourceTests.test_missing_unreadable_source_and_invalid_frames) ... ok
+test_partial_publication_cannot_bless_old_receipt (test_codex_c02b1_staged_source.StagedSourceTests.test_partial_publication_cannot_bless_old_receipt) ... ok
+test_real_ffmpeg_30fps_640x360_frame_mapping_and_replacement (test_codex_c02b1_staged_source.StagedSourceTests.test_real_ffmpeg_30fps_640x360_frame_mapping_and_replacement) ... ok
+test_same_path_same_size_source_mutation_reextracts (test_codex_c02b1_staged_source.StagedSourceTests.test_same_path_same_size_source_mutation_reextracts) ... ok
+test_source_change_during_extraction_preserves_previous_pair (test_codex_c02b1_staged_source.StagedSourceTests.test_source_change_during_extraction_preserves_previous_pair) ... ok
+test_source_path_frame_output_and_restore_invalidate (test_codex_c02b1_staged_source.StagedSourceTests.test_source_path_frame_output_and_restore_invalidate) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.578s
+
+OK

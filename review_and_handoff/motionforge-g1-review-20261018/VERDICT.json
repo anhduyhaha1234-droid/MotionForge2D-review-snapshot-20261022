@@ -1,0 +1,259 @@
+{
+  "schema": 1,
+  "reviewed_at_utc": "2026-10-18T04:27:37.482331+00:00",
+  "reviewer": "Codex independent root",
+  "gate": "G1",
+  "rules": "HERMES_AUTOPILOT_RULES.md section 0.12",
+  "authority_sha256": "194d62902be54e998f99c501a6d76d096985716339d53ec670cf514850f75778",
+  "candidate": "g1-candidate-01",
+  "candidate_manifest_sha256": "604fd9065ff647870cafc7925514c3f82278aad77b565cb7f53eade29de7c31b",
+  "verdict": "CHANGES_REQUESTED",
+  "parent_status": "NOT_APPROVED",
+  "independent_existing_suite": {
+    "tests": 76,
+    "passed": 76,
+    "exit_code": 0
+  },
+  "findings": [
+    {
+      "id": "G1-R01",
+      "priority": "P1",
+      "title": "Asset provenance vẫn chấp nhận thiếu consumed input và graph sai sampler",
+      "actual": "Bỏ consumed.grey_ref rồi tính lại self-digest: verify_deps trả (True, ok). Đổi SAMPLER của graph sang heun, cập nhật graph hash và self-digest trong khi recipe vẫn euler: verifier vẫn trả (True, ok). Control nguyên bản cũng PASS.",
+      "expected": "Bản ghi incomplete hoặc graph không khớp effective recipe phải bị từ chối, kể cả hash/self-digest nhất quán. R1/R2 grey reference đang được graph tiêu thụ nên không được coi là optional.",
+      "impact": "Claim Q07/T07 complete không đúng. Đây là bypass tại dependency verifier; probe không khẳng định đã vượt riêng semantic-review gate bằng một review cũ.",
+      "probes": [
+        "asset_valid_control",
+        "asset_missing_consumed_grey",
+        "asset_graph_sampler_differs_recipe"
+      ],
+      "rows": "M01–M04",
+      "owner": "Gemini implementation owner, task G1-R1 / A2",
+      "paths": [
+        {
+          "candidate_snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_cache.py",
+          "production_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py",
+          "line": 343
+        },
+        {
+          "candidate_snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_cache.py",
+          "production_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py",
+          "line": 365
+        },
+        {
+          "candidate_snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_cache.py",
+          "production_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py",
+          "line": 456
+        }
+      ]
+    },
+    {
+      "id": "G1-R02",
+      "priority": "P1",
+      "title": "CoTracker CLI crash trước khi chạy",
+      "actual": "Chạy đúng candidate bằng python -B r6_cotracker.py --help: exit 1, NameError: argparse is not defined. Diff A3 đã bỏ import argparse nhưng main vẫn sử dụng.",
+      "expected": "CLI --help exit 0; entry point thực phải hoạt động trước khi đóng T08.",
+      "impact": "Không thể dùng CLI đã công bố để tạo paired tracking evidence.",
+      "probes": [
+        "cotracker_cli_help"
+      ],
+      "rows": "M05",
+      "owner": "Gemini implementation owner, task G1-R1 / A3",
+      "paths": [
+        {
+          "candidate_snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_cotracker.py",
+          "production_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cotracker.py",
+          "line": 8
+        },
+        {
+          "candidate_snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_cotracker.py",
+          "production_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cotracker.py",
+          "line": 198
+        }
+      ]
+    },
+    {
+      "id": "G1-R03",
+      "priority": "P1",
+      "title": "Tracker validator nhận tensor rỗng và visibility không hợp lệ",
+      "actual": "Các trường hợp T=N=0, visibility toàn NaN, visibility toàn 9 đều trả (True, ok). Validator chỉ xét shape và finiteness của tracks. Reader dùng both.any() của toàn clip khi tính metric từng window; chưa chứng minh window rỗng/query mismatch được chặn.",
+      "expected": "Reject empty/nonfinite/out-of-contract tensors; kiểm tra coverage/visibility/query/frame identity ở actual reader, window không có mẫu hợp lệ phải UNKNOWN/FAIL và không xuất PASS/NaN JSON.",
+      "impact": "T08 chưa đóng. Metric có thể được tạo từ dữ liệu không hợp lệ; probe này không phải đánh giá chất lượng video.",
+      "probes": [
+        "tracker_empty_tensors",
+        "tracker_nonfinite_visibility",
+        "tracker_invalid_visibility_range"
+      ],
+      "rows": "M06–M07",
+      "owner": "Gemini implementation owner, task G1-R1 / A3",
+      "paths": [
+        {
+          "candidate_snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_cotracker.py",
+          "production_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cotracker.py",
+          "line": 23
+        },
+        {
+          "candidate_snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_cotracker.py",
+          "production_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cotracker.py",
+          "line": 128
+        },
+        {
+          "candidate_snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_cotracker.py",
+          "production_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cotracker.py",
+          "line": 139
+        }
+      ]
+    },
+    {
+      "id": "G1-R04",
+      "priority": "P1",
+      "title": "Propagation CLI nuốt lỗi child và trả exit 0",
+      "actual": "Probe CPU dùng run_one + run_shot + main thật, child thật sys.exit(7). Parent in PROPAGATE BLOCK ... rc=7 nhưng process exit 0 và trả về bình thường. main bắt SystemExit rồi chỉ print.",
+      "expected": "Batch/CLI phải trả nonzero khi bất kỳ run bắt buộc thất bại, ghi durable failure và không publish success/cho dùng stale manifest. Test mock run_one hiện tại chỉ kiểm run_shot, bỏ sót main.",
+      "impact": "Controller chỉ dựa exit code có thể coi job lỗi là thành công. Lỗi kế thừa chưa được đóng trong acceptance A3, không phải khẳng định mọi controller hiện tại đều chỉ dựa exit code.",
+      "probes": [
+        "propagate_cli_child_failure"
+      ],
+      "rows": "M08–M09",
+      "owner": "Gemini implementation owner, task G1-R1 / A3",
+      "paths": [
+        {
+          "candidate_snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_propagate.py",
+          "production_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_propagate.py",
+          "line": 146
+        },
+        {
+          "candidate_snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_propagate.py",
+          "production_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_propagate.py",
+          "line": 218
+        }
+      ]
+    },
+    {
+      "id": "G1-R05",
+      "priority": "P1",
+      "title": "Event keys bỏ mốc occlusion/exit/release",
+      "actual": "Fixture visible 1–19, occluded 20–29, visible 30–49, NOT_PRESENT từ 50, contact from=9/to=29: event_fids_for chỉ trả [10,30], thiếu chuyển trạng thái tại 20 và 50. Ba nơi ledger/gate/propagate lặp logic chỉ lấy window đầu VISIBLE/PARTIALLY_VISIBLE và contact.from.",
+      "expected": "Chuẩn hóa duy nhất hợp đồng frame index; mang đủ entry/exit/occlusion/contact-end vào storyboard, key generation và gate; reject mâu thuẫn f/frame hoặc out-of-range theo contract rõ ràng.",
+      "impact": "Mốc mất/che actor có thể không có exact key, interpolation kéo actor hoặc prop qua chuyển trạng thái. Cut helper được test riêng chưa chứng minh caller không băng qua hard cut; cần control trên call path, không suy luận rằng mọi shot hiện tại chứa cut nội bộ.",
+      "probes": [
+        "entry_exit_occlusion_release_keys"
+      ],
+      "rows": "M10–M11",
+      "owner": "Gemini implementation owner, task G1-R1 / A3",
+      "paths": [
+        {
+          "candidate_snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_propagate.py",
+          "production_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_propagate.py",
+          "line": 32
+        },
+        {
+          "candidate_snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_gate.py",
+          "production_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_gate.py",
+          "line": 253
+        },
+        {
+          "candidate_snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_ledger.py",
+          "production_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_ledger.py",
+          "line": 109
+        }
+      ]
+    },
+    {
+      "id": "G1-R06",
+      "priority": "P1",
+      "title": "Q-matrix tạo PASS từ file rỗng; batch gate chỉ kiểm enum và chưa có caller",
+      "actual": "Tạo strip/json/test/mp4 0 byte: Q01/Q05/Q08 đều PASS; Q07 PASS chỉ vì source có chuỗi r6_key_deps_v3. gate_batch_conformance nhận mode=finla với toàn FAIL vẫn True; mode=final toàn PASS nhưng không artifact cũng True. Tìm trong scripts không có caller của gate_batch_conformance ngoài definition; test gọi helper trực tiếp.",
+      "expected": "Mỗi PASS dựa proof parse được, đúng inputs/hash/invocation/coverage và caller thật. Mode lạ phải block. Final gate không thay artifact/remaining-work gate bằng enum; phải nối đúng submit call path và không nới C01 assembler binding đã duyệt.",
+      "impact": "A4 chưa đóng Q05/Q10. Tên helper có chữ gate và test xanh không tạo ra cổng nghiệm thu thực tế.",
+      "probes": [
+        "matrix_empty_artifacts",
+        "unknown_gate_mode",
+        "final_gate_no_artifacts"
+      ],
+      "rows": "M12–M14",
+      "owner": "Gemini implementation owner, task G1-R1 / A4",
+      "paths": [
+        {
+          "candidate_snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_matrix.py",
+          "production_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_matrix.py",
+          "line": 29
+        },
+        {
+          "candidate_snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_matrix.py",
+          "production_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_matrix.py",
+          "line": 41
+        },
+        {
+          "candidate_snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_matrix.py",
+          "production_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_matrix.py",
+          "line": 48
+        },
+        {
+          "candidate_snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_gate.py",
+          "production_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_gate.py",
+          "line": 371
+        }
+      ]
+    },
+    {
+      "id": "G1-R07",
+      "priority": "P1",
+      "title": "Manifest bỏ toàn bộ cây R6 nằm dưới thư mục work",
+      "actual": "build_manifest loại mọi absolute path chứa /work/ hoặc \\work\\. R6 thật nằm dưới Documents/Codex/work. Fixture có file thường dưới work/manifest-root/r6 cho count=0. main vẫn ghi R6/R6G_MANIFEST.json thay vì namespace invocation.",
+      "expected": "Lọc theo relative path và phạm vi evidence rõ ràng; manifest đủ file bắt buộc, cấm rỗng, bind đúng invocation. Record mới ghi vào namespace mới, không đè lịch sử; xử lý self-manifest hash theo thứ tự freeze rõ ràng.",
+      "impact": "Q10 không có manifest đầy đủ; đổi mỗi NS header chưa thực hiện isolation đã claim.",
+      "probes": [
+        "manifest_work_parent"
+      ],
+      "rows": "M15–M16",
+      "owner": "Gemini implementation owner, task G1-R1 / A4",
+      "paths": [
+        {
+          "candidate_snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_matrix.py",
+          "production_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_matrix.py",
+          "line": 77
+        },
+        {
+          "candidate_snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_matrix.py",
+          "production_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_matrix.py",
+          "line": 89
+        }
+      ]
+    },
+    {
+      "id": "G1-R08",
+      "priority": "P2",
+      "title": "Test mô phỏng không đủ để tự đóng Q11/T13",
+      "actual": "Test dùng 2 thread gọi os.open(O_EXCL) trên file tạm; không gọi dispatch_long/acquire_controller_lock/lease, không child lifecycle/PID creation time; join không timeout. Historical 34/34 có thật và 3 production script hashes vẫn khớp, nhưng G1 không cung cấp đủ binding/closure mới; root không rerun suite đó trong lượt này.",
+      "expected": "Ghi UNKNOWN cho phần chưa kiểm. Có thể dùng proof cũ nếu đối chiếu đúng contract/bytes và raw outcomes; nếu rerun, dùng actual consumers trong sandbox với 2 process barrier tại thao tác tranh chấp, 1 winner/child, bounded joins, ledger đầy đủ, detached/UNKNOWN/PID-reuse controls.",
+      "impact": "Đây là thiếu bằng chứng và overclaim; không kết luận production mutex đang hỏng. Hàm production dùng FileLock và lease lifecycle, khác hẳn primitive mà test A4 kiểm.",
+      "probes": [],
+      "rows": "M17–M18",
+      "owner": "Gemini QA/evidence owner; production harness chỉ đọc, không tự patch ngoài scope",
+      "paths": [
+        {
+          "candidate_snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\tests\\test_gemini_a4_evidence_conformance.py",
+          "production_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_gemini_a4_evidence_conformance.py",
+          "line": 106
+        }
+      ]
+    },
+    {
+      "id": "G1-R09",
+      "priority": "P2",
+      "title": "Packet/state chưa đủ nhất quán để resume đúng candidate",
+      "actual": "13/14 live manifest files khớp; live r6_gate khác candidate. Root lấy được gate đúng hash từ A4 probe snapshot nên review vẫn thực hiện được. Execution STATE tự nhận B2/B1 completed nhưng còn next_command/allowlist/open_findings của A1; CHECKPOINT A4 giữ hash cũ. Claim 27 protected 0 drift không khớp: so baseline có 19 match, 8 khác (7 nằm trong candidate; write_reviews chỉ quan sát live, chưa thể gán thời điểm đổi).",
+      "expected": "Giữ candidate01 immutable, giải trình before/after và authority từng thay đổi. Reconcile owner session thật 20261017_115944_b2a338; một checkpoint current-byte nhất quán, phân biệt G1 bytes với live/B1 media và self/root approval.",
+      "impact": "Không dùng nhầm verdict G1 cho code sửa sau đó. Các thay đổi nằm trong scope A2/A3/A4 có thể hợp lệ; “0 drift” không phải cách giải trình. Không kết luận B1 không được user cho phép: có chỉ đạo user mới hơn yêu cầu chạy xuyên suốt; lượt này vẫn chỉ nghiệm thu G1 theo 0.12.",
+      "probes": [],
+      "rows": "M19–M20",
+      "owner": "Gemini current manager/implementation lineage; Codex chỉ ghi verdict, không sửa state thay owner",
+      "paths": []
+    }
+  ],
+  "new_media_authorized_by_this_verdict": false,
+  "production_changes_by_reviewer": false,
+  "dispatch_performed": false,
+  "next_prompt": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\PROMPT_SUA_G1_VI.md"
+}

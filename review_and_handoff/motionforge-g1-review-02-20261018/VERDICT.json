@@ -1,0 +1,57 @@
+{
+  "issued_utc": "2026-10-19T02:49:54.550875+00:00",
+  "candidate": "g1-candidate-02",
+  "verdict": "CHANGES_REQUESTED",
+  "gate": "G1",
+  "root_gates": {
+    "G1": "NOT_APPROVED",
+    "G2": "NOT_APPROVED",
+    "G3": "NOT_APPROVED"
+  },
+  "verified_matrix_rows": [
+    "M01",
+    "M05",
+    "M08",
+    "M10",
+    "M15"
+  ],
+  "open_or_partial_matrix_rows": [
+    "M02",
+    "M03",
+    "M04",
+    "M06",
+    "M07",
+    "M09",
+    "M11",
+    "M12",
+    "M13",
+    "M14",
+    "M16",
+    "M17",
+    "M18",
+    "M19",
+    "M20"
+  ],
+  "closed_finding": "R02",
+  "findings": {
+    "R01": "P1",
+    "R03": "P1",
+    "R04": "P1",
+    "R05": "P2",
+    "R06": "P1",
+    "R07": "P1",
+    "R08": "P2",
+    "R09": "P2"
+  },
+  "micro_probes": 31,
+  "root_suite89_executed": false,
+  "root_no_production_edits": true,
+  "snapshot_hashes_match": 15,
+  "live_hashes_match_19oct": 15,
+  "dispatch": "PROPOSED_ONLY",
+  "owner": "20261017_115944_b2a338",
+  "next_prompt": "PROMPT_G1_R1_CONTINUE_VI.md",
+  "proposal": "SESSION_OPENING_PROPOSAL.md",
+  "research": "RESEARCH_DECISIONS_VI.md",
+  "progress": "PROGRESS_AUDIT_20261019.json"
+}

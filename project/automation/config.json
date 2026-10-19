@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "hermes_command": "hermes",
+  "provider": "custom",
+  "model": "ocg/deepseek-v4-flash",
+  "reasoning_effort": "max",
+  "max_turns": 300,
+  "timeout_minutes": 90,
+  "max_correction_attempts": 3,
+  "require_checkpoints": true,
+  "source_tag": "cli",
+  "runtime_root": "output/pm-automation"
+}

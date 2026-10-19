@@ -1,0 +1,90 @@
+{
+  "race_passed": 34,
+  "production_bindings": [
+    {
+      "file": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\tools\\dispatch_long.py",
+      "current_sha": "78d1bc1fafc65868e07a5c64687716b1f64d577002e28216437db43265cb16fa",
+      "race_provenance_sha": "78d1bc1fafc65868e07a5c64687716b1f64d577002e28216437db43265cb16fa",
+      "match": true
+    },
+    {
+      "file": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\tools\\invocation_runtime.py",
+      "current_sha": "86fc59156a357da7aa6b8691dfccc983b009548e7af4e2ea9ad9b226336b1775",
+      "race_provenance_sha": "86fc59156a357da7aa6b8691dfccc983b009548e7af4e2ea9ad9b226336b1775",
+      "match": true
+    },
+    {
+      "file": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\tools\\terminal_contract.py",
+      "current_sha": "96ca2f934fe50dfc27dd98cc6b4eb612538044af19afa71daf65d88bf93428bd",
+      "race_provenance_sha": "96ca2f934fe50dfc27dd98cc6b4eb612538044af19afa71daf65d88bf93428bd",
+      "match": true
+    }
+  ],
+  "harness51": {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\evidence\\r6\\Q11_R6_HARNESS_TEST_RESULTS.json",
+    "sha256": "26445ec5c2e7f97c9ae7985569bef87201622e861e4aa46980828a07eb609258",
+    "top_keys": [
+      "scope",
+      "at_utc",
+      "passed",
+      "total",
+      "results"
+    ],
+    "passed": 51,
+    "total": 51,
+    "case_names": [
+      "A.probe_ebsynth_detected",
+      "A.probe_rerender_detected",
+      "A.probe_sam2_detected",
+      "A.probe_idle_quiet",
+      "A.probe_packet_argv_no_falsepos",
+      "B.stale_binding_NR",
+      "B.unknown_decision_NR",
+      "B.valid_bound_kept",
+      "C.refuse_rc",
+      "C.no_spawn",
+      "C.refused_reason",
+      "C.lease_untouched",
+      "D.refuse_rc",
+      "D.no_spawn",
+      "D.reason_reservation_in_flight",
+      "E.rc",
+      "E.spawned",
+      "E.adopted",
+      "E.adopted_by",
+      "E.outcome",
+      "F.rc",
+      "F.spawned",
+      "F.adopted",
+      "G.rc",
+      "G.spawned",
+      "G.outcome_NR",
+      "G.decision_NR",
+      "G.lease_kept",
+      "G.lease_reason_unknown",
+      "H.loser_rc",
+      "H.loser_refused_lock",
+      "H.winner_rc",
+      "H.exactly_one_child",
+      "I.rc",
+      "I.timed_out_false",
+      "I.has_progressing_audit",
+      "I.no_true_hang",
+      "I.outcome",
+      "J.timed_out_true",
+      "J.true_hang_audit",
+      "J.outcome_NR",
+      "J.wall_bounded",
+      "K.rc",
+      "K.outcome",
+      "K.decision",
+      "K.result_revision",
+      "L.outcome_NR",
+      "L.decision_NR",
+      "M.rc",
+      "M.outcome_NR",
+      "M.hash_mismatch_named"
+    ],
+    "limitation": "Candidate03 test checks passed==51 and3production hashes; complete runtime/test/source provenance and lifecycle coverage mapping not supplied. Do not count toy O_EXCL as production controller race."
+  }
+}

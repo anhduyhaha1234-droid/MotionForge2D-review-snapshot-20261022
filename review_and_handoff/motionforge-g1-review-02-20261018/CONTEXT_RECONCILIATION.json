@@ -1,0 +1,404 @@
+{
+  "utc": "2026-10-18T06:50:42.926439+00:00",
+  "protected_comparison": [
+    {
+      "relative": "scripts/r6_adapter.py",
+      "baseline_sha": "2b16108c5d92264b5e686d6aedeb5d357fc5ee9539be3cfff3b8979c17f9b5b3",
+      "review_sha": "2b16108c5d92264b5e686d6aedeb5d357fc5ee9539be3cfff3b8979c17f9b5b3",
+      "match": true,
+      "source": "current live dependency"
+    },
+    {
+      "relative": "scripts/r6_assemble.py",
+      "baseline_sha": "0509d5f67ffcce1721701f0c064ea4d68dd8660c6dca9f6f4967eb78727301c2",
+      "review_sha": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910",
+      "match": false,
+      "source": "exact submitted candidate snapshot"
+    },
+    {
+      "relative": "scripts/r6_common.py",
+      "baseline_sha": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc",
+      "review_sha": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc",
+      "match": true,
+      "source": "current live dependency"
+    },
+    {
+      "relative": "scripts/r6_cotracker.py",
+      "baseline_sha": "255e802f4547ac333e77075c8c145b3dc912ba77231248d840c1bc037501cf7c",
+      "review_sha": "a868eed7b1d75b6eae54b44fea6a567fbab363f711fae7145f767538d4eee3cb",
+      "match": false,
+      "source": "exact submitted candidate snapshot"
+    },
+    {
+      "relative": "scripts/r6_gate.py",
+      "baseline_sha": "8c2e3f9eedd4d8e11832809c2b72293db17df1fb5a4012bd39fa396f93143f94",
+      "review_sha": "30bd2757bb8e62eb0c3dc76c23e90e60bbf7bfa4f8b0edad872986a1f02d0c5b",
+      "match": false,
+      "source": "exact submitted candidate snapshot"
+    },
+    {
+      "relative": "scripts/r6_graph.py",
+      "baseline_sha": "832d5d44df486c3f10ec8194e7ab170ac4f5a77af0ab46ede176005904981d21",
+      "review_sha": "832d5d44df486c3f10ec8194e7ab170ac4f5a77af0ab46ede176005904981d21",
+      "match": true,
+      "source": "current live dependency"
+    },
+    {
+      "relative": "scripts/r6_keygen_asset.py",
+      "baseline_sha": "c38b6a5c65905f6cc4d094d501785c5b7312da5ae4b617ef1cd716f5d0347b91",
+      "review_sha": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e",
+      "match": false,
+      "source": "exact submitted candidate snapshot"
+    },
+    {
+      "relative": "scripts/r6_ledger.py",
+      "baseline_sha": "5797fe9f11e1b8178f0d35bff5ca6bc575cb895ebea98831dcd5a65e2b81c131",
+      "review_sha": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200",
+      "match": false,
+      "source": "exact submitted candidate snapshot"
+    },
+    {
+      "relative": "scripts/r6_matrix.py",
+      "baseline_sha": "2403a0d934cdd403a13cf385133a02dd7f0390cdb734c80ce32c4825ad8ddaa1",
+      "review_sha": "a52cfb3df2cfa8bbefa7068d4082c86fad597a545ed4d267529dc571565fde64",
+      "match": false,
+      "source": "exact submitted candidate snapshot"
+    },
+    {
+      "relative": "scripts/r6_probes.py",
+      "baseline_sha": "739a1eaed3dd8bb200219d2ef93a353d0fa88a95695f9316bfd1c20f02acea15",
+      "review_sha": "739a1eaed3dd8bb200219d2ef93a353d0fa88a95695f9316bfd1c20f02acea15",
+      "match": true,
+      "source": "current live dependency"
+    },
+    {
+      "relative": "scripts/r6_propagate.py",
+      "baseline_sha": "bcd22a7676b178a28f1c75baaaae23adec48a89ae5a40cd3765b44f5f824bf01",
+      "review_sha": "2b76bf83312417f8645a07657301fe8fe62042931ed3f6bdb0823079e6df152c",
+      "match": false,
+      "source": "exact submitted candidate snapshot"
+    },
+    {
+      "relative": "scripts/r6_qa.py",
+      "baseline_sha": "220a63574a5fce3b60e4dda3fca7b3779b65a96044199cbfe9f528d26ee58098",
+      "review_sha": "220a63574a5fce3b60e4dda3fca7b3779b65a96044199cbfe9f528d26ee58098",
+      "match": true,
+      "source": "current live dependency"
+    },
+    {
+      "relative": "scripts/r6_sam2.py",
+      "baseline_sha": "30c8279602a1355f64beecbb23895bf8a26a1d63fa317e17518466cef2b2bfe6",
+      "review_sha": "30c8279602a1355f64beecbb23895bf8a26a1d63fa317e17518466cef2b2bfe6",
+      "match": true,
+      "source": "current live dependency"
+    },
+    {
+      "relative": "scripts/r6_upload.py",
+      "baseline_sha": "057179db2b539965d88aed3e3f25a0251cf7e6d9959a6f9ce1f7514783e04967",
+      "review_sha": "057179db2b539965d88aed3e3f25a0251cf7e6d9959a6f9ce1f7514783e04967",
+      "match": true,
+      "source": "current live dependency"
+    },
+    {
+      "relative": "scripts/r6_upload_video.py",
+      "baseline_sha": "64a9ea96560c9d9f4183bdc1983684369236c84f1a5382a3aafbe0e390306de9",
+      "review_sha": "64a9ea96560c9d9f4183bdc1983684369236c84f1a5382a3aafbe0e390306de9",
+      "match": true,
+      "source": "current live dependency"
+    },
+    {
+      "relative": "scripts/r6_vace.py",
+      "baseline_sha": "1f3d8e00062f6c1f22503e17ca7ed9ff1c7f266f45796586ce4458a7eea02140",
+      "review_sha": "1f3d8e00062f6c1f22503e17ca7ed9ff1c7f266f45796586ce4458a7eea02140",
+      "match": true,
+      "source": "current live dependency"
+    },
+    {
+      "relative": "scripts/r6_validate_masks.py",
+      "baseline_sha": "d5862e81ae29c95d0254aa7590aaf3d992179e5f35d8fa1e34a98f4bc6e067c4",
+      "review_sha": "d5862e81ae29c95d0254aa7590aaf3d992179e5f35d8fa1e34a98f4bc6e067c4",
+      "match": true,
+      "source": "current live dependency"
+    },
+    {
+      "relative": "scripts/r6_write_reviews.py",
+      "baseline_sha": "4b5cf37da03658ad33b3e8e9e603b4d99697416b14b0f2d91ba06fd2696cc476",
+      "review_sha": "c16285f5fb987e866555ae645f163c2ad1737ad27d22b0654acdec945ed27658",
+      "match": false,
+      "source": "current live dependency"
+    },
+    {
+      "relative": "scripts/r6g_blend_review.py",
+      "baseline_sha": "a8005d02280deabacaf88cdcd19f9e652470df5b737908a91e001a9495e9caf8",
+      "review_sha": "a8005d02280deabacaf88cdcd19f9e652470df5b737908a91e001a9495e9caf8",
+      "match": true,
+      "source": "current live dependency"
+    },
+    {
+      "relative": "scripts/write_terminal_record_r6.py",
+      "baseline_sha": "34872812d5fd4804caf8ecde745ddf9bfb35aee8f66b2ee292f20ef34c786317",
+      "review_sha": "34872812d5fd4804caf8ecde745ddf9bfb35aee8f66b2ee292f20ef34c786317",
+      "match": true,
+      "source": "current live dependency"
+    },
+    {
+      "relative": "scripts/write_terminal_record_r6c.py",
+      "baseline_sha": "1136e48e993079740d6175907270ad981ec912ea5a9792657463966feb633b86",
+      "review_sha": "1136e48e993079740d6175907270ad981ec912ea5a9792657463966feb633b86",
+      "match": true,
+      "source": "current live dependency"
+    },
+    {
+      "relative": "scripts/write_terminal_record_r6d.py",
+      "baseline_sha": "ec3102b30d5a011ace5dd7a777fdf4cfed9624652f514e9604b24e04bba14e1a",
+      "review_sha": "ec3102b30d5a011ace5dd7a777fdf4cfed9624652f514e9604b24e04bba14e1a",
+      "match": true,
+      "source": "current live dependency"
+    },
+    {
+      "relative": "scripts/write_terminal_record_r6f.py",
+      "baseline_sha": "0f1483d87d601f4da2b1ad128ad24d9d5c98f19642f198364d0711f8b8e0376a",
+      "review_sha": "0f1483d87d601f4da2b1ad128ad24d9d5c98f19642f198364d0711f8b8e0376a",
+      "match": true,
+      "source": "current live dependency"
+    },
+    {
+      "relative": "scripts/write_terminal_record_r6g.py",
+      "baseline_sha": "fcba352acd4dc359398cd6a1af4ad8ccb493f8ae940fcc38a7f8f3d63ce17845",
+      "review_sha": "fcba352acd4dc359398cd6a1af4ad8ccb493f8ae940fcc38a7f8f3d63ce17845",
+      "match": true,
+      "source": "current live dependency"
+    },
+    {
+      "relative": "tests/test_codex_c01_review_binding.py",
+      "baseline_sha": "351c39e764e53d67466688d9ec032cf9e352167e105ee0be580129f1db38fdf7",
+      "review_sha": "351c39e764e53d67466688d9ec032cf9e352167e105ee0be580129f1db38fdf7",
+      "match": true,
+      "source": "current live dependency"
+    },
+    {
+      "relative": "tests/test_codex_c02a_dependency_verification.py",
+      "baseline_sha": "195ead0031f16098087df5f56b5b9ac0e5ddc7a58a733ea6a0e0c22168650219",
+      "review_sha": "195ead0031f16098087df5f56b5b9ac0e5ddc7a58a733ea6a0e0c22168650219",
+      "match": true,
+      "source": "current live dependency"
+    },
+    {
+      "relative": "tests/test_codex_c02b1_staged_source.py",
+      "baseline_sha": "61bfe454456c452756ddbbf05b55678e146114cb6d2653bff77f4ee92af46aec",
+      "review_sha": "61bfe454456c452756ddbbf05b55678e146114cb6d2653bff77f4ee92af46aec",
+      "match": true,
+      "source": "current live dependency"
+    }
+  ],
+  "historical_q11_binding": [
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\tools\\dispatch_long.py",
+      "current_sha": "78d1bc1fafc65868e07a5c64687716b1f64d577002e28216437db43265cb16fa",
+      "historical_sha": "78d1bc1fafc65868e07a5c64687716b1f64d577002e28216437db43265cb16fa",
+      "match": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\tools\\invocation_runtime.py",
+      "current_sha": "86fc59156a357da7aa6b8691dfccc983b009548e7af4e2ea9ad9b226336b1775",
+      "historical_sha": "86fc59156a357da7aa6b8691dfccc983b009548e7af4e2ea9ad9b226336b1775",
+      "match": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\tools\\terminal_contract.py",
+      "current_sha": "96ca2f934fe50dfc27dd98cc6b4eb612538044af19afa71daf65d88bf93428bd",
+      "historical_sha": "96ca2f934fe50dfc27dd98cc6b4eb612538044af19afa71daf65d88bf93428bd",
+      "match": true
+    }
+  ],
+  "queue_read_only": {
+    "queue_running": 0,
+    "queue_pending": 0
+  },
+  "repositories": [
+    {
+      "path": "C:/Users/Admin/MotionForge2D",
+      "commands": [
+        {
+          "args": [
+            "rev-parse",
+            "HEAD"
+          ],
+          "exit": 0,
+          "stdout": "a40e368f7c47c232cf2eeed9fb185c5972cb98ba\n",
+          "stderr": ""
+        },
+        {
+          "args": [
+            "branch",
+            "--show-current"
+          ],
+          "exit": 0,
+          "stdout": "master\n",
+          "stderr": ""
+        },
+        {
+          "args": [
+            "status",
+            "--porcelain=v1"
+          ],
+          "exit": 0,
+          "stdout": " M app/api/app.py\n M app/api/deps.py\n M app/persistence/models.py\n M channels.json\n M docs/pm/CODEX_PM_HANDOFF.md\n M docs/pm/HERMES_AUTOPILOT_RULES.md\n M docs/pm/ROADMAP.md\n M docs/pm/sessions/S04-T01-ui-tokens-navigation/LOG.md\n M docs/pm/sessions/S04-T03-channel-management/LOG.md\n M docs/pm/sessions/S04-T03-channel-management/REPORT.md\n M docs/pm/sessions/S06-T05-pack-publish-ux/LOG.md\n M docs/pm/sessions/S06-T05-pack-publish-ux/REPORT.md\n M frontend/src/app/(app)/channels/page.tsx\n M frontend/src/app/(app)/characters/page.tsx\n M frontend/src/app/(app)/page.tsx\n M frontend/src/app/(app)/projects/[id]/page.tsx\n M frontend/src/app/(app)/projects/page.tsx\n M frontend/src/components/Dashboard.tsx\n M frontend/src/components/LegacyWorkspace.tsx\n M frontend/src/components/layout/AppNav.tsx\n M frontend/src/components/layout/AppShell.tsx\n M frontend/src/components/layout/StageRail.tsx\n M frontend/src/lib/api.ts\n M frontend/src/stores/project.ts\n M tests/test_durable_job_persistence.py\n M tests/test_persistence_bootstrap.py\n?? .codex-review/\n?? app/api/routes/durable_characters.py\n?? app/persistence/characters.py\n?? app/schemas/characters.py\n?? app/workflow/character_preset_importer.py\n?? app/workflow/character_validator.py\n?? data/\n?? diagnostics/\n?? docs/pm/CODEX_SESSION_HANDOFF_20261002.md\n?? docs/pm/prompts/CODEX_PROJECT_PM_CONTINUATION_S11_C4_REVIEW_2026-09-05.md\n?? docs/pm/prompts/CODEX_S11_C4_R1_REVIEW_2026-09-05.md\n?? docs/pm/prompts/S11_C1_FULL_SCOPE_READINESS_RESTART_EXIT_MANAGER_2026-09-04.md\n?? docs/pm/prompts/S11_C2_COMPLETION_AUTHORITY_TARGETED_RESTART_OWNER_EXIT_MANAGER_2026-09-04.md\n?? docs/pm/prompts/S11_C3_EXACT_IDENTITY_RESTART_PROOF_FAIL_FAST_EXIT_MANAGER_2026-09-04.md\n?? docs/pm/prompts/S11_C4_PRODUCTION_REGISTRY_FAIL_CLOSED_FINAL_EXIT_MANAGER_2026-09-05.md\n?? docs/pm/prompts/S11_C4_R1_BOOTSTRAP_ATOMICITY_ROUTE_BLOCKED_2026-09-05.md\n?? docs/pm/prompts/S11_C4_R2_BOOTSTRAP_TRANSACTION_OWNER_TRANSFER_MANAGER_2026-09-05.md\n?? docs/pm/prompts/S11_C4_R3_DURABLE_CONTENTION_EVIDENCE_CLOSURE_MANAGER_2026-09-05.md\n?? docs/pm/prompts/S11_C4_R4_DETERMINISTIC_LOCK_EVIDENCE_CLOSURE_MANAGER_2026-09-06.md\n?? docs/pm/prompts/S11_C4_R5_LIVE_LEDGER_EVIDENCE_ONLY_MANAGER_2026-09-06.md\n?? docs/pm/reviews/S11_C1_PM_REREVIEW_2026-09-04.md\n?? docs/pm/reviews/S11_C2_PM_REREVIEW_2026-09-04.md\n?? docs/pm/reviews/S11_C3_PM_REREVIEW_2026-09-05.md\n?? docs/pm/reviews/S11_C4_PM_REREVIEW_2026-09-05.md\n?? docs/pm/reviews/S11_C4_R1_PM_REREVIEW_2026-09-05.md\n?? docs/pm/reviews/S11_C4_R2_PM_REREVIEW_2026-09-05.md\n?? docs/pm/reviews/S11_C4_R3_PM_REREVIEW_2026-09-06.md\n?? docs/pm/reviews/S11_C4_R4_PM_REREVIEW_2026-09-06.md\n?? docs/pm/reviews/S11_T02_T06_PM_REVIEW_2026-09-04.md\n?? docs/pm/reviews/WORKER_MODEL_MUSE13_FREE_DEFERRED_DIRECTIVE_2026-09-03.md\n?? docs/pm/sessions/S04-T05-guided-shell/\n?? frontend/e2e/ui-correction.spec.ts\n?? migrations/versions/d5e6f7a8b9c0_character_library_schema.py\n?? notepad-session-backup-20260910/\n?? notification-full-reset-20260912-021511/\n?? notification-full-reset-20260912-021526/\n?? scripts/watch-s08-a01-c1.sh\n?? scripts/watch-s08-a01.sh\n?? scripts/watch-s08-h01.sh\n?? scripts/watch-s08-h02.sh\n?? scripts/watch-s08-h02c1.sh\n?? scripts/watch-s08-h02c2.sh\n?? scripts/watch-s08-h02c3.sh\n?? scripts/watch-s08-h02c4.sh\n?? scripts/watch-s08-h02c4c5.sh\n?? scripts/watch-s08-r01.sh\n?? scripts/watch-s08-t01.sh\n?? scripts/watch-s08-t01c2.sh\n?? scripts/watch-s08-t02-c1-exit.sh\n?? scripts/watch-s08-t02.sh\n?? scripts/watch-s08-t02c1.sh\n?? scripts/watch-s08-t02c2.sh\n?? scripts/watch-s08-t03.sh\n?? scripts/watch-s08-t03c1.sh\n?? scripts/watch-s08-t03c2.sh\n?? scripts/watch-s08-t04.sh\n?? scripts/watch-s08-t04c1.sh\n?? scripts/watch-s08-t04c2.sh\n?? scripts/watch-s08-t05.sh\n?? scripts/watch-s08-t05c1.sh\n?? scripts/watch-s08-t05c2.sh\n?? scripts/watch-s08-t06.sh\n?? scripts/watch-s08-t06c1.sh\n?? scripts/watch-s08-t06c2.sh\n?? start-cache-backup-20260912-025407/\n?? tests/fixtures/legacy_import/corrupt/projects/\n?? tests/fixtures/legacy_import/valid/projects/\n?? tests/test_character_domain.py\n?? tests/test_character_preset_importer.py\n?? tests/test_character_validator.py\n?? tests/test_pack_publish_ux.py\n?? tools/\n?? windows-notification-db-backup-20260912-011517/\n?? windows-notifications-backup-20260910.reg\n?? wpn-inspect-20260914-144145/\n?? wpndatabase-inspect-20260912-012000.db\n?? wpndatabase-inspect-20260912-012000.db-shm\n?? wpndatabase-inspect-20260912-012000.db-wal\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "path": "C:/Users/Admin/Documents/Codex/work/mf-delivery-20260927/INTEGRATION",
+      "commands": [
+        {
+          "args": [
+            "rev-parse",
+            "HEAD"
+          ],
+          "exit": 0,
+          "stdout": "a52fca897906fd61a088016dd802718fdf06d217\n",
+          "stderr": ""
+        },
+        {
+          "args": [
+            "branch",
+            "--show-current"
+          ],
+          "exit": 0,
+          "stdout": "codex/mf-end-integration-0928\n",
+          "stderr": ""
+        },
+        {
+          "args": [
+            "status",
+            "--porcelain=v1"
+          ],
+          "exit": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    }
+  ],
+  "last_owner_messages": [
+    {
+      "id": 297915,
+      "role": "tool",
+      "timestamp": 1792306241.3194025,
+      "finish_reason": null,
+      "tool_name": "search_files",
+      "content": "{\"total_count\": 1, \"matches\": [{\"path\": \"/c/Users/Admin/Documents/Codex/work/mf-delivery-runs/20261005/20261005T1643Z-wan-long/tasks/MF-DEMO-LONG-01/corrections/identity5m_20261008/r6/scripts/r6_cache.py\", \"line\": 158, \"content\": \"def _check_complete_file(item, role: str, expected: Path | None = None,\"}]}"
+    },
+    {
+      "id": 297914,
+      "role": "assistant",
+      "timestamp": 1792306240.9473894,
+      "finish_reason": "tool_calls",
+      "tool_name": null,
+      "content": ""
+    },
+    {
+      "id": 297913,
+      "role": "tool",
+      "timestamp": 1792306229.3759522,
+      "finish_reason": null,
+      "tool_name": "terminal",
+      "content": "{\"output\": \"S0031: PASS in 114.8s (keys: 42)\\r\\n\\n[Command timed out after 120s]\", \"exit_code\": 124, \"error\": null}"
+    }
+  ],
+  "leases": [
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\leases\\gpu_lease.LONG01-R4-20261011T0600Z-9f3a12.json",
+      "status": "RELEASED",
+      "invocation_id": "LONG01-R4-20261011T0600Z-9f3a12"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\leases\\gpu_lease.LONG01-R4b-20261011T0645Z-c4d901.json",
+      "status": "RELEASED",
+      "invocation_id": "LONG01-R4b-20261011T0645Z-c4d901"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\leases\\gpu_lease.LONG01-R4c-20261011T0730Z-b3e712.json",
+      "status": "RELEASED",
+      "invocation_id": "LONG01-R4c-20261011T0730Z-b3e712"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\leases\\gpu_lease.LONG01-R4d-20261011T0905Z-e82a41.json",
+      "status": "RELEASED",
+      "invocation_id": "LONG01-R4d-20261011T0905Z-e82a41"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\leases\\gpu_lease.LONG01-R4e-20261011T1245Z-7f2c19.json",
+      "status": "RELEASED",
+      "invocation_id": "LONG01-R4e-20261011T1245Z-7f2c19"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\leases\\gpu_lease.LONG01-R5-20261011T1800Z-881c.json",
+      "status": "RELEASED",
+      "invocation_id": "LONG01-R5-20261011T1800Z-881c"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\leases\\gpu_lease.LONG01-R5b-20261011T1828Z-faab.json",
+      "status": "RELEASED",
+      "invocation_id": "LONG01-R5b-20261011T1828Z-faab"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\leases\\gpu_lease.LONG01-R5c-20261011T1956Z-98e2.json",
+      "status": "RELEASED",
+      "invocation_id": "LONG01-R5c-20261011T1956Z-98e2"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\leases\\gpu_lease.LONG01-R5d-20261011T2125Z-5e87.json",
+      "status": "RELEASED",
+      "invocation_id": "LONG01-R5d-20261011T2125Z-5e87"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\leases\\gpu_lease.LONG01-R5e-20261012T0045Z-0080.json",
+      "status": "RELEASED",
+      "invocation_id": "LONG01-R5e-20261012T0045Z-0080"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\leases\\gpu_lease.LONG01-R6-20261012T0810Z-2731.json",
+      "status": "RELEASED",
+      "invocation_id": "LONG01-R6-20261012T0810Z-2731"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\leases\\gpu_lease.LONG01-R6b-20261012T0825Z-1d8c.json",
+      "status": "RELEASED",
+      "invocation_id": "LONG01-R6b-20261012T0825Z-1d8c"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\leases\\gpu_lease.LONG01-R6c-20261012T1215Z-8e2b.json",
+      "status": "RELEASED",
+      "invocation_id": "LONG01-R6c-20261012T1215Z-8e2b"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\leases\\gpu_lease.LONG01-R6d-20261012T1435Z-f304.json",
+      "status": "RELEASED",
+      "invocation_id": "LONG01-R6d-20261012T1435Z-f304"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\leases\\gpu_lease.LONG01-R6e-20261012T1555Z-3e9b.json",
+      "status": "RELEASED",
+      "invocation_id": "LONG01-R6e-20261012T1555Z-3e9b"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\leases\\gpu_lease.LONG01-R6f-20261012T1820Z-3211.json",
+      "status": "RELEASED",
+      "invocation_id": "LONG01-R6f-20261012T1820Z-3211"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\leases\\gpu_lease.LONG01-R6g-20261014T0725Z-1572.json",
+      "status": "RELEASED",
+      "invocation_id": "LONG01-R6g-20261014T0725Z-1572"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\leases\\gpu_lease.PROBE-LEASE-RUNNER.json",
+      "status": "RELEASED",
+      "invocation_id": "PROBE-LEASE-RUNNER"
+    }
+  ],
+  "controller_lock_exists": false,
+  "caveat": "Snapshot only. Historical LIVE_JOBS is not proof of current ownership. No production DB migration/tests or writer transfer performed."
+}

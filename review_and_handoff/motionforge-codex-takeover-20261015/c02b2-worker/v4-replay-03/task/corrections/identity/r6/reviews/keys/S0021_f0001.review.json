@@ -1,0 +1,22 @@
+{
+ "review_id": "keys:S0021_f0001",
+ "reviewer": "fixture-reviewer",
+ "reviewed_at": "2026-10-16T12:35:32Z",
+ "artifact": {
+  "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b2-worker\\v4-replay-03\\task\\corrections\\identity\\r6\\keys\\S0021\\f_0001_key.png",
+  "sha256": "a953f8ba6130e799bcc28b18d156c277632968bd686717d0d8cc46d99f688680"
+ },
+ "inputs": {
+  "ledger_row_sha": "4bb32fce5c80e56e62057c97f25fcb22317b0244bf880e9d563d1fd374e6ef07",
+  "deps_sha": "29186ff215a84f576a0e2760a3608dce40fea44b07bcd8692aeacbff4404860b"
+ },
+ "expected": {
+  "shot": "S0021",
+  "fid": 1
+ },
+ "frames": [
+  1
+ ],
+ "verdict": "PASS",
+ "evidence": "isolated fixture only"
+}

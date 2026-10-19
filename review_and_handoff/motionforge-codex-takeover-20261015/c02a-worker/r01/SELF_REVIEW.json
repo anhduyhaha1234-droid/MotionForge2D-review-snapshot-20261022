@@ -1,0 +1,48 @@
+{
+  "task": "CODEX-C02A-DEPENDENCY-VERIFICATION",
+  "finding": "C02A-R01",
+  "protected_count": 24,
+  "protected_match": true,
+  "files": [
+    {
+      "relative": "scripts/r6_cache.py",
+      "sha256": "be1d2f123ba71c355fdea0f904172eaeaf44c442994048038554a18a7864f8f2",
+      "bytes": 10610,
+      "lines": 229,
+      "candidate01_sha256": "946935906625d79b95153a92d4cf86310551cfbc4533a3661f2011854aeae7a7",
+      "changed": true
+    },
+    {
+      "relative": "scripts/r6_gate.py",
+      "sha256": "8c2e3f9eedd4d8e11832809c2b72293db17df1fb5a4012bd39fa396f93143f94",
+      "bytes": 17804,
+      "lines": 367,
+      "candidate01_sha256": "8c2e3f9eedd4d8e11832809c2b72293db17df1fb5a4012bd39fa396f93143f94",
+      "changed": false
+    },
+    {
+      "relative": "tests/test_codex_c01_review_binding.py",
+      "sha256": "351c39e764e53d67466688d9ec032cf9e352167e105ee0be580129f1db38fdf7",
+      "bytes": 14693,
+      "lines": 330,
+      "candidate01_sha256": "351c39e764e53d67466688d9ec032cf9e352167e105ee0be580129f1db38fdf7",
+      "changed": false
+    },
+    {
+      "relative": "tests/test_codex_c02a_dependency_verification.py",
+      "sha256": "195ead0031f16098087df5f56b5b9ac0e5ddc7a58a733ea6a0e0c22168650219",
+      "bytes": 23075,
+      "lines": 458,
+      "candidate01_sha256": "403e45568fddeda038b3f10a62cf3b311764d1e91e7a5f9ef9ca3fbf78877899",
+      "changed": true
+    }
+  ],
+  "duplicate_definitions": [],
+  "c01_assertions": "file exact candidate01; root independently checked 17 AST assertions",
+  "test_receipts": [
+    "NESTING_GREEN_01.txt",
+    "root-nesting-green-01/RESULT.json",
+    "root-55-green-01/RESULT.json",
+    "AFFECTED_FULL_01.txt"
+  ]
+}

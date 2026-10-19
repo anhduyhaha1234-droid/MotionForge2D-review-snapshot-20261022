@@ -1,0 +1,506 @@
+{
+ "utc": "2026-10-12T07:57:27Z",
+ "suite": "r6_q11_race",
+ "passed": 34,
+ "total": 34,
+ "rows": [
+  {
+   "name": "R1.one_winner_rc",
+   "pass": true,
+   "detail": {
+    "pass_rc": [
+     0,
+     4
+    ],
+    "wall_s": 15.2,
+    "refusals": 1,
+    "children": 1,
+    "dispatches": 1,
+    "markers": [
+     true,
+     false
+    ],
+    "terminal_records": [
+     "R6-RACE-1-W.json"
+    ],
+    "lease_W": "RELEASED",
+    "lease_L": null,
+    "lock_released": "2026-10-12T07:56:15.466601+00:00",
+    "loser_stdout_head": "REFUSED: controller lock held by another controller: {\"held_by\": {}, \"holder_state\": \"DEAD_SupersedeFailed\", \"error\": \"'WindowsFileLock' object has no attribute 'break_lock'\"}\n",
+    "ledger_rows": [
+     {
+      "action": "dispatch_refused",
+      "at_utc": "2026-10-12T07:56:04.492031+00:00",
+      "holder": {
+       "error": "'WindowsFileLock' object has no attribute 'break_lock'",
+       "held_by": {},
+       "holder_state": "DEAD_SupersedeFailed"
+      },
+      "reason": "controller_locked",
+      "task_id": "MF-DEMO-LONG-01"
+     },
+     {
+      "absolute_deadline_epoch": null,
+      "action": "dispatch",
+      "allowed_root": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r6_q11_race\\race_r1\\r6",
+      "at_utc": "2026-10-12T07:56:04.493025+00:00",
+      "cwd": ".",
+      "invocation_id": "R6-RACE-1-W",
+      "launcher_pid": 20832,
+      "log": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r6_q11_race\\race_r1\\logs\\W.log",
+      "model": "cmc/deepseek/deepseek-v4.1-flash",
+      "owner_sid": "new",
+      "packet": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r6_q11_race\\race_r1\\packet.md",
+      "packet_bytes": 171,
+      "packet_file_sha256": "1c59dc164fc51ea0576a03c7afc497c087698b2ff80237cb49bd7890ca41199d",
+      "packet_sha256": "a177bc365d21197b62e107985a0017debb66d38fb052590e1fe4993bc77503d5",
+      "receipt": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r6_q11_race\\race_r1\\receipts\\W.json",
+      "remaining_seconds": null,
+      "resume_session_requested": null,
+      "revision": "r6",
+      "run_id": "20261005T1643Z-wan-long",
+      "stall_kill_seconds": 6,
+      "task_id": "MF-DEMO-LONG-01"
+     },
+     {
+      "action": "child_spawned",
+      "at_utc": "2026-10-12T07:56:04.500032+00:00",
+      "child_cmd_sha1": "a0a6776166f427a7",
+      "child_created": "20261012145604.495846+420",
+      "child_created_epoch": 1791791764.4958458,
+      "child_name": "python.exe",
+      "child_pid": 37100,
+      "hermes_max_tokens_env": "16384",
+      "launcher_pid": 20832,
+      "task_id": "MF-DEMO-LONG-01"
+     },
+     {
+      "action": "terminal",
+      "at_utc": "2026-10-12T07:56:06.912140+00:00",
+      "child_pid": 37100,
+      "exit_code": 0,
+      "invocation_id": "R6-RACE-1-W",
+      "launcher_pid": 20832,
+      "log_bytes": 157,
+      "outcome_class": "CONTINUE_REQUIRED",
+      "receipt": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r6_q11_race\\race_r1\\receipts\\W.json",
+      "session_id_actual": null,
+      "task_id": "MF-DEMO-LONG-01",
+      "terminal_decision": "PENDING_SAME_OWNER_CONTINUATION",
+      "terminal_error": null,
+      "timed_out": false
+     }
+    ]
+   }
+  },
+  {
+   "name": "R1.loser_lock_msg",
+   "pass": true,
+   "detail": "REFUSED: controller lock held by another controller: {\"held_by\": {}, \"holder_state\": \"DEAD_SupersedeFailed\", \"error\": \"'WindowsFileLock' object has no attribute 'break_lock'\"}\n"
+  },
+  {
+   "name": "R1.one_child",
+   "pass": true,
+   "detail": {
+    "n_child": 1,
+    "markers": [
+     true,
+     false
+    ]
+   }
+  },
+  {
+   "name": "R1.one_refusal",
+   "pass": true,
+   "detail": {
+    "n_ref": 1,
+    "n_disp": 1,
+    "n_child": 1,
+    "rows": 4
+   }
+  },
+  {
+   "name": "R1.winner_continue",
+   "pass": true,
+   "detail": {
+    "outcome": "CONTINUE_REQUIRED",
+    "decision": "PENDING_SAME_OWNER_CONTINUATION"
+   }
+  },
+  {
+   "name": "R1.exactly_one_terminal",
+   "pass": true,
+   "detail": [
+    "R6-RACE-1-W.json"
+   ]
+  },
+  {
+   "name": "R1.lease_endstate",
+   "pass": true,
+   "detail": {
+    "win": "RELEASED",
+    "lose": null
+   }
+  },
+  {
+   "name": "R1.lock_released",
+   "pass": true,
+   "detail": "2026-10-12T07:56:15.466601+00:00"
+  },
+  {
+   "name": "R1.bounded_join",
+   "pass": true,
+   "detail": 15.160852432250977
+  },
+  {
+   "name": "R2.one_winner_rc",
+   "pass": true,
+   "detail": {
+    "pass_rc": [
+     4,
+     0
+    ],
+    "wall_s": 15.1,
+    "refusals": 1,
+    "children": 1,
+    "dispatches": 1,
+    "markers": [
+     false,
+     true
+    ],
+    "terminal_records": [
+     "R6-RACE-2-L.json"
+    ],
+    "lease_W": null,
+    "lease_L": "RELEASED",
+    "lock_released": "2026-10-12T07:56:30.616821+00:00",
+    "loser_stdout_head": "REFUSED: controller lock held by another controller: {\"held_by\": {}, \"holder_state\": \"DEAD_SupersedeFailed\", \"error\": \"'WindowsFileLock' object has no attribute 'break_lock'\"}\n",
+    "ledger_rows": [
+     {
+      "action": "dispatch_refused",
+      "at_utc": "2026-10-12T07:56:19.669197+00:00",
+      "holder": {
+       "error": "'WindowsFileLock' object has no attribute 'break_lock'",
+       "held_by": {},
+       "holder_state": "DEAD_SupersedeFailed"
+      },
+      "reason": "controller_locked",
+      "task_id": "MF-DEMO-LONG-01"
+     },
+     {
+      "absolute_deadline_epoch": null,
+      "action": "dispatch",
+      "allowed_root": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r6_q11_race\\race_r2\\r6",
+      "at_utc": "2026-10-12T07:56:19.670198+00:00",
+      "cwd": ".",
+      "invocation_id": "R6-RACE-2-L",
+      "launcher_pid": 30244,
+      "log": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r6_q11_race\\race_r2\\logs\\L.log",
+      "model": "cmc/deepseek/deepseek-v4.1-flash",
+      "owner_sid": "new",
+      "packet": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r6_q11_race\\race_r2\\packet.md",
+      "packet_bytes": 171,
+      "packet_file_sha256": "1c59dc164fc51ea0576a03c7afc497c087698b2ff80237cb49bd7890ca41199d",
+      "packet_sha256": "48906056e1ba87a7062f077fd975a5c3237289d011585522683a884b1f617df7",
+      "receipt": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r6_q11_race\\race_r2\\receipts\\L.json",
+      "remaining_seconds": null,
+      "resume_session_requested": null,
+      "revision": "r6",
+      "run_id": "20261005T1643Z-wan-long",
+      "stall_kill_seconds": 6,
+      "task_id": "MF-DEMO-LONG-01"
+     },
+     {
+      "action": "child_spawned",
+      "at_utc": "2026-10-12T07:56:19.680197+00:00",
+      "child_cmd_sha1": "55bb94ea94cabb48",
+      "child_created": "20261012145619.672616+420",
+      "child_created_epoch": 1791791779.6726165,
+      "child_name": "python.exe",
+      "child_pid": 41208,
+      "hermes_max_tokens_env": "16384",
+      "launcher_pid": 30244,
+      "task_id": "MF-DEMO-LONG-01"
+     },
+     {
+      "action": "terminal",
+      "at_utc": "2026-10-12T07:56:22.076650+00:00",
+      "child_pid": 41208,
+      "exit_code": 0,
+      "invocation_id": "R6-RACE-2-L",
+      "launcher_pid": 30244,
+      "log_bytes": 157,
+      "outcome_class": "CONTINUE_REQUIRED",
+      "receipt": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r6_q11_race\\race_r2\\receipts\\L.json",
+      "session_id_actual": null,
+      "task_id": "MF-DEMO-LONG-01",
+      "terminal_decision": "PENDING_SAME_OWNER_CONTINUATION",
+      "terminal_error": null,
+      "timed_out": false
+     }
+    ]
+   }
+  },
+  {
+   "name": "R2.loser_lock_msg",
+   "pass": true,
+   "detail": "REFUSED: controller lock held by another controller: {\"held_by\": {}, \"holder_state\": \"DEAD_SupersedeFailed\", \"error\": \"'WindowsFileLock' object has no attribute 'break_lock'\"}\n"
+  },
+  {
+   "name": "R2.one_child",
+   "pass": true,
+   "detail": {
+    "n_child": 1,
+    "markers": [
+     false,
+     true
+    ]
+   }
+  },
+  {
+   "name": "R2.one_refusal",
+   "pass": true,
+   "detail": {
+    "n_ref": 1,
+    "n_disp": 1,
+    "n_child": 1,
+    "rows": 4
+   }
+  },
+  {
+   "name": "R2.winner_continue",
+   "pass": true,
+   "detail": {
+    "outcome": "CONTINUE_REQUIRED",
+    "decision": "PENDING_SAME_OWNER_CONTINUATION"
+   }
+  },
+  {
+   "name": "R2.exactly_one_terminal",
+   "pass": true,
+   "detail": [
+    "R6-RACE-2-L.json"
+   ]
+  },
+  {
+   "name": "R2.lease_endstate",
+   "pass": true,
+   "detail": {
+    "win": "RELEASED",
+    "lose": null
+   }
+  },
+  {
+   "name": "R2.lock_released",
+   "pass": true,
+   "detail": "2026-10-12T07:56:30.616821+00:00"
+  },
+  {
+   "name": "R2.bounded_join",
+   "pass": true,
+   "detail": 15.12772798538208
+  },
+  {
+   "name": "R3.one_winner_rc",
+   "pass": true,
+   "detail": {
+    "pass_rc": [
+     4,
+     0
+    ],
+    "wall_s": 15.1,
+    "refusals": 1,
+    "children": 1,
+    "dispatches": 1,
+    "markers": [
+     false,
+     true
+    ],
+    "terminal_records": [
+     "R6-RACE-3-L.json"
+    ],
+    "lease_W": null,
+    "lease_L": "RELEASED",
+    "lock_released": "2026-10-12T07:56:45.753111+00:00",
+    "loser_stdout_head": "REFUSED: controller lock held by another controller: {\"held_by\": {}, \"holder_state\": \"DEAD_SupersedeFailed\", \"error\": \"'WindowsFileLock' object has no attribute 'break_lock'\"}\n",
+    "ledger_rows": [
+     {
+      "action": "dispatch_refused",
+      "at_utc": "2026-10-12T07:56:34.812702+00:00",
+      "holder": {
+       "error": "'WindowsFileLock' object has no attribute 'break_lock'",
+       "held_by": {},
+       "holder_state": "DEAD_SupersedeFailed"
+      },
+      "reason": "controller_locked",
+      "task_id": "MF-DEMO-LONG-01"
+     },
+     {
+      "absolute_deadline_epoch": null,
+      "action": "dispatch",
+      "allowed_root": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r6_q11_race\\race_r3\\r6",
+      "at_utc": "2026-10-12T07:56:34.813700+00:00",
+      "cwd": ".",
+      "invocation_id": "R6-RACE-3-L",
+      "launcher_pid": 43348,
+      "log": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r6_q11_race\\race_r3\\logs\\L.log",
+      "model": "cmc/deepseek/deepseek-v4.1-flash",
+      "owner_sid": "new",
+      "packet": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r6_q11_race\\race_r3\\packet.md",
+      "packet_bytes": 171,
+      "packet_file_sha256": "1c59dc164fc51ea0576a03c7afc497c087698b2ff80237cb49bd7890ca41199d",
+      "packet_sha256": "0c8e1e30fe845d4eb698d2cc8f7e775afaa1cba629580e96bf0eb3edf3e28411",
+      "receipt": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r6_q11_race\\race_r3\\receipts\\L.json",
+      "remaining_seconds": null,
+      "resume_session_requested": null,
+      "revision": "r6",
+      "run_id": "20261005T1643Z-wan-long",
+      "stall_kill_seconds": 6,
+      "task_id": "MF-DEMO-LONG-01"
+     },
+     {
+      "action": "child_spawned",
+      "at_utc": "2026-10-12T07:56:34.820715+00:00",
+      "child_cmd_sha1": "da6a2cdccb9941dd",
+      "child_created": "20261012145634.816728+420",
+      "child_created_epoch": 1791791794.816728,
+      "child_name": "python.exe",
+      "child_pid": 31392,
+      "hermes_max_tokens_env": "16384",
+      "launcher_pid": 43348,
+      "task_id": "MF-DEMO-LONG-01"
+     },
+     {
+      "action": "terminal",
+      "at_utc": "2026-10-12T07:56:37.224259+00:00",
+      "child_pid": 31392,
+      "exit_code": 0,
+      "invocation_id": "R6-RACE-3-L",
+      "launcher_pid": 43348,
+      "log_bytes": 157,
+      "outcome_class": "CONTINUE_REQUIRED",
+      "receipt": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r6_q11_race\\race_r3\\receipts\\L.json",
+      "session_id_actual": null,
+      "task_id": "MF-DEMO-LONG-01",
+      "terminal_decision": "PENDING_SAME_OWNER_CONTINUATION",
+      "terminal_error": null,
+      "timed_out": false
+     }
+    ]
+   }
+  },
+  {
+   "name": "R3.loser_lock_msg",
+   "pass": true,
+   "detail": "REFUSED: controller lock held by another controller: {\"held_by\": {}, \"holder_state\": \"DEAD_SupersedeFailed\", \"error\": \"'WindowsFileLock' object has no attribute 'break_lock'\"}\n"
+  },
+  {
+   "name": "R3.one_child",
+   "pass": true,
+   "detail": {
+    "n_child": 1,
+    "markers": [
+     false,
+     true
+    ]
+   }
+  },
+  {
+   "name": "R3.one_refusal",
+   "pass": true,
+   "detail": {
+    "n_ref": 1,
+    "n_disp": 1,
+    "n_child": 1,
+    "rows": 4
+   }
+  },
+  {
+   "name": "R3.winner_continue",
+   "pass": true,
+   "detail": {
+    "outcome": "CONTINUE_REQUIRED",
+    "decision": "PENDING_SAME_OWNER_CONTINUATION"
+   }
+  },
+  {
+   "name": "R3.exactly_one_terminal",
+   "pass": true,
+   "detail": [
+    "R6-RACE-3-L.json"
+   ]
+  },
+  {
+   "name": "R3.lease_endstate",
+   "pass": true,
+   "detail": {
+    "win": "RELEASED",
+    "lose": null
+   }
+  },
+  {
+   "name": "R3.lock_released",
+   "pass": true,
+   "detail": "2026-10-12T07:56:45.753111+00:00"
+  },
+  {
+   "name": "R3.bounded_join",
+   "pass": true,
+   "detail": 15.106272459030151
+  },
+  {
+   "name": "CONTROL.ordered_winner_rc0",
+   "pass": true,
+   "detail": 0
+  },
+  {
+   "name": "CONTROL.ordered_loser_rc4",
+   "pass": true,
+   "detail": 4
+  },
+  {
+   "name": "CONTROL.ordered_one_child",
+   "pass": true,
+   "detail": [
+    "dispatch",
+    "child_spawned",
+    "dispatch_refused",
+    "terminal"
+   ]
+  },
+  {
+   "name": "CONTROL.label",
+   "pass": true,
+   "detail": "ordered held-lock control; NOT used as race proof"
+  },
+  {
+   "name": "SENTINEL.rc0_continue",
+   "pass": true,
+   "detail": {
+    "rc": 0,
+    "outcome": "CONTINUE_REQUIRED"
+   }
+  },
+  {
+   "name": "NEG.r5_result_vs_r6_dispatch",
+   "pass": true,
+   "detail": {
+    "rc": 0,
+    "outcome": "NEEDS_RECONCILIATION",
+    "err": "invocation binding mismatch: revision"
+   }
+  },
+  {
+   "name": "FINAL.no_stray_children",
+   "pass": true,
+   "detail": []
+  }
+ ],
+ "provenance": {
+  "dispatch_sha256": "78d1bc1fafc65868e07a5c64687716b1f64d577002e28216437db43265cb16fa",
+  "invocation_runtime_sha256": "86fc59156a357da7aa6b8691dfccc983b009548e7af4e2ea9ad9b226336b1775",
+  "terminal_contract_sha256": "96ca2f934fe50dfc27dd98cc6b4eb612538044af19afa71daf65d88bf93428bd",
+  "wrapper_sha256": "4bf13712f91ed3cfbb171831d9c8cf7555ee3e022d4023442a18a1f1df1bf73d",
+  "fake_child_sha256": "5e7cc3574ddb677d2cd4035b01fec1e83b0668fd4c0009c55725768b51d337bb"
+ }
+}

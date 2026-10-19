@@ -1,0 +1,55 @@
+diff --git "a/C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\preimages\\r6_gate.py" "b/C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_gate.py"
+index 49bee26..fdd045c 100644
+--- "a/C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\preimages\\r6_gate.py"
++++ "b/C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_gate.py"
+@@ -103,6 +103,24 @@ def _valid_inputs(inputs):
+     return True
+ 
+ 
++def _current_blend_frame_ids(inputs_now, kind, name):
++    """Derive frame identity from the current manifest entries, not the review."""
++    current = inputs_now.get("frames") if type(inputs_now) is dict else None
++    if type(current) is not list or not current:
++        raise GateBlock(f"SEMANTIC_REVIEW_CURRENT_FRAMES_MALFORMED {kind}:{name}")
++    for fid, frame in enumerate(current, 1):
++        if (type(frame) is not dict or
++                type(frame.get("name")) is not str or
++                not re.fullmatch(r"[0-9]{4,}\.jpg", frame["name"]) or
++                type(frame.get("size")) is not int or frame["size"] < 1 or
++                type(frame.get("sha256")) is not str or
++                not re.fullmatch(r"[0-9a-fA-F]{64}", frame["sha256"])):
++            raise GateBlock(f"SEMANTIC_REVIEW_CURRENT_FRAMES_MALFORMED {kind}:{name}")
++        if frame["name"] != f"{fid:04d}.jpg":
++            raise GateBlock(f"SEMANTIC_REVIEW_FRAME_IDENTITY_MISMATCH {kind}:{name}: current manifest")
++    return list(range(1, len(current) + 1))
++
++
+ def require_review(kind: str, name: str, artifact: Path, inputs_now: dict):
+     """Block unless a PASS review exists that binds this exact artifact + current inputs.
+ 
+@@ -160,9 +178,10 @@ def require_review(kind: str, name: str, artifact: Path, inputs_now: dict):
+         if frames != [fid]:
+             raise GateBlock(f"SEMANTIC_REVIEW_FRAME_IDENTITY_MISMATCH {kind}:{name}")
+     if blend_name:
+-        if expected.get("shot") != blend_name.group(1) or expected.get("frames") != len(frames):
++        if expected.get("shot") != blend_name.group(1):
+             raise GateBlock(f"SEMANTIC_REVIEW_IDENTITY_MISMATCH {kind}:{name}: expected")
+-        if frames != list(range(1, len(frames) + 1)):
++        current_frame_ids = _current_blend_frame_ids(inputs_now, kind, name)
++        if expected.get("frames") != len(current_frame_ids) or frames != current_frame_ids:
+             raise GateBlock(f"SEMANTIC_REVIEW_FRAME_IDENTITY_MISMATCH {kind}:{name}")
+     verdict = r.get("verdict")
+     if not _nonempty_text(verdict):
+@@ -266,8 +285,10 @@ def gate_blend_fresh(sid: str, expect_frames: int, started_at: float):
+         raise GateBlock(f"BLEND_MANIFEST_MISSING {sid}")
+     m = json.loads(man_p.read_text(encoding="utf-8"))
+     frames = m.get("frames")
+-    if not isinstance(frames, list) or len(frames) != expect_frames:
+-        raise GateBlock(f"BLEND_MANIFEST_COUNT {sid}: {0 if not frames else len(frames)}/{expect_frames}")
++    if type(frames) is not list or len(frames) != expect_frames:
++        observed = len(frames) if type(frames) is list else "malformed"
++        raise GateBlock(f"BLEND_MANIFEST_COUNT {sid}: {observed}/{expect_frames}")
++    _current_blend_frame_ids({"frames": frames}, "blend", f"{sid}_blend")
+     outcomes = m.get("child_outcomes") or []
+     if not outcomes or any(o.get("rc") != 0 for o in outcomes):
+         raise GateBlock(f"BLEND_CHILD_FAILURE {sid}: {[o for o in outcomes if o.get('rc') != 0][:3]}")

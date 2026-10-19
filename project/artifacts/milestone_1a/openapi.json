@@ -1,0 +1,1653 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "MotionForge 2D API",
+    "description": "Local-first 2D animation motion extraction and replacement",
+    "version": "0.2.0"
+  },
+  "paths": {
+    "/api/projects": {
+      "post": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Create Project",
+        "description": "Create a new project.",
+        "operationId": "create_project_api_projects_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateProjectRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateProjectResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{project_id}/video": {
+      "post": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Upload Video",
+        "description": "Upload a video file for the project.",
+        "operationId": "upload_video_api_projects__project_id__video_post",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Project Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_upload_video_api_projects__project_id__video_post"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Upload Video Api Projects  Project Id  Video Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{project_id}/ingest": {
+      "post": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Trigger Ingest",
+        "description": "Trigger ingest (probe + scene detect + frame extract). Returns a job.",
+        "operationId": "trigger_ingest_api_projects__project_id__ingest_post",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Project Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Trigger Ingest Api Projects  Project Id  Ingest Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{project_id}": {
+      "get": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Get Project",
+        "description": "Get project data.",
+        "operationId": "get_project_api_projects__project_id__get",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Project Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectData"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{project_id}/scenes": {
+      "get": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "List Scenes",
+        "description": "List scenes for a project.",
+        "operationId": "list_scenes_api_projects__project_id__scenes_get",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Project Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SceneInfo"
+                  },
+                  "title": "Response List Scenes Api Projects  Project Id  Scenes Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{project_id}/frames/{frame_index}": {
+      "get": {
+        "tags": [
+          "frames"
+        ],
+        "summary": "Serve Frame",
+        "description": "Serve a frame image file.\n\nArgs:\n    project_id: Project identifier.\n    frame_index: Zero-based frame index.\n    scene_id: Scene identifier (default 0).",
+        "operationId": "serve_frame_api_projects__project_id__frames__frame_index__get",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Project Id"
+            }
+          },
+          {
+            "name": "frame_index",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Frame Index"
+            }
+          },
+          {
+            "name": "scene_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 0,
+              "title": "Scene Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{project_id}/objects/preview-mask": {
+      "post": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Preview Mask",
+        "description": "Preview mask for a selection on a frame.",
+        "operationId": "preview_mask_api_projects__project_id__objects_preview_mask_post",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Project Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PreviewMaskRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Preview Mask Api Projects  Project Id  Objects Preview Mask Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{project_id}/objects": {
+      "post": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Create Object",
+        "description": "Create a tracked object.",
+        "operationId": "create_object_api_projects__project_id__objects_post",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Project Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateObjectRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Create Object Api Projects  Project Id  Objects Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{project_id}/objects/{object_id}/propagate": {
+      "post": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Propagate Object",
+        "description": "Propagate masks for a tracked object. Returns a job.",
+        "operationId": "propagate_object_api_projects__project_id__objects__object_id__propagate_post",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Project Id"
+            }
+          },
+          {
+            "name": "object_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Object Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Propagate Object Api Projects  Project Id  Objects  Object Id  Propagate Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{project_id}/objects/{object_id}": {
+      "get": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Get Object",
+        "description": "Get tracked object with motion data.",
+        "operationId": "get_object_api_projects__project_id__objects__object_id__get",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Project Id"
+            }
+          },
+          {
+            "name": "object_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Object Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Get Object Api Projects  Project Id  Objects  Object Id  Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{project_id}/objects/{object_id}/gallery": {
+      "get": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Get Gallery",
+        "description": "Get gallery manifest for a tracked object.",
+        "operationId": "get_gallery_api_projects__project_id__objects__object_id__gallery_get",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Project Id"
+            }
+          },
+          {
+            "name": "object_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Object Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Get Gallery Api Projects  Project Id  Objects  Object Id  Gallery Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{project_id}/objects/{object_id}/replacement": {
+      "post": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Upload Replacement",
+        "description": "Upload a replacement PNG for a tracked object.",
+        "operationId": "upload_replacement_api_projects__project_id__objects__object_id__replacement_post",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Project Id"
+            }
+          },
+          {
+            "name": "object_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Object Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_upload_replacement_api_projects__project_id__objects__object_id__replacement_post"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Upload Replacement Api Projects  Project Id  Objects  Object Id  Replacement Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{project_id}/objects/{object_id}/replacement-settings": {
+      "patch": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Update Replacement Settings",
+        "description": "Update replacement transform settings.",
+        "operationId": "update_replacement_settings_api_projects__project_id__objects__object_id__replacement_settings_patch",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Project Id"
+            }
+          },
+          {
+            "name": "object_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Object Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReplacementSettingsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Update Replacement Settings Api Projects  Project Id  Objects  Object Id  Replacement Settings Patch"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{project_id}/preview": {
+      "post": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Render Preview",
+        "description": "Render a preview video. Returns a job.",
+        "operationId": "render_preview_api_projects__project_id__preview_post",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Project Id"
+            }
+          },
+          {
+            "name": "object_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "Object Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Render Preview Api Projects  Project Id  Preview Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{project_id}/render": {
+      "post": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Render Final",
+        "description": "Render the final video. Returns a job.",
+        "operationId": "render_final_api_projects__project_id__render_post",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Project Id"
+            }
+          },
+          {
+            "name": "object_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "Object Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Render Final Api Projects  Project Id  Render Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/jobs/{job_id}": {
+      "get": {
+        "tags": [
+          "jobs"
+        ],
+        "summary": "Get Job Status",
+        "description": "Get job status.",
+        "operationId": "get_job_status_api_jobs__job_id__get",
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Job Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Get Job Status Api Jobs  Job Id  Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/jobs/{job_id}/cancel": {
+      "post": {
+        "tags": [
+          "jobs"
+        ],
+        "summary": "Cancel Job",
+        "description": "Cancel a running job.",
+        "operationId": "cancel_job_api_jobs__job_id__cancel_post",
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Job Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Cancel Job Api Jobs  Job Id  Cancel Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Health Check",
+        "description": "Health check endpoint.",
+        "operationId": "health_check_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Health Check Health Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Anchor": {
+        "properties": {
+          "x": {
+            "type": "number",
+            "title": "X",
+            "default": 0.5
+          },
+          "y": {
+            "type": "number",
+            "title": "Y",
+            "default": 0.5
+          }
+        },
+        "type": "object",
+        "title": "Anchor",
+        "description": "Anchor point for compositing (0.0\u20131.0 relative to bbox)."
+      },
+      "Body_upload_replacement_api_projects__project_id__objects__object_id__replacement_post": {
+        "properties": {
+          "file": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "File"
+          }
+        },
+        "type": "object",
+        "required": [
+          "file"
+        ],
+        "title": "Body_upload_replacement_api_projects__project_id__objects__object_id__replacement_post"
+      },
+      "Body_upload_video_api_projects__project_id__video_post": {
+        "properties": {
+          "file": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "File"
+          }
+        },
+        "type": "object",
+        "required": [
+          "file"
+        ],
+        "title": "Body_upload_video_api_projects__project_id__video_post"
+      },
+      "BoundingBox": {
+        "properties": {
+          "x": {
+            "type": "number",
+            "title": "X"
+          },
+          "y": {
+            "type": "number",
+            "title": "Y"
+          },
+          "width": {
+            "type": "number",
+            "title": "Width"
+          },
+          "height": {
+            "type": "number",
+            "title": "Height"
+          }
+        },
+        "type": "object",
+        "required": [
+          "x",
+          "y",
+          "width",
+          "height"
+        ],
+        "title": "BoundingBox",
+        "description": "Axis-aligned bounding box in pixel coordinates."
+      },
+      "CreateObjectRequest": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "kind": {
+            "$ref": "#/components/schemas/ObjectKind",
+            "default": "character"
+          },
+          "selection": {
+            "$ref": "#/components/schemas/SelectionInput"
+          },
+          "scene_id": {
+            "type": "integer",
+            "title": "Scene Id"
+          },
+          "mask_data": {
+            "anyOf": [
+              {
+                "items": {
+                  "items": {
+                    "type": "integer"
+                  },
+                  "type": "array"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Mask Data"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "selection",
+          "scene_id"
+        ],
+        "title": "CreateObjectRequest"
+      },
+      "CreateProjectRequest": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "title": "CreateProjectRequest"
+      },
+      "CreateProjectResponse": {
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "title": "Project Id"
+          },
+          "project": {
+            "$ref": "#/components/schemas/ProjectData"
+          }
+        },
+        "type": "object",
+        "required": [
+          "project_id",
+          "project"
+        ],
+        "title": "CreateProjectResponse"
+      },
+      "FitMode": {
+        "type": "string",
+        "enum": [
+          "contain",
+          "cover",
+          "stretch"
+        ],
+        "title": "FitMode"
+      },
+      "FrameMotion": {
+        "properties": {
+          "frame_index": {
+            "type": "integer",
+            "title": "Frame Index"
+          },
+          "centroid_x": {
+            "type": "number",
+            "title": "Centroid X"
+          },
+          "centroid_y": {
+            "type": "number",
+            "title": "Centroid Y"
+          },
+          "bbox": {
+            "$ref": "#/components/schemas/BoundingBox"
+          },
+          "scale_x": {
+            "type": "number",
+            "title": "Scale X",
+            "default": 1.0
+          },
+          "scale_y": {
+            "type": "number",
+            "title": "Scale Y",
+            "default": 1.0
+          },
+          "rotation_deg": {
+            "type": "number",
+            "title": "Rotation Deg",
+            "default": 0.0
+          },
+          "opacity": {
+            "type": "number",
+            "title": "Opacity",
+            "default": 1.0
+          },
+          "visibility": {
+            "type": "boolean",
+            "title": "Visibility",
+            "default": true
+          },
+          "area": {
+            "type": "number",
+            "title": "Area",
+            "default": 0.0
+          },
+          "confidence": {
+            "type": "number",
+            "title": "Confidence",
+            "default": 1.0
+          },
+          "occluded": {
+            "type": "boolean",
+            "title": "Occluded",
+            "default": false
+          },
+          "needs_review": {
+            "type": "boolean",
+            "title": "Needs Review",
+            "default": false
+          },
+          "mask_path": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Mask Path"
+          }
+        },
+        "type": "object",
+        "required": [
+          "frame_index",
+          "centroid_x",
+          "centroid_y",
+          "bbox"
+        ],
+        "title": "FrameMotion",
+        "description": "Motion data for a single frame.\n\nCoordinate system: pixel coordinates, origin at top-left.\nRotation unit: degrees (from cv2.minAreaRect, normalized to [-90, 90]).\nScale: relative to reference_bbox (1.0 = same size as selection frame).\nConfidence: 0.0\u20131.0, tracking confidence (1.0 = certain).\nVisibility: True if object is considered present (mask area > threshold).\nOccluded: True if object is known to be behind another object.\nNeeds_review: True if tracking quality is uncertain.\nMask_path: relative path to the binary mask PNG for this frame."
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "ObjectKind": {
+        "type": "string",
+        "enum": [
+          "character",
+          "prop",
+          "effect",
+          "background"
+        ],
+        "title": "ObjectKind"
+      },
+      "Point2D": {
+        "properties": {
+          "x": {
+            "type": "number",
+            "title": "X",
+            "default": 0.0
+          },
+          "y": {
+            "type": "number",
+            "title": "Y",
+            "default": 0.0
+          }
+        },
+        "type": "object",
+        "title": "Point2D"
+      },
+      "PreviewMaskRequest": {
+        "properties": {
+          "frame_index": {
+            "type": "integer",
+            "title": "Frame Index"
+          },
+          "selection": {
+            "$ref": "#/components/schemas/SelectionInput"
+          },
+          "backend": {
+            "type": "string",
+            "title": "Backend",
+            "default": "contour"
+          }
+        },
+        "type": "object",
+        "required": [
+          "frame_index",
+          "selection"
+        ],
+        "title": "PreviewMaskRequest"
+      },
+      "ProjectData": {
+        "properties": {
+          "version": {
+            "type": "string",
+            "title": "Version",
+            "default": "2.0.0"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "source_video": {
+            "type": "string",
+            "title": "Source Video"
+          },
+          "video_metadata": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/VideoMetadata"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "scenes": {
+            "items": {
+              "$ref": "#/components/schemas/SceneInfo"
+            },
+            "type": "array",
+            "title": "Scenes"
+          },
+          "objects": {
+            "items": {
+              "$ref": "#/components/schemas/TrackedObject"
+            },
+            "type": "array",
+            "title": "Objects"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "source_video"
+        ],
+        "title": "ProjectData",
+        "description": "Top-level project state, serializable to JSON.\n\nVersion history:\n- 1.0.0: Initial schema (Milestone 0)\n- 2.0.0: Added confidence, occluded, needs_review, mask_path,\n          anchor, tracking_backend, model_version"
+      },
+      "ReplacementConfig": {
+        "properties": {
+          "mode": {
+            "$ref": "#/components/schemas/ReplacementMode",
+            "default": "static_asset"
+          },
+          "assetPath": {
+            "type": "string",
+            "title": "Assetpath",
+            "default": ""
+          },
+          "anchor": {
+            "$ref": "#/components/schemas/Point2D"
+          },
+          "offset": {
+            "$ref": "#/components/schemas/Point2D"
+          },
+          "scale": {
+            "type": "number",
+            "title": "Scale",
+            "default": 1.0
+          },
+          "rotationOffsetDeg": {
+            "type": "number",
+            "title": "Rotationoffsetdeg",
+            "default": 0.0
+          },
+          "opacity": {
+            "type": "number",
+            "title": "Opacity",
+            "default": 1.0
+          },
+          "fitMode": {
+            "$ref": "#/components/schemas/FitMode",
+            "default": "contain"
+          }
+        },
+        "type": "object",
+        "title": "ReplacementConfig",
+        "description": "Replacement transform settings matching docs/TRANSFORM_SPEC.md."
+      },
+      "ReplacementMode": {
+        "type": "string",
+        "enum": [
+          "none",
+          "static_asset",
+          "frame_sequence",
+          "keyframe_assets"
+        ],
+        "title": "ReplacementMode"
+      },
+      "ReplacementSettingsRequest": {
+        "properties": {
+          "replacement_config": {
+            "$ref": "#/components/schemas/ReplacementConfig"
+          }
+        },
+        "type": "object",
+        "required": [
+          "replacement_config"
+        ],
+        "title": "ReplacementSettingsRequest"
+      },
+      "SceneInfo": {
+        "properties": {
+          "scene_id": {
+            "type": "integer",
+            "title": "Scene Id"
+          },
+          "start_frame": {
+            "type": "integer",
+            "title": "Start Frame"
+          },
+          "end_frame": {
+            "type": "integer",
+            "title": "End Frame"
+          },
+          "start_time_sec": {
+            "type": "number",
+            "title": "Start Time Sec"
+          },
+          "end_time_sec": {
+            "type": "number",
+            "title": "End Time Sec"
+          },
+          "duration_sec": {
+            "type": "number",
+            "title": "Duration Sec"
+          },
+          "frame_count": {
+            "type": "integer",
+            "title": "Frame Count"
+          }
+        },
+        "type": "object",
+        "required": [
+          "scene_id",
+          "start_frame",
+          "end_frame",
+          "start_time_sec",
+          "end_time_sec",
+          "duration_sec",
+          "frame_count"
+        ],
+        "title": "SceneInfo",
+        "description": "A detected scene within the video.\n\nFrame indexing: zero-based, start_frame and end_frame are INCLUSIVE."
+      },
+      "SceneMotion": {
+        "properties": {
+          "scene_id": {
+            "type": "integer",
+            "title": "Scene Id"
+          },
+          "frames": {
+            "items": {
+              "$ref": "#/components/schemas/FrameMotion"
+            },
+            "type": "array",
+            "title": "Frames"
+          },
+          "reference_bbox": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/BoundingBox"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "tracking_backend": {
+            "type": "string",
+            "title": "Tracking Backend",
+            "default": "unknown"
+          },
+          "model_version": {
+            "type": "string",
+            "title": "Model Version",
+            "default": ""
+          },
+          "anchor": {
+            "$ref": "#/components/schemas/Anchor"
+          }
+        },
+        "type": "object",
+        "required": [
+          "scene_id"
+        ],
+        "title": "SceneMotion",
+        "description": "Aggregated motion data for an entire scene."
+      },
+      "SelectionInput": {
+        "properties": {
+          "mode": {
+            "$ref": "#/components/schemas/SelectionMode"
+          },
+          "frame_index": {
+            "type": "integer",
+            "title": "Frame Index"
+          },
+          "x": {
+            "type": "number",
+            "title": "X"
+          },
+          "y": {
+            "type": "number",
+            "title": "Y"
+          },
+          "width": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Width"
+          },
+          "height": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Height"
+          }
+        },
+        "type": "object",
+        "required": [
+          "mode",
+          "frame_index",
+          "x",
+          "y"
+        ],
+        "title": "SelectionInput",
+        "description": "User selection on a frame \u2014 point or bounding box.\n\nCoordinates are in pixel units (origin = top-left of frame).\nframe_index is zero-based, absolute within the scene."
+      },
+      "SelectionMode": {
+        "type": "string",
+        "enum": [
+          "point",
+          "bounding_box"
+        ],
+        "title": "SelectionMode"
+      },
+      "TrackedObject": {
+        "properties": {
+          "object_id": {
+            "type": "string",
+            "title": "Object Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "kind": {
+            "$ref": "#/components/schemas/ObjectKind",
+            "default": "character"
+          },
+          "selection": {
+            "$ref": "#/components/schemas/SelectionInput"
+          },
+          "scene_id": {
+            "type": "integer",
+            "title": "Scene Id"
+          },
+          "replacement_image": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Replacement Image"
+          },
+          "motion": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/SceneMotion"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "replacement_config": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ReplacementConfig"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "object_id",
+          "name",
+          "selection",
+          "scene_id"
+        ],
+        "title": "TrackedObject",
+        "description": "An object being tracked across a scene."
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "VideoMetadata": {
+        "properties": {
+          "width": {
+            "type": "integer",
+            "title": "Width"
+          },
+          "height": {
+            "type": "integer",
+            "title": "Height"
+          },
+          "fps": {
+            "type": "number",
+            "title": "Fps"
+          },
+          "duration_seconds": {
+            "type": "number",
+            "title": "Duration Seconds"
+          },
+          "total_frames": {
+            "type": "integer",
+            "title": "Total Frames"
+          },
+          "codec": {
+            "type": "string",
+            "title": "Codec"
+          },
+          "has_audio": {
+            "type": "boolean",
+            "title": "Has Audio"
+          },
+          "audio_codec": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Audio Codec"
+          },
+          "file_size_bytes": {
+            "type": "integer",
+            "title": "File Size Bytes",
+            "default": 0
+          },
+          "file_path": {
+            "type": "string",
+            "title": "File Path",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "required": [
+          "width",
+          "height",
+          "fps",
+          "duration_seconds",
+          "total_frames",
+          "codec",
+          "has_audio"
+        ],
+        "title": "VideoMetadata",
+        "description": "Metadata extracted from source video via ffprobe."
+      }
+    }
+  }
+}

@@ -1,0 +1,340 @@
+--- preimage/scripts/r6_keygen_asset.py
++++ r6/scripts/r6_keygen_asset.py
+@@ -11,6 +11,7 @@
+ sys.path.insert(0, str(HERE))
+ import r6_common as K  # noqa: E402
+ import r6_cache as CA  # noqa: E402
++import r6_key_recipe as KR  # noqa: E402
+ 
+ REC = K.R6 / "receipts/R6_ASSET_RUNS.jsonl"
+ 
+@@ -62,6 +63,11 @@
+     keydir = K.R6 / "keys" / sid
+     keydir.mkdir(parents=True, exist_ok=True)
+     keypng = keydir / f"f_{fid:04d}_key.png"
++    ok, why = CA.skip_allowed(sid, fid, keypng)
++    if ok:
++        print(json.dumps({"shot": sid, "fid": fid, "skipped": why}))
++        return
++    recipe = KR.current_asset_recipe(sid, fid, CA.MODEL_PATH)
+     work = K.R6 / "work" / sid
+     work.mkdir(parents=True, exist_ok=True)
+     src = K.stage_frame(sid, K.gframe_of(sid, fid), work / f"f_{fid:04d}_src.png")
+@@ -71,6 +77,12 @@
+     _a = _np.asarray(_I.open(src).convert("RGB"))
+     if float(_a.std()) < 6.0:  # black/flat source (e.g. S0032 intro) -> explicit passthrough
+         _I.fromarray(_a).save(keypng)
++        deps = CA.build_complete_asset_deps(
++            sid, fid, recipe,
++            {"staged_source": src, "stage_receipt": src.with_name(src.name + ".stage.json")},
++            mode="asset_black_passthrough"
++        )
++        (work / f"f_{fid:04d}.deps.json").write_text(json.dumps(deps, ensure_ascii=False, indent=1), encoding="utf-8")
+         rec = {"shot": sid, "fid": fid, "mode": "asset_black_passthrough", "key": str(keypng),
+                "key_sha256": K.sha(keypng), "wall_s": round(time.time() - t0, 2),
+                "at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
+@@ -78,10 +90,14 @@
+             f.write(json.dumps(rec) + chr(10))
+         print(json.dumps({"shot": sid, "fid": fid, "mode": "black_pass", "sha16": K.sha16(keypng)}))
+         return
+-    seed = 2026101500 + int(sid[1:]) * 1000 + fid
++    seed = recipe["seed"]
+     g = whole_graph(sid, src, seed)
+     gp = K.R6 / "workflows"
+-    (gp / f"r6_asset_{sid}_f{fid}.json").write_text(json.dumps(g, indent=1), encoding="utf-8")
++    gp.mkdir(parents=True, exist_ok=True)
++    graph_path = gp / f"r6_asset_{sid}_f{fid}.json"
++    graph_path.write_text(json.dumps(g, indent=1), encoding="utf-8")
++    grey_file = K.INP / "_grey_64.png"
++    CA._verify_asset_graph(graph_path, recipe, src)
+     r = K.post(g)
+     hist = K.wait(r["prompt_id"], timeout=900)
+     outs = K.collect_outputs(hist)
+@@ -91,12 +107,15 @@
+     im = Image.open(outs[-1]).convert("RGB")
+     if im.size != (640, 360):
+         im = im.resize((640, 360))
++    if float(_np.asarray(im).std()) < 0.01:
++        raise SystemExit(f"BLANK EDIT {sid} f{fid}")
+     im.save(keypng)
+-    deps = CA.build_deps(sid, fid, {"source_span_lo": K.PLAN[sid]["start_frame"],
+-                                    "source_span_hi": K.PLAN[sid]["start_frame"] + n,
+-                                    "gframe": K.gframe_of(sid, fid), "casts": [], "masks": [],
+-                                    "graph": gp / f"r6_asset_{sid}_f{fid}.json"},
+-                         {"mode": "zero_shot_asset_restyle", "steps": 4})
++    deps = CA.build_complete_asset_deps(
++        sid, fid, recipe,
++        {"staged_source": src, "stage_receipt": src.with_name(src.name + ".stage.json"),
++         "graph": graph_path, "grey_ref": grey_file},
++        mode="zero_shot_asset_restyle"
++    )
+     (work / f"f_{fid:04d}.deps.json").write_text(json.dumps(deps, ensure_ascii=False, indent=1), encoding="utf-8")
+     rec = {"shot": sid, "fid": fid, "mode": "asset", "key": str(keypng), "key_sha256": K.sha(keypng),
+            "wall_s": round(time.time() - t0, 1), "prompt_id": r["prompt_id"],
+
+--- preimage/scripts/r6_cache.py
++++ r6/scripts/r6_cache.py
+@@ -20,6 +20,7 @@
+ 
+ MODEL_PATH = Path("C:/Users/Admin/Documents/Codex/work/mfv1/runtime/video14b/models/diffusion_models/flux-2-klein-4b-fp8.safetensors")
+ COMPLETE_KIND = "r6_key_deps_v4_per_actor"
++COMPLETE_ASSET_KIND = "r6_key_deps_v4_asset"
+ 
+ 
+ def settings_now(sid: str, fid: int) -> dict:
+@@ -322,10 +323,152 @@
+         return False, f"complete deps invalid: {exc}"
+ 
+ 
++
++def build_complete_asset_deps(sid: str, fid: int, recipe: dict, consumed: dict, mode: str) -> dict:
++    """Build the complete v4 asset contract."""
++    from r6_key_recipe import current_asset_recipe
++    if mode not in ("zero_shot_asset_restyle", "asset_black_passthrough"):
++        raise ValueError(f"invalid asset mode: {mode}")
++    cur_recipe = current_asset_recipe(sid, fid, MODEL_PATH)
++    if json.dumps(recipe, sort_keys=True, allow_nan=False) != json.dumps(
++            cur_recipe, sort_keys=True, allow_nan=False):
++        raise ValueError("asset recipe changed during generation")
++
++    consumed_rec = {
++        "staged_source": _file_record(consumed["staged_source"], "staged_source"),
++        "stage_receipt": _file_record(consumed["stage_receipt"], "stage_receipt")
++    }
++    if mode == "zero_shot_asset_restyle":
++        consumed_rec["graph"] = _file_record(consumed["graph"], "graph")
++        if "grey_ref" in consumed and consumed["grey_ref"]:
++            consumed_rec["grey_ref"] = _file_record(consumed["grey_ref"], "grey_ref")
++    else:
++        consumed_rec["graph"] = None
++
++    dep = {
++        "kind": COMPLETE_ASSET_KIND,
++        "shot": sid,
++        "fid": fid,
++        "mode": mode,
++        "source": _file_record(K.SRC, "source"),
++        "model": _file_record(MODEL_PATH, "model"),
++        "recipe": recipe,
++        "consumed": consumed_rec
++    }
++    dep["deps_sha"] = hashlib.sha256(json.dumps(dep, sort_keys=True).encode()).hexdigest()
++    ok, why = verify_complete_asset_deps(dep, sid, fid)
++    if not ok:
++        raise ValueError(f"complete asset dependency claim invalid: {why}")
++    return dep
++
++
++def _verify_asset_graph(path: Path, recipe: dict, staged_source: Path) -> None:
++    from r6_key_recipe import _strict_json
++    graph = _strict_json(path)
++    inp = lambda node, field: graph[node]["inputs"][field]
++    if (type(inp("NOISE", "noise_seed")) is not int or inp("NOISE", "noise_seed") != recipe["seed"] or
++            type(inp("SIGMAS", "steps")) is not int or inp("SIGMAS", "steps") != recipe["steps"] or
++            type(inp("GUIDER", "cfg")) not in (int, float) or
++            not math.isfinite(inp("GUIDER", "cfg")) or
++            inp("GUIDER", "cfg") != recipe["cfg"] or
++            inp("UNET", "unet_name") != recipe["model_name"] or
++            inp("CLIP", "clip_name") != recipe["clip_name"] or
++            inp("VAE", "vae_name") != recipe["vae_name"]):
++        raise ValueError("generated asset graph effective model/settings differ from recipe")
++    key_img = inp("KEY_LOAD", "image")
++    if type(key_img) is not str or Path(key_img).name != staged_source.name:
++        raise ValueError("generated asset graph KEY_LOAD input differs from consumed staged source")
++    if inp("PROMPT", "text") != recipe["prompt"]:
++        raise ValueError("generated asset graph prompt differs from recipe")
++    if (inp("GUIDER", "positive") != ["R2_POS", 0] or
++            inp("GUIDER", "negative") != ["R2_NEG", 0]):
++        raise ValueError("generated asset graph guider chain changed")
++
++
++def verify_complete_asset_deps(dep: dict, sid: str | None = None,
++                               fid: int | None = None) -> tuple[bool, str]:
++    """Verify current asset recipe, complete selected inputs and actual generated graphs."""
++    from r6_key_recipe import current_asset_recipe
++    try:
++        if type(dep) is not dict or set(dep) != {"kind", "shot", "fid", "mode", "source", "model",
++                                                "recipe", "consumed", "deps_sha"}:
++            raise ValueError("complete asset record fields malformed")
++        if dep["kind"] != COMPLETE_ASSET_KIND or type(dep["shot"]) is not str or type(dep["fid"]) is not int:
++            raise ValueError("complete asset record kind/identity malformed")
++        if sid is not None and (type(sid) is not str or dep["shot"] != sid):
++            raise ValueError("complete asset record shot differs from request")
++        if fid is not None and (type(fid) is not int or dep["fid"] != fid):
++            raise ValueError("complete asset record fid differs from request")
++        mode = dep["mode"]
++        if mode not in ("zero_shot_asset_restyle", "asset_black_passthrough"):
++            raise ValueError(f"invalid asset mode: {mode}")
++        if not _json_value(dep):
++            raise ValueError("complete asset record contains deep, non-JSON or nonfinite values")
++        seal = dep["deps_sha"]
++        if type(seal) is not str or not re.fullmatch(r"[0-9a-fA-F]{64}", seal):
++            raise ValueError("complete asset self-digest malformed")
++        body = {k: v for k, v in dep.items() if k != "deps_sha"}
++        if hashlib.sha256(json.dumps(body, sort_keys=True).encode()).hexdigest() != seal.lower():
++            raise ValueError("complete asset self-digest mismatch")
++
++        recipe = current_asset_recipe(dep["shot"], dep["fid"], MODEL_PATH)
++        if (type(dep["recipe"]) is not dict or
++                json.dumps(dep["recipe"], sort_keys=True) != json.dumps(recipe, sort_keys=True)):
++            raise ValueError("current asset recipe changed")
++
++        _check_complete_file(dep["source"], "source", K.SRC)
++        _check_complete_file(dep["model"], "model", MODEL_PATH)
++        consumed = dep["consumed"]
++        if type(consumed) is not dict or not ({"staged_source", "stage_receipt"} <= set(consumed)):
++            raise ValueError("complete asset consumed collection malformed")
++        work = K.R6 / "work" / dep["shot"]
++        staged = _check_complete_file(consumed["staged_source"], "staged_source",
++                                      work / f"f_{dep['fid']:04d}_src.png")
++        receipt = _check_complete_file(consumed["stage_receipt"], "stage_receipt",
++                                       staged.with_name(staged.name + ".stage.json"))
++        stage = K._stage_record(receipt)
++        if (stage is None or stage["contract"] != K._STAGE_CONTRACT or
++                stage["source_path"] != str(Path(K.SRC).resolve(strict=True)) or
++                stage["source_sha256"] != dep["source"]["sha256"] or
++                stage["sid"] != dep["shot"] or stage["gframe"] != recipe["gframe"] or
++                stage["output_path"] != str(staged) or
++                stage["output_sha256"] != consumed["staged_source"]["sha256"] or
++                stage["output_size"] != staged.stat().st_size):
++            raise ValueError("staged source receipt differs from source/frame/output")
++
++        from PIL import Image
++        import numpy as np
++        with Image.open(staged) as img:
++            arr = np.asarray(img.convert("RGB"))
++        std = float(arr.std())
++        if mode == "asset_black_passthrough":
++            if std >= 6.0:
++                raise ValueError(f"black passthrough claimed on non-flat frame (std={std:.2f} >= 6.0)")
++            if consumed.get("graph") is not None:
++                raise ValueError("black passthrough must not claim generated graph")
++        else:
++            if std < 6.0:
++                raise ValueError(f"restyle claimed on flat black frame (std={std:.2f} < 6.0)")
++            if "graph" not in consumed or consumed["graph"] is None:
++                raise ValueError("restyle mode missing graph")
++            gp = _check_complete_file(consumed["graph"], "graph",
++                                      K.R6 / "workflows" / f"r6_asset_{dep['shot']}_f{dep['fid']}.json")
++            if "grey_ref" in consumed and consumed["grey_ref"]:
++                _check_complete_file(consumed["grey_ref"], "grey_ref", K.INP / "_grey_64.png")
++            _verify_asset_graph(gp, recipe, staged)
++        return True, "ok"
++    except (OSError, UnicodeError, ValueError, TypeError, KeyError, IndexError,
++            AttributeError, RecursionError, OverflowError) as exc:
++        return False, f"complete asset deps invalid: {exc}"
++
++
+ def verify_deps(dep: dict, sid: str | None = None, fid: int | None = None) -> tuple[bool, str]:
+     """Verify a complete recorded v3 dependency against current files and request."""
+-    if type(dep) is dict and dep.get("kind") == COMPLETE_KIND:
+-        return verify_complete_deps(dep, sid, fid)
++    if type(dep) is dict:
++        if dep.get("kind") == COMPLETE_KIND:
++            return verify_complete_deps(dep, sid, fid)
++        if dep.get("kind") == COMPLETE_ASSET_KIND:
++            return verify_complete_asset_deps(dep, sid, fid)
+     required = {"kind", "shot", "fid", "source", "model", "casts", "masks",
+                 "graph", "settings", "deps_sha"}
+     if type(dep) is not dict:
+@@ -426,7 +569,7 @@
+     ok, why = verify_deps(dep, sid, fid)
+     if not ok:
+         return False, f"dep changed: {why}"
+-    if dep.get("kind") != COMPLETE_KIND:
++    if dep.get("kind") not in (COMPLETE_KIND, COMPLETE_ASSET_KIND):
+         # v3 remains available to historical recorded-file gates, but cannot
+         # authorize a new per-actor skip even if its shallow settings align.
+         try:
+
+--- preimage/scripts/r6_key_recipe.py
++++ r6/scripts/r6_key_recipe.py
+@@ -136,3 +136,88 @@
+             "model_name": unet, "clip_name": clip, "vae_name": vae,
+             "template": {"path": str(G.TPL.resolve(strict=True)), "sha256": K.sha(G.TPL)},
+             "code_sha256": code}
++
++def current_asset_recipe(sid: str, fid: int, model_path: Path) -> dict:
++    """Resolve effective settings for zero-shot asset keys without staging or ComfyUI calls."""
++    import r6_graph as G
++
++    if type(sid) is not str or not re.fullmatch(r"S[0-9]{4}", sid):
++        raise ValueError("invalid shot")
++    if type(fid) is not int or fid < 1:
++        raise ValueError("invalid fid")
++    plan = K.PLAN.get(sid)
++    if type(plan) is not dict or type(plan.get("start_frame")) is not int or type(plan.get("frames")) is not int:
++        raise ValueError("shot absent from plan")
++    if fid > plan["frames"]:
++        raise ValueError("fid outside shot plan")
++    row = None
++    for line in (K.R6 / "source_actor_ledger.jsonl").read_text(encoding="utf-8").splitlines():
++        candidate = json.loads(line)
++        if candidate.get("shot") == sid:
++            row = candidate
++            break
++    if type(row) is not dict or row.get("zero_explicit") is not True:
++        raise ValueError("asset ledger row absent or not ZERO_EXPLICIT")
++    if (type(row.get("n")) is not int or row["n"] != plan["frames"] or
++            row.get("src") != [plan["start_frame"], plan["start_frame"] + plan["frames"]]):
++        raise ValueError("ledger row disagrees with current plan")
++    board = _strict_json(K.R6 / "storyboard" / f"{sid}.json")
++    if type(board) is not dict or board.get("zero_explicit") is not True:
++        raise ValueError("asset storyboard absent or not ZERO_EXPLICIT")
++    if "n" in board and (type(board["n"]) is not int or board["n"] != row["n"]):
++        raise ValueError("storyboard span disagrees with ledger")
++
++    try:
++        off = int(os.environ.get("R6_SEED_OFF", "0"))
++    except (ValueError, OverflowError) as exc:
++        raise ValueError("invalid seed offset") from exc
++    seed = 2026101500 + int(sid[1:]) * 1000 + fid + off
++    if seed < 0 or seed > (1 << 64) - 1:
++        raise ValueError("effective seed outside uint64")
++
++    graph = _strict_json(G.TPL)
++    try:
++        steps = _node_input(graph, "SIGMAS", "steps", int)
++        sampler = _node_input(graph, "SAMPLER", "sampler_name", str)
++        cfg = graph["GUIDER"]["inputs"]["cfg"]
++        unet = _node_input(graph, "UNET", "unet_name", str)
++        clip = _node_input(graph, "CLIP", "clip_name", str)
++        vae = _node_input(graph, "VAE", "vae_name", str)
++    except (KeyError, TypeError) as exc:
++        raise ValueError(f"incomplete graph template: {exc}") from exc
++    if (steps < 1 or type(cfg) not in (int, float) or not math.isfinite(cfg) or cfg <= 0 or
++            unet != Path(model_path).name):
++        raise ValueError("invalid effective template steps/CFG/model")
++
++    code = {name: K.sha(Path(__file__).parent / name) for name in
++            ("r6_key_recipe.py", "r6_keygen_asset.py", "r6_graph.py", "r6_upload.py", "r6_common.py")}
++
++    prompt_text = (
++        "Restyle this frame into flat 2D cel-shaded animation style: solid flat colour fills, thin clean "
++        "outlines, no gradients, no photographic texture, no 3D rendering. CRITICAL: keep the EXACT same "
++        "composition, the EXACT same layout, and every piece of text, number, logo and document shape "
++        "IDENTICAL and fully legible - do not redraw, move, add, remove or invent any glyph or object. "
++        "The result must read as the same document/image, only in flat vector style."
++    )
++
++    return {
++        "mode": "zero_shot_asset_restyle",
++        "shot": sid,
++        "fid": fid,
++        "gframe": plan["start_frame"] + fid - 1,
++        "span": [plan["start_frame"], plan["start_frame"] + plan["frames"]],
++        "ledger_row_sha": _digest(row),
++        "storyboard_sha": _digest(board),
++        "seed_off": off,
++        "seed": seed,
++        "steps": steps,
++        "sampler": sampler,
++        "cfg": float(cfg),
++        "model_name": unet,
++        "clip_name": clip,
++        "vae_name": vae,
++        "template": {"path": str(G.TPL.resolve(strict=True)), "sha256": K.sha(G.TPL)},
++        "code_sha256": code,
++        "prompt": prompt_text
++    }
++

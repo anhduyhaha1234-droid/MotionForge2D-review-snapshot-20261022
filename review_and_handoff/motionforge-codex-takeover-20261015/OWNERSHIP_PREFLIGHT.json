@@ -1,0 +1,80 @@
+{
+  "utc": "2026-10-15T17:00:37.907813+00:00",
+  "authority": "user requests Codex takeover + gpt-6-sol max",
+  "ok": true,
+  "old_invocation": "LONG01-R6g-20261014T0725Z-1572",
+  "helper_sha256": "86fc59156a357da7aa6b8691dfccc983b009548e7af4e2ea9ad9b226336b1775",
+  "pre_controller": {
+    "lock_file_exists": false,
+    "meta": {
+      "acquired_utc": "2026-10-14T07:21:13.750582+00:00",
+      "created": "20261014142113.402378+420",
+      "name": "python.exe",
+      "note": "dispatch_long LONG01_R6g.md",
+      "owner_sid": "20261007_234033_cc0b6d",
+      "pid": 45992,
+      "release_outcome": "NEEDS_RECONCILIATION",
+      "released_utc": "2026-10-14T10:23:06.262186+00:00",
+      "run": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long"
+    },
+    "holder": null
+  },
+  "lock_acquire": {
+    "owner_sid": "codex-root-takeover-20261015",
+    "pid": 46728,
+    "created": "20261016000037.725340+420",
+    "name": "python.exe",
+    "acquired_utc": "2026-10-15T17:00:37.908813+00:00",
+    "note": "User-authorized terminal Hermes to Codex owner transfer; CPU C01 only",
+    "run": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long"
+  },
+  "launcher_alive": false,
+  "reconcile": {
+    "ok": true,
+    "blockers": [],
+    "adopted": [
+      {
+        "invocation_id": "LONG01-R6g-20261014T0725Z-1572",
+        "file": "gpu_lease.LONG01-R6g-20261014T0725Z-1572.json",
+        "children": [
+          {
+            "pid": 15636,
+            "created": "20261014142113.756666+420",
+            "name": "hermes.exe",
+            "state": "DEAD"
+          },
+          {
+            "pid": 37580,
+            "created": "20261014142113.767373+420",
+            "name": "python.exe",
+            "state": "DEAD"
+          },
+          {
+            "pid": 15636,
+            "created": "20261014142113.756666+420",
+            "name": "hermes.exe",
+            "state": "DEAD"
+          }
+        ],
+        "detail": "no queue job, no runner process"
+      }
+    ],
+    "unknown": []
+  },
+  "post_active_leases": [],
+  "post_controller": {
+    "lock_file_exists": false,
+    "meta": {
+      "acquired_utc": "2026-10-15T17:00:37.908813+00:00",
+      "created": "20261016000037.725340+420",
+      "name": "python.exe",
+      "note": "User-authorized terminal Hermes to Codex owner transfer; CPU C01 only",
+      "owner_sid": "codex-root-takeover-20261015",
+      "pid": 46728,
+      "release_outcome": "CODEX_TAKEOVER_PREFLIGHT_OK",
+      "released_utc": "2026-10-15T17:00:46.197127+00:00",
+      "run": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long"
+    },
+    "holder": null
+  }
+}

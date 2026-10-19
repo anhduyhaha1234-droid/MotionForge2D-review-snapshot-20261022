@@ -1,0 +1,24 @@
+{
+  "task": "CODEX-C02A-DEPENDENCY-VERIFICATION",
+  "finding": "C02A-R01",
+  "owner": "/root/motionforge_c02a_coder",
+  "model": "gpt-6-sol",
+  "reasoning": "max",
+  "fallback": "disabled",
+  "status": "TASK_SUBMITTED_PENDING_ROOT_REVIEW",
+  "candidate_manifest": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\candidate-02\\MANIFEST.json",
+  "candidate_manifest_sha256": "24a488dc50a4ec6af94f8598a67510bf2be8398301cbcb45d22571be0c69d779",
+  "cache_sha256": "be1d2f123ba71c355fdea0f904172eaeaf44c442994048038554a18a7864f8f2",
+  "test_sha256": "195ead0031f16098087df5f56b5b9ac0e5ddc7a58a733ea6a0e0c22168650219",
+  "tests": [
+    "focused nesting 2/2 exit0",
+    "root nesting 8/8 exit0",
+    "original dependency probe 55/55 exit0",
+    "full affected modules 30/30 exit0"
+  ],
+  "scope": "only cache and C02A test differ from candidate01; gate and C01 test unchanged; 24 protected match",
+  "decision": "candidate02 frozen; stop all source/test writes; root independent review pending",
+  "remaining": "root independent review only; C02B blocked",
+  "next": "no writer command; root may inspect immutable candidate02",
+  "live_jobs": []
+}

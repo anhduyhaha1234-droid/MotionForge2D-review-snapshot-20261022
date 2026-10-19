@@ -1,0 +1,61 @@
+{
+  "at_utc": "2026-10-19T11:56:25.258497+00:00",
+  "candidate": "g1-candidate-03",
+  "gate": "G1",
+  "verdict": "CHANGES_REQUESTED",
+  "rules_sha256": "4a10f85f7dfba0314ae2b18a260e736a6b66c87f6a260a18b087386426f7bf79",
+  "exact_manifest_files": 17,
+  "live_and_snapshot_stable": true,
+  "verified_rows": [
+    "M01",
+    "M02",
+    "M03",
+    "M04",
+    "M05",
+    "M07",
+    "M10",
+    "M15"
+  ],
+  "open_or_partial_rows": [
+    "M06",
+    "M08",
+    "M09",
+    "M11",
+    "M12",
+    "M13",
+    "M14",
+    "M16",
+    "M17",
+    "M18",
+    "M19",
+    "M20"
+  ],
+  "engineering_row_closure_fraction": 0.4,
+  "project_completion_percent": null,
+  "b_media_authorized": false,
+  "G2": "BLOCKED_DEPENDENCY",
+  "G3": "BLOCKED_DEPENDENCY",
+  "root_validation": {
+    "asset_focused": "10/10 PASS",
+    "broad89": "NOT_RUN_CRITICAL_MICRO_FAILURES",
+    "submitted20closure": "NOT_CONFIRMED",
+    "ruff_F821": "5 undefined Image sites"
+  },
+  "P1_groups": [
+    "R04 actual propagation positive path and failure invalidation",
+    "R06 evidence false accepts",
+    "R07 submission hash and publication wiring"
+  ],
+  "root_production_patches": 0,
+  "vision": {
+    "model_image_capability": "PASS",
+    "scoped_image_helper_live": "PASS 7/7",
+    "native_Hermes_tool": "INCOMPLETE_TIMEOUT",
+    "native_video_audio": "UNVERIFIED",
+    "global_config_changed": false
+  },
+  "next_prompt": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-03-20261019\\PROMPT_GUI_GEMINI_VI.md",
+  "proposal": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-03-20261019\\SESSION_OPENING_PROPOSAL.md",
+  "owner_sid": "20261017_115944_b2a338",
+  "root_dispatched_Hermes": false
+}

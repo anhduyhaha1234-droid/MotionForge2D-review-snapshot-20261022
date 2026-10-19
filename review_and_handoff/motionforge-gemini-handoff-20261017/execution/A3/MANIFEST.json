@@ -1,0 +1,79 @@
+{
+  "schema": 1,
+  "task": "GEMINI-A3-EVENT-TIMING-TRACKING",
+  "phase": "A3",
+  "status": "SELF_VERIFIED",
+  "created_utc": "2026-10-17T17:42:48.068951+00:00",
+  "owner": "gemini-implementation-owner",
+  "model": "ag/gemini-3.8-flash-high",
+  "files": [
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_propagate.py",
+      "relative": "scripts/r6_propagate.py",
+      "sha256": "c1d4c9b875079f590571643442d654bb7196f164a5a474c4706da5536247cdbb",
+      "bytes": 10139,
+      "lines": 223
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cotracker.py",
+      "relative": "scripts/r6_cotracker.py",
+      "sha256": "e96a7cfbaf3b645972f7d8797c990c97920a6216717a619ea8cb9742dd2fa0db",
+      "bytes": 9544,
+      "lines": 204
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_ledger.py",
+      "relative": "scripts/r6_ledger.py",
+      "sha256": "42b64efaae16f18fc69d3d118e195a16f6d31e3a66a5da107ff115d936dcc9d1",
+      "bytes": 10381,
+      "lines": 169
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_gate.py",
+      "relative": "scripts/r6_gate.py",
+      "sha256": "1a277e730fc1ba1a7d63dd041bf7513e0f933cf2c9bbe74522a8e746c9bec612",
+      "bytes": 17718,
+      "lines": 370
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_gemini_a3_event_tracking.py",
+      "relative": "tests/test_gemini_a3_event_tracking.py",
+      "sha256": "cc9fe10b065738dd18fa9c6626f54c4d0da3f996833145fe45db031aaa6a6584",
+      "bytes": 8695,
+      "lines": 196
+    }
+  ],
+  "tests": {
+    "c01_review_binding": {
+      "count": 17,
+      "status": "PASS"
+    },
+    "c02a_dependency_verification": {
+      "count": 13,
+      "status": "PASS"
+    },
+    "c02b1_staged_source": {
+      "count": 10,
+      "status": "PASS"
+    },
+    "c02b2_per_actor_reuse": {
+      "count": 14,
+      "status": "PASS"
+    },
+    "c02b3_asset_reuse": {
+      "count": 10,
+      "status": "PASS"
+    },
+    "a3_event_tracking": {
+      "count": 7,
+      "status": "PASS"
+    },
+    "total_tests": 71,
+    "total_passed": 71,
+    "probe_v4_replay": {
+      "status": "PASS",
+      "initial": 1,
+      "replay": 0
+    }
+  }
+}

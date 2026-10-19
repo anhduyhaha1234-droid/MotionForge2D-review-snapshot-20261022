@@ -1,0 +1,66 @@
+{
+  "utc": "2026-10-15T21:06:40.590588+00:00",
+  "owner": "/root/motionforge_c01_coder",
+  "owner_tool_status": "errored usage limit; no active agent",
+  "model": "gpt-6-sol",
+  "reasoning": "max",
+  "prior_error": "Usage limit, retry at 3:03 AM; observed before heartbeat resume",
+  "quota_api": "QUOTA_RESUME_20261016T0405.json",
+  "controller": {
+    "lock_file_exists": false,
+    "meta": {
+      "acquired_utc": "2026-10-15T17:00:37.908813+00:00",
+      "created": "20261016000037.725340+420",
+      "name": "python.exe",
+      "note": "User-authorized terminal Hermes to Codex owner transfer; CPU C01 only",
+      "owner_sid": "codex-root-takeover-20261015",
+      "pid": 46728,
+      "release_outcome": "CODEX_TAKEOVER_PREFLIGHT_OK",
+      "released_utc": "2026-10-15T17:00:46.197127+00:00",
+      "run": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long"
+    },
+    "holder": null
+  },
+  "active_leases": [],
+  "render_quiet": [
+    true,
+    "no queue job, no runner process"
+  ],
+  "candidate_files": [
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_gate.py",
+      "sha256": "62c2bfee57f438baa3addb087d2045c68d042dc6d0d70a8bb6fc8b5036f1b8c0",
+      "bytes": 16181,
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c01_review_binding.py",
+      "sha256": "83303567eb49ed25f9a0cce706c30b9a8d8efb8d863b494f68985ac860542ce8",
+      "bytes": 9632,
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_assemble.py",
+      "sha256": "0509d5f67ffcce1721701f0c064ea4d68dd8660c6dca9f6f4967eb78727301c2",
+      "bytes": 4287,
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_common.py",
+      "sha256": "17bf5799c445a6f7133c61d53b9d5c41083307add1d7b6a50acdf83c294c15e3",
+      "bytes": 6014,
+      "unchanged": true
+    }
+  ],
+  "heads": {
+    "C:/Users/Admin/MotionForge2D": {
+      "rc": 0,
+      "head": "a40e368f7c47c232cf2eeed9fb185c5972cb98ba"
+    },
+    "C:/Users/Admin/Documents/Codex/work/mf-delivery-20260927/INTEGRATION": {
+      "rc": 0,
+      "head": "a52fca897906fd61a088016dd802718fdf06d217"
+    }
+  },
+  "ok": true
+}

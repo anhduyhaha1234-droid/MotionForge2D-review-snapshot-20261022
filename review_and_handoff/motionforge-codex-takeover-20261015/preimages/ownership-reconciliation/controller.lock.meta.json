@@ -1,0 +1,11 @@
+{
+  "acquired_utc": "2026-10-14T07:21:13.750582+00:00",
+  "created": "20261014142113.402378+420",
+  "name": "python.exe",
+  "note": "dispatch_long LONG01_R6g.md",
+  "owner_sid": "20261007_234033_cc0b6d",
+  "pid": 45992,
+  "release_outcome": "NEEDS_RECONCILIATION",
+  "released_utc": "2026-10-14T10:23:06.262186+00:00",
+  "run": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long"
+}

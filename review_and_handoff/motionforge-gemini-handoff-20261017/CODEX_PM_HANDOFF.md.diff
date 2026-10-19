@@ -1,0 +1,18 @@
+--- before/CODEX_PM_HANDOFF.md
++++ after/CODEX_PM_HANDOFF.md
+@@ -1,4 +1,15 @@
+ # MotionForge2D — Codex PM Session Handoff
++
++### Prepared17/10/2026 — Gemini handoff, NOT DISPATCHED
++
++User yêu cầu prompt giao agent Gemini toàn bộ Phase1, Codex kiểm duyệt độc lập.
++Đọc canonical rules§0.12 và
++`C:/Users/Admin/Documents/Codex/2026-10-12/a-l-m-video-ra-m-2/outputs/motionforge-gemini-handoff-20261017/PROMPT_GEMINI_MOTIONFORGE_VI.md`.
++C02B2/checkpoint015 còn dở; bốn live file khớp checkpoint khi chuẩn bị prompt.
++State vẫn PAUSED_BY_USER, active_writer=false; automation PAUSED. Chưa transfer,
++chưa chạy Gemini, chưa có code/media approval mới. Fresh zero-writer/preimages
++preflight bắt buộc khi user giao prompt. G1 engineering → G2 pilot → G3 product;
++ba gói C01/C02A/C02B1 approved không phải phần trăm hoàn thành toàn sản phẩm.
+ 
+ ### Codex takeover15/10/2026 — C01, user-authorized
+ 

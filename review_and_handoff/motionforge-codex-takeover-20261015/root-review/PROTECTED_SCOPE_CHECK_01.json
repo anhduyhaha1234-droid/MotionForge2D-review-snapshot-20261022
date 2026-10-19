@@ -1,0 +1,56 @@
+{
+  "utc": "2026-10-15T17:17:47.154952+00:00",
+  "checked_preimages": 32,
+  "changes": [
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_gate.py",
+      "expected_change": true,
+      "pre_sha": "9bea996afeb3212fc1e41dd918f1b8cbe90b33bf8ae2b217b2c75a24511db7db",
+      "current_sha": "62c2bfee57f438baa3addb087d2045c68d042dc6d0d70a8bb6fc8b5036f1b8c0",
+      "bytes_before": 10316,
+      "bytes_now": 16181
+    },
+    {
+      "path": "C:\\Users\\Admin\\MotionForge2D\\docs\\pm\\HERMES_AUTOPILOT_RULES.md",
+      "expected_change": true,
+      "pre_sha": "6b0a35082cb484142130cd8d7d41bf5878fa1d59ef63777a9ff0d730f48b35aa",
+      "current_sha": "7318b42a1c732fc1383bc2f41798963d3545962272cd1b8a245428b2a5f41637",
+      "bytes_before": 59357,
+      "bytes_now": 62272
+    },
+    {
+      "path": "C:\\Users\\Admin\\MotionForge2D\\docs\\pm\\CODEX_PM_HANDOFF.md",
+      "expected_change": true,
+      "pre_sha": "88fcff55e5edb8cd606a8dc98165a04df8f0f059aecfebd7dc8de09dee9898c4",
+      "current_sha": "102c98a0ac6ffa586db8b5b4154307b2f88122c5b6dfb407bb19dc60cc6af56a",
+      "bytes_before": 118903,
+      "bytes_now": 119478
+    },
+    {
+      "path": "C:\\Users\\Admin\\MotionForge2D\\docs\\pm\\ROADMAP.md",
+      "expected_change": true,
+      "pre_sha": "eb9941161fe13c202c41ac50bba012a9ae34ce4bf9751a04bc9a0f6fe6812e78",
+      "current_sha": "96727eaf2a43eac5533e12b13459ff4f1e7c977a954e4826bedf45f7ed6d2a8e",
+      "bytes_before": 71765,
+      "bytes_now": 72340
+    }
+  ],
+  "protected_media": [
+    {
+      "label": "R6f_master",
+      "sha256": "e3107a52c9f10bc36faf7d5aa3aa2e4c4186edae3cd916c52dff9b24eed9e48e",
+      "unchanged": true
+    },
+    {
+      "label": "R6f_comparison",
+      "sha256": "f11f43becf58fa5d9ada18af4ab9dcaac494e47ed8b4d8b41fb87bbe33b140a8",
+      "unchanged": true
+    },
+    {
+      "label": "source",
+      "sha256": "5a175454c2c2965bac5013a53926e210a9f70a185d802d0f2e0083a6fb399fa2",
+      "unchanged": true
+    }
+  ],
+  "unexpected_changes": []
+}

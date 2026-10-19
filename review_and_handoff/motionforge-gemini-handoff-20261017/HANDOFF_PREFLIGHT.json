@@ -1,0 +1,85 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-17T05:05:15.119739+00:00",
+  "purpose": "Prepare user-carried Gemini prompt; not a dispatch or owner transfer",
+  "handoff_status": "PREPARED_NOT_DISPATCHED",
+  "automation_status": "PAUSED",
+  "project_state_status": "PAUSED_BY_USER",
+  "previous_worker_tool_status": "/root/motionforge_c02b2_coder terminal errored: usage limit (collaboration.list_agents this turn)",
+  "other_existing_worker": "/root/motionforge_c02b1_coder completed",
+  "os_process_queue_lease_audit": "NOT_PERFORMED_FOR_PROMPT_PREPARATION; mandatory fresh check before new writer",
+  "model": "ag/gemini-3.8-flash-high",
+  "base_url": "http://127.0.0.1:20128/v1",
+  "gateway_proof": "../9router-gemini-20261016/FINAL_STATUS.json; prior live test, not re-run for this document",
+  "preimages": [
+    {
+      "path": "C:\\Users\\Admin\\MotionForge2D\\docs\\pm\\HERMES_AUTOPILOT_RULES.md",
+      "bytes": 62272,
+      "sha256": "7318b42a1c732fc1383bc2f41798963d3545962272cd1b8a245428b2a5f41637",
+      "preimage": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\preimages\\HERMES_AUTOPILOT_RULES.md"
+    },
+    {
+      "path": "C:\\Users\\Admin\\MotionForge2D\\docs\\pm\\CODEX_PM_HANDOFF.md",
+      "bytes": 119478,
+      "sha256": "102c98a0ac6ffa586db8b5b4154307b2f88122c5b6dfb407bb19dc60cc6af56a",
+      "preimage": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\preimages\\CODEX_PM_HANDOFF.md"
+    },
+    {
+      "path": "C:\\Users\\Admin\\MotionForge2D\\docs\\pm\\ROADMAP.md",
+      "bytes": 72340,
+      "sha256": "96727eaf2a43eac5533e12b13459ff4f1e7c977a954e4826bedf45f7ed6d2a8e",
+      "preimage": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\preimages\\ROADMAP.md"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\PROJECT_STATE.json",
+      "bytes": 3220,
+      "sha256": "442ba6449542c16b2c2c4de6523f4bc8d82b01c3f73b33925b26d066c0ac3b02",
+      "preimage": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\preimages\\PROJECT_STATE.json"
+    }
+  ],
+  "current_c02b2_files": [
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py",
+      "bytes": 24050,
+      "sha256": "8d4b0c7ad5336e7e6c2a68a12f2a622fbccf900575afd2c1249f31863ae4243d",
+      "checkpoint_sha256": "8d4b0c7ad5336e7e6c2a68a12f2a622fbccf900575afd2c1249f31863ae4243d",
+      "matches_checkpoint": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_keygen.py",
+      "bytes": 9004,
+      "sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+      "checkpoint_sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+      "matches_checkpoint": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_key_recipe.py",
+      "bytes": 6361,
+      "sha256": "e18fc9d20de1cbf2a3a8f7da2e68fc99c59260701bfbd3dca75106a7cbe8e2bd",
+      "checkpoint_sha256": "e18fc9d20de1cbf2a3a8f7da2e68fc99c59260701bfbd3dca75106a7cbe8e2bd",
+      "matches_checkpoint": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c02b2_per_actor_reuse.py",
+      "bytes": 9246,
+      "sha256": "c8e272a60340683c0128bdfd980a078975030dfa7ec6d98977bcc55a304abd99",
+      "checkpoint_sha256": "c8e272a60340683c0128bdfd980a078975030dfa7ec6d98977bcc55a304abd99",
+      "matches_checkpoint": true
+    }
+  ],
+  "repositories": [
+    {
+      "path": "C:\\Users\\Admin\\MotionForge2D",
+      "head": "a40e368f7c47c232cf2eeed9fb185c5972cb98ba",
+      "dirty": true,
+      "status_file": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\MAIN_STATUS.txt"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-20260927\\INTEGRATION",
+      "head": "a52fca897906fd61a088016dd802718fdf06d217",
+      "dirty": false,
+      "status_file": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\INTEGRATION_STATUS.txt"
+    }
+  ],
+  "changes_allowed_this_turn": "Handoff documents and PM index/rules only; no production code, media, runtime, model or automation change"
+}

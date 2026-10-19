@@ -1,0 +1,180 @@
+{
+  "utc": "2026-10-15T21:16:14.098123+00:00",
+  "owner_status": "completed; source/test writes stopped",
+  "manifest_sha256": "261a7d9b20c046c3eee3ede50fac250992a084aec856583c5e0992397e2a6850",
+  "checked_preimages": 32,
+  "changes": [
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_gate.py",
+      "expected_change": true,
+      "pre_sha": "9bea996afeb3212fc1e41dd918f1b8cbe90b33bf8ae2b217b2c75a24511db7db",
+      "current_sha": "4c3f7a7213f7761b7f5cbf53d7257bfd1c893e7f50d04d4ffda38a2e3cf13996",
+      "bytes_before": 10316,
+      "bytes_now": 17408
+    },
+    {
+      "path": "C:\\Users\\Admin\\MotionForge2D\\docs\\pm\\HERMES_AUTOPILOT_RULES.md",
+      "expected_change": true,
+      "pre_sha": "6b0a35082cb484142130cd8d7d41bf5878fa1d59ef63777a9ff0d730f48b35aa",
+      "current_sha": "7318b42a1c732fc1383bc2f41798963d3545962272cd1b8a245428b2a5f41637",
+      "bytes_before": 59357,
+      "bytes_now": 62272
+    },
+    {
+      "path": "C:\\Users\\Admin\\MotionForge2D\\docs\\pm\\CODEX_PM_HANDOFF.md",
+      "expected_change": true,
+      "pre_sha": "88fcff55e5edb8cd606a8dc98165a04df8f0f059aecfebd7dc8de09dee9898c4",
+      "current_sha": "102c98a0ac6ffa586db8b5b4154307b2f88122c5b6dfb407bb19dc60cc6af56a",
+      "bytes_before": 118903,
+      "bytes_now": 119478
+    },
+    {
+      "path": "C:\\Users\\Admin\\MotionForge2D\\docs\\pm\\ROADMAP.md",
+      "expected_change": true,
+      "pre_sha": "eb9941161fe13c202c41ac50bba012a9ae34ce4bf9751a04bc9a0f6fe6812e78",
+      "current_sha": "96727eaf2a43eac5533e12b13459ff4f1e7c977a954e4826bedf45f7ed6d2a8e",
+      "bytes_before": 71765,
+      "bytes_now": 72340
+    }
+  ],
+  "protected_media": [
+    {
+      "label": "R6f_master",
+      "sha256": "e3107a52c9f10bc36faf7d5aa3aa2e4c4186edae3cd916c52dff9b24eed9e48e",
+      "unchanged": true
+    },
+    {
+      "label": "R6f_comparison",
+      "sha256": "f11f43becf58fa5d9ada18af4ab9dcaac494e47ed8b4d8b41fb87bbe33b140a8",
+      "unchanged": true
+    },
+    {
+      "label": "source",
+      "sha256": "5a175454c2c2965bac5013a53926e210a9f70a185d802d0f2e0083a6fb399fa2",
+      "unchanged": true
+    }
+  ],
+  "candidate_files": [
+    {
+      "role": "gate",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_gate.py",
+      "sha256": "4c3f7a7213f7761b7f5cbf53d7257bfd1c893e7f50d04d4ffda38a2e3cf13996",
+      "matches": true
+    },
+    {
+      "role": "test",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c01_review_binding.py",
+      "sha256": "e2744bc198bc91fe71ce4b2afafb9682e427c17c7ac0c1207b3a7643dbf2d330",
+      "matches": true
+    },
+    {
+      "role": "protected_assembler",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_assemble.py",
+      "sha256": "0509d5f67ffcce1721701f0c064ea4d68dd8660c6dca9f6f4967eb78727301c2",
+      "matches": true
+    },
+    {
+      "role": "protected_common",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_common.py",
+      "sha256": "17bf5799c445a6f7133c61d53b9d5c41083307add1d7b6a50acdf83c294c15e3",
+      "matches": true
+    },
+    {
+      "role": "gate_preimage",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\preimages\\r6_gate.py",
+      "sha256": "62c2bfee57f438baa3addb087d2045c68d042dc6d0d70a8bb6fc8b5036f1b8c0",
+      "matches": true
+    },
+    {
+      "role": "test_preimage",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\preimages\\test_codex_c01_review_binding.py",
+      "sha256": "83303567eb49ed25f9a0cce706c30b9a8d8efb8d863b494f68985ac860542ce8",
+      "matches": true
+    },
+    {
+      "role": "gate_diff",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\DIFF_GATE_R01.patch",
+      "sha256": "9816391e6b6546807bd8e81f3f623bac30973e7c1e53558cd822700c409b371d",
+      "matches": true
+    },
+    {
+      "role": "test_diff",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\DIFF_TEST_R01.patch",
+      "sha256": "91b5d62c590fedfe02fa84ee134ce79fc8caa4c9b1212b4d2609e219805c6b1e",
+      "matches": true
+    },
+    {
+      "role": "red_tests",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\RED_TESTS.txt",
+      "sha256": "1603bfad89b41573f692dab0abed42b300456291d9af8253c421601ddc56d6b8",
+      "matches": true
+    },
+    {
+      "role": "red_numeric_frames",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\RED_NUMERIC_FRAMES.txt",
+      "sha256": "1dbceba5ea05715cde4fc1bdab69522f851f358954e5a67baebcead34e88854b",
+      "matches": true
+    },
+    {
+      "role": "full_c01_tests",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\FINAL_FULL_C01_TESTS.txt",
+      "sha256": "6029d8dab9f60f8a976b8c3c591526132b4a1244a41c4a977015358effb382db",
+      "matches": true
+    },
+    {
+      "role": "root_review_probe",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\final_root_review_probe\\RESULT.json",
+      "sha256": "32ed80a8014aefbbe48841b66d1aa57042847342be060dbe8517a0cb5a7351d6",
+      "matches": true
+    },
+    {
+      "role": "root_blend_probe",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\final_root_blend_probe\\RESULT.json",
+      "sha256": "d722e5339ff0b74801ff33cde1334efccf050740c28deabd094c4f5e15a1c075",
+      "matches": true
+    },
+    {
+      "role": "historic_f02",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\EXISTING_GATE_SAFE.txt",
+      "sha256": "1790d5b11fd4360c24ac5b00c9c8d4fb3cd3c5830edcec81e4557b8a60e9b59e",
+      "matches": true
+    },
+    {
+      "role": "schema_survey",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\EXISTING_REVIEW_SCHEMA_SURVEY.json",
+      "sha256": "6c7dfbcedc95aa7638c0fc0b62329ecfdbf1e97b010c34bd973be687ec2dd2b4",
+      "matches": true
+    }
+  ],
+  "git": [
+    {
+      "repo": "C:/Users/Admin/MotionForge2D",
+      "head": {
+        "rc": 0,
+        "output": "a40e368f7c47c232cf2eeed9fb185c5972cb98ba",
+        "stderr": ""
+      },
+      "status": {
+        "rc": 0,
+        "output": "M app/api/app.py\n M app/api/deps.py\n M app/persistence/models.py\n M channels.json\n M docs/pm/CODEX_PM_HANDOFF.md\n M docs/pm/HERMES_AUTOPILOT_RULES.md\n M docs/pm/ROADMAP.md\n M docs/pm/sessions/S04-T01-ui-tokens-navigation/LOG.md\n M docs/pm/sessions/S04-T03-channel-management/LOG.md\n M docs/pm/sessions/S04-T03-channel-management/REPORT.md\n M docs/pm/sessions/S06-T05-pack-publish-ux/LOG.md\n M docs/pm/sessions/S06-T05-pack-publish-ux/REPORT.md\n M frontend/src/app/(app)/channels/page.tsx\n M frontend/src/app/(app)/characters/page.tsx\n M frontend/src/app/(app)/page.tsx\n M frontend/src/app/(app)/projects/[id]/page.tsx\n M frontend/src/app/(app)/projects/page.tsx\n M frontend/src/components/Dashboard.tsx\n M frontend/src/components/LegacyWorkspace.tsx\n M frontend/src/components/layout/AppNav.tsx\n M frontend/src/components/layout/AppShell.tsx\n M frontend/src/components/layout/StageRail.tsx\n M frontend/src/lib/api.ts\n M frontend/src/stores/project.ts\n M tests/test_durable_job_persistence.py\n M tests/test_persistence_bootstrap.py\n?? .codex-review/\n?? app/api/routes/durable_characters.py\n?? app/persistence/characters.py\n?? app/schemas/characters.py\n?? app/workflow/character_preset_importer.py\n?? app/workflow/character_validator.py\n?? data/\n?? diagnostics/\n?? docs/pm/CODEX_SESSION_HANDOFF_20261002.md\n?? docs/pm/prompts/CODEX_PROJECT_PM_CONTINUATION_S11_C4_REVIEW_2026-09-05.md\n?? docs/pm/prompts/CODEX_S11_C4_R1_REVIEW_2026-09-05.md\n?? docs/pm/prompts/S11_C1_FULL_SCOPE_READINESS_RESTART_EXIT_MANAGER_2026-09-04.md\n?? docs/pm/prompts/S11_C2_COMPLETION_AUTHORITY_TARGETED_RESTART_OWNER_EXIT_MANAGER_2026-09-04.md\n?? docs/pm/prompts/S11_C3_EXACT_IDENTITY_RESTART_PROOF_FAIL_FAST_EXIT_MANAGER_2026-09-04.md\n?? docs/pm/prompts/S11_C4_PRODUCTION_REGISTRY_FAIL_CLOSED_FINAL_EXIT_MANAGER_2026-09-05.md\n?? docs/pm/prompts/S11_C4_R1_BOOTSTRAP_ATOMICITY_ROUTE_BLOCKED_2026-09-05.md\n?? docs/pm/prompts/S11_C4_R2_BOOTSTRAP_TRANSACTION_OWNER_TRANSFER_MANAGER_2026-09-05.md\n?? docs/pm/prompts/S11_C4_R3_DURABLE_CONTENTION_EVIDENCE_CLOSURE_MANAGER_2026-09-05.md\n?? docs/pm/prompts/S11_C4_R4_DETERMINISTIC_LOCK_EVIDENCE_CLOSURE_MANAGER_2026-09-06.md\n?? docs/pm/prompts/S11_C4_R5_LIVE_LEDGER_EVIDENCE_ONLY_MANAGER_2026-09-06.md\n?? docs/pm/reviews/S11_C1_PM_REREVIEW_2026-09-04.md\n?? docs/pm/reviews/S11_C2_PM_REREVIEW_2026-09-04.md\n?? docs/pm/reviews/S11_C3_PM_REREVIEW_2026-09-05.md\n?? docs/pm/reviews/S11_C4_PM_REREVIEW_2026-09-05.md\n?? docs/pm/reviews/S11_C4_R1_PM_REREVIEW_2026-09-05.md\n?? docs/pm/reviews/S11_C4_R2_PM_REREVIEW_2026-09-05.md\n?? docs/pm/reviews/S11_C4_R3_PM_REREVIEW_2026-09-06.md\n?? docs/pm/reviews/S11_C4_R4_PM_REREVIEW_2026-09-06.md\n?? docs/pm/reviews/S11_T02_T06_PM_REVIEW_2026-09-04.md\n?? docs/pm/reviews/WORKER_MODEL_MUSE13_FREE_DEFERRED_DIRECTIVE_2026-09-03.md\n?? docs/pm/sessions/S04-T05-guided-shell/\n?? frontend/e2e/ui-correction.spec.ts\n?? migrations/versions/d5e6f7a8b9c0_character_library_schema.py\n?? notepad-session-backup-20260910/\n?? notification-full-reset-20260912-021511/\n?? notification-full-reset-20260912-021526/\n?? scripts/watch-s08-a01-c1.sh\n?? scripts/watch-s08-a01.sh\n?? scripts/watch-s08-h01.sh\n?? scripts/watch-s08-h02.sh\n?? scripts/watch-s08-h02c1.sh\n?? scripts/watch-s08-h02c2.sh\n?? scripts/watch-s08-h02c3.sh\n?? scripts/watch-s08-h02c4.sh\n?? scripts/watch-s08-h02c4c5.sh\n?? scripts/watch-s08-r01.sh\n?? scripts/watch-s08-t01.sh\n?? scripts/watch-s08-t01c2.sh\n?? scripts/watch-s08-t02-c1-exit.sh\n?? scripts/watch-s08-t02.sh\n?? scripts/watch-s08-t02c1.sh\n?? scripts/watch-s08-t02c2.sh\n?? scripts/watch-s08-t03.sh\n?? scripts/watch-s08-t03c1.sh\n?? scripts/watch-s08-t03c2.sh\n?? scripts/watch-s08-t04.sh\n?? scripts/watch-s08-t04c1.sh\n?? scripts/watch-s08-t04c2.sh\n?? scripts/watch-s08-t05.sh\n?? scripts/watch-s08-t05c1.sh\n?? scripts/watch-s08-t05c2.sh\n?? scripts/watch-s08-t06.sh\n?? scripts/watch-s08-t06c1.sh\n?? scripts/watch-s08-t06c2.sh\n?? start-cache-backup-20260912-025407/\n?? tests/fixtures/legacy_import/corrupt/projects/\n?? tests/fixtures/legacy_import/valid/projects/\n?? tests/test_character_domain.py\n?? tests/test_character_preset_importer.py\n?? tests/test_character_validator.py\n?? tests/test_pack_publish_ux.py\n?? tools/\n?? windows-notification-db-backup-20260912-011517/\n?? windows-notifications-backup-20260910.reg\n?? wpn-inspect-20260914-144145/\n?? wpndatabase-inspect-20260912-012000.db\n?? wpndatabase-inspect-20260912-012000.db-shm\n?? wpndatabase-inspect-20260912-012000.db-wal",
+        "stderr": ""
+      }
+    },
+    {
+      "repo": "C:/Users/Admin/Documents/Codex/work/mf-delivery-20260927/INTEGRATION",
+      "head": {
+        "rc": 0,
+        "output": "a52fca897906fd61a088016dd802718fdf06d217",
+        "stderr": ""
+      },
+      "status": {
+        "rc": 0,
+        "output": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "duplicate_definitions": [],
+  "unexpected_changes": [],
+  "ok": true
+}

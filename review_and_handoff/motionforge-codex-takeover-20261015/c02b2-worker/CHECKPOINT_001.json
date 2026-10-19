@@ -1,0 +1,18 @@
+{
+  "task": "CODEX-C02B2-PER-ACTOR-VERIFIED-REUSE",
+  "baseline_repro": "baseline-repro-01/RESULT.json",
+  "live_jobs": [],
+  "next": "complete pure current recipe resolver",
+  "baseline_repro_exit": 1,
+  "files": [
+    {
+      "bytes": 108,
+      "sha256": "09caeb418b01ac206cf7cdacd9bd2e27ce7fd666042e9e501c79551be02d1423",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_key_recipe.py",
+      "lines": 4
+    }
+  ],
+  "model": "gpt-6-sol/max/no-fallback",
+  "phase": "baseline reproduced, helper skeleton",
+  "owner": "/root/motionforge_c02b2_coder"
+}

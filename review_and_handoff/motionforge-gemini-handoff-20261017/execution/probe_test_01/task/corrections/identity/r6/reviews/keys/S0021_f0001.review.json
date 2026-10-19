@@ -1,0 +1,22 @@
+{
+ "review_id": "keys:S0021_f0001",
+ "reviewer": "fixture-reviewer",
+ "reviewed_at": "2026-10-17T05:35:32Z",
+ "artifact": {
+  "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\probe_test_01\\task\\corrections\\identity\\r6\\keys\\S0021\\f_0001_key.png",
+  "sha256": "a953f8ba6130e799bcc28b18d156c277632968bd686717d0d8cc46d99f688680"
+ },
+ "inputs": {
+  "ledger_row_sha": "4bb32fce5c80e56e62057c97f25fcb22317b0244bf880e9d563d1fd374e6ef07",
+  "deps_sha": "780ad799e935ff04b38d7a77d035552975803ba3be6dd91c9acac682251a6a1c"
+ },
+ "expected": {
+  "shot": "S0021",
+  "fid": 1
+ },
+ "frames": [
+  1
+ ],
+ "verdict": "PASS",
+ "evidence": "isolated fixture only"
+}

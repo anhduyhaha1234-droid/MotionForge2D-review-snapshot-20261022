@@ -1,0 +1,63 @@
+{
+  "observed_at": "2026-10-17T23:30:03.3554808+07:00",
+  "processes": [
+    {
+      "pid": 30652,
+      "parent": 37496,
+      "created": "2026-10-06T18:02:00.220872+07:00",
+      "name": "python.exe",
+      "kind": "hermes-app"
+    },
+    {
+      "pid": 45496,
+      "parent": 44672,
+      "created": "2026-10-06T18:02:11.054896+07:00",
+      "name": "python.exe",
+      "kind": "hermes-app"
+    },
+    {
+      "pid": 27420,
+      "parent": 46104,
+      "created": "2026-10-07T12:21:14.255346+07:00",
+      "name": "python.exe",
+      "kind": "comfy-server"
+    },
+    {
+      "pid": 39004,
+      "parent": 27420,
+      "created": "2026-10-07T12:21:14.27032+07:00",
+      "name": "python.exe",
+      "kind": "comfy-server"
+    },
+    {
+      "pid": 47868,
+      "parent": 12080,
+      "created": "2026-10-12T15:09:01.913949+07:00",
+      "name": "python.exe",
+      "kind": "legacy-heartbeat"
+    },
+    {
+      "pid": 36004,
+      "parent": 47868,
+      "created": "2026-10-12T15:09:01.920511+07:00",
+      "name": "python.exe",
+      "kind": "legacy-heartbeat"
+    },
+    {
+      "pid": 45756,
+      "parent": 49300,
+      "created": "2026-10-17T23:27:53.413881+07:00",
+      "name": "python.exe",
+      "kind": "telegram-heartbeat"
+    },
+    {
+      "pid": 23648,
+      "parent": 45756,
+      "created": "2026-10-17T23:27:53.421237+07:00",
+      "name": "python.exe",
+      "kind": "telegram-heartbeat"
+    }
+  ],
+  "comfy_running": 0,
+  "comfy_pending": 0
+}

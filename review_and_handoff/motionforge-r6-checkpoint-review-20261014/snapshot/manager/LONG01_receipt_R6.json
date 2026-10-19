@@ -1,0 +1,220 @@
+{
+  "absolute_deadline_epoch": null,
+  "allowed_root": "C:/Users/Admin/Documents/Codex/work/mf-delivery-runs/20261005/20261005T1643Z-wan-long/tasks/MF-DEMO-LONG-01/corrections/identity5m_20261008/r6",
+  "api_mode_pinned_in_packet": "chat_completions",
+  "base_url": "http://127.0.0.1:20128/v1",
+  "context_metrics": {
+    "compactions_observed": 0,
+    "context_window_advertised": 1000000,
+    "label": "observed counts; token estimate is the CLI's own",
+    "last_context_line": null,
+    "max_output_setting": "16384",
+    "tool_actions_observed": 128
+  },
+  "controller_lock": "held",
+  "cwd": "tasks/MF-DEMO-LONG-01",
+  "exit_code": 0,
+  "fallback": false,
+  "gpu_lease_release": {
+    "children": [
+      {
+        "pid": 24972,
+        "state": "DEAD"
+      },
+      {
+        "pid": 20760,
+        "state": "DEAD"
+      }
+    ],
+    "detail": "no queue job, no runner process",
+    "released": true
+  },
+  "invocation_id": "LONG01-R6-20261012T0810Z-2731",
+  "launcher_pid": 28604,
+  "legacy_prose_outcome": {
+    "class": "CONTINUE_REQUIRED",
+    "exit_code": 0,
+    "marker": "continue_required",
+    "match_pos": 178925,
+    "not_completed": true
+  },
+  "log": "tasks/MF-DEMO-LONG-01/worker_R6.log",
+  "log_bytes": 275090,
+  "max_tokens_effective_scheme": "HERMES_MAX_TOKENS env on child process (cli.py:4352); lever verified 2026-10-06 (HERMES_MAX_TOKENS=24 -> output cut at 24 tokens)",
+  "max_tokens_requested": "16384",
+  "max_turns": "80",
+  "max_turns_note": "invocation boundary, NOT a task stop gate (packet \u00a74)",
+  "model": "cmc/deepseek/deepseek-v4.1-flash",
+  "new_session": false,
+  "note": "exit code alone is NOT completion proof - read the log payload; check for finish_reason='length' / 'API call failed' / UsageLimit",
+  "outcome_class": "CONTINUE_REQUIRED",
+  "outcome_detail": {
+    "class": "CONTINUE_REQUIRED",
+    "decision": "PENDING_SAME_OWNER_CONTINUATION",
+    "legacy_prose_class": "CONTINUE_REQUIRED",
+    "source": "structured_terminal"
+  },
+  "owner_sid": "20261007_234033_cc0b6d",
+  "packet": "manager/packets/LONG01_R6.md",
+  "packet_bytes": 14760,
+  "packet_file_sha256": "aa17a4d4185c6c1d76c9a6208284b9c31a38cbcab1b3ff96a371e542f2045933",
+  "packet_sha256": "e32001319e85e8087ec3ef7813fd596683446fe571f986b0fe5bf09b807349a2",
+  "provider": "custom",
+  "remaining_seconds_at_dispatch": null,
+  "resume_session_requested": "20261007_234033_cc0b6d",
+  "revision": "r6",
+  "round": "LONG01_R6.md",
+  "run_id": "20261005T1643Z-wan-long",
+  "session_id_actual": "20261007_234033_cc0b6d",
+  "skills": null,
+  "stall_kill_seconds": 3600,
+  "task_id": "MF-DEMO-LONG-01",
+  "terminal_validation": {
+    "decision": "PENDING_SAME_OWNER_CONTINUATION",
+    "quality_accepted": false,
+    "result": {
+      "artifacts": [
+        {
+          "kind": "checkpoint",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\checkpoint\\R6_CHECKPOINT.md",
+          "sha256": "1e31b41a739267d5bb9c32e41b1538fc72203a319698fed5188d91a60dac970a"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\checkpoint\\R6_GATE_RESTATEMENT.md",
+          "sha256": "4e57ba3b7e7104b2561ab5ef076ae44f20ed8972066e0ad4f2028652588fccb4"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\source_actor_ledger.jsonl",
+          "sha256": "f23553e20876b5e2e1dfb4d1e282a94c2ae35071da943f50558cb5eb46a4c389"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\cast_atlas.json",
+          "sha256": "e847acb8d30f120bcaffb81b1e5048baf3e32280bcd74e9e5688b20a56149a4e"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\event_map.json",
+          "sha256": "96eb3f9f1ecc83e9f3e55fa0192fcbfd1b72e69f3ef4a257803ea49584d64c5a"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\receipts\\R6_LEDGER_VALIDATION.json",
+          "sha256": "99fccab0350a7e613aee1eb85d32cda490abb385a9c43edfcc01dfade24ac8c3"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\receipts\\R6_NEGATIVE_PROBES.json",
+          "sha256": "12534a3b9b6b6bfd410d05cddc47aa9a8d3e362d8c30f158ecd260fc415a6896"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\receipts\\R6_SAM2_RUNS.jsonl",
+          "sha256": "a89e4b501a80ef97f2a91c2442df2b44b3112cb7264f006b168c77621b0e85d3"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\receipts\\R6_KEYGEN_RUNS.jsonl",
+          "sha256": "4312ecb9eac1c1a68ecc6dfb1947ab577ed60f4702dafd2fdddb3e24e500d354"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_common.py",
+          "sha256": "17bf5799c445a6f7133c61d53b9d5c41083307add1d7b6a50acdf83c294c15e3"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_gate.py",
+          "sha256": "1a5bd584fb6f4455a01d258766a6d48c43af1b910fb87d7841bbc1e3b138d2bf"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py",
+          "sha256": "be7328c742abb4fdec512945dc7f0d93b0d680248c542df1f5b073f4a357e3db"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_adapter.py",
+          "sha256": "d14736ca49db05ef54944c787a4d4e90b1de6b5762485f6b8dd7079d19aa4342"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_graph.py",
+          "sha256": "ef0c48c9b18ddbb7f4dc7f64c356a9e3f66733e08787e24cbd7809b60715a4da"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_upload.py",
+          "sha256": "057179db2b539965d88aed3e3f25a0251cf7e6d9959a6f9ce1f7514783e04967"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_sam2.py",
+          "sha256": "be165dd3dcfb7343639bc71cb1bce7a438d80a47b2d86cf1d0689666a277b264"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_keygen.py",
+          "sha256": "ed104b3c523c8e4dfd2f0bce93fa0966a50d82dd9f0d0be106c36f2ee700fe23"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_probes.py",
+          "sha256": "739a1eaed3dd8bb200219d2ef93a353d0fa88a95695f9316bfd1c20f02acea15"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_ledger.py",
+          "sha256": "6397bcd5eabdd88be7f8f146e7d81527134fd455e53a1ace86735647e97b04cb"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\evidence\\R6_smoke_S23_f1.png",
+          "sha256": "5e075fa8c979c5a4dd15e5f532608d36ce65da45833109251997603fb406d922"
+        },
+        {
+          "kind": "matrix",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\evidence\\matrix.json",
+          "sha256": "9315e97fff2112ecd1a9cfb1730473e3cb0335bf01df42f602136dda215e1342"
+        }
+      ],
+      "invocation_id": "LONG01-R6-20261012T0810Z-2731",
+      "matrix": {
+        "Q01": "UNKNOWN",
+        "Q02": "UNKNOWN",
+        "Q03": "UNKNOWN",
+        "Q04": "UNKNOWN",
+        "Q05": "UNKNOWN",
+        "Q06": "UNKNOWN",
+        "Q07": "UNKNOWN",
+        "Q08": "UNKNOWN",
+        "Q09": "UNKNOWN",
+        "Q10": "UNKNOWN",
+        "Q11": "UNKNOWN",
+        "Q12": "UNKNOWN"
+      },
+      "owner_sid": "20261007_234033_cc0b6d",
+      "packet_sha256": "aa17a4d4185c6c1d76c9a6208284b9c31a38cbcab1b3ff96a371e542f2045933",
+      "reason": "R6 inv1: gates restated (R6_GATE_RESTATEMENT); S1 ledger/binding/canvas done (54 shots, zero-explicit 5, S74/S57/S61/S62 fixed); S2 artifact-bound gates + content-keyed cache + 12/12 fresh negative probes; S3 upstream crop+stitch production path built, E2E smoke proven (S23 f1 key via upstream stitch, deps hashed, R4/R5 untouched 0 writes); next = seeds+SAM2+keys+reviews then S4-S9",
+      "remaining_work": [
+        "Seeds for remaining ~27 people-shots (vision batches of 4 f1-frames w/ grid) -> extend r6_sam2.SEEDS; run R6 SAM2 for: S0021 S0025 S0026 S0027 S0028 S0029 S0030 S0033 S0036 S0038 S0039 S0043 S0044 S0046 S0048 S0051 S0053 S0055 S0056 S0064 S0068 S0069 S0070 S0071 S0072 (command: python -B scripts/r6_sam2.py <SHOT>)",
+        "Key production r6 (python -B scripts/r6_keygen.py <SHOT> per shot) + vision-based semantic review records (r6_gate.write_review) after each batch; QUALITY ITERATION: rim-bleed + pose-turn levers (upstream mask feather / prompt boundary emphasis) - evidence-based, max 2 same-way attempts",
+        "S4: VACE graph rebuild with TrimVideoLatent (KSampler->Trim.samples, WanVaceToVideo.output3->trim_amount, Trim->VAEDecode); paired S62+S73 vs keys-route; actual-ref perturb; measure peaks; S5 engine decision + NOT_SELECTED reasons",
+        "S6: event-aligned propagation via upstream stage2 wrapper (fresh-complete check; rc!=0/partial/stale -> BLOCK; no tail-fill) + CoTracker paired S34/S61/S73 (save tracks+visibility raw this time)",
+        "S7: close hard excerpts S22-24 S31/33/34/41 S57/59/61 S62/63/64/67/70/73/74; zero-shot asset reskins S40/57/58/59/60 (props/background asset edit, keep text; NO diffusion glyph invention); controls S25/26/27/39/68/69/71/72",
+        "S8: assemble IDENTITY5M_R6_MASTER.mp4 (9000f 640x360 30fps 300s + audio [94,394)s) + comparison source|R5|R6 1920x360 + QA all54 head/event/tail +2s scan + dense contact/entry/occlusion/zoom/seams; S9 matrix.json + R6_MATRIX_EVIDENCE.json + R6_MANIFEST.json (hash AFTER all writes) -> record last"
+      ],
+      "revision": "r6",
+      "run_id": "20261005T1643Z-wan-long",
+      "schema_version": "1.0",
+      "status": "CONTINUE_REQUIRED",
+      "task_id": "MF-DEMO-LONG-01"
+    }
+  },
+  "timed_out": false,
+  "toolsets": null,
+  "utc_end": "2026-10-12T08:20:49.347414+00:00",
+  "utc_start": "2026-10-12T08:04:07.859862+00:00"
+}

@@ -1,0 +1,144 @@
+{
+  "task": "CODEX-C02A-DEPENDENCY-VERIFICATION",
+  "finding": "C02A-R01",
+  "status": "TASK_SUBMITTED_PENDING_ROOT_REVIEW",
+  "owner": "/root/motionforge_c02a_coder",
+  "model": "gpt-6-sol",
+  "reasoning": "max",
+  "fallback": "disabled",
+  "created_utc": "2026-10-16T07:22:29.022994+00:00",
+  "preflight": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\C02A_PREFLIGHT.json",
+  "preflight_sha256": "37ef8b08915beef7f522535cb9266eebf70ee04f2cc89041d5e3ba78a342beac",
+  "candidate01_manifest": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\candidate-01\\MANIFEST.json",
+  "candidate01_manifest_sha256": "d3478b534182dd6cc34e219f7da12fe71bb9fde3abdbe2a6978e17c3d8fe2a18",
+  "files": [
+    {
+      "relative": "scripts/r6_cache.py",
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py",
+      "snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\candidate-02\\files\\scripts\\r6_cache.py",
+      "sha256": "be1d2f123ba71c355fdea0f904172eaeaf44c442994048038554a18a7864f8f2",
+      "bytes": 10610,
+      "lines": 229,
+      "baseline_sha256": "29a9e7b0f60304a56692d21fd229ef884dd93064fd4376eec7ab030daaf304c6",
+      "candidate01_sha256": "946935906625d79b95153a92d4cf86310551cfbc4533a3661f2011854aeae7a7",
+      "status": "modified"
+    },
+    {
+      "relative": "scripts/r6_gate.py",
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_gate.py",
+      "snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\candidate-02\\files\\scripts\\r6_gate.py",
+      "sha256": "8c2e3f9eedd4d8e11832809c2b72293db17df1fb5a4012bd39fa396f93143f94",
+      "bytes": 17804,
+      "lines": 367,
+      "baseline_sha256": "4c3f7a7213f7761b7f5cbf53d7257bfd1c893e7f50d04d4ffda38a2e3cf13996",
+      "candidate01_sha256": "8c2e3f9eedd4d8e11832809c2b72293db17df1fb5a4012bd39fa396f93143f94",
+      "status": "unchanged"
+    },
+    {
+      "relative": "tests/test_codex_c01_review_binding.py",
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c01_review_binding.py",
+      "snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\candidate-02\\files\\tests\\test_codex_c01_review_binding.py",
+      "sha256": "351c39e764e53d67466688d9ec032cf9e352167e105ee0be580129f1db38fdf7",
+      "bytes": 14693,
+      "lines": 330,
+      "baseline_sha256": "e2744bc198bc91fe71ce4b2afafb9682e427c17c7ac0c1207b3a7643dbf2d330",
+      "candidate01_sha256": "351c39e764e53d67466688d9ec032cf9e352167e105ee0be580129f1db38fdf7",
+      "status": "unchanged"
+    },
+    {
+      "relative": "tests/test_codex_c02a_dependency_verification.py",
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c02a_dependency_verification.py",
+      "snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\candidate-02\\files\\tests\\test_codex_c02a_dependency_verification.py",
+      "sha256": "195ead0031f16098087df5f56b5b9ac0e5ddc7a58a733ea6a0e0c22168650219",
+      "bytes": 23075,
+      "lines": 458,
+      "baseline_sha256": null,
+      "candidate01_sha256": "403e45568fddeda038b3f10a62cf3b311764d1e91e7a5f9ef9ca3fbf78877899",
+      "status": "modified"
+    }
+  ],
+  "diffs": [
+    {
+      "relative": "scripts/r6_cache.py",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\candidate-02\\DIFF_01.patch",
+      "sha256": "c87186a03ce64c2f77c1e88f546343216fd7661f316d4436479176329c89320f",
+      "bytes": 2421
+    },
+    {
+      "relative": "tests/test_codex_c02a_dependency_verification.py",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\candidate-02\\DIFF_02.patch",
+      "sha256": "db5e0a71af6709cbfee4278ae3c46de0c0140948e6e79215f173fa7d6121e4ba",
+      "bytes": 5617
+    }
+  ],
+  "receipts": [
+    {
+      "relative": "r01/NESTING_RED.txt",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\r01\\NESTING_RED.txt",
+      "sha256": "649eb0d9171737e48f6eb31e3c1375ca617857477eb3d2c1f88eda2a56bafc9d",
+      "bytes": 969321
+    },
+    {
+      "relative": "r01/NESTING_GREEN_01.txt",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\r01\\NESTING_GREEN_01.txt",
+      "sha256": "93db0d1bced7a79737c3ea61b93967d9738658eef63bcf9c55c63b11c0c99033",
+      "bytes": 1376
+    },
+    {
+      "relative": "r01/ROOT_NESTING_GREEN_01.txt",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\r01\\ROOT_NESTING_GREEN_01.txt",
+      "sha256": "855a04fe615b071a3cd6b476fa8087fc187bad43b989433e1117350cd6162931",
+      "bytes": 1522
+    },
+    {
+      "relative": "r01/root-nesting-green-01/RESULT.json",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\r01\\root-nesting-green-01\\RESULT.json",
+      "sha256": "adf09c99716e78bd8db5154cc2d2a002d9afc1106c9161df731d565bffcbe619",
+      "bytes": 2048
+    },
+    {
+      "relative": "r01/ROOT_55_GREEN_01.txt",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\r01\\ROOT_55_GREEN_01.txt",
+      "sha256": "4abe99f88b8561009f13dfc5f7f4e61b9237be709546f21702fdf2272be6d4bf",
+      "bytes": 221
+    },
+    {
+      "relative": "r01/root-55-green-01/RESULT.json",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\r01\\root-55-green-01\\RESULT.json",
+      "sha256": "66fc4bdb9695f2a3e5e9e674b766d084aa7c7ea8436dca49953e2d40cb0fee7e",
+      "bytes": 12870
+    },
+    {
+      "relative": "r01/AFFECTED_FULL_01.txt",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\r01\\AFFECTED_FULL_01.txt",
+      "sha256": "d8937c6a47c5a4a44e761bfb9e1667035dc94530a746da9b7f955f9276bec666",
+      "bytes": 13370
+    },
+    {
+      "relative": "r01/SELF_REVIEW.json",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\r01\\SELF_REVIEW.json",
+      "sha256": "e0caaa7538c711fe171f9a9ab3ef830aa0fe9b90f6283e90229d1d9d3646620d",
+      "bytes": 1715
+    },
+    {
+      "relative": "r01/REPORT_R01.md",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\r01\\REPORT_R01.md",
+      "sha256": "c6b24f410ce7f553f38df6b3fa7771d78b5dbc01eadab8a18a414db43944b99a",
+      "bytes": 2474
+    },
+    {
+      "relative": "r01/LOG_R01.md",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\r01\\LOG_R01.md",
+      "sha256": "02f2b6dd11ec0087d90255bd53b8d9e1e097664fdcaa2cdd4211c493e52df858",
+      "bytes": 2696
+    },
+    {
+      "relative": "r01/CHECKPOINT-03.json",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\r01\\CHECKPOINT-03.json",
+      "sha256": "3965ab95f4354b74e8c013b57a141fa7d8549d3e4ff7863256b86fa4e05096b3",
+      "bytes": 782
+    }
+  ],
+  "source_test_writes_stopped": true,
+  "live_jobs": []
+}

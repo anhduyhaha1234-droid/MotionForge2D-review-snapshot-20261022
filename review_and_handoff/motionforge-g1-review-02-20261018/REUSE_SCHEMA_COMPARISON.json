@@ -1,0 +1,37 @@
+{
+  "fixture": {
+    "kind": "r6_key_deps_v4_asset",
+    "padding": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  },
+  "candidate_matrix_Q07": "PASS (ROOT_PROBES matrix_fake_evidence)",
+  "installed_pydantic_2_13_5_prototype": {
+    "rejected": true,
+    "errors": [
+      {
+        "type": "missing",
+        "loc": [
+          "shot"
+        ]
+      },
+      {
+        "type": "missing",
+        "loc": [
+          "deps_sha"
+        ]
+      },
+      {
+        "type": "missing",
+        "loc": [
+          "consumed"
+        ]
+      },
+      {
+        "type": "extra_forbidden",
+        "loc": [
+          "padding"
+        ]
+      }
+    ]
+  },
+  "limit": "Evidence of structural rejection only; custom hash/role/invocation/semantic validation still required. No production code adopted."
+}

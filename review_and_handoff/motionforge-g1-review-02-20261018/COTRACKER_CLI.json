@@ -1,0 +1,14 @@
+{
+  "command": [
+    "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\venv\\Scripts\\python.exe",
+    "-B",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-02-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_cotracker.py",
+    "--help"
+  ],
+  "cwd": "None",
+  "started_utc": "2026-10-18T06:53:30.785506+00:00",
+  "duration_seconds": 0.188,
+  "exit_code": 0,
+  "stdout": "usage: r6_cotracker.py [-h] shots [shots ...]\n\npositional arguments:\n  shots\n\noptions:\n  -h, --help  show this help message and exit\n",
+  "stderr": ""
+}

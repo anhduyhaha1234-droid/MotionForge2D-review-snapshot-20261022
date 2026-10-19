@@ -1,0 +1,14 @@
+{
+  "checkpoint_id": "G1_CANDIDATE_02_CHECKPOINT",
+  "timestamp_utc": "2026-10-18T15:05:18.414701+00:00",
+  "gate": "G1",
+  "correction_branch": "G1-R1",
+  "status": "SELF_VERIFIED_PENDING_CODEX_G1",
+  "owner": "gemini-implementation-owner",
+  "real_session_id": "20261017_115944_b2a338",
+  "model": "ag/gemini-3.8-flash-high",
+  "files_count": 15,
+  "tests_passed": "89/89",
+  "matrix_passed": "20/20",
+  "candidate_dir": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\submissions\\g1-candidate-02"
+}

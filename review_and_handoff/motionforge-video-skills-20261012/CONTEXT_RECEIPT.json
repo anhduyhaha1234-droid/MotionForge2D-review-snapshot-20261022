@@ -1,0 +1,93 @@
+{
+  "utc": "2026-10-12T10:46:42.054004+00:00",
+  "kind": "handoff_acknowledgement_not_new_review",
+  "runtime_process_owner_reverified": false,
+  "inherited_verdict": "R5 CHANGES_REQUESTED",
+  "quality_accepted": 0,
+  "new_Hermes_dispatch": false,
+  "new_workers_created": false,
+  "project_files_modified_by_this_turn": false,
+  "global_skills_installed": false,
+  "document_hashes_at_packaging_not_full_turn_guard": [
+    {
+      "path": "C:\\Users\\Admin\\MotionForge2D\\docs\\pm\\HERMES_AUTOPILOT_RULES.md",
+      "sha256": "2c3fb5353e137f245bec63cfe752438d589c1b3ba87e07180717c26aad0d68f4",
+      "bytes": 57139
+    },
+    {
+      "path": "C:\\Users\\Admin\\MotionForge2D\\AGENTS.md",
+      "sha256": "9208e0dea247b32f54ae24ed9fda8b85de79fcd0b4b3f54a2ae8b7d81218c4e6",
+      "bytes": 607
+    },
+    {
+      "path": "C:\\Users\\Admin\\MotionForge2D\\docs\\pm\\SESSION_PROTOCOL.md",
+      "sha256": "e100656c8b2a8959c595234dfe51ebb832fbb5f8763f2243ad0423a62955eda6",
+      "bytes": 9681
+    },
+    {
+      "path": "C:\\Users\\Admin\\MotionForge2D\\docs\\pm\\CODEX_PM_HANDOFF.md",
+      "sha256": "707bbaa4fe93fca0b73deb3d2a8a582662aed9932e1a683358bf9b0ffd6e7eb3",
+      "bytes": 116880
+    },
+    {
+      "path": "C:\\Users\\Admin\\MotionForge2D\\docs\\pm\\ROADMAP.md",
+      "sha256": "a7314f3d03f563d171e34dda867e73b988351d771b665e38216a0f8360c0d32c",
+      "bytes": 70458
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-02\\ti-p-qu-n-d-n\\outputs\\motionforge-r5-review-20261012\\REVIEW_VI.md",
+      "sha256": "dc3a3c51f920134aae2d790363e92e8e3a7a85ce19e2b80608badedb5a9387a3",
+      "bytes": 18603
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-02\\ti-p-qu-n-d-n\\outputs\\motionforge-r5-review-20261012\\CORRECTION_MATRIX.md",
+      "sha256": "575be585d9c29ae1c2b79ca56397857fb318ae76bc9befd87d22f28312604f74",
+      "bytes": 4088
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-02\\ti-p-qu-n-d-n\\outputs\\motionforge-r5-review-20261012\\TECH_DECISION_VI.md",
+      "sha256": "bbfab742347cccda37933060736763428645a15f678eb6b85cc74e65021d912a",
+      "bytes": 5173
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-02\\ti-p-qu-n-d-n\\outputs\\motionforge-r5-review-20261012\\SESSION_OPENING_PROPOSAL.md",
+      "sha256": "1e2daf84e81abd6ea7a6dfeacfc9ed0b8ebe26d711136a76eb0ea6c3369980b2",
+      "bytes": 3470
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-02\\ti-p-qu-n-d-n\\outputs\\motionforge-r5-review-20261012\\NEXT_HERMES_MANAGER_PROMPT.md",
+      "sha256": "a1646083854fe71e5ae9853efdfce91a29a397065b34b84eb19eed294cd5dfcc",
+      "bytes": 17666
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-02\\ti-p-qu-n-d-n\\outputs\\motionforge-r5-review-20261012\\FINAL_GUARD.json",
+      "sha256": "ecbba41cd1f7b56e50d030639e58e9e1bd0517537c23a365e05f55ff0ce73fba",
+      "bytes": 4829
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-02\\ti-p-qu-n-d-n\\outputs\\motionforge-tech-conformance-20261012\\TECHNOLOGY_AUDIT_VI.md",
+      "sha256": "1dcb53cf4606ced29d3dd33e1f74f0f9a5e96c65842b2f3549a1b40b3ab0e69a",
+      "bytes": 21928
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-02\\ti-p-qu-n-d-n\\outputs\\motionforge-tech-conformance-20261012\\TECH_CONFORMANCE_MATRIX.md",
+      "sha256": "474675926826b348f4673cddd703e4546c8c3f9bbe0fe1851c40c52c79c6a095",
+      "bytes": 5416
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-02\\ti-p-qu-n-d-n\\outputs\\motionforge-tech-conformance-20261012\\SESSION_OPENING_PROPOSAL.md",
+      "sha256": "f962fbed501ed4c440e33225539e57e84474b8e6c090a825f51bd9b464c4446f",
+      "bytes": 4104
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-02\\ti-p-qu-n-d-n\\outputs\\motionforge-tech-conformance-20261012\\NEXT_HERMES_MANAGER_PROMPT.md",
+      "sha256": "4051dedba6b370ad010d0c8b192eeadd61313886a7bccf2df9f162af16743e08",
+      "bytes": 23855
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-02\\ti-p-qu-n-d-n\\outputs\\motionforge-tech-conformance-20261012\\SOURCE_LOCK_FINAL.json",
+      "sha256": "6b72bea492bfc1d867c00d3410b0e5bc9e6340d2316e50117f779a2b4547c2ef",
+      "bytes": 28184
+    }
+  ]
+}

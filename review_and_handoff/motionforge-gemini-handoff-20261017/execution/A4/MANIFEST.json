@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "task": "GEMINI-A4-EVIDENCE-GATE-CONFORMANCE",
+  "phase": "A4",
+  "status": "SELF_VERIFIED",
+  "created_utc": "2026-10-17T17:46:31.094463+00:00",
+  "owner": "gemini-implementation-owner",
+  "model": "ag/gemini-3.8-flash-high",
+  "files": [
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_assemble.py",
+      "relative": "scripts/r6_assemble.py",
+      "sha256": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910",
+      "bytes": 4245,
+      "lines": 89
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_matrix.py",
+      "relative": "scripts/r6_matrix.py",
+      "sha256": "50164a8a79d79139e1a37c27dee925f08297269a6b8dad1ab9e6e2b81055a661",
+      "bytes": 4725,
+      "lines": 95
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_gate.py",
+      "relative": "scripts/r6_gate.py",
+      "sha256": "944eea8b6a1624cbb2983495fba5d2ff00cccb23460843f67987155cf664c0a2",
+      "bytes": 18976,
+      "lines": 396
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_gemini_a4_evidence_conformance.py",
+      "relative": "tests/test_gemini_a4_evidence_conformance.py",
+      "sha256": "94cf31f4e8d5ee78fd5b6ae6a204aacec54952acc307deb7c8a302a47ebf02b7",
+      "bytes": 5581,
+      "lines": 136
+    }
+  ],
+  "tests": {
+    "c01_review_binding": {
+      "count": 17,
+      "status": "PASS"
+    },
+    "c02a_dependency_verification": {
+      "count": 13,
+      "status": "PASS"
+    },
+    "c02b1_staged_source": {
+      "count": 10,
+      "status": "PASS"
+    },
+    "c02b2_per_actor_reuse": {
+      "count": 14,
+      "status": "PASS"
+    },
+    "c02b3_asset_reuse": {
+      "count": 10,
+      "status": "PASS"
+    },
+    "a3_event_tracking": {
+      "count": 7,
+      "status": "PASS"
+    },
+    "a4_evidence_conformance": {
+      "count": 5,
+      "status": "PASS"
+    },
+    "total_tests": 76,
+    "total_passed": 76,
+    "probe_v4_replay": {
+      "status": "PASS",
+      "initial": 1,
+      "replay": 0
+    }
+  }
+}

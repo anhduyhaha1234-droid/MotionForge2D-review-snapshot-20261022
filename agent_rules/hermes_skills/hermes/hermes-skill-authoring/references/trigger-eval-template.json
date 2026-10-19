@@ -1,0 +1,14 @@
+{
+  "_schema": "Trigger eval format — one entry per skill",
+  "_usage": "Each positive prompt should clearly trigger the skill; each negative should NOT",
+  "example-skill": {
+    "positive": [
+      "Situation that clearly matches the skill's When to Use",
+      "Another trigger scenario, possibly in another language"
+    ],
+    "negative": [
+      "Near-miss that shares keywords but wrong intent",
+      "Clearly unrelated task"
+    ]
+  }
+}

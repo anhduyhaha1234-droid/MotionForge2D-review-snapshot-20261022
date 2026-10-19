@@ -1,0 +1,83 @@
+{
+  "source_hashes": {
+    "r6_common.py": "17bf5799c445a6f7133c61d53b9d5c41083307add1d7b6a50acdf83c294c15e3",
+    "r6_cache.py": "946935906625d79b95153a92d4cf86310551cfbc4533a3661f2011854aeae7a7",
+    "r6_gate.py": "8c2e3f9eedd4d8e11832809c2b72293db17df1fb5a4012bd39fa396f93143f94"
+  },
+  "cases": [
+    {
+      "depth": 10,
+      "lane": "verify",
+      "loader_result": "ok",
+      "expected": "ACCEPT",
+      "actual": "ACCEPT",
+      "pass": true,
+      "detail": "ok"
+    },
+    {
+      "depth": 10,
+      "lane": "gate_key",
+      "loader_result": "ok",
+      "expected": "ACCEPT",
+      "actual": "ACCEPT",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "depth": 200,
+      "lane": "verify",
+      "loader_result": "ok",
+      "expected": "CONTROLLED",
+      "actual": "ACCEPT",
+      "pass": true,
+      "detail": "ok"
+    },
+    {
+      "depth": 200,
+      "lane": "gate_key",
+      "loader_result": "ok",
+      "expected": "CONTROLLED",
+      "actual": "ACCEPT",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "depth": 400,
+      "lane": "verify",
+      "loader_result": "ok",
+      "expected": "CONTROLLED",
+      "actual": "UNCONTROLLED_EXCEPTION",
+      "pass": false,
+      "detail": "RecursionError('maximum recursion depth exceeded in comparison')"
+    },
+    {
+      "depth": 400,
+      "lane": "gate_key",
+      "loader_result": "ok",
+      "expected": "CONTROLLED",
+      "actual": "UNCONTROLLED_EXCEPTION",
+      "pass": false,
+      "detail": "RecursionError('maximum recursion depth exceeded')"
+    },
+    {
+      "depth": 800,
+      "lane": "verify",
+      "loader_result": "ok",
+      "expected": "CONTROLLED",
+      "actual": "UNCONTROLLED_EXCEPTION",
+      "pass": false,
+      "detail": "RecursionError('maximum recursion depth exceeded in comparison')"
+    },
+    {
+      "depth": 800,
+      "lane": "gate_key",
+      "loader_result": "ok",
+      "expected": "CONTROLLED",
+      "actual": "UNCONTROLLED_EXCEPTION",
+      "pass": false,
+      "detail": "RecursionError('maximum recursion depth exceeded')"
+    }
+  ],
+  "passed": 4,
+  "total": 8
+}

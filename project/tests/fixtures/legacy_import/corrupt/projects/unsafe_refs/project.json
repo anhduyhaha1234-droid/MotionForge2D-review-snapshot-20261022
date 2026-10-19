@@ -1,0 +1,60 @@
+{
+  "version": "2.0.0",
+  "name": "Unsafe Refs",
+  "source_video": "C:/Users/Admin/secret/video.mp4",
+  "scenes": [
+    {
+      "scene_id": 0,
+      "start_frame": 0,
+      "end_frame": 10,
+      "start_time_sec": 0.0,
+      "end_time_sec": 1.0,
+      "duration_sec": 1.0,
+      "frame_count": 11
+    }
+  ],
+  "objects": [
+    {
+      "object_id": "obj_x",
+      "name": "X",
+      "kind": "character",
+      "scene_id": 0,
+      "selection": {
+        "mode": "point",
+        "frame_index": 0,
+        "x": 0.0,
+        "y": 0.0
+      },
+      "replacement_image": "../outside.png",
+      "replacement_config": {
+        "asset_path": "C:/Windows/evil.png"
+      },
+      "motion": null,
+      "novel_object_field": {
+        "keep": true
+      }
+    },
+    {
+      "object_id": "obj_y",
+      "name": "Y",
+      "kind": "prop",
+      "scene_id": 0,
+      "selection": {
+        "mode": "point",
+        "frame_index": 0,
+        "x": 1.0,
+        "y": 1.0
+      },
+      "replacement_image": "projects/unsafe_refs/missing.png",
+      "motion": null
+    }
+  ],
+  "channel_id": "ch_unknown",
+  "task_status": "draft",
+  "created_at": "",
+  "updated_at": "",
+  "extra_top_level": {
+    "a": 1
+  },
+  "future_field": "x"
+}

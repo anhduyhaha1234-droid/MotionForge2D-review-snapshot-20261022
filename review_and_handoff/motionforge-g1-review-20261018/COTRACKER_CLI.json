@@ -1,0 +1,12 @@
+{
+  "command": [
+    "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\venv\\Scripts\\python.exe",
+    "-B",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_cotracker.py",
+    "--help"
+  ],
+  "started_utc": "2026-10-18T04:21:25.634896+00:00",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_cotracker.py\", line 206, in <module>\n    main()\n  File \"C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_cotracker.py\", line 198, in main\n    ap = argparse.ArgumentParser()\n         ^^^^^^^^\nNameError: name 'argparse' is not defined\n"
+}

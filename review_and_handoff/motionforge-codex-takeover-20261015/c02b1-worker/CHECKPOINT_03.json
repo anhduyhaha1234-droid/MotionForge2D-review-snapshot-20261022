@@ -1,0 +1,52 @@
+{
+  "utc": "2026-10-16T07:32:25.8191717Z",
+  "task": "CODEX-C02B1-STAGED-SOURCE-FRESHNESS",
+  "owner": "/root/motionforge_c02b1_coder",
+  "model": "gpt-6-sol/max/no fallback",
+  "allowlist": [
+    "R6/scripts/r6_common.py related helper/imports",
+    "R6/tests/test_codex_c02b1_staged_source.py",
+    "OUT/c02b1-worker/**"
+  ],
+  "intent": "Finish S1-S7 finite staged-source matrix",
+  "files": [
+    {
+      "path": "r6_common.py",
+      "lines": 241,
+      "sha": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc",
+      "bytes": 10578
+    },
+    {
+      "path": "test_codex_c02b1_staged_source.py",
+      "sha": "26bd90e5137da23aafdab7989c596f35949b9509c5364273478d4d4df76d93a2"
+    }
+  ],
+  "commands": [
+    {
+      "exit": 1,
+      "result": "same-size source mutation stale",
+      "name": "red_unittest"
+    },
+    {
+      "exit": 0,
+      "result": "1/1",
+      "name": "green_unittest"
+    },
+    {
+      "exit": 0,
+      "result": "common size 10578, 241 lines",
+      "name": "post_patch_hash"
+    }
+  ],
+  "decisions": [
+    "Versioned sidecar binds canonical paths, SHA256, sid/frame, output SHA/size",
+    "FFmpeg extracts to unique sibling; pending marker blocks stale reuse after partial publication"
+  ],
+  "remaining": [
+    "Expand matrix S1-S6 incl real FFmpeg",
+    "Run root probe and full new+C01+C02A",
+    "Audit scope and freeze candidate"
+  ],
+  "next_command": "Patch new test module with finite matrix",
+  "live_jobs": []
+}

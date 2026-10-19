@@ -1,0 +1,86 @@
+[
+  {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_cache.py",
+    "expected": "e295e10d5c1509b40655f5fcf4bc8be5f5eb7c39e03df769c3b1ca1bd4f115e5",
+    "actual": "e295e10d5c1509b40655f5fcf4bc8be5f5eb7c39e03df769c3b1ca1bd4f115e5",
+    "match": true
+  },
+  {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_keygen.py",
+    "expected": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+    "actual": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+    "match": true
+  },
+  {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_key_recipe.py",
+    "expected": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9",
+    "actual": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9",
+    "match": true
+  },
+  {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_keygen_asset.py",
+    "expected": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e",
+    "actual": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e",
+    "match": true
+  },
+  {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_propagate.py",
+    "expected": "5bed004139b5aa0315eeee9ae91893b7b0175cf070ea22a123335098b6aa63a5",
+    "actual": "5bed004139b5aa0315eeee9ae91893b7b0175cf070ea22a123335098b6aa63a5",
+    "match": true
+  },
+  {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_cotracker.py",
+    "expected": "6428fd61fe0f8c917763f372332a3e82fc4beba3292aafb6d2dd691245f0cd8f",
+    "actual": "6428fd61fe0f8c917763f372332a3e82fc4beba3292aafb6d2dd691245f0cd8f",
+    "match": true
+  },
+  {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_ledger.py",
+    "expected": "42b64efaae16f18fc69d3d118e195a16f6d31e3a66a5da107ff115d936dcc9d1",
+    "actual": "42b64efaae16f18fc69d3d118e195a16f6d31e3a66a5da107ff115d936dcc9d1",
+    "match": true
+  },
+  {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_gate.py",
+    "expected": "944eea8b6a1624cbb2983495fba5d2ff00cccb23460843f67987155cf664c0a2",
+    "actual": "944eea8b6a1624cbb2983495fba5d2ff00cccb23460843f67987155cf664c0a2",
+    "match": true
+  },
+  {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_assemble.py",
+    "expected": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910",
+    "actual": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910",
+    "match": true
+  },
+  {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_matrix.py",
+    "expected": "50164a8a79d79139e1a37c27dee925f08297269a6b8dad1ab9e6e2b81055a661",
+    "actual": "50164a8a79d79139e1a37c27dee925f08297269a6b8dad1ab9e6e2b81055a661",
+    "match": true
+  },
+  {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\tests\\test_codex_c02b2_per_actor_reuse.py",
+    "expected": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24",
+    "actual": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24",
+    "match": true
+  },
+  {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\tests\\test_gemini_c02b3_asset_reuse.py",
+    "expected": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b",
+    "actual": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b",
+    "match": true
+  },
+  {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\tests\\test_gemini_a3_event_tracking.py",
+    "expected": "cc9fe10b065738dd18fa9c6626f54c4d0da3f996833145fe45db031aaa6a6584",
+    "actual": "cc9fe10b065738dd18fa9c6626f54c4d0da3f996833145fe45db031aaa6a6584",
+    "match": true
+  },
+  {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\tests\\test_gemini_a4_evidence_conformance.py",
+    "expected": "94cf31f4e8d5ee78fd5b6ae6a204aacec54952acc307deb7c8a302a47ebf02b7",
+    "actual": "94cf31f4e8d5ee78fd5b6ae6a204aacec54952acc307deb7c8a302a47ebf02b7",
+    "match": true
+  }
+]

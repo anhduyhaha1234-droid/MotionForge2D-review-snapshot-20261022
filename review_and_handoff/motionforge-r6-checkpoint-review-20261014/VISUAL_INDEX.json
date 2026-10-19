@@ -1,0 +1,478 @@
+{
+  "scope": "Fresh exact decoded frames: 54 midpoints + targeted frames, no continuous playback",
+  "samples": [
+    {
+      "shot": "S0021",
+      "global_frame": 2868,
+      "pilot_frame": 48,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0022",
+      "global_frame": 2973,
+      "pilot_frame": 153,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0023",
+      "global_frame": 3092,
+      "pilot_frame": 272,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0024",
+      "global_frame": 3212,
+      "pilot_frame": 392,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0025",
+      "global_frame": 3333,
+      "pilot_frame": 513,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0026",
+      "global_frame": 3426,
+      "pilot_frame": 606,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0027",
+      "global_frame": 3536,
+      "pilot_frame": 716,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0028",
+      "global_frame": 3687,
+      "pilot_frame": 867,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0029",
+      "global_frame": 3789,
+      "pilot_frame": 969,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0030",
+      "global_frame": 3859,
+      "pilot_frame": 1039,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0031",
+      "global_frame": 4055,
+      "pilot_frame": 1235,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0032",
+      "global_frame": 4681,
+      "pilot_frame": 1861,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0033",
+      "global_frame": 5235,
+      "pilot_frame": 2415,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0034",
+      "global_frame": 5426,
+      "pilot_frame": 2606,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0035",
+      "global_frame": 5552,
+      "pilot_frame": 2732,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0036",
+      "global_frame": 5617,
+      "pilot_frame": 2797,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0037",
+      "global_frame": 5700,
+      "pilot_frame": 2880,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0038",
+      "global_frame": 5814,
+      "pilot_frame": 2994,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0039",
+      "global_frame": 5925,
+      "pilot_frame": 3105,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0040",
+      "global_frame": 6002,
+      "pilot_frame": 3182,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0041",
+      "global_frame": 6222,
+      "pilot_frame": 3402,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0042",
+      "global_frame": 6463,
+      "pilot_frame": 3643,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0043",
+      "global_frame": 7065,
+      "pilot_frame": 4245,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0044",
+      "global_frame": 7642,
+      "pilot_frame": 4822,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0045",
+      "global_frame": 7708,
+      "pilot_frame": 4888,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0046",
+      "global_frame": 7775,
+      "pilot_frame": 4955,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0047",
+      "global_frame": 7853,
+      "pilot_frame": 5033,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0048",
+      "global_frame": 7910,
+      "pilot_frame": 5090,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0049",
+      "global_frame": 8100,
+      "pilot_frame": 5280,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0050",
+      "global_frame": 8331,
+      "pilot_frame": 5511,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0051",
+      "global_frame": 8431,
+      "pilot_frame": 5611,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0052",
+      "global_frame": 8523,
+      "pilot_frame": 5703,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0053",
+      "global_frame": 8674,
+      "pilot_frame": 5854,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0054",
+      "global_frame": 8801,
+      "pilot_frame": 5981,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0055",
+      "global_frame": 9025,
+      "pilot_frame": 6205,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0056",
+      "global_frame": 9265,
+      "pilot_frame": 6445,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0057",
+      "global_frame": 9424,
+      "pilot_frame": 6604,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0058",
+      "global_frame": 9609,
+      "pilot_frame": 6789,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0059",
+      "global_frame": 9759,
+      "pilot_frame": 6939,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0060",
+      "global_frame": 9939,
+      "pilot_frame": 7119,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0061",
+      "global_frame": 10214,
+      "pilot_frame": 7394,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0062",
+      "global_frame": 10517,
+      "pilot_frame": 7697,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0063",
+      "global_frame": 10656,
+      "pilot_frame": 7836,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0064",
+      "global_frame": 10690,
+      "pilot_frame": 7870,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0065",
+      "global_frame": 10762,
+      "pilot_frame": 7942,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0066",
+      "global_frame": 10850,
+      "pilot_frame": 8030,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0067",
+      "global_frame": 10949,
+      "pilot_frame": 8129,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0068",
+      "global_frame": 11028,
+      "pilot_frame": 8208,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0069",
+      "global_frame": 11105,
+      "pilot_frame": 8285,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0070",
+      "global_frame": 11235,
+      "pilot_frame": 8415,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0071",
+      "global_frame": 11331,
+      "pilot_frame": 8511,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0072",
+      "global_frame": 11428,
+      "pilot_frame": 8608,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0073",
+      "global_frame": 11589,
+      "pilot_frame": 8769,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0074",
+      "global_frame": 11749,
+      "pilot_frame": 8929,
+      "tag": "mid"
+    },
+    {
+      "shot": "S0022",
+      "global_frame": 2916,
+      "pilot_frame": 96,
+      "tag": "f0=0"
+    },
+    {
+      "shot": "S0022",
+      "global_frame": 2946,
+      "pilot_frame": 126,
+      "tag": "f0=30"
+    },
+    {
+      "shot": "S0022",
+      "global_frame": 2976,
+      "pilot_frame": 156,
+      "tag": "f0=60"
+    },
+    {
+      "shot": "S0033",
+      "global_frame": 5151,
+      "pilot_frame": 2331,
+      "tag": "f0=0"
+    },
+    {
+      "shot": "S0033",
+      "global_frame": 5181,
+      "pilot_frame": 2361,
+      "tag": "f0=30"
+    },
+    {
+      "shot": "S0033",
+      "global_frame": 5211,
+      "pilot_frame": 2391,
+      "tag": "f0=60"
+    },
+    {
+      "shot": "S0061",
+      "global_frame": 10136,
+      "pilot_frame": 7316,
+      "tag": "f0=100"
+    },
+    {
+      "shot": "S0061",
+      "global_frame": 10146,
+      "pilot_frame": 7326,
+      "tag": "f0=110"
+    },
+    {
+      "shot": "S0061",
+      "global_frame": 10206,
+      "pilot_frame": 7386,
+      "tag": "f0=170"
+    },
+    {
+      "shot": "S0062",
+      "global_frame": 10424,
+      "pilot_frame": 7604,
+      "tag": "f0=32"
+    },
+    {
+      "shot": "S0062",
+      "global_frame": 10452,
+      "pilot_frame": 7632,
+      "tag": "f0=60"
+    },
+    {
+      "shot": "S0062",
+      "global_frame": 10503,
+      "pilot_frame": 7683,
+      "tag": "f0=111"
+    },
+    {
+      "shot": "S0070",
+      "global_frame": 11164,
+      "pilot_frame": 8344,
+      "tag": "f0=0"
+    },
+    {
+      "shot": "S0070",
+      "global_frame": 11194,
+      "pilot_frame": 8374,
+      "tag": "f0=30"
+    },
+    {
+      "shot": "S0070",
+      "global_frame": 11224,
+      "pilot_frame": 8404,
+      "tag": "f0=60"
+    },
+    {
+      "shot": "S0073",
+      "global_frame": 11500,
+      "pilot_frame": 8680,
+      "tag": "f0=0"
+    },
+    {
+      "shot": "S0073",
+      "global_frame": 11540,
+      "pilot_frame": 8720,
+      "tag": "f0=40"
+    },
+    {
+      "shot": "S0073",
+      "global_frame": 11590,
+      "pilot_frame": 8770,
+      "tag": "f0=90"
+    },
+    {
+      "shot": "S0073",
+      "global_frame": 11640,
+      "pilot_frame": 8820,
+      "tag": "f0=140"
+    },
+    {
+      "shot": "S0073",
+      "global_frame": 11678,
+      "pilot_frame": 8858,
+      "tag": "f0=178"
+    },
+    {
+      "shot": "S0074",
+      "global_frame": 11679,
+      "pilot_frame": 8859,
+      "tag": "f0=0"
+    },
+    {
+      "shot": "S0074",
+      "global_frame": 11739,
+      "pilot_frame": 8919,
+      "tag": "f0=60"
+    },
+    {
+      "shot": "S0074",
+      "global_frame": 11779,
+      "pilot_frame": 8959,
+      "tag": "f0=100"
+    }
+  ],
+  "sheets": [
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-r6-checkpoint-review-20261014\\visual\\contact_01.jpg",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-r6-checkpoint-review-20261014\\visual\\contact_02.jpg",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-r6-checkpoint-review-20261014\\visual\\contact_03.jpg",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-r6-checkpoint-review-20261014\\visual\\contact_04.jpg",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-r6-checkpoint-review-20261014\\visual\\contact_05.jpg",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-r6-checkpoint-review-20261014\\visual\\contact_06.jpg",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-r6-checkpoint-review-20261014\\visual\\contact_07.jpg",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-r6-checkpoint-review-20261014\\visual\\contact_08.jpg",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-r6-checkpoint-review-20261014\\visual\\contact_09.jpg"
+  ]
+}

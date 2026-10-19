@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-17T04:40:08.457Z",
+  "version": "0.5.95",
+  "file": "C:\\Users\\Admin\\AppData\\Roaming\\npm\\node_modules\\9router\\app\\.next-cli-build\\server\\chunks\\8895.js",
+  "backup": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\9router-gemini-20261016\\backups\\8895.js",
+  "beforeSha256": "4082b3bba56efa649ab3d63ea35cbbcf412ed26da1c57581b33a525794b9cee9",
+  "afterSha256": "d6e2825230bd68c33441810ef44ff48292063be1930375c69ddc08a3a80e64ce",
+  "protectedFiles": [
+    {
+      "name": "5330.js",
+      "sha256": "c8273ae279b1f3e9de6f81d72fc7ed8745a3fa35791f339a9449fd27014f0208"
+    },
+    {
+      "name": "8499.js",
+      "sha256": "8968a84e3f1f1f7fc287f18911ad14fb0bf66d20d634c359c457d8554cfc1c5d"
+    },
+    {
+      "name": "436.js",
+      "sha256": "fd3cf192566311b56cd2fba721d476d6cfc02d04a306c8312acd99b393350d52"
+    }
+  ],
+  "scope": "Append one DONE on Antigravity-to-OpenAI translated SSE EOF; no auth/model/other-provider changes"
+}

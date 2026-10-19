@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "files": {
+    "scripts/r6_cache.py": {
+      "syntax": "ok",
+      "duplicates": [],
+      "top_level_definitions": 7
+    },
+    "scripts/r6_gate.py": {
+      "syntax": "ok",
+      "duplicates": [],
+      "top_level_definitions": 18
+    },
+    "tests/test_codex_c01_review_binding.py": {
+      "syntax": "ok",
+      "duplicates": [],
+      "top_level_definitions": 2
+    },
+    "tests/test_codex_c02a_dependency_verification.py": {
+      "syntax": "ok",
+      "duplicates": [],
+      "top_level_definitions": 2
+    },
+    "c01_assertions": {
+      "old_tests": 17,
+      "new_tests": 17,
+      "assertions_preserved": true
+    }
+  },
+  "errors": []
+}

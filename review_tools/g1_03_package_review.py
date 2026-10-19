@@ -1,0 +1,15 @@
+from pathlib import Path
+import json,hashlib,datetime,ast
+BASE=Path('C:/Users/Admin/Documents/Codex/2026-10-12/a-l-m-video-ra-m-2');O=BASE/'outputs/motionforge-g1-review-03-20261019'
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def save(name,data):
+    with (O/name).open('x',encoding='utf-8') as f:json.dump(data,f,ensure_ascii=False,indent=2)
+ident=json.loads((O/'CANDIDATE_IDENTITY.json').read_text());stable=all(sha(Path(x['source']))==x['expected_sha256']==sha(Path(x['snapshot'])) for x in ident['files'])
+assert stable
+ast.parse((O/'vision/motionforge_vision_qc.py').read_text(encoding='utf-8'))
+prompt=(O/'PROMPT_GUI_GEMINI_VI.md').read_text(encoding='utf-8');assert prompt.startswith('Đọc TOÀN BỘ');assert '20261017_115944_b2a338' in prompt
+closed=['M01','M02','M03','M04','M05','M07','M10','M15'];opened=[f'M{i:02d}' for i in range(1,21) if f'M{i:02d}' not in closed]
+save('VERDICT.json',{'at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'candidate':'g1-candidate-03','gate':'G1','verdict':'CHANGES_REQUESTED','rules_sha256':ident['authority_sha256'],'exact_manifest_files':17,'live_and_snapshot_stable':stable,'verified_rows':closed,'open_or_partial_rows':opened,'engineering_row_closure_fraction':0.4,'project_completion_percent':None,'b_media_authorized':False,'G2':'BLOCKED_DEPENDENCY','G3':'BLOCKED_DEPENDENCY','root_validation':{'asset_focused':'10/10 PASS','broad89':'NOT_RUN_CRITICAL_MICRO_FAILURES','submitted20closure':'NOT_CONFIRMED','ruff_F821':'5 undefined Image sites'},'P1_groups':['R04 actual propagation positive path and failure invalidation','R06 evidence false accepts','R07 submission hash and publication wiring'],'root_production_patches':0,'vision':{'model_image_capability':'PASS','scoped_image_helper_live':'PASS 7/7','native_Hermes_tool':'INCOMPLETE_TIMEOUT','native_video_audio':'UNVERIFIED','global_config_changed':False},'next_prompt':str(O/'PROMPT_GUI_GEMINI_VI.md'),'proposal':str(O/'SESSION_OPENING_PROPOSAL.md'),'owner_sid':'20261017_115944_b2a338','root_dispatched_Hermes':False})
+targets=['REVIEW_VI.md','CORRECTION_MATRIX.md','RESEARCH_DECISIONS_VI.md','SESSION_OPENING_PROPOSAL.md','PROMPT_GUI_GEMINI_VI.md','VERDICT.json','CANDIDATE_IDENTITY.json','POST_REVIEW_HASH_CHECK.json','ROOT_PROBES.json','EXTRA_PROBES.json','EVENT_CONTROLS.json','PROPAGATION_BOUNDARIES.json','RUFF_F821.json','Q11_BINDING_AUDIT.json','delegated_audit/PROBE_RESULTS.json','vision/README_VI.md','vision/motionforge_vision_qc.py','vision/DIRECT_IMAGE_RECEIPT.json','vision/HELPER_LIVE_RECEIPT.json','vision/VERIFICATION.json','vision/NATIVE_TOOL_TIMEOUT.json']
+save('DELIVERABLE_RECEIPT.json',{'at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'candidate_live_stable':stable,'files':[{'relative':n,'sha256':sha(O/n),'bytes':(O/n).stat().st_size} for n in targets],'scope':'Reviewer artifacts plus scoped vision helper; no candidate production changes.'})
+print(json.dumps({'deliverables':len(targets),'verdict':'CHANGES_REQUESTED','root_verified_rows':len(closed),'live_stable':stable,'prompt':str(O/'PROMPT_GUI_GEMINI_VI.md')}))

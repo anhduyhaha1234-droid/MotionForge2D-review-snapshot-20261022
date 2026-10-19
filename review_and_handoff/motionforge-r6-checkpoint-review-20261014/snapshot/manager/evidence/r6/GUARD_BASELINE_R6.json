@@ -1,0 +1,100 @@
+{
+ "utc": "2026-10-12T07:51:35Z",
+ "protected": {
+  "R5_master": {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r5\\outputs\\IDENTITY5M_R5_MASTER.mp4",
+   "exists": true,
+   "sha16": "b8b9a404e4ef9474",
+   "match_expected": true
+  },
+  "R5_comparison": {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r5\\outputs\\IDENTITY5M_R5_COMPARISON.mp4",
+   "exists": true,
+   "sha16": "49f6eb8ca22ff554",
+   "match_expected": true
+  },
+  "R5e_terminal": {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r5\\evidence\\terminal\\LONG01-R5e-20261012T0045Z-0080.json",
+   "exists": true,
+   "sha16": "7940a569d541a650",
+   "match_expected": true
+  },
+  "R4_master": {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r4\\outputs\\IDENTITY5M_R4_MASTER.mp4",
+   "exists": true,
+   "sha16": "77fc6122520286bf",
+   "match_expected": true
+  },
+  "source": {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\source\\source_full.mp4",
+   "exists": true,
+   "sha16": "5a175454c2c2965b",
+   "match_expected": true
+  },
+  "W7_master": {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\output\\LONG_MASTER_R2.mp4",
+   "exists": true,
+   "sha16": "d48e449e7f13d1e0",
+   "match_expected": true
+  },
+  "style": {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\style\\STYLE_REFERENCE.png",
+   "exists": true,
+   "sha16": "77fdfc79c210e9fb",
+   "match_expected": true
+  },
+  "cast_board": {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-02\\ti-p-qu-n-d-n\\outputs\\motionforge-r3-review-20261009\\CAST_B_IDENTITY_BOARD.png",
+   "exists": true,
+   "sha16": "95572075bd720108",
+   "match_expected": true
+  }
+ },
+ "writable": {
+  "C_r6": {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6",
+   "exists": false
+  },
+  "D_input_r6": {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\input\\identity5m_20261008\\r6",
+   "exists": false
+  },
+  "D_output_r6": {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\output\\identity5m_20261008\\r6",
+   "exists": false
+  },
+  "D_temp_r6": {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\temp\\identity5m_20261008\\r6",
+   "exists": false
+  }
+ },
+ "git": {
+  "MAIN": {
+   "head": "a40e368f7c47c232cf2eeed9fb185c5972cb98ba",
+   "porcelain": 104
+  },
+  "INTEGRATION": {
+   "head": "a52fca897906fd61a088016dd802718fdf06d217",
+   "porcelain": 0
+  }
+ },
+ "protected_all_match": true,
+ "manager_tools_baseline": {
+  "dispatch_long.py": {
+   "sha256": "78d1bc1fafc65868e07a5c64687716b1f64d577002e28216437db43265cb16fa",
+   "bytes": 28619
+  },
+  "heartbeat_long.py": {
+   "sha256": "278c88588b4354d9093ce665be90b90b48920a89c04b6ee48f5145e3f500c450",
+   "bytes": 19836
+  },
+  "invocation_runtime.py": {
+   "sha256": "86fc59156a357da7aa6b8691dfccc983b009548e7af4e2ea9ad9b226336b1775",
+   "bytes": 25380
+  },
+  "terminal_contract.py": {
+   "sha256": "80fce2e5c7e319db5732a5e78610bdc70048383baa94948ebdcece5c0438c461",
+   "bytes": 5850
+  }
+ }
+}

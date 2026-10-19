@@ -1,0 +1,123 @@
+{
+ "KEY_LOAD": {
+  "class_type": "FixtureNode",
+  "inputs": {
+   "image": "identity5m_20261008/r6/work/f_0001_E1_crop.png"
+  }
+ },
+ "R1_LOAD": {
+  "class_type": "FixtureNode",
+  "inputs": {
+   "image": "identity5m_20261008/r6/keys/cast_refs/B01_Khang_front_bust.png"
+  }
+ },
+ "R2_LOAD": {
+  "class_type": "FixtureNode",
+  "inputs": {
+   "image": "identity5m_20261008/r6/keys/cast_refs/B01_Khang_profile.png"
+  }
+ },
+ "R3_LOAD": {
+  "class_type": "FixtureNode",
+  "inputs": {
+   "image": "identity5m_20261008/r6/_unused_r3_slot.png"
+  }
+ },
+ "PROMPT": {
+  "class_type": "FixtureNode",
+  "inputs": {
+   "text": "Reference image 1 is a close crop of exactly ONE animation character (possibly small, lying, seated or partially out of frame). Repaint EXACTLY that one existing character IN ITS PLACE, pixel region and pose. NEVER draw a second figure, a standing figure, a portrait or any new person anywhere. If the character is small in the crop, repaint them small; do not enlarge or move them. Reference image 1 is a close crop of one animation frame. Redraw ONLY the ONE main person of reference image 1 (the person it is centred on) to look EXACTLY like B01 Khang (wide square face, short black coily hair, straight brows, short wide nose, small chin stubble; forest-green shirt) shown in reference image 2 (front view) and reference image 3 (profile view): same face, same hair, same clothing design and colours. The person must stay in EXACTLY the same position, scale, pose and silhouette as in reference image 1, with the same action, hand positions and held objects. Do NOT redraw, move or change any other person, object or the background that may be visible at the edges of reference image 1 - keep every non-person element identical. Do not shift, rescale or re-render the background: every background pixel in your output must match reference image 1 exactly - the background must look untouched. CRITICAL: do NOT add ANY face, head, portrait, figure or person that is not already present in reference image 1. Draw NOTHING in empty areas, sky, walls or background regions. Every object and prop of reference image 1 (book, folder, car, furniture, glass, phone) must remain EXACTLY in place - never remove, move, repaint or restyle any object. Flat 2D cel-shaded animation style: solid flat colour fills, one hard shadow tone per shape, thin clean outlines, no gradients, no photographic texture, no 3D rendering. No text, captions, subtitles, logo or watermark anywhere in the image."
+  }
+ },
+ "NOISE": {
+  "class_type": "FixtureNode",
+  "inputs": {
+   "noise_seed": 2026122401
+  }
+ },
+ "LATENT": {
+  "class_type": "FixtureNode",
+  "inputs": {
+   "width": 8,
+   "height": 8
+  }
+ },
+ "SIGMAS": {
+  "class_type": "FixtureNode",
+  "inputs": {
+   "steps": 4,
+   "width": 8,
+   "height": 8
+  }
+ },
+ "SAMPLER": {
+  "class_type": "FixtureNode",
+  "inputs": {
+   "sampler_name": "euler"
+  }
+ },
+ "GUIDER": {
+  "class_type": "FixtureNode",
+  "inputs": {
+   "cfg": 1.0,
+   "positive": [
+    "R2_POS",
+    0
+   ],
+   "negative": [
+    "R2_NEG",
+    0
+   ]
+  }
+ },
+ "UNET": {
+  "class_type": "FixtureNode",
+  "inputs": {
+   "unet_name": "model.bin"
+  }
+ },
+ "CLIP": {
+  "class_type": "FixtureNode",
+  "inputs": {
+   "clip_name": "qwen_3_4b.safetensors"
+  }
+ },
+ "VAE": {
+  "class_type": "FixtureNode",
+  "inputs": {
+   "vae_name": "flux2-vae.safetensors"
+  }
+ },
+ "SAVE": {
+  "class_type": "FixtureNode",
+  "inputs": {
+   "filename_prefix": "identity5m_20261008/r6/r6_keys/S0021_crop_E1"
+  }
+ },
+ "R2_POS": {
+  "class_type": "FixtureNode",
+  "inputs": {
+   "KEY_LOAD": [
+    "KEY_LOAD",
+    0
+   ],
+   "R1_LOAD": [
+    "R1_LOAD",
+    0
+   ],
+   "R2_LOAD": [
+    "R2_LOAD",
+    0
+   ]
+  }
+ },
+ "R2_NEG": {
+  "class_type": "FixtureNode",
+  "inputs": {
+   "from": [
+    "R2_POS",
+    0
+   ]
+  }
+ }
+}

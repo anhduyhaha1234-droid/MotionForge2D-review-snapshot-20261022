@@ -1,0 +1,42 @@
+{
+  "candidate": false,
+  "tests": [
+    {
+      "label": "text fragmented utf8",
+      "pass": false,
+      "error": "text fragmented utf8: expected exactly one DONE\n\n0 !== 1\n"
+    },
+    {
+      "label": "upstream DONE",
+      "pass": false,
+      "error": "upstream DONE: expected exactly one DONE\n\n0 !== 1\n"
+    },
+    {
+      "label": "tool call",
+      "pass": false,
+      "error": "tool call: expected exactly one DONE\n\n0 !== 1\n"
+    },
+    {
+      "label": "tail without newline",
+      "pass": false,
+      "error": "tail without newline: expected exactly one DONE\n\n0 !== 1\n"
+    },
+    {
+      "label": "Claude client",
+      "pass": true,
+      "doneCount": 0
+    },
+    {
+      "label": "native Gemini client",
+      "pass": true,
+      "doneCount": 0
+    },
+    {
+      "label": "other provider unchanged",
+      "pass": true,
+      "doneCount": 0
+    }
+  ],
+  "loadedModules": 183,
+  "pass": false
+}

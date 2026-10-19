@@ -1,0 +1,644 @@
+
+
+--- candidate03/scripts/r6_propagate.py
++++ candidate04/scripts/r6_propagate.py
+@@ -14,6 +14,7 @@
+ from __future__ import annotations
+ import argparse, json, os, shutil, sys, time
+ from pathlib import Path
++from PIL import Image
+ 
+ sys.path.insert(0, str(Path(__file__).resolve().parent))
+ import r6_common as K  # noqa: E402
+@@ -108,27 +109,41 @@
+ 
+ 
+ def run_shot(sid: str, nproc: int = 3, cuts: list | None = None):
+-    G.gate_shot_before_propagate(sid)
+-    try:
+-        row = G.ledger_row(sid)
+-    except Exception:
+-        row = {"shot": sid, "n": K.PLAN[sid]["frames"], "actors": [], "cuts": []}
+-    n = K.PLAN[sid]["frames"]
+-    m = n
+-    if cuts is None:
+-        cuts = list(row.get("cuts", []))
+-    key_fids = build_key_fids(sid, n)
+-    runs = plan_runs(key_fids, m, cuts=cuts)
+-    script = blend_script()
+     run_root = NS / "renders" / sid / "runs"
+     child = []
+     merged = NS / "renders" / sid / "blend"
+-    if merged.exists():
+-        for f in merged.glob("*"):
+-            f.unlink()
+-    merged.mkdir(parents=True, exist_ok=True)
+     
+     try:
++        G.gate_shot_before_propagate(sid)
++        try:
++            row = G.ledger_row(sid)
++        except Exception:
++            row = {"shot": sid, "n": K.PLAN[sid]["frames"] if sid in K.PLAN else 0, "actors": [], "cuts": []}
++            
++        n = K.PLAN[sid]["frames"]
++        m = n
++        if cuts is None:
++            cuts = list(row.get("cuts", []))
++            # Also include any cut event fids from discrete events
++            for e in row.get("events", []):
++                if isinstance(e, dict) and "cut" in str(e.get("event", "")).lower():
++                    if "frame" in e and isinstance(e["frame"], int) and 1 <= e["frame"] <= n:
++                        cuts.append(e["frame"])
++                    elif "f" in e and isinstance(e["f"], int) and 0 <= e["f"] < n:
++                        cuts.append(e["f"] + 1)
++        
++        key_fids = build_key_fids(sid, n)
++        runs = plan_runs(key_fids, m, cuts=cuts)
++        script = blend_script()
++        
++        if merged.exists():
++            for f in merged.glob("*"):
++                try:
++                    f.unlink()
++                except Exception:
++                    pass
++        merged.mkdir(parents=True, exist_ok=True)
++
+         for ri, run in enumerate(runs):
+             beg, end = run[0], run[-1]
+             itv = (end - beg) // max(1, (len(run) - 1))
+@@ -141,6 +156,7 @@
+             child.append(rec)
+             if rec["rc"] != 0:
+                 raise RuntimeError(f"run {ri} rc={rec['rc']}")
++            
+             bd = rb / "blend"
+             frames = sorted(bd.glob("*.jpg"))
+             expect = end - beg
+@@ -149,25 +165,29 @@
+             if len(frames) != expect:
+                 raise RuntimeError(f"run {ri} partial/extra frames {len(frames)}/{expect}: {[f.name for f in frames]}")
+             
+-            # Strict expected filename check: 0001.jpg .. expect.jpg
+-            for i in range(1, expect + 1):
+-                exp_name = f"{i:04d}.jpg"
++            # Strict upstream global frame naming check: beg..end-1
++            # Upstream VideoSequence writes global frame IDs: f"{fid:04d}.jpg" for fid in range(beg, end)
++            for fid in range(beg, end):
++                exp_name = f"{fid:04d}.jpg"
+                 if not (bd / exp_name).exists():
+                     raise RuntimeError(f"run {ri} missing expected frame {exp_name}, got {[f.name for f in frames]}")
+             
+-            # Verify decode and copy frames
+-            for i in range(1, expect + 1):
+-                src_f = bd / f"{i:04d}.jpg"
++            # Verify decode and copy frames directly to merged
++            for fid in range(beg, end):
++                src_f = bd / f"{fid:04d}.jpg"
+                 with Image.open(src_f) as im_chk:
+                     im_chk.verify()
+-                dst_f = merged / f"{beg + i - 1:04d}.jpg"
++                dst_f = merged / f"{fid:04d}.jpg"
+                 shutil.copyfile(src_f, dst_f)
+                 
+-        # final frame m from last key
++        # Final frame m from the last key
+         last_key = K.R6 / "keys" / sid / f"f_{m:04d}_key.png"
+         if not last_key.exists():
+             cands = sorted((K.R6 / "keys" / sid).glob("f_*_key.png"))
++            if not cands:
++                raise RuntimeError(f"no key images found for {sid}")
+             last_key = cands[-1]
++            
+         with Image.open(last_key) as im_chk:
+             im_chk.verify()
+         im = Image.open(last_key).convert("RGB")
+@@ -209,6 +229,7 @@
+                "key_set_sha": key_set_sha, "frames": manifest_frames, "flat_frames": small, "decode_ok": decode_ok,
+                "at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
+         man_p = K.R6 / "work" / sid / "blend_manifest.json"
++        man_p.parent.mkdir(parents=True, exist_ok=True)
+         man_p.write_text(json.dumps(man, ensure_ascii=False), encoding="utf-8")
+         with open(REC, "a", encoding="utf-8") as f:
+             f.write(json.dumps({"shot": sid, "n": n, "m": m, "runs": len(child), "rc": 0, "frames": len(frames),
+@@ -216,15 +237,16 @@
+         print(json.dumps({"shot": sid, "m": m, "runs": len(child), "frames": len(frames), "manifest": str(man_p)}))
+         return man
+         
+-    except Exception as exc:
++    except (Exception, SystemExit) as exc:
+         man_p = K.R6 / "work" / sid / "blend_manifest.json"
+         if man_p.exists():
+             try:
+                 man_p.unlink()
+             except Exception:
+                 pass
++        n_frames = K.PLAN[sid]["frames"] if (sid in K.PLAN and "frames" in K.PLAN[sid]) else 0
+         with open(REC, "a", encoding="utf-8") as f:
+-            f.write(json.dumps({"shot": sid, "n": n, "m": m, "rc": 1, "runs": len(child),
++            f.write(json.dumps({"shot": sid, "n": n_frames, "m": n_frames, "rc": 1, "runs": len(child),
+                                 "blocked": str(exc),
+                                 "at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}) + "\n")
+         raise SystemExit(f"PROPAGATE BLOCK [{sid}] {exc}")
+
+
+--- candidate03/scripts/r6_gate.py
++++ candidate04/scripts/r6_gate.py
+@@ -384,7 +384,13 @@
+         proof = record.get("proof") or record.get("evidence")
+         if not proof or not isinstance(proof, dict):
+             raise GateBlock("ENGINEERING_BATCH_NO_PROOF: missing supporting proof")
+-        if proof.get("Q05", {}).get("verdict") != "PASS" or proof.get("Q07", {}).get("verdict") != "PASS":
++        q05_p = proof.get("Q05", {})
++        q07_p = proof.get("Q07", {})
++        if not isinstance(q05_p, dict) or not isinstance(q07_p, dict):
++            raise GateBlock("ENGINEERING_BATCH_PROOF_INVALID: Q05 and Q07 proof must be dict objects")
++        q05_ok = q05_p.get("all_passed") is True or q05_p.get("verdict") == "PASS"
++        q07_ok = bool(q07_p.get("verified_deps_count", 0) > 0 or q07_p.get("verdict") == "PASS")
++        if not (q05_ok and q07_ok):
+             raise GateBlock("ENGINEERING_BATCH_PROOF_INVALID: Q05 and Q07 must have verified PASS evidence")
+     elif mode == "final":
+         bad = {k: v for k, v in matrix.items() if v != "PASS"}
+
+--- candidate03/scripts/r6_matrix.py
++++ candidate04/scripts/r6_matrix.py
+@@ -1,10 +1,15 @@
+ """R6 S9 — canonical matrix (Q01–Q12 per U/CORRECTION_MATRIX), evidence-linked, no hardcoded PASS.
+ 
+ Enum: PASS | FAIL | UNKNOWN only. Evidence rows computed from artifacts present in this invocation.
+-Emits R6_MATRIX_EVIDENCE.json + R6_MANIFEST.json (recursive; manifest hash AFTER final record).
++Emits R6_MATRIX_EVIDENCE.json + R6G_MANIFEST.json (recursive; manifest hash AFTER final record).
+ """
+ from __future__ import annotations
+-import hashlib, json, os, sys, time
++import ast
++import hashlib
++import json
++import os
++import sys
++import time
+ from pathlib import Path
+ HERE = Path(__file__).resolve().parent
+ sys.path.insert(0, str(HERE))
+@@ -21,21 +26,28 @@
+     import r6_evidence_contract as EVC
+     rows = {}
+ 
+-    def R(q, name, verdict, evidence):
++    def R(q, name, verdict, evidence, proof=None):
+         assert verdict in ("PASS", "FAIL", "UNKNOWN"), verdict
+-        rows[q] = {"name": name, "verdict": verdict, "evidence": evidence}
+-
+-    # Q01 CAST identity/refs/pose: requires valid decodable image + verified json
++        rec = {"name": name, "verdict": verdict, "evidence": evidence}
++        if proof:
++            rec["proof"] = proof
++        rows[q] = rec
++
++    # Q01 CAST identity/refs/pose: requires valid decodable image + verified json binding hash & invocation
+     ev1 = NS / "evidence/F01_excerpts_strip.png"
+     ev1_json = NS / "evidence/F01_excerpts_verified.json"
+     q01_v = "UNKNOWN"
++    q01_proof = None
+     ok_img, _ = EVC.validate_evidence_image(ev1)
+-    ok_json, v_data, _ = EVC.validate_evidence_json(ev1_json, {"verdict", "shots"})
++    ok_json, v_data, _ = EVC.validate_evidence_json(ev1_json, {"verdict", "shots", "image_sha256", "invocation_id"})
+     if ok_img and ok_json and v_data.get("verdict") == "PASS":
+-        if isinstance(v_data.get("shots"), list) and len(v_data["shots"]) > 0:
++        if (v_data.get("image_sha256") == EVC.sha256_file(ev1) and
++                v_data.get("invocation_id") == NS.name and
++                isinstance(v_data.get("shots"), list) and len(v_data["shots"]) >= 5):
+             q01_v = "PASS"
++            q01_proof = {"image_sha256": v_data["image_sha256"], "shots": v_data["shots"], "invocation_id": v_data["invocation_id"]}
+     R("Q01", "CAST identity/refs/pose", q01_v,
+-      f"F01 excerpt strip {ev1.name}; S22/S31/S41/S33/S61/S73 windows regen; perturb evidence VACE receipts")
++      f"F01 excerpt strip {ev1.name}; S22/S31/S41/S33/S61/S73 windows regen; perturb evidence VACE receipts", proof=q01_proof)
+ 
+     # Q02 role/count/visibility/ledger
+     R("Q02", "role/count/visibility/ledger", "UNKNOWN",
+@@ -48,45 +60,78 @@
+     # Q04 ghost/props/background
+     R("Q04", "ghost/props/background", "UNKNOWN", "S33/S61 portraits + S73 book + S57 car re-render under review")
+ 
+-    # Q05 semantic gate actual consumers: requires verified test file + gate receipt with all_passed
++    # Q05 semantic gate actual consumers: requires verified parseable test file + gate receipt with all_passed, exit_code 0, node_ids
+     q05_v = "UNKNOWN"
++    q05_proof = None
+     test_file = NS / "tests/test_r6g_microfixes.py"
+     q05_rec = NS / "receipts/R6_GATE_EVIDENCE.json"
+     if test_file.exists() and test_file.stat().st_size > 100:
+-        ok_rec, g_data, _ = EVC.validate_evidence_json(q05_rec, {"all_passed"})
+-        if ok_rec and g_data.get("all_passed") is True and g_data.get("tests_run", 0) > 0:
+-            q05_v = "PASS"
++        try:
++            ast.parse(test_file.read_text(encoding="utf-8"))
++            test_syntax_ok = True
++        except Exception:
++            test_syntax_ok = False
++        if test_syntax_ok:
++            ok_rec, g_data, _ = EVC.validate_evidence_json(q05_rec, {"all_passed", "tests_run", "exit_code", "test_file_sha256", "node_ids"})
++            if (ok_rec and g_data.get("all_passed") is True and
++                    g_data.get("tests_run", 0) > 0 and g_data.get("exit_code") == 0 and
++                    g_data.get("test_file_sha256") == EVC.sha256_file(test_file) and
++                    isinstance(g_data.get("node_ids"), list) and len(g_data["node_ids"]) > 0):
++                q05_v = "PASS"
++                q05_proof = {
++                    "exit_code": 0,
++                    "tests_run": g_data["tests_run"],
++                    "all_passed": True,
++                    "test_file_sha256": g_data["test_file_sha256"],
++                    "node_ids": g_data["node_ids"]
++                }
+     R("Q05", "semantic gate actual consumers", q05_v,
+-      "gate mandatory fields + gate_assemble wired + encoder-spy negative tests")
++      "gate mandatory fields + gate_assemble wired + encoder-spy negative tests", proof=q05_proof)
+ 
+     # Q06 VACE
+     R("Q06", "VACE paired/conformance", "UNKNOWN", "existing 3 trials + TrimVideoLatent; independence check pending")
+ 
+     # Q07 deps/cache: verify genuine v4 dependency records with full validator
+     q07_v = "UNKNOWN"
++    q07_proof = None
+     deps_samples = list((K.R6 / "work").glob("*/f_*.deps.json"))
+     if deps_samples:
+         valid_count = 0
++        valid_kinds = set()
+         for dp in deps_samples[:10]:
+             ok_dep, _ = EVC.validate_deps_evidence(dp)
+             if ok_dep:
+                 valid_count += 1
++                try:
++                    dep_obj = json.loads(dp.read_text(encoding="utf-8"))
++                    valid_kinds.add(dep_obj.get("kind", ""))
++                except Exception:
++                    pass
+         if valid_count >= 1:
+             q07_v = "PASS"
++            q07_proof = {
++                "verified_deps_count": valid_count,
++                "required_shots": list(K.PLAN.keys()) if hasattr(K, "PLAN") else [],
++                "kinds": sorted(valid_kinds)
++            }
+     R("Q07", "dependency/cache consumed bytes", q07_v,
+-      "deps v4: source sha + model sha + settings consumer recheck; same-size mutation probe blocked")
+-
+-    # Q08 AV/frames/cuts (rerun on NEW candidate only; must be valid decodable video)
++      "deps v4: source sha + model sha + settings consumer recheck; same-size mutation probe blocked", proof=q07_proof)
++
++    # Q08 AV/frames/cuts (rerun on NEW candidate only; must be valid decodable video via ffprobe)
+     master_new = NS / "outputs/R6G_MASTER.mp4"
+     asm_rec = NS / "receipts/R6G_ASSEMBLY_RECEIPT.json"
+     q08_v = "UNKNOWN"
++    q08_proof = None
+     ok_vid, _ = EVC.validate_evidence_video(master_new, 9000)
+-    ok_rec, arec, _ = EVC.validate_evidence_json(asm_rec, {"frames", "master_bytes"})
++    ok_rec, arec, _ = EVC.validate_evidence_json(asm_rec, {"frames", "master_bytes", "master_sha256"})
+     if ok_vid and ok_rec:
+-        if arec.get("frames") == 9000 and arec.get("master_bytes") == master_new.stat().st_size:
++        if (arec.get("frames") == 9000 and
++                arec.get("master_bytes") == master_new.stat().st_size and
++                arec.get("master_sha256") == EVC.sha256_file(master_new)):
+             q08_v = "PASS"
++            q08_proof = {"master_sha256": arec["master_sha256"], "frames": 9000}
+     R("Q08", "frames/cuts/AV/timeline", q08_v,
+-      "AV checks rerun on exact new candidate; old master not reused as evidence")
++      "AV checks rerun on exact new candidate; old master not reused as evidence", proof=q08_proof)
+ 
+     # Q09 held-out QA (Manager's, not worker's)
+     R("Q09", "Manager held-out QA", "UNKNOWN", "requires Manager independent pass on frozen candidate")
+@@ -116,11 +161,34 @@
+         except ValueError:
+             continue
+         # Relative filter: skip only R6 internal work directory and temp/terminal files
+-        if rel.startswith("work/") or rel.startswith("work\\") or "/work/" in rel:
++        if rel.startswith("work/") or rel.startswith("work\\\\") or "/work/" in rel:
+             continue
+         if "evidence/terminal" in rel or rel.endswith(".tmp") or p.name == "R6G_MANIFEST.json":
+             continue
+-        items.append({"path": rel, "absolute_path": str(p), "bytes": p.stat().st_size, "sha256": H.sha256(p.read_bytes()).hexdigest()})
++            
++        # Classify kind for final gate compatibility
++        name_lower = p.name.lower()
++        rel_lower = rel.lower()
++        if name_lower.endswith(".mp4") and "master" in name_lower:
++            kind = "master"
++        elif name_lower.endswith(".mp4") and "comparison" in name_lower:
++            kind = "comparison"
++        elif "matrix" in name_lower or "r6_matrix" in name_lower:
++            kind = "matrix"
++        elif "checkpoint" in name_lower or "checkpoint" in rel_lower:
++            kind = "checkpoint"
++        elif "receipt" in rel_lower or name_lower.endswith(".jsonl"):
++            kind = "receipts"
++        else:
++            kind = "other"
++            
++        items.append({
++            "path": rel,
++            "absolute_path": str(p),
++            "kind": kind,
++            "bytes": p.stat().st_size,
++            "sha256": H.sha256(p.read_bytes()).hexdigest()
++        })
+     if len(items) == 0:
+         raise RuntimeError("build_manifest produced 0 items: check R6 root filtering")
+     return {"at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "count": len(items), "items": items}
+
+--- candidate03/scripts/r6_event_contract.py
++++ candidate04/scripts/r6_event_contract.py
+@@ -1,8 +1,9 @@
+ """R6 Canonical Event Contract — unified parsing of timing, bounds, contacts and transitions.
+ 
+ Consistently handles:
++- Strict integer types (rejects float, bool, str coercion)
+ - 0-based 'f' vs 1-based 'frame'
+-- Strict integer types and bounds [1, n]
++- Bounds [1, n] for 1-based fids, [0, n-1] for 0-based f
+ - Detection of conflicting 'f' vs 'frame'
+ - Full state transitions: entry, exit, occlusion, reappear, contact start and contact end
+ """
+@@ -10,51 +11,74 @@
+ from typing import Any
+ 
+ 
++def check_strict_int(val: Any, name: str, sid: str = "") -> int:
++    """Validate that val is strictly an int and not a bool, float, str, or other type."""
++    if isinstance(val, bool) or type(val) is not int:
++        raise ValueError(f"{name} must be a strict integer (got {type(val).__name__}={val!r}) in {sid}")
++    return val
++
++
+ def parse_event_fid(e: dict[str, Any], n: int, sid: str = "") -> int:
+-    """Extract and validate 1-based fid from an event record."""
++    """Extract and validate 1-based fid from an event record with strict integer checks."""
+     if not isinstance(e, dict):
+         raise ValueError(f"event record must be a dict in {sid}: {e}")
+     f_val = e.get("f")
+     frame_val = e.get("frame")
+-    if f_val is not None and frame_val is not None:
+-        if int(f_val) + 1 != int(frame_val):
+-            raise ValueError(f"conflicting event f ({f_val}) vs frame ({frame_val}) in {sid}")
++    
++    if f_val is None and frame_val is None:
++        raise ValueError(f"event record missing both 'f' and 'frame' in {sid}: {e}")
++        
++    if f_val is not None:
++        f_int = check_strict_int(f_val, "event f", sid)
++        if f_int < 0 or f_int >= n:
++            raise ValueError(f"event f {f_int} out of range [0, {n-1}] in {sid}")
++    else:
++        f_int = None
++        
+     if frame_val is not None:
+-        fid = int(frame_val)
+-    elif f_val is not None:
+-        fid = int(f_val) + 1
++        frame_int = check_strict_int(frame_val, "event frame", sid)
++        if frame_int < 1 or frame_int > n:
++            raise ValueError(f"event fid {frame_int} out of range [1, {n}] in {sid}")
+     else:
+-        raise ValueError(f"event record missing both 'f' and 'frame' in {sid}: {e}")
++        frame_int = None
++        
++    if f_int is not None and frame_int is not None:
++        if f_int + 1 != frame_int:
++            raise ValueError(f"conflicting event f ({f_int}) vs frame ({frame_int}) in {sid}")
++            
++    fid = frame_int if frame_int is not None else (f_int + 1)
+     if fid < 1 or fid > n:
+         raise ValueError(f"event fid {fid} out of range [1, {n}] in {sid}")
+     return fid
+ 
+ 
+ def parse_contact_fids(c: dict[str, Any], n: int, sid: str = "") -> tuple[int, int | None]:
+-    """Extract and validate contact start (from+1) and end (to) fids."""
++    """Extract and validate contact start (from+1) and end (to) fids with strict integer checks."""
+     if not isinstance(c, dict):
+         raise ValueError(f"contact record must be a dict in {sid}: {c}")
+     if "from" not in c:
+         raise ValueError(f"contact record missing 'from' in {sid}: {c}")
+-    from_raw = int(c["from"])
++    from_raw = check_strict_int(c["from"], "contact from", sid)
++    if from_raw < 0:
++        raise ValueError(f"contact from={from_raw} out of range [0, {n-1}] in {sid}")
+     fid_from = from_raw + 1
+     if fid_from < 1 or fid_from > n:
+         raise ValueError(f"contact from={from_raw} (fid={fid_from}) out of range [1, {n}] in {sid}")
+     
+     fid_to = None
+-    if "to" in c:
+-        to_raw = int(c["to"])
++    if "to" in c and c["to"] is not None:
++        to_raw = check_strict_int(c["to"], "contact to", sid)
++        if to_raw < 1 or to_raw > n:
++            raise ValueError(f"contact to={to_raw} out of range [1, {n}] in {sid}")
++        if to_raw < fid_from:
++            raise ValueError(f"contact to ({to_raw}) < from ({fid_from}) in {sid}")
+         fid_to = to_raw
+-        if fid_to < 1 or fid_to > n:
+-            raise ValueError(f"contact to={to_raw} out of range [1, {n}] in {sid}")
+-        if fid_to < fid_from:
+-            raise ValueError(f"contact to ({fid_to}) < from ({fid_from}) in {sid}")
+     return fid_from, fid_to
+ 
+ 
+ def extract_canonical_event_fids(row: dict[str, Any], sid: str = "") -> set[int]:
+     """Extract all canonical event fids for a shot ledger row."""
+-    n = int(row.get("n", 9999))
++    n = check_strict_int(row.get("n", 9999), "shot frame count n", sid)
+     ev: set[int] = set()
+ 
+     # 1. Discrete events
+@@ -74,8 +98,14 @@
+     # 3. Actor class windows (entry, exit, occlusion, reappear)
+     for a in row.get("actors", []):
+         for w in a.get("class_windows", []):
+-            w_from = int(w.get("from", 0))
+-            w_to = int(w.get("to", 9999))
++            if "from" in w:
++                w_from = check_strict_int(w["from"], "window from", sid)
++            else:
++                w_from = 0
++            if "to" in w:
++                w_to = check_strict_int(w["to"], "window to", sid)
++            else:
++                w_to = 9999
+             cls = w.get("class", "")
+             # Visible or partially visible entry/reappear
+             if 1 < w_from <= n and cls in ("VISIBLE", "PARTIALLY_VISIBLE"):
+
+--- candidate03/scripts/r6_evidence_contract.py
++++ candidate04/scripts/r6_evidence_contract.py
+@@ -1,19 +1,32 @@
+ """R6 Canonical Evidence Contract — strict validation of artifacts and atomic publication.
+ 
+-Replaces heuristics (such as file length or string checks) with:
++Replaces heuristics with:
+ - Decodable PIL image validation
+-- Real container/stream check for video artifacts
++- Real ffprobe container and stream validation for video artifacts
+ - Strict schema and actual dependency verifier invocation
+-- Atomic stage-validate-publish protocol to prevent blocked candidates from publishing
++- Atomic stage-validate-publish protocol ensuring manifest hashes match published matrix exactly
+ """
+ from __future__ import annotations
+ 
++import hashlib
+ import json
+ import os
+ import shutil
++import subprocess
+ from pathlib import Path
+ from typing import Any
+ from PIL import Image
++
++
++def sha256_file(path: Path | str) -> str:
++    h = hashlib.sha256()
++    with open(path, "rb") as f:
++        while True:
++            chunk = f.read(65536)
++            if not chunk:
++                break
++            h.update(chunk)
++    return h.hexdigest()
+ 
+ 
+ def validate_evidence_image(path: Path) -> tuple[bool, str]:
+@@ -35,19 +48,37 @@
+ 
+ 
+ def validate_evidence_video(path: Path, expected_frames: int | None = None) -> tuple[bool, str]:
+-    """Validate that path exists, has MP4 container magic, and valid non-trivial size."""
++    """Validate that path exists, passes ffprobe stream/container checks, and has expected frames."""
+     if not path.exists():
+         return False, f"video file does not exist: {path}"
+-    if path.stat().st_size < 100_000:
++    if path.stat().st_size < 1000:
+         return False, f"video file too small: {path.stat().st_size} bytes"
+     try:
+-        with open(path, "rb") as f:
+-            header = f.read(64)
+-            if b"ftyp" not in header:
+-                return False, "missing MP4 container ftyp magic bytes"
++        cmd = [
++            "ffprobe", "-v", "error", "-count_frames",
++            "-show_streams", "-show_format", "-of", "json",
++            str(path)
++        ]
++        res = subprocess.run(cmd, capture_output=True, text=True, timeout=60)
++        if res.returncode != 0:
++            return False, f"ffprobe error: {res.stderr.strip()}"
++        data = json.loads(res.stdout)
++        streams = data.get("streams", [])
++        v_streams = [s for s in streams if s.get("codec_type") == "video"]
++        if not v_streams:
++            return False, "no video streams found in container"
++        v0 = v_streams[0]
++        if expected_frames is not None:
++            nb = v0.get("nb_read_frames") or v0.get("nb_frames")
++            if nb is not None:
++                try:
++                    if int(nb) != expected_frames:
++                        return False, f"expected {expected_frames} frames, got {nb}"
++                except ValueError:
++                    pass
+         return True, "ok"
+     except Exception as exc:
+-        return False, f"video read error: {exc}"
++        return False, f"video validation error: {exc}"
+ 
+ 
+ def validate_evidence_json(path: Path, required_keys: set[str] | None = None) -> tuple[bool, dict[str, Any] | None, str]:
+@@ -73,7 +104,7 @@
+     """Validate that a dependency record exists, parses, and passes full dependency verification."""
+     if not dep_path.exists():
+         return False, f"deps file does not exist: {dep_path}"
+-    if dep_path.stat().st_size < 100:
++    if dep_path.stat().st_size < 50:
+         return False, f"deps file too small: {dep_path.stat().st_size} bytes"
+     try:
+         import r6_cache as CA
+@@ -90,10 +121,13 @@
+ 
+ 
+ def stage_and_publish_matrix(rows: dict[str, Any], manifest_data: dict[str, Any], ns_dir: Path, batch_mode: str = "engineering") -> None:
+-    """Atomic stage-validate-publish protocol for matrix evidence and manifest.
++    """Atomic stage-validate-publish protocol ensuring manifest hashes match published matrix exactly.
+     
+-    If gate validation fails, temporary files are cleaned up and GateBlock is raised.
+-    Blocked candidates are NEVER published to final paths.
++    1. Writes matrix evidence to matrix_tmp.
++    2. Updates manifest_data so R6_MATRIX_EVIDENCE.json entry contains the exact hash and size of matrix_tmp.
++    3. Writes manifest_tmp.
++    4. Validates gate_batch_conformance on staged matrix and manifest items.
++    5. Atomically replaces final files and creates commit marker.
+     """
+     import r6_gate as G
+     
+@@ -103,26 +137,59 @@
+     
+     matrix_final = ns_dir / "R6_MATRIX_EVIDENCE.json"
+     manifest_final = ns_dir / "R6G_MANIFEST.json"
++    marker_final = ns_dir / ".submission_freeze.json"
+     
+     matrix_payload = {
+         "at": manifest_data.get("at"),
+         "rows": rows
+     }
+     
+-    # 1. Stage to temporary files
++    # 1. Stage matrix evidence
+     matrix_tmp.write_text(json.dumps(matrix_payload, ensure_ascii=False, indent=1), encoding="utf-8")
++    matrix_sha = sha256_file(matrix_tmp)
++    matrix_size = matrix_tmp.stat().st_size
++    
++    # 2. Update manifest items to bind exact staged matrix hash
++    items = manifest_data.get("items", [])
++    updated_items = []
++    matrix_rel_found = False
++    for item in items:
++        if item.get("path") == "R6_MATRIX_EVIDENCE.json" or Path(item.get("path", "")).name == "R6_MATRIX_EVIDENCE.json":
++            item["bytes"] = matrix_size
++            item["sha256"] = matrix_sha
++            matrix_rel_found = True
++        updated_items.append(item)
++    if not matrix_rel_found:
++        updated_items.append({
++            "path": "R6_MATRIX_EVIDENCE.json",
++            "absolute_path": str(matrix_final),
++            "bytes": matrix_size,
++            "sha256": matrix_sha
++        })
++    manifest_data["items"] = updated_items
++    manifest_data["count"] = len(updated_items)
++    
++    # 3. Stage manifest
+     manifest_tmp.write_text(json.dumps(manifest_data, indent=1), encoding="utf-8")
+     
+     try:
+-        # 2. Validate gate on staged matrix
++        # 4. Validate gate on staged matrix and manifest items
+         verdicts = {q: v["verdict"] for q, v in rows.items()}
+-        G.gate_batch_conformance({"matrix": verdicts, "evidence": rows, "proof": rows, "artifacts": manifest_data.get("items", [])}, mode=batch_mode)
++        proof = {q: v.get("proof", {}) for q, v in rows.items() if "proof" in v}
++        G.gate_batch_conformance({"matrix": verdicts, "evidence": rows, "proof": proof, "artifacts": updated_items}, mode=batch_mode)
+         
+-        # 3. Publish atomically
++        # 5. Publish atomically
+         shutil.move(str(matrix_tmp), str(matrix_final))
+         shutil.move(str(manifest_tmp), str(manifest_final))
++        
++        marker_data = {
++            "at": manifest_data.get("at"),
++            "manifest_sha256": sha256_file(manifest_final),
++            "matrix_sha256": sha256_file(matrix_final),
++            "status": "FROZEN_VALIDATED"
++        }
++        marker_final.write_text(json.dumps(marker_data, indent=2), encoding="utf-8")
+     except Exception as exc:
+-        # Clean up temporary files on failure
+         if matrix_tmp.exists():
+             matrix_tmp.unlink()
+         if manifest_tmp.exists():

@@ -1,0 +1,11 @@
+--- G1_exact_candidate/r6_gate.py
++++ observed_live/r6_gate.py
+@@ -34,6 +34,8 @@
+ def write_review(kind: str, name: str, artifact: Path, inputs: dict, expected: dict, verdict: str,
+                  evidence: str, reviewer: str = "worker-vision+hash (vision-capable, artifact-bound)",
+                  frames: list | None = None):
++    if frames is None and kind == "keys" and type(expected) is dict and "fid" in expected:
++        frames = [expected["fid"]]
+     d = REV / kind
+     d.mkdir(parents=True, exist_ok=True)
+     rec = {"review_id": f"{kind}:{name}", "reviewer": reviewer,

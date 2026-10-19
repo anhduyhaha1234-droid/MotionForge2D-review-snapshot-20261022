@@ -1,0 +1,22 @@
+test_bad_json_and_non_object_are_gate_blocks (__main__.ReviewBindingTests.test_bad_json_and_non_object_are_gate_blocks) ... ok
+test_blend_producer_schema_and_full_mapping (__main__.ReviewBindingTests.test_blend_producer_schema_and_full_mapping) ... ok
+test_changed_dependency_blocks (__main__.ReviewBindingTests.test_changed_dependency_blocks) ... ok
+test_current_producer_record_passes (__main__.ReviewBindingTests.test_current_producer_record_passes) ... ok
+test_expected_and_reviewed_frame_identity (__main__.ReviewBindingTests.test_expected_and_reviewed_frame_identity) ... ok
+test_extra_recorded_and_current_dependencies_block (__main__.ReviewBindingTests.test_extra_recorded_and_current_dependencies_block) ... ok
+test_false_and_numeric_dependency_values_do_not_bind (__main__.ReviewBindingTests.test_false_and_numeric_dependency_values_do_not_bind) ... ok
+test_missing_current_dependency_blocks (__main__.ReviewBindingTests.test_missing_current_dependency_blocks) ... ok
+test_missing_recorded_dependency_blocks (__main__.ReviewBindingTests.test_missing_recorded_dependency_blocks) ... ok
+test_nonstandard_json_constant_is_malformed (__main__.ReviewBindingTests.test_nonstandard_json_constant_is_malformed) ... ok
+test_numeric_sha_and_missing_verdict_are_gate_blocks (__main__.ReviewBindingTests.test_numeric_sha_and_missing_verdict_are_gate_blocks) ... ok
+test_other_path_with_identical_bytes_blocks (__main__.ReviewBindingTests.test_other_path_with_identical_bytes_blocks) ... ok
+test_real_assembler_main_rejects_before_copy_and_encoder (__main__.ReviewBindingTests.test_real_assembler_main_rejects_before_copy_and_encoder) ... ok
+test_real_gate_assemble_binds_review_to_consumed_blend_frames (__main__.ReviewBindingTests.test_real_gate_assemble_binds_review_to_consumed_blend_frames) ... ok
+test_required_field_types_and_frames (__main__.ReviewBindingTests.test_required_field_types_and_frames) ... ok
+test_review_identity_must_match_requested_kind_and_name (__main__.ReviewBindingTests.test_review_identity_must_match_requested_kind_and_name) ... ok
+test_stale_artifact_blocks (__main__.ReviewBindingTests.test_stale_artifact_blocks) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.329s
+
+OK

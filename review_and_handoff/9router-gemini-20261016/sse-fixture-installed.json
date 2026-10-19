@@ -1,0 +1,42 @@
+{
+  "candidate": false,
+  "tests": [
+    {
+      "label": "text fragmented utf8",
+      "pass": true,
+      "doneCount": 1
+    },
+    {
+      "label": "upstream DONE",
+      "pass": true,
+      "doneCount": 1
+    },
+    {
+      "label": "tool call",
+      "pass": true,
+      "doneCount": 1
+    },
+    {
+      "label": "tail without newline",
+      "pass": true,
+      "doneCount": 1
+    },
+    {
+      "label": "Claude client",
+      "pass": true,
+      "doneCount": 0
+    },
+    {
+      "label": "native Gemini client",
+      "pass": true,
+      "doneCount": 0
+    },
+    {
+      "label": "other provider unchanged",
+      "pass": true,
+      "doneCount": 0
+    }
+  ],
+  "loadedModules": 183,
+  "pass": true
+}

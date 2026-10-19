@@ -1,0 +1,225 @@
+{
+  "utc": "2026-10-15T21:15:16.962587+00:00",
+  "probe_source_sha256": "7a3dd4155ca6be0fcb719c64c75aa76281f4ba910d8f50be5c8551e45219ec1c",
+  "scripts": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts",
+  "source_hashes": {
+    "r6_common.py": "17bf5799c445a6f7133c61d53b9d5c41083307add1d7b6a50acdf83c294c15e3",
+    "r6_gate.py": "4c3f7a7213f7761b7f5cbf53d7257bfd1c893e7f50d04d4ffda38a2e3cf13996",
+    "r6_assemble.py": "0509d5f67ffcce1721701f0c064ea4d68dd8660c6dca9f6f4967eb78727301c2"
+  },
+  "cases": [
+    {
+      "name": "valid_current_record",
+      "expected": "ACCEPT",
+      "actual": "ACCEPT",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "review_omits_current_dependency",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_INPUT_SET_MISMATCH keys:S0021_f0001: unrecorded=['deps_sha'] no_longer_current=[]"
+    },
+    {
+      "name": "review_unknown_dependency",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_INPUT_SET_MISMATCH keys:S0021_f0001: unrecorded=[] no_longer_current=['unrecognized']"
+    },
+    {
+      "name": "changed_current_dependency",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_INPUTS_MALFORMED keys:S0021_f0001"
+    },
+    {
+      "name": "empty_current_binding",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_INPUTS_MALFORMED keys:S0021_f0001"
+    },
+    {
+      "name": "empty_record_binding",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_INPUTS_EMPTY keys:S0021_f0001"
+    },
+    {
+      "name": "wrong_review_id",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_IDENTITY_MISMATCH keys:S0021_f0001"
+    },
+    {
+      "name": "other_artifact_path_same_bytes",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_ARTIFACT_PATH_MISMATCH keys:S0021_f0001"
+    },
+    {
+      "name": "wrong_artifact_hash",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_TAMPERED artifact hash mismatch keys:S0021_f0001"
+    },
+    {
+      "name": "malformed_frames_strings",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_MALFORMED keys:S0021_f0001: frames"
+    },
+    {
+      "name": "malformed_frames_bool",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_MALFORMED keys:S0021_f0001: frames"
+    },
+    {
+      "name": "malformed_reviewer_numeric",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_MALFORMED keys:S0021_f0001: reviewer"
+    },
+    {
+      "name": "malformed_evidence_list",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_MALFORMED keys:S0021_f0001: evidence"
+    },
+    {
+      "name": "missing_verdict",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_MALFORMED keys:S0021_f0001: verdict"
+    },
+    {
+      "name": "unknown_verdict",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_UNKNOWN keys:S0021_f0001"
+    },
+    {
+      "name": "json_array_record",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_MALFORMED keys:S0021_f0001: record is not an object"
+    },
+    {
+      "name": "invalid_json",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_MALFORMED keys:S0021_f0001: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+    },
+    {
+      "name": "numeric_hash_in_both_bindings",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_INPUTS_MALFORMED keys:S0021_f0001"
+    },
+    {
+      "name": "null_hash_in_both_bindings",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_INPUTS_MALFORMED keys:S0021_f0001"
+    },
+    {
+      "name": "bool_hash_in_both_bindings",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_INPUTS_MALFORMED keys:S0021_f0001"
+    },
+    {
+      "name": "malformed_artifact_array",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_MALFORMED keys:S0021_f0001: artifact.path"
+    },
+    {
+      "name": "null_artifact_path",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_MALFORMED keys:S0021_f0001: artifact.path"
+    },
+    {
+      "name": "nul_artifact_path",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_ARTIFACT_PATH_MISMATCH keys:S0021_f0001"
+    },
+    {
+      "name": "empty_expected",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_EXPECTED_EMPTY keys:S0021_f0001"
+    },
+    {
+      "name": "malformed_expected_array",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_MALFORMED keys:S0021_f0001: expected"
+    },
+    {
+      "name": "malformed_frame_zero",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_MALFORMED keys:S0021_f0001: frames"
+    },
+    {
+      "name": "malformed_frame_float",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_MALFORMED keys:S0021_f0001: frames"
+    },
+    {
+      "name": "missing_artifact_hash",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_MALFORMED keys:S0021_f0001: artifact.sha256"
+    },
+    {
+      "name": "missing_review_timestamp",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_MALFORMED keys:S0021_f0001: reviewed_at"
+    },
+    {
+      "name": "actual_assembly_rejects_omitted_review_input",
+      "expected": "BLOCK_AT_REVIEW",
+      "actual": "BLOCK_AT_REVIEW",
+      "pass": true,
+      "detail": "ASSEMBLE_BLOCKED SEMANTIC_REVIEW_INPUT_SET_MISMATCH keys:S0021_f0001: unrecorded=['deps_sha'] no_longer_current=[]",
+      "side_effect_calls": []
+    }
+  ],
+  "passed": 30,
+  "total": 30
+}

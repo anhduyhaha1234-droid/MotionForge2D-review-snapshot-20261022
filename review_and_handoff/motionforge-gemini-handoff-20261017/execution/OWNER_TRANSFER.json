@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "transfer_utc": "2026-10-17T05:33:20.937823+00:00",
+  "parent": "MF-DEMO-LONG-01",
+  "parent_status": "NOT_APPROVED",
+  "task": "CODEX-C02B2-PER-ACTOR-VERIFIED-REUSE",
+  "phase": "A1",
+  "previous_owner": {
+    "owner": "/root/motionforge_c02b2_coder",
+    "model": "gpt-6-sol",
+    "status": "terminal: errored (usage limit)",
+    "last_checkpoint": "c02b2-worker/CHECKPOINT_015.json",
+    "active_writer": false
+  },
+  "new_owner": {
+    "owner": "gemini-implementation-owner",
+    "session_id": "gemini_20261017_r6_takeover",
+    "model": "ag/gemini-3.8-flash-high",
+    "base_url": "http://127.0.0.1:20128/v1",
+    "role": "implementation owner",
+    "active_writer": true
+  },
+  "independent_reviewer": {
+    "role": "Codex PM/Reviewer",
+    "gates": [
+      "G1",
+      "G2",
+      "G3"
+    ]
+  },
+  "zero_writer_proof": {
+    "old_coder_status": "errored (usage limit), no active process",
+    "controller_lock_exists": false,
+    "all_leases_released": true,
+    "wan_runner_pid_dead": true,
+    "quiescence": "PROVEN"
+  },
+  "counters_policy": "PRESERVED_NOT_RESET",
+  "authority": "HERMES_AUTOPILOT_RULES.md section 0.12 and prompt 2026-10-17"
+}

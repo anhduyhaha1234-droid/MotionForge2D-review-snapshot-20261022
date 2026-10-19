@@ -1,0 +1,38 @@
+{
+  "source_hashes": {
+    "r6_common.py": "17bf5799c445a6f7133c61d53b9d5c41083307add1d7b6a50acdf83c294c15e3",
+    "r6_gate.py": "9bea996afeb3212fc1e41dd918f1b8cbe90b33bf8ae2b217b2c75a24511db7db",
+    "r6_cache.py": "29a9e7b0f60304a56692d21fd229ef884dd93064fd4376eec7ab030daaf304c6"
+  },
+  "empty_verify_deps": [
+    true,
+    "ok"
+  ],
+  "missing_model_and_source": [
+    true,
+    "ok"
+  ],
+  "complete_dep_positive": [
+    true,
+    "ok"
+  ],
+  "unchanged_asset_skip": [
+    false,
+    "settings changed now: {'mode': 'zero_shot_asset_restyle', 'steps': 4} vs {'mode': 'zero_shot_asset_restyle', 'steps': 4, 'ctx_factor': '1.3', 'seed_off': '0', 'model': {'path': 'C:\\\\Users\\\\Admin\\\\Documents\\\\Codex\\\\2026-10-12\\\\a-l-m-video-ra-m-2\\\\outputs\\\\motionforge-codex-takeover-20261015\\\\root-review\\\\c02-baseline\\\\tiny-model.bin', 'sha256': 'b915a2d61f21b47cdf87f8b0d6dd61872086767249b4d4b257789209cbaf1b2a'}}"
+  ],
+  "producer_settings": {
+    "mode": "zero_shot_asset_restyle",
+    "steps": 4
+  },
+  "consumer_settings": {
+    "mode": "zero_shot_asset_restyle",
+    "steps": 4,
+    "ctx_factor": "1.3",
+    "seed_off": "0",
+    "model": {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\root-review\\c02-baseline\\tiny-model.bin",
+      "sha256": "b915a2d61f21b47cdf87f8b0d6dd61872086767249b4d4b257789209cbaf1b2a"
+    }
+  },
+  "scope": "C02 baseline only; source/model are tiny fixtures, no runtime/media writes"
+}

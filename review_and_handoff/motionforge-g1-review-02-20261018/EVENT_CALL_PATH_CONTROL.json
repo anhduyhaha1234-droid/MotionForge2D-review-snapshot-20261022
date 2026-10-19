@@ -1,0 +1,45 @@
+{
+  "board_fids": [
+    1,
+    10,
+    20,
+    29,
+    30,
+    43,
+    50,
+    60
+  ],
+  "actual_keygen_discovery": [
+    1,
+    10,
+    20,
+    29,
+    30,
+    43,
+    50,
+    60
+  ],
+  "gate": {
+    "shot": "S0021",
+    "keys": 8,
+    "event_fids": [
+      10,
+      20,
+      29,
+      30,
+      43,
+      50
+    ]
+  },
+  "propagation_discovery": [
+    1,
+    10,
+    20,
+    29,
+    30,
+    43,
+    50,
+    60
+  ],
+  "stub_boundaries": "run_key image generation and per-key semantic reviews stubbed; actual ledger/main/board/CLI discovery/gate event requirement/build_key_fids preserved."
+}

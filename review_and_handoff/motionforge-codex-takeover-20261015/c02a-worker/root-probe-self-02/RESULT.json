@@ -1,0 +1,401 @@
+{
+  "utc": "2026-10-16T02:17:54.867097+00:00",
+  "source_hashes": {
+    "r6_common.py": "17bf5799c445a6f7133c61d53b9d5c41083307add1d7b6a50acdf83c294c15e3",
+    "r6_cache.py": "946935906625d79b95153a92d4cf86310551cfbc4533a3661f2011854aeae7a7",
+    "r6_gate.py": "8c2e3f9eedd4d8e11832809c2b72293db17df1fb5a4012bd39fa396f93143f94",
+    "r6_assemble.py": "0509d5f67ffcce1721701f0c064ea4d68dd8660c6dca9f6f4967eb78727301c2"
+  },
+  "probe_source_sha256": "4d3500b829873ef35099015118a4b3a5a5f8cc34cf8c1b9e084ec9d3b4d7a448",
+  "cases": [
+    {
+      "name": "builder_v3_positive",
+      "expected": "ACCEPT",
+      "actual": "ACCEPT",
+      "pass": true,
+      "detail": "ok"
+    },
+    {
+      "name": "builder_passthrough_positive",
+      "expected": "ACCEPT",
+      "actual": "ACCEPT",
+      "pass": true,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_empty",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps missing fields: ['casts', 'deps_sha', 'fid', 'graph', 'kind', 'masks', 'model', 'settings', 'shot', 'source']"
+    },
+    {
+      "name": "verify_list",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps record must be an object"
+    },
+    {
+      "name": "verify_none",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps record must be an object"
+    },
+    {
+      "name": "verify_string",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps record must be an object"
+    },
+    {
+      "name": "verify_missing_kind",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps missing fields: ['kind']"
+    },
+    {
+      "name": "verify_missing_shot",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps missing fields: ['shot']"
+    },
+    {
+      "name": "verify_missing_fid",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps missing fields: ['fid']"
+    },
+    {
+      "name": "verify_missing_source",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps missing fields: ['source']"
+    },
+    {
+      "name": "verify_missing_model",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps missing fields: ['model']"
+    },
+    {
+      "name": "verify_missing_casts",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps missing fields: ['casts']"
+    },
+    {
+      "name": "verify_missing_masks",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps missing fields: ['masks']"
+    },
+    {
+      "name": "verify_missing_graph",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps missing fields: ['graph']"
+    },
+    {
+      "name": "verify_missing_settings",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps missing fields: ['settings']"
+    },
+    {
+      "name": "verify_missing_deps_sha",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps missing fields: ['deps_sha']"
+    },
+    {
+      "name": "verify_bad_fid_True",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps fid malformed"
+    },
+    {
+      "name": "verify_bad_fid_0",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps fid malformed"
+    },
+    {
+      "name": "verify_bad_casts_{}",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps casts must be a list"
+    },
+    {
+      "name": "verify_bad_masks_None",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps masks must be a list"
+    },
+    {
+      "name": "verify_bad_settings_{}",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps settings malformed/empty"
+    },
+    {
+      "name": "verify_bad_settings_[]",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps settings malformed/empty"
+    },
+    {
+      "name": "verify_bad_graph_None",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps generated key missing graph"
+    },
+    {
+      "name": "verify_bad_source_sha256",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps source hash malformed"
+    },
+    {
+      "name": "verify_bad_model_sha256",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps model hash malformed"
+    },
+    {
+      "name": "verify_bad_source_gframe",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps source gframe does not match current plan"
+    },
+    {
+      "name": "verify_bad_source_span",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps source span does not match current plan"
+    },
+    {
+      "name": "verify_bad_model_path",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps model path is not absolute"
+    },
+    {
+      "name": "verify_self_digest_tamper",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps_sha self-digest mismatch"
+    },
+    {
+      "name": "gate_key_unchanged_positive",
+      "expected": "ACCEPT",
+      "actual": "ACCEPT",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "verify_same_path_size_mutation_source",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps source hash changed: 136282918a17af1e71eced4eb1e12c507c10a7566f535e36df21b0eae677ea13 -> 7f65813a21eff7abc026ccb3c3840eae5a14ffce81322bb7207f81aeb154205c"
+    },
+    {
+      "name": "gate_same_path_size_mutation_source",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "KEY_DEPS_INVALID S0021 f1: deps source hash changed: 136282918a17af1e71eced4eb1e12c507c10a7566f535e36df21b0eae677ea13 -> 7f65813a21eff7abc026ccb3c3840eae5a14ffce81322bb7207f81aeb154205c"
+    },
+    {
+      "name": "verify_same_path_size_mutation_model",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps model hash changed: 04f05d586d26e020e93a4e20038bb9261129bf2f8455f3c252f19832ec29d76c -> bf570f1c026908c9d043c42d804577ca51aafe84d171701fe9effe2019201bf4"
+    },
+    {
+      "name": "gate_same_path_size_mutation_model",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "KEY_DEPS_INVALID S0021 f1: deps model hash changed: 04f05d586d26e020e93a4e20038bb9261129bf2f8455f3c252f19832ec29d76c -> bf570f1c026908c9d043c42d804577ca51aafe84d171701fe9effe2019201bf4"
+    },
+    {
+      "name": "verify_same_path_size_mutation_cast",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps casts[0] hash changed: bdbe9190e84c2f4d69ef7e4eef1110ccad0a03e9f24552d92d976d7006d68261 -> 85ec566a638b36069f332b6af70d62f11fe8b918513ccca579f62e0437dacf1a"
+    },
+    {
+      "name": "gate_same_path_size_mutation_cast",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "KEY_DEPS_INVALID S0021 f1: deps casts[0] hash changed: bdbe9190e84c2f4d69ef7e4eef1110ccad0a03e9f24552d92d976d7006d68261 -> 85ec566a638b36069f332b6af70d62f11fe8b918513ccca579f62e0437dacf1a"
+    },
+    {
+      "name": "verify_same_path_size_mutation_mask",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps masks[0] hash changed: 73e659233917839ff2c9019f31e0398d72c5e32c09ee727902f5809ec9f32aac -> ee2dd950389689999f4bcffb75a1cf8007bc51564990a5a51fc914fdd52caff8"
+    },
+    {
+      "name": "gate_same_path_size_mutation_mask",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "KEY_DEPS_INVALID S0021 f1: deps masks[0] hash changed: 73e659233917839ff2c9019f31e0398d72c5e32c09ee727902f5809ec9f32aac -> ee2dd950389689999f4bcffb75a1cf8007bc51564990a5a51fc914fdd52caff8"
+    },
+    {
+      "name": "verify_same_path_size_mutation_graph",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "deps graph hash changed: bd43724ac2e7c23021384183d95d1a98468e6542f048e611c6c72140d395dd7e -> 637ac04251b2841ef458ad4f1a9d8a910bdbb8fbee947b97f40bce56b13f0448"
+    },
+    {
+      "name": "gate_same_path_size_mutation_graph",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "KEY_DEPS_INVALID S0021 f1: deps graph hash changed: bd43724ac2e7c23021384183d95d1a98468e6542f048e611c6c72140d395dd7e -> 637ac04251b2841ef458ad4f1a9d8a910bdbb8fbee947b97f40bce56b13f0448"
+    },
+    {
+      "name": "gate_restored_positive",
+      "expected": "ACCEPT",
+      "actual": "ACCEPT",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "consumer_identity_kind",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "KEY_DEPS_INVALID S0021 f1: deps kind mismatch"
+    },
+    {
+      "name": "consumer_identity_shot",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "KEY_DEPS_INVALID S0021 f1: deps shot does not match consumer request"
+    },
+    {
+      "name": "consumer_identity_fid",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "KEY_DEPS_INVALID S0021 f1: deps fid does not match consumer request"
+    },
+    {
+      "name": "consumer_identity_source_path",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "KEY_DEPS_INVALID S0021 f1: deps source path differs from current canonical path"
+    },
+    {
+      "name": "consumer_identity_model_path",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "KEY_DEPS_INVALID S0021 f1: deps model path differs from current canonical path"
+    },
+    {
+      "name": "consumer_identity_gframe",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "KEY_DEPS_INVALID S0021 f1: deps source gframe does not match current plan"
+    },
+    {
+      "name": "consumer_identity_span",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "KEY_DEPS_INVALID S0021 f1: deps source span does not match current plan"
+    },
+    {
+      "name": "consumer_identity_combined",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "KEY_DEPS_INVALID S0021 f1: deps shot does not match consumer request"
+    },
+    {
+      "name": "consumer_identity_missing_source_hash",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "KEY_DEPS_INVALID S0021 f1: deps source hash malformed"
+    },
+    {
+      "name": "consumer_invalid_json",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "KEY_DEPS_MALFORMED S0021 f1: deps unreadable/malformed: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+    },
+    {
+      "name": "consumer_duplicate_field",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "KEY_DEPS_MALFORMED S0021 f1: deps unreadable/malformed: duplicate field fid"
+    },
+    {
+      "name": "consumer_non_json_constant",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "KEY_DEPS_MALFORMED S0021 f1: deps unreadable/malformed: non-JSON constant NaN"
+    },
+    {
+      "name": "actual_assembler_stale_source_before_copy_encode",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "ASSEMBLE_BLOCKED KEY_DEPS_INVALID S0021 f1: deps source hash changed: 136282918a17af1e71eced4eb1e12c507c10a7566f535e36df21b0eae677ea13 -> 7e439bb906ed01873e35fcf3d2e1aedc2da4f8c06ac2eba0bf7038b8ff75754a"
+    },
+    {
+      "name": "real_gate_assemble_valid_positive",
+      "expected": "ACCEPT",
+      "actual": "ACCEPT",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "passed": 55,
+  "total": 55,
+  "side_effect_calls": [],
+  "scope": "Recorded dependency verification only; no producer completeness, reuse, semantic or decode proof."
+}

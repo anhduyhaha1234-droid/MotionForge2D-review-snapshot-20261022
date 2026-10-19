@@ -1,0 +1,141 @@
+{
+  "schema": 1,
+  "submission_id": "g1-candidate-03",
+  "gate": "G1",
+  "correction_branch": "G1-R1",
+  "status": "SELF_VERIFIED_PENDING_CODEX_G1",
+  "created_utc": "2026-10-19T03:25:22.602704+00:00",
+  "owner": "gemini-implementation-owner",
+  "real_session_id": "20261017_115944_b2a338",
+  "model": "ag/gemini-3.8-flash-high",
+  "base_url": "http://127.0.0.1:20128/v1",
+  "files": [
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py",
+      "relative": "scripts/r6_cache.py",
+      "sha256": "e90c24abd1148544785f1855034de6c1d9ce2329ddcf54103331458bcb4cf422",
+      "bytes": 33094,
+      "lines": 603
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_keygen.py",
+      "relative": "scripts/r6_keygen.py",
+      "sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+      "bytes": 9004,
+      "lines": 180
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_key_recipe.py",
+      "relative": "scripts/r6_key_recipe.py",
+      "sha256": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9",
+      "bytes": 10608,
+      "lines": 223
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_keygen_asset.py",
+      "relative": "scripts/r6_keygen_asset.py",
+      "sha256": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e",
+      "bytes": 6467,
+      "lines": 141
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_propagate.py",
+      "relative": "scripts/r6_propagate.py",
+      "sha256": "59d37705d286bd57b82b4d4fa89b241092f6793f065b757a20fa0121df2fe3aa",
+      "bytes": 11387,
+      "lines": 253
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cotracker.py",
+      "relative": "scripts/r6_cotracker.py",
+      "sha256": "1b4c1322ce41d98d5105f1c1707c9d280f29a9ea87a77441a52dd43b1417701c",
+      "bytes": 10858,
+      "lines": 238
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_ledger.py",
+      "relative": "scripts/r6_ledger.py",
+      "sha256": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200",
+      "bytes": 9806,
+      "lines": 157
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_gate.py",
+      "relative": "scripts/r6_gate.py",
+      "sha256": "3907e9e0ced22ff952c592c1ba61ac52242061bf93687b3e97f872adaa7a1819",
+      "bytes": 19351,
+      "lines": 396
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_assemble.py",
+      "relative": "scripts/r6_assemble.py",
+      "sha256": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910",
+      "bytes": 4245,
+      "lines": 89
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_matrix.py",
+      "relative": "scripts/r6_matrix.py",
+      "sha256": "b0a288fc357ca063334a782d30b7c2b89c6762fe410f4b08aa4f559d48e1b610",
+      "bytes": 6218,
+      "lines": 142
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_event_contract.py",
+      "relative": "scripts/r6_event_contract.py",
+      "sha256": "f7bd86c9a51f2b77b24502f2512caa9ab57246770ac1b6af3b5001d603a04f77",
+      "bytes": 3498,
+      "lines": 90
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_evidence_contract.py",
+      "relative": "scripts/r6_evidence_contract.py",
+      "sha256": "f08c8bfd6392ebbcd6ce4cebd1259bb9763a5ae58faf4059aa2951c8759c7df6",
+      "bytes": 5403,
+      "lines": 130
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c02b2_per_actor_reuse.py",
+      "relative": "tests/test_codex_c02b2_per_actor_reuse.py",
+      "sha256": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24",
+      "bytes": 24521,
+      "lines": 559
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_gemini_c02b3_asset_reuse.py",
+      "relative": "tests/test_gemini_c02b3_asset_reuse.py",
+      "sha256": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b",
+      "bytes": 14696,
+      "lines": 331
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_gemini_a3_event_tracking.py",
+      "relative": "tests/test_gemini_a3_event_tracking.py",
+      "sha256": "cc9fe10b065738dd18fa9c6626f54c4d0da3f996833145fe45db031aaa6a6584",
+      "bytes": 8695,
+      "lines": 196
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_gemini_a4_evidence_conformance.py",
+      "relative": "tests/test_gemini_a4_evidence_conformance.py",
+      "sha256": "970eacd0b4d9b46522752cadc29b34425e410415cb5f73d8895f71623a1b2fea",
+      "bytes": 6006,
+      "lines": 142
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_g1_r1_correction.py",
+      "relative": "tests/test_g1_r1_correction.py",
+      "sha256": "80525dc40946d243d2d595eefe57fd79454b753e51b3196036bd316efb62a4e1",
+      "bytes": 25232,
+      "lines": 494
+    }
+  ],
+  "suite_summary": {
+    "total_tests": 89,
+    "passed": 89,
+    "failed": 0,
+    "errors": 0,
+    "probe_v4_replay_passed": true,
+    "matrix_rows_verified": "20/20"
+  }
+}

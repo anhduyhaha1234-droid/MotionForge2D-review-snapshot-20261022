@@ -1,0 +1,11 @@
+{
+  "checkpoint_id": "G1_CANDIDATE_01_CHECKPOINT",
+  "timestamp_utc": "2026-10-17T18:15:06.334285+00:00",
+  "gate": "G1",
+  "status": "PENDING_CODEX_REVIEW",
+  "owner": "gemini-implementation-owner",
+  "model": "ag/gemini-3.8-flash-high",
+  "files_count": 14,
+  "tests_passed": "76/76",
+  "candidate_dir": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\submissions\\g1-candidate-01"
+}

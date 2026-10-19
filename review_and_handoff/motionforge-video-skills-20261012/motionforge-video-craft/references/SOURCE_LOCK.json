@@ -1,0 +1,1639 @@
+{
+  "utc": "2026-10-12T10:46:42.049004+00:00",
+  "scope": "Research and reference contract only. No production integration or R6 review.",
+  "read_coverage": "README/SKILL and relevant excerpts for decisions; selected render, review and EDL call paths. Not a complete repository audit.",
+  "resolved_user_url": {
+    "original": "https://github.com/199.../motion-dev-animations-skill",
+    "candidate": "https://github.com/199-biotechnologies/motion-dev-animations-skill",
+    "basis": "Public search result matches exact repository name; original URL incomplete."
+  },
+  "license_primary_sources": [
+    "https://webflow.com/legal/product-terms",
+    "https://www.remotion.dev/docs/license/pricing"
+  ],
+  "sources": [
+    {
+      "repo": "AbubakrChan/product-launch-motion",
+      "url": "https://github.com/AbubakrChan/product-launch-motion",
+      "commit": "951d6149d2748a15058f79dcf8e8c4bf00824121",
+      "retrieved_utc": "2026-10-12T10:35:42.212972+00:00",
+      "tree_truncated": false,
+      "skill_paths": [
+        "SKILL.md"
+      ],
+      "license_paths": [
+        "LICENSE",
+        "NOTICE"
+      ],
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/AbubakrChan/product-launch-motion/951d6149d2748a15058f79dcf8e8c4bf00824121/LICENSE",
+          "sha256": "659611f9350b3cf4c3af2c1ebc017ea08631ab3b0f3f76516907a3bd2feae232",
+          "bytes": 1069,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "NOTICE",
+          "url": "https://raw.githubusercontent.com/AbubakrChan/product-launch-motion/951d6149d2748a15058f79dcf8e8c4bf00824121/NOTICE",
+          "sha256": "82bd5d7f478676ae04c7f8ebaf9c9061af3cccf627f61eb8cfd76685ddb71564",
+          "bytes": 2649,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/AbubakrChan/product-launch-motion/951d6149d2748a15058f79dcf8e8c4bf00824121/README.md",
+          "sha256": "efd72846e4cc08183c1910a0d747121db111587b8a2e20e1fc095f1535676d87",
+          "bytes": 13407,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "SKILL.md",
+          "url": "https://raw.githubusercontent.com/AbubakrChan/product-launch-motion/951d6149d2748a15058f79dcf8e8c4bf00824121/SKILL.md",
+          "sha256": "592468046271e6605737bfd3aefd35df04f73cc9da0f9a7624692c17f2f006b1",
+          "bytes": 17538,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "references/01-renderer-contract.md",
+          "url": "https://raw.githubusercontent.com/AbubakrChan/product-launch-motion/951d6149d2748a15058f79dcf8e8c4bf00824121/references/01-renderer-contract.md",
+          "sha256": "2517c76003ba376f410b44cfc048e2d264bbd015252be13ffab29814c9cbeda2",
+          "bytes": 15108,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "references/08-qa-and-direction.md",
+          "url": "https://raw.githubusercontent.com/AbubakrChan/product-launch-motion/951d6149d2748a15058f79dcf8e8c4bf00824121/references/08-qa-and-direction.md",
+          "sha256": "60c93c09dbe85fe3643b5d30f48f5d70b515bb43c74b7ef7fd07f29378b64bd2",
+          "bytes": 11984,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "scripts/word-timings.mjs",
+          "url": "https://raw.githubusercontent.com/AbubakrChan/product-launch-motion/951d6149d2748a15058f79dcf8e8c4bf00824121/scripts/word-timings.mjs",
+          "sha256": "e632afa2ff53998084ae3c3390bb7b35efce30345472ec88d0bed2e6f8700ab4",
+          "bytes": 4698,
+          "downloaded_not_necessarily_read_in_full": true
+        }
+      ],
+      "installed": false,
+      "local_renderer_executed": false
+    },
+    {
+      "repo": "charlie947/motion-graphics-skills",
+      "url": "https://github.com/charlie947/motion-graphics-skills",
+      "commit": "229022ebca76972e119e36ada23a1648d51665ab",
+      "retrieved_utc": "2026-10-12T10:35:42.212972+00:00",
+      "tree_truncated": false,
+      "skill_paths": [
+        "skills/animated-chart/SKILL.md",
+        "skills/apple-launch-film/SKILL.md",
+        "skills/brand-intake/SKILL.md",
+        "skills/launch-video/SKILL.md",
+        "skills/loop-cover/SKILL.md",
+        "skills/milestone-reveal/SKILL.md",
+        "skills/model-showdown/SKILL.md",
+        "skills/motion-brief-writer/SKILL.md",
+        "skills/motion-effects/SKILL.md",
+        "skills/motion-prompt-writer/SKILL.md",
+        "skills/newsletter-promo/SKILL.md",
+        "skills/reel-export/SKILL.md",
+        "skills/reference-to-motion/SKILL.md",
+        "skills/title-sequence-3d/SKILL.md",
+        "skills/vox-explainer/SKILL.md"
+      ],
+      "license_paths": [
+        "LICENSE"
+      ],
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/charlie947/motion-graphics-skills/229022ebca76972e119e36ada23a1648d51665ab/LICENSE",
+          "sha256": "ed17713237d18555a34c208bf0cb1ce347faa937731d509e265ce91be660e218",
+          "bytes": 1070,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/charlie947/motion-graphics-skills/229022ebca76972e119e36ada23a1648d51665ab/README.md",
+          "sha256": "449086c2757e548f7945d3a1971bf30c3da1188780a69e76d5e6554dd0d6780c",
+          "bytes": 15816,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/animated-chart/SKILL.md",
+          "url": "https://raw.githubusercontent.com/charlie947/motion-graphics-skills/229022ebca76972e119e36ada23a1648d51665ab/skills/animated-chart/SKILL.md",
+          "sha256": "032b99ae8de1651ca6437d9fdb89ee20c696e328f23d16870749144989db0460",
+          "bytes": 2840,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/apple-launch-film/SKILL.md",
+          "url": "https://raw.githubusercontent.com/charlie947/motion-graphics-skills/229022ebca76972e119e36ada23a1648d51665ab/skills/apple-launch-film/SKILL.md",
+          "sha256": "3923ff37bc6f830d85d882de81c029f4d1be1435bcbd292c58bd3ad5f1d83295",
+          "bytes": 4322,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/brand-intake/SKILL.md",
+          "url": "https://raw.githubusercontent.com/charlie947/motion-graphics-skills/229022ebca76972e119e36ada23a1648d51665ab/skills/brand-intake/SKILL.md",
+          "sha256": "76d2d615e147150946375cf978286b1ca1fea560bf276d7df5943587bc0963e3",
+          "bytes": 4723,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/launch-video/SKILL.md",
+          "url": "https://raw.githubusercontent.com/charlie947/motion-graphics-skills/229022ebca76972e119e36ada23a1648d51665ab/skills/launch-video/SKILL.md",
+          "sha256": "88e1c4648bd4e20509c33ca7ac1fd220efa3d2281debd0d10126b4cdd2abc4c8",
+          "bytes": 4488,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/loop-cover/SKILL.md",
+          "url": "https://raw.githubusercontent.com/charlie947/motion-graphics-skills/229022ebca76972e119e36ada23a1648d51665ab/skills/loop-cover/SKILL.md",
+          "sha256": "a14fc83df6f23abc17ed2a1715d1288d14da956892087dd92cb2b646c5f1a00f",
+          "bytes": 3753,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/milestone-reveal/SKILL.md",
+          "url": "https://raw.githubusercontent.com/charlie947/motion-graphics-skills/229022ebca76972e119e36ada23a1648d51665ab/skills/milestone-reveal/SKILL.md",
+          "sha256": "5b56d927559f98f810c3c8c7cb8f712fd997ee29c76191472cea8eec66b24d14",
+          "bytes": 4119,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/model-showdown/SKILL.md",
+          "url": "https://raw.githubusercontent.com/charlie947/motion-graphics-skills/229022ebca76972e119e36ada23a1648d51665ab/skills/model-showdown/SKILL.md",
+          "sha256": "76c3cffbea8a261b6f4604f1be50ea449ee438f049adf4a94fe0f0f273b62119",
+          "bytes": 4282,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/motion-brief-writer/SKILL.md",
+          "url": "https://raw.githubusercontent.com/charlie947/motion-graphics-skills/229022ebca76972e119e36ada23a1648d51665ab/skills/motion-brief-writer/SKILL.md",
+          "sha256": "2e0c0035bf1b5a5031d29dd9ad593bd53d60b14917d77d4834cb0a1811efafcb",
+          "bytes": 4561,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/motion-effects/SKILL.md",
+          "url": "https://raw.githubusercontent.com/charlie947/motion-graphics-skills/229022ebca76972e119e36ada23a1648d51665ab/skills/motion-effects/SKILL.md",
+          "sha256": "576540bd2e6a4b7e134ec621eaf4d74e6edaaa02b9a4f04daef364bea20566d9",
+          "bytes": 8353,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/motion-prompt-writer/SKILL.md",
+          "url": "https://raw.githubusercontent.com/charlie947/motion-graphics-skills/229022ebca76972e119e36ada23a1648d51665ab/skills/motion-prompt-writer/SKILL.md",
+          "sha256": "3855808a64957cb0fdb2921df391f5b54adfed5437d345bed1c609e53cd329f5",
+          "bytes": 4880,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/newsletter-promo/SKILL.md",
+          "url": "https://raw.githubusercontent.com/charlie947/motion-graphics-skills/229022ebca76972e119e36ada23a1648d51665ab/skills/newsletter-promo/SKILL.md",
+          "sha256": "57ebc05185a1354b128309f54ea06eb4c57e30311ccf08b3071b4fcfe79fc16a",
+          "bytes": 2517,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/reel-export/SKILL.md",
+          "url": "https://raw.githubusercontent.com/charlie947/motion-graphics-skills/229022ebca76972e119e36ada23a1648d51665ab/skills/reel-export/SKILL.md",
+          "sha256": "aed76fe0e6641bddedd9fd97ebc979e59c98488de11cdac2887f5196e3f5b9ca",
+          "bytes": 3324,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/reference-to-motion/SKILL.md",
+          "url": "https://raw.githubusercontent.com/charlie947/motion-graphics-skills/229022ebca76972e119e36ada23a1648d51665ab/skills/reference-to-motion/SKILL.md",
+          "sha256": "3e20be9e8c0479dcee20d6216bcf5b6352a688bbb053d5abf72927dcf765ba8a",
+          "bytes": 3405,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/title-sequence-3d/SKILL.md",
+          "url": "https://raw.githubusercontent.com/charlie947/motion-graphics-skills/229022ebca76972e119e36ada23a1648d51665ab/skills/title-sequence-3d/SKILL.md",
+          "sha256": "80434f53a33b4c8b83c30d6e2288a137530fcaf51b82b0c9cc0872ca976e3205",
+          "bytes": 3747,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/vox-explainer/SKILL.md",
+          "url": "https://raw.githubusercontent.com/charlie947/motion-graphics-skills/229022ebca76972e119e36ada23a1648d51665ab/skills/vox-explainer/SKILL.md",
+          "sha256": "8e4066d59fc71f94f7ec82ebc21965cc44372809c4ce77b5b466dc9d7f9c9606",
+          "bytes": 5957,
+          "downloaded_not_necessarily_read_in_full": true
+        }
+      ],
+      "installed": false,
+      "local_renderer_executed": false
+    },
+    {
+      "repo": "howseen-ai/claude-motion-design",
+      "url": "https://github.com/howseen-ai/claude-motion-design",
+      "commit": "3d90d349ef3fdde9b7e89de4df4a2159c9e8697f",
+      "retrieved_utc": "2026-10-12T10:35:42.213972+00:00",
+      "tree_truncated": false,
+      "skill_paths": [
+        "skill/motion-design/SKILL.md"
+      ],
+      "license_paths": [
+        "LICENSE"
+      ],
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/howseen-ai/claude-motion-design/3d90d349ef3fdde9b7e89de4df4a2159c9e8697f/LICENSE",
+          "sha256": "152b772d09c1f2c3ddf6b13c410d64e017a58e03e1f504d5b142ddd10acce993",
+          "bytes": 1084,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/howseen-ai/claude-motion-design/3d90d349ef3fdde9b7e89de4df4a2159c9e8697f/README.md",
+          "sha256": "f179925f0ff23569985589d80884aec9e21049d116cdf779b3bb6ad6b52094dd",
+          "bytes": 4900,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skill/motion-design/SKILL.md",
+          "url": "https://raw.githubusercontent.com/howseen-ai/claude-motion-design/3d90d349ef3fdde9b7e89de4df4a2159c9e8697f/skill/motion-design/SKILL.md",
+          "sha256": "f53208a8fc2bd72bb4d2f90dbf5811b2246e641e0f81800bf058c801c9534c94",
+          "bytes": 33895,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skill/motion-design/scripts/render_template.py",
+          "url": "https://raw.githubusercontent.com/howseen-ai/claude-motion-design/3d90d349ef3fdde9b7e89de4df4a2159c9e8697f/skill/motion-design/scripts/render_template.py",
+          "sha256": "247c6b5c81927c2d36abe486be6c6b958b045ee7f1228fbe39e42140720b0483",
+          "bytes": 8143,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skill/motion-design/scripts/remake/remake_qa.py",
+          "url": "https://raw.githubusercontent.com/howseen-ai/claude-motion-design/3d90d349ef3fdde9b7e89de4df4a2159c9e8697f/skill/motion-design/scripts/remake/remake_qa.py",
+          "sha256": "042335f59bf5dd5d436b4c4d66b1bba9104bdb8183722adf3f4dca022fc1851f",
+          "bytes": 1523,
+          "downloaded_not_necessarily_read_in_full": true
+        }
+      ],
+      "installed": false,
+      "local_renderer_executed": false
+    },
+    {
+      "repo": "nateherkai/hyperframes-student-kit",
+      "url": "https://github.com/nateherkai/hyperframes-student-kit",
+      "commit": "0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86",
+      "retrieved_utc": "2026-10-12T10:35:42.258971+00:00",
+      "tree_truncated": false,
+      "skill_paths": [
+        ".agents/skills/cut-mistakes/SKILL.md",
+        ".agents/skills/cut-silences/SKILL.md",
+        ".agents/skills/edit-video/SKILL.md",
+        ".agents/skills/gsap/SKILL.md",
+        ".agents/skills/hyperframes-cli/SKILL.md",
+        ".agents/skills/hyperframes-registry/SKILL.md",
+        ".agents/skills/hyperframes-video-beats/SKILL.md",
+        ".agents/skills/hyperframes/SKILL.md",
+        ".agents/skills/make-a-video/SKILL.md",
+        ".agents/skills/motion-showreel/SKILL.md",
+        ".agents/skills/short-form-edit/SKILL.md",
+        ".agents/skills/short-form-video/SKILL.md",
+        ".agents/skills/style-library/SKILL.md",
+        ".agents/skills/video-storytelling/SKILL.md",
+        ".agents/skills/website-to-hyperframes/SKILL.md",
+        ".claude/skills/cut-mistakes/SKILL.md",
+        ".claude/skills/cut-silences/SKILL.md",
+        ".claude/skills/edit-video/SKILL.md",
+        ".claude/skills/gsap/SKILL.md",
+        ".claude/skills/hyperframes-cli/SKILL.md",
+        ".claude/skills/hyperframes-registry/SKILL.md",
+        ".claude/skills/hyperframes-video-beats/SKILL.md",
+        ".claude/skills/hyperframes/SKILL.md",
+        ".claude/skills/make-a-video/SKILL.md",
+        ".claude/skills/motion-showreel/SKILL.md",
+        ".claude/skills/short-form-edit/SKILL.md",
+        ".claude/skills/short-form-video/SKILL.md",
+        ".claude/skills/style-library/SKILL.md",
+        ".claude/skills/video-storytelling/SKILL.md",
+        ".claude/skills/website-to-hyperframes/SKILL.md"
+      ],
+      "license_paths": [
+        "LICENSE"
+      ],
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/LICENSE",
+          "sha256": "263623d3ac61f5b09eeceec5af2395bb15e566d0507558f5b6c405f2ba132bd1",
+          "bytes": 1520,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/README.md",
+          "sha256": "28f025096b775094811fa7702d5c6a2c3acb94a68bed5e4c0320700bc5216617",
+          "bytes": 7362,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "package.json",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/package.json",
+          "sha256": "e0330b4b30117e5f6078531f5104b03a85c6884b7efe0840a8be8d2f28e680fc",
+          "bytes": 1263,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/cut-mistakes/SKILL.md",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/.agents/skills/cut-mistakes/SKILL.md",
+          "sha256": "cde5f91dc605c82228b75896a08bd30736af1f0db9bbbe00da130d47ae67d4a3",
+          "bytes": 4245,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/cut-silences/SKILL.md",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/.agents/skills/cut-silences/SKILL.md",
+          "sha256": "5479b51e8aee974d6b0e191c2c067167ec119a15090d32ad577fccb1a8303ee5",
+          "bytes": 4836,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/edit-video/SKILL.md",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/.agents/skills/edit-video/SKILL.md",
+          "sha256": "ec14d6c9dafc58a965ec12754f8f6c9f59cc8504afe64fbbcdb2a01a031bf897",
+          "bytes": 2690,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/gsap/SKILL.md",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/.agents/skills/gsap/SKILL.md",
+          "sha256": "730476ba02cc56c8a59b3e4a897801923f463289cd386bccb56d01833be4441f",
+          "bytes": 6392,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/hyperframes-cli/SKILL.md",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/.agents/skills/hyperframes-cli/SKILL.md",
+          "sha256": "e4c9c24005ed5da37d0a58dad313c95ef07a0547c7c664825a4c7ea0f7416fab",
+          "bytes": 4920,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/hyperframes-registry/SKILL.md",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/.agents/skills/hyperframes-registry/SKILL.md",
+          "sha256": "0248bfb9968d53ea8f9e4b5f7f5a8eb9e72f21108022580f7eba2fba7e26b234",
+          "bytes": 4278,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/hyperframes-video-beats/SKILL.md",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/.agents/skills/hyperframes-video-beats/SKILL.md",
+          "sha256": "c0f13d7b38581cdacf27a453f8f2b9e9021b9fa069931b57c1055ba5ba8ac2c3",
+          "bytes": 8409,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/hyperframes/SKILL.md",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/.agents/skills/hyperframes/SKILL.md",
+          "sha256": "c6331e984e08b31269bd7725fdc86f1c267409391c1270ac32ee76c6986f10b1",
+          "bytes": 20239,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/make-a-video/SKILL.md",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/.agents/skills/make-a-video/SKILL.md",
+          "sha256": "ea1cf3faabea38f11b122324fe13f53b73ec8b3c06a793d084c5294e17fcf9c1",
+          "bytes": 12630,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/motion-showreel/SKILL.md",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/.agents/skills/motion-showreel/SKILL.md",
+          "sha256": "fc1dcd162dedfe637f1b0727e555d92dc5ff14a27701107940035e828c64fba7",
+          "bytes": 11097,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/short-form-edit/SKILL.md",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/.agents/skills/short-form-edit/SKILL.md",
+          "sha256": "5c043591f5db84b216d9a3236bc258609e47bc1b712665ebba0522cc91d039ea",
+          "bytes": 21160,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/short-form-video/SKILL.md",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/.agents/skills/short-form-video/SKILL.md",
+          "sha256": "426f505398e9e851f5f0c62d9f5fd33d27825a4efa8ba7b4d684cd944cc23725",
+          "bytes": 20275,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/style-library/SKILL.md",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/.agents/skills/style-library/SKILL.md",
+          "sha256": "329fd9f082203c72adea81a229b242d1a6a264f81c4b38718708e60f4a577729",
+          "bytes": 1603,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/video-storytelling/SKILL.md",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/.agents/skills/video-storytelling/SKILL.md",
+          "sha256": "83c3f54825fcad42f946bb8af28d7ea540c065e67e22f2b63962cc8056441129",
+          "bytes": 19450,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/website-to-hyperframes/SKILL.md",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/.agents/skills/website-to-hyperframes/SKILL.md",
+          "sha256": "61ec0a7309f0459d789fb3bc3ec254a52c64e838357d321b594cbde5a8514a12",
+          "bytes": 6116,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".claude/skills/cut-mistakes/SKILL.md",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/.claude/skills/cut-mistakes/SKILL.md",
+          "sha256": "cdce240042f6c05ef37f62ae13a1a3de30d572793899fe0f103cb6ded40da5a3",
+          "bytes": 4245,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".claude/skills/cut-silences/SKILL.md",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/.claude/skills/cut-silences/SKILL.md",
+          "sha256": "32c3887170aadf50b5dd71471203c2c8f6f514172b530304395c0cd858c5d399",
+          "bytes": 4836,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".claude/skills/edit-video/SKILL.md",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/.claude/skills/edit-video/SKILL.md",
+          "sha256": "ec14d6c9dafc58a965ec12754f8f6c9f59cc8504afe64fbbcdb2a01a031bf897",
+          "bytes": 2690,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".claude/skills/gsap/SKILL.md",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/.claude/skills/gsap/SKILL.md",
+          "sha256": "730476ba02cc56c8a59b3e4a897801923f463289cd386bccb56d01833be4441f",
+          "bytes": 6392,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".claude/skills/hyperframes-cli/SKILL.md",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/.claude/skills/hyperframes-cli/SKILL.md",
+          "sha256": "e4c9c24005ed5da37d0a58dad313c95ef07a0547c7c664825a4c7ea0f7416fab",
+          "bytes": 4920,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/cut-silences/scripts/cut-silences.mjs",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/.agents/skills/cut-silences/scripts/cut-silences.mjs",
+          "sha256": "3166c987f715c460d91825dbda4a355a9a9c04a098de5a7fff0496c4fcdffbfd",
+          "bytes": 11779,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "scripts/validate-beat-sync.mjs",
+          "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/scripts/validate-beat-sync.mjs",
+          "sha256": "ed53185330177bcefb2a61c08b70abaae06b36bc90790e2537d078e283045f07",
+          "bytes": 10480,
+          "downloaded_not_necessarily_read_in_full": true
+        }
+      ],
+      "installed": false,
+      "local_renderer_executed": false
+    },
+    {
+      "repo": "Barty-Bart/motion-graphics",
+      "url": "https://github.com/Barty-Bart/motion-graphics",
+      "commit": "d6e5d95e45167d95bb4260b9da4d674791143710",
+      "retrieved_utc": "2026-10-12T10:35:44.486289+00:00",
+      "tree_truncated": false,
+      "skill_paths": [
+        "skills/explainer-default/SKILL.md",
+        "skills/explainer-engaging/SKILL.md",
+        "skills/explainer-high-energy/SKILL.md",
+        "skills/motion-broll/SKILL.md",
+        "skills/object-separation/SKILL.md",
+        "skills/sound-effects/SKILL.md"
+      ],
+      "license_paths": [
+        "LICENSE"
+      ],
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/Barty-Bart/motion-graphics/d6e5d95e45167d95bb4260b9da4d674791143710/LICENSE",
+          "sha256": "40a5f89f85b8345b3af943b0e2d28dc7199ff83ddf9d905cded0abcc38431672",
+          "bytes": 1260,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/Barty-Bart/motion-graphics/d6e5d95e45167d95bb4260b9da4d674791143710/README.md",
+          "sha256": "86b6497e18d0098a371ce694e7029043d727e9d03a2d7fa895fa60ed6b7550df",
+          "bytes": 3047,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/explainer-default/SKILL.md",
+          "url": "https://raw.githubusercontent.com/Barty-Bart/motion-graphics/d6e5d95e45167d95bb4260b9da4d674791143710/skills/explainer-default/SKILL.md",
+          "sha256": "3dc4247d1e916cc070c432afbff4fb211e224ad463b4ca10c90c617abf68162e",
+          "bytes": 21739,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/explainer-engaging/SKILL.md",
+          "url": "https://raw.githubusercontent.com/Barty-Bart/motion-graphics/d6e5d95e45167d95bb4260b9da4d674791143710/skills/explainer-engaging/SKILL.md",
+          "sha256": "969a4114a2396cd62bc381da6c8ffe61b68e471d3e4f16206d74d7574340d656",
+          "bytes": 23722,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/explainer-high-energy/SKILL.md",
+          "url": "https://raw.githubusercontent.com/Barty-Bart/motion-graphics/d6e5d95e45167d95bb4260b9da4d674791143710/skills/explainer-high-energy/SKILL.md",
+          "sha256": "4aafa6ddae8bc81e4e621d2852d2d0675d421bbba318eb81334f4dac1556fdec",
+          "bytes": 20756,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/motion-broll/SKILL.md",
+          "url": "https://raw.githubusercontent.com/Barty-Bart/motion-graphics/d6e5d95e45167d95bb4260b9da4d674791143710/skills/motion-broll/SKILL.md",
+          "sha256": "78e7d064aba37b8b10ea39973c61200e3c16e325fa20074f97ab29e1df1866d2",
+          "bytes": 8941,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/object-separation/SKILL.md",
+          "url": "https://raw.githubusercontent.com/Barty-Bart/motion-graphics/d6e5d95e45167d95bb4260b9da4d674791143710/skills/object-separation/SKILL.md",
+          "sha256": "cf176a155dd3cd406dd948deafb316e09d6395ceaae018ba188b7bb47d08e002",
+          "bytes": 9414,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/sound-effects/SKILL.md",
+          "url": "https://raw.githubusercontent.com/Barty-Bart/motion-graphics/d6e5d95e45167d95bb4260b9da4d674791143710/skills/sound-effects/SKILL.md",
+          "sha256": "e41689babb1e8d847650aefbed9094bfe12f616cd53702cdab540ae8989e2ef4",
+          "bytes": 10043,
+          "downloaded_not_necessarily_read_in_full": true
+        }
+      ],
+      "installed": false,
+      "local_renderer_executed": false
+    },
+    {
+      "repo": "cth9191/animate",
+      "url": "https://github.com/cth9191/animate",
+      "commit": "7e5eb56feb2dd573f890e1b7b34748af43d58263",
+      "retrieved_utc": "2026-10-12T10:35:44.862917+00:00",
+      "tree_truncated": false,
+      "skill_paths": [
+        "plugins/animate/skills/animate/SKILL.md"
+      ],
+      "license_paths": [
+        "LICENSE"
+      ],
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/cth9191/animate/7e5eb56feb2dd573f890e1b7b34748af43d58263/LICENSE",
+          "sha256": "fe0cbecb2244c397885aae6962df8a0b7d43805d663ee9cda344d05b87bd8625",
+          "bytes": 1064,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/cth9191/animate/7e5eb56feb2dd573f890e1b7b34748af43d58263/README.md",
+          "sha256": "a70aaa9cbcd8f464edf700aa211950b05e38f133d6b1bee158e31dacd4eaf3a4",
+          "bytes": 8298,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "plugins/animate/skills/animate/SKILL.md",
+          "url": "https://raw.githubusercontent.com/cth9191/animate/7e5eb56feb2dd573f890e1b7b34748af43d58263/plugins/animate/skills/animate/SKILL.md",
+          "sha256": "1208ee4ab2458a4831a9816950cdba25d3869cbbd6a795c4fded995f88bc0761",
+          "bytes": 18231,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "plugins/animate/skills/animate/tools/review.mjs",
+          "url": "https://raw.githubusercontent.com/cth9191/animate/7e5eb56feb2dd573f890e1b7b34748af43d58263/plugins/animate/skills/animate/tools/review.mjs",
+          "sha256": "7e03d692cc647562c03bed715b06e6ec8a7661e74fc5f392a269b04774b2c6ee",
+          "bytes": 31352,
+          "downloaded_not_necessarily_read_in_full": true
+        }
+      ],
+      "installed": false,
+      "local_renderer_executed": false
+    },
+    {
+      "repo": "whaleyxbt/claude-motion",
+      "url": "https://github.com/whaleyxbt/claude-motion",
+      "commit": "e627941543d9988b155dc610bb9cc0115a5e365e",
+      "retrieved_utc": "2026-10-12T10:35:47.316181+00:00",
+      "tree_truncated": false,
+      "skill_paths": [
+        ".claude/skills/motion-design/SKILL.md",
+        ".claude/skills/review-loop/SKILL.md",
+        ".claude/skills/sound-design/SKILL.md",
+        ".claude/skills/web-sims/SKILL.md"
+      ],
+      "license_paths": [
+        "LICENSE"
+      ],
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/whaleyxbt/claude-motion/e627941543d9988b155dc610bb9cc0115a5e365e/LICENSE",
+          "sha256": "ca02fba63bfcc89f475a8672dd852a220005a17325fc05d7f2299f5adf7f10a4",
+          "bytes": 1066,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/whaleyxbt/claude-motion/e627941543d9988b155dc610bb9cc0115a5e365e/README.md",
+          "sha256": "5c5cfac190845a86292d16a58bb5e0533462c1c3e1d5956ef480a6942ed94519",
+          "bytes": 9502,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "package.json",
+          "url": "https://raw.githubusercontent.com/whaleyxbt/claude-motion/e627941543d9988b155dc610bb9cc0115a5e365e/package.json",
+          "sha256": "6dc85aba5bcc109a9dd0a3d49c2ab4c2dba4d9bcc8ab3e40a9e730174e5d01fa",
+          "bytes": 1693,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".claude/skills/motion-design/SKILL.md",
+          "url": "https://raw.githubusercontent.com/whaleyxbt/claude-motion/e627941543d9988b155dc610bb9cc0115a5e365e/.claude/skills/motion-design/SKILL.md",
+          "sha256": "241b4949d4dfc5a489b98399892a1b7e80abbe1e977ddbec612403d45997fd57",
+          "bytes": 5734,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".claude/skills/review-loop/SKILL.md",
+          "url": "https://raw.githubusercontent.com/whaleyxbt/claude-motion/e627941543d9988b155dc610bb9cc0115a5e365e/.claude/skills/review-loop/SKILL.md",
+          "sha256": "2b313265d9d977f4ca53561f0ce7510c4d653674e0e017dc2afc597259e79173",
+          "bytes": 2375,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".claude/skills/sound-design/SKILL.md",
+          "url": "https://raw.githubusercontent.com/whaleyxbt/claude-motion/e627941543d9988b155dc610bb9cc0115a5e365e/.claude/skills/sound-design/SKILL.md",
+          "sha256": "6f0da860ad05d0c067c65ecbab2ed2f01fc8ddcaed56c29c220ae91eeebdf176",
+          "bytes": 4907,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".claude/skills/web-sims/SKILL.md",
+          "url": "https://raw.githubusercontent.com/whaleyxbt/claude-motion/e627941543d9988b155dc610bb9cc0115a5e365e/.claude/skills/web-sims/SKILL.md",
+          "sha256": "a4b3b555b7da9bb145802ace61535b0b3155e464c7254bf25248a1d1a923284e",
+          "bytes": 2650,
+          "downloaded_not_necessarily_read_in_full": true
+        }
+      ],
+      "installed": false,
+      "local_renderer_executed": false
+    },
+    {
+      "repo": "haidrrrry/claude-remotion-skill",
+      "url": "https://github.com/haidrrrry/claude-remotion-skill",
+      "commit": "1dcbe5e3fc6cf970bd10d3cc05f0a8a5d19d0383",
+      "retrieved_utc": "2026-10-12T10:35:48.883023+00:00",
+      "tree_truncated": false,
+      "skill_paths": [
+        "remotion-motion-graphics/SKILL.md"
+      ],
+      "license_paths": [
+        "LICENSE"
+      ],
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/haidrrrry/claude-remotion-skill/1dcbe5e3fc6cf970bd10d3cc05f0a8a5d19d0383/LICENSE",
+          "sha256": "e9cb352fbe6212007b61e7c43982e4741852b1e467fe07093256ec04228f2b85",
+          "bytes": 1066,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/haidrrrry/claude-remotion-skill/1dcbe5e3fc6cf970bd10d3cc05f0a8a5d19d0383/README.md",
+          "sha256": "82e7c5108d204bbbbaf4d4b2ce77e62eb5fcdda0cd5b411853eb8fb9726b7d66",
+          "bytes": 8041,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "remotion-motion-graphics/SKILL.md",
+          "url": "https://raw.githubusercontent.com/haidrrrry/claude-remotion-skill/1dcbe5e3fc6cf970bd10d3cc05f0a8a5d19d0383/remotion-motion-graphics/SKILL.md",
+          "sha256": "7bc57dcc03c9812feb94b32785bb2fb26ab9740f523f7def580a1b372b3b6336",
+          "bytes": 7909,
+          "downloaded_not_necessarily_read_in_full": true
+        }
+      ],
+      "installed": false,
+      "local_renderer_executed": false
+    },
+    {
+      "repo": "motiondivision/motion",
+      "url": "https://github.com/motiondivision/motion",
+      "commit": "e6bf03ead39cae7a2c5f8fe902ce8a9c1a9a22e8",
+      "retrieved_utc": "2026-10-12T10:35:51.148906+00:00",
+      "tree_truncated": false,
+      "skill_paths": [
+        ".agents/skills/fix/SKILL.md",
+        ".agents/skills/improve/SKILL.md"
+      ],
+      "license_paths": [
+        "LICENSE.md",
+        "packages/framer-motion/LICENSE.md",
+        "packages/motion-dom/LICENSE.md",
+        "packages/motion-utils/LICENSE.md",
+        "packages/motion/LICENSE.md"
+      ],
+      "files": [
+        {
+          "path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/motiondivision/motion/e6bf03ead39cae7a2c5f8fe902ce8a9c1a9a22e8/LICENSE.md",
+          "sha256": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1",
+          "bytes": 1100,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/motiondivision/motion/e6bf03ead39cae7a2c5f8fe902ce8a9c1a9a22e8/README.md",
+          "sha256": "08915bb5254a4bc1fd47e8d7ea8fff0dcb470461f6fd6b59fb6d2f0bef0400df",
+          "bytes": 7475,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "package.json",
+          "url": "https://raw.githubusercontent.com/motiondivision/motion/e6bf03ead39cae7a2c5f8fe902ce8a9c1a9a22e8/package.json",
+          "sha256": "e2aaa056ef06d3f6bc25caa76516523e6d2cfbe3c91024a4535ed73ac93a36fa",
+          "bytes": 3217,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/fix/SKILL.md",
+          "url": "https://raw.githubusercontent.com/motiondivision/motion/e6bf03ead39cae7a2c5f8fe902ce8a9c1a9a22e8/.agents/skills/fix/SKILL.md",
+          "sha256": "2af71853affa9bdf654577d8626b93e912844809f36049a113c5f7b8e88b696a",
+          "bytes": 6546,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/improve/SKILL.md",
+          "url": "https://raw.githubusercontent.com/motiondivision/motion/e6bf03ead39cae7a2c5f8fe902ce8a9c1a9a22e8/.agents/skills/improve/SKILL.md",
+          "sha256": "6fec25022b25a049dbe5c18148e6eea9897150c2eeeeb39207732f949a3c797d",
+          "bytes": 12853,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "packages/motion/package.json",
+          "url": "https://raw.githubusercontent.com/motiondivision/motion/e6bf03ead39cae7a2c5f8fe902ce8a9c1a9a22e8/packages/motion/package.json",
+          "sha256": "94db8d98a77bfa439c249b38b751f79e2c749af053777221ba8585d5f5824da4",
+          "bytes": 3904,
+          "downloaded_not_necessarily_read_in_full": true
+        }
+      ],
+      "installed": false,
+      "local_renderer_executed": false
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "commit": "86521b94f592bcf0ca86aba63068893cf658af16",
+      "retrieved_utc": "2026-10-12T10:35:51.550110+00:00",
+      "tree_truncated": false,
+      "skill_paths": [
+        ".agents/skills/captions-overlay/SKILL.md",
+        ".agents/skills/changelog-video/SKILL.md",
+        ".agents/skills/cut-the-curve/SKILL.md",
+        ".agents/skills/motion-doctrine/SKILL.md",
+        ".agents/skills/oversized-cursor/SKILL.md",
+        ".agents/skills/seam-craft/SKILL.md",
+        ".claude/skills/captions-overlay/SKILL.md",
+        ".claude/skills/changelog-video/SKILL.md",
+        ".claude/skills/cut-the-curve/SKILL.md",
+        ".claude/skills/motion-doctrine/SKILL.md",
+        ".claude/skills/oversized-cursor/SKILL.md",
+        ".claude/skills/seam-craft/SKILL.md",
+        "registry/blocks/canopy-part-title/SKILL.md",
+        "registry/blocks/code-slice-hero/SKILL.md",
+        "registry/blocks/cuboid-carousel/SKILL.md",
+        "registry/blocks/frost-sequence-camera-orbit/SKILL.md",
+        "registry/blocks/glass-shard-title/SKILL.md",
+        "registry/blocks/orbit-card/SKILL.md",
+        "registry/blocks/wireframe-portal-title/SKILL.md",
+        "skills/embedded-captions/SKILL.md",
+        "skills/faceless-explainer/SKILL.md",
+        "skills/figma/SKILL.md",
+        "skills/general-video/SKILL.md",
+        "skills/hyperframes-animation/SKILL.md",
+        "skills/hyperframes-audio/SKILL.md",
+        "skills/hyperframes-cli/SKILL.md",
+        "skills/hyperframes-core/SKILL.md",
+        "skills/hyperframes-creative/SKILL.md",
+        "skills/hyperframes-keyframes/SKILL.md",
+        "skills/hyperframes-registry/SKILL.md",
+        "skills/hyperframes-studio/SKILL.md",
+        "skills/hyperframes/SKILL.md",
+        "skills/media-use/SKILL.md",
+        "skills/motion-graphics/SKILL.md",
+        "skills/music-to-video/SKILL.md",
+        "skills/pr-to-video/SKILL.md",
+        "skills/product-launch-video/SKILL.md",
+        "skills/remotion-to-hyperframes/SKILL.md",
+        "skills/slideshow/SKILL.md",
+        "skills/talking-head-recut/SKILL.md"
+      ],
+      "license_paths": [
+        "LICENSE"
+      ],
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/LICENSE",
+          "sha256": "4259155fb06f127687ee7b0a8a3682d45132db0f2da26cbc0b7a2d1e796436b8",
+          "bytes": 10763,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/README.md",
+          "sha256": "3e8f26d5e35c6a8c32c661bf1439443d8eee332eedc9bf1a32bfe3dc417c218e",
+          "bytes": 28950,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "package.json",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/package.json",
+          "sha256": "5e6e655661033ca79a057583e3c0bc84c8a3c528ac854666c6509172da166132",
+          "bytes": 7700,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/captions-overlay/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/.agents/skills/captions-overlay/SKILL.md",
+          "sha256": "dde58d4fcad6b244c2b0295636758a61c44d015ffa59e982e56eee3c60b4c66b",
+          "bytes": 6095,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/changelog-video/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/.agents/skills/changelog-video/SKILL.md",
+          "sha256": "5f8ca7a413e53616727408d34dcee770bda6cabe37cfe24034e2b49e041c2121",
+          "bytes": 13447,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/cut-the-curve/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/.agents/skills/cut-the-curve/SKILL.md",
+          "sha256": "c97df202caea16949a54afdcbc7007c60063028f73bb56ffeaec630ccb0d5145",
+          "bytes": 18859,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/motion-doctrine/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/.agents/skills/motion-doctrine/SKILL.md",
+          "sha256": "d4d20aa33a57784154ffe55b83424037842269e59cc1e821c1b18bd541877142",
+          "bytes": 11936,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/oversized-cursor/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/.agents/skills/oversized-cursor/SKILL.md",
+          "sha256": "a176b1f251c37908a3a4dc88c76fb389b100a33447b7d2743e4c9acc08a252fe",
+          "bytes": 6625,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/seam-craft/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/.agents/skills/seam-craft/SKILL.md",
+          "sha256": "c5aa27c6d6c088fa0bec2941692927975dcd382bc568f6f0ba8518e049e092fe",
+          "bytes": 4865,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".claude/skills/captions-overlay/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/.claude/skills/captions-overlay/SKILL.md",
+          "sha256": "dde58d4fcad6b244c2b0295636758a61c44d015ffa59e982e56eee3c60b4c66b",
+          "bytes": 6095,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".claude/skills/changelog-video/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/.claude/skills/changelog-video/SKILL.md",
+          "sha256": "5f8ca7a413e53616727408d34dcee770bda6cabe37cfe24034e2b49e041c2121",
+          "bytes": 13447,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".claude/skills/cut-the-curve/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/.claude/skills/cut-the-curve/SKILL.md",
+          "sha256": "c97df202caea16949a54afdcbc7007c60063028f73bb56ffeaec630ccb0d5145",
+          "bytes": 18859,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".claude/skills/motion-doctrine/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/.claude/skills/motion-doctrine/SKILL.md",
+          "sha256": "d4d20aa33a57784154ffe55b83424037842269e59cc1e821c1b18bd541877142",
+          "bytes": 11936,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".claude/skills/oversized-cursor/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/.claude/skills/oversized-cursor/SKILL.md",
+          "sha256": "a176b1f251c37908a3a4dc88c76fb389b100a33447b7d2743e4c9acc08a252fe",
+          "bytes": 6625,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".claude/skills/seam-craft/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/.claude/skills/seam-craft/SKILL.md",
+          "sha256": "c5aa27c6d6c088fa0bec2941692927975dcd382bc568f6f0ba8518e049e092fe",
+          "bytes": 4865,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "registry/blocks/canopy-part-title/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/registry/blocks/canopy-part-title/SKILL.md",
+          "sha256": "10d0920d89adca86e11f30137d31b4236ce37913b0a00004c2b0305fd9923783",
+          "bytes": 4019,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "registry/blocks/code-slice-hero/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/registry/blocks/code-slice-hero/SKILL.md",
+          "sha256": "00cc6766b45b55cd92b33c30097bcc6cdff2235de1b6295c2be105162322dafc",
+          "bytes": 4808,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "registry/blocks/cuboid-carousel/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/registry/blocks/cuboid-carousel/SKILL.md",
+          "sha256": "01f82f43969ff0ab219017956b789da93a9adec991d4fa3ae675b503a2da6c04",
+          "bytes": 7197,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "registry/blocks/frost-sequence-camera-orbit/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/registry/blocks/frost-sequence-camera-orbit/SKILL.md",
+          "sha256": "e579e7f870a9be0a88a6a9916aa2076d3e771d53b48d5004da3111711355c6e6",
+          "bytes": 38989,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "registry/blocks/glass-shard-title/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/registry/blocks/glass-shard-title/SKILL.md",
+          "sha256": "7c4c3c98a4f9cd5a4c50af3752c972aa1e46bfaf4c271c9181539ba305b8d365",
+          "bytes": 5382,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "registry/blocks/orbit-card/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/registry/blocks/orbit-card/SKILL.md",
+          "sha256": "78af47b211816633837a76cd0951ecc83fbaba50ab7f5615d9795cc17ea08a24",
+          "bytes": 3555,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "registry/blocks/wireframe-portal-title/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/registry/blocks/wireframe-portal-title/SKILL.md",
+          "sha256": "553d548c2316b24994e47cd2edbf61cccf2a206b5620017fc3df81cad260afa5",
+          "bytes": 4239,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/embedded-captions/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/skills/embedded-captions/SKILL.md",
+          "sha256": "983a4e61310d05c4a5c5a4fff2262c24ef1929478831e3afb76b0ab584b09bce",
+          "bytes": 34642,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/hyperframes-core/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/skills/hyperframes-core/SKILL.md",
+          "sha256": "18ac7784765cc29af5a4d88f2a63a15deaf5395985009af188b5e3718edcfe3d",
+          "bytes": 12643,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/hyperframes-animation/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/skills/hyperframes-animation/SKILL.md",
+          "sha256": "b35f1f8eff68e9ff480a5d5d343a1bf5a40ebb7d0d9be20b0b980cfdb36047f3",
+          "bytes": 8471,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/hyperframes-cli/SKILL.md",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/skills/hyperframes-cli/SKILL.md",
+          "sha256": "0026e6402ee0b9bfd8cb85bb3b96e3fecb496947a9a588e950abb54e238af92d",
+          "bytes": 24378,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "packages/cli/src/commands/render/execute.ts",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/packages/cli/src/commands/render/execute.ts",
+          "sha256": "ac91474f7a4756d4b6e9635c05d56909be26f79e11cb32e2397abfd444676b6b",
+          "bytes": 13969,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "packages/cli/package.json",
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/packages/cli/package.json",
+          "sha256": "74339de69b32af00f76538ba3c132ffd22d8114a2c0ffec088c62ace7f2f18ad",
+          "bytes": 2637,
+          "downloaded_not_necessarily_read_in_full": true
+        }
+      ],
+      "installed": false,
+      "local_renderer_executed": false
+    },
+    {
+      "repo": "remotion-dev/remotion",
+      "url": "https://github.com/remotion-dev/remotion",
+      "commit": "84e4d06d82a5b0388050a5bba7c49b0868c01018",
+      "retrieved_utc": "2026-10-12T10:35:51.788921+00:00",
+      "tree_truncated": false,
+      "skill_paths": [
+        ".agents/skills/add-bug/SKILL.md",
+        ".agents/skills/add-cli-option/SKILL.md",
+        ".agents/skills/add-effect/SKILL.md",
+        ".agents/skills/add-expert/SKILL.md",
+        ".agents/skills/add-new-package/SKILL.md",
+        ".agents/skills/add-sfx/SKILL.md",
+        ".agents/skills/add-webcodecs-bug/SKILL.md",
+        ".agents/skills/canvas-capture-extension/SKILL.md",
+        ".agents/skills/checkout/SKILL.md",
+        ".agents/skills/convert/SKILL.md",
+        ".agents/skills/deprecate-api/SKILL.md",
+        ".agents/skills/docs-demo/SKILL.md",
+        ".agents/skills/docs/SKILL.md",
+        ".agents/skills/experts/SKILL.md",
+        ".agents/skills/find-unplanned-issues/SKILL.md",
+        ".agents/skills/fix-dependabot/SKILL.md",
+        ".agents/skills/flake/SKILL.md",
+        ".agents/skills/formatting/SKILL.md",
+        ".agents/skills/gh-stack/SKILL.md",
+        ".agents/skills/homepage-video-assets/SKILL.md",
+        ".agents/skills/import-canvas-capture/SKILL.md",
+        ".agents/skills/install-canvas-capture-browser/SKILL.md",
+        ".agents/skills/interactivity-best-practices/SKILL.md",
+        ".agents/skills/issue-management/SKILL.md",
+        ".agents/skills/issue/SKILL.md",
+        ".agents/skills/merge/SKILL.md",
+        ".agents/skills/no-pointer/SKILL.md",
+        ".agents/skills/nullable-new-params/SKILL.md",
+        ".agents/skills/offload-r2/SKILL.md",
+        ".agents/skills/player-example/SKILL.md",
+        ".agents/skills/pr-name/SKILL.md",
+        ".agents/skills/pr-ready/SKILL.md",
+        ".agents/skills/pr/SKILL.md",
+        ".agents/skills/react-scan/SKILL.md",
+        ".agents/skills/release/SKILL.md",
+        ".agents/skills/remotion-new-markup/SKILL.md",
+        ".agents/skills/scaffold-element/SKILL.md",
+        ".agents/skills/skill-locations/SKILL.md",
+        ".agents/skills/studio-config-option-lifecycle/SKILL.md",
+        ".agents/skills/studio-css-reset/SKILL.md",
+        ".agents/skills/studio-mode/SKILL.md",
+        ".agents/skills/studio-perf/SKILL.md",
+        ".agents/skills/studio/SKILL.md",
+        ".agents/skills/update-chrome-binaries-test-region/SKILL.md",
+        ".agents/skills/update-codex-plugin/SKILL.md",
+        ".agents/skills/update-from-upstream-main/SKILL.md",
+        ".agents/skills/update-legal-pdfs/SKILL.md",
+        ".agents/skills/update-remotion-rust-ffmpeg/SKILL.md",
+        ".agents/skills/update-stars/SKILL.md",
+        ".agents/skills/update-version/SKILL.md",
+        ".agents/skills/upgrade-caniuse/SKILL.md",
+        ".agents/skills/upgrade-mediabunny/SKILL.md",
+        ".agents/skills/upload-element-previews/SKILL.md",
+        ".agents/skills/upload-r2/SKILL.md",
+        ".agents/skills/v5-breaking-changes/SKILL.md",
+        ".agents/skills/vercel/SKILL.md",
+        ".agents/skills/version/SKILL.md",
+        ".agents/skills/video-report/SKILL.md",
+        ".agents/skills/visual-mode/SKILL.md",
+        ".agents/skills/web-renderer-test/SKILL.md",
+        ".agents/skills/writing-docs/SKILL.md",
+        ".agents/skills/writing-tests/SKILL.md",
+        "packages/codex-plugin/skills/remotion-best-practices/SKILL.md",
+        "packages/codex-plugin/skills/remotion-captions/SKILL.md",
+        "packages/codex-plugin/skills/remotion-create/SKILL.md",
+        "packages/codex-plugin/skills/remotion-docs/SKILL.md",
+        "packages/codex-plugin/skills/remotion-interactivity/SKILL.md",
+        "packages/codex-plugin/skills/remotion-maps/SKILL.md",
+        "packages/codex-plugin/skills/remotion-markup/SKILL.md",
+        "packages/codex-plugin/skills/remotion-multimedia/SKILL.md",
+        "packages/codex-plugin/skills/remotion-render/SKILL.md",
+        "packages/codex-plugin/skills/remotion-saas/SKILL.md",
+        "packages/codex-plugin/skills/remotion-studio/SKILL.md",
+        "packages/codex-plugin/skills/remotion-upgrade/SKILL.md",
+        "packages/skills/skills/remotion-best-practices/SKILL.md",
+        "packages/skills/skills/remotion-captions/SKILL.md",
+        "packages/skills/skills/remotion-create/SKILL.md",
+        "packages/skills/skills/remotion-docs/SKILL.md",
+        "packages/skills/skills/remotion-interactivity/SKILL.md",
+        "packages/skills/skills/remotion-maps/SKILL.md",
+        "packages/skills/skills/remotion-markup/SKILL.md",
+        "packages/skills/skills/remotion-multimedia/SKILL.md",
+        "packages/skills/skills/remotion-render/SKILL.md",
+        "packages/skills/skills/remotion-saas/SKILL.md",
+        "packages/skills/skills/remotion-studio/SKILL.md",
+        "packages/skills/skills/remotion-upgrade/SKILL.md"
+      ],
+      "license_paths": [
+        "LICENSE.md",
+        "packages/agent-plugin/LICENSE",
+        "packages/animation-utils/LICENSE.md",
+        "packages/core/LICENSE.md",
+        "packages/google-fonts/LICENSE.md",
+        "packages/lambda-python/LICENSE",
+        "packages/media-utils/LICENSE.md",
+        "packages/paths/LICENSE.md",
+        "packages/preload/LICENSE.md",
+        "packages/renderer/vendor/yauzl-patched/LICENSE",
+        "packages/shapes/LICENSE.md",
+        "packages/template-three/LICENSE.md"
+      ],
+      "files": [
+        {
+          "path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/LICENSE.md",
+          "sha256": "bd65083b940f61904f6ef298aade918a7cad72a3e35bc406e36fab365844b673",
+          "bytes": 2823,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/README.md",
+          "sha256": "867c11b80c8ba7a56b3fdaff4501cf8871529c9bb9cf50f2ee87cae9f4d6a505",
+          "bytes": 4178,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "package.json",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/package.json",
+          "sha256": "a2d663424f2cab0fcaef2c06e1c35e73b5cd043d388c5cd102d61b41d7b34cb1",
+          "bytes": 8219,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/add-bug/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/.agents/skills/add-bug/SKILL.md",
+          "sha256": "74c28bb3cfba7e0daa43e1d5d9828b25142b7b8a75bdd14747b3e9c3924fa4d5",
+          "bytes": 857,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/add-cli-option/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/.agents/skills/add-cli-option/SKILL.md",
+          "sha256": "0ddcfd34027f52a6cc1aedf39fe7aa4adccab932a38cc6762868e9326732f9c3",
+          "bytes": 6194,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/add-effect/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/.agents/skills/add-effect/SKILL.md",
+          "sha256": "df8e3e92fdd608aa391bece4fe17d5d352b976a0840d3b17b4a130f4ebbb3d32",
+          "bytes": 11030,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/add-expert/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/.agents/skills/add-expert/SKILL.md",
+          "sha256": "1114e3aac876690982933d32d10e8d1abc4ac5dfbcfb10bccb768d5fdbe90fa1",
+          "bytes": 1568,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/add-new-package/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/.agents/skills/add-new-package/SKILL.md",
+          "sha256": "eb1388be42061d06e49107190d7f476fd372910201ec0cce8b6a933730f79517",
+          "bytes": 3137,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/add-sfx/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/.agents/skills/add-sfx/SKILL.md",
+          "sha256": "91a686912d876b9259134e9d0e397939d892848461db0a9d44c17ac826a533e9",
+          "bytes": 3266,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/add-webcodecs-bug/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/.agents/skills/add-webcodecs-bug/SKILL.md",
+          "sha256": "6107495f79e6eedbcf28737872ca8b7d2975c17f15b6cebd4d9516d257958460",
+          "bytes": 1644,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/canvas-capture-extension/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/.agents/skills/canvas-capture-extension/SKILL.md",
+          "sha256": "8fa62afdba06203b7d107f1a93cb54dea71c6547b293eb4b58c8881fa98ba9cc",
+          "bytes": 3627,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/checkout/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/.agents/skills/checkout/SKILL.md",
+          "sha256": "ac1eaf9db041d2bcd0b588353847b714b48787092a8b4238c7c14742eb373792",
+          "bytes": 662,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/convert/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/.agents/skills/convert/SKILL.md",
+          "sha256": "fe9c1f5ec4710663818f1d88cf0bf1abb0e149aa41e41763b9a11365a5d0795d",
+          "bytes": 986,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/deprecate-api/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/.agents/skills/deprecate-api/SKILL.md",
+          "sha256": "65551650fa02f6a3b450ac8b6fff45a772a751ce61679b818548d271e6296afe",
+          "bytes": 2114,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/docs-demo/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/.agents/skills/docs-demo/SKILL.md",
+          "sha256": "75f55d662b363117184f50f69fdc8bd91db2af2d18a36eeaf7fae8c0bd4f308c",
+          "bytes": 2198,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/docs/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/.agents/skills/docs/SKILL.md",
+          "sha256": "d5c599adf9e506b82f072440180b474b4d1137f758ef1ca7d0d2980179108561",
+          "bytes": 990,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/experts/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/.agents/skills/experts/SKILL.md",
+          "sha256": "af547215ce49efadcdb335254034732f3038f00cb745a5c7bc380c35957371ea",
+          "bytes": 3198,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/find-unplanned-issues/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/.agents/skills/find-unplanned-issues/SKILL.md",
+          "sha256": "c37ef70ca6dccf1e41c504b7970cb3d634c0f1f684ef068d0c40471b14152db5",
+          "bytes": 2692,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/fix-dependabot/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/.agents/skills/fix-dependabot/SKILL.md",
+          "sha256": "0cb8a21a39faa7ad54a70dae763b123c4a8abd3d48db11c7be5517cfabcf5a15",
+          "bytes": 2048,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/flake/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/.agents/skills/flake/SKILL.md",
+          "sha256": "1756f574441d92e1ce3ccae8e1e8a312fba6f42393c15283f48e7232c28a5553",
+          "bytes": 5283,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/formatting/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/.agents/skills/formatting/SKILL.md",
+          "sha256": "f86d68ccd84fc994f21c95ede7ed54d88975a603095523da4c3d231d838eb04f",
+          "bytes": 266,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/gh-stack/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/.agents/skills/gh-stack/SKILL.md",
+          "sha256": "51391c2c1164a140304f857825ba338f4fdf1a727550005b4e3e7fb1a3d8d739",
+          "bytes": 9525,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": ".agents/skills/homepage-video-assets/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/remotion/84e4d06d82a5b0388050a5bba7c49b0868c01018/.agents/skills/homepage-video-assets/SKILL.md",
+          "sha256": "ae31c28f81391c6462f102258e05d007cf3c81ed8accc659cf8918d247e080e1",
+          "bytes": 3050,
+          "downloaded_not_necessarily_read_in_full": true
+        }
+      ],
+      "installed": false,
+      "local_renderer_executed": false
+    },
+    {
+      "repo": "remotion-dev/skills",
+      "url": "https://github.com/remotion-dev/skills",
+      "commit": "7ba4dcf8ebe1626b00baa41e1f2478113719b60b",
+      "retrieved_utc": "2026-10-12T10:35:54.083234+00:00",
+      "tree_truncated": false,
+      "skill_paths": [
+        "skills/remotion-best-practices/SKILL.md",
+        "skills/remotion-captions/SKILL.md",
+        "skills/remotion-create/SKILL.md",
+        "skills/remotion-docs/SKILL.md",
+        "skills/remotion-interactivity/SKILL.md",
+        "skills/remotion-maps/SKILL.md",
+        "skills/remotion-markup/SKILL.md",
+        "skills/remotion-multimedia/SKILL.md",
+        "skills/remotion-render/SKILL.md",
+        "skills/remotion-saas/SKILL.md",
+        "skills/remotion-studio/SKILL.md",
+        "skills/remotion-upgrade/SKILL.md"
+      ],
+      "license_paths": [],
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/skills/7ba4dcf8ebe1626b00baa41e1f2478113719b60b/README.md",
+          "sha256": "6e0e9a0bf53e2c7f14b3f35a5ad6195cc07ac20c5a0bb1fd8ffe3198408cf50d",
+          "bytes": 2805,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "package.json",
+          "url": "https://raw.githubusercontent.com/remotion-dev/skills/7ba4dcf8ebe1626b00baa41e1f2478113719b60b/package.json",
+          "sha256": "a2ade7b33689e8396edd31a0132f6316259804aa2140527c36b3eaeb236b83cd",
+          "bytes": 627,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/remotion-best-practices/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/skills/7ba4dcf8ebe1626b00baa41e1f2478113719b60b/skills/remotion-best-practices/SKILL.md",
+          "sha256": "22948fb13615aee79d02187ce1fb8ab79be296fb029d28f872466eeb8d0fc86b",
+          "bytes": 4215,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/remotion-captions/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/skills/7ba4dcf8ebe1626b00baa41e1f2478113719b60b/skills/remotion-captions/SKILL.md",
+          "sha256": "76c2e044a006d3ada9cc820b6a208d0ca993bccbc5b1b5e12bdc8bf5b071f9ce",
+          "bytes": 1137,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/remotion-create/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/skills/7ba4dcf8ebe1626b00baa41e1f2478113719b60b/skills/remotion-create/SKILL.md",
+          "sha256": "c3479cf12efe9d79d900532acaab7512065b33785172aa278e5fccf639394eb3",
+          "bytes": 2711,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/remotion-docs/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/skills/7ba4dcf8ebe1626b00baa41e1f2478113719b60b/skills/remotion-docs/SKILL.md",
+          "sha256": "5595bed0eb7d8bb4fe5307f04950513e436b8fc71a1202199e2533366cf81588",
+          "bytes": 1340,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/remotion-interactivity/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/skills/7ba4dcf8ebe1626b00baa41e1f2478113719b60b/skills/remotion-interactivity/SKILL.md",
+          "sha256": "0495256915726f0825471194e60bd133528b9a38720c9e54b40370a7b0d6c8f4",
+          "bytes": 19151,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/remotion-maps/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/skills/7ba4dcf8ebe1626b00baa41e1f2478113719b60b/skills/remotion-maps/SKILL.md",
+          "sha256": "5237237d87917300905049ad2d20eb13d54d0a93d264e5cb4439947305cae279",
+          "bytes": 1030,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/remotion-markup/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/skills/7ba4dcf8ebe1626b00baa41e1f2478113719b60b/skills/remotion-markup/SKILL.md",
+          "sha256": "9de745835f04339dcf149e115619b640428e6940d3ca7a6d3d578fbebc16a023",
+          "bytes": 18052,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/remotion-multimedia/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/skills/7ba4dcf8ebe1626b00baa41e1f2478113719b60b/skills/remotion-multimedia/SKILL.md",
+          "sha256": "e29aa045943cdad6cc71dc2c7c2b0df7f27b92402e6709f177ebe1afc36fb3b5",
+          "bytes": 705,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/remotion-render/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/skills/7ba4dcf8ebe1626b00baa41e1f2478113719b60b/skills/remotion-render/SKILL.md",
+          "sha256": "4f7e905682d2b4ca4b33629ad7c3fcb406618b1d1df05aecc1b0519e0eefb8d1",
+          "bytes": 711,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/remotion-saas/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/skills/7ba4dcf8ebe1626b00baa41e1f2478113719b60b/skills/remotion-saas/SKILL.md",
+          "sha256": "42eaef12be7de128d01d394540eaf72f1c7c35abfda605eb50dbcf611bbdea0c",
+          "bytes": 1053,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/remotion-studio/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/skills/7ba4dcf8ebe1626b00baa41e1f2478113719b60b/skills/remotion-studio/SKILL.md",
+          "sha256": "c3f91d99d1467241dadabf3832b706d0265e9c3b3c86e33b95deb80667860093",
+          "bytes": 1611,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/remotion-upgrade/SKILL.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/skills/7ba4dcf8ebe1626b00baa41e1f2478113719b60b/skills/remotion-upgrade/SKILL.md",
+          "sha256": "409e6767abeb56b440e2e711942ac86e12d5249bc8a266af0f4eb4f57635f0c8",
+          "bytes": 1930,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/remotion-markup/rules/animations.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/skills/7ba4dcf8ebe1626b00baa41e1f2478113719b60b/skills/remotion-markup/rules/animations.md",
+          "error": "HTTP Error 404: Not Found",
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/remotion-markup/rules/timing.md",
+          "url": "https://raw.githubusercontent.com/remotion-dev/skills/7ba4dcf8ebe1626b00baa41e1f2478113719b60b/skills/remotion-markup/rules/timing.md",
+          "error": "HTTP Error 404: Not Found",
+          "downloaded_not_necessarily_read_in_full": true
+        }
+      ],
+      "installed": false,
+      "local_renderer_executed": false
+    },
+    {
+      "repo": "greensock/gsap-skills",
+      "url": "https://github.com/greensock/gsap-skills",
+      "commit": "aed9cfd3277740755f6bfc1155c7aa645403b760",
+      "retrieved_utc": "2026-10-12T10:35:55.112177+00:00",
+      "tree_truncated": false,
+      "skill_paths": [
+        "skills/gsap-core/SKILL.md",
+        "skills/gsap-frameworks/SKILL.md",
+        "skills/gsap-performance/SKILL.md",
+        "skills/gsap-plugins/SKILL.md",
+        "skills/gsap-react/SKILL.md",
+        "skills/gsap-scrolltrigger/SKILL.md",
+        "skills/gsap-timeline/SKILL.md",
+        "skills/gsap-utils/SKILL.md"
+      ],
+      "license_paths": [
+        "LICENSE"
+      ],
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/greensock/gsap-skills/aed9cfd3277740755f6bfc1155c7aa645403b760/LICENSE",
+          "sha256": "51b04b06556662dd817e8f4aa6d06bc7139dc73739e1319a7233cfde3e147b90",
+          "bytes": 1066,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/greensock/gsap-skills/aed9cfd3277740755f6bfc1155c7aa645403b760/README.md",
+          "sha256": "2cd27948cd1486056271d8d962918eec074e9956b594111b5f84304ec1c13914",
+          "bytes": 8508,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/gsap-core/SKILL.md",
+          "url": "https://raw.githubusercontent.com/greensock/gsap-skills/aed9cfd3277740755f6bfc1155c7aa645403b760/skills/gsap-core/SKILL.md",
+          "sha256": "3887b47e050ab5afbe2a9a820f23d39fa02ab785e06a343be44c6f91d84d12b3",
+          "bytes": 14792,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/gsap-frameworks/SKILL.md",
+          "url": "https://raw.githubusercontent.com/greensock/gsap-skills/aed9cfd3277740755f6bfc1155c7aa645403b760/skills/gsap-frameworks/SKILL.md",
+          "sha256": "842d9d3659ec3ddc8abbdc524708f8facf81f468ac25d0577f48c759c4fa31e6",
+          "bytes": 10621,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/gsap-performance/SKILL.md",
+          "url": "https://raw.githubusercontent.com/greensock/gsap-skills/aed9cfd3277740755f6bfc1155c7aa645403b760/skills/gsap-performance/SKILL.md",
+          "sha256": "cb5408d6fba707aabcbfe3320317a14c1f8fca6070074e5261047930f50d441e",
+          "bytes": 4139,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/gsap-plugins/SKILL.md",
+          "url": "https://raw.githubusercontent.com/greensock/gsap-skills/aed9cfd3277740755f6bfc1155c7aa645403b760/skills/gsap-plugins/SKILL.md",
+          "sha256": "5838b856c74c07fbc9fa99b6dfd1eee34ea554c3e530c30e0d58014b707d70a4",
+          "bytes": 21579,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/gsap-react/SKILL.md",
+          "url": "https://raw.githubusercontent.com/greensock/gsap-skills/aed9cfd3277740755f6bfc1155c7aa645403b760/skills/gsap-react/SKILL.md",
+          "sha256": "88e2a5312b45e8cc7b3c496637ff5bc9af2ae9c925b555c8b235b34cbc989d74",
+          "bytes": 6565,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/gsap-scrolltrigger/SKILL.md",
+          "url": "https://raw.githubusercontent.com/greensock/gsap-skills/aed9cfd3277740755f6bfc1155c7aa645403b760/skills/gsap-scrolltrigger/SKILL.md",
+          "sha256": "9351b6666a4749c0740406ea363aaccb99a087ff45cc5e8b99a0f367facf3ef4",
+          "bytes": 18390,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/gsap-timeline/SKILL.md",
+          "url": "https://raw.githubusercontent.com/greensock/gsap-skills/aed9cfd3277740755f6bfc1155c7aa645403b760/skills/gsap-timeline/SKILL.md",
+          "sha256": "1a8b0f39cc4be3ed3d834b89672e4ae2f151b901dc3450bebf10bbc45379fe02",
+          "bytes": 4394,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/gsap-utils/SKILL.md",
+          "url": "https://raw.githubusercontent.com/greensock/gsap-skills/aed9cfd3277740755f6bfc1155c7aa645403b760/skills/gsap-utils/SKILL.md",
+          "sha256": "1927bcc4ea95b38203404ad5ea1d060b15c4a886c65ae53e885ff1793aabe0ba",
+          "bytes": 12093,
+          "downloaded_not_necessarily_read_in_full": true
+        }
+      ],
+      "installed": false,
+      "local_renderer_executed": false
+    },
+    {
+      "repo": "LottieFiles/motion-design-skill",
+      "url": "https://github.com/LottieFiles/motion-design-skill",
+      "commit": "f9a8a041b85185ee4881b3471d3415e939aac772",
+      "retrieved_utc": "2026-10-12T10:36:00.699163+00:00",
+      "tree_truncated": false,
+      "skill_paths": [
+        "skills/motion-design/SKILL.md"
+      ],
+      "license_paths": [
+        "LICENSE"
+      ],
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/LottieFiles/motion-design-skill/f9a8a041b85185ee4881b3471d3415e939aac772/LICENSE",
+          "sha256": "9fc2e8685daa09e28d54b6afa8a38f168417c5735a3cd676c80c159785e93a80",
+          "bytes": 1068,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/LottieFiles/motion-design-skill/f9a8a041b85185ee4881b3471d3415e939aac772/README.md",
+          "sha256": "9d43476646e1d0ae0f082d40877e19ce14dbe0215dd32c3887e8aad731959b03",
+          "bytes": 3589,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/motion-design/SKILL.md",
+          "url": "https://raw.githubusercontent.com/LottieFiles/motion-design-skill/f9a8a041b85185ee4881b3471d3415e939aac772/skills/motion-design/SKILL.md",
+          "sha256": "8729ecbc7e5736c1295baaa8ba0384bb4b1aac9cf91b83fcdc64d9548a57bb19",
+          "bytes": 12580,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "skills/motion-design/director/context-adaptation.md",
+          "url": "https://raw.githubusercontent.com/LottieFiles/motion-design-skill/f9a8a041b85185ee4881b3471d3415e939aac772/skills/motion-design/director/context-adaptation.md",
+          "sha256": "550e96a1c8c369513304ee74c0e89b63168bc7287b83e9ed5685bb65609986b3",
+          "bytes": 3066,
+          "downloaded_not_necessarily_read_in_full": true
+        }
+      ],
+      "installed": false,
+      "local_renderer_executed": false
+    },
+    {
+      "repo": "199-biotechnologies/motion-dev-animations-skill",
+      "url": "https://github.com/199-biotechnologies/motion-dev-animations-skill",
+      "commit": "3feedfb4dba8adae40fc9a5f9a23e3dda2121205",
+      "retrieved_utc": "2026-10-12T10:39:00.978989+00:00",
+      "tree_truncated": false,
+      "skill_paths": [
+        "SKILL.md"
+      ],
+      "license_paths": [
+        "LICENSE"
+      ],
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/199-biotechnologies/motion-dev-animations-skill/3feedfb4dba8adae40fc9a5f9a23e3dda2121205/LICENSE",
+          "sha256": "97daaa79e07357dc36ea84a8b72823ffe0e358b2cbbc92a7402e5a9edfb195f7",
+          "bytes": 1076,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/199-biotechnologies/motion-dev-animations-skill/3feedfb4dba8adae40fc9a5f9a23e3dda2121205/README.md",
+          "sha256": "2e6e03e6132ee1a8dc7c3eb1deadd5d64608ce0a72be8487efbe4a10fe7fa698",
+          "bytes": 7941,
+          "downloaded_not_necessarily_read_in_full": true
+        },
+        {
+          "path": "SKILL.md",
+          "url": "https://raw.githubusercontent.com/199-biotechnologies/motion-dev-animations-skill/3feedfb4dba8adae40fc9a5f9a23e3dda2121205/SKILL.md",
+          "sha256": "30228f629bcc1b0c245a2890eeec6d74a0bdcc8b38405b5adb9994b35930ba29",
+          "bytes": 11328,
+          "downloaded_not_necessarily_read_in_full": true
+        }
+      ],
+      "installed": false,
+      "local_renderer_executed": false
+    }
+  ]
+}

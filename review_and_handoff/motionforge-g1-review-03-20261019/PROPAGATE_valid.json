@@ -1,0 +1,16 @@
+{
+  "command": [
+    "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\venv\\Scripts\\python.exe",
+    "-B",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-03-fixtures\\propagate_driver.py",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-03-20261019\\candidate\\task\\corrections\\identity\\r6\\scripts",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-03-fixtures\\propagate_valid",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-03-fixtures\\fixture_blend_child.py"
+  ],
+  "cwd": "None",
+  "started_utc": "2026-10-19T11:40:06.188460+00:00",
+  "duration_seconds": 0.204,
+  "exit_code": 1,
+  "stdout": "BLOCK S0021: PROPAGATE BLOCK [S0021] name 'Image' is not defined\n",
+  "stderr": "PROPAGATE_FAILED: 1 shots failed: [('S0021', \"PROPAGATE BLOCK [S0021] name 'Image' is not defined\")]\n"
+}

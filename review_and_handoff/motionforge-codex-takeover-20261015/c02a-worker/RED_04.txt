@@ -1,0 +1,122 @@
+test_consumer_identity_matrix_with_resealed_digest (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_consumer_identity_matrix_with_resealed_digest) ... ok
+test_digest_and_same_size_file_mutation_matrix (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix) ... ok
+test_empty_record_fails_closed (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_empty_record_fails_closed) ... ok
+test_gate_key_blocks_missing_deps (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_gate_key_blocks_missing_deps) ... ok
+test_invalid_json_blocks_real_key_consumer (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_invalid_json_blocks_real_key_consumer) ... ok
+test_omitted_source_and_hash_block_real_consumer_and_assembler (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_omitted_source_and_hash_block_real_consumer_and_assembler) ... ok
+test_real_builder_record_verifies (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_real_builder_record_verifies) ... ok
+test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_record_shape_and_type_matrix) ... ok
+test_skip_keeps_current_settings_comparison (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_skip_keeps_current_settings_comparison) ... ok
+test_strict_json_loader_matrix (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_strict_json_loader_matrix) ... 
+  test_strict_json_loader_matrix (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_strict_json_loader_matrix) (case='excessive_nesting') ... ERROR
+test_valid_record_through_real_key_and_assembly_gates (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_valid_record_through_real_key_and_assembly_gates) ... ok
+
+======================================================================
+ERROR: test_strict_json_loader_matrix (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_strict_json_loader_matrix) (case='excessive_nesting')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c02a_dependency_verification.py", line 296, in test_strict_json_loader_matrix
+    dep, why = self.cache.load_deps(path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\scripts\r6_cache.py", line 78, in load_deps
+    return json.loads(Path(path).read_text(encoding="utf-8"),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.254s
+
+FAILED (errors=1)
+CASE wrong_kind: blocked: deps kind mismatch
+CASE wrong_shot: blocked: deps shot does not match consumer request
+CASE wrong_fid: blocked: deps fid does not match consumer request
+CASE wrong_source_path_same_bytes: blocked: deps source path differs from current canonical path
+CASE wrong_model_path_same_bytes: blocked: deps model path differs from current canonical path
+CASE wrong_gframe: blocked: deps source gframe does not match current plan
+CASE wrong_span: blocked: deps source span does not match current plan
+CASE combined_wrong_identity: blocked: deps kind mismatch
+MATRIX identity: 8 negative cases, all with recomputed digest
+CASE self_digest_tamper: blocked: deps_sha self-digest mismatch
+CASE source_same_size_mutation: blocked: deps source hash changed: daadf903a1a086936c7afbcbab4e59ee09cadd6958a4fe374a1b73348c4d45c9 -> 318e8bb08e0a1ee7ea23c3efffb9ca836e15e69b8c3ccaa07e0c7ceadb2dc80d
+CASE source_restored: verified
+CASE model_same_size_mutation: blocked: deps model hash changed: 2291810a6b17d3d67bfe5b219c6c7078c4b651656b91f5bcd93bec189bce5a02 -> c7ac0a632a620504816bc2ad6210bd0bc1a69fec3cb7db19cc893ec0d753c562
+CASE model_restored: verified
+CASE cast_same_size_mutation: blocked: deps casts[0] hash changed: bde604e5279ad5f0c876eddc06d203710072795e93d99e16d01c43931c58ca31 -> 1fa7233fe927d0c6569780194e6b547c8713e869ccc7f851c490734dfd21b0b8
+CASE cast_restored: verified
+CASE mask_same_size_mutation: blocked: deps masks[0] hash changed: 33a76fbe334b425edcfe76e6e6b1af2225e0a6d82677c3d92686fd919abcfe4b -> 4e6f83dd0a9552616806b1f0c7c0848bb5f950470f2b58173067da231e3e17b1
+CASE mask_restored: verified
+CASE graph_same_size_mutation: blocked: deps graph hash changed: 7dd45f12c0c71e180cb358d0611e5f35eb8159c3ece38c5eca703d75d78900a7 -> 5f84752ae00d972927d71c1e50b1a5339fbe4f8ab493d85f77044c46bdd5d266
+CASE graph_restored: verified
+CASE source_missing: blocked: deps source unreadable: [WinError 2] The system cannot find the file specified: 'C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\c02a-fixture-r4g1cgdc\\source.mp4'
+CASE model_missing: blocked: deps model unreadable: [WinError 2] The system cannot find the file specified: 'C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\c02a-fixture-r4g1cgdc\\model.safetensors'
+CASE cast_missing: blocked: deps casts[0] unreadable: [WinError 2] The system cannot find the file specified: 'C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\c02a-fixture-r4g1cgdc\\cast.png'
+CASE mask_missing: blocked: deps masks[0] unreadable: [WinError 2] The system cannot find the file specified: 'C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\c02a-fixture-r4g1cgdc\\mask.png'
+CASE graph_missing: blocked: deps graph unreadable: [WinError 2] The system cannot find the file specified: 'C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\c02a-fixture-r4g1cgdc\\graph.json'
+CASE cast_directory_unreadable: blocked: deps casts[0] unreadable: [Errno 13] Permission denied: 'C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\c02a-fixture-r4g1cgdc'
+MATRIX bytes/path: 12 negative cases, 5 restored controls
+CASE consumer_json_syntax: controlled GateBlock
+CASE consumer_json_duplicate: controlled GateBlock
+CASE consumer_json_non_json_constant: controlled GateBlock
+CASE omitted_source: key, assembly gate, assembler entry blocked before copy/encoder
+CASE omitted_source_hash: key, assembly gate, assembler entry blocked before copy/encoder
+CASE missing_kind: blocked: deps missing fields: ['kind']
+CASE missing_shot: blocked: deps missing fields: ['shot']
+CASE missing_fid: blocked: deps missing fields: ['fid']
+CASE missing_source: blocked: deps missing fields: ['source']
+CASE missing_model: blocked: deps missing fields: ['model']
+CASE missing_casts: blocked: deps missing fields: ['casts']
+CASE missing_masks: blocked: deps missing fields: ['masks']
+CASE missing_graph: blocked: deps missing fields: ['graph']
+CASE missing_settings: blocked: deps missing fields: ['settings']
+CASE missing_deps_sha: blocked: deps missing fields: ['deps_sha']
+CASE kind_number: blocked: deps kind mismatch
+CASE shot_list: blocked: deps shot malformed
+CASE fid_bool: blocked: deps fid malformed
+CASE fid_float: blocked: deps fid malformed
+CASE source_list: blocked: deps source malformed
+CASE model_list: blocked: deps model file record malformed
+CASE casts_object: blocked: deps casts must be a list
+CASE masks_null: blocked: deps masks must be a list
+CASE graph_list: blocked: deps graph file record malformed
+CASE settings_empty: blocked: deps settings malformed/empty
+CASE settings_list: blocked: deps settings malformed/empty
+CASE deps_sha_bool: blocked: deps_sha malformed
+CASE source_path_missing: blocked: deps source path malformed
+CASE source_hash_missing: blocked: deps source hash malformed
+CASE source_hash_empty: blocked: deps source hash malformed
+CASE source_hash_nonhex: blocked: deps source hash malformed
+CASE source_gframe_bool: blocked: deps source gframe does not match current plan
+CASE source_span_bool: blocked: deps source span does not match current plan
+CASE source_span_short: blocked: deps source span does not match current plan
+CASE model_path_missing: blocked: deps model file record malformed
+CASE model_hash_missing: blocked: deps model file record malformed
+CASE cast_path_missing: blocked: deps casts[0] file record malformed
+CASE cast_hash_missing: blocked: deps casts[0] file record malformed
+CASE mask_record_number: blocked: deps masks[0] file record malformed
+CASE graph_hash_missing: blocked: deps graph file record malformed
+CASE generated_graph_null: blocked: deps generated key missing graph
+CASE source_relative_path: blocked: deps source path is not absolute
+CASE settings_mode_bool: blocked: deps settings.mode malformed
+CASE settings_mode_null: blocked: deps settings.mode malformed
+CASE null_record: blocked: deps record must be an object
+CASE list_record: blocked: deps record must be an object
+CASE string_record: blocked: deps record must be an object
+CASE bool_record: blocked: deps record must be an object
+MATRIX shape/type: 43 negative cases
+CASE json_syntax: blocked: deps unreadable/malformed: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+CASE json_duplicate: blocked: deps unreadable/malformed: duplicate field kind
+CASE json_nan: blocked: deps unreadable/malformed: non-JSON constant NaN
+CASE json_infinity: blocked: deps unreadable/malformed: non-JSON constant Infinity
+CASE nonobject: blocked: deps record must be an object
+CASE json_invalid_utf8: blocked: deps unreadable/malformed: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+CASE json_missing_file: blocked: deps unreadable/malformed: [Errno 2] No such file or directory: 'C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\c02a-fixture-4qhw8i4z\\record.deps.json'
+MATRIX JSON: 8 negative cases

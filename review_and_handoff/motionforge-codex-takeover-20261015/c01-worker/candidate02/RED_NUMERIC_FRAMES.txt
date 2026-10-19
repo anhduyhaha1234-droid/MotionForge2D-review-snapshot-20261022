@@ -1,0 +1,18 @@
+E
+======================================================================
+ERROR: test_real_gate_assemble_binds_review_to_consumed_blend_frames (__main__.ReviewBindingTests.test_real_gate_assemble_binds_review_to_consumed_blend_frames)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 274, in test_real_gate_assemble_binds_review_to_consumed_blend_frames
+    self.gate.gate_assemble([(sid, 3)])
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\scripts\r6_gate.py", line 317, in gate_assemble
+    gate_blend_fresh(sid, expect, 0.0)
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\scripts\r6_gate.py", line 289, in gate_blend_fresh
+    raise GateBlock(f"BLEND_MANIFEST_COUNT {sid}: {0 if not frames else len(frames)}/{expect_frames}")
+                                                                        ^^^^^^^^^^^
+TypeError: object of type 'int' has no len()
+
+----------------------------------------------------------------------
+Ran 1 test in 0.086s
+
+FAILED (errors=1)

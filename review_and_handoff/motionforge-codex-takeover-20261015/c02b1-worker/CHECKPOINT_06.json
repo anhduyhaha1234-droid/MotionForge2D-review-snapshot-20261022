@@ -1,0 +1,45 @@
+{
+  "utc": "2026-10-16T07:35:22.0826578Z",
+  "task": "CODEX-C02B1-STAGED-SOURCE-FRESHNESS",
+  "owner": "/root/motionforge_c02b1_coder",
+  "model": "gpt-6-sol/max/no fallback",
+  "allowlist": [
+    "R6/scripts/r6_common.py related helpers/imports",
+    "R6/tests/test_codex_c02b1_staged_source.py",
+    "OUT/c02b1-worker/**"
+  ],
+  "intent": "Run S7 root probe and approved affected modules, then scope audit",
+  "files": [
+    {
+      "path": "r6_common.py",
+      "sha": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc",
+      "bytes": 10578,
+      "lines": 241
+    },
+    {
+      "path": "test_codex_c02b1_staged_source.py",
+      "sha": "61bfe454456c452756ddbbf05b55678e146114cb6d2653bff77f4ee92af46aec",
+      "bytes": 14350,
+      "lines": 300
+    }
+  ],
+  "commands": [
+    {
+      "name": "unittest_s1_s6",
+      "exit": 0,
+      "result": "10/10; real FFmpeg encode two 640x360/30fps sources exit 0"
+    }
+  ],
+  "decisions": [
+    "Real pixels at center: frame0 red 253,0,0; frame1 green 0,255,0; replaced source frame1 red 253,0,0",
+    "Real fixture commands/results and source/frame files preserved in worker evidence"
+  ],
+  "remaining": [
+    "Fresh root 7-case probe",
+    "Full C01+C02A modules",
+    "Protected byte/scope/duplicate audit",
+    "REPORT/MANIFEST freeze"
+  ],
+  "next_command": "Run isolated root_probe_c02b1_staging.py on current common SHA",
+  "live_jobs": []
+}

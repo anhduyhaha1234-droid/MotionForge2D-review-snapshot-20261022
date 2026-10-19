@@ -1,0 +1,70 @@
+{
+  "actual_event_call_path": {
+    "board_fids": [
+      1,
+      10,
+      20,
+      29,
+      30,
+      43,
+      50,
+      60
+    ],
+    "keygen_fids": [
+      1,
+      10,
+      20,
+      29,
+      30,
+      43,
+      50,
+      60
+    ],
+    "gate": {
+      "shot": "S0021",
+      "keys": 8,
+      "event_fids": [
+        10,
+        20,
+        29,
+        30,
+        43,
+        50
+      ]
+    },
+    "propagate_fids": [
+      1,
+      10,
+      20,
+      29,
+      30,
+      43,
+      50,
+      60
+    ],
+    "stub_boundaries": "generation and per-key semantic reviews only; actual ledger/main/discovery/gate requirement/propagation preserved"
+  },
+  "actual_tracker_window_controls": [
+    {
+      "mode": "no_visible",
+      "fid": 43,
+      "drift": null,
+      "no_NaN": true,
+      "scope": "actual CLI/run/window code; controlled predictor tensors and load_frames, no weights/GPU/media-quality claim"
+    },
+    {
+      "mode": "good",
+      "fid": 43,
+      "drift": 0.0,
+      "no_NaN": true,
+      "scope": "actual CLI/run/window code; controlled predictor tensors and load_frames, no weights/GPU/media-quality claim"
+    },
+    {
+      "mode": "offset",
+      "fid": 43,
+      "drift": 10.0,
+      "no_NaN": true,
+      "scope": "actual CLI/run/window code; controlled predictor tensors and load_frames, no weights/GPU/media-quality claim"
+    }
+  ]
+}

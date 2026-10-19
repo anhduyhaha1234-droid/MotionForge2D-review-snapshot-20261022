@@ -1,0 +1,401 @@
+{
+  "utc": "2026-10-15T21:21:16.987004+00:00",
+  "source_hashes": {
+    "r6_common.py": "17bf5799c445a6f7133c61d53b9d5c41083307add1d7b6a50acdf83c294c15e3",
+    "r6_cache.py": "29a9e7b0f60304a56692d21fd229ef884dd93064fd4376eec7ab030daaf304c6",
+    "r6_gate.py": "4c3f7a7213f7761b7f5cbf53d7257bfd1c893e7f50d04d4ffda38a2e3cf13996",
+    "r6_assemble.py": "0509d5f67ffcce1721701f0c064ea4d68dd8660c6dca9f6f4967eb78727301c2"
+  },
+  "probe_source_sha256": "4d3500b829873ef35099015118a4b3a5a5f8cc34cf8c1b9e084ec9d3b4d7a448",
+  "cases": [
+    {
+      "name": "builder_v3_positive",
+      "expected": "ACCEPT",
+      "actual": "ACCEPT",
+      "pass": true,
+      "detail": "ok"
+    },
+    {
+      "name": "builder_passthrough_positive",
+      "expected": "ACCEPT",
+      "actual": "ACCEPT",
+      "pass": true,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_empty",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_list",
+      "expected": "BLOCK",
+      "actual": "UNCONTROLLED_EXCEPTION",
+      "pass": false,
+      "detail": "AttributeError(\"'list' object has no attribute 'get'\")"
+    },
+    {
+      "name": "verify_none",
+      "expected": "BLOCK",
+      "actual": "UNCONTROLLED_EXCEPTION",
+      "pass": false,
+      "detail": "AttributeError(\"'NoneType' object has no attribute 'get'\")"
+    },
+    {
+      "name": "verify_string",
+      "expected": "BLOCK",
+      "actual": "UNCONTROLLED_EXCEPTION",
+      "pass": false,
+      "detail": "AttributeError(\"'str' object has no attribute 'get'\")"
+    },
+    {
+      "name": "verify_missing_kind",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_missing_shot",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_missing_fid",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_missing_source",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_missing_model",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_missing_casts",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_missing_masks",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_missing_graph",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_missing_settings",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_missing_deps_sha",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_bad_fid_True",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_bad_fid_0",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_bad_casts_{}",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_bad_masks_None",
+      "expected": "BLOCK",
+      "actual": "UNCONTROLLED_EXCEPTION",
+      "pass": false,
+      "detail": "TypeError(\"'NoneType' object is not iterable\")"
+    },
+    {
+      "name": "verify_bad_settings_{}",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_bad_settings_[]",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_bad_graph_None",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_bad_source_sha256",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_bad_model_sha256",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_bad_source_gframe",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_bad_source_span",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": "ok"
+    },
+    {
+      "name": "verify_bad_model_path",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "model bad\u0000path 04f05d586d26e020e93a4e20038bb9261129bf2f8455f3c252f19832ec29d76c -> None"
+    },
+    {
+      "name": "verify_self_digest_tamper",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": "ok"
+    },
+    {
+      "name": "gate_key_unchanged_positive",
+      "expected": "ACCEPT",
+      "actual": "ACCEPT",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "verify_same_path_size_mutation_source",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "source C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\root-review\\c02a-baseline\\fixture\\task\\source\\source_full.mp4 136282918a17af1e71eced4eb1e12c507c10a7566f535e36df21b0eae677ea13 -> 7f65813a21eff7abc026ccb3c3840eae5a14ffce81322bb7207f81aeb154205c"
+    },
+    {
+      "name": "gate_same_path_size_mutation_source",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "name": "verify_same_path_size_mutation_model",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "model C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\root-review\\c02a-baseline\\tiny-model.bin 04f05d586d26e020e93a4e20038bb9261129bf2f8455f3c252f19832ec29d76c -> bf570f1c026908c9d043c42d804577ca51aafe84d171701fe9effe2019201bf4"
+    },
+    {
+      "name": "gate_same_path_size_mutation_model",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "name": "verify_same_path_size_mutation_cast",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "casts:C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\root-review\\c02a-baseline\\cast.bin hash bdbe9190e84c2f4d69ef7e4eef1110ccad0a03e9f24552d92d976d7006d68261 -> 85ec566a638b36069f332b6af70d62f11fe8b918513ccca579f62e0437dacf1a"
+    },
+    {
+      "name": "gate_same_path_size_mutation_cast",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "name": "verify_same_path_size_mutation_mask",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "masks:C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\root-review\\c02a-baseline\\mask.bin hash 73e659233917839ff2c9019f31e0398d72c5e32c09ee727902f5809ec9f32aac -> ee2dd950389689999f4bcffb75a1cf8007bc51564990a5a51fc914fdd52caff8"
+    },
+    {
+      "name": "gate_same_path_size_mutation_mask",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "name": "verify_same_path_size_mutation_graph",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "graph C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\root-review\\c02a-baseline\\graph.json bd43724ac2e7c23021384183d95d1a98468e6542f048e611c6c72140d395dd7e -> 637ac04251b2841ef458ad4f1a9d8a910bdbb8fbee947b97f40bce56b13f0448"
+    },
+    {
+      "name": "gate_same_path_size_mutation_graph",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "name": "gate_restored_positive",
+      "expected": "ACCEPT",
+      "actual": "ACCEPT",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "consumer_identity_kind",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "name": "consumer_identity_shot",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "name": "consumer_identity_fid",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "name": "consumer_identity_source_path",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "name": "consumer_identity_model_path",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "name": "consumer_identity_gframe",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "name": "consumer_identity_span",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "name": "consumer_identity_combined",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "name": "consumer_identity_missing_source_hash",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "name": "consumer_invalid_json",
+      "expected": "BLOCK",
+      "actual": "UNCONTROLLED_EXCEPTION",
+      "pass": false,
+      "detail": "JSONDecodeError('Expecting property name enclosed in double quotes: line 1 column 2 (char 1)')"
+    },
+    {
+      "name": "consumer_duplicate_field",
+      "expected": "BLOCK",
+      "actual": "ACCEPT",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "name": "consumer_non_json_constant",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "SEMANTIC_REVIEW_STALE input deps_sha changed keys:S0021_f0001"
+    },
+    {
+      "name": "actual_assembler_stale_source_before_copy_encode",
+      "expected": "BLOCK",
+      "actual": "UNCONTROLLED_EXCEPTION",
+      "pass": false,
+      "detail": "AssertionError('stale key passed; blocked only at later blend gate: ASSEMBLE_BLOCKED BLEND_MANIFEST_MISSING S0021')"
+    },
+    {
+      "name": "real_gate_assemble_valid_positive",
+      "expected": "ACCEPT",
+      "actual": "ACCEPT",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "passed": 12,
+  "total": 55,
+  "side_effect_calls": [],
+  "scope": "Recorded dependency verification only; no producer completeness, reuse, semantic or decode proof."
+}

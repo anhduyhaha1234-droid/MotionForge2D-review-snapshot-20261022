@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-16T16:00:48.9475681Z",
+  "provider": "antigravity",
+  "strategy": {
+    "fallbackStrategy": "round-robin",
+    "stickyRoundRobinLimit": 1
+  },
+  "other_settings_changed": [],
+  "other_providers_changed": [],
+  "restart_required": false
+}

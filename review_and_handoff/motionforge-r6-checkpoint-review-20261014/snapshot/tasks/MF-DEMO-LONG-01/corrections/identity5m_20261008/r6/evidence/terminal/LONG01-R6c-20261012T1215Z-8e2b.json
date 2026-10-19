@@ -1,0 +1,186 @@
+{
+ "schema_version": "1.0",
+ "run_id": "20261005T1643Z-wan-long",
+ "task_id": "MF-DEMO-LONG-01",
+ "revision": "r6",
+ "owner_sid": "20261007_234033_cc0b6d",
+ "invocation_id": "LONG01-R6c-20261012T1215Z-8e2b",
+ "packet_sha256": "686add6cb6597ef952012d7531769051b08e06b35de0f595e9690a3f2e690447",
+ "status": "CONTINUE_REQUIRED",
+ "reason": "R6c: S61 tail complete (36/36 keys); S43 chunked masks+keys chained; mask quality bug fixed WITH evidence (6 shots wall-blob masks reseeded from vision-confirmed coords -> SAM2 rerun -> keys regen; S27 v2 spot: bulk garbage cleared); keygen hardened (z-order mask subtraction + evidence-calibrated bound bars); 30/36 shot reviews done (receipt R6_REVIEW_RESULTS.json; 6 pending vision-throttled); repair queue documented; S4 VACE TrimVideoLatent contract built + 3 runs SUCCESS (S73 base 151.4s / S73 actual-ref-perturb 146.4s / S62 w32-112 146.7s; client-side VRAM=0 to be replaced by server-side sampler); next: complete reviews + per-key review records + repair queue + S5 decision + S6 propagation/CoTracker + S7-S9",
+ "remaining_work": [
+  "Re-review v2/regen keys: S0021 S0027 S0028 S0031 S0044 S0064 (masks reseeded from vision-confirmed coords; keys regenerated 13:11-14:00Z; S27 v2 spot: bulk garbage CLEARED, tail f101-159 residual (white residue + source-zoom vs scale check) stay in repair queue)",
+  "Reviews PENDING (vision service throttled): S0067 S0069 S0070 S0071 S0072 S0073 - run review_sheets/SHEET_<sid>.png -> r6_gate.write_review; then write per-key review records for ALL reviewed shots per receipts/R6_REVIEW_RESULTS.json verdicts",
+  "REPAIR QUEUE from reviews (receipts/R6_REVIEW_RESULTS.json): S25 f121/125; S26 f51; S29 spot-check; S30 f51; S34 f41; S39 f31/61; S48 f21/31; S55 f71/111/221/361/397; S56 f11/31; S62 f33; S63 f1/3/21/28; S68 f11/21/31/36; S23 halo cosmetics; S41 E2 f123+ UNKNOWN (source-verify presence)",
+  "S4 VACE: r6_vace.py built with TrimVideoLatent contract; trial chain S73 base + S73 perturb-ref + S62 window32-112 launched 14:05Z (result in receipts/R6_VACE_RUNS.jsonl); then paired comparison vs keys-route + S5 engine decision (NOT_SELECTED + reason for loser)",
+  "S6: event-aligned propagation wrapper (fresh-complete; rc!=0/partial/stale BLOCK; no tail-fill) + CoTracker paired S34/S61/S73 (tracks[T,N,2]+visibility[T,N] raw, queries, before/contact/hold/release)",
+  "S7 zero-shot asset reskins S0032/35/37/40/42/45/47/49/50/52/54/58/59/60/65/66/74 (prop/background edit keep text) + hard excerpts; S8 master+comparison source|R5|R6+QA all54; S9 matrix/evidence/manifest -> record",
+  "S0043 keys: masks chunked (chunk1+2 done? verify receipts/R6_SAM2_S0043_CHUNKED.json) then keys run; totals check"
+ ],
+ "artifacts": [
+  {
+   "kind": "checkpoint",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\checkpoint\\R6_CHECKPOINT.md",
+   "sha256": "1497aa9a0653c65423e156a488445fccb82fa0b2cb0c34c7715ee6d841d61a8e"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\checkpoint\\R6_GATE_RESTATEMENT.md",
+   "sha256": "4e57ba3b7e7104b2561ab5ef076ae44f20ed8972066e0ad4f2028652588fccb4"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\source_actor_ledger.jsonl",
+   "sha256": "b0adb564ec3e7e0de5b29f8ea60bfcc4e469e0702981ad81003d9fcb0fe36625"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\cast_atlas.json",
+   "sha256": "e847acb8d30f120bcaffb81b1e5048baf3e32280bcd74e9e5688b20a56149a4e"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\event_map.json",
+   "sha256": "96eb3f9f1ecc83e9f3e55fa0192fcbfd1b72e69f3ef4a257803ea49584d64c5a"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\receipts\\R6_LEDGER_VALIDATION.json",
+   "sha256": "db0c395ee706c5b791a58bac92c6f561dbd1055dc2f6594a29a5dc2bab3e8254"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\receipts\\R6_NEGATIVE_PROBES.json",
+   "sha256": "12534a3b9b6b6bfd410d05cddc47aa9a8d3e362d8c30f158ecd260fc415a6896"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\receipts\\R6_SAM2_RUNS.jsonl",
+   "sha256": "05ebbd7da1949272d04a6e2eb2543e62ee3cd8f6bec9764b0db97cfe28918fb1"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\receipts\\R6_KEYGEN_RUNS.jsonl",
+   "sha256": "24b60f4891a960cb57b32990576658e2f35dfc0d28f94ed181c63ed0b8650396"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_common.py",
+   "sha256": "17bf5799c445a6f7133c61d53b9d5c41083307add1d7b6a50acdf83c294c15e3"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_gate.py",
+   "sha256": "1a5bd584fb6f4455a01d258766a6d48c43af1b910fb87d7841bbc1e3b138d2bf"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py",
+   "sha256": "f74db85f6b982f4b2f10bcc0512939f87d5ce6771a12a5cfb5b1fe8ec9376510"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_adapter.py",
+   "sha256": "2b16108c5d92264b5e686d6aedeb5d357fc5ee9539be3cfff3b8979c17f9b5b3"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_graph.py",
+   "sha256": "435a9cc0024e3bed01022c8c0d334e8bd51657c3bb4ae4d2a99fc32f219f94be"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_upload.py",
+   "sha256": "057179db2b539965d88aed3e3f25a0251cf7e6d9959a6f9ce1f7514783e04967"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_sam2.py",
+   "sha256": "6b5498948f83e96864a7633c06f3fb073bcf51fa0c439e56c9e5b1c435f289b9"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_keygen.py",
+   "sha256": "c1b0bf0650f5a7435d690a1188423560fe0ff083ed66c96c053e63262f84f5c0"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_probes.py",
+   "sha256": "739a1eaed3dd8bb200219d2ef93a353d0fa88a95695f9316bfd1c20f02acea15"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_ledger.py",
+   "sha256": "5797fe9f11e1b8178f0d35bff5ca6bc575cb895ebea98831dcd5a65e2b81c131"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\evidence\\R6_smoke_S23_f1.png",
+   "sha256": "5e075fa8c979c5a4dd15e5f532608d36ce65da45833109251997603fb406d922"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_validate_masks.py",
+   "sha256": "d5862e81ae29c95d0254aa7590aaf3d992179e5f35d8fa1e34a98f4bc6e067c4"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_vace.py",
+   "sha256": "1f3d8e00062f6c1f22503e17ca7ed9ff1c7f266f45796586ce4458a7eea02140"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_upload_video.py",
+   "sha256": "64a9ea96560c9d9f4183bdc1983684369236c84f1a5382a3aafbe0e390306de9"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\work\\s43_chunk.py",
+   "sha256": "4fad58636a6a9ecbd9f9f6cc4bc13d53f7b165c2a94e1599d280f696c6b22af8"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\receipts\\R6_REVIEW_RESULTS.json",
+   "sha256": "91f6743b29146617e70c7cd6938669aee2ca1f9a07e23aa66276b0d645e42bf9"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\receipts\\R6_VACE_RUNS.jsonl",
+   "sha256": "340a2d214cc4a17f9794e32ab0142f9f2cd56b9cc3e95c24fc90a9a90758681d"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\receipts\\R6_LEDGER_VALIDATION.json",
+   "sha256": "db0c395ee706c5b791a58bac92c6f561dbd1055dc2f6594a29a5dc2bab3e8254"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\evidence\\review_sheets\\SHEET_S0027_v2.png",
+   "sha256": "4483e29e5158af0e5dacab269459ca89d823804b6a10534f61cb6ae18d8020ee"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\evidence\\review_sheets\\SHEET_S0021_v2.png",
+   "sha256": "19de4d7f8ec2f05353b11c4c44cd978f04a881c0383337fd3b3ecb2e4b60198e"
+  },
+  {
+   "kind": "matrix",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\evidence\\matrix.json",
+   "sha256": "9315e97fff2112ecd1a9cfb1730473e3cb0335bf01df42f602136dda215e1342"
+  }
+ ],
+ "matrix": {
+  "Q01": "UNKNOWN",
+  "Q02": "UNKNOWN",
+  "Q03": "UNKNOWN",
+  "Q04": "UNKNOWN",
+  "Q05": "UNKNOWN",
+  "Q06": "UNKNOWN",
+  "Q07": "UNKNOWN",
+  "Q08": "UNKNOWN",
+  "Q09": "UNKNOWN",
+  "Q10": "UNKNOWN",
+  "Q11": "UNKNOWN",
+  "Q12": "UNKNOWN"
+ }
+}

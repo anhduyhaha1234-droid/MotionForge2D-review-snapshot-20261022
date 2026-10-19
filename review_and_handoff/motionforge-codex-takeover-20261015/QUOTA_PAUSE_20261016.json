@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"ordinaryUsageAllowed\":true,\"rateLimits\":{\"limitId\":\"codex\",\"limitName\":null,\"normalModelSlug\":null,\"primary\":{\"usedPercent\":7,\"windowDurationMins\":300,\"resetsAt\":1792181960},\"secondary\":{\"usedPercent\":1,\"windowDurationMins\":10080,\"resetsAt\":1792768760},\"credits\":{\"hasCredits\":false,\"unlimited\":false,\"balance\":\"0\"},\"individualLimit\":null,\"spendControlReached\":false,\"planType\":\"plus\",\"rateLimitReachedType\":null},\"rateLimitsByLimitId\":{\"codex\":{\"limitId\":\"codex\",\"limitName\":null,\"normalModelSlug\":null,\"primary\":{\"usedPercent\":7,\"windowDurationMins\":300,\"resetsAt\":1792181960},\"secondary\":{\"usedPercent\":1,\"windowDurationMins\":10080,\"resetsAt\":1792768760},\"credits\":{\"hasCredits\":false,\"unlimited\":false,\"balance\":\"0\"},\"individualLimit\":null,\"spendControlReached\":false,\"planType\":\"plus\",\"rateLimitReachedType\":null}},\"rateLimitResetCredits\":{\"availableCount\":0,\"credits\":[]},\"accountId\":\"8cb54933-6738-4a7c-84eb-700d48ec0253\",\"rateLimitUpsell\":null}"
+    }
+  ],
+  "isError": false
+}

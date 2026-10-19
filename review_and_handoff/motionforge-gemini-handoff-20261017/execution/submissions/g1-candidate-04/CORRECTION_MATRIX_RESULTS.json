@@ -1,0 +1,169 @@
+{
+  "created_utc": "2026-10-19T12:18:09.475025+00:00",
+  "submission_id": "g1-candidate-04",
+  "total_rows": 20,
+  "verified_rows": 8,
+  "closed_in_candidate_04": 12,
+  "rows": [
+    {
+      "row": "M01",
+      "finding": "R01",
+      "name": "test_asset_missing_ref_rejected",
+      "verdict": "PASS",
+      "root_status": "VERIFIED",
+      "detail": "Missing grey_ref in consumed rejected with ValueError"
+    },
+    {
+      "row": "M02",
+      "finding": "R01",
+      "name": "test_asset_effective_graph_mismatch",
+      "verdict": "PASS",
+      "root_status": "VERIFIED",
+      "detail": "Sampler mismatch ('heun' vs 'euler'), wrong grey upload path, and missing R1_LOAD strictly rejected"
+    },
+    {
+      "row": "M03",
+      "finding": "R01",
+      "name": "test_asset_actual_producer_consumer_contract",
+      "verdict": "PASS",
+      "root_status": "VERIFIED",
+      "detail": "Actual run_key generates valid v4 asset deps; graph mutation blocks before publish"
+    },
+    {
+      "row": "M04",
+      "finding": "R01",
+      "name": "test_asset_controls_and_regressions",
+      "verdict": "PASS",
+      "root_status": "VERIFIED",
+      "detail": "Restyle and black passthrough controls pass; 14 A1 + 10 A2 + 40 regressions pass"
+    },
+    {
+      "row": "M05",
+      "finding": "R02",
+      "name": "test_cotracker_cli_help_and_fixture_entry",
+      "verdict": "PASS",
+      "root_status": "VERIFIED",
+      "detail": "r6_cotracker.py --help exits 0 with usage"
+    },
+    {
+      "row": "M06",
+      "finding": "R03",
+      "name": "test_cotracker_invalid_tensor_matrix",
+      "verdict": "PASS",
+      "root_status": "CLOSED",
+      "detail": "T=0, N=0, empty arrays, tracks NaN, vis NaN, vis > 1.0 (9.0) rejected"
+    },
+    {
+      "row": "M07",
+      "finding": "R03",
+      "name": "test_cotracker_window_coverage_controls",
+      "verdict": "PASS",
+      "root_status": "VERIFIED",
+      "detail": "Event frame 43 preserved as 43 (no default to 2); f700 out-of-range rejected; no-visible pairs produce None with no NaN in JSON"
+    },
+    {
+      "row": "M08",
+      "finding": "R04",
+      "name": "test_propagate_cli_child_nonzero",
+      "verdict": "PASS",
+      "root_status": "CLOSED",
+      "detail": "Image import at top level fixed (Ruff F821 clean); valid child run 0 beg=1, run 1 beg>1 succeed with global naming; child rc=7 and preflight/SystemExit fail closed, unlink stale manifest, write failure receipt"
+    },
+    {
+      "row": "M09",
+      "finding": "R04",
+      "name": "test_propagate_partial_stale_retry",
+      "verdict": "PASS",
+      "root_status": "CLOSED",
+      "detail": "Upstream global naming (0011.jpg..0020.jpg) validated; wrong frame names (9001.jpg), extra frames (0000.jpg), corrupt images fail closed, unlink stale manifest, and record durable failure receipt"
+    },
+    {
+      "row": "M10",
+      "finding": "R05",
+      "name": "test_event_transition_end_to_end",
+      "verdict": "PASS",
+      "root_status": "VERIFIED",
+      "detail": "Canonical r6_event_contract extracts all transition boundaries (10, 20, 29, 30, 43, 50)"
+    },
+    {
+      "row": "M11",
+      "finding": "R05",
+      "name": "test_event_bounds_and_cut_call_path",
+      "verdict": "PASS",
+      "root_status": "CLOSED",
+      "detail": "Strict integer validation rejects float (43.9), bool (True), string ('43'), float pair (42.8/43.2); contact bounds checked (from >= 0, to >= from); cuts passed from ledger/events to plan_runs without intra-shot interpolation"
+    },
+    {
+      "row": "M12",
+      "finding": "R06",
+      "name": "test_matrix_empty_stale_wrong_evidence",
+      "verdict": "PASS",
+      "root_status": "CLOSED",
+      "detail": "Fake video (ftyp + xxxx) strictly fails ffprobe validation; non-Python garbage in test file fails AST parse; fake receipts without matching hashes and exit_code produce UNKNOWN"
+    },
+    {
+      "row": "M13",
+      "finding": "R06",
+      "name": "test_batch_gate_strict_modes_and_evidence",
+      "verdict": "PASS",
+      "root_status": "CLOSED",
+      "detail": "Unknown mode raises UNKNOWN_BATCH_MODE; engineering mode requires genuine verified proof (not merely copied PASS labels); final mode requires full verified artifacts"
+    },
+    {
+      "row": "M14",
+      "finding": "R06",
+      "name": "test_submit_actual_caller_gate",
+      "verdict": "PASS",
+      "root_status": "CLOSED",
+      "detail": "r6_submission_adapter recomputes SHA-256 for all artifacts (blocks same-size tamper ABCD -> WXYZ); wires artifacts list in final mode; atomic publish never issues TASK_SUBMITTED on failure"
+    },
+    {
+      "row": "M15",
+      "finding": "R07",
+      "name": "test_manifest_work_ancestor",
+      "verdict": "PASS",
+      "root_status": "VERIFIED",
+      "detail": "Manifest relative filtering preserves files under Codex/work, only excludes internal R6/work"
+    },
+    {
+      "row": "M16",
+      "finding": "R07",
+      "name": "test_manifest_namespace_and_finalization",
+      "verdict": "PASS",
+      "root_status": "CLOSED",
+      "detail": "stage_and_publish_matrix updates manifest with exact staged matrix hash before validation, publishes atomically, and writes commit marker; consumer bound to invocation NS"
+    },
+    {
+      "row": "M17",
+      "finding": "R08",
+      "name": "test_q11_existing_proof_binding",
+      "verdict": "PASS",
+      "root_status": "CLOSED",
+      "detail": "Hashes of invocation_runtime.py, dispatch_long.py, terminal_contract.py match 34/34 proof; 51/51 harness tests bound and verified"
+    },
+    {
+      "row": "M18",
+      "finding": "R08",
+      "name": "test_q11_actual_race_and_lifecycle",
+      "verdict": "PASS",
+      "root_status": "CLOSED",
+      "detail": "Historical 34/34 race results verified (3 rounds, exactly 1 winner, 1 loser, bounded joins, lease released); sandbox multiprocessing rendezvous barrier executed with 1 winner"
+    },
+    {
+      "row": "M19",
+      "finding": "R09",
+      "name": "test_candidate_identity_reconciliation",
+      "verdict": "PASS",
+      "root_status": "CLOSED",
+      "detail": "18 candidate files listed in manifest; source_snapshot and dependencies_snapshot fully stored in candidate package; 27 protected files reconciled"
+    },
+    {
+      "row": "M20",
+      "finding": "R09",
+      "name": "test_resume_state_truth",
+      "verdict": "PASS",
+      "root_status": "CLOSED",
+      "detail": "STATE.json has WAITING_CODEX_REVIEW, changed_files accurately listed, auto_nudge_watchdog skips model nudge during review to preserve quota and differentiates connection vs auth/quota errors"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "task": "CODEX-C02A-DEPENDENCY-VERIFICATION",
+  "finding": "C02A-R01",
+  "owner": "/root/motionforge_c02a_coder",
+  "model": "gpt-6-sol",
+  "reasoning": "max",
+  "status": "CORRECTION_RUNNING",
+  "cache_sha256": "be1d2f123ba71c355fdea0f904172eaeaf44c442994048038554a18a7864f8f2",
+  "test_sha256": "195ead0031f16098087df5f56b5b9ac0e5ddc7a58a733ea6a0e0c22168650219",
+  "tests": [
+    "NESTING_GREEN_01.txt 2/2 exit0",
+    "root-nesting-green-01/RESULT.json 8/8 exit0",
+    "root-55-green-01/RESULT.json 55/55 exit0",
+    "AFFECTED_FULL_01.txt C01+C02A 30/30 exit0"
+  ],
+  "remaining": "self-review static/AST/protected/diffs; freeze candidate02; report and stop",
+  "next": "audit exact diffs and protected hashes, then create candidate02",
+  "live_jobs": []
+}

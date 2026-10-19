@@ -1,0 +1,17 @@
+test_nested_json_matrix_through_loader_verify_key_and_skip (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip) ... ok
+test_parsed_nested_deps_block_actual_assembly_before_copy (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_parsed_nested_deps_block_actual_assembly_before_copy) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.185s
+
+OK
+NESTING settings depth=10: loader=ok; skip=settings changed now
+NESTING settings depth=200: loader=ok; skip=settings changed now
+NESTING settings depth=400: loader=ok; skip=dep changed
+NESTING settings depth=800: loader=ok; skip=dep changed
+NESTING settings depth=1200: loader=deps unreadable/malformed: maximum recursion depth exceeded while decoding a JSON array from a unicode string; skip=deps unreadable/malformed
+NESTING extra_top_level depth=10: loader=ok; skip=settings changed now
+NESTING extra_top_level depth=200: loader=ok; skip=settings changed now
+NESTING extra_top_level depth=400: loader=ok; skip=dep changed
+NESTING extra_top_level depth=800: loader=ok; skip=dep changed
+NESTING extra_top_level depth=1200: loader=deps unreadable/malformed: maximum recursion depth exceeded while decoding a JSON array from a unicode string; skip=deps unreadable/malformed

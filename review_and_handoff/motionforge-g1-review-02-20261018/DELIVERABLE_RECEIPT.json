@@ -1,0 +1,32 @@
+[
+  {
+    "file": "REVIEW_VI.md",
+    "bytes": 13289,
+    "sha256": "9cb214110f873cc3ca94708049e7838f23110f5367a5473b20835fae102f9ebc"
+  },
+  {
+    "file": "RESEARCH_DECISIONS_VI.md",
+    "bytes": 5465,
+    "sha256": "50d383742383963b247ff393751aab05eb2c5f1f1f639d4934b698a313a5d274"
+  },
+  {
+    "file": "CORRECTION_MATRIX.md",
+    "bytes": 3065,
+    "sha256": "1e2ef6395a6ae871e54b0962b624b37ff7155a9b8cc042ec408c17d4a80758ae"
+  },
+  {
+    "file": "SESSION_OPENING_PROPOSAL.md",
+    "bytes": 2477,
+    "sha256": "8176b866b971c16ba1165f54702c9de6845db675dae66f2f3eca2cae143d0d18"
+  },
+  {
+    "file": "PROMPT_G1_R1_CONTINUE_VI.md",
+    "bytes": 13059,
+    "sha256": "7b11634a46aba869a9fc0fb2e2b56ad1a81581ae56b030f29e8d13b4aedaddf1"
+  },
+  {
+    "file": "VERDICT.json",
+    "bytes": 1173,
+    "sha256": "da280ccd2968f5152fe00184213d9df2ea2f0165c6fd340888f3066d98673886"
+  }
+]

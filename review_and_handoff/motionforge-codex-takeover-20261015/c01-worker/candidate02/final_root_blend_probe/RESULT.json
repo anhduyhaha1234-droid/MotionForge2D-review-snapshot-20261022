@@ -1,0 +1,30 @@
+{
+  "source_hashes": {
+    "r6_common.py": "17bf5799c445a6f7133c61d53b9d5c41083307add1d7b6a50acdf83c294c15e3",
+    "r6_gate.py": "4c3f7a7213f7761b7f5cbf53d7257bfd1c893e7f50d04d4ffda38a2e3cf13996"
+  },
+  "cases": [
+    {
+      "case": "full",
+      "expected": "ACCEPT",
+      "actual": "ACCEPT",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "case": "truncated_self_consistent",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "ASSEMBLE_BLOCKED SEMANTIC_REVIEW_FRAME_IDENTITY_MISMATCH blend:S0021_blend"
+    },
+    {
+      "case": "overlong_self_consistent",
+      "expected": "BLOCK",
+      "actual": "BLOCK",
+      "pass": true,
+      "detail": "ASSEMBLE_BLOCKED SEMANTIC_REVIEW_FRAME_IDENTITY_MISMATCH blend:S0021_blend"
+    }
+  ],
+  "scope": "Real gate_assemble against isolated fixtures; semantic/decode correctness not asserted."
+}

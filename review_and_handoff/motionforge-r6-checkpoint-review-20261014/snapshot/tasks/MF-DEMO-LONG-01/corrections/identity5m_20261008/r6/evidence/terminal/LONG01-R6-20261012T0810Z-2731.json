@@ -1,0 +1,140 @@
+{
+ "schema_version": "1.0",
+ "run_id": "20261005T1643Z-wan-long",
+ "task_id": "MF-DEMO-LONG-01",
+ "revision": "r6",
+ "owner_sid": "20261007_234033_cc0b6d",
+ "invocation_id": "LONG01-R6-20261012T0810Z-2731",
+ "packet_sha256": "aa17a4d4185c6c1d76c9a6208284b9c31a38cbcab1b3ff96a371e542f2045933",
+ "status": "CONTINUE_REQUIRED",
+ "reason": "R6 inv2 (R6b): masks for ALL 37 people-shots 0-violation (36 main + 9-shot fix/retry; S43 deferred 2-pass); keygen 36 shots via upstream crop+stitch path: 590 keys (S0027/S0028/S0064 gaps closed; S0061 fids 141+ remaining - NoneType bug); bug fixes with evidence: SAM2 start-min + dtype (grouped passes), ledger-wide mask validation, cache graph=None, bound_check bars (resampler-band outliers soft-flagged for review); prompt v2 background-immobility; next: S61 gap + S43 chunks + semantic reviews then S4-S9",
+ "remaining_work": [
+  "Gap-fill: S0061 keys fids 141..356 (23) - rerun `python -B scripts/r6_keygen.py S0061` (debug the NoneType.get at f141 first; fids 1..131 done incl keep_source branch); S0043 masks via 2 chunked SAM2 passes (0..538 / 538..1077 re-seeded from chunk1 last mask centroid) then keys; verify totals",
+  "Semantic reviews for ALL keys (vision sheets 8-12 keys/shot; gross errors + spot rim/pose) -> r6_gate.write_review; quality loop rim-bleed/pose-turn (evidence-based, max 2 same-way attempts)",
+  "S4: VACE TrimVideoLatent rebuild (KSampler->Trim.samples, output3->trim_amount, Trim->VAEDecode) + paired S62/S73 vs keys + actual-ref perturb + peaks; S5 engine decision + NOT_SELECTED reason",
+  "S6: event-aligned propagation (fresh-complete check; rc!=0/partial/stale BLOCK; no tail-fill) + CoTracker paired S34/S61/S73 (save tracks[T,N,2]+visibility[T,N] raw + contact/queries)",
+  "S7: hard excerpts close + zero-shot asset reskins S32/35/37/40/42/45/47/49/50/52/54/58/59/60/65/66/74 (prop/background edit, keep text; no diffusion glyph) + controls S25/26/27/39/68/69/71/72",
+  "S8: assemble IDENTITY5M_R6_MASTER.mp4 (9000f 640x360 30fps + audio 94-394s) + comparison source|R5|R6 + QA all54 head/event/tail +2s scan + dense; S9 matrix/evidence/manifest -> record"
+ ],
+ "artifacts": [
+  {
+   "kind": "checkpoint",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\checkpoint\\R6_CHECKPOINT.md",
+   "sha256": "6d2792db6418aec40ae908b138906fca074a5763f492b87389087de1793c7fa9"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\checkpoint\\R6_GATE_RESTATEMENT.md",
+   "sha256": "4e57ba3b7e7104b2561ab5ef076ae44f20ed8972066e0ad4f2028652588fccb4"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\source_actor_ledger.jsonl",
+   "sha256": "957597c76864690c0b7f0f58a6550407e8f498864a60e4db3a2099aff3ad67ff"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\cast_atlas.json",
+   "sha256": "e847acb8d30f120bcaffb81b1e5048baf3e32280bcd74e9e5688b20a56149a4e"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\event_map.json",
+   "sha256": "96eb3f9f1ecc83e9f3e55fa0192fcbfd1b72e69f3ef4a257803ea49584d64c5a"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\receipts\\R6_LEDGER_VALIDATION.json",
+   "sha256": "db0c395ee706c5b791a58bac92c6f561dbd1055dc2f6594a29a5dc2bab3e8254"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\receipts\\R6_NEGATIVE_PROBES.json",
+   "sha256": "12534a3b9b6b6bfd410d05cddc47aa9a8d3e362d8c30f158ecd260fc415a6896"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\receipts\\R6_SAM2_RUNS.jsonl",
+   "sha256": "748edd876a324207f5a709360b307eea8dd16d3e581476cb20957ce3ac2a74da"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\receipts\\R6_KEYGEN_RUNS.jsonl",
+   "sha256": "3d5c60e317ce5ffd3f50a1daf075a12797d5b1f98e9a4b485ad6b968980a71cd"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_common.py",
+   "sha256": "17bf5799c445a6f7133c61d53b9d5c41083307add1d7b6a50acdf83c294c15e3"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_gate.py",
+   "sha256": "1a5bd584fb6f4455a01d258766a6d48c43af1b910fb87d7841bbc1e3b138d2bf"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py",
+   "sha256": "f74db85f6b982f4b2f10bcc0512939f87d5ce6771a12a5cfb5b1fe8ec9376510"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_adapter.py",
+   "sha256": "2b16108c5d92264b5e686d6aedeb5d357fc5ee9539be3cfff3b8979c17f9b5b3"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_graph.py",
+   "sha256": "435a9cc0024e3bed01022c8c0d334e8bd51657c3bb4ae4d2a99fc32f219f94be"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_upload.py",
+   "sha256": "057179db2b539965d88aed3e3f25a0251cf7e6d9959a6f9ce1f7514783e04967"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_sam2.py",
+   "sha256": "1aef10f144eccc8d623316eaafd8ccacfff3f8a2787f0584794918df2c21331f"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_keygen.py",
+   "sha256": "d4a2391dc0d2be546ae1585d0fee29cbfcdb00c1b6445ec0e93b11c8eca65185"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_probes.py",
+   "sha256": "739a1eaed3dd8bb200219d2ef93a353d0fa88a95695f9316bfd1c20f02acea15"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_ledger.py",
+   "sha256": "2f6872e653a6e5cf4a333609a3e9a7b594be7ff8d41eecae5d93489db0c39175"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\evidence\\R6_smoke_S23_f1.png",
+   "sha256": "5e075fa8c979c5a4dd15e5f532608d36ce65da45833109251997603fb406d922"
+  },
+  {
+   "kind": "matrix",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\evidence\\matrix.json",
+   "sha256": "9315e97fff2112ecd1a9cfb1730473e3cb0335bf01df42f602136dda215e1342"
+  }
+ ],
+ "matrix": {
+  "Q01": "UNKNOWN",
+  "Q02": "UNKNOWN",
+  "Q03": "UNKNOWN",
+  "Q04": "UNKNOWN",
+  "Q05": "UNKNOWN",
+  "Q06": "UNKNOWN",
+  "Q07": "UNKNOWN",
+  "Q08": "UNKNOWN",
+  "Q09": "UNKNOWN",
+  "Q10": "UNKNOWN",
+  "Q11": "UNKNOWN",
+  "Q12": "UNKNOWN"
+ }
+}

@@ -1,0 +1,10 @@
+test_first_extract_and_unchanged_reuse (test_codex_c02b1_staged_source.StagedSourceTests.test_first_extract_and_unchanged_reuse) ... ok
+test_legacy_empty_missing_and_copied_receipts (test_codex_c02b1_staged_source.StagedSourceTests.test_legacy_empty_missing_and_copied_receipts) ... ok
+test_malformed_and_wrong_receipts_reextract (test_codex_c02b1_staged_source.StagedSourceTests.test_malformed_and_wrong_receipts_reextract) ... ok
+test_same_path_same_size_source_mutation_reextracts (test_codex_c02b1_staged_source.StagedSourceTests.test_same_path_same_size_source_mutation_reextracts) ... ok
+test_source_path_frame_output_and_restore_invalidate (test_codex_c02b1_staged_source.StagedSourceTests.test_source_path_frame_output_and_restore_invalidate) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.265s
+
+OK

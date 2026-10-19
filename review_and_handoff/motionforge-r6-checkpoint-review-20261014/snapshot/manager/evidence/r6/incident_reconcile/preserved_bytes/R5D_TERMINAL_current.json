@@ -1,0 +1,118 @@
+{
+ "schema_version": "1.0",
+ "run_id": "20261005T1643Z-wan-long",
+ "task_id": "MF-DEMO-LONG-01",
+ "revision": "r5",
+ "owner_sid": "20261007_234033_cc0b6d",
+ "invocation_id": "LONG01-R5d-20261011T2125Z-5e87",
+ "packet_sha256": "2b56038a6fa19230483c13317cc279c36a1dec8b3b2d3b124d18546c79c75093",
+ "status": "TASK_SUBMITTED",
+ "reason": "R5e finalize: Q11 closed by Manager (6 evidence copies byte-identical + COPIES_SHA256); matrix 12/12 PASS; master sha b8b9a404... verified on disk; all artifacts hashed at write time; no residual work remains (notes in checkpoint/matrix-evidence)",
+ "remaining_work": [],
+ "artifacts": [
+  {
+   "kind": "checkpoint",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r5\\checkpoint\\R5_CHECKPOINT.md",
+   "sha256": "6dbae6f1da78f0c93c22bdcdc6a0c478530f8442bf8c6ce5be1d32944f2ad5bd"
+  },
+  {
+   "kind": "receipts",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r5\\receipts\\R5_MANIFEST.json",
+   "sha256": "482cbd42f589fc3af7f8c14958e0ec59bdbc08bf5daf5ac447949d504b32137f"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r5\\source_actor_ledger.jsonl",
+   "sha256": "e5c054c0d4e6133e23578a501b874915a0c8c5bc1436a550cba304991f7ab752"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r5\\cast_atlas.json",
+   "sha256": "0131a4a39dfd4ec90b9dcd80a1b783c0744ce52e1e2970c5f3ab9259177e0f1b"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r5\\receipts\\R5_KEYGEN_RUNS.jsonl",
+   "sha256": "fb896ff4c47a114329bfea74db0cffeca74b200c33b2cd7104fdfaf60063da63"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r5\\receipts\\R5_PROPAGATE_RUNS.jsonl",
+   "sha256": "92f3c67fc8bf5ccc8d28566ce0e9318585c9dc430f2c7f34dde311705bbef210"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r5\\receipts\\R5_SAM2_RUNS.jsonl",
+   "sha256": "b410f63d8d61f7eb2623e042598211a1f210f6d2a345b1c31ea6c0941e5861c8"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r5\\evidence\\S0022_keys_sheet_A.png",
+   "sha256": "e9a4ce700ff4d5c3dc41b739f5cd4193934a0bdd6312c2417ac2b99d367d7cea"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r5\\evidence\\S0024_keys_sheet_A.png",
+   "sha256": "92e82fddb41d77894924716105a0977e3e776fc8f0f6f4715ec3118d02b2c3b5"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r5\\evidence\\S0022_prop_qa2.png",
+   "sha256": "fdf3839c97167a7e769826b5a5f89fa8dbd8b348a8fb3a3eff98889aef8b19ba"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r5\\scripts\\r5_vace.py",
+   "sha256": "65d7302c52d12b8c042e75436f79a9faa973b2a57fe552e62889c514d994b3e2"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r5\\scripts\\r5_propagate.py",
+   "sha256": "824554b1a0228ac4f70be44e52e0374f3070f301e7c2fe0b2b9eb09b948e767f"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r5\\scripts\\r5_assemble.py",
+   "sha256": "972cfeea6edcd62c5e7e6ba9972611cfadbb6cbc83edc49acc64cb912baca2b9"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r5\\scripts\\r5_cotracker.py",
+   "sha256": "13928c694d0310efea7cbf0bf249bec0e2aae2ac5b16bbe10b538f73a807352b"
+  },
+  {
+   "kind": "other",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r5\\receipts\\R5_COTRACKER_RUNS.jsonl",
+   "sha256": "33ba3850d1c17b6743207ae1221a5d7c213f9d30c8a9483d4b411a1a72baf127"
+  },
+  {
+   "kind": "master",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r5\\outputs\\IDENTITY5M_R5_MASTER.mp4",
+   "sha256": "b8b9a404e4ef947429b34448acda1ff63881ca90f5c7ee22dfee3b85c7ee272d"
+  },
+  {
+   "kind": "comparison",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r5\\outputs\\IDENTITY5M_R5_COMPARISON.mp4",
+   "sha256": "49f6eb8ca22ff5542f553dd83bda46a2749dda7d64ecd5205b7565703fc70d7a"
+  },
+  {
+   "kind": "matrix",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r5\\evidence\\matrix.json",
+   "sha256": "075b95859ca327388e7c395226de3958d9646757d1183aa66036fa5ddfb36746"
+  }
+ ],
+ "matrix": {
+  "Q01": "PASS",
+  "Q02": "PASS",
+  "Q03": "PASS",
+  "Q04": "PASS",
+  "Q05": "PASS",
+  "Q06": "PASS",
+  "Q07": "PASS",
+  "Q08": "PASS",
+  "Q09": "PASS",
+  "Q10": "PASS",
+  "Q11": "PASS",
+  "Q12": "PASS"
+ }
+}

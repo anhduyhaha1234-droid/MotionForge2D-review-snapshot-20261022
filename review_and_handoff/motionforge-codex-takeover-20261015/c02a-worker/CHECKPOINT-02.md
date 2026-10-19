@@ -1,0 +1,10 @@
+# C02A checkpoint 02 — resumed micro matrix
+
+- Goal/owner: `CODEX-C02A-DEPENDENCY-VERIFICATION`, `/root/motionforge_c02a_coder`, `gpt-6-sol` / `max`, no fallback. One CPU writer; root handles independent review.
+- Authority: entire canonical rules reread on this resume; same `TASK_C02A.md`; root `RESUME_RECONCILIATION_C02A_20261016T0913.json` is `ok=true`. Quota interruption ended; no alternate owner/model was used.
+- Allowlist: cache, necessary gate wiring, new C02A test, fixture-only C01 test, `OUT/c02a-worker/**`. No producer/common/assembler edits, Git operations, GPU or render.
+- Stable resumed bytes: cache `bc912d773e8734ba9e367f8151006a25a718677bc3338c6c336a4a4974008e16` (10000/209), gate `8c2e3f9eedd4d8e11832809c2b72293db17df1fb5a4012bd39fa396f93143f94` (17804/367), C01 test `e2744bc198bc91fe71ce4b2afafb9682e427c17c7ac0c1207b3a7643dbf2d330` (13629 bytes), C02A test `78ddf10454d885cb9eca6764cb67757ed2ace3f1f16d6a524564ac07dc9eb129` (12226/264). Root/own preimages cover all 27 initial files; 28-file resume reconciliation stable. The last C02A fixture correction is exact bounded addition of `reseal=False` for the deliberately malformed digest case, as root independently proved.
+- Micro verification: `MICRO_04.txt`, `python -B -m unittest discover -s tests -p test_codex_c02a_dependency_verification.py -v`, exit 0, 7 tests; shape/type 42 negatives, identity 8, bytes/path 12 plus 5 restored controls, JSON 7. No real model hashing.
+- Decision: keep public `verify_deps(dep, sid=None, fid=None)`; gate passes requested identity; missing/invalid deps blocks before review. Existing settings comparison remains. Producer completeness and unchanged reuse are C02B limits.
+- Remaining: add real gate positive and assembler negative/positive tripwire coverage; add valid v3 records to C01 fixture setup without changing its 17 assertions; run full affected modules, root probe for self-review, protected guard, candidate/diff/report/checkpoint. No live jobs.
+- Next command: inspect targeted C01 assembly fixture sections and add bounded fixture setup, then run C01 module.

@@ -1,0 +1,60 @@
+{
+  "task": "CODEX-C02B2-PER-ACTOR-VERIFIED-REUSE",
+  "executed_utc": "2026-10-17T05:43:44.350393+00:00",
+  "runner": "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\venv\\Scripts\\python.exe",
+  "suite_summary": {
+    "total_tests": 54,
+    "passed": 54,
+    "failed": 0,
+    "errors": 0,
+    "duration_seconds": 4.057
+  },
+  "modules": [
+    {
+      "module": "tests/test_codex_c01_review_binding.py",
+      "tests_count": 17,
+      "status": "PASS"
+    },
+    {
+      "module": "tests/test_codex_c02a_dependency_verification.py",
+      "tests_count": 13,
+      "status": "PASS"
+    },
+    {
+      "module": "tests/test_codex_c02b1_staged_source.py",
+      "tests_count": 10,
+      "status": "PASS"
+    },
+    {
+      "module": "tests/test_codex_c02b2_per_actor_reuse.py",
+      "tests_count": 14,
+      "status": "PASS",
+      "cases": [
+        "SingleActorVerifiedReuseTests.test_p1_single_actor_replay_unchanged: PASS",
+        "SingleActorVerifiedReuseTests.test_p1_missing_review_blocks_skip: PASS",
+        "SingleActorVerifiedReuseTests.test_p1_wrong_review_blocks_skip: PASS",
+        "SingleActorVerifiedReuseTests.test_p2_effective_settings_independent_mutations: PASS",
+        "SingleActorVerifiedReuseTests.test_p3_same_path_same_size_mutations_and_restores: PASS",
+        "SingleActorVerifiedReuseTests.test_p4_malformed_and_truncated_records: PASS",
+        "SingleActorVerifiedReuseTests.test_p5_injected_generation_failure_does_not_publish_deps: PASS",
+        "SingleActorVerifiedReuseTests.test_p5_blank_edit_failure_does_not_publish_deps: PASS",
+        "SingleActorVerifiedReuseTests.test_p5_bound_check_failure_does_not_publish_deps: PASS",
+        "SingleActorVerifiedReuseTests.test_p5_standalone_gate_import: PASS",
+        "MultiActorVerifiedReuseTests.test_p1_multi_actor_replay_unchanged: PASS",
+        "MultiActorVerifiedReuseTests.test_p3_multi_actor_nonfirst_graph_mutation: PASS",
+        "NoVisibleActorVerifiedReuseTests.test_no_visible_actor_positive: PASS",
+        "FullyCoveredActorReuseTests.test_fully_covered_actor_fewer_graphs: PASS"
+      ]
+    }
+  ],
+  "root_probe_v4": {
+    "command": "python -B probe_c02b2_v4.py --scripts R6/scripts --out WORK/A1/probe_v4_result",
+    "initial_generation_calls": 1,
+    "unchanged_replay_generation_calls": 0,
+    "skip_before_replay": [
+      true,
+      "verified-reuse"
+    ],
+    "pass": true
+  }
+}

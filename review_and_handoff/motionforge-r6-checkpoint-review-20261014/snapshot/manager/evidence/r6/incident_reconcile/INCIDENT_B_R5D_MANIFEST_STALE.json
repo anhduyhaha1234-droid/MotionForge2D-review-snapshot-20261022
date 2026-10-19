@@ -1,0 +1,17 @@
+{
+ "utc": "2026-10-12T07:50:22Z",
+ "manifest": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r5\\receipts\\R5_MANIFEST.json",
+ "manifest_count": 2149,
+ "entry": {
+  "path": "evidence\\terminal\\LONG01-R5d-20261011T2125Z-5e87.json",
+  "bytes": 7081,
+  "sha256": "40df34d23eb4c0c7a22e1a39fb2001b22e5b64f0b3edc3cefba9658ff8f8e9fe"
+ },
+ "current": {
+  "sha256": "ff93e3c2495d05fdd4c7afde850ce27e4d9ae694a8414f17db53e33f3af3e4bb",
+  "bytes": 6527
+ },
+ "match": false,
+ "cause": "RECORD-LAST protocol (added during R5): the worker refreshed the R5d terminal record as the FINAL write of the invocation, AFTER the nested manifest had already captured its mid-flight hash. The manifest is frozen; the record is the invocation's real terminal (validated: PENDING_SAME_OWNER_CONTINUATION).",
+ "policy": "Do not rewrite R5_MANIFEST.json. Reconciliation kept here; R6 manifest must compute hashes after its own final record write."
+}

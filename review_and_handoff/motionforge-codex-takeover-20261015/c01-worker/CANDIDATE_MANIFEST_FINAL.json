@@ -1,0 +1,70 @@
+{
+  "task": "CODEX-C01-REVIEW-BINDING",
+  "status": "TASK_SUBMITTED_PENDING_ROOT_REVIEW",
+  "files": [
+    {
+      "role": "modified_candidate",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_gate.py",
+      "sha256": "62C2BFEE57F438BAA3ADDB087D2045C68D042DC6D0D70A8BB6FC8B5036F1B8C0",
+      "bytes": 16181,
+      "lines": 335,
+      "preimage_sha256": "9BEA996AFEB3212FC1E41DD918F1B8CBE90B33BF8AE2B217B2C75A24511DB7DB"
+    },
+    {
+      "role": "new_candidate",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c01_review_binding.py",
+      "sha256": "83303567EB49ED25F9A0CCE706C30B9A8D8EFB8D863B494F68985AC860542CE8",
+      "bytes": 9632,
+      "lines": 227,
+      "preimage_sha256": null
+    },
+    {
+      "role": "protected_reference",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_assemble.py",
+      "sha256": "0509D5F67FFCCE1721701F0C064EA4D68DD8660C6DCA9F6F4967EB78727301C2",
+      "bytes": 4287,
+      "lines": 89,
+      "preimage_sha256": "0509D5F67FFCCE1721701F0C064EA4D68DD8660C6DCA9F6F4967EB78727301C2"
+    },
+    {
+      "role": "protected_reference",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_common.py",
+      "sha256": "17BF5799C445A6F7133C61D53B9D5C41083307ADD1D7B6A50ACDF83C294C15E3",
+      "bytes": 6014,
+      "lines": 138,
+      "preimage_sha256": "17BF5799C445A6F7133C61D53B9D5C41083307ADD1D7B6A50ACDF83C294C15E3"
+    }
+  ],
+  "diffs": [
+    {
+      "sha256": "955DE82EA2379B84E92D054929B43FD33C6EE8E3D5178FA18DB5645AF2528505",
+      "path": "DIFF_R6_GATE.patch"
+    },
+    {
+      "sha256": "73F0D8427959B1AFAA1128D9BDB5AA54B8424264E535C005DE0F25401B2E2DAF",
+      "path": "DIFF_NEW_TEST_FINAL.patch"
+    }
+  ],
+  "tests": [
+    {
+      "exit_code": 0,
+      "raw": "FINAL_FOCUSED_TEST_OUTPUT.txt",
+      "command": "C01_WORKER_DIR=<OUT>/c01-worker python -B R6/tests/test_codex_c01_review_binding.py",
+      "result": "16 tests OK"
+    },
+    {
+      "exit_code": 0,
+      "raw": "EXISTING_GATE_SAFE_OUTPUT.txt",
+      "command": "python -B OUT/c01-worker/run_existing_gate_safe.py R6",
+      "result": "2 unchanged historic F02 functions PASS"
+    },
+    {
+      "exit_code": 0,
+      "raw": "EXISTING_REVIEW_SCHEMA_SURVEY.json",
+      "command": "python -B OUT/c01-worker/inspect_existing_reviews.py R6",
+      "result": "1013 key and 54 blend real review records accepted on recorded-input self-consistency; 3 fixture records blocked"
+    }
+  ],
+  "red_evidence": "RED_TEST_OUTPUT.txt",
+  "self_review": "SELF_REVIEW.md"
+}

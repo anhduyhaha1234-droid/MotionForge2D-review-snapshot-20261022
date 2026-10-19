@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-16T02:12:17.701107+00:00",
+  "ok": true,
+  "prior_preflight": "RESUME_PREFLIGHT_C02A_20261016T0909.json",
+  "quota_receipt": "QUOTA_RESUME_20261016T0909.json",
+  "owner": "/root/motionforge_c02a_coder",
+  "model": "gpt-6-sol",
+  "reasoning": "max",
+  "all_28_files_stable": true,
+  "unreceipted_test_patch": {
+    "current_sha256": "78ddf10454d885cb9eca6764cb67757ed2ace3f1f16d6a524564ac07dc9eb129",
+    "bytes": 12226,
+    "lines": 264,
+    "reverse_one_bounded_callsite_edit_sha256": "57029a3f5383b76ca05a5305dfb2ba87da71cd0c3b4620936591d546d23fff9f",
+    "matches_patch05_exact": true,
+    "explanation": "One call site adds reseal=False for deps_sha_bool, preserving the deliberately malformed digest rather than overwriting it with a valid digest. Existing assert_invalid/assertFalse is unchanged. The reverse bytes exactly match PATCH_05; no source restoration or production write performed."
+  },
+  "next_action": "Same owner resume existing C02A packet; validate last input-fixture correction then complete remaining integration/C01 tests and self-review. Do not restart earlier work or broaden scope."
+}

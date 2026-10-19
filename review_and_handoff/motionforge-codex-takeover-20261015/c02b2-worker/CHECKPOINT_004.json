@@ -1,0 +1,17 @@
+{
+  "next": "patch v3 skip policy and keygen to emit v4",
+  "model": "gpt-6-sol/max/no-fallback",
+  "task": "CODEX-C02B2-PER-ACTOR-VERIFIED-REUSE",
+  "files": [
+    {
+      "bytes": 23548,
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py",
+      "sha256": "7652437bbb1f239c4ff797f213a698667c9ee42d9307979aa123c7b514c1ca65",
+      "lines": 438
+    }
+  ],
+  "verification": "AST parse exit0",
+  "owner": "/root/motionforge_c02b2_coder",
+  "phase": "v4 verifier added; producer not yet enabled",
+  "live_jobs": []
+}

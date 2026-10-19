@@ -1,0 +1,34 @@
+{
+  "acquired_utc": "2026-10-11T07:16:41.465134+00:00",
+  "children": [],
+  "detached": true,
+  "detached_note": "render runner/queue active at probe_runner_alive",
+  "invocation_id": "PROBE-LEASE-RUNNER",
+  "job": "probe",
+  "owner_sid": "probe",
+  "release_attempts": [
+    {
+      "at_utc": "2026-10-11T07:16:47.948227+00:00",
+      "children": [],
+      "context": "probe_runner_alive",
+      "render_probe": {
+        "detail": "runner present: C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\venv\\Scripts\\python.exe -B C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r4_lease_probe\\r4_",
+        "quiet": false
+      }
+    },
+    {
+      "at_utc": "2026-10-11T07:16:57.114829+00:00",
+      "children": [],
+      "context": "probe_runner_gone",
+      "render_probe": {
+        "detail": "no queue job, no runner process",
+        "quiet": true
+      }
+    }
+  ],
+  "release_reason": "no queue job, no runner process",
+  "released_utc": "2026-10-11T07:16:57.114829+00:00",
+  "run": "20261005T1643Z-wan-long",
+  "run_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long",
+  "status": "RELEASED"
+}

@@ -1,0 +1,229 @@
+test_bad_json_and_non_object_are_gate_blocks (test_codex_c01_review_binding.ReviewBindingTests.test_bad_json_and_non_object_are_gate_blocks) ... ok
+test_blend_producer_schema_and_full_mapping (test_codex_c01_review_binding.ReviewBindingTests.test_blend_producer_schema_and_full_mapping) ... ok
+test_changed_dependency_blocks (test_codex_c01_review_binding.ReviewBindingTests.test_changed_dependency_blocks) ... ok
+test_current_producer_record_passes (test_codex_c01_review_binding.ReviewBindingTests.test_current_producer_record_passes) ... ok
+test_expected_and_reviewed_frame_identity (test_codex_c01_review_binding.ReviewBindingTests.test_expected_and_reviewed_frame_identity) ... ok
+test_extra_recorded_and_current_dependencies_block (test_codex_c01_review_binding.ReviewBindingTests.test_extra_recorded_and_current_dependencies_block) ... ok
+test_false_and_numeric_dependency_values_do_not_bind (test_codex_c01_review_binding.ReviewBindingTests.test_false_and_numeric_dependency_values_do_not_bind) ... ok
+test_missing_current_dependency_blocks (test_codex_c01_review_binding.ReviewBindingTests.test_missing_current_dependency_blocks) ... ok
+test_missing_recorded_dependency_blocks (test_codex_c01_review_binding.ReviewBindingTests.test_missing_recorded_dependency_blocks) ... ok
+test_nonstandard_json_constant_is_malformed (test_codex_c01_review_binding.ReviewBindingTests.test_nonstandard_json_constant_is_malformed) ... ok
+test_numeric_sha_and_missing_verdict_are_gate_blocks (test_codex_c01_review_binding.ReviewBindingTests.test_numeric_sha_and_missing_verdict_are_gate_blocks) ... ok
+test_other_path_with_identical_bytes_blocks (test_codex_c01_review_binding.ReviewBindingTests.test_other_path_with_identical_bytes_blocks) ... ok
+test_real_assembler_main_rejects_before_copy_and_encoder (test_codex_c01_review_binding.ReviewBindingTests.test_real_assembler_main_rejects_before_copy_and_encoder) ... ok
+test_real_gate_assemble_binds_review_to_consumed_blend_frames (test_codex_c01_review_binding.ReviewBindingTests.test_real_gate_assemble_binds_review_to_consumed_blend_frames) ... ok
+test_required_field_types_and_frames (test_codex_c01_review_binding.ReviewBindingTests.test_required_field_types_and_frames) ... ok
+test_review_identity_must_match_requested_kind_and_name (test_codex_c01_review_binding.ReviewBindingTests.test_review_identity_must_match_requested_kind_and_name) ... ok
+test_stale_artifact_blocks (test_codex_c01_review_binding.ReviewBindingTests.test_stale_artifact_blocks) ... ok
+test_consumer_identity_matrix_with_resealed_digest (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_consumer_identity_matrix_with_resealed_digest) ... ok
+test_digest_and_same_size_file_mutation_matrix (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix) ... ok
+test_empty_record_fails_closed (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_empty_record_fails_closed) ... ok
+test_gate_key_blocks_missing_deps (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_gate_key_blocks_missing_deps) ... ok
+test_invalid_json_blocks_real_key_consumer (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_invalid_json_blocks_real_key_consumer) ... ok
+test_nested_json_matrix_through_loader_verify_key_and_skip (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip) ... ok
+test_omitted_source_and_hash_block_real_consumer_and_assembler (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_omitted_source_and_hash_block_real_consumer_and_assembler) ... ok
+test_parsed_nested_deps_block_actual_assembly_before_copy (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_parsed_nested_deps_block_actual_assembly_before_copy) ... ok
+test_real_builder_record_verifies (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_real_builder_record_verifies) ... ok
+test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_record_shape_and_type_matrix) ... ok
+test_skip_keeps_current_settings_comparison (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_skip_keeps_current_settings_comparison) ... ok
+test_strict_json_loader_matrix (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_strict_json_loader_matrix) ... ok
+test_valid_record_through_real_key_and_assembly_gates (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_valid_record_through_real_key_and_assembly_gates) ... ok
+test_failed_extractor_and_empty_result_preserve_previous_pair (test_codex_c02b1_staged_source.StagedSourceTests.test_failed_extractor_and_empty_result_preserve_previous_pair) ... ok
+test_first_extract_and_unchanged_reuse (test_codex_c02b1_staged_source.StagedSourceTests.test_first_extract_and_unchanged_reuse) ... ok
+test_legacy_empty_missing_and_copied_receipts (test_codex_c02b1_staged_source.StagedSourceTests.test_legacy_empty_missing_and_copied_receipts) ... ok
+test_malformed_and_wrong_receipts_reextract (test_codex_c02b1_staged_source.StagedSourceTests.test_malformed_and_wrong_receipts_reextract) ... ok
+test_missing_unreadable_source_and_invalid_frames (test_codex_c02b1_staged_source.StagedSourceTests.test_missing_unreadable_source_and_invalid_frames) ... ok
+test_partial_publication_cannot_bless_old_receipt (test_codex_c02b1_staged_source.StagedSourceTests.test_partial_publication_cannot_bless_old_receipt) ... ok
+test_real_ffmpeg_30fps_640x360_frame_mapping_and_replacement (test_codex_c02b1_staged_source.StagedSourceTests.test_real_ffmpeg_30fps_640x360_frame_mapping_and_replacement) ... ok
+test_same_path_same_size_source_mutation_reextracts (test_codex_c02b1_staged_source.StagedSourceTests.test_same_path_same_size_source_mutation_reextracts) ... ok
+test_source_change_during_extraction_preserves_previous_pair (test_codex_c02b1_staged_source.StagedSourceTests.test_source_change_during_extraction_preserves_previous_pair) ... ok
+test_source_path_frame_output_and_restore_invalidate (test_codex_c02b1_staged_source.StagedSourceTests.test_source_path_frame_output_and_restore_invalidate) ... ok
+test_fully_covered_actor_fewer_graphs (test_codex_c02b2_per_actor_reuse.FullyCoveredActorReuseTests.test_fully_covered_actor_fewer_graphs) ... ok
+test_p1_multi_actor_replay_unchanged (test_codex_c02b2_per_actor_reuse.MultiActorVerifiedReuseTests.test_p1_multi_actor_replay_unchanged) ... ok
+test_p3_multi_actor_nonfirst_graph_mutation (test_codex_c02b2_per_actor_reuse.MultiActorVerifiedReuseTests.test_p3_multi_actor_nonfirst_graph_mutation) ... ok
+test_no_visible_actor_positive (test_codex_c02b2_per_actor_reuse.NoVisibleActorVerifiedReuseTests.test_no_visible_actor_positive) ... ok
+test_p1_missing_review_blocks_skip (test_codex_c02b2_per_actor_reuse.SingleActorVerifiedReuseTests.test_p1_missing_review_blocks_skip) ... ok
+test_p1_single_actor_replay_unchanged (test_codex_c02b2_per_actor_reuse.SingleActorVerifiedReuseTests.test_p1_single_actor_replay_unchanged) ... ok
+test_p1_wrong_review_blocks_skip (test_codex_c02b2_per_actor_reuse.SingleActorVerifiedReuseTests.test_p1_wrong_review_blocks_skip) ... ok
+test_p2_effective_settings_independent_mutations (test_codex_c02b2_per_actor_reuse.SingleActorVerifiedReuseTests.test_p2_effective_settings_independent_mutations) ... ok
+test_p3_same_path_same_size_mutations_and_restores (test_codex_c02b2_per_actor_reuse.SingleActorVerifiedReuseTests.test_p3_same_path_same_size_mutations_and_restores) ... ok
+test_p4_malformed_and_truncated_records (test_codex_c02b2_per_actor_reuse.SingleActorVerifiedReuseTests.test_p4_malformed_and_truncated_records) ... ok
+test_p5_blank_edit_failure_does_not_publish_deps (test_codex_c02b2_per_actor_reuse.SingleActorVerifiedReuseTests.test_p5_blank_edit_failure_does_not_publish_deps) ... ok
+test_p5_bound_check_failure_does_not_publish_deps (test_codex_c02b2_per_actor_reuse.SingleActorVerifiedReuseTests.test_p5_bound_check_failure_does_not_publish_deps) ... ok
+test_p5_injected_generation_failure_does_not_publish_deps (test_codex_c02b2_per_actor_reuse.SingleActorVerifiedReuseTests.test_p5_injected_generation_failure_does_not_publish_deps) ... ok
+test_p5_standalone_gate_import (test_codex_c02b2_per_actor_reuse.SingleActorVerifiedReuseTests.test_p5_standalone_gate_import) ... ok
+test_t3_black_passthrough_rejects_non_flat_source (test_gemini_c02b3_asset_reuse.AssetBlackPassthroughTests.test_t3_black_passthrough_rejects_non_flat_source) ... ok
+test_t3_black_passthrough_replay_unchanged (test_gemini_c02b3_asset_reuse.AssetBlackPassthroughTests.test_t3_black_passthrough_replay_unchanged) ... ok
+test_t1_asset_restyle_replay_unchanged (test_gemini_c02b3_asset_reuse.AssetRestyleVerifiedReuseTests.test_t1_asset_restyle_replay_unchanged) ... C:\Users\Admin\Documents\Codex\2026-10-12\a-l-m-video-ra-m-2\work\g1-review-fixtures\c02b3-fixture-l2qxwlto\task\corrections\identity\r6\scripts\r6_keygen_asset.py:45: ResourceWarning: unclosed file <_io.BufferedReader name='C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-fixtures\\c02b3-fixture-l2qxwlto\\task\\corrections\\identity\\r6\\work\\S0035\\f_0001_src.png'>
+  w, h = Image.open(frame_png).size
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_t1_missing_review_blocks_skip (test_gemini_c02b3_asset_reuse.AssetRestyleVerifiedReuseTests.test_t1_missing_review_blocks_skip) ... C:\Users\Admin\Documents\Codex\2026-10-12\a-l-m-video-ra-m-2\work\g1-review-fixtures\c02b3-fixture-f97co8kl\task\corrections\identity\r6\scripts\r6_keygen_asset.py:45: ResourceWarning: unclosed file <_io.BufferedReader name='C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-fixtures\\c02b3-fixture-f97co8kl\\task\\corrections\\identity\\r6\\work\\S0035\\f_0001_src.png'>
+  w, h = Image.open(frame_png).size
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_t1_wrong_review_blocks_skip (test_gemini_c02b3_asset_reuse.AssetRestyleVerifiedReuseTests.test_t1_wrong_review_blocks_skip) ... C:\Users\Admin\Documents\Codex\2026-10-12\a-l-m-video-ra-m-2\work\g1-review-fixtures\c02b3-fixture-po5tjmyu\task\corrections\identity\r6\scripts\r6_keygen_asset.py:45: ResourceWarning: unclosed file <_io.BufferedReader name='C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-fixtures\\c02b3-fixture-po5tjmyu\\task\\corrections\\identity\\r6\\work\\S0035\\f_0001_src.png'>
+  w, h = Image.open(frame_png).size
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_t2_same_path_same_size_mutations_and_restores (test_gemini_c02b3_asset_reuse.AssetRestyleVerifiedReuseTests.test_t2_same_path_same_size_mutations_and_restores) ... C:\Users\Admin\Documents\Codex\2026-10-12\a-l-m-video-ra-m-2\work\g1-review-fixtures\c02b3-fixture-b_cz2j16\task\corrections\identity\r6\scripts\r6_keygen_asset.py:45: ResourceWarning: unclosed file <_io.BufferedReader name='C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-fixtures\\c02b3-fixture-b_cz2j16\\task\\corrections\\identity\\r6\\work\\S0035\\f_0001_src.png'>
+  w, h = Image.open(frame_png).size
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_t2_settings_and_storyboard_mutations (test_gemini_c02b3_asset_reuse.AssetRestyleVerifiedReuseTests.test_t2_settings_and_storyboard_mutations) ... C:\Users\Admin\Documents\Codex\2026-10-12\a-l-m-video-ra-m-2\work\g1-review-fixtures\c02b3-fixture-7qnayh_6\task\corrections\identity\r6\scripts\r6_keygen_asset.py:45: ResourceWarning: unclosed file <_io.BufferedReader name='C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-fixtures\\c02b3-fixture-7qnayh_6\\task\\corrections\\identity\\r6\\work\\S0035\\f_0001_src.png'>
+  w, h = Image.open(frame_png).size
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_t4_legacy_v3_asset_record_denial (test_gemini_c02b3_asset_reuse.AssetRestyleVerifiedReuseTests.test_t4_legacy_v3_asset_record_denial) ... C:\Users\Admin\Documents\Codex\2026-10-12\a-l-m-video-ra-m-2\work\g1-review-fixtures\c02b3-fixture-bmnl9pk7\task\corrections\identity\r6\scripts\r6_keygen_asset.py:45: ResourceWarning: unclosed file <_io.BufferedReader name='C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-fixtures\\c02b3-fixture-bmnl9pk7\\task\\corrections\\identity\\r6\\work\\S0035\\f_0001_src.png'>
+  w, h = Image.open(frame_png).size
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_t5_blank_edit_failure_does_not_publish_deps (test_gemini_c02b3_asset_reuse.AssetRestyleVerifiedReuseTests.test_t5_blank_edit_failure_does_not_publish_deps) ... C:\Users\Admin\Documents\Codex\2026-10-12\a-l-m-video-ra-m-2\work\g1-review-fixtures\c02b3-fixture-8d4bv40x\task\corrections\identity\r6\scripts\r6_keygen_asset.py:45: ResourceWarning: unclosed file <_io.BufferedReader name='C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-fixtures\\c02b3-fixture-8d4bv40x\\task\\corrections\\identity\\r6\\work\\S0035\\f_0001_src.png'>
+  w, h = Image.open(frame_png).size
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_t5_injected_post_failure_does_not_publish_deps (test_gemini_c02b3_asset_reuse.AssetRestyleVerifiedReuseTests.test_t5_injected_post_failure_does_not_publish_deps) ... C:\Users\Admin\Documents\Codex\2026-10-12\a-l-m-video-ra-m-2\work\g1-review-fixtures\c02b3-fixture-1r2i5p84\task\corrections\identity\r6\scripts\r6_keygen_asset.py:45: ResourceWarning: unclosed file <_io.BufferedReader name='C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-fixtures\\c02b3-fixture-1r2i5p84\\task\\corrections\\identity\\r6\\work\\S0035\\f_0001_src.png'>
+  w, h = Image.open(frame_png).size
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_e1_event_fids_mapping_both_f_and_frame (test_gemini_a3_event_tracking.EventTimingAndTrackingTests.test_e1_event_fids_mapping_both_f_and_frame) ... ok
+test_e2_plan_runs_split_at_hard_cuts (test_gemini_a3_event_tracking.EventTimingAndTrackingTests.test_e2_plan_runs_split_at_hard_cuts) ... ok
+test_e3_child_outcome_nonzero_rc_fails (test_gemini_a3_event_tracking.EventTimingAndTrackingTests.test_e3_child_outcome_nonzero_rc_fails) ... ok
+test_e3_child_outcome_partial_frames_fails (test_gemini_a3_event_tracking.EventTimingAndTrackingTests.test_e3_child_outcome_partial_frames_fails) ... ok
+test_e4_cotracker_tensor_contract (test_gemini_a3_event_tracking.EventTimingAndTrackingTests.test_e4_cotracker_tensor_contract) ... ok
+test_e5_cotracker_strip_pastes_both_frames (test_gemini_a3_event_tracking.EventTimingAndTrackingTests.test_e5_cotracker_strip_pastes_both_frames) ... ok
+test_e6_crop_stitch_landmark_roundtrip_and_bounds (test_gemini_a3_event_tracking.EventTimingAndTrackingTests.test_e6_crop_stitch_landmark_roundtrip_and_bounds) ... ok
+test_g1_engineering_batch_conformance (test_gemini_a4_evidence_conformance.EvidenceGateConformanceTests.test_g1_engineering_batch_conformance) ... ok
+test_invalid_matrix_keys_and_values (test_gemini_a4_evidence_conformance.EvidenceGateConformanceTests.test_invalid_matrix_keys_and_values) ... ok
+test_r6_assemble_pre_encoder_gate_blocked (test_gemini_a4_evidence_conformance.EvidenceGateConformanceTests.test_r6_assemble_pre_encoder_gate_blocked) ... ok
+test_r6_matrix_compute_rows (test_gemini_a4_evidence_conformance.EvidenceGateConformanceTests.test_r6_matrix_compute_rows) ... ok
+test_t13_two_controller_barrier_race_simulation (test_gemini_a4_evidence_conformance.EvidenceGateConformanceTests.test_t13_two_controller_barrier_race_simulation)
+Simulate contested acquisition between two controllers: exactly one winner. ... ok
+
+----------------------------------------------------------------------
+Ran 76 tests in 8.435s
+
+OK
+
+--- captured stdout ---
+CASE wrong_kind: blocked: deps kind mismatch
+CASE wrong_shot: blocked: deps shot does not match consumer request
+CASE wrong_fid: blocked: deps fid does not match consumer request
+CASE wrong_source_path_same_bytes: blocked: deps source path differs from current canonical path
+CASE wrong_model_path_same_bytes: blocked: deps model path differs from current canonical path
+CASE wrong_gframe: blocked: deps source gframe does not match current plan
+CASE wrong_span: blocked: deps source span does not match current plan
+CASE combined_wrong_identity: blocked: deps kind mismatch
+MATRIX identity: 8 negative cases, all with recomputed digest
+CASE self_digest_tamper: blocked: deps_sha self-digest mismatch
+CASE source_same_size_mutation: blocked: deps source hash changed: daadf903a1a086936c7afbcbab4e59ee09cadd6958a4fe374a1b73348c4d45c9 -> 318e8bb08e0a1ee7ea23c3efffb9ca836e15e69b8c3ccaa07e0c7ceadb2dc80d
+CASE source_restored: verified
+CASE model_same_size_mutation: blocked: deps model hash changed: 2291810a6b17d3d67bfe5b219c6c7078c4b651656b91f5bcd93bec189bce5a02 -> c7ac0a632a620504816bc2ad6210bd0bc1a69fec3cb7db19cc893ec0d753c562
+CASE model_restored: verified
+CASE cast_same_size_mutation: blocked: deps casts[0] hash changed: bde604e5279ad5f0c876eddc06d203710072795e93d99e16d01c43931c58ca31 -> 1fa7233fe927d0c6569780194e6b547c8713e869ccc7f851c490734dfd21b0b8
+CASE cast_restored: verified
+CASE mask_same_size_mutation: blocked: deps masks[0] hash changed: 33a76fbe334b425edcfe76e6e6b1af2225e0a6d82677c3d92686fd919abcfe4b -> 4e6f83dd0a9552616806b1f0c7c0848bb5f950470f2b58173067da231e3e17b1
+CASE mask_restored: verified
+CASE graph_same_size_mutation: blocked: deps graph hash changed: 7dd45f12c0c71e180cb358d0611e5f35eb8159c3ece38c5eca703d75d78900a7 -> 5f84752ae00d972927d71c1e50b1a5339fbe4f8ab493d85f77044c46bdd5d266
+CASE graph_restored: verified
+CASE source_missing: blocked: deps source unreadable: [WinError 2] The system cannot find the file specified: 'C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-fixtures\\c02a-fixture-u15oz76k\\source.mp4'
+CASE model_missing: blocked: deps model unreadable: [WinError 2] The system cannot find the file specified: 'C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-fixtures\\c02a-fixture-u15oz76k\\model.safetensors'
+CASE cast_missing: blocked: deps casts[0] unreadable: [WinError 2] The system cannot find the file specified: 'C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-fixtures\\c02a-fixture-u15oz76k\\cast.png'
+CASE mask_missing: blocked: deps masks[0] unreadable: [WinError 2] The system cannot find the file specified: 'C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-fixtures\\c02a-fixture-u15oz76k\\mask.png'
+CASE graph_missing: blocked: deps graph unreadable: [WinError 2] The system cannot find the file specified: 'C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-fixtures\\c02a-fixture-u15oz76k\\graph.json'
+CASE cast_directory_unreadable: blocked: deps casts[0] unreadable: [Errno 13] Permission denied: 'C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-fixtures\\c02a-fixture-u15oz76k'
+MATRIX bytes/path: 12 negative cases, 5 restored controls
+CASE consumer_json_syntax: controlled GateBlock
+CASE consumer_json_duplicate: controlled GateBlock
+CASE consumer_json_non_json_constant: controlled GateBlock
+NESTING settings depth=10: loader=ok; skip=settings changed now
+NESTING settings depth=200: loader=ok; skip=settings changed now
+NESTING settings depth=400: loader=ok; skip=dep changed
+NESTING settings depth=800: loader=ok; skip=dep changed
+NESTING settings depth=1200: loader=deps unreadable/malformed: maximum recursion depth exceeded while decoding a JSON array from a unicode string; skip=deps unreadable/malformed
+NESTING extra_top_level depth=10: loader=ok; skip=settings changed now
+NESTING extra_top_level depth=200: loader=ok; skip=settings changed now
+NESTING extra_top_level depth=400: loader=ok; skip=dep changed
+NESTING extra_top_level depth=800: loader=ok; skip=dep changed
+NESTING extra_top_level depth=1200: loader=deps unreadable/malformed: maximum recursion depth exceeded while decoding a JSON array from a unicode string; skip=deps unreadable/malformed
+CASE omitted_source: key, assembly gate, assembler entry blocked before copy/encoder
+CASE omitted_source_hash: key, assembly gate, assembler entry blocked before copy/encoder
+CASE missing_kind: blocked: deps missing fields: ['kind']
+CASE missing_shot: blocked: deps missing fields: ['shot']
+CASE missing_fid: blocked: deps missing fields: ['fid']
+CASE missing_source: blocked: deps missing fields: ['source']
+CASE missing_model: blocked: deps missing fields: ['model']
+CASE missing_casts: blocked: deps missing fields: ['casts']
+CASE missing_masks: blocked: deps missing fields: ['masks']
+CASE missing_graph: blocked: deps missing fields: ['graph']
+CASE missing_settings: blocked: deps missing fields: ['settings']
+CASE missing_deps_sha: blocked: deps missing fields: ['deps_sha']
+CASE kind_number: blocked: deps kind mismatch
+CASE shot_list: blocked: deps shot malformed
+CASE fid_bool: blocked: deps fid malformed
+CASE fid_float: blocked: deps fid malformed
+CASE source_list: blocked: deps source malformed
+CASE model_list: blocked: deps model file record malformed
+CASE casts_object: blocked: deps casts must be a list
+CASE masks_null: blocked: deps masks must be a list
+CASE graph_list: blocked: deps graph file record malformed
+CASE settings_empty: blocked: deps settings malformed/empty
+CASE settings_list: blocked: deps settings malformed/empty
+CASE deps_sha_bool: blocked: deps_sha malformed
+CASE source_path_missing: blocked: deps source path malformed
+CASE source_hash_missing: blocked: deps source hash malformed
+CASE source_hash_empty: blocked: deps source hash malformed
+CASE source_hash_nonhex: blocked: deps source hash malformed
+CASE source_gframe_bool: blocked: deps source gframe does not match current plan
+CASE source_span_bool: blocked: deps source span does not match current plan
+CASE source_span_short: blocked: deps source span does not match current plan
+CASE model_path_missing: blocked: deps model file record malformed
+CASE model_hash_missing: blocked: deps model file record malformed
+CASE cast_path_missing: blocked: deps casts[0] file record malformed
+CASE cast_hash_missing: blocked: deps casts[0] file record malformed
+CASE mask_record_number: blocked: deps masks[0] file record malformed
+CASE graph_hash_missing: blocked: deps graph file record malformed
+CASE generated_graph_null: blocked: deps generated key missing graph
+CASE source_relative_path: blocked: deps source path is not absolute
+CASE settings_mode_bool: blocked: deps settings.mode malformed
+CASE settings_mode_null: blocked: deps settings.mode malformed
+CASE null_record: blocked: deps record must be an object
+CASE list_record: blocked: deps record must be an object
+CASE string_record: blocked: deps record must be an object
+CASE bool_record: blocked: deps record must be an object
+MATRIX shape/type: 43 negative cases
+CASE json_syntax: blocked: deps unreadable/malformed: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+CASE json_duplicate: blocked: deps unreadable/malformed: duplicate field kind
+CASE json_nan: blocked: deps unreadable/malformed: non-JSON constant NaN
+CASE json_infinity: blocked: deps unreadable/malformed: non-JSON constant Infinity
+CASE nonobject: blocked: deps record must be an object
+CASE json_excessive_nesting: blocked: deps unreadable/malformed: maximum recursion depth exceeded while decoding a JSON array from a unicode string
+CASE json_invalid_utf8: blocked: deps unreadable/malformed: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+CASE json_missing_file: blocked: deps unreadable/malformed: [Errno 2] No such file or directory: 'C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-fixtures\\c02a-fixture-a19yxjoe\\record.deps.json'
+MATRIX JSON: 8 negative cases
+{"shot": "S0021", "fid": 1, "wall": 0.1, "sha16": "c8a933fa152c6d7e", "actors": ["E1", "E2"]}
+{"shot": "S0021", "fid": 1, "skipped": "verified-reuse"}
+{"shot": "S0021", "fid": 1, "wall": 0.1, "sha16": "c8a933fa152c6d7e", "actors": ["E1", "E2"]}
+{"shot": "S0021", "fid": 1, "skipped": "verified-reuse"}
+{"shot": "S0021", "fid": 1, "wall": 0.1, "sha16": "c8a933fa152c6d7e", "actors": ["E1", "E2"]}
+{"shot": "S0021", "fid": 1, "mode": "keep_source_no_visible_actor", "key": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-fixtures\\c02b2-fixture-71igo8b6\\task\\corrections\\identity\\r6\\keys\\S0021\\f_0001_key.png", "key_sha256": "c6f348f502f707bf0ae7b702a2b61aa691490bcb6a1ac261fdeb04d1640651a5", "wall_s": 0.0}
+{"shot": "S0021", "fid": 1, "skipped": "verified-reuse"}
+{"shot": "S0021", "fid": 1, "wall": 0.0, "sha16": "c8a933fa152c6d7e", "actors": ["E1"]}
+{"shot": "S0021", "fid": 1, "wall": 0.0, "sha16": "c8a933fa152c6d7e", "actors": ["E1"]}
+{"shot": "S0021", "fid": 1, "wall": 0.0, "sha16": "c8a933fa152c6d7e", "actors": ["E1"]}
+{"shot": "S0021", "fid": 1, "skipped": "verified-reuse"}
+{"shot": "S0021", "fid": 1, "wall": 0.0, "sha16": "c8a933fa152c6d7e", "actors": ["E1"]}
+{"shot": "S0021", "fid": 1, "wall": 0.0, "sha16": "c8a933fa152c6d7e", "actors": ["E1"]}
+{"shot": "S0021", "fid": 1, "wall": 0.0, "sha16": "c8a933fa152c6d7e", "actors": ["E1"]}
+{"shot": "S0021", "fid": 1, "wall": 0.0, "sha16": "c8a933fa152c6d7e", "actors": ["E1"]}
+{"shot": "S0035", "fid": 1, "mode": "black_pass", "sha16": "88023d90926d5a69"}
+{"shot": "S0035", "fid": 1, "mode": "black_pass", "sha16": "88023d90926d5a69"}
+{"shot": "S0035", "fid": 1, "skipped": "verified-reuse"}
+{"shot": "S0035", "fid": 1, "wall": 0.0, "sha16": "07077383b8d2e601"}
+{"shot": "S0035", "fid": 1, "skipped": "verified-reuse"}
+{"shot": "S0035", "fid": 1, "wall": 0.0, "sha16": "07077383b8d2e601"}
+{"shot": "S0035", "fid": 1, "wall": 0.0, "sha16": "07077383b8d2e601"}
+{"shot": "S0035", "fid": 1, "wall": 0.0, "sha16": "07077383b8d2e601"}
+{"shot": "S0035", "fid": 1, "wall": 0.0, "sha16": "07077383b8d2e601"}
+{"shot": "S0035", "fid": 1, "wall": 0.0, "sha16": "07077383b8d2e601"}
+{"shot": "S0035", "fid": 1, "wall": 0.0, "sha16": "07077383b8d2e601"}

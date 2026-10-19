@@ -1,0 +1,20 @@
+{
+  "status": "RUNNING_RED_REPRODUCED",
+  "task": "CODEX-C01-REVIEW-BINDING",
+  "owner_model": "gpt-6-sol/max",
+  "authority": "user15Oct and HERMES_AUTOPILOT_RULES.md §0.11",
+  "rules_loaded": true,
+  "preflight": "../OWNERSHIP_PREFLIGHT.json ok=true; target R6g launcher/runner absent; unrelated ComfyUI/heartbeat processes observed",
+  "write_allowlist": ["R6/scripts/r6_gate.py", "R6/tests/test_codex_c01_review_binding.py", "OUT/c01-worker/**"],
+  "source_preimages": "PREIMAGE_MANIFEST.json",
+  "gate_preimage_sha256": "9BEA996AFEB3212FC1E41DD918F1B8CBE90B33BF8AE2B217B2C75A24511DB7DB",
+  "assembler_preimage_sha256": "0509D5F67FFCCE1721701F0C064EA4D68DD8660C6DCA9F6F4967EB78727301C2",
+  "test_sha256": "435158330D559241687D9B0EA57AACDFDE0442C60B77561DD",
+  "red_command": "C01_WORKER_DIR=<OUT>/c01-worker python -B R6/tests/test_codex_c01_review_binding.py",
+  "red_exit": 1,
+  "red_result": "13 tests; 15 failures and 1 error on baseline; raw RED_TEST_OUTPUT.txt",
+  "root_cause": "require_review checks only stored input keys; omitted recorded dependencies are never compared. It also trusts review_id/path and coerces text fields through str, while parse/type errors escape GateBlock.",
+  "decision": "Patch r6_gate.py only. Existing r6_assemble.py invokes gate_assemble before frame copying and encoding; real isolated main path reproduced bypass reaching the later blend-manifest gate.",
+  "next_command": "bounded apply_patch on R6/scripts/r6_gate.py, then SHA/size/line guard and focused green tests",
+  "live_jobs_started_by_c01": []
+}

@@ -1,0 +1,80 @@
+{
+  "utc": "2026-10-14T04:01:34.160897+00:00",
+  "protected_drift": [],
+  "snapshot_input_drift": [],
+  "media": {
+    "R6": {
+      "sha256": "e3107a52c9f10bc36faf7d5aa3aa2e4c4186edae3cd916c52dff9b24eed9e48e",
+      "stable": true
+    },
+    "comparison": {
+      "sha256": "f11f43becf58fa5d9ada18af4ab9dcaac494e47ed8b4d8b41fb87bbe33b140a8",
+      "stable": true
+    },
+    "R5": {
+      "sha256": "b8b9a404e4ef947429b34448acda1ff63881ca90f5c7ee22dfee3b85c7ee272d",
+      "stable": true
+    },
+    "source": {
+      "sha256": "5a175454c2c2965bac5013a53926e210a9f70a185d802d0f2e0083a6fb399fa2",
+      "stable": true
+    }
+  },
+  "pm_changes": [
+    {
+      "path": "C:\\Users\\Admin\\MotionForge2D\\docs\\pm\\HERMES_AUTOPILOT_RULES.md",
+      "before": "2c3fb5353e137f245bec63cfe752438d589c1b3ba87e07180717c26aad0d68f4",
+      "after": "6b0a35082cb484142130cd8d7d41bf5878fa1d59ef63777a9ff0d730f48b35aa",
+      "before_bytes": 57139,
+      "after_bytes": 59357,
+      "before_lines": 690,
+      "after_lines": 723,
+      "preimage": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-r6-checkpoint-review-20261014\\preimages\\HERMES_AUTOPILOT_RULES.md"
+    },
+    {
+      "path": "C:\\Users\\Admin\\MotionForge2D\\docs\\pm\\CODEX_PM_HANDOFF.md",
+      "before": "707bbaa4fe93fca0b73deb3d2a8a582662aed9932e1a683358bf9b0ffd6e7eb3",
+      "after": "88fcff55e5edb8cd606a8dc98165a04df8f0f059aecfebd7dc8de09dee9898c4",
+      "before_bytes": 116880,
+      "after_bytes": 118903,
+      "before_lines": 1730,
+      "after_lines": 1756,
+      "preimage": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-r6-checkpoint-review-20261014\\preimages\\CODEX_PM_HANDOFF.md"
+    },
+    {
+      "path": "C:\\Users\\Admin\\MotionForge2D\\docs\\pm\\ROADMAP.md",
+      "before": "a7314f3d03f563d171e34dda867e73b988351d771b665e38216a0f8360c0d32c",
+      "after": "eb9941161fe13c202c41ac50bba012a9ae34ce4bf9751a04bc9a0f6fe6812e78",
+      "before_bytes": 70458,
+      "after_bytes": 71765,
+      "before_lines": 1080,
+      "after_lines": 1099,
+      "preimage": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-r6-checkpoint-review-20261014\\preimages\\ROADMAP.md"
+    }
+  ],
+  "final_queue": {
+    "queue_running": [],
+    "queue_pending": []
+  },
+  "db_read_only_guard": {
+    "path": "C:\\Users\\Admin\\AppData\\Local\\hermes\\state.db",
+    "open_mode": "mode=ro; PRAGMA query_only=ON",
+    "before": {
+      "bytes": 3597901824,
+      "mtime_ns": 1791836281300781300
+    },
+    "after": {
+      "bytes": 3597901824,
+      "mtime_ns": 1791836281300781300
+    }
+  },
+  "prompt_checks": {
+    "starts_rules_load": true,
+    "exact_worker": true,
+    "exact_manager": true,
+    "no_reset": true,
+    "twelve_rows_all_present": true,
+    "full22_blocked": true,
+    "matching_proposal": true
+  }
+}

@@ -1,0 +1,60 @@
+warning: in the working copy of 'C:\Users\Admin\Documents\Codex\2026-10-12\a-l-m-video-ra-m-2\outputs\motionforge-codex-takeover-20261015\c02a-worker\preimages\tests\test_codex_c01_review_binding.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py', LF will be replaced by CRLF the next time Git touches it
+diff --git "a/C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\preimages\\tests\\test_codex_c01_review_binding.py" "b/C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c01_review_binding.py"
+index a14f68a..59301be 100644
+--- "a/C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\preimages\\tests\\test_codex_c01_review_binding.py"
++++ "b/C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c01_review_binding.py"
+@@ -38,12 +38,19 @@ class ReviewBindingTests(unittest.TestCase):
+         self.k.D = self.root / "data"
+         self.k.R5 = self.root / "r5"
+         self.k.SHOTS = ["S0099"]
++        self.k.PLAN = {"S0099": {"start_frame": 0, "frames": 9000}}
+         self.k.SPAN_B = 9000
+         self.k.SRC = self.root / "source.mp4"
++        self.k.SRC.write_bytes(b"c01 fixture source")
++        self.model = self.root / "model.safetensors"
++        self.model.write_bytes(b"c01 fixture model")
+         self.k.AUDIO_SS = 94
+         self.k.sha = lambda path: hashlib.sha256(Path(path).read_bytes()).hexdigest()
+         self.k.run = lambda *args, **kwargs: self.fail("encoder reached")
+         with patch.dict(sys.modules, {"r6_common": self.k}):
++            self.cache = load_source("c01_isolated_cache", SCRIPTS / "r6_cache.py")
++        self.cache.MODEL_PATH = self.model
++        with patch.dict(sys.modules, {"r6_common": self.k, "r6_cache": self.cache}):
+             self.gate = load_source("c01_isolated_gate", SCRIPTS / "r6_gate.py")
+         self.name = "S0099_f0001"
+         self.artifact = self.k.R6 / "keys" / "S0099" / "f_0001_key.png"
+@@ -66,6 +73,17 @@ class ReviewBindingTests(unittest.TestCase):
+     def save_record(self, record):
+         self.review_path.write_text(json.dumps(record), encoding="utf-8")
+ 
++    def write_deps_fixture(self):
++        """Supply the real v3 producer record required by the key consumer gate."""
++        dep = self.cache.build_deps(
++            "S0099", 1, {"source_span_lo": 0, "source_span_hi": 9000,
++                          "gframe": 0, "casts": [], "masks": [], "graph": None},
++            {"mode": "keep_source_no_visible_actor"},
++        )
++        target = self.k.R6 / "work" / "S0099" / "f_0001.deps.json"
++        target.parent.mkdir(parents=True, exist_ok=True)
++        target.write_text(json.dumps(dep), encoding="utf-8")
++
+     def require(self, artifact=None, inputs=None):
+         return self.gate.require_review(
+             "keys", self.name, artifact or self.artifact,
+@@ -216,6 +234,7 @@ class ReviewBindingTests(unittest.TestCase):
+         storyboard = self.k.R6 / "storyboard" / f"{sid}.json"
+         storyboard.parent.mkdir()
+         storyboard.write_text(json.dumps({"keys": [{"fid": 1}]}), encoding="utf-8")
++        self.write_deps_fixture()
+         self.gate.write_review(
+             "keys", self.name, self.artifact,
+             self.gate.key_inputs_now(sid, 1, self.artifact),
+@@ -286,6 +305,7 @@ class ReviewBindingTests(unittest.TestCase):
+         storyboard = self.k.R6 / "storyboard" / "S0099.json"
+         storyboard.parent.mkdir()
+         storyboard.write_text(json.dumps({"keys": [{"fid": 1}]}), encoding="utf-8")
++        self.write_deps_fixture()
+         self.k.D.mkdir()
+         (self.k.D / "chunk_plan.json").write_text(
+             json.dumps({"chunks": [{"unit_id": "S0099", "start_frame": 0, "frames": 9000}]}),

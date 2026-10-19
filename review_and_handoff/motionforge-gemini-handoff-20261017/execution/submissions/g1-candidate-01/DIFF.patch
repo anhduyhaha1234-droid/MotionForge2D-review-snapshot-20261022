@@ -1,0 +1,979 @@
+--- preimage/tests/test_codex_c02b2_per_actor_reuse.py
++++ r6/tests/test_codex_c02b2_per_actor_reuse.py
+@@ -8,6 +8,7 @@
+ import json
+ import os
+ import shutil
++import subprocess
+ import sys
+ import tempfile
+ import types
+@@ -21,12 +22,12 @@
+ 
+ 
+ SOURCE_SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
+-WORKER = Path(os.environ["C02B2_WORKER_DIR"]).resolve()
++WORKER = Path(os.environ.get("C02B2_WORKER_DIR", Path(__file__).resolve().parents[1] / "work/c02b2-worker")).resolve()
+ MODULES = ("r6_common", "r6_upload", "r6_adapter", "r6_graph", "r6_cache",
+            "r6_key_recipe", "r6_keygen", "r6_gate")
+ 
+ 
+-class PerActorVerifiedReuseTests(unittest.TestCase):
++class BasePerActorFixture(unittest.TestCase):
+     actors = ("E1",)
+     masks = {"E1": "full"}
+     visible = True
+@@ -87,7 +88,11 @@
+         self.frame = torch.arange(1 * 8 * 8 * 3, dtype=torch.float32).reshape(1, 8, 8, 3) / 192
+         adapter = types.ModuleType("r6_adapter")
+         adapter.__file__ = str(self.scripts / "r6_adapter.py")
+-        adapter.load_img = lambda path: self.frame.clone()
++        def _load_img(path):
++            if "blank" in Path(path).name:
++                return torch.zeros((1, 8, 8, 3), dtype=torch.float32)
++            return self.frame.clone()
++        adapter.load_img = _load_img
+         adapter.load_mask = lambda path: torch.from_numpy(self.mask_arrays[Path(path).parent.name].copy())[None, ...]
+         adapter.save_img = self._save_img
+         adapter.crop_for_mask = self._crop
+@@ -206,3 +211,349 @@
+ 
+     def write_dep(self, dep):
+         self.deps_path().write_text(json.dumps(dep), encoding="utf-8")
++
++
++class SingleActorVerifiedReuseTests(BasePerActorFixture):
++    actors = ("E1",)
++    masks = {"E1": "full"}
++    visible = True
++
++    def test_p1_single_actor_replay_unchanged(self):
++        dep = self.generate(review=True)
++        first_calls = dict(self.calls)
++        self.assertEqual(first_calls["stage"], 1)
++        self.assertEqual(first_calls["crop"], 1)
++        self.assertEqual(first_calls["upload"], 4)
++        self.assertEqual(first_calls["post"], 1)
++        key_bytes = self.key().read_bytes()
++        deps_bytes = self.deps_path().read_bytes()
++
++        ok, why = self.cache.skip_allowed("S0021", 1, self.key())
++        self.assertTrue(ok, f"expected verified-reuse, got: {why}")
++        self.assertEqual(why, "verified-reuse")
++
++        self.producer.run_key("S0021", 1)
++        self.assertEqual(self.calls, first_calls)
++        self.assertEqual(self.key().read_bytes(), key_bytes)
++        self.assertEqual(self.deps_path().read_bytes(), deps_bytes)
++
++    def test_p1_missing_review_blocks_skip(self):
++        self.generate(review=False)
++        ok, why = self.cache.skip_allowed("S0021", 1, self.key())
++        self.assertFalse(ok)
++        self.assertTrue("review" in why.lower())
++        self.producer.run_key("S0021", 1)
++        self.assertEqual(self.calls["post"], 2)
++
++    def test_p1_wrong_review_blocks_skip(self):
++        self.generate(review=True)
++        review_path = self.r6 / "reviews/keys/S0021_f0001.review.json"
++        self.assertTrue(review_path.exists())
++        rev = json.loads(review_path.read_text(encoding="utf-8"))
++        rev["verdict"] = "FAIL"
++        review_path.write_text(json.dumps(rev), encoding="utf-8")
++        ok, why = self.cache.skip_allowed("S0021", 1, self.key())
++        self.assertFalse(ok)
++        self.assertTrue("review" in why.lower())
++
++        rev["verdict"] = "PASS"
++        rev["artifact"]["sha256"] = "0" * 64
++        review_path.write_text(json.dumps(rev), encoding="utf-8")
++        ok, why = self.cache.skip_allowed("S0021", 1, self.key())
++        self.assertFalse(ok)
++        self.assertTrue("review" in why.lower())
++
++    def test_p2_effective_settings_independent_mutations(self):
++        self.generate(review=True)
++        self.assertTrue(self.cache.skip_allowed("S0021", 1, self.key())[0])
++
++        # 1. R6_CTX_FACTOR
++        os.environ["R6_CTX_FACTOR"] = "1.5"
++        self.assertFalse(self.cache.skip_allowed("S0021", 1, self.key())[0])
++        os.environ.pop("R6_CTX_FACTOR")
++        self.assertTrue(self.cache.skip_allowed("S0021", 1, self.key())[0])
++
++        # 2. R6_SEED_OFF
++        os.environ["R6_SEED_OFF"] = "42"
++        self.assertFalse(self.cache.skip_allowed("S0021", 1, self.key())[0])
++        os.environ.pop("R6_SEED_OFF")
++        self.assertTrue(self.cache.skip_allowed("S0021", 1, self.key())[0])
++
++        # 3. R6_ONLY_ENTITY
++        os.environ["R6_ONLY_ENTITY"] = "E9"
++        self.assertFalse(self.cache.skip_allowed("S0021", 1, self.key())[0])
++        os.environ.pop("R6_ONLY_ENTITY")
++        self.assertTrue(self.cache.skip_allowed("S0021", 1, self.key())[0])
++
++        # 4. Ledger class mutation
++        ledger_path = self.r6 / "source_actor_ledger.jsonl"
++        orig_ledger = ledger_path.read_text(encoding="utf-8")
++        row = json.loads(orig_ledger)
++        row["actors"][0]["class_windows"][0]["class"] = "NOT_PRESENT"
++        ledger_path.write_text(json.dumps(row) + "\n", encoding="utf-8")
++        self.assertFalse(self.cache.skip_allowed("S0021", 1, self.key())[0])
++        ledger_path.write_text(orig_ledger, encoding="utf-8")
++        self.assertTrue(self.cache.skip_allowed("S0021", 1, self.key())[0])
++
++        # 5. Storyboard mutation
++        sb_path = self.r6 / "storyboard/S0021.json"
++        orig_sb = sb_path.read_text(encoding="utf-8")
++        sb = json.loads(orig_sb)
++        sb["keys"] = [{"fid": 1}, {"fid": 2}]
++        sb_path.write_text(json.dumps(sb), encoding="utf-8")
++        self.assertFalse(self.cache.skip_allowed("S0021", 1, self.key())[0])
++        sb_path.write_text(orig_sb, encoding="utf-8")
++        self.assertTrue(self.cache.skip_allowed("S0021", 1, self.key())[0])
++
++        # 6. Template mutation (steps)
++        tpl_path = self.task / "graph/reuse_bundle/shot_anchor_v1.baseline.api.json"
++        orig_tpl = tpl_path.read_text(encoding="utf-8")
++        tpl = json.loads(orig_tpl)
++        tpl["SIGMAS"]["inputs"]["steps"] = 8
++        tpl_path.write_text(json.dumps(tpl), encoding="utf-8")
++        self.assertFalse(self.cache.skip_allowed("S0021", 1, self.key())[0])
++        tpl_path.write_text(orig_tpl, encoding="utf-8")
++        self.assertTrue(self.cache.skip_allowed("S0021", 1, self.key())[0])
++
++        # 7. Code hash mutation
++        code_path = self.scripts / "r6_keygen.py"
++        orig_code = code_path.read_bytes()
++        code_path.write_bytes(orig_code + b"\n# comment\n")
++        self.assertFalse(self.cache.skip_allowed("S0021", 1, self.key())[0])
++        code_path.write_bytes(orig_code)
++        self.assertTrue(self.cache.skip_allowed("S0021", 1, self.key())[0])
++
++    def test_p3_same_path_same_size_mutations_and_restores(self):
++        self.generate(review=True)
++        self.assertTrue(self.cache.skip_allowed("S0021", 1, self.key())[0])
++
++        def check_mutate(path):
++            orig = path.read_bytes()
++            self.assertTrue(len(orig) > 0)
++            mutated = (bytearray(orig)[:-1] + bytes([orig[-1] ^ 0xFF]) if len(orig) == 1
++                       else bytearray(orig)[:-1] + bytes([(orig[-1] + 1) % 256]))
++            path.write_bytes(bytes(mutated))
++            ok, why = self.cache.skip_allowed("S0021", 1, self.key())
++            self.assertFalse(ok, f"{path} mutation should have invalidated: {why}")
++            path.write_bytes(orig)
++            ok, why = self.cache.skip_allowed("S0021", 1, self.key())
++            self.assertTrue(ok, f"{path} restore should have been valid: {why}")
++
++        check_mutate(self.k.SRC)
++        check_mutate(self.model)
++        front_name = self.k.CASTB_OF_ENTITY["E1"]
++        check_mutate(self.k.R4 / "assets/cast_b" / front_name)
++        profile_name = front_name.replace("_front_bust", "_profile")
++        check_mutate(self.k.R4 / "assets/cast_b" / profile_name)
++        check_mutate(self.k.INP / "keys/cast_refs" / front_name)
++        check_mutate(self.k.INP / "keys/cast_refs" / profile_name)
++        check_mutate(self.r6 / "work/S0021/f_0001_src.png")
++        check_mutate(self.r6 / "work/S0021/f_0001_src.png.stage.json")
++        check_mutate(self.r6 / "masks/S0021/E1/f_0001.png")
++        check_mutate(self.r6 / "work/S0021/f_0001_E1_crop.png")
++        check_mutate(self.k.D / "output/edited-1.png")
++        check_mutate(self.r6 / "workflows/r6_crop_S0021_f1_E1.json")
++
++    def test_p4_malformed_and_truncated_records(self):
++        dep = self.generate(review=True)
++        self.assertTrue(self.cache.skip_allowed("S0021", 1, self.key())[0])
++
++        # 1. Tampered deps_sha
++        bad_seal = copy.deepcopy(dep)
++        bad_seal["deps_sha"] = "0" * 64
++        self.write_dep(bad_seal)
++        ok, why = self.cache.skip_allowed("S0021", 1, self.key())
++        self.assertFalse(ok)
++        self.assertIn("self-digest mismatch", why)
++
++        # 2. Truncated consumed actors list with recomputed self-digest
++        trunc_actors = copy.deepcopy(dep)
++        trunc_actors["consumed"]["actors"] = []
++        self.write_dep(self.reseal(trunc_actors))
++        ok, why = self.cache.skip_allowed("S0021", 1, self.key())
++        self.assertFalse(ok)
++        self.assertIn("actor", why.lower())
++
++        # 3. Truncated consumed masks list with recomputed self-digest
++        trunc_masks = copy.deepcopy(dep)
++        trunc_masks["consumed"]["masks"] = []
++        self.write_dep(self.reseal(trunc_masks))
++        ok, why = self.cache.skip_allowed("S0021", 1, self.key())
++        self.assertFalse(ok)
++        self.assertIn("mask", why.lower())
++
++        # 4. Type bool for number (fid)
++        bad_type = copy.deepcopy(dep)
++        bad_type["fid"] = True
++        self.write_dep(self.reseal(bad_type))
++        ok, why = self.cache.skip_allowed("S0021", 1, self.key())
++        self.assertFalse(ok)
++
++        # 5. Non-finite JSON value
++        bad_num = copy.deepcopy(dep)
++        bad_num["recipe"]["cfg"] = float("nan")
++        with open(self.deps_path(), "w", encoding="utf-8") as f:
++            json.dump(bad_num, f, allow_nan=True)
++        ok, why = self.cache.skip_allowed("S0021", 1, self.key())
++        self.assertFalse(ok)
++
++        # 6. Duplicate JSON keys
++        self.write_dep(dep)
++        raw_text = self.deps_path().read_text(encoding="utf-8")
++        dup_text = raw_text.replace('"shot": "S0021"', '"shot": "S0021", "shot": "S0021"')
++        self.deps_path().write_text(dup_text, encoding="utf-8")
++        ok, why = self.cache.skip_allowed("S0021", 1, self.key())
++        self.assertFalse(ok)
++
++        # 7. Extreme depth (> 256)
++        deep = "leaf"
++        for _ in range(300):
++            deep = [deep]
++        dep_deep = copy.deepcopy(dep)
++        dep_deep["consumed"]["excessive"] = deep
++        self.write_dep(self.reseal(dep_deep))
++        ok, why = self.cache.skip_allowed("S0021", 1, self.key())
++        self.assertFalse(ok)
++
++        # 8. Request shot / fid mismatch
++        ok, why = self.cache.verify_complete_deps(dep, "S0022", 1)
++        self.assertFalse(ok)
++        self.assertIn("shot differs", why)
++        ok, why = self.cache.verify_complete_deps(dep, "S0021", 2)
++        self.assertFalse(ok)
++        self.assertIn("fid differs", why)
++
++        # 9. Legacy v3 recorded positive vs complete skip denial
++        cur_settings = self.cache.settings_now("S0021", 1)
++        graph_file = self.r6 / "workflows/r6_crop_S0021_f1_E1.json"
++        v3_dep = self.cache.build_deps("S0021", 1,
++                                       {"gframe": 0, "source_span_lo": 0, "source_span_hi": 3,
++                                        "casts": [], "masks": [], "graph": graph_file},
++                                       cur_settings)
++        ok, why = self.cache.verify_deps(v3_dep, "S0021", 1)
++        self.assertTrue(ok, f"legacy v3 recorded validation should pass: {why}")
++
++        self.write_dep(v3_dep)
++        ok, why = self.cache.skip_allowed("S0021", 1, self.key())
++        self.assertFalse(ok)
++        self.assertIn("legacy v3 lacks complete per-actor provenance", why)
++
++    def test_p5_injected_generation_failure_does_not_publish_deps(self):
++        def post_fail(g):
++            raise RuntimeError("injected ComfyUI communication failure")
++        self.k.post = post_fail
++        with self.assertRaises(RuntimeError):
++            self.producer.run_key("S0021", 1)
++        self.assertFalse(self.deps_path().exists())
++
++    def test_p5_blank_edit_failure_does_not_publish_deps(self):
++        blank_path = self.k.D / "output" / "blank.png"
++        blank_path.parent.mkdir(parents=True, exist_ok=True)
++        Image.new("RGB", (8, 8), (0, 0, 0)).save(blank_path)
++        self.k.collect_outputs = lambda h: [blank_path]
++        with self.assertRaises(SystemExit):
++            self.producer.run_key("S0021", 1)
++        self.assertFalse(self.deps_path().exists())
++
++    def test_p5_bound_check_failure_does_not_publish_deps(self):
++        sys.modules["r6_adapter"].bound_check = lambda b, a, m: {"ok": False, "frac_core8": 0.5, "frac_outside": 0.5}
++        with self.assertRaises(SystemExit):
++            self.producer.run_key("S0021", 1)
++        self.assertFalse(self.deps_path().exists())
++
++    def test_p5_standalone_gate_import(self):
++        proc = subprocess.run([
++            sys.executable, "-c",
++            f"import sys; sys.path.insert(0, r'{self.scripts}'); import r6_gate; assert 'r6_adapter' not in sys.modules; assert 'torch' not in sys.modules; print('STANDALONE_GATE_OK')"
++        ], capture_output=True, text=True)
++        self.assertEqual(proc.returncode, 0, proc.stderr)
++        self.assertIn("STANDALONE_GATE_OK", proc.stdout)
++
++
++class MultiActorVerifiedReuseTests(BasePerActorFixture):
++    actors = ("E1", "E2")
++    masks = {"E1": "left", "E2": "right"}
++    visible = True
++
++    def test_p1_multi_actor_replay_unchanged(self):
++        dep = self.generate(review=True)
++        first_calls = dict(self.calls)
++        self.assertEqual(first_calls["crop"], 2)
++        self.assertEqual(first_calls["post"], 2)
++        self.assertEqual(first_calls["upload"], 8)
++        self.assertEqual(len(dep["consumed"]["actors"]), 2)
++
++        ok, why = self.cache.skip_allowed("S0021", 1, self.key())
++        self.assertTrue(ok, f"expected multi-actor verified-reuse, got: {why}")
++
++        self.producer.run_key("S0021", 1)
++        self.assertEqual(self.calls, first_calls)
++
++    def test_p3_multi_actor_nonfirst_graph_mutation(self):
++        self.generate(review=True)
++        nonfirst_graph = self.r6 / "workflows/r6_crop_S0021_f1_E2.json"
++        self.assertTrue(nonfirst_graph.exists())
++        orig = nonfirst_graph.read_bytes()
++        mutated = (bytearray(orig)[:-1] + bytes([orig[-1] ^ 0xFF]) if len(orig) == 1
++                   else bytearray(orig)[:-1] + bytes([(orig[-1] + 1) % 256]))
++        nonfirst_graph.write_bytes(bytes(mutated))
++        ok, why = self.cache.skip_allowed("S0021", 1, self.key())
++        self.assertFalse(ok)
++        self.assertIn("hash changed", why)
++        nonfirst_graph.write_bytes(orig)
++        ok, why = self.cache.skip_allowed("S0021", 1, self.key())
++        self.assertTrue(ok)
++
++
++class NoVisibleActorVerifiedReuseTests(BasePerActorFixture):
++    actors = ("E1",)
++    masks = {"E1": "full"}
++    visible = False
++
++    def test_no_visible_actor_positive(self):
++        dep = self.generate(review=True)
++        self.assertEqual(self.calls["crop"], 0)
++        self.assertEqual(self.calls["post"], 0)
++        self.assertEqual(self.calls["upload"], 0)
++        self.assertEqual(dep["recipe"]["mode"], "keep_source_no_visible_actor")
++        self.assertEqual(len(dep["consumed"]["actors"]), 0)
++        self.assertTrue(self.key().exists())
++
++        ok, why = self.cache.skip_allowed("S0021", 1, self.key())
++        self.assertTrue(ok, f"no-visible-actor skip failed: {why}")
++
++        calls_before = dict(self.calls)
++        self.producer.run_key("S0021", 1)
++        self.assertEqual(self.calls, calls_before)
++
++
++class FullyCoveredActorReuseTests(BasePerActorFixture):
++    actors = ("E1", "E2")
++    masks = {"E1": "full", "E2": "full"}
++    visible = True
++
++    def test_fully_covered_actor_fewer_graphs(self):
++        dep = self.generate(review=True)
++        self.assertEqual(self.calls["crop"], 1)
++        self.assertEqual(self.calls["post"], 1)
++        actors = dep["consumed"]["actors"]
++        self.assertEqual(len(actors), 2)
++        self.assertEqual(actors[0]["status"], "generated")
++        self.assertEqual(actors[1]["status"], "fully_covered")
++        self.assertNotIn("graph", actors[1])
++
++        ok, why = self.cache.skip_allowed("S0021", 1, self.key())
++        self.assertTrue(ok, f"covered actor skip failed: {why}")
++
++        calls_before = dict(self.calls)
++        self.producer.run_key("S0021", 1)
++        self.assertEqual(self.calls, calls_before)
++
++
++if __name__ == "__main__":
++    unittest.main()
++
++
++
++
++
+
+--- preimage/scripts/r6_keygen_asset.py
++++ r6/scripts/r6_keygen_asset.py
+@@ -11,6 +11,7 @@
+ sys.path.insert(0, str(HERE))
+ import r6_common as K  # noqa: E402
+ import r6_cache as CA  # noqa: E402
++import r6_key_recipe as KR  # noqa: E402
+ 
+ REC = K.R6 / "receipts/R6_ASSET_RUNS.jsonl"
+ 
+@@ -62,6 +63,11 @@
+     keydir = K.R6 / "keys" / sid
+     keydir.mkdir(parents=True, exist_ok=True)
+     keypng = keydir / f"f_{fid:04d}_key.png"
++    ok, why = CA.skip_allowed(sid, fid, keypng)
++    if ok:
++        print(json.dumps({"shot": sid, "fid": fid, "skipped": why}))
++        return
++    recipe = KR.current_asset_recipe(sid, fid, CA.MODEL_PATH)
+     work = K.R6 / "work" / sid
+     work.mkdir(parents=True, exist_ok=True)
+     src = K.stage_frame(sid, K.gframe_of(sid, fid), work / f"f_{fid:04d}_src.png")
+@@ -71,6 +77,12 @@
+     _a = _np.asarray(_I.open(src).convert("RGB"))
+     if float(_a.std()) < 6.0:  # black/flat source (e.g. S0032 intro) -> explicit passthrough
+         _I.fromarray(_a).save(keypng)
++        deps = CA.build_complete_asset_deps(
++            sid, fid, recipe,
++            {"staged_source": src, "stage_receipt": src.with_name(src.name + ".stage.json")},
++            mode="asset_black_passthrough"
++        )
++        (work / f"f_{fid:04d}.deps.json").write_text(json.dumps(deps, ensure_ascii=False, indent=1), encoding="utf-8")
+         rec = {"shot": sid, "fid": fid, "mode": "asset_black_passthrough", "key": str(keypng),
+                "key_sha256": K.sha(keypng), "wall_s": round(time.time() - t0, 2),
+                "at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
+@@ -78,10 +90,14 @@
+             f.write(json.dumps(rec) + chr(10))
+         print(json.dumps({"shot": sid, "fid": fid, "mode": "black_pass", "sha16": K.sha16(keypng)}))
+         return
+-    seed = 2026101500 + int(sid[1:]) * 1000 + fid
++    seed = recipe["seed"]
+     g = whole_graph(sid, src, seed)
+     gp = K.R6 / "workflows"
+-    (gp / f"r6_asset_{sid}_f{fid}.json").write_text(json.dumps(g, indent=1), encoding="utf-8")
++    gp.mkdir(parents=True, exist_ok=True)
++    graph_path = gp / f"r6_asset_{sid}_f{fid}.json"
++    graph_path.write_text(json.dumps(g, indent=1), encoding="utf-8")
++    grey_file = K.INP / "_grey_64.png"
++    CA._verify_asset_graph(graph_path, recipe, src)
+     r = K.post(g)
+     hist = K.wait(r["prompt_id"], timeout=900)
+     outs = K.collect_outputs(hist)
+@@ -91,12 +107,15 @@
+     im = Image.open(outs[-1]).convert("RGB")
+     if im.size != (640, 360):
+         im = im.resize((640, 360))
++    if float(_np.asarray(im).std()) < 0.01:
++        raise SystemExit(f"BLANK EDIT {sid} f{fid}")
+     im.save(keypng)
+-    deps = CA.build_deps(sid, fid, {"source_span_lo": K.PLAN[sid]["start_frame"],
+-                                    "source_span_hi": K.PLAN[sid]["start_frame"] + n,
+-                                    "gframe": K.gframe_of(sid, fid), "casts": [], "masks": [],
+-                                    "graph": gp / f"r6_asset_{sid}_f{fid}.json"},
+-                         {"mode": "zero_shot_asset_restyle", "steps": 4})
++    deps = CA.build_complete_asset_deps(
++        sid, fid, recipe,
++        {"staged_source": src, "stage_receipt": src.with_name(src.name + ".stage.json"),
++         "graph": graph_path, "grey_ref": grey_file},
++        mode="zero_shot_asset_restyle"
++    )
+     (work / f"f_{fid:04d}.deps.json").write_text(json.dumps(deps, ensure_ascii=False, indent=1), encoding="utf-8")
+     rec = {"shot": sid, "fid": fid, "mode": "asset", "key": str(keypng), "key_sha256": K.sha(keypng),
+            "wall_s": round(time.time() - t0, 1), "prompt_id": r["prompt_id"],
+
+--- preimage/scripts/r6_cache.py
++++ r6/scripts/r6_cache.py
+@@ -20,6 +20,7 @@
+ 
+ MODEL_PATH = Path("C:/Users/Admin/Documents/Codex/work/mfv1/runtime/video14b/models/diffusion_models/flux-2-klein-4b-fp8.safetensors")
+ COMPLETE_KIND = "r6_key_deps_v4_per_actor"
++COMPLETE_ASSET_KIND = "r6_key_deps_v4_asset"
+ 
+ 
+ def settings_now(sid: str, fid: int) -> dict:
+@@ -322,10 +323,152 @@
+         return False, f"complete deps invalid: {exc}"
+ 
+ 
++
++def build_complete_asset_deps(sid: str, fid: int, recipe: dict, consumed: dict, mode: str) -> dict:
++    """Build the complete v4 asset contract."""
++    from r6_key_recipe import current_asset_recipe
++    if mode not in ("zero_shot_asset_restyle", "asset_black_passthrough"):
++        raise ValueError(f"invalid asset mode: {mode}")
++    cur_recipe = current_asset_recipe(sid, fid, MODEL_PATH)
++    if json.dumps(recipe, sort_keys=True, allow_nan=False) != json.dumps(
++            cur_recipe, sort_keys=True, allow_nan=False):
++        raise ValueError("asset recipe changed during generation")
++
++    consumed_rec = {
++        "staged_source": _file_record(consumed["staged_source"], "staged_source"),
++        "stage_receipt": _file_record(consumed["stage_receipt"], "stage_receipt")
++    }
++    if mode == "zero_shot_asset_restyle":
++        consumed_rec["graph"] = _file_record(consumed["graph"], "graph")
++        if "grey_ref" in consumed and consumed["grey_ref"]:
++            consumed_rec["grey_ref"] = _file_record(consumed["grey_ref"], "grey_ref")
++    else:
++        consumed_rec["graph"] = None
++
++    dep = {
++        "kind": COMPLETE_ASSET_KIND,
++        "shot": sid,
++        "fid": fid,
++        "mode": mode,
++        "source": _file_record(K.SRC, "source"),
++        "model": _file_record(MODEL_PATH, "model"),
++        "recipe": recipe,
++        "consumed": consumed_rec
++    }
++    dep["deps_sha"] = hashlib.sha256(json.dumps(dep, sort_keys=True).encode()).hexdigest()
++    ok, why = verify_complete_asset_deps(dep, sid, fid)
++    if not ok:
++        raise ValueError(f"complete asset dependency claim invalid: {why}")
++    return dep
++
++
++def _verify_asset_graph(path: Path, recipe: dict, staged_source: Path) -> None:
++    from r6_key_recipe import _strict_json
++    graph = _strict_json(path)
++    inp = lambda node, field: graph[node]["inputs"][field]
++    if (type(inp("NOISE", "noise_seed")) is not int or inp("NOISE", "noise_seed") != recipe["seed"] or
++            type(inp("SIGMAS", "steps")) is not int or inp("SIGMAS", "steps") != recipe["steps"] or
++            type(inp("GUIDER", "cfg")) not in (int, float) or
++            not math.isfinite(inp("GUIDER", "cfg")) or
++            inp("GUIDER", "cfg") != recipe["cfg"] or
++            inp("UNET", "unet_name") != recipe["model_name"] or
++            inp("CLIP", "clip_name") != recipe["clip_name"] or
++            inp("VAE", "vae_name") != recipe["vae_name"]):
++        raise ValueError("generated asset graph effective model/settings differ from recipe")
++    key_img = inp("KEY_LOAD", "image")
++    if type(key_img) is not str or Path(key_img).name != staged_source.name:
++        raise ValueError("generated asset graph KEY_LOAD input differs from consumed staged source")
++    if inp("PROMPT", "text") != recipe["prompt"]:
++        raise ValueError("generated asset graph prompt differs from recipe")
++    if (inp("GUIDER", "positive") != ["R2_POS", 0] or
++            inp("GUIDER", "negative") != ["R2_NEG", 0]):
++        raise ValueError("generated asset graph guider chain changed")
++
++
++def verify_complete_asset_deps(dep: dict, sid: str | None = None,
++                               fid: int | None = None) -> tuple[bool, str]:
++    """Verify current asset recipe, complete selected inputs and actual generated graphs."""
++    from r6_key_recipe import current_asset_recipe
++    try:
++        if type(dep) is not dict or set(dep) != {"kind", "shot", "fid", "mode", "source", "model",
++                                                "recipe", "consumed", "deps_sha"}:
++            raise ValueError("complete asset record fields malformed")
++        if dep["kind"] != COMPLETE_ASSET_KIND or type(dep["shot"]) is not str or type(dep["fid"]) is not int:
++            raise ValueError("complete asset record kind/identity malformed")
++        if sid is not None and (type(sid) is not str or dep["shot"] != sid):
++            raise ValueError("complete asset record shot differs from request")
++        if fid is not None and (type(fid) is not int or dep["fid"] != fid):
++            raise ValueError("complete asset record fid differs from request")
++        mode = dep["mode"]
++        if mode not in ("zero_shot_asset_restyle", "asset_black_passthrough"):
++            raise ValueError(f"invalid asset mode: {mode}")
++        if not _json_value(dep):
++            raise ValueError("complete asset record contains deep, non-JSON or nonfinite values")
++        seal = dep["deps_sha"]
++        if type(seal) is not str or not re.fullmatch(r"[0-9a-fA-F]{64}", seal):
++            raise ValueError("complete asset self-digest malformed")
++        body = {k: v for k, v in dep.items() if k != "deps_sha"}
++        if hashlib.sha256(json.dumps(body, sort_keys=True).encode()).hexdigest() != seal.lower():
++            raise ValueError("complete asset self-digest mismatch")
++
++        recipe = current_asset_recipe(dep["shot"], dep["fid"], MODEL_PATH)
++        if (type(dep["recipe"]) is not dict or
++                json.dumps(dep["recipe"], sort_keys=True) != json.dumps(recipe, sort_keys=True)):
++            raise ValueError("current asset recipe changed")
++
++        _check_complete_file(dep["source"], "source", K.SRC)
++        _check_complete_file(dep["model"], "model", MODEL_PATH)
++        consumed = dep["consumed"]
++        if type(consumed) is not dict or not ({"staged_source", "stage_receipt"} <= set(consumed)):
++            raise ValueError("complete asset consumed collection malformed")
++        work = K.R6 / "work" / dep["shot"]
++        staged = _check_complete_file(consumed["staged_source"], "staged_source",
++                                      work / f"f_{dep['fid']:04d}_src.png")
++        receipt = _check_complete_file(consumed["stage_receipt"], "stage_receipt",
++                                       staged.with_name(staged.name + ".stage.json"))
++        stage = K._stage_record(receipt)
++        if (stage is None or stage["contract"] != K._STAGE_CONTRACT or
++                stage["source_path"] != str(Path(K.SRC).resolve(strict=True)) or
++                stage["source_sha256"] != dep["source"]["sha256"] or
++                stage["sid"] != dep["shot"] or stage["gframe"] != recipe["gframe"] or
++                stage["output_path"] != str(staged) or
++                stage["output_sha256"] != consumed["staged_source"]["sha256"] or
++                stage["output_size"] != staged.stat().st_size):
++            raise ValueError("staged source receipt differs from source/frame/output")
++
++        from PIL import Image
++        import numpy as np
++        with Image.open(staged) as img:
++            arr = np.asarray(img.convert("RGB"))
++        std = float(arr.std())
++        if mode == "asset_black_passthrough":
++            if std >= 6.0:
++                raise ValueError(f"black passthrough claimed on non-flat frame (std={std:.2f} >= 6.0)")
++            if consumed.get("graph") is not None:
++                raise ValueError("black passthrough must not claim generated graph")
++        else:
++            if std < 6.0:
++                raise ValueError(f"restyle claimed on flat black frame (std={std:.2f} < 6.0)")
++            if "graph" not in consumed or consumed["graph"] is None:
++                raise ValueError("restyle mode missing graph")
++            gp = _check_complete_file(consumed["graph"], "graph",
++                                      K.R6 / "workflows" / f"r6_asset_{dep['shot']}_f{dep['fid']}.json")
++            if "grey_ref" in consumed and consumed["grey_ref"]:
++                _check_complete_file(consumed["grey_ref"], "grey_ref", K.INP / "_grey_64.png")
++            _verify_asset_graph(gp, recipe, staged)
++        return True, "ok"
++    except (OSError, UnicodeError, ValueError, TypeError, KeyError, IndexError,
++            AttributeError, RecursionError, OverflowError) as exc:
++        return False, f"complete asset deps invalid: {exc}"
++
++
+ def verify_deps(dep: dict, sid: str | None = None, fid: int | None = None) -> tuple[bool, str]:
+     """Verify a complete recorded v3 dependency against current files and request."""
+-    if type(dep) is dict and dep.get("kind") == COMPLETE_KIND:
+-        return verify_complete_deps(dep, sid, fid)
++    if type(dep) is dict:
++        if dep.get("kind") == COMPLETE_KIND:
++            return verify_complete_deps(dep, sid, fid)
++        if dep.get("kind") == COMPLETE_ASSET_KIND:
++            return verify_complete_asset_deps(dep, sid, fid)
+     required = {"kind", "shot", "fid", "source", "model", "casts", "masks",
+                 "graph", "settings", "deps_sha"}
+     if type(dep) is not dict:
+@@ -426,7 +569,7 @@
+     ok, why = verify_deps(dep, sid, fid)
+     if not ok:
+         return False, f"dep changed: {why}"
+-    if dep.get("kind") != COMPLETE_KIND:
++    if dep.get("kind") not in (COMPLETE_KIND, COMPLETE_ASSET_KIND):
+         # v3 remains available to historical recorded-file gates, but cannot
+         # authorize a new per-actor skip even if its shallow settings align.
+         try:
+
+--- preimage/scripts/r6_key_recipe.py
++++ r6/scripts/r6_key_recipe.py
+@@ -136,3 +136,88 @@
+             "model_name": unet, "clip_name": clip, "vae_name": vae,
+             "template": {"path": str(G.TPL.resolve(strict=True)), "sha256": K.sha(G.TPL)},
+             "code_sha256": code}
++
++def current_asset_recipe(sid: str, fid: int, model_path: Path) -> dict:
++    """Resolve effective settings for zero-shot asset keys without staging or ComfyUI calls."""
++    import r6_graph as G
++
++    if type(sid) is not str or not re.fullmatch(r"S[0-9]{4}", sid):
++        raise ValueError("invalid shot")
++    if type(fid) is not int or fid < 1:
++        raise ValueError("invalid fid")
++    plan = K.PLAN.get(sid)
++    if type(plan) is not dict or type(plan.get("start_frame")) is not int or type(plan.get("frames")) is not int:
++        raise ValueError("shot absent from plan")
++    if fid > plan["frames"]:
++        raise ValueError("fid outside shot plan")
++    row = None
++    for line in (K.R6 / "source_actor_ledger.jsonl").read_text(encoding="utf-8").splitlines():
++        candidate = json.loads(line)
++        if candidate.get("shot") == sid:
++            row = candidate
++            break
++    if type(row) is not dict or row.get("zero_explicit") is not True:
++        raise ValueError("asset ledger row absent or not ZERO_EXPLICIT")
++    if (type(row.get("n")) is not int or row["n"] != plan["frames"] or
++            row.get("src") != [plan["start_frame"], plan["start_frame"] + plan["frames"]]):
++        raise ValueError("ledger row disagrees with current plan")
++    board = _strict_json(K.R6 / "storyboard" / f"{sid}.json")
++    if type(board) is not dict or board.get("zero_explicit") is not True:
++        raise ValueError("asset storyboard absent or not ZERO_EXPLICIT")
++    if "n" in board and (type(board["n"]) is not int or board["n"] != row["n"]):
++        raise ValueError("storyboard span disagrees with ledger")
++
++    try:
++        off = int(os.environ.get("R6_SEED_OFF", "0"))
++    except (ValueError, OverflowError) as exc:
++        raise ValueError("invalid seed offset") from exc
++    seed = 2026101500 + int(sid[1:]) * 1000 + fid + off
++    if seed < 0 or seed > (1 << 64) - 1:
++        raise ValueError("effective seed outside uint64")
++
++    graph = _strict_json(G.TPL)
++    try:
++        steps = _node_input(graph, "SIGMAS", "steps", int)
++        sampler = _node_input(graph, "SAMPLER", "sampler_name", str)
++        cfg = graph["GUIDER"]["inputs"]["cfg"]
++        unet = _node_input(graph, "UNET", "unet_name", str)
++        clip = _node_input(graph, "CLIP", "clip_name", str)
++        vae = _node_input(graph, "VAE", "vae_name", str)
++    except (KeyError, TypeError) as exc:
++        raise ValueError(f"incomplete graph template: {exc}") from exc
++    if (steps < 1 or type(cfg) not in (int, float) or not math.isfinite(cfg) or cfg <= 0 or
++            unet != Path(model_path).name):
++        raise ValueError("invalid effective template steps/CFG/model")
++
++    code = {name: K.sha(Path(__file__).parent / name) for name in
++            ("r6_key_recipe.py", "r6_keygen_asset.py", "r6_graph.py", "r6_upload.py", "r6_common.py")}
++
++    prompt_text = (
++        "Restyle this frame into flat 2D cel-shaded animation style: solid flat colour fills, thin clean "
++        "outlines, no gradients, no photographic texture, no 3D rendering. CRITICAL: keep the EXACT same "
++        "composition, the EXACT same layout, and every piece of text, number, logo and document shape "
++        "IDENTICAL and fully legible - do not redraw, move, add, remove or invent any glyph or object. "
++        "The result must read as the same document/image, only in flat vector style."
++    )
++
++    return {
++        "mode": "zero_shot_asset_restyle",
++        "shot": sid,
++        "fid": fid,
++        "gframe": plan["start_frame"] + fid - 1,
++        "span": [plan["start_frame"], plan["start_frame"] + plan["frames"]],
++        "ledger_row_sha": _digest(row),
++        "storyboard_sha": _digest(board),
++        "seed_off": off,
++        "seed": seed,
++        "steps": steps,
++        "sampler": sampler,
++        "cfg": float(cfg),
++        "model_name": unet,
++        "clip_name": clip,
++        "vae_name": vae,
++        "template": {"path": str(G.TPL.resolve(strict=True)), "sha256": K.sha(G.TPL)},
++        "code_sha256": code,
++        "prompt": prompt_text
++    }
++
+
+--- preimage/scripts/r6_propagate.py
++++ r6/scripts/r6_propagate.py
+@@ -20,7 +20,7 @@
+ import r6_gate as G  # noqa: E402
+ 
+ REC = K.R6 / "receipts/R6_PROPAGATE_RUNS.jsonl"
+-NS = K.R6 / "continuations/LONG01-R6g-20261014T0725Z-1572"
++NS = Path(os.environ.get("R6_PROPAGATE_NS") or os.environ.get("R6_INVOCATION_DIR") or K.R6 / "continuations/LONG01-R6g-20261014T0725Z-1572")
+ 
+ 
+ def blend_script():
+@@ -32,14 +32,17 @@
+ def event_fids_for(sid: str, row: dict) -> set:
+     ev = set()
+     for e in row.get("events", []):
+-        if isinstance(e, dict) and "frame" in e:
+-            ev.add(int(e["frame"]))
++        if isinstance(e, dict):
++            if "frame" in e:
++                ev.add(int(e["frame"]))
++            elif "f" in e:
++                ev.add(int(e["f"]) + 1)
+     for c in row.get("contacts", []):
+         if isinstance(c, dict) and "from" in c:
+             ev.add(int(c["from"]) + 1)
+-    for a in row["actors"]:
+-        for w in a["class_windows"]:
+-            if w["from"] > 1 and w["class"] in ("VISIBLE", "PARTIALLY_VISIBLE"):
++    for a in row.get("actors", []):
++        for w in a.get("class_windows", []):
++            if w.get("from", 0) > 1 and w.get("class") in ("VISIBLE", "PARTIALLY_VISIBLE"):
+                 ev.add(int(w["from"]))
+     return ev
+ 
+@@ -53,20 +56,22 @@
+     return sorted(fids)
+ 
+ 
+-def plan_runs(key_fids: list, m: int) -> list:
++def plan_runs(key_fids: list, m: int, cuts: list | None = None) -> list:
+     """Decompose [1..m] into runs whose internal spacing is uniform: consecutive runs split where
+-    the spacing between consecutive key fids changes."""
+-    seq = sorted(set(key_fids) | {1, m})
++    the spacing between consecutive key fids changes, and never interpolate across hard cuts."""
++    cut_set = set(cuts or [])
++    seq = sorted(set(key_fids) | {1, m} | cut_set)
+     runs = []
+     cur = [seq[0]]
+     for a, b in zip(seq, seq[1:]):
+         d = b - a
+-        if len(cur) >= 2 and (cur[-1] - cur[-2]) != d:
++        if len(cur) >= 2 and ((cur[-1] - cur[-2]) != d or cur[-1] in cut_set):
+             runs.append(cur)
+             cur = [cur[-1]]
+         cur.append(b)
+-    runs.append(cur)
+-    return runs
++    if cur not in runs:
++        runs.append(cur)
++    return [r for r in runs if len(r) >= 2]
+ 
+ 
+ def run_one(base: Path, beg: int, end: int, itv: int, script: Path, nproc: int):
+
+--- preimage/scripts/r6_cotracker.py
++++ r6/scripts/r6_cotracker.py
+@@ -5,7 +5,7 @@
+ usage: python -B r6_cotracker.py S0034 S0061 S0073
+ """
+ from __future__ import annotations
+-import argparse, json, sys, time
++import json, os, sys, time
+ from pathlib import Path
+ HERE = Path(__file__).resolve().parent
+ sys.path.insert(0, str(HERE))
+@@ -17,6 +17,22 @@
+ OUTD = K.R6 / "evidence/cotracker"
+ OUTD.mkdir(parents=True, exist_ok=True)
+ REC = K.R6 / "receipts/R6_COTRACKER_RUNS.jsonl"
++
++
++
++def validate_cotracker_tensors(tr: np.ndarray, vis: np.ndarray, expected_T: int, expected_N: int) -> tuple[bool, str]:
++    """Validate cotracker outputs: (T,N,2) float32, (T,N) bool/uint8, finite, within canvas bounds."""
++    if not isinstance(tr, np.ndarray) or not isinstance(vis, np.ndarray):
++        return False, "tracks and vis must be numpy arrays"
++    if tr.shape != (expected_T, expected_N, 2):
++        return False, f"tracks shape mismatch: {tr.shape} vs {(expected_T, expected_N, 2)}"
++    if vis.shape != (expected_T, expected_N):
++        return False, f"vis shape mismatch: {vis.shape} vs {(expected_T, expected_N)}"
++    if not np.isfinite(tr).all():
++        return False, "tracks contain non-finite values (NaN or Inf)"
++    if (tr[..., 0] < -32).any() or (tr[..., 0] > 672).any() or (tr[..., 1] < -32).any() or (tr[..., 1] > 400).any():
++        return False, "tracks coordinates far outside canvas bounds"
++    return True, "ok"
+ 
+ 
+ def ckpt():
+@@ -82,6 +98,8 @@
+                   "label": "E1/E2 walking + car region"},
+         "S0073": {"pts": [[320, 175], [300, 185], [355, 190], [360, 210], [250, 200]],  # book/hand at counter
+                   "label": "book/hand pick-hold-release region"},
++        "S0063": {"pts": [[320, 180], [300, 200], [340, 190], [310, 170]],  # E2 occlusion behind E1
++                  "label": "E2 occlusion behind E1 region"},
+     }
+     sq = SEMANTIC_Q.get(sid)
+     if sq is None:
+@@ -99,6 +117,9 @@
+         tr, vis = model(vid, queries=q)
+         tr = tr[0].detach().cpu().numpy(); vis = vis[0].detach().cpu().numpy()
+         wall = round(time.time() - t0, 1)
++        ok, why = validate_cotracker_tensors(tr, vis, T, len(qarr))
++        if not ok:
++            raise SystemExit(f"COTRACKER_TENSOR_INVALID {sid} {kind}: {why}")
+         np.save(OUTD / f"{sid}_{kind}_tracks.npy", tr)
+         np.save(OUTD / f"{sid}_{kind}_vis.npy", vis)
+         out[kind] = {"wall_s": wall, "T": int(tr.shape[0]), "N": int(tr.shape[1])}
+@@ -141,7 +162,7 @@
+     except Exception:
+         font = _F.load_default()
+     w0 = windows[0]
+-    ev_dir = K.R6 / "continuations/LONG01-R6g-20261014T0725Z-1572/evidence/cotracker"
++    ev_dir = Path(os.environ.get("R6_COTRACKER_EV_DIR", OUTD))
+     ev_dir.mkdir(parents=True, exist_ok=True)
+     tiles = []
+     for tag in ("before", "contact", "hold", "release"):
+@@ -155,7 +176,7 @@
+         x = 4 + j * (320 + 6)
+         dr.text((x, 4), f"{sid} {tag}", fill=(255, 220, 80), font=font)
+         c.paste(_I.fromarray(a).resize((320, 180)), (x, 20))
+-        c.paste(_I.fromarray(b).resize((320, 180)), (x, 20 + 190)) if False else None
++        c.paste(_I.fromarray(b).resize((320, 180)), (x, 20 + 190))
+     c.save(ev_dir / f"{sid}_windows_strip.png")
+     vram = round(torch.cuda.max_memory_allocated() / 2**20) if torch.cuda.is_available() else 0
+     qsnap = OUTD / f"{sid}_queries.npy"
+
+--- preimage/scripts/r6_ledger.py
++++ r6/scripts/r6_ledger.py
+@@ -105,8 +105,23 @@
+         sid = r["shot"]
+         grid = json.loads((R5_SB / f"{sid}.json").read_text(encoding="utf-8"))
+         fids = [k["fid"] for k in grid["keys"]]
++        ev_fids = set()
++        for e in r.get("events", []):
++            if isinstance(e, dict):
++                if "f" in e:
++                    ev_fids.add(int(e["f"]) + 1)
++                elif "frame" in e:
++                    ev_fids.add(int(e["frame"]))
++        for c in r.get("contacts", []):
++            if isinstance(c, dict) and "from" in c:
++                ev_fids.add(int(c["from"]) + 1)
++        for a in r.get("actors", []):
++            for w in a.get("class_windows", []):
++                if w.get("from", 0) > 1 and w.get("class") in ("VISIBLE", "PARTIALLY_VISIBLE"):
++                    ev_fids.add(int(w["from"]))
++        all_fids = sorted(set(fids) | {f for f in ev_fids if 1 <= f <= r["n"]})
+         keys = []
+-        for fid in fids:
++        for fid in all_fids:
+             exp = {}
+             for a in r["actors"]:
+                 cls = "NOT_PRESENT"
+
+--- preimage/scripts/r6_assemble.py
++++ r6/scripts/r6_assemble.py
+@@ -6,14 +6,14 @@
+ Frames sourced from each shot's manifest blend_dir (validated by the gate).
+ """
+ from __future__ import annotations
+-import json, shutil, sys, time
++import json, os, shutil, sys, time
+ from pathlib import Path
+ HERE = Path(__file__).resolve().parent
+ sys.path.insert(0, str(HERE))
+ import r6_common as K  # noqa: E402
+ import r6_gate as G  # noqa: E402
+ 
+-NS = K.R6 / "continuations/LONG01-R6g-20261014T0725Z-1572"
++NS = Path(os.environ.get("R6_INVOCATION_DIR", K.R6 / "continuations/LONG01-R6g-20261014T0725Z-1572"))
+ OUT = NS / "outputs"
+ OUT.mkdir(parents=True, exist_ok=True)
+ FR = NS / "assembly_frames"
+
+--- preimage/scripts/r6_matrix.py
++++ r6/scripts/r6_matrix.py
+@@ -4,13 +4,13 @@
+ Emits R6_MATRIX_EVIDENCE.json + R6_MANIFEST.json (recursive; manifest hash AFTER final record).
+ """
+ from __future__ import annotations
+-import hashlib, json, sys, time
++import hashlib, json, os, sys, time
+ from pathlib import Path
+ HERE = Path(__file__).resolve().parent
+ sys.path.insert(0, str(HERE))
+ import r6_common as K  # noqa: E402
+ 
+-NS = K.R6 / "continuations/LONG01-R6g-20261014T0725Z-1572"
++NS = Path(os.environ.get("R6_INVOCATION_DIR", K.R6 / "continuations/LONG01-R6g-20261014T0725Z-1572"))
+ 
+ 
+ def _exists(p):
+
+--- preimage/scripts/r6_gate.py
++++ r6/scripts/r6_gate.py
+@@ -250,8 +250,11 @@
+     sb = json.loads((K.R6 / "storyboard" / f"{sid}.json").read_text(encoding="utf-8"))
+     ev_fids = set()
+     for e in row.get("events", []):
+-        if isinstance(e, dict) and "frame" in e:
+-            ev_fids.add(int(e["frame"]))
++        if isinstance(e, dict):
++            if "frame" in e:
++                ev_fids.add(int(e["frame"]))
++            elif "f" in e:
++                ev_fids.add(int(e["f"]) + 1)
+     for c in row.get("contacts", []):
+         if isinstance(c, dict) and "from" in c:
+             ev_fids.add(int(c["from"]) + 1)  # r3 'from' 0-based -> fid 1-based
+@@ -365,3 +368,29 @@
+         if not p.exists() or K.sha(p) != a["sha256"]:
+             raise GateBlock(f"ARTIFACT_HASH_STALE {p}")
+     return True
++
++def gate_batch_conformance(record: dict, mode: str = "engineering") -> bool:
++    """Validate batch submission:
++    - 'engineering' (G1): Q05, Q07 must be PASS; media Qs remain honestly UNKNOWN/FAIL until G2.
++    - 'final' (G3): all 12 Qs must be PASS.
++    """
++    matrix = record.get("matrix", {})
++    exp_keys = {f"Q{i:02d}" for i in range(1, 13)}
++    if set(matrix.keys()) != exp_keys:
++        raise GateBlock(f"MATRIX_KEYS {sorted(matrix.keys())}")
++    for q, val in matrix.items():
++        if val not in ("PASS", "FAIL", "UNKNOWN"):
++            raise GateBlock(f"INVALID_VERDICT_VALUE {q}={val}")
++    if mode == "engineering":
++        if matrix.get("Q05") != "PASS" or matrix.get("Q07") != "PASS":
++            raise GateBlock(f"ENGINEERING_BATCH_Q_NOT_PASS Q05={matrix.get('Q05')}, Q07={matrix.get('Q07')}")
++        # Disallow false claims of media PASS before actual media rendering
++        for mq in ("Q01", "Q04", "Q06", "Q09", "Q12"):
++            if matrix.get(mq) == "PASS":
++                raise GateBlock(f"PREMATURE_MEDIA_PASS_IN_ENGINEERING_BATCH {mq}")
++    elif mode == "final":
++        bad = {k: v for k, v in matrix.items() if v != "PASS"}
++        if bad:
++            raise GateBlock(f"FINAL_SUBMISSION_NOT_ALL_PASS {bad}")
++    return True
++

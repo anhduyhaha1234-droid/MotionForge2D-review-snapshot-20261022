@@ -1,0 +1,11 @@
+{
+  "script": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\vision-g1c03\\hermes_tool_smoke.py",
+  "result": "TimeoutError waiting for /v1/chat/completions response after90s",
+  "local_steps_completed": [
+    "candidate per-model capability loaded in isolated process",
+    "vision_analyze produced multimodal envelope",
+    "AIAgent unwrapped image tool content"
+  ],
+  "HTTP_request_shape": "user + assistant tool_call + tool message containing image parts; model ag/gemini-3.8-flash-high",
+  "limitation": "No server cancellation proof and no received model answer. No automatic retry, no global override installed."
+}

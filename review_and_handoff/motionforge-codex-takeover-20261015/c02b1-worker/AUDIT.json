@@ -1,0 +1,55 @@
+{
+  "task": "CODEX-C02B1-STAGED-SOURCE-FRESHNESS",
+  "common": {
+    "sha256": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc",
+    "bytes": 10578,
+    "lines": 241
+  },
+  "common_preimage": {
+    "sha256": "17bf5799c445a6f7133c61d53b9d5c41083307add1d7b6a50acdf83c294c15e3",
+    "bytes": 6014,
+    "lines": 138
+  },
+  "test": {
+    "sha256": "61bfe454456c452756ddbbf05b55678e146114cb6d2653bff77f4ee92af46aec",
+    "bytes": 14350,
+    "lines": 300
+  },
+  "protected_count": 27,
+  "protected_drift": [],
+  "snapshot_drift": [],
+  "old_definitions": [
+    "sha",
+    "sha16",
+    "gframe_of",
+    "stage_frame",
+    "pad_to_368",
+    "unpad_368",
+    "run",
+    "post",
+    "wait",
+    "collect_outputs"
+  ],
+  "new_definitions": [
+    "sha",
+    "sha16",
+    "gframe_of",
+    "_stage_source_identity",
+    "_stage_record",
+    "_stage_temp",
+    "stage_frame",
+    "pad_to_368",
+    "unpad_368",
+    "run",
+    "post",
+    "wait",
+    "collect_outputs"
+  ],
+  "old_duplicate_definitions": [],
+  "new_duplicate_definitions": [],
+  "test_duplicate_definitions": [],
+  "unexpected_python": [],
+  "missing_python": [],
+  "diff_sha256": "dd9a4b52aa0f564a9bf3a0df77ffc0c0db33015796dca7aeafd5153065ed9869",
+  "ok": true
+}

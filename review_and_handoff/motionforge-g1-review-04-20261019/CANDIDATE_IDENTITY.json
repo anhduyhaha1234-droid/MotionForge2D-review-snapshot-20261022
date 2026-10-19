@@ -1,0 +1,296 @@
+{
+  "utc": "2026-10-19T12:25:03.316060+00:00",
+  "files": [
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py",
+      "relative": "scripts\\r6_cache.py",
+      "submitted_relative": "scripts/r6_cache.py",
+      "sha256": "e90c24abd1148544785f1855034de6c1d9ce2329ddcf54103331458bcb4cf422",
+      "live_sha256": "e90c24abd1148544785f1855034de6c1d9ce2329ddcf54103331458bcb4cf422",
+      "snapshot_sha256": "e90c24abd1148544785f1855034de6c1d9ce2329ddcf54103331458bcb4cf422",
+      "bytes": 33094,
+      "expected_bytes": 33094,
+      "previous_sha256": "e90c24abd1148544785f1855034de6c1d9ce2329ddcf54103331458bcb4cf422",
+      "changed": false
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_keygen.py",
+      "relative": "scripts\\r6_keygen.py",
+      "submitted_relative": "scripts/r6_keygen.py",
+      "sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+      "live_sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+      "snapshot_sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+      "bytes": 9004,
+      "expected_bytes": 9004,
+      "previous_sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+      "changed": false
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_key_recipe.py",
+      "relative": "scripts\\r6_key_recipe.py",
+      "submitted_relative": "scripts/r6_key_recipe.py",
+      "sha256": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9",
+      "live_sha256": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9",
+      "snapshot_sha256": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9",
+      "bytes": 10608,
+      "expected_bytes": 10608,
+      "previous_sha256": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9",
+      "changed": false
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_keygen_asset.py",
+      "relative": "scripts\\r6_keygen_asset.py",
+      "submitted_relative": "scripts/r6_keygen_asset.py",
+      "sha256": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e",
+      "live_sha256": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e",
+      "snapshot_sha256": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e",
+      "bytes": 6467,
+      "expected_bytes": 6467,
+      "previous_sha256": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e",
+      "changed": false
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_propagate.py",
+      "relative": "scripts\\r6_propagate.py",
+      "submitted_relative": "scripts/r6_propagate.py",
+      "sha256": "65bd738883d904b64697b1fe410f44b9cddd99dcaaa7e71134d4e1b005eb485c",
+      "live_sha256": "65bd738883d904b64697b1fe410f44b9cddd99dcaaa7e71134d4e1b005eb485c",
+      "snapshot_sha256": "65bd738883d904b64697b1fe410f44b9cddd99dcaaa7e71134d4e1b005eb485c",
+      "bytes": 12500,
+      "expected_bytes": 12500,
+      "previous_sha256": "59d37705d286bd57b82b4d4fa89b241092f6793f065b757a20fa0121df2fe3aa",
+      "changed": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cotracker.py",
+      "relative": "scripts\\r6_cotracker.py",
+      "submitted_relative": "scripts/r6_cotracker.py",
+      "sha256": "1b4c1322ce41d98d5105f1c1707c9d280f29a9ea87a77441a52dd43b1417701c",
+      "live_sha256": "1b4c1322ce41d98d5105f1c1707c9d280f29a9ea87a77441a52dd43b1417701c",
+      "snapshot_sha256": "1b4c1322ce41d98d5105f1c1707c9d280f29a9ea87a77441a52dd43b1417701c",
+      "bytes": 10858,
+      "expected_bytes": 10858,
+      "previous_sha256": "1b4c1322ce41d98d5105f1c1707c9d280f29a9ea87a77441a52dd43b1417701c",
+      "changed": false
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_ledger.py",
+      "relative": "scripts\\r6_ledger.py",
+      "submitted_relative": "scripts/r6_ledger.py",
+      "sha256": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200",
+      "live_sha256": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200",
+      "snapshot_sha256": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200",
+      "bytes": 9806,
+      "expected_bytes": 9806,
+      "previous_sha256": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200",
+      "changed": false
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_gate.py",
+      "relative": "scripts\\r6_gate.py",
+      "submitted_relative": "scripts/r6_gate.py",
+      "sha256": "d529b8cdd2116898fbfb8c34063a83aec34f5a9c18426dc932bce1d1090cd830",
+      "live_sha256": "d529b8cdd2116898fbfb8c34063a83aec34f5a9c18426dc932bce1d1090cd830",
+      "snapshot_sha256": "d529b8cdd2116898fbfb8c34063a83aec34f5a9c18426dc932bce1d1090cd830",
+      "bytes": 19708,
+      "expected_bytes": 19708,
+      "previous_sha256": "3907e9e0ced22ff952c592c1ba61ac52242061bf93687b3e97f872adaa7a1819",
+      "changed": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_assemble.py",
+      "relative": "scripts\\r6_assemble.py",
+      "submitted_relative": "scripts/r6_assemble.py",
+      "sha256": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910",
+      "live_sha256": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910",
+      "snapshot_sha256": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910",
+      "bytes": 4245,
+      "expected_bytes": 4245,
+      "previous_sha256": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910",
+      "changed": false
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_matrix.py",
+      "relative": "scripts\\r6_matrix.py",
+      "submitted_relative": "scripts/r6_matrix.py",
+      "sha256": "c26758b7b4a718e608bcb216da2e0852f2351e13d0f647b90252c3e0019a6595",
+      "live_sha256": "c26758b7b4a718e608bcb216da2e0852f2351e13d0f647b90252c3e0019a6595",
+      "snapshot_sha256": "c26758b7b4a718e608bcb216da2e0852f2351e13d0f647b90252c3e0019a6595",
+      "bytes": 9084,
+      "expected_bytes": 9084,
+      "previous_sha256": "b0a288fc357ca063334a782d30b7c2b89c6762fe410f4b08aa4f559d48e1b610",
+      "changed": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_event_contract.py",
+      "relative": "scripts\\r6_event_contract.py",
+      "submitted_relative": "scripts/r6_event_contract.py",
+      "sha256": "3a69215d5e58873cabaad7f99e3088ce5e38720ffde5d2140a85b8f28f54a788",
+      "live_sha256": "3a69215d5e58873cabaad7f99e3088ce5e38720ffde5d2140a85b8f28f54a788",
+      "snapshot_sha256": "3a69215d5e58873cabaad7f99e3088ce5e38720ffde5d2140a85b8f28f54a788",
+      "bytes": 4903,
+      "expected_bytes": 4903,
+      "previous_sha256": "f7bd86c9a51f2b77b24502f2512caa9ab57246770ac1b6af3b5001d603a04f77",
+      "changed": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_evidence_contract.py",
+      "relative": "scripts\\r6_evidence_contract.py",
+      "submitted_relative": "scripts/r6_evidence_contract.py",
+      "sha256": "86e80d7f4f4450133bd62ad7be535a6dcda99f50bfc20e9279e562c5f0cb9488",
+      "live_sha256": "86e80d7f4f4450133bd62ad7be535a6dcda99f50bfc20e9279e562c5f0cb9488",
+      "snapshot_sha256": "86e80d7f4f4450133bd62ad7be535a6dcda99f50bfc20e9279e562c5f0cb9488",
+      "bytes": 7998,
+      "expected_bytes": 7998,
+      "previous_sha256": "f08c8bfd6392ebbcd6ce4cebd1259bb9763a5ae58faf4059aa2951c8759c7df6",
+      "changed": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c02b2_per_actor_reuse.py",
+      "relative": "tests\\test_codex_c02b2_per_actor_reuse.py",
+      "submitted_relative": "tests/test_codex_c02b2_per_actor_reuse.py",
+      "sha256": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24",
+      "live_sha256": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24",
+      "snapshot_sha256": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24",
+      "bytes": 24521,
+      "expected_bytes": 24521,
+      "previous_sha256": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24",
+      "changed": false
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_gemini_c02b3_asset_reuse.py",
+      "relative": "tests\\test_gemini_c02b3_asset_reuse.py",
+      "submitted_relative": "tests/test_gemini_c02b3_asset_reuse.py",
+      "sha256": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b",
+      "live_sha256": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b",
+      "snapshot_sha256": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b",
+      "bytes": 14696,
+      "expected_bytes": 14696,
+      "previous_sha256": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b",
+      "changed": false
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_gemini_a3_event_tracking.py",
+      "relative": "tests\\test_gemini_a3_event_tracking.py",
+      "submitted_relative": "tests/test_gemini_a3_event_tracking.py",
+      "sha256": "cc9fe10b065738dd18fa9c6626f54c4d0da3f996833145fe45db031aaa6a6584",
+      "live_sha256": "cc9fe10b065738dd18fa9c6626f54c4d0da3f996833145fe45db031aaa6a6584",
+      "snapshot_sha256": "cc9fe10b065738dd18fa9c6626f54c4d0da3f996833145fe45db031aaa6a6584",
+      "bytes": 8695,
+      "expected_bytes": 8695,
+      "previous_sha256": "cc9fe10b065738dd18fa9c6626f54c4d0da3f996833145fe45db031aaa6a6584",
+      "changed": false
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_gemini_a4_evidence_conformance.py",
+      "relative": "tests\\test_gemini_a4_evidence_conformance.py",
+      "submitted_relative": "tests/test_gemini_a4_evidence_conformance.py",
+      "sha256": "970eacd0b4d9b46522752cadc29b34425e410415cb5f73d8895f71623a1b2fea",
+      "live_sha256": "970eacd0b4d9b46522752cadc29b34425e410415cb5f73d8895f71623a1b2fea",
+      "snapshot_sha256": "970eacd0b4d9b46522752cadc29b34425e410415cb5f73d8895f71623a1b2fea",
+      "bytes": 6006,
+      "expected_bytes": 6006,
+      "previous_sha256": "970eacd0b4d9b46522752cadc29b34425e410415cb5f73d8895f71623a1b2fea",
+      "changed": false
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_g1_r1_correction.py",
+      "relative": "tests\\test_g1_r1_correction.py",
+      "submitted_relative": "tests/test_g1_r1_correction.py",
+      "sha256": "27c4ef6ce50f68541008890a8cab17e22a9cb57c026b186fe4c006fb61541af5",
+      "live_sha256": "27c4ef6ce50f68541008890a8cab17e22a9cb57c026b186fe4c006fb61541af5",
+      "snapshot_sha256": "27c4ef6ce50f68541008890a8cab17e22a9cb57c026b186fe4c006fb61541af5",
+      "bytes": 28525,
+      "expected_bytes": 28525,
+      "previous_sha256": "80525dc40946d243d2d595eefe57fd79454b753e51b3196036bd316efb62a4e1",
+      "changed": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\G1-R1\\r6_submission_adapter.py",
+      "relative": "scripts\\r6_submission_adapter.py",
+      "submitted_relative": "../../../../../../../../../2026-10-12/a-l-m-video-ra-m-2/outputs/motionforge-gemini-handoff-20261017/execution/G1-R1/r6_submission_adapter.py",
+      "sha256": "41da1873bba6e222303a94ebd72194e917d75f1d9b701bf71f2f67f13ae7115a",
+      "live_sha256": "41da1873bba6e222303a94ebd72194e917d75f1d9b701bf71f2f67f13ae7115a",
+      "snapshot_sha256": "41da1873bba6e222303a94ebd72194e917d75f1d9b701bf71f2f67f13ae7115a",
+      "bytes": 6573,
+      "expected_bytes": 6573,
+      "previous_sha256": "19ee08eb9c75dab104130ac1affd158c05b5e6febd335afde09d47e25e57a880",
+      "changed": true
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "r6g_blend_review.py",
+      "sha256": "27bf20bcd096b291678743297c20d9751993fcf6b376930d702f6d20b4547270",
+      "changed": false,
+      "live_match": true
+    },
+    {
+      "name": "r6_adapter.py",
+      "sha256": "2b16108c5d92264b5e686d6aedeb5d357fc5ee9539be3cfff3b8979c17f9b5b3",
+      "changed": false,
+      "live_match": true
+    },
+    {
+      "name": "r6_common.py",
+      "sha256": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc",
+      "changed": false,
+      "live_match": true
+    },
+    {
+      "name": "r6_graph.py",
+      "sha256": "832d5d44df486c3f10ec8194e7ab170ac4f5a77af0ab46ede176005904981d21",
+      "changed": false,
+      "live_match": true
+    },
+    {
+      "name": "r6_probes.py",
+      "sha256": "739a1eaed3dd8bb200219d2ef93a353d0fa88a95695f9316bfd1c20f02acea15",
+      "changed": false,
+      "live_match": true
+    },
+    {
+      "name": "r6_qa.py",
+      "sha256": "220a63574a5fce3b60e4dda3fca7b3779b65a96044199cbfe9f528d26ee58098",
+      "changed": false,
+      "live_match": true
+    },
+    {
+      "name": "r6_sam2.py",
+      "sha256": "30c8279602a1355f64beecbb23895bf8a26a1d63fa317e17518466cef2b2bfe6",
+      "changed": false,
+      "live_match": true
+    },
+    {
+      "name": "r6_submission_adapter.py",
+      "sha256": "41da1873bba6e222303a94ebd72194e917d75f1d9b701bf71f2f67f13ae7115a",
+      "duplicate": true,
+      "matches": true
+    },
+    {
+      "name": "r6_upload.py",
+      "sha256": "057179db2b539965d88aed3e3f25a0251cf7e6d9959a6f9ce1f7514783e04967",
+      "changed": false,
+      "live_match": true
+    },
+    {
+      "name": "r6_vace.py",
+      "sha256": "1f3d8e00062f6c1f22503e17ca7ed9ff1c7f266f45796586ce4458a7eea02140",
+      "changed": false,
+      "live_match": true
+    },
+    {
+      "name": "r6_validate_masks.py",
+      "sha256": "d5862e81ae29c95d0254aa7590aaf3d992179e5f35d8fa1e34a98f4bc6e067c4",
+      "changed": false,
+      "live_match": true
+    },
+    {
+      "name": "r6_write_reviews.py",
+      "sha256": "c16285f5fb987e866555ae645f163c2ad1737ad27d22b0654acdec945ed27658",
+      "changed": false,
+      "live_match": true
+    }
+  ],
+  "rules_sha256": "4a10f85f7dfba0314ae2b18a260e736a6b66c87f6a260a18b087386426f7bf79"
+}

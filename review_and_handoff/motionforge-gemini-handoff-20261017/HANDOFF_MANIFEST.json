@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "status": "PREPARED_NOT_DISPATCHED",
+  "created_utc": "2026-10-17T05:11:18.828012+00:00",
+  "pm_changes": [
+    {
+      "path": "C:\\Users\\Admin\\MotionForge2D\\docs\\pm\\HERMES_AUTOPILOT_RULES.md",
+      "before_sha256": "7318b42a1c732fc1383bc2f41798963d3545962272cd1b8a245428b2a5f41637",
+      "after_sha256": "194d62902be54e998f99c501a6d76d096985716339d53ec670cf514850f75778",
+      "inserted_lines": 49,
+      "historical_bytes_unchanged": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\MotionForge2D\\docs\\pm\\CODEX_PM_HANDOFF.md",
+      "before_sha256": "102c98a0ac6ffa586db8b5b4154307b2f88122c5b6dfb407bb19dc60cc6af56a",
+      "after_sha256": "bf623504ee067f9b84879ac1a856ced4bf7d30facd401cf8b7ebd29d9a62245e",
+      "inserted_lines": 11,
+      "historical_bytes_unchanged": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\MotionForge2D\\docs\\pm\\ROADMAP.md",
+      "before_sha256": "96727eaf2a43eac5533e12b13459ff4f1e7c977a954e4826bedf45f7ed6d2a8e",
+      "after_sha256": "e4bf190116e77ba70f5bf455f5e6b6795b5965816cf7b8635b35534b5ef2785a",
+      "inserted_lines": 12,
+      "historical_bytes_unchanged": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\PROJECT_STATE.json",
+      "before_sha256": "442ba6449542c16b2c2c4de6523f4bc8d82b01c3f73b33925b26d066c0ac3b02",
+      "after_sha256": "14f81c154f702cbfd79ff75a79160d4d366c1968809314e468e0c7debd117f4c",
+      "existing_field_values_unchanged": true
+    }
+  ],
+  "production_files_unchanged": 4,
+  "automation_status": "PAUSED",
+  "required_reference_paths_verified": 12,
+  "historical_document_bytes_preserved": true,
+  "no_code_render_owner_transfer_or_model_dispatch": true,
+  "artifacts": [
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\CODEX_PM_HANDOFF.md.diff",
+      "bytes": 981,
+      "sha256": "7fb4a57ff9497ec4fcf9e4b9b8d1b59cd7c9620719510424c377d4dedfcfc39b"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\HANDOFF_PREFLIGHT.json",
+      "bytes": 5048,
+      "sha256": "9cb85d4714ef86d1425f77fa47021989eab3f3af0f303f3d2faf4ea6f3778a0b"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\HERMES_AUTOPILOT_RULES.md.diff",
+      "bytes": 4471,
+      "sha256": "686bc5123a8a28d340bb7cdbc1435f4732c162bc2ce735f9429b9e2fa0723004"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\INTEGRATION_STATUS.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\MAIN_STATUS.txt",
+      "bytes": 4534,
+      "sha256": "2fe3baf19e1944e21e16c0d80e4495c1fa557955afc10a75841954cedad20547"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\PROMPT_GEMINI_MOTIONFORGE_VI.md",
+      "bytes": 44265,
+      "sha256": "8fe8b9c67236e222134ee836d53aa1cee81eebdd3cbe8d146015bd205026b6c4"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\ROADMAP.md.diff",
+      "bytes": 1049,
+      "sha256": "d51c2fa6afce16c870bfe1ca513da12b55fac8471a3b99a93ad52d2f7de9ee40"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\START_HERE_VI.md",
+      "bytes": 2803,
+      "sha256": "281042a8cc3cb9a032fbdf0dfde04e9c703d5a2095420a2aad0fe0a5484afe54"
+    }
+  ]
+}

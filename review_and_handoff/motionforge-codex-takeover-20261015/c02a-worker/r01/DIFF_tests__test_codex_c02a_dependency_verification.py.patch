@@ -1,0 +1,93 @@
+--- candidate01/tests/test_codex_c02a_dependency_verification.py
++++ candidate02/tests/test_codex_c02a_dependency_verification.py
+@@ -311,6 +311,90 @@
+         print(f"CASE json_missing_file: blocked: {why}")
+         print("MATRIX JSON: 8 negative cases")
+ 
++    def test_nested_json_matrix_through_loader_verify_key_and_skip(self):
++        self.prepare_key_review()
++        for location in ("settings", "extra_top_level"):
++            for depth in (10, 200, 400, 800, 1200):
++                with self.subTest(location=location, depth=depth):
++                    if depth == 1200:
++                        nested_raw = "[" * depth + "0" + "]" * depth
++                        raw = json.dumps(self.build())
++                        if location == "settings":
++                            raw = raw.replace('"settings": {',
++                                              '"settings": {"nested":' + nested_raw + ',', 1)
++                        else:
++                            raw = raw[:-1] + ',"extra_nested":' + nested_raw + '}'
++                    else:
++                        dep = self.build()
++                        nested = 0
++                        for _ in range(depth):
++                            nested = [nested]
++                        if location == "settings":
++                            dep["settings"]["nested"] = nested
++                        else:
++                            dep["extra_nested"] = nested
++                        raw = json.dumps(self.reseal(dep))
++                    self.deps_path().parent.mkdir(parents=True, exist_ok=True)
++                    self.deps_path().write_text(raw, encoding="utf-8")
++                    loaded, loader_reason = self.cache.load_deps(self.deps_path())
++                    if depth == 1200:
++                        self.assertIsNone(loaded)
++                        self.assertNotEqual(loader_reason, "ok")
++                        self.assertFalse(self.cache.verify_deps(loaded, self.sid, self.fid)[0])
++                        with self.assertRaisesRegex(self.gate.GateBlock, "KEY_DEPS_MALFORMED"):
++                            self.gate.gate_key(self.sid, self.fid)
++                    else:
++                        self.assertEqual(loader_reason, "ok")
++                        ok, reason = self.cache.verify_deps(loaded, self.sid, self.fid)
++                        self.assertEqual(ok, depth <= 200, reason)
++                        if ok:
++                            inputs = {"ledger_row_sha": self.gate.ledger_row_sha(self.sid),
++                                      "deps_sha": hashlib.sha256(json.dumps(
++                                          loaded, sort_keys=True).encode()).hexdigest()}
++                            self.gate.write_review(
++                                "keys", f"{self.sid}_f{self.fid:04d}", self.key_path(),
++                                inputs, {"shot": self.sid, "fid": self.fid}, "PASS",
++                                "isolated nested record", reviewer="fixture-reviewer",
++                                frames=[self.fid])
++                            self.assertEqual(self.gate.gate_key(self.sid, self.fid)["verdict"], "PASS")
++                        else:
++                            self.assertTrue(reason)
++                            with self.assertRaisesRegex(self.gate.GateBlock, "KEY_DEPS_INVALID"):
++                                self.gate.gate_key(self.sid, self.fid)
++                    with patch.dict(sys.modules, {"r6_gate": self.gate}):
++                        allowed, skip_reason = self.cache.skip_allowed(
++                            self.sid, self.fid, self.key_path())
++                    self.assertFalse(allowed)
++                    self.assertTrue(skip_reason)
++                    print(f"NESTING {location} depth={depth}: loader={loader_reason}; "
++                          f"skip={skip_reason.split(':', 1)[0]}")
++
++    def test_parsed_nested_deps_block_actual_assembly_before_copy(self):
++        dep = self.prepare_key_review()
++        self.prepare_blend_review()
++        nested = 0
++        for _ in range(400):
++            nested = [nested]
++        dep["extra_nested"] = nested
++        self.write_deps(self.reseal(dep))
++        loaded, why = self.cache.load_deps(self.deps_path())
++        self.assertEqual(why, "ok")
++        self.assertFalse(self.cache.verify_deps(loaded, self.sid, self.fid)[0])
++        self.k.D.mkdir()
++        (self.k.D / "chunk_plan.json").write_text(json.dumps({"chunks": [
++            {"unit_id": self.sid, "start_frame": 12, "frames": 9000},
++        ]}), encoding="utf-8")
++        with patch.dict(sys.modules, {"r6_common": self.k, "r6_gate": self.gate}):
++            assembler = load_source("c02a_nested_assembler", SCRIPTS / "r6_assemble.py")
++        with self.assertRaisesRegex(self.gate.GateBlock, "KEY_DEPS_INVALID"):
++            self.gate.gate_key(self.sid, self.fid)
++        with self.assertRaisesRegex(self.gate.GateBlock, "ASSEMBLE_BLOCKED.*KEY_DEPS_INVALID"):
++            self.gate.gate_assemble([(self.sid, 3)])
++        with patch.object(assembler.shutil, "copyfile", side_effect=AssertionError("copy reached")):
++            with self.assertRaisesRegex(self.gate.GateBlock, "ASSEMBLE_BLOCKED.*KEY_DEPS_INVALID"):
++                assembler.main()
++        self.assertFalse(assembler.FR.exists(), "assembler copied before dependency gate")
++
+     def test_valid_record_through_real_key_and_assembly_gates(self):
+         self.prepare_key_review()
+         self.prepare_blend_review()

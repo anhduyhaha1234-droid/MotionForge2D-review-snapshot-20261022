@@ -1,0 +1,17 @@
+{
+  "next": "add strict v4 dependency builder/verifier before producer uses it",
+  "task": "CODEX-C02B2-PER-ACTOR-VERIFIED-REUSE",
+  "owner": "/root/motionforge_c02b2_coder",
+  "live_jobs": [],
+  "model": "gpt-6-sol/max/no-fallback",
+  "verification": "AST parse exit0",
+  "phase": "pure current-recipe resolver added",
+  "files": [
+    {
+      "lines": 138,
+      "sha256": "e18fc9d20de1cbf2a3a8f7da2e68fc99c59260701bfbd3dca75106a7cbe8e2bd",
+      "bytes": 6361,
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_key_recipe.py"
+    }
+  ]
+}

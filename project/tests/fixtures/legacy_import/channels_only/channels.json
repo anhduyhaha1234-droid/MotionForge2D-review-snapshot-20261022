@@ -1,0 +1,16 @@
+[
+  {
+    "channel_id": "ch_1",
+    "name": "One",
+    "target_lang": "en",
+    "default_preset_id": "",
+    "created_at": ""
+  },
+  {
+    "channel_id": "ch_2",
+    "name": "Two",
+    "target_lang": "vi",
+    "default_preset_id": "",
+    "created_at": ""
+  }
+]

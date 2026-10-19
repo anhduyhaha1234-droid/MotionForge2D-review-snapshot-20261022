@@ -1,0 +1,18 @@
+{
+  "at_utc": "2026-10-18T04:33:19.306751+00:00",
+  "canonical_path": "C:\\Users\\Admin\\MotionForge2D\\docs\\pm\\HERMES_AUTOPILOT_RULES.md",
+  "section_added": "10.1",
+  "before_sha256": "194d62902be54e998f99c501a6d76d096985716339d53ec670cf514850f75778",
+  "after_sha256": "4a10f85f7dfba0314ae2b18a260e736a6b66c87f6a260a18b087386426f7bf79",
+  "before_lines": 809,
+  "after_lines": 851,
+  "runtime_distributions": {
+    "pydantic": "2.13.5",
+    "filelock": "4.0.1",
+    "numpy": "2.4.6"
+  },
+  "ruff_installed_in_video14b": false,
+  "production_code_changed": false,
+  "packages_installed": false,
+  "dispatch_performed": false
+}

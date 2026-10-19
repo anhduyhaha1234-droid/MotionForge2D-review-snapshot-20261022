@@ -1,0 +1,61 @@
+{
+  "utc": "2026-10-16T07:38:49.722302+00:00",
+  "status": "TASK_SUBMITTED_PENDING_ROOT_REVIEW",
+  "task": "CODEX-C02B1-STAGED-SOURCE-FRESHNESS",
+  "owner": "/root/motionforge_c02b1_coder",
+  "model": "gpt-6-sol",
+  "reasoning": "max",
+  "fallback": "disabled",
+  "allowlist": [
+    "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_common.py",
+    "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c02b1_staged_source.py",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b1-worker\\**"
+  ],
+  "files": {
+    "r6_common.py": {
+      "live": {
+        "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_common.py",
+        "sha256": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc",
+        "bytes": 10578,
+        "lines": 241
+      },
+      "snapshot": {
+        "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b1-worker\\candidate-01\\r6_common.py",
+        "sha256": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc",
+        "bytes": 10578,
+        "lines": 241
+      }
+    },
+    "test_codex_c02b1_staged_source.py": {
+      "live": {
+        "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c02b1_staged_source.py",
+        "sha256": "61bfe454456c452756ddbbf05b55678e146114cb6d2653bff77f4ee92af46aec",
+        "bytes": 14350,
+        "lines": 300
+      },
+      "snapshot": {
+        "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b1-worker\\candidate-01\\test_codex_c02b1_staged_source.py",
+        "sha256": "61bfe454456c452756ddbbf05b55678e146114cb6d2653bff77f4ee92af46aec",
+        "bytes": 14350,
+        "lines": 300
+      }
+    }
+  },
+  "tests": {
+    "new_module": "10/10",
+    "root_probe": "7/7",
+    "C01": "17/17",
+    "C02A": "13/13"
+  },
+  "decisions": [
+    "versioned exact provenance",
+    "pending marker before frame publication",
+    "WIP1, no lock framework"
+  ],
+  "blockers": [],
+  "live_jobs": [],
+  "remaining": [
+    "independent root review"
+  ],
+  "next_command": "Root independently verify candidate-01/MANIFEST.json, live hashes and focused probes"
+}

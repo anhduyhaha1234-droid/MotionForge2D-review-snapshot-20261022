@@ -1,0 +1,33 @@
+{
+  "versions": {
+    "pydantic": "2.13.5",
+    "numpy": "2.4.6",
+    "torch": "2.14.0+cu130",
+    "filelock": "4.0.1",
+    "Pillow": "12.3.0",
+    "ruff": "NOT_INSTALLED_IN_RUNTIME",
+    "jsonschema": "NOT_INSTALLED_IN_RUNTIME",
+    "ffprobe": [
+      "ffprobe version 8.1.2-full_build-www.gyan.dev Copyright (c) 2007-2026 the FFmpeg developers"
+    ],
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]"
+  },
+  "new_test_names": [
+    "test_m01_asset_missing_grey_ref_rejected",
+    "test_m02_asset_graph_sampler_mismatch_rejected",
+    "test_m03_m04_asset_actual_contract_and_controls",
+    "test_m05_cotracker_cli_help",
+    "test_m06_cotracker_invalid_tensor_matrix",
+    "test_m07_cotracker_window_no_nan_json",
+    "test_m08_m09_propagate_child_failure_and_manifest_unlinked",
+    "test_m10_m11_event_transitions_and_cuts",
+    "test_m12_m14_matrix_and_batch_gate_strictness",
+    "test_m15_m16_manifest_relative_filtering",
+    "test_m17_q11_historical_proof_binding",
+    "test_m18_q11_two_process_race_barrier",
+    "test_m19_m20_candidate_identity_and_state"
+  ],
+  "count": 13,
+  "root_suite89_executed": false,
+  "reason": "Risk-critical micro probes already demonstrate open matrix rows; per rules no broad final gate until closure. 89/89 remains submitted claim, not independently reproduced in this review."
+}

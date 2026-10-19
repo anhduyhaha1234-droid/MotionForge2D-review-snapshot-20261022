@@ -1,0 +1,58 @@
+{
+  "utc": "2026-10-16T07:36:18.2388645Z",
+  "task": "CODEX-C02B1-STAGED-SOURCE-FRESHNESS",
+  "owner": "/root/motionforge_c02b1_coder",
+  "model": "gpt-6-sol/max/no fallback",
+  "allowlist": [
+    "R6/scripts/r6_common.py related helpers/imports",
+    "R6/tests/test_codex_c02b1_staged_source.py",
+    "OUT/c02b1-worker/**"
+  ],
+  "intent": "Self-review exact S1-S7 and freeze candidate",
+  "files": [
+    {
+      "bytes": 10578,
+      "sha": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc",
+      "path": "r6_common.py",
+      "lines": 241
+    },
+    {
+      "bytes": 14350,
+      "sha": "61bfe454456c452756ddbbf05b55678e146114cb6d2653bff77f4ee92af46aec",
+      "path": "test_codex_c02b1_staged_source.py",
+      "lines": 300
+    }
+  ],
+  "commands": [
+    {
+      "name": "root_seven_case_probe",
+      "exit": 0,
+      "result": "7/7"
+    },
+    {
+      "name": "new_full_module",
+      "exit": 0,
+      "result": "10/10"
+    },
+    {
+      "name": "approved_C01_full_module",
+      "exit": 0,
+      "result": "17/17"
+    },
+    {
+      "name": "approved_C02A_full_module",
+      "exit": 0,
+      "result": "13/13"
+    }
+  ],
+  "decisions": [
+    "Real FFmpeg fixture persisted with two commands, raw exits, source and frame files, pixels",
+    "No broad gate needed beyond specified affected modules"
+  ],
+  "remaining": [
+    "protected/hash/scope/AST/diff audit",
+    "self-review report and immutable candidate manifest"
+  ],
+  "next_command": "Run exact protected hash and diff scope audit",
+  "live_jobs": []
+}

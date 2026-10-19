@@ -1,0 +1,11 @@
+{
+ "frames": 9000,
+ "shots": 54,
+ "master": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\outputs\\IDENTITY5M_R6_MASTER.mp4",
+ "master_bytes": 46138723,
+ "comparison": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\outputs\\IDENTITY5M_R6_COMPARISON.mp4",
+ "comparison_bytes": 262,
+ "crop": "640:360:0:4 explicit inverse",
+ "audio": "[94,394)s aac",
+ "at": "2026-10-12T19:34:41Z"
+}

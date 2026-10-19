@@ -1,0 +1,104 @@
+[
+  {
+    "relative": "scripts/r6_cache.py",
+    "expected": "e90c24abd1148544785f1855034de6c1d9ce2329ddcf54103331458bcb4cf422",
+    "live": "e90c24abd1148544785f1855034de6c1d9ce2329ddcf54103331458bcb4cf422",
+    "snapshot": "e90c24abd1148544785f1855034de6c1d9ce2329ddcf54103331458bcb4cf422"
+  },
+  {
+    "relative": "scripts/r6_keygen.py",
+    "expected": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+    "live": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+    "snapshot": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282"
+  },
+  {
+    "relative": "scripts/r6_key_recipe.py",
+    "expected": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9",
+    "live": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9",
+    "snapshot": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9"
+  },
+  {
+    "relative": "scripts/r6_keygen_asset.py",
+    "expected": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e",
+    "live": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e",
+    "snapshot": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e"
+  },
+  {
+    "relative": "scripts/r6_propagate.py",
+    "expected": "59d37705d286bd57b82b4d4fa89b241092f6793f065b757a20fa0121df2fe3aa",
+    "live": "59d37705d286bd57b82b4d4fa89b241092f6793f065b757a20fa0121df2fe3aa",
+    "snapshot": "59d37705d286bd57b82b4d4fa89b241092f6793f065b757a20fa0121df2fe3aa"
+  },
+  {
+    "relative": "scripts/r6_cotracker.py",
+    "expected": "1b4c1322ce41d98d5105f1c1707c9d280f29a9ea87a77441a52dd43b1417701c",
+    "live": "1b4c1322ce41d98d5105f1c1707c9d280f29a9ea87a77441a52dd43b1417701c",
+    "snapshot": "1b4c1322ce41d98d5105f1c1707c9d280f29a9ea87a77441a52dd43b1417701c"
+  },
+  {
+    "relative": "scripts/r6_ledger.py",
+    "expected": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200",
+    "live": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200",
+    "snapshot": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200"
+  },
+  {
+    "relative": "scripts/r6_gate.py",
+    "expected": "3907e9e0ced22ff952c592c1ba61ac52242061bf93687b3e97f872adaa7a1819",
+    "live": "3907e9e0ced22ff952c592c1ba61ac52242061bf93687b3e97f872adaa7a1819",
+    "snapshot": "3907e9e0ced22ff952c592c1ba61ac52242061bf93687b3e97f872adaa7a1819"
+  },
+  {
+    "relative": "scripts/r6_assemble.py",
+    "expected": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910",
+    "live": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910",
+    "snapshot": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910"
+  },
+  {
+    "relative": "scripts/r6_matrix.py",
+    "expected": "b0a288fc357ca063334a782d30b7c2b89c6762fe410f4b08aa4f559d48e1b610",
+    "live": "b0a288fc357ca063334a782d30b7c2b89c6762fe410f4b08aa4f559d48e1b610",
+    "snapshot": "b0a288fc357ca063334a782d30b7c2b89c6762fe410f4b08aa4f559d48e1b610"
+  },
+  {
+    "relative": "scripts/r6_event_contract.py",
+    "expected": "f7bd86c9a51f2b77b24502f2512caa9ab57246770ac1b6af3b5001d603a04f77",
+    "live": "f7bd86c9a51f2b77b24502f2512caa9ab57246770ac1b6af3b5001d603a04f77",
+    "snapshot": "f7bd86c9a51f2b77b24502f2512caa9ab57246770ac1b6af3b5001d603a04f77"
+  },
+  {
+    "relative": "scripts/r6_evidence_contract.py",
+    "expected": "f08c8bfd6392ebbcd6ce4cebd1259bb9763a5ae58faf4059aa2951c8759c7df6",
+    "live": "f08c8bfd6392ebbcd6ce4cebd1259bb9763a5ae58faf4059aa2951c8759c7df6",
+    "snapshot": "f08c8bfd6392ebbcd6ce4cebd1259bb9763a5ae58faf4059aa2951c8759c7df6"
+  },
+  {
+    "relative": "tests/test_codex_c02b2_per_actor_reuse.py",
+    "expected": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24",
+    "live": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24",
+    "snapshot": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24"
+  },
+  {
+    "relative": "tests/test_gemini_c02b3_asset_reuse.py",
+    "expected": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b",
+    "live": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b",
+    "snapshot": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b"
+  },
+  {
+    "relative": "tests/test_gemini_a3_event_tracking.py",
+    "expected": "cc9fe10b065738dd18fa9c6626f54c4d0da3f996833145fe45db031aaa6a6584",
+    "live": "cc9fe10b065738dd18fa9c6626f54c4d0da3f996833145fe45db031aaa6a6584",
+    "snapshot": "cc9fe10b065738dd18fa9c6626f54c4d0da3f996833145fe45db031aaa6a6584"
+  },
+  {
+    "relative": "tests/test_gemini_a4_evidence_conformance.py",
+    "expected": "970eacd0b4d9b46522752cadc29b34425e410415cb5f73d8895f71623a1b2fea",
+    "live": "970eacd0b4d9b46522752cadc29b34425e410415cb5f73d8895f71623a1b2fea",
+    "snapshot": "970eacd0b4d9b46522752cadc29b34425e410415cb5f73d8895f71623a1b2fea"
+  },
+  {
+    "relative": "tests/test_g1_r1_correction.py",
+    "expected": "80525dc40946d243d2d595eefe57fd79454b753e51b3196036bd316efb62a4e1",
+    "live": "80525dc40946d243d2d595eefe57fd79454b753e51b3196036bd316efb62a4e1",
+    "snapshot": "80525dc40946d243d2d595eefe57fd79454b753e51b3196036bd316efb62a4e1"
+  }
+]

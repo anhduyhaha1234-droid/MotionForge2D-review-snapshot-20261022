@@ -1,0 +1,77 @@
+{
+  "checkpoint_id": "GEMINI_A4_CHECKPOINT_005_SELF_VERIFIED",
+  "timestamp_utc": "2026-10-17T17:46:31.094463+00:00",
+  "task": "CODEX-C02B2-PER-ACTOR-VERIFIED-REUSE",
+  "phase": "A4 completed, all Batch A tasks self-verified (A1-A4)",
+  "owner": "gemini-implementation-owner",
+  "model": "ag/gemini-3.8-flash-high",
+  "files": [
+    {
+      "name": "r6_cache.py",
+      "live_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py",
+      "preimage_path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\preimages\\c02b2_takeover\\r6_cache.py",
+      "sha256": "8d4b0c7ad5336e7e6c2a68a12f2a622fbccf900575afd2c1249f31863ae4243d",
+      "bytes": 24050,
+      "lines": 445
+    },
+    {
+      "name": "r6_keygen.py",
+      "live_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_keygen.py",
+      "preimage_path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\preimages\\c02b2_takeover\\r6_keygen.py",
+      "sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+      "bytes": 9004,
+      "lines": 180
+    },
+    {
+      "name": "r6_key_recipe.py",
+      "live_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_key_recipe.py",
+      "preimage_path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\preimages\\c02b2_takeover\\r6_key_recipe.py",
+      "sha256": "e18fc9d20de1cbf2a3a8f7da2e68fc99c59260701bfbd3dca75106a7cbe8e2bd",
+      "bytes": 6361,
+      "lines": 138
+    },
+    {
+      "name": "test_codex_c02b2_per_actor_reuse.py",
+      "live_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c02b2_per_actor_reuse.py",
+      "preimage_path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\preimages\\c02b2_takeover\\test_codex_c02b2_per_actor_reuse.py",
+      "sha256": "c8e272a60340683c0128bdfd980a078975030dfa7ec6d98977bcc55a304abd99",
+      "bytes": 9246,
+      "lines": 208
+    }
+  ],
+  "remaining": [
+    "P1: actual run_key unchanged review reuse vs missing review",
+    "P2: effective settings independent mutations",
+    "P3: same-path same-size mutations and covered actor fewer graphs",
+    "P4: malformed/missing collections with recomputed self-digest and legacy v3 denial",
+    "P5: actual producer/graph/cache/gate failure controls",
+    "P6: full root replay probe, full new module, 40 approved regression tests",
+    "Freeze candidate A1 and self-review"
+  ],
+  "next_step": "Run tests/test_codex_c02b2_per_actor_reuse.py and inspect existing assertions",
+  "status": "A4_SELF_VERIFIED",
+  "a1_deliverables": {
+    "report": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A1\\REPORT_VI.md",
+    "manifest": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A1\\MANIFEST.json",
+    "test_results": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A1\\TEST_RESULTS.json",
+    "diff": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A1\\DIFF.patch"
+  },
+  "a2_deliverables": {
+    "report": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A2\\REPORT_VI.md",
+    "manifest": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A2\\MANIFEST.json",
+    "test_results": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A2\\TEST_RESULTS.json",
+    "diff": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A2\\DIFF.patch"
+  },
+  "a3_deliverables": {
+    "report": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A3\\REPORT_VI.md",
+    "manifest": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A3\\MANIFEST.json",
+    "test_results": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A3\\TEST_RESULTS.json",
+    "diff": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A3\\DIFF.patch"
+  },
+  "a4_deliverables": {
+    "report": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A4\\REPORT_VI.md",
+    "manifest": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A4\\MANIFEST.json",
+    "test_results": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A4\\TEST_RESULTS.json",
+    "diff": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A4\\DIFF.patch"
+  }
+}

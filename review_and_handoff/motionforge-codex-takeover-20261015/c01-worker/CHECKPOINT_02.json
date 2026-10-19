@@ -1,0 +1,21 @@
+{
+  "status": "RUNNING_FIRST_GREEN",
+  "task": "CODEX-C01-REVIEW-BINDING",
+  "owner_model": "gpt-6-sol/max",
+  "allowlist": ["R6/scripts/r6_gate.py", "R6/tests/test_codex_c01_review_binding.py", "OUT/c01-worker/**"],
+  "rules_loaded": true,
+  "preimage_manifest": "PREIMAGE_MANIFEST.json",
+  "current_gate_sha256": "42A8FE790EFD0DCEDFE5A66A45833DB53DEDF734026A7A8B9AB35F06B54D6E08",
+  "current_gate_bytes_lines": [15127, 316],
+  "test_sha256": "435158330D559241687D9B0EA57AACDFDE0442C60B77561DD",
+  "focused_command": "C01_WORKER_DIR=<OUT>/c01-worker python -B R6/tests/test_codex_c01_review_binding.py",
+  "focused_exit": 0,
+  "focused_result": "13 tests, OK; raw GREEN_TEST_OUTPUT_01.txt",
+  "self_review_open": [
+    "_valid_inputs must type-check _sha values before regex so malformed numeric SHA raises GateBlock, not TypeError",
+    "bind current producer's expected shot/fid or frame count to reviewed frame list; 1016 key and 54 blend records were read-only checked for compatibility",
+    "run final focused checks and preserve exact diff/hashes"
+  ],
+  "decision": "Assembler source remains unchanged because its gate_assemble call precedes frame copying and encoding.",
+  "live_jobs_started_by_c01": []
+}

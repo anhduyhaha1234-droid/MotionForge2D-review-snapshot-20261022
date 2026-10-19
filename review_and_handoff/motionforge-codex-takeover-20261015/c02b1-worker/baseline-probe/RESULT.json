@@ -1,0 +1,57 @@
+{
+  "source_sha256": "17bf5799c445a6f7133c61d53b9d5c41083307add1d7b6a50acdf83c294c15e3",
+  "cases": [
+    {
+      "name": "initial_extract",
+      "pass": true,
+      "extracted": 1,
+      "expected_extract": true,
+      "output_sha": "7fe5f723e33825eaa68531b8beaafb41f50aeb3d2632ab62e7e59fa64376de62"
+    },
+    {
+      "name": "unchanged_reuse",
+      "pass": true,
+      "extracted": 0,
+      "expected_extract": false,
+      "output_sha": "7fe5f723e33825eaa68531b8beaafb41f50aeb3d2632ab62e7e59fa64376de62"
+    },
+    {
+      "name": "source_same_path_size_mutation",
+      "pass": false,
+      "extracted": 0,
+      "expected_extract": true,
+      "output_sha": "7fe5f723e33825eaa68531b8beaafb41f50aeb3d2632ab62e7e59fa64376de62"
+    },
+    {
+      "name": "source_restored_requires_current_output",
+      "pass": false,
+      "extracted": 0,
+      "expected_extract": true,
+      "output_sha": "7fe5f723e33825eaa68531b8beaafb41f50aeb3d2632ab62e7e59fa64376de62"
+    },
+    {
+      "name": "source_path_changed_same_bytes",
+      "pass": false,
+      "extracted": 0,
+      "expected_extract": true,
+      "output_sha": "7fe5f723e33825eaa68531b8beaafb41f50aeb3d2632ab62e7e59fa64376de62"
+    },
+    {
+      "name": "frame_changed",
+      "pass": false,
+      "extracted": 0,
+      "expected_extract": true,
+      "output_sha": "7fe5f723e33825eaa68531b8beaafb41f50aeb3d2632ab62e7e59fa64376de62"
+    },
+    {
+      "name": "output_mutated",
+      "pass": false,
+      "extracted": 0,
+      "expected_extract": true,
+      "output_sha": "0d1b345d24e1e118b35ea60a0f99f57e14fb2b9b32671f890cd3797d7b18f9ea"
+    }
+  ],
+  "passed": 2,
+  "total": 7,
+  "boundary": "FFmpeg subprocess substituted by deterministic fixture; actual stage_frame and filesystem used. Worker must additionally prove real tiny FFmpeg extraction."
+}

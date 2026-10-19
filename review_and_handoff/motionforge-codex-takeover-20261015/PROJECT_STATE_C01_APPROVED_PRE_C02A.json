@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "updated_utc": "2026-10-15T21:18:56.487476+00:00",
+  "project": "MotionForge2D",
+  "parent": "MF-DEMO-LONG-01",
+  "parent_status": "NOT_APPROVED",
+  "task": "CODEX-C01-REVIEW-BINDING",
+  "status": "C01_APPROVED",
+  "model": "gpt-6-sol",
+  "reasoning": "max",
+  "owner": "/root/motionforge_c01_coder",
+  "root_role": "independent PM/reviewer",
+  "active_writer": false,
+  "task_packet": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\TASK_C01.md",
+  "current_baseline": "R6g actual bytes; no new R6g master submitted",
+  "next_action": "Same GPT-6 Sol Max coder correcting C01-R01; root independently verifies once terminal",
+  "quota": {
+    "research_agents_error": "Your workspace is out of credits. Ask your workspace owner to refill in order to continue.",
+    "context_remaining": "UNKNOWN",
+    "coder_prior_error": "Usage limit, retry at 3:03 AM; observed before heartbeat resume",
+    "last_check": "QUOTA_RESUME_20261016T0405.json",
+    "ordinary_usage_allowed": true,
+    "primary_used_percent": 0,
+    "weekly_used_percent": 16,
+    "reset_observed": true
+  },
+  "roadmap": [
+    "C01 complete review input binding",
+    "C02 cache/event/child outcome correctness after C01 review",
+    "C03 evidence and media correction after engineering gates",
+    "300s pilot independent semantic acceptance",
+    "tool integration and full-source scope after pilot approval"
+  ],
+  "checkpoint_contract": [
+    "intent",
+    "files+hashes",
+    "decisions",
+    "test commands+exit",
+    "remaining",
+    "next command",
+    "live jobs"
+  ],
+  "no_fallback": true,
+  "checkpoint": "c01-worker/candidate02/CHECKPOINT_R01.md",
+  "root_baseline_probes": {
+    "passed": 9,
+    "total": 30,
+    "receipt": "root-review/baseline-pinned/RESULT.json"
+  },
+  "automation": {
+    "id": "motionforge-checkpoint-v-quota",
+    "status": "ACTIVE",
+    "interval": "hourly",
+    "purpose": "meaningful status/quota changes in original chat"
+  },
+  "root_review": "C01_REVIEW_02.md",
+  "resume_preflight": "RESUME_PREFLIGHT_20261016T0405.json",
+  "root_candidate_01_probes": {
+    "initial_probes": "30/30 pass",
+    "worker_module_rerun": "16/16 pass",
+    "additional_blend_identity": "1/3 pass; truncated and overlong wrongly accepted",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "candidate_manifest": "c01-worker/candidate02/CANDIDATE_MANIFEST_R01.json"
+}

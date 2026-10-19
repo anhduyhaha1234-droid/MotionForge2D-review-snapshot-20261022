@@ -1,0 +1,58 @@
+--- before/HERMES_AUTOPILOT_RULES.md
++++ after/HERMES_AUTOPILOT_RULES.md
+@@ -3,6 +3,55 @@
+ > Đây là **nguồn quy tắc duy nhất (canonical)** để Codex viết prompt điều phối Hermes Manager hoặc một Codex Manager mới cho dự án MotionForge2D.
+ >
+ > Không được viết prompt quản lý dựa trên trí nhớ, bản tóm tắt cũ hoặc một prompt cũ. Phải đọc lại **toàn bộ file này từ đầu tới cuối trong chính lượt làm việc hiện tại**.
++
++### 0.12. Prompt bàn giao Gemini theo user17/10/2026 — chưa dispatch
++
++User yêu cầu giao toàn bộ công việc MotionForge2D cho agent qua 9router, tự
++planning/coding/self-review; Codex giữ kiểm duyệt độc lập cuối. Prompt chuẩn bị:
++`C:/Users/Admin/Documents/Codex/2026-10-12/a-l-m-video-ra-m-2/outputs/motionforge-gemini-handoff-20261017/PROMPT_GEMINI_MOTIONFORGE_VI.md`.
++
++Mục này là overlay riêng cho lane mới khi user gửi prompt để chạy. Việc viết
++prompt không dispatch, không đổi owner đang lưu, không resume Sol/Hermes và
++không bật automation. PROJECT_STATE hiện PAUSED_BY_USER; heartbeat phải giữ
++PAUSED theo yêu cầu user dừng lịch. Chưa có approval mới về code/media/product.
++
++- Lane mới dùng `ag/gemini-3.8-flash-high` qua 9router local, một implementation
++  owner tự lập kế hoạch và triển khai; Codex là PM/reviewer. Đây là lựa chọn
++  model theo ngữ cảnh user bàn giao cho Gemini đã test, không đổi model của
++  session cũ hoặc tự fallback. Account round-robin không tăng số writer.
++- WIP1/GPU1, full rules read, current-byte preflight, zero-writer/queue/lease
++  audit, preserve old evidence/counters và owner-transfer receipt vẫn bắt buộc.
++  Old owner terminal trong collaboration tool chưa thay OS/queue/lease audit.
++  ALIVE/UNKNOWN chưa reconcile thì không được mở production writer mới.
++- Task đầu giữ CODEX-C02B2-PER-ACTOR-VERIFIED-REUSE/checkpoint015. Chỉ owner/model
++  và evidence directory mới thay; bốn file/acceptance của A1 trong prompt giữ
++  như TASK_C02B2. Không restart từ zero hoặc dùng approval C02A cho live cache
++  đang có patch C02B2 chưa review.
++- Cho lane mới, thay cơ chế root duyệt từng microtask ở §0/§0.11 bằng ba cổng:
++  G1 frozen engineering batch trước GPU/inference/media correction; G2 exact
++  pilot300s trước full source/backend/frontend integration; G3 product/final
++  independent acceptance. Chỉ Codex được APPROVED các cổng đúng manifest/hash.
++- Trong batch đã mở, agent được tự chia task, lập exact allowlist/preimages
++  trước sửa, self-review/correction, freeze task snapshot và đi tiếp dependency
++  khi SELF_VERIFIED. Không đồng nhất SELF_VERIFIED với ROOT_APPROVED. Không
++  mở ngoài batch, đổi nguồn/stack/style/acceptance hoặc bỏ qua gate chờ root.
++  Phạm vi A1–A4 và các gate được ghi cụ thể trong prompt, không là quyền ghi
++  toàn repo. Task mới phải có actual repro/AC/path/commands/protected baseline.
++- Sau G2, product gap inventory theo PRD Phase1, exact integration workspace
++  và transport boundary trong verdict; bảo toàn MAIN dirty. Không Git mutation,
++  overwrite history hoặc install hàng loạt engine. Các legacy constraints
++  còn lại, canonical Q01–Q12/T01–T15, source/CAST/audio pins vẫn giữ.
++- State gốc chỉ trỏ sang execution state mới SAU transfer hợp lệ; trước đó chỉ
++  thêm pending handoff pointer, vẫn PAUSED_BY_USER/active_writer=false. Submission
++  gắn PENDING_CODEX_REVIEW; không tự đặt QUALITY_ACCEPTED/parent CLOSED.
++- Không tạo heartbeat/cron/model polling để đợi quota/review. Checkpoint sau
++  coherent unit, phân biệt quota/credits/auth/model404; không reset/mua quota,
++  không đổi account/task/model nhằm vượt hard block. Client không có channel
++  gửi Codex thì user chuyển report/path, không hứa tự wake reviewer.
++
++Mục0.12 ưu tiên các owner/model/microtask-orchestration chỉ dẫn cũ riêng cho
++lane này; không giảm các yêu cầu source fidelity, quality và evidence. File
++rules này vẫn là nguồn canonical duy nhất; handoff file là execution contract.
+ 
+ ### 0.11. Codex coding takeover theo user15/10/2026
+ 

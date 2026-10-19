@@ -1,0 +1,17 @@
+{
+  "files": [
+    {
+      "sha256": "3aa55ae2cc273d35a73a6df94cd41586226326a00a5228c927a7492c1711105e",
+      "lines": 442,
+      "bytes": 23831,
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py"
+    }
+  ],
+  "phase": "v3 skip denied, v4 eligible pending producer",
+  "verification": "AST parse exit0",
+  "next": "patch keygen for v4 emissions and effective recipe settings",
+  "model": "gpt-6-sol/max/no-fallback",
+  "live_jobs": [],
+  "owner": "/root/motionforge_c02b2_coder",
+  "task": "CODEX-C02B2-PER-ACTOR-VERIFIED-REUSE"
+}

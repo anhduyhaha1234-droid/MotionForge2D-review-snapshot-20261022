@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-19T11:46:47.382316+00:00",
+  "exact_manifest_files": 17,
+  "live_match": 17,
+  "snapshot_match": 17,
+  "changed_since_candidate02": [
+    "scripts/r6_cache.py",
+    "scripts/r6_propagate.py",
+    "scripts/r6_cotracker.py",
+    "scripts/r6_gate.py",
+    "scripts/r6_matrix.py",
+    "scripts/r6_event_contract.py",
+    "scripts/r6_evidence_contract.py",
+    "tests/test_gemini_a4_evidence_conformance.py",
+    "tests/test_g1_r1_correction.py"
+  ],
+  "root_production_patches": 0,
+  "root_new_GPU_jobs": 0,
+  "config_unchanged": true,
+  "vision_helper_pass": true,
+  "subagent_limit": "Both read-only helpers reached usage limit; no replacement/fallback launched. Retained completed evidence."
+}

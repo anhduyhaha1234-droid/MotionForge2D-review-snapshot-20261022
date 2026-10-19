@@ -1,0 +1,59 @@
+{
+  "utc": "2026-10-19T11:45:07.267368+00:00",
+  "results": [
+    {
+      "case": "preflight_fail",
+      "command": [
+        "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\venv\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-03-boundaries\\driver.py",
+        "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-03-20261019\\candidate\\task\\corrections\\identity\\r6\\scripts",
+        "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-03-boundaries\\preflight_fail",
+        "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-03-boundaries\\global_frame_child.py",
+        "preflight_fail"
+      ],
+      "exit": 1,
+      "stdout": "ERROR S0021: root injected invalid input\n",
+      "stderr": "PROPAGATE_FAILED: 1 shots failed: [('S0021', 'root injected invalid input')]\n",
+      "stale_manifest": true,
+      "failure_receipt": false,
+      "scope": "CPU children/staging fixture; original candidate except explicitly labeled Image injection diagnostic."
+    },
+    {
+      "case": "stage_systemexit",
+      "command": [
+        "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\venv\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-03-boundaries\\driver.py",
+        "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-03-20261019\\candidate\\task\\corrections\\identity\\r6\\scripts",
+        "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-03-boundaries\\stage_systemexit",
+        "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-03-boundaries\\global_frame_child.py",
+        "stage_systemexit"
+      ],
+      "exit": 1,
+      "stdout": "BLOCK S0021: EVENT_KEY_MISSING controlled fixture\n",
+      "stderr": "PROPAGATE_FAILED: 1 shots failed: [('S0021', 'EVENT_KEY_MISSING controlled fixture')]\n",
+      "stale_manifest": true,
+      "failure_receipt": false,
+      "scope": "CPU children/staging fixture; original candidate except explicitly labeled Image injection diagnostic."
+    },
+    {
+      "case": "global_names_import_injected",
+      "command": [
+        "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\venv\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-03-boundaries\\driver.py",
+        "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-03-20261019\\candidate\\task\\corrections\\identity\\r6\\scripts",
+        "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-03-boundaries\\global_names_import_injected",
+        "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-03-boundaries\\global_frame_child.py",
+        "global_names_import_injected"
+      ],
+      "exit": 1,
+      "stdout": "BLOCK S0021: PROPAGATE BLOCK [S0021] run 1 missing expected frame 0001.jpg, got ['0011.jpg', '0012.jpg', '0013.jpg', '0014.jpg', '0015.jpg', '0016.jpg', '0017.jpg', '0018.jpg', '0019.jpg', '0020.jpg']\n",
+      "stderr": "PROPAGATE_FAILED: 1 shots failed: [('S0021', \"PROPAGATE BLOCK [S0021] run 1 missing expected frame 0001.jpg, got ['0011.jpg', '0012.jpg', '0013.jpg', '0014.jpg', '0015.jpg', '0016.jpg', '0017.jpg', '0018.jpg', '0019.jpg', '0020.jpg']\")]\n",
+      "stale_manifest": false,
+      "failure_receipt": true,
+      "scope": "CPU children/staging fixture; original candidate except explicitly labeled Image injection diagnostic."
+    }
+  ]
+}

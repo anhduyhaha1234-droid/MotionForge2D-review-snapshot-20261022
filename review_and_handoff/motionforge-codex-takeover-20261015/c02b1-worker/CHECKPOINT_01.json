@@ -1,0 +1,30 @@
+{
+  "utc": "2026-10-16T07:30:08.4493116Z",
+  "task": "CODEX-C02B1-STAGED-SOURCE-FRESHNESS",
+  "owner": "/root/motionforge_c02b1_coder",
+  "model": "gpt-6-sol",
+  "reasoning": "max",
+  "fallback": "disabled",
+  "intent": "bind staged output reuse to exact source/path/frame/output provenance",
+  "allowlist": [
+    "R6/scripts/r6_common.py stage_frame/private helpers/imports",
+    "R6/tests/test_codex_c02b1_staged_source.py",
+    "OUT/c02b1-worker/**"
+  ],
+  "source_sha256": "17bf5799c445a6f7133c61d53b9d5c41083307add1d7b6a50acdf83c294c15e3",
+  "preimage_sha256": "17bf5799c445a6f7133c61d53b9d5c41083307add1d7b6a50acdf83c294c15e3",
+  "preflight": "28/28 source and snapshot hashes match, test absent",
+  "baseline_probe": "2/7, exit 1, expected stale-cache reproduction",
+  "decisions": [
+    "Use exact SHA256+canonical paths+sid/frame+output digest versioned sidecar",
+    "Preserve global frame seek mapping and output contract"
+  ],
+  "remaining": [
+    "Create failing isolated tests",
+    "Patch common helper",
+    "Run finite matrix and affected tests",
+    "Self-review, frozen manifest"
+  ],
+  "next_command": "Create new test skeleton in allowlist",
+  "live_jobs": []
+}

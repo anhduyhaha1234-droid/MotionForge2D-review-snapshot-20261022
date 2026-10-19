@@ -1,0 +1,28 @@
+{
+ "utc": "2026-10-12T12:13:31Z",
+ "root_cause": "R6b closed cleanly (63/80 turns... actually 80/80 budget) but refreshed the WRONG record file: it refreshed C/r6/evidence/terminal/LONG01-R6-20261012T0810Z-2731.json (invocation #1's id) instead of writing LONG01-R6b-20261012T0825Z-1d8c.json for its own invocation. Validation looks up the dispatch invocation id by filename -> WinError 2 -> NEEDS_RECONCILIATION. Record content is a valid CONTINUE_REQUIRED record; no out-of-scope writes.",
+ "record_2731_mtime": "2026-10-12T12:05:37Z",
+ "record_2731_invocation_field": "LONG01-R6-20261012T0810Z-2731",
+ "frozen8_ok": {
+  "R5_master": true,
+  "R5_comparison": true,
+  "R5e_terminal": true,
+  "R4_master": true,
+  "source": true,
+  "W7_master": true,
+  "style": true,
+  "cast_board": true
+ },
+ "frozen_bad": [],
+ "r4_masks_tracks_mismatches": [],
+ "r4r5_touched_since_r6start": [],
+ "decision": "NR acknowledged for R6b (receipt stands; record NOT backfilled). R6c packet adds the exact fix: write the record at <ITS OWN {{INVOCATION_ID}}>.json with invocation_id field == that id; do not refresh other invocations' files. Work continues from R6_REMAINING.json.",
+ "work_done_r6b": [
+  "SEEDS: 26 shots via vision sheets (entry-aware; E2 partial seeds on visible hair region)",
+  "SAM2: 36 main + fix reruns; 0 ledger violations across 37 people-shots; 2 real bugs fixed (min-frame falsy-0 mixing; bf16/f32 dtype crash); S57 window=[1..96]; S70 E2 -> FULLY_OCCLUDED; S21 E4 seed from f43",
+  "KEYGEN: 36 shots, all keys complete EXCEPT S0061 fids 141..356 (23; NoneType.get debug) and S0043 (SAM2 1078f slow -> killed to save batch; plan 2-chunk re-seed)",
+  "bound_check recalibrated WITH measurements (core 0.4%, outliers <=0.1% soft-flagged to REVIEW)",
+  "Keygen runs total 613 rows; SAM2 runs 50 rows",
+  "R4/R5 guard: 0 writes (verification above)"
+ ]
+}

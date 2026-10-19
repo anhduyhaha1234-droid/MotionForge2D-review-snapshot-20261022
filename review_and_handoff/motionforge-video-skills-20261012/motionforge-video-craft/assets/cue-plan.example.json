@@ -1,0 +1,26 @@
+{
+  "schema_version": "motionforge.cue-plan/v0.1",
+  "mode": "source_locked",
+  "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "fps_num": 30,
+  "fps_den": 1,
+  "source_start_frame": 0,
+  "source_end_frame": 300,
+  "output_frame_count": 300,
+  "audio_policy": "original_locked",
+  "frame_map_policy": "identity",
+  "cues": [
+    {
+      "id": "synthetic-event-marker",
+      "start_frame": 150,
+      "end_frame": 151,
+      "clock": "source_event",
+      "action": "marker",
+      "evidence": {
+        "asset_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "record_id": "SYNTHETIC_FIXTURE_ONLY_NOT_PILOT_EVIDENCE",
+        "timing_method": "authored"
+      }
+    }
+  ]
+}

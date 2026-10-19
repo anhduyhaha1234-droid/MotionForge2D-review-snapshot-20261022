@@ -1,0 +1,145 @@
+{
+  "command": [
+    "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\venv\\Scripts\\python.exe",
+    "-B",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\write_terminal_record_r6g.py",
+    "--submitted"
+  ],
+  "cwd": "None",
+  "at_utc": "2026-10-18T06:55:24.531204+00:00",
+  "duration_seconds": 0.1720000000204891,
+  "exit": 0,
+  "stdout": "SKIP missing R6_CHECKPOINT.md\nSKIP missing R6_GATE_RESTATEMENT.md\nSKIP missing source_actor_ledger.jsonl\nSKIP missing cast_atlas.json\nSKIP missing event_map.json\nSKIP missing R6_LEDGER_VALIDATION.json\nSKIP missing R6_NEGATIVE_PROBES.json\nSKIP missing R6_SAM2_RUNS.jsonl\nSKIP missing R6_KEYGEN_RUNS.jsonl\nSKIP missing R6_smoke_S23_f1.png\nSKIP missing s43_chunk.py\nSKIP missing R6_REVIEW_RESULTS.json\nSKIP missing R6_VACE_RUNS.jsonl\nSKIP missing R6_LEDGER_VALIDATION.json\nSKIP missing SHEET_S0027_v2.png\nSKIP missing SHEET_S0021_v2.png\nSKIP missing R6_S5_ENGINE_DECISION.json\nSKIP missing R6_COTRACKER_RUNS.jsonl\nSKIP missing R6_PROPAGATE_RUNS.jsonl\nSKIP missing R6_ASSET_RUNS.jsonl\nSKIP missing R6_R2_REPAIRS.json\nSKIP missing R6G_RESTATE.md\nSKIP missing test_r6g_microfixes.py\nDEDUP drop C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\r6_gate.py\nDEDUP drop C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\r6_propagate.py\nDEDUP drop C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\r6_cache.py\nRECORD_OK LONG01-R6g-20261014T0725Z-1572.json | status TASK_SUBMITTED | artifacts 20\nSUBMIT GATE FAIL: ARTIFACT_KIND master=None\n",
+  "stderr": "",
+  "published_terminal": [
+    {
+      "schema_version": "1.0",
+      "run_id": "20261005T1643Z-wan-long",
+      "task_id": "MF-DEMO-LONG-01",
+      "revision": "r6",
+      "owner_sid": "20261007_234033_cc0b6d",
+      "invocation_id": "LONG01-R6g-20261014T0725Z-1572",
+      "packet_sha256": "428059ba8db5c438a77809808c0019dbea8a04a3c2c2a8e2c8e212f55024335d",
+      "status": "TASK_SUBMITTED",
+      "reason": "R6 invocation 1: gates restated; S1 ledger+binding done; S2 gates/cache+12/12 negative probes; S3 upstream crop+stitch path built and smoke-proven (E2E key S23 f1).",
+      "remaining_work": [],
+      "artifacts": [
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\r6_common.py",
+          "sha256": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\r6_gate.py",
+          "sha256": "30bd2757bb8e62eb0c3dc76c23e90e60bbf7bfa4f8b0edad872986a1f02d0c5b"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\r6_cache.py",
+          "sha256": "ab63e2381b44249773d03ed9489bbc3923d0dfb1382e9aa4e4c4c862a9190405"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\r6_adapter.py",
+          "sha256": "2b16108c5d92264b5e686d6aedeb5d357fc5ee9539be3cfff3b8979c17f9b5b3"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\r6_graph.py",
+          "sha256": "832d5d44df486c3f10ec8194e7ab170ac4f5a77af0ab46ede176005904981d21"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\r6_upload.py",
+          "sha256": "057179db2b539965d88aed3e3f25a0251cf7e6d9959a6f9ce1f7514783e04967"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\r6_sam2.py",
+          "sha256": "30c8279602a1355f64beecbb23895bf8a26a1d63fa317e17518466cef2b2bfe6"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\r6_keygen.py",
+          "sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\r6_probes.py",
+          "sha256": "739a1eaed3dd8bb200219d2ef93a353d0fa88a95695f9316bfd1c20f02acea15"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\r6_ledger.py",
+          "sha256": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\r6_validate_masks.py",
+          "sha256": "d5862e81ae29c95d0254aa7590aaf3d992179e5f35d8fa1e34a98f4bc6e067c4"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\r6_vace.py",
+          "sha256": "1f3d8e00062f6c1f22503e17ca7ed9ff1c7f266f45796586ce4458a7eea02140"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\r6_upload_video.py",
+          "sha256": "64a9ea96560c9d9f4183bdc1983684369236c84f1a5382a3aafbe0e390306de9"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\r6_keygen_asset.py",
+          "sha256": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\r6_cotracker.py",
+          "sha256": "a868eed7b1d75b6eae54b44fea6a567fbab363f711fae7145f767538d4eee3cb"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\r6_propagate.py",
+          "sha256": "2b76bf83312417f8645a07657301fe8fe62042931ed3f6bdb0823079e6df152c"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\r6_assemble.py",
+          "sha256": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\r6_qa.py",
+          "sha256": "220a63574a5fce3b60e4dda3fca7b3779b65a96044199cbfe9f528d26ee58098"
+        },
+        {
+          "kind": "other",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\scripts\\r6_matrix.py",
+          "sha256": "a52cfb3df2cfa8bbefa7068d4082c86fad597a545ed4d267529dc571565fde64"
+        },
+        {
+          "kind": "matrix",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-02-fixtures\\terminal\\task\\corrections\\identity\\r6\\evidence\\matrix.json",
+          "sha256": "4cc7334f9b299520d37927d983f2d4169289c1a7f86a994ef75e62079bfec235"
+        }
+      ],
+      "matrix": {
+        "Q01": "PASS",
+        "Q02": "PASS",
+        "Q03": "PASS",
+        "Q04": "PASS",
+        "Q05": "PASS",
+        "Q06": "PASS",
+        "Q07": "PASS",
+        "Q08": "PASS",
+        "Q09": "PASS",
+        "Q10": "PASS",
+        "Q11": "PASS",
+        "Q12": "PASS"
+      }
+    }
+  ],
+  "scope": "Observed unchanged historical dependency, NOT one of candidate15; fixture clone only. New candidate builder did not demonstrate a replacement submission consumer."
+}

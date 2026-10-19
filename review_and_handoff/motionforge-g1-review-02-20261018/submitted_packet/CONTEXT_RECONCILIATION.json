@@ -1,0 +1,194 @@
+{
+  "created_utc": "2026-10-18T04:55:52.065528+00:00",
+  "files": [
+    {
+      "relative": "scripts/r6_adapter.py",
+      "baseline_sha": "2b16108c5d92264b5e686d6aedeb5d357fc5ee9539be3cfff3b8979c17f9b5b3",
+      "candidate_02_sha": "2b16108c5d92264b5e686d6aedeb5d357fc5ee9539be3cfff3b8979c17f9b5b3",
+      "match_baseline": true,
+      "attribution": "baseline_match"
+    },
+    {
+      "relative": "scripts/r6_assemble.py",
+      "baseline_sha": "0509d5f67ffcce1721701f0c064ea4d68dd8660c6dca9f6f4967eb78727301c2",
+      "candidate_02_sha": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910",
+      "match_baseline": false,
+      "attribution": "authorized_g1_r1"
+    },
+    {
+      "relative": "scripts/r6_common.py",
+      "baseline_sha": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc",
+      "candidate_02_sha": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc",
+      "match_baseline": true,
+      "attribution": "baseline_match"
+    },
+    {
+      "relative": "scripts/r6_cotracker.py",
+      "baseline_sha": "255e802f4547ac333e77075c8c145b3dc912ba77231248d840c1bc037501cf7c",
+      "candidate_02_sha": "a868eed7b1d75b6eae54b44fea6a567fbab363f711fae7145f767538d4eee3cb",
+      "match_baseline": false,
+      "attribution": "authorized_g1_r1"
+    },
+    {
+      "relative": "scripts/r6_gate.py",
+      "baseline_sha": "8c2e3f9eedd4d8e11832809c2b72293db17df1fb5a4012bd39fa396f93143f94",
+      "candidate_02_sha": "30bd2757bb8e62eb0c3dc76c23e90e60bbf7bfa4f8b0edad872986a1f02d0c5b",
+      "match_baseline": false,
+      "attribution": "authorized_g1_r1"
+    },
+    {
+      "relative": "scripts/r6_graph.py",
+      "baseline_sha": "832d5d44df486c3f10ec8194e7ab170ac4f5a77af0ab46ede176005904981d21",
+      "candidate_02_sha": "832d5d44df486c3f10ec8194e7ab170ac4f5a77af0ab46ede176005904981d21",
+      "match_baseline": true,
+      "attribution": "baseline_match"
+    },
+    {
+      "relative": "scripts/r6_keygen_asset.py",
+      "baseline_sha": "c38b6a5c65905f6cc4d094d501785c5b7312da5ae4b617ef1cd716f5d0347b91",
+      "candidate_02_sha": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e",
+      "match_baseline": false,
+      "attribution": "authorized_a2"
+    },
+    {
+      "relative": "scripts/r6_ledger.py",
+      "baseline_sha": "5797fe9f11e1b8178f0d35bff5ca6bc575cb895ebea98831dcd5a65e2b81c131",
+      "candidate_02_sha": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200",
+      "match_baseline": false,
+      "attribution": "authorized_g1_r1"
+    },
+    {
+      "relative": "scripts/r6_matrix.py",
+      "baseline_sha": "2403a0d934cdd403a13cf385133a02dd7f0390cdb734c80ce32c4825ad8ddaa1",
+      "candidate_02_sha": "a52cfb3df2cfa8bbefa7068d4082c86fad597a545ed4d267529dc571565fde64",
+      "match_baseline": false,
+      "attribution": "authorized_g1_r1"
+    },
+    {
+      "relative": "scripts/r6_probes.py",
+      "baseline_sha": "739a1eaed3dd8bb200219d2ef93a353d0fa88a95695f9316bfd1c20f02acea15",
+      "candidate_02_sha": "739a1eaed3dd8bb200219d2ef93a353d0fa88a95695f9316bfd1c20f02acea15",
+      "match_baseline": true,
+      "attribution": "baseline_match"
+    },
+    {
+      "relative": "scripts/r6_propagate.py",
+      "baseline_sha": "bcd22a7676b178a28f1c75baaaae23adec48a89ae5a40cd3765b44f5f824bf01",
+      "candidate_02_sha": "2b76bf83312417f8645a07657301fe8fe62042931ed3f6bdb0823079e6df152c",
+      "match_baseline": false,
+      "attribution": "authorized_g1_r1"
+    },
+    {
+      "relative": "scripts/r6_qa.py",
+      "baseline_sha": "220a63574a5fce3b60e4dda3fca7b3779b65a96044199cbfe9f528d26ee58098",
+      "candidate_02_sha": "220a63574a5fce3b60e4dda3fca7b3779b65a96044199cbfe9f528d26ee58098",
+      "match_baseline": true,
+      "attribution": "baseline_match"
+    },
+    {
+      "relative": "scripts/r6_sam2.py",
+      "baseline_sha": "30c8279602a1355f64beecbb23895bf8a26a1d63fa317e17518466cef2b2bfe6",
+      "candidate_02_sha": "30c8279602a1355f64beecbb23895bf8a26a1d63fa317e17518466cef2b2bfe6",
+      "match_baseline": true,
+      "attribution": "baseline_match"
+    },
+    {
+      "relative": "scripts/r6_upload.py",
+      "baseline_sha": "057179db2b539965d88aed3e3f25a0251cf7e6d9959a6f9ce1f7514783e04967",
+      "candidate_02_sha": "057179db2b539965d88aed3e3f25a0251cf7e6d9959a6f9ce1f7514783e04967",
+      "match_baseline": true,
+      "attribution": "baseline_match"
+    },
+    {
+      "relative": "scripts/r6_upload_video.py",
+      "baseline_sha": "64a9ea96560c9d9f4183bdc1983684369236c84f1a5382a3aafbe0e390306de9",
+      "candidate_02_sha": "64a9ea96560c9d9f4183bdc1983684369236c84f1a5382a3aafbe0e390306de9",
+      "match_baseline": true,
+      "attribution": "baseline_match"
+    },
+    {
+      "relative": "scripts/r6_vace.py",
+      "baseline_sha": "1f3d8e00062f6c1f22503e17ca7ed9ff1c7f266f45796586ce4458a7eea02140",
+      "candidate_02_sha": "1f3d8e00062f6c1f22503e17ca7ed9ff1c7f266f45796586ce4458a7eea02140",
+      "match_baseline": true,
+      "attribution": "baseline_match"
+    },
+    {
+      "relative": "scripts/r6_validate_masks.py",
+      "baseline_sha": "d5862e81ae29c95d0254aa7590aaf3d992179e5f35d8fa1e34a98f4bc6e067c4",
+      "candidate_02_sha": "d5862e81ae29c95d0254aa7590aaf3d992179e5f35d8fa1e34a98f4bc6e067c4",
+      "match_baseline": true,
+      "attribution": "baseline_match"
+    },
+    {
+      "relative": "scripts/r6_write_reviews.py",
+      "baseline_sha": "4b5cf37da03658ad33b3e8e9e603b4d99697416b14b0f2d91ba06fd2696cc476",
+      "candidate_02_sha": "c16285f5fb987e866555ae645f163c2ad1737ad27d22b0654acdec945ed27658",
+      "match_baseline": false,
+      "attribution": "authorized_g1_r1"
+    },
+    {
+      "relative": "scripts/write_terminal_record_r6.py",
+      "baseline_sha": "34872812d5fd4804caf8ecde745ddf9bfb35aee8f66b2ee292f20ef34c786317",
+      "candidate_02_sha": "34872812d5fd4804caf8ecde745ddf9bfb35aee8f66b2ee292f20ef34c786317",
+      "match_baseline": true,
+      "attribution": "baseline_match"
+    },
+    {
+      "relative": "scripts/write_terminal_record_r6c.py",
+      "baseline_sha": "1136e48e993079740d6175907270ad981ec912ea5a9792657463966feb633b86",
+      "candidate_02_sha": "1136e48e993079740d6175907270ad981ec912ea5a9792657463966feb633b86",
+      "match_baseline": true,
+      "attribution": "baseline_match"
+    },
+    {
+      "relative": "scripts/write_terminal_record_r6d.py",
+      "baseline_sha": "ec3102b30d5a011ace5dd7a777fdf4cfed9624652f514e9604b24e04bba14e1a",
+      "candidate_02_sha": "ec3102b30d5a011ace5dd7a777fdf4cfed9624652f514e9604b24e04bba14e1a",
+      "match_baseline": true,
+      "attribution": "baseline_match"
+    },
+    {
+      "relative": "scripts/write_terminal_record_r6f.py",
+      "baseline_sha": "0f1483d87d601f4da2b1ad128ad24d9d5c98f19642f198364d0711f8b8e0376a",
+      "candidate_02_sha": "0f1483d87d601f4da2b1ad128ad24d9d5c98f19642f198364d0711f8b8e0376a",
+      "match_baseline": true,
+      "attribution": "baseline_match"
+    },
+    {
+      "relative": "scripts/write_terminal_record_r6g.py",
+      "baseline_sha": "fcba352acd4dc359398cd6a1af4ad8ccb493f8ae940fcc38a7f8f3d63ce17845",
+      "candidate_02_sha": "fcba352acd4dc359398cd6a1af4ad8ccb493f8ae940fcc38a7f8f3d63ce17845",
+      "match_baseline": true,
+      "attribution": "baseline_match"
+    },
+    {
+      "relative": "scripts/r6g_blend_review.py",
+      "baseline_sha": "a8005d02280deabacaf88cdcd19f9e652470df5b737908a91e001a9495e9caf8",
+      "candidate_02_sha": "a8005d02280deabacaf88cdcd19f9e652470df5b737908a91e001a9495e9caf8",
+      "match_baseline": true,
+      "attribution": "baseline_match"
+    },
+    {
+      "relative": "scripts/r6_cache.py",
+      "baseline_sha": "8d4b0c7ad5336e7e6c2a68a12f2a622fbccf900575afd2c1249f31863ae4243d",
+      "candidate_02_sha": "ab63e2381b44249773d03ed9489bbc3923d0dfb1382e9aa4e4c4c862a9190405",
+      "match_baseline": false,
+      "attribution": "authorized_g1_r1"
+    },
+    {
+      "relative": "scripts/r6_keygen.py",
+      "baseline_sha": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+      "candidate_02_sha": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+      "match_baseline": true,
+      "attribution": "baseline_match"
+    },
+    {
+      "relative": "scripts/r6_key_recipe.py",
+      "baseline_sha": "e18fc9d20de1cbf2a3a8f7da2e68fc99c59260701bfbd3dca75106a7cbe8e2bd",
+      "candidate_02_sha": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9",
+      "match_baseline": false,
+      "attribution": "authorized_a2"
+    }
+  ]
+}

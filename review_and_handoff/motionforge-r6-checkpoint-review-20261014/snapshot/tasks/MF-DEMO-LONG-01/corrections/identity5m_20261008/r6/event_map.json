@@ -1,0 +1,360 @@
+{
+ "at": "2026-10-12",
+ "shots": {
+  "S0021": {
+   "events": [
+    {
+     "f": 43,
+     "event": "man_casual enters frame right, walks in",
+     "src_frame": 2863
+    }
+   ],
+   "contacts": []
+  },
+  "S0022": {
+   "events": [],
+   "contacts": []
+  },
+  "S0023": {
+   "events": [
+    {
+     "f": 0,
+     "event": "cut wide->close, same E2 (identity must persist)",
+     "src_frame": 3031
+    }
+   ],
+   "contacts": []
+  },
+  "S0024": {
+   "events": [
+    {
+     "f": 0,
+     "event": "E1 raises phone",
+     "src_frame": 3154
+    }
+   ],
+   "contacts": [
+    {
+     "entity": "E1",
+     "prop": "P1",
+     "part": "hand_R",
+     "from": 0
+    }
+   ]
+  },
+  "S0025": {
+   "events": [],
+   "contacts": [
+    {
+     "entity": "E1",
+     "prop": "P1",
+     "part": "hand_R",
+     "from": 0
+    }
+   ]
+  },
+  "S0026": {
+   "events": [],
+   "contacts": []
+  },
+  "S0027": {
+   "events": [],
+   "contacts": []
+  },
+  "S0028": {
+   "events": [],
+   "contacts": []
+  },
+  "S0029": {
+   "events": [],
+   "contacts": [
+    {
+     "entity": "E7",
+     "prop": "P1",
+     "part": "hand_R",
+     "from": 0
+    }
+   ]
+  },
+  "S0030": {
+   "events": [],
+   "contacts": [
+    {
+     "entity": "E4",
+     "prop": "P1",
+     "part": "hand_R",
+     "from": 0
+    }
+   ]
+  },
+  "S0031": {
+   "events": [
+    {
+     "f": 20,
+     "event": "E2 enters via right door",
+     "src_frame": 3919
+    },
+    {
+     "f": 100,
+     "event": "E2 reaches counter",
+     "src_frame": 3999
+    },
+    {
+     "f": 140,
+     "event": "E2 sits middle",
+     "src_frame": 4039
+    },
+    {
+     "f": 180,
+     "event": "E1 turns to face",
+     "src_frame": 4079
+    }
+   ],
+   "contacts": []
+  },
+  "S0032": {
+   "events": [],
+   "contacts": []
+  },
+  "S0033": {
+   "events": [],
+   "contacts": []
+  },
+  "S0034": {
+   "events": [],
+   "contacts": [
+    {
+     "entity": "E8",
+     "prop": "P1",
+     "part": "hand_R",
+     "from": 0
+    }
+   ]
+  },
+  "S0035": {
+   "events": [],
+   "contacts": []
+  },
+  "S0036": {
+   "events": [],
+   "contacts": [
+    {
+     "entity": "E8",
+     "prop": "P1",
+     "part": "hand_R",
+     "from": 0
+    }
+   ]
+  },
+  "S0037": {
+   "events": [],
+   "contacts": []
+  },
+  "S0038": {
+   "events": [],
+   "contacts": []
+  },
+  "S0039": {
+   "events": [],
+   "contacts": [
+    {
+     "entity": "E8",
+     "prop": "P1",
+     "part": "hand_R",
+     "from": 0
+    }
+   ]
+  },
+  "S0040": {
+   "events": [],
+   "contacts": []
+  },
+  "S0041": {
+   "events": [
+    {
+     "f": 30,
+     "event": "E2 enters",
+     "src_frame": 6074
+    },
+    {
+     "f": 120,
+     "event": "E2 sits",
+     "src_frame": 6164
+    },
+    {
+     "f": 160,
+     "event": "layout/angle change noted; resolve with dense keyframes",
+     "src_frame": 6204
+    }
+   ],
+   "contacts": []
+  },
+  "S0042": {
+   "events": [],
+   "contacts": []
+  },
+  "S0043": {
+   "events": [],
+   "contacts": [
+    {
+     "entity": "E1",
+     "prop": "P2",
+     "part": "hand_R",
+     "from": 40
+    }
+   ]
+  },
+  "S0044": {
+   "events": [],
+   "contacts": []
+  },
+  "S0045": {
+   "events": [],
+   "contacts": []
+  },
+  "S0046": {
+   "events": [],
+   "contacts": []
+  },
+  "S0047": {
+   "events": [],
+   "contacts": []
+  },
+  "S0048": {
+   "events": [],
+   "contacts": []
+  },
+  "S0049": {
+   "events": [],
+   "contacts": []
+  },
+  "S0050": {
+   "events": [],
+   "contacts": []
+  },
+  "S0051": {
+   "events": [],
+   "contacts": []
+  },
+  "S0052": {
+   "events": [],
+   "contacts": []
+  },
+  "S0053": {
+   "events": [],
+   "contacts": []
+  },
+  "S0054": {
+   "events": [],
+   "contacts": []
+  },
+  "S0055": {
+   "events": [],
+   "contacts": []
+  },
+  "S0056": {
+   "events": [],
+   "contacts": []
+  },
+  "S0057": {
+   "events": [],
+   "contacts": []
+  },
+  "S0058": {
+   "events": [],
+   "contacts": []
+  },
+  "S0059": {
+   "events": [],
+   "contacts": []
+  },
+  "S0060": {
+   "events": [],
+   "contacts": []
+  },
+  "S0061": {
+   "events": [
+    {
+     "f": 0,
+     "event": "car arrives",
+     "src_frame": 10036
+    },
+    {
+     "f": 104,
+     "event": "E1+E2 exit and walk to bank",
+     "src_frame": 10140
+    }
+   ],
+   "contacts": []
+  },
+  "S0062": {
+   "events": [
+    {
+     "f": 0,
+     "event": "E6 at counter",
+     "src_frame": 10392
+    },
+    {
+     "f": 32,
+     "event": "E1+E2 enter and approach",
+     "src_frame": 10424
+    }
+   ],
+   "contacts": []
+  },
+  "S0063": {
+   "events": [
+    {
+     "f": 0,
+     "event": "E2 occluded behind E1 - z-order key",
+     "src_frame": 10642
+    }
+   ],
+   "contacts": []
+  },
+  "S0064": {
+   "events": [],
+   "contacts": []
+  },
+  "S0065": {
+   "events": [],
+   "contacts": []
+  },
+  "S0066": {
+   "events": [],
+   "contacts": []
+  },
+  "S0067": {
+   "events": [],
+   "contacts": []
+  },
+  "S0068": {
+   "events": [],
+   "contacts": []
+  },
+  "S0069": {
+   "events": [],
+   "contacts": []
+  },
+  "S0070": {
+   "events": [],
+   "contacts": []
+  },
+  "S0071": {
+   "events": [],
+   "contacts": []
+  },
+  "S0072": {
+   "events": [],
+   "contacts": []
+  },
+  "S0073": {
+   "events": [],
+   "contacts": []
+  },
+  "S0074": {
+   "events": [],
+   "contacts": []
+  }
+ }
+}

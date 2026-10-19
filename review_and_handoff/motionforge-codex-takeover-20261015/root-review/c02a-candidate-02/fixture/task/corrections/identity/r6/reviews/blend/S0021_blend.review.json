@@ -1,0 +1,43 @@
+{
+ "review_id": "blend:S0021_blend",
+ "reviewer": "worker-vision+hash (vision-capable, artifact-bound)",
+ "reviewed_at": "2026-10-16T07:23:07Z",
+ "artifact": {
+  "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\root-review\\c02a-candidate-02\\fixture\\task\\corrections\\identity\\r6\\work\\S0021\\blend_manifest.json",
+  "sha256": "7734fb70f7111ae19d860d7974f7c20d6e11bd49219aebcd56531625e3f6df71"
+ },
+ "inputs": {
+  "ledger_row_sha": "9f7b537ad06af9a5c39d5b9414ce8b0b598f622fffe869f6617cce6baeabaf42",
+  "blend_manifest_sha": "7734fb70f7111ae19d860d7974f7c20d6e11bd49219aebcd56531625e3f6df71",
+  "frames": [
+   {
+    "name": "0001.jpg",
+    "size": 9,
+    "sha256": "2ae2f0decb81fc1ec7b1dcbc19912b19605e312b725268f01de9d6614d2d8926"
+   },
+   {
+    "name": "0002.jpg",
+    "size": 9,
+    "sha256": "b743cbe1bb107033458694774ad7146dec3f339346803159e2c58f55e2ac67dc"
+   },
+   {
+    "name": "0003.jpg",
+    "size": 9,
+    "sha256": "c509a1e728f019899e4a40503ac62872d9373c6a7719c48054941a7e8c298815"
+   }
+  ],
+  "key_set_sha": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "child_outcomes_sha": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+ },
+ "expected": {
+  "shot": "S0021",
+  "frames": 3
+ },
+ "frames": [
+  1,
+  2,
+  3
+ ],
+ "verdict": "PASS",
+ "evidence": "isolated frame binding only"
+}

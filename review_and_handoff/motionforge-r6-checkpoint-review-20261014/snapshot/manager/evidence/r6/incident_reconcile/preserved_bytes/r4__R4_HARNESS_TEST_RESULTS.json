@@ -1,0 +1,528 @@
+{
+ "scope": "actual consumers (patched dispatch_long.py + heartbeat_long.py) in isolated MF_RUN_ROOT scaffold; synthetic fixtures are integrity probes, not media quality evidence",
+ "at_utc": "2026-10-11T17:57:22Z",
+ "passed": 70,
+ "total": 70,
+ "results": [
+  {
+   "name": "consumers.dispatch_patched",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "consumers.heartbeat_patched",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "C1.lock_acquired",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "C1.refuse_rc",
+   "expected": 4,
+   "actual": 4,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "C1.refused_row",
+   "expected": "controller_locked",
+   "actual": "controller_locked",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "C1.no_child_spawned",
+   "expected": false,
+   "actual": false,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "ok_continue.rc",
+   "expected": 0,
+   "actual": 0,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "ok_continue.class",
+   "expected": "CONTINUE_REQUIRED",
+   "actual": "CONTINUE_REQUIRED",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "ok_continue.decision",
+   "expected": "PENDING_SAME_OWNER_CONTINUATION",
+   "actual": "PENDING_SAME_OWNER_CONTINUATION",
+   "pass": true,
+   "extra": {
+    "error": null
+   }
+  },
+  {
+   "name": "ok_continue.legacy_prose_class",
+   "expected": "CONTINUE_REQUIRED",
+   "actual": "CONTINUE_REQUIRED",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "future_pass.rc",
+   "expected": 0,
+   "actual": 0,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "future_pass.class",
+   "expected": "CONTINUE_REQUIRED",
+   "actual": "CONTINUE_REQUIRED",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "future_pass.decision",
+   "expected": "PENDING_SAME_OWNER_CONTINUATION",
+   "actual": "PENDING_SAME_OWNER_CONTINUATION",
+   "pass": true,
+   "extra": {
+    "error": null
+   }
+  },
+  {
+   "name": "future_pass.legacy_prose_class",
+   "expected": "SELF_REVIEW_PASS_PENDING_CODEX",
+   "actual": "SELF_REVIEW_PASS_PENDING_CODEX",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "quoted.rc",
+   "expected": 0,
+   "actual": 0,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "quoted.class",
+   "expected": "CONTINUE_REQUIRED",
+   "actual": "CONTINUE_REQUIRED",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "quoted.decision",
+   "expected": "PENDING_SAME_OWNER_CONTINUATION",
+   "actual": "PENDING_SAME_OWNER_CONTINUATION",
+   "pass": true,
+   "extra": {
+    "error": null
+   }
+  },
+  {
+   "name": "ok_submitted.rc",
+   "expected": 0,
+   "actual": 0,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "ok_submitted.class",
+   "expected": "TASK_SUBMITTED",
+   "actual": "TASK_SUBMITTED",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "ok_submitted.decision",
+   "expected": "VERIFIABLE_SUBMISSION_PENDING_MANAGER_QA",
+   "actual": "VERIFIABLE_SUBMISSION_PENDING_MANAGER_QA",
+   "pass": true,
+   "extra": {
+    "error": null
+   }
+  },
+  {
+   "name": "prose_only.rc",
+   "expected": 0,
+   "actual": 0,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "prose_only.class",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "prose_only.decision",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {
+    "error": "[WinError 2] The system cannot find the file specified: 'C:\\\\Users\\\\Admin\\\\AppData\\\\Local\\\\Temp\\\\mf_r4_cons_test\\\\r4\\\\evidence\\\\terminal\\\\INV-prose_only.json'"
+   }
+  },
+  {
+   "name": "truncated.rc",
+   "expected": 0,
+   "actual": 0,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "truncated.class",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "truncated.decision",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {
+    "error": "Expecting value: line 1 column 11 (char 10)"
+   }
+  },
+  {
+   "name": "dupkeys.rc",
+   "expected": 0,
+   "actual": 0,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "dupkeys.class",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "dupkeys.decision",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {
+    "error": "duplicate JSON key: status"
+   }
+  },
+  {
+   "name": "wrong_owner.rc",
+   "expected": 0,
+   "actual": 0,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "wrong_owner.class",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "wrong_owner.decision",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {
+    "error": "invocation binding mismatch: owner_sid"
+   }
+  },
+  {
+   "name": "wrong_invocation.rc",
+   "expected": 0,
+   "actual": 0,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "wrong_invocation.class",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "wrong_invocation.decision",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {
+    "error": "invocation binding mismatch: invocation_id"
+   }
+  },
+  {
+   "name": "wrong_packet.rc",
+   "expected": 0,
+   "actual": 0,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "wrong_packet.class",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "wrong_packet.decision",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {
+    "error": "invocation binding mismatch: packet_sha256"
+   }
+  },
+  {
+   "name": "missing_artifact.rc",
+   "expected": 0,
+   "actual": 0,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "missing_artifact.class",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "missing_artifact.decision",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {
+    "error": "[WinError 2] The system cannot find the file specified: 'C:\\\\Users\\\\Admin\\\\AppData\\\\Local\\\\Temp\\\\mf_r4_cons_test\\\\r4\\\\absent_master.bin'"
+   }
+  },
+  {
+   "name": "matrix_mismatch.rc",
+   "expected": 0,
+   "actual": 0,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "matrix_mismatch.class",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "matrix_mismatch.decision",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {
+    "error": "result/matrix artifact disagree"
+   }
+  },
+  {
+   "name": "api_error.rc",
+   "expected": 0,
+   "actual": 0,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "api_error.class",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "api_error.decision",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {
+    "error": "invocation/children not cleanly reconciled"
+   }
+  },
+  {
+   "name": "exit_nonzero.rc",
+   "expected": 0,
+   "actual": 0,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "exit_nonzero.class",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "exit_nonzero.decision",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {
+    "error": "invocation/children not cleanly reconciled"
+   }
+  },
+  {
+   "name": "empty_cont.rc",
+   "expected": 0,
+   "actual": 0,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "empty_cont.class",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "empty_cont.decision",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {
+    "error": "1 validation error for Result\n  Value error, continuation requires an explicit next action [type=value_error, input_value={'run_id': '20261005T1643...acts': [], 'matrix': {}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+   }
+  },
+  {
+   "name": "lease.child_alive_keeps_lease",
+   "expected": false,
+   "actual": false,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "lease.detached_flag",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "lease.state_alive",
+   "expected": "ALIVE",
+   "actual": "ALIVE",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "lease.released_after_child_gone",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "hb.structured_continue",
+   "expected": "CONTINUE_REQUIRED",
+   "actual": "CONTINUE_REQUIRED",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "hb.structured_source",
+   "expected": "structured_terminal",
+   "actual": "structured_terminal",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "hb.has_lock_row",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "hb.has_leases_row",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "hb.open_invocation",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "hb.child_still_running",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "hb.outcome_open",
+   "expected": "INVOCATION_OPEN",
+   "actual": "INVOCATION_OPEN",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "hb.lease_visible",
+   "expected": "ALIVE",
+   "actual": "ALIVE",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "hb.legacy_class",
+   "expected": "LEGACY_NO_STRUCTURED_TERMINAL",
+   "actual": "LEGACY_NO_STRUCTURED_TERMINAL",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "hb.legacy_never_authoritative",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "hb.legacy_prose_reference",
+   "expected": "SELF_REVIEW_PASS_PENDING_CODEX",
+   "actual": "SELF_REVIEW_PASS_PENDING_CODEX",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "hb.lock_alive",
+   "expected": "ALIVE",
+   "actual": "ALIVE",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "hb.lock_released",
+   "expected": null,
+   "actual": null,
+   "pass": true,
+   "extra": {}
+  }
+ ]
+}

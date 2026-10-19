@@ -1,0 +1,17 @@
+{
+  "model": "gpt-6-sol/max/no-fallback",
+  "live_jobs": [],
+  "files": [
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_keygen.py",
+      "sha256": "3cb6625f5783d6227733e9543f15bc5a43dde524c484c18950b314c5bcb77dd6",
+      "lines": 170,
+      "bytes": 8460
+    }
+  ],
+  "phase": "producer consumes recipe selection, no-visible v4 branch",
+  "verification": "AST parse exit0",
+  "next": "capture all per-actor consumed inputs and emit v4 after success",
+  "task": "CODEX-C02B2-PER-ACTOR-VERIFIED-REUSE",
+  "owner": "/root/motionforge_c02b2_coder"
+}

@@ -1,0 +1,316 @@
+{
+  "ok": true,
+  "checked": 27,
+  "protected_unchanged": 24,
+  "changed": [
+    "scripts/r6_cache.py",
+    "scripts/r6_gate.py",
+    "tests/test_codex_c01_review_binding.py"
+  ],
+  "files": [
+    {
+      "relative": "scripts/r6_adapter.py",
+      "role": "protected",
+      "sha256": "2b16108c5d92264b5e686d6aedeb5d357fc5ee9539be3cfff3b8979c17f9b5b3",
+      "baseline_sha256": "2b16108c5d92264b5e686d6aedeb5d357fc5ee9539be3cfff3b8979c17f9b5b3",
+      "changed": false,
+      "bytes": 6493,
+      "baseline_bytes": 6493,
+      "lines": 131,
+      "baseline_lines": 131
+    },
+    {
+      "relative": "scripts/r6_assemble.py",
+      "role": "protected",
+      "sha256": "0509d5f67ffcce1721701f0c064ea4d68dd8660c6dca9f6f4967eb78727301c2",
+      "baseline_sha256": "0509d5f67ffcce1721701f0c064ea4d68dd8660c6dca9f6f4967eb78727301c2",
+      "changed": false,
+      "bytes": 4287,
+      "baseline_bytes": 4287,
+      "lines": 89,
+      "baseline_lines": 89
+    },
+    {
+      "relative": "scripts/r6_cache.py",
+      "role": "writable",
+      "sha256": "946935906625d79b95153a92d4cf86310551cfbc4533a3661f2011854aeae7a7",
+      "baseline_sha256": "29a9e7b0f60304a56692d21fd229ef884dd93064fd4376eec7ab030daaf304c6",
+      "changed": true,
+      "bytes": 10018,
+      "baseline_bytes": 4979,
+      "lines": 209,
+      "baseline_lines": 111
+    },
+    {
+      "relative": "scripts/r6_common.py",
+      "role": "protected",
+      "sha256": "17bf5799c445a6f7133c61d53b9d5c41083307add1d7b6a50acdf83c294c15e3",
+      "baseline_sha256": "17bf5799c445a6f7133c61d53b9d5c41083307add1d7b6a50acdf83c294c15e3",
+      "changed": false,
+      "bytes": 6014,
+      "baseline_bytes": 6014,
+      "lines": 138,
+      "baseline_lines": 138
+    },
+    {
+      "relative": "scripts/r6_cotracker.py",
+      "role": "protected",
+      "sha256": "255e802f4547ac333e77075c8c145b3dc912ba77231248d840c1bc037501cf7c",
+      "baseline_sha256": "255e802f4547ac333e77075c8c145b3dc912ba77231248d840c1bc037501cf7c",
+      "changed": false,
+      "bytes": 8657,
+      "baseline_bytes": 8657,
+      "lines": 185,
+      "baseline_lines": 185
+    },
+    {
+      "relative": "scripts/r6_gate.py",
+      "role": "writable",
+      "sha256": "8c2e3f9eedd4d8e11832809c2b72293db17df1fb5a4012bd39fa396f93143f94",
+      "baseline_sha256": "4c3f7a7213f7761b7f5cbf53d7257bfd1c893e7f50d04d4ffda38a2e3cf13996",
+      "changed": true,
+      "bytes": 17804,
+      "baseline_bytes": 17408,
+      "lines": 367,
+      "baseline_lines": 356
+    },
+    {
+      "relative": "scripts/r6_graph.py",
+      "role": "protected",
+      "sha256": "832d5d44df486c3f10ec8194e7ab170ac4f5a77af0ab46ede176005904981d21",
+      "baseline_sha256": "832d5d44df486c3f10ec8194e7ab170ac4f5a77af0ab46ede176005904981d21",
+      "changed": false,
+      "bytes": 5508,
+      "baseline_bytes": 5508,
+      "lines": 99,
+      "baseline_lines": 99
+    },
+    {
+      "relative": "scripts/r6_keygen.py",
+      "role": "protected",
+      "sha256": "c0c9ca41ad9ebd17995a2380e869bebb8b36aafb7f5625d8cb72fc265925658d",
+      "baseline_sha256": "c0c9ca41ad9ebd17995a2380e869bebb8b36aafb7f5625d8cb72fc265925658d",
+      "changed": false,
+      "bytes": 8464,
+      "baseline_bytes": 8464,
+      "lines": 170,
+      "baseline_lines": 170
+    },
+    {
+      "relative": "scripts/r6_keygen_asset.py",
+      "role": "protected",
+      "sha256": "c38b6a5c65905f6cc4d094d501785c5b7312da5ae4b617ef1cd716f5d0347b91",
+      "baseline_sha256": "c38b6a5c65905f6cc4d094d501785c5b7312da5ae4b617ef1cd716f5d0347b91",
+      "changed": false,
+      "bytes": 5934,
+      "baseline_bytes": 5934,
+      "lines": 122,
+      "baseline_lines": 122
+    },
+    {
+      "relative": "scripts/r6_ledger.py",
+      "role": "protected",
+      "sha256": "5797fe9f11e1b8178f0d35bff5ca6bc575cb895ebea98831dcd5a65e2b81c131",
+      "baseline_sha256": "5797fe9f11e1b8178f0d35bff5ca6bc575cb895ebea98831dcd5a65e2b81c131",
+      "changed": false,
+      "bytes": 9820,
+      "baseline_bytes": 9820,
+      "lines": 154,
+      "baseline_lines": 154
+    },
+    {
+      "relative": "scripts/r6_matrix.py",
+      "role": "protected",
+      "sha256": "2403a0d934cdd403a13cf385133a02dd7f0390cdb734c80ce32c4825ad8ddaa1",
+      "baseline_sha256": "2403a0d934cdd403a13cf385133a02dd7f0390cdb734c80ce32c4825ad8ddaa1",
+      "changed": false,
+      "bytes": 4678,
+      "baseline_bytes": 4678,
+      "lines": 95,
+      "baseline_lines": 95
+    },
+    {
+      "relative": "scripts/r6_probes.py",
+      "role": "protected",
+      "sha256": "739a1eaed3dd8bb200219d2ef93a353d0fa88a95695f9316bfd1c20f02acea15",
+      "baseline_sha256": "739a1eaed3dd8bb200219d2ef93a353d0fa88a95695f9316bfd1c20f02acea15",
+      "changed": false,
+      "bytes": 10969,
+      "baseline_bytes": 10969,
+      "lines": 236,
+      "baseline_lines": 236
+    },
+    {
+      "relative": "scripts/r6_propagate.py",
+      "role": "protected",
+      "sha256": "bcd22a7676b178a28f1c75baaaae23adec48a89ae5a40cd3765b44f5f824bf01",
+      "baseline_sha256": "bcd22a7676b178a28f1c75baaaae23adec48a89ae5a40cd3765b44f5f824bf01",
+      "changed": false,
+      "bytes": 10020,
+      "baseline_bytes": 10020,
+      "lines": 218,
+      "baseline_lines": 218
+    },
+    {
+      "relative": "scripts/r6_qa.py",
+      "role": "protected",
+      "sha256": "220a63574a5fce3b60e4dda3fca7b3779b65a96044199cbfe9f528d26ee58098",
+      "baseline_sha256": "220a63574a5fce3b60e4dda3fca7b3779b65a96044199cbfe9f528d26ee58098",
+      "changed": false,
+      "bytes": 3165,
+      "baseline_bytes": 3165,
+      "lines": 72,
+      "baseline_lines": 72
+    },
+    {
+      "relative": "scripts/r6_sam2.py",
+      "role": "protected",
+      "sha256": "30c8279602a1355f64beecbb23895bf8a26a1d63fa317e17518466cef2b2bfe6",
+      "baseline_sha256": "30c8279602a1355f64beecbb23895bf8a26a1d63fa317e17518466cef2b2bfe6",
+      "changed": false,
+      "bytes": 13054,
+      "baseline_bytes": 13054,
+      "lines": 243,
+      "baseline_lines": 243
+    },
+    {
+      "relative": "scripts/r6_upload.py",
+      "role": "protected",
+      "sha256": "057179db2b539965d88aed3e3f25a0251cf7e6d9959a6f9ce1f7514783e04967",
+      "baseline_sha256": "057179db2b539965d88aed3e3f25a0251cf7e6d9959a6f9ce1f7514783e04967",
+      "changed": false,
+      "bytes": 1469,
+      "baseline_bytes": 1469,
+      "lines": 29,
+      "baseline_lines": 29
+    },
+    {
+      "relative": "scripts/r6_upload_video.py",
+      "role": "protected",
+      "sha256": "64a9ea96560c9d9f4183bdc1983684369236c84f1a5382a3aafbe0e390306de9",
+      "baseline_sha256": "64a9ea96560c9d9f4183bdc1983684369236c84f1a5382a3aafbe0e390306de9",
+      "changed": false,
+      "bytes": 1443,
+      "baseline_bytes": 1443,
+      "lines": 29,
+      "baseline_lines": 29
+    },
+    {
+      "relative": "scripts/r6_vace.py",
+      "role": "protected",
+      "sha256": "1f3d8e00062f6c1f22503e17ca7ed9ff1c7f266f45796586ce4458a7eea02140",
+      "baseline_sha256": "1f3d8e00062f6c1f22503e17ca7ed9ff1c7f266f45796586ce4458a7eea02140",
+      "changed": false,
+      "bytes": 7784,
+      "baseline_bytes": 7784,
+      "lines": 137,
+      "baseline_lines": 137
+    },
+    {
+      "relative": "scripts/r6_validate_masks.py",
+      "role": "protected",
+      "sha256": "d5862e81ae29c95d0254aa7590aaf3d992179e5f35d8fa1e34a98f4bc6e067c4",
+      "baseline_sha256": "d5862e81ae29c95d0254aa7590aaf3d992179e5f35d8fa1e34a98f4bc6e067c4",
+      "changed": false,
+      "bytes": 2062,
+      "baseline_bytes": 2062,
+      "lines": 51,
+      "baseline_lines": 51
+    },
+    {
+      "relative": "scripts/r6_write_reviews.py",
+      "role": "protected",
+      "sha256": "4b5cf37da03658ad33b3e8e9e603b4d99697416b14b0f2d91ba06fd2696cc476",
+      "baseline_sha256": "4b5cf37da03658ad33b3e8e9e603b4d99697416b14b0f2d91ba06fd2696cc476",
+      "changed": false,
+      "bytes": 2510,
+      "baseline_bytes": 2510,
+      "lines": 54,
+      "baseline_lines": 54
+    },
+    {
+      "relative": "scripts/r6g_blend_review.py",
+      "role": "protected",
+      "sha256": "a8005d02280deabacaf88cdcd19f9e652470df5b737908a91e001a9495e9caf8",
+      "baseline_sha256": "a8005d02280deabacaf88cdcd19f9e652470df5b737908a91e001a9495e9caf8",
+      "changed": false,
+      "bytes": 2392,
+      "baseline_bytes": 2392,
+      "lines": 58,
+      "baseline_lines": 58
+    },
+    {
+      "relative": "scripts/write_terminal_record_r6.py",
+      "role": "protected",
+      "sha256": "34872812d5fd4804caf8ecde745ddf9bfb35aee8f66b2ee292f20ef34c786317",
+      "baseline_sha256": "34872812d5fd4804caf8ecde745ddf9bfb35aee8f66b2ee292f20ef34c786317",
+      "changed": false,
+      "bytes": 4613,
+      "baseline_bytes": 4613,
+      "lines": 107,
+      "baseline_lines": 107
+    },
+    {
+      "relative": "scripts/write_terminal_record_r6c.py",
+      "role": "protected",
+      "sha256": "1136e48e993079740d6175907270ad981ec912ea5a9792657463966feb633b86",
+      "baseline_sha256": "1136e48e993079740d6175907270ad981ec912ea5a9792657463966feb633b86",
+      "changed": false,
+      "bytes": 5340,
+      "baseline_bytes": 5340,
+      "lines": 117,
+      "baseline_lines": 117
+    },
+    {
+      "relative": "scripts/write_terminal_record_r6d.py",
+      "role": "protected",
+      "sha256": "ec3102b30d5a011ace5dd7a777fdf4cfed9624652f514e9604b24e04bba14e1a",
+      "baseline_sha256": "ec3102b30d5a011ace5dd7a777fdf4cfed9624652f514e9604b24e04bba14e1a",
+      "changed": false,
+      "bytes": 5677,
+      "baseline_bytes": 5677,
+      "lines": 124,
+      "baseline_lines": 124
+    },
+    {
+      "relative": "scripts/write_terminal_record_r6f.py",
+      "role": "protected",
+      "sha256": "0f1483d87d601f4da2b1ad128ad24d9d5c98f19642f198364d0711f8b8e0376a",
+      "baseline_sha256": "0f1483d87d601f4da2b1ad128ad24d9d5c98f19642f198364d0711f8b8e0376a",
+      "changed": false,
+      "bytes": 6280,
+      "baseline_bytes": 6280,
+      "lines": 135,
+      "baseline_lines": 135
+    },
+    {
+      "relative": "scripts/write_terminal_record_r6g.py",
+      "role": "protected",
+      "sha256": "fcba352acd4dc359398cd6a1af4ad8ccb493f8ae940fcc38a7f8f3d63ce17845",
+      "baseline_sha256": "fcba352acd4dc359398cd6a1af4ad8ccb493f8ae940fcc38a7f8f3d63ce17845",
+      "changed": false,
+      "bytes": 6617,
+      "baseline_bytes": 6617,
+      "lines": 140,
+      "baseline_lines": 140
+    },
+    {
+      "relative": "tests/test_codex_c01_review_binding.py",
+      "role": "writable",
+      "sha256": "351c39e764e53d67466688d9ec032cf9e352167e105ee0be580129f1db38fdf7",
+      "baseline_sha256": "e2744bc198bc91fe71ce4b2afafb9682e427c17c7ac0c1207b3a7643dbf2d330",
+      "changed": true,
+      "bytes": 14693,
+      "baseline_bytes": 13629,
+      "lines": 330,
+      "baseline_lines": 310
+    }
+  ],
+  "new_test": {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c02a_dependency_verification.py",
+    "sha256": "403e45568fddeda038b3f10a62cf3b311764d1e91e7a5f9ef9ca3fbf78877899",
+    "bytes": 18036,
+    "lines": 374
+  },
+  "errors": []
+}

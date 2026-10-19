@@ -1,0 +1,63 @@
+{
+  "task": "GEMINI-A3-EVENT-TIMING-TRACKING",
+  "executed_utc": "2026-10-17T17:42:48.068951+00:00",
+  "runner": "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\venv\\Scripts\\python.exe",
+  "suite_summary": {
+    "total_tests": 71,
+    "passed": 71,
+    "failed": 0,
+    "errors": 0,
+    "duration_seconds": 8.178
+  },
+  "modules": [
+    {
+      "module": "tests/test_codex_c01_review_binding.py",
+      "tests_count": 17,
+      "status": "PASS"
+    },
+    {
+      "module": "tests/test_codex_c02a_dependency_verification.py",
+      "tests_count": 13,
+      "status": "PASS"
+    },
+    {
+      "module": "tests/test_codex_c02b1_staged_source.py",
+      "tests_count": 10,
+      "status": "PASS"
+    },
+    {
+      "module": "tests/test_codex_c02b2_per_actor_reuse.py",
+      "tests_count": 14,
+      "status": "PASS"
+    },
+    {
+      "module": "tests/test_gemini_c02b3_asset_reuse.py",
+      "tests_count": 10,
+      "status": "PASS"
+    },
+    {
+      "module": "tests/test_gemini_a3_event_tracking.py",
+      "tests_count": 7,
+      "status": "PASS",
+      "cases": [
+        "EventTimingAndTrackingTests.test_e1_event_fids_mapping_both_f_and_frame: PASS",
+        "EventTimingAndTrackingTests.test_e2_plan_runs_split_at_hard_cuts: PASS",
+        "EventTimingAndTrackingTests.test_e3_child_outcome_nonzero_rc_fails: PASS",
+        "EventTimingAndTrackingTests.test_e3_child_outcome_partial_frames_fails: PASS",
+        "EventTimingAndTrackingTests.test_e4_cotracker_tensor_contract: PASS",
+        "EventTimingAndTrackingTests.test_e5_cotracker_strip_pastes_both_frames: PASS",
+        "EventTimingAndTrackingTests.test_e6_crop_stitch_landmark_roundtrip_and_bounds: PASS"
+      ]
+    }
+  ],
+  "root_probe_v4": {
+    "command": "python -B probe_c02b2_v4.py --scripts R6/scripts --out WORK/A3/probe_v4_result",
+    "initial_generation_calls": 1,
+    "unchanged_replay_generation_calls": 0,
+    "skip_before_replay": [
+      true,
+      "verified-reuse"
+    ],
+    "pass": true
+  }
+}

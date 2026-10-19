@@ -1,0 +1,29 @@
+{
+  "utc": "2026-10-17T04:41:39.3662517Z",
+  "live_tests_pass": true,
+  "strategy": {
+    "fallbackStrategy": "round-robin",
+    "stickyRoundRobinLimit": 1
+  },
+  "account_sequence": [
+    "6c18a210",
+    "68c0064d",
+    "6c18a210"
+  ],
+  "accounts": [
+    {
+      "id": "6c18a210-37e6-4bc8-99ce-12d41065bb2a",
+      "isActive": true,
+      "testStatus": "active",
+      "lastError": null
+    },
+    {
+      "id": "68c0064d-0dfc-4ce9-9f71-6d441222d646",
+      "isActive": true,
+      "testStatus": "active",
+      "lastError": null
+    }
+  ],
+  "model": "ag/gemini-3.8-flash-high",
+  "base_url": "http://127.0.0.1:20128/v1"
+}

@@ -1,0 +1,125 @@
+{
+  "utc": "2026-10-16T07:38:49.722302+00:00",
+  "task": "CODEX-C02B1-STAGED-SOURCE-FRESHNESS",
+  "status": "TASK_SUBMITTED_PENDING_ROOT_REVIEW",
+  "files": {
+    "r6_common.py": {
+      "live": {
+        "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_common.py",
+        "sha256": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc",
+        "bytes": 10578,
+        "lines": 241
+      },
+      "snapshot": {
+        "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b1-worker\\candidate-01\\r6_common.py",
+        "sha256": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc",
+        "bytes": 10578,
+        "lines": 241
+      }
+    },
+    "test_codex_c02b1_staged_source.py": {
+      "live": {
+        "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c02b1_staged_source.py",
+        "sha256": "61bfe454456c452756ddbbf05b55678e146114cb6d2653bff77f4ee92af46aec",
+        "bytes": 14350,
+        "lines": 300
+      },
+      "snapshot": {
+        "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b1-worker\\candidate-01\\test_codex_c02b1_staged_source.py",
+        "sha256": "61bfe454456c452756ddbbf05b55678e146114cb6d2653bff77f4ee92af46aec",
+        "bytes": 14350,
+        "lines": 300
+      }
+    }
+  },
+  "evidence": [
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b1-worker\\preimages\\r6_common.py",
+      "sha256": "17bf5799c445a6f7133c61d53b9d5c41083307add1d7b6a50acdf83c294c15e3",
+      "bytes": 6014,
+      "lines": 138
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b1-worker\\common.diff",
+      "sha256": "dd9a4b52aa0f564a9bf3a0df77ffc0c0db33015796dca7aeafd5153065ed9869",
+      "bytes": 6438,
+      "lines": 137
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b1-worker\\AUDIT.json",
+      "sha256": "5892815e8533cab61ec10913d9051ea53d544abcb4f68ed2f77829ccbd9f93e6",
+      "bytes": 1285,
+      "lines": 55
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b1-worker\\COMMANDS.json",
+      "sha256": "b11902667e3e7ffaff81a173f05161ece4bb1a099e6c4e19c37342ab0331f0dc",
+      "bytes": 7015,
+      "lines": 145
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b1-worker\\REPORT.md",
+      "sha256": "244e48c1075ef4d5caccaa342067c86749a3d18828aeae841ac2136425bf28cb",
+      "bytes": 3199,
+      "lines": 24
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b1-worker\\LOG.md",
+      "sha256": "186cfc6a60dafbb987ad7b973249a22e067b9cf2d0ebdec8903bbd89edc2fb6d",
+      "bytes": 2383,
+      "lines": 16
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b1-worker\\TERMINAL_CHECKPOINT.json",
+      "sha256": "ee377965f7db125a4fa70813ee485d983ee48dd4cb7033c212bda15e8b7546c5",
+      "bytes": 2820,
+      "lines": 61
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b1-worker\\baseline-probe\\RESULT.json",
+      "sha256": "65b554f844311b3d6dd81aa4b61d257f55e0115f8f55293a4ef07f8fc334f18d",
+      "bytes": 1870,
+      "lines": 57
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b1-worker\\post-probe\\RESULT.json",
+      "sha256": "eec56aaa3203da3a9f81ec9d4bf01bd2e1aecaa84bae786bcd32dfec2285ed12",
+      "bytes": 1865,
+      "lines": 57
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b1-worker\\test_red_01.log",
+      "sha256": "7a7c9b8780cde803663824d498811856873ff90559763e0bfffb6c36d1fe543e",
+      "bytes": 1012,
+      "lines": 14
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b1-worker\\test_matrix_s1_s6.log",
+      "sha256": "d816ec859d4221c8d3f24504630faae21e778e142ac97654258d7d967d7f5613",
+      "bytes": 1730,
+      "lines": 15
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b1-worker\\test_c01_full.log",
+      "sha256": "526b7b58ad2663b761c7b5f97bee02ba272ce8ce115b16570bf1a62b7ac0a405",
+      "bytes": 2629,
+      "lines": 22
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b1-worker\\test_c02a_full.log",
+      "sha256": "39d76cdaa1bac347f04d759b5fa47a1ff8e1470dfa3a453d16031de9dc795dba",
+      "bytes": 10747,
+      "lines": 113
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b1-worker\\real-ffmpeg-rx7q9lr_\\RESULT.json",
+      "sha256": "944cd24199dc3db1f6980a19f6c3fb29e706ecfe14bc0b3bf111697ce5472fc0",
+      "bytes": 2301,
+      "lines": 103
+    }
+  ],
+  "protected_count": 27,
+  "protected_drift": [],
+  "no_live_jobs": true,
+  "review_authority": "root only"
+}

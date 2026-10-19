@@ -1,0 +1,69 @@
+Reusable dispatch-prompt skeletons for READ-ONLY audit/synthesis lanes (parallel
+docs-only workers). Copy, fill placeholders, write to a temp/run-dir file, dispatch with:
+  PROMPT=$(cat <prompt-file>) && "<hermes.exe>" chat -q "$PROMPT" --provider <p> --model <m> \
+    --yolo --pass-session-id --checkpoints --max-turns 200 --source cli \
+    > <run-dir>/manager/dispatch-<lane>.log 2>&1; echo "EXIT=$?" >> <run-dir>/manager/dispatch-<lane>.log
+mkdir -p the log's parent FIRST. Observed working instance: S13-P00 A/B/C/D, run 20260823-0045-r1.
+
+=== Skeleton 1: audit lane (one of N disjoint read-only auditors) ===
+HARD WORKTREE GUARD: Before ANY action, run and verify from your shell cwd:
+1. pwd -> must be <WORKTREE>
+2. git rev-parse --show-toplevel -> must equal that path
+3. git branch --show-current -> <BRANCH>
+4. git rev-parse HEAD -> record the value you see (pin it in your LOG)
+5. git status --porcelain | wc -l -> snapshot count in your LOG
+If (1)(2)(3) differ: write NOTHING anywhere, report BLOCKED: WRONG_WORKTREE and stop.
+
+TASK ID: <ID> - <lane title> (READ-ONLY audit worker).
+You are a documentation auditor. You produce analysis documents ONLY. You do NOT write code,
+tests, migrations, UI or config. You do NOT call any external service. Manager and Codex
+Reviewer will adversarially verify every citation.
+
+EXCLUSIVE WRITE ALLOWLIST: output/<run-id>/lane-<x>/ (create it with mkdir -p on first write).
+FORBIDDEN WRITES (absolute): app/**, frontend/**, tests/**, alembic migrations, fixtures,
+channels.json, data/**, docs/** (including docs/pm), <MAIN tree>, any other worktree,
+other lanes' output dirs, any file outside your lane directory. NEVER: commit/push/merge/
+reset/restore/checkout/clean/stash/delete, pip/npm installs, network calls, provider/API
+calls, model downloads, database creation (<DB_ENV_VAR> stays UNSET - never set it).
+
+REQUIRED READING (in order; read-only; cite what you actually saw):
+R1..Rn. <planning docs + concrete repo paths/grep hints; absence of an expected doc = record UNKNOWN>
+
+OUTCOME - define, grounded ONLY in R1-Rn evidence:
+O1..Om. <contract/boundary/matrix the lane must produce>
+<For contract lanes: For EVERY proposed field/state define owner | authority | idempotency | audit rule.
+For matrix lanes: classify EVERY row EXISTING (cite file:symbol) / PROPOSED / UNKNOWN (say what resolves it).>
+
+DELIVERABLES (all inside lane-<x>/):
+- <named acceptance docs>
+- LOG.md (timestamped +07 progress entries, guard results, reading checklist, self-audit)
+- REPORT.md ends with a Self-Audit section: list EVERY path you created (must all be under
+  your lane dir), attest zero writes elsewhere, attest no network/DB/provider usage,
+  then final line exactly: STATUS: TASK_SUBMITTED
+
+CITATION DISCIPLINE: every claim cites real file:symbol or doc section you opened this
+session. NEVER fabricate existing code, symbols, APIs or quotes. Proposals marked PROPOSED.
+Contradictions recorded with both citations.
+Stop after STATUS: TASK_SUBMITTED and exit.
+
+=== Skeleton 2: synthesis lane (runs AFTER all audit lanes verified) ===
+Same GUARD / ALLOWLIST / FORBIDDEN blocks, plus:
+- Owner rule: session NEW - do not reuse any prior session.
+- lane-a/, lane-b/, lane-c/ are READ-ONLY for you.
+INPUT SOURCES: the verified lane dirs + each lane REPORT.md + <canonical roadmap/planning>.
+Citation format: [A:<doc> <section/row>], [B:...], [C:...], [S2 <section>] - every
+substantive claim MUST trace to a lane or planning source.
+OUTCOME: EXACTLY these deliverables D1..D7:
+D1 READINESS_REPORT.md (verdict; label FACT / INFERENCE / PROPOSAL throughout)
+D2 DEPENDENCY_DAG.md (every edge justified by a finding)
+D3 WRITESET_MATRIX.md (per future task: exclusive paths, forbidden paths, overlap risks;
+   concurrent foreign lanes attributed, never assumed free)
+D4 TASK_MAP_<range>_DRAFT.md (each task session-sized: outcome/deps/write-set/forbidden/
+   binary AC/evidence; ASSUMPTIONS register; whole doc PROPOSAL)
+D5 ACCEPTANCE_GATES.md (per task: suites, checks, scenario IDs, metrics, evidence Codex demands)
+D6 RISK_REGISTER.md (likelihood/impact/mitigation/owner)
+D7 OPEN_PRODUCT_DECISIONS.md (every cross-lane contradiction resolved PUBLICLY: both sides +
+   resolution + rationale; every UNKNOWN carried unhidden; decisions only BA/Codex can make)
+RULES: if checking one disputed code fact, grep read-only and cite file:symbol; record
+repo-vs-lane discrepancies (lanes ran hours ago; other writers move the tree meanwhile).
+Same LOG.md / REPORT.md Self-Audit / STATUS: TASK_SUBMITTED tail.

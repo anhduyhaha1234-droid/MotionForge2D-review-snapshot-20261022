@@ -1,0 +1,8 @@
+test_empty_record_fails_closed (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_empty_record_fails_closed) ... ok
+test_gate_key_blocks_missing_deps (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_gate_key_blocks_missing_deps) ... ok
+test_real_builder_record_verifies (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_real_builder_record_verifies) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.033s
+
+OK

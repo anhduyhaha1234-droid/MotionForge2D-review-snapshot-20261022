@@ -1,0 +1,20 @@
+test_empty_record_fails_closed (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_empty_record_fails_closed) ... ok
+test_gate_key_blocks_missing_deps (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_gate_key_blocks_missing_deps) ... FAIL
+test_real_builder_record_verifies (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_real_builder_record_verifies) ... ok
+
+======================================================================
+FAIL: test_gate_key_blocks_missing_deps (test_codex_c02a_dependency_verification.DependencyVerificationTests.test_gate_key_blocks_missing_deps)
+----------------------------------------------------------------------
+c02a_isolated_gate.GateBlock: SEMANTIC_REVIEW_ABSENT keys:S0099_f0003
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c02a_dependency_verification.py", line 97, in test_gate_key_blocks_missing_deps
+    with self.assertRaisesRegex(self.gate.GateBlock, "DEPS"):
+AssertionError: "DEPS" does not match "SEMANTIC_REVIEW_ABSENT keys:S0099_f0003"
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.032s
+
+FAILED (failures=1)

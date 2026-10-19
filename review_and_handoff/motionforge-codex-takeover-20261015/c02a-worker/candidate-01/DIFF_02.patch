@@ -1,0 +1,39 @@
+diff --git "a/C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\preimages\\scripts\\r6_gate.py" "b/C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\candidate-01\\files\\scripts\\r6_gate.py"
+index 765ca27..8f10c29 100644
+--- "a/C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\preimages\\scripts\\r6_gate.py"
++++ "b/C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\candidate-01\\files\\scripts\\r6_gate.py"
+@@ -13,7 +13,8 @@ from datetime import datetime
+ from pathlib import Path
+ import sys
+ sys.path.insert(0, str(Path(__file__).resolve().parent))
+-import r6_common as K  # noqa: E402
++import r6_common as K  # noqa: E402
++import r6_cache as CA  # noqa: E402
+ 
+ REV = K.R6 / "reviews"
+ 
+@@ -219,10 +220,20 @@ def require_review(kind: str, name: str, artifact: Path, inputs_now: dict):
+ 
+ # ---------------- consumer gates ----------------
+ 
+-def key_inputs_now(sid: str, fid: int, key_png: Path):
+-    deps_p = K.R6 / "work" / sid / f"f_{fid:04d}.deps.json"
+-    deps = json.loads(deps_p.read_text(encoding="utf-8")) if deps_p.exists() else {}
+-    return {"ledger_row_sha": ledger_row_sha(sid), "deps_sha": hashlib.sha256(json.dumps(deps, sort_keys=True).encode()).hexdigest()}
++def key_inputs_now(sid: str, fid: int, key_png: Path):
++    deps_p = K.R6 / "work" / sid / f"f_{fid:04d}.deps.json"
++    deps, why = CA.load_deps(deps_p)
++    if why != "ok":
++        raise GateBlock(f"KEY_DEPS_MALFORMED {sid} f{fid}: {why}")
++    ok, why = CA.verify_deps(deps, sid, fid)
++    if not ok:
++        raise GateBlock(f"KEY_DEPS_INVALID {sid} f{fid}: {why}")
++    try:
++        ledger_sha = ledger_row_sha(sid)
++    except (OSError, UnicodeError, ValueError, TypeError, KeyError) as exc:
++        raise GateBlock(f"KEY_LEDGER_UNREADABLE {sid}: {exc}") from exc
++    return {"ledger_row_sha": ledger_sha,
++            "deps_sha": hashlib.sha256(json.dumps(deps, sort_keys=True).encode()).hexdigest()}
+ 
+ 
+ def gate_key(sid: str, fid: int):

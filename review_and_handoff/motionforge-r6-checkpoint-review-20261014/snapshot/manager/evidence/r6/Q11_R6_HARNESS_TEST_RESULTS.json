@@ -1,0 +1,396 @@
+{
+ "scope": "actual patched consumers (dispatch_long/heartbeat_long/invocation_runtime/terminal_contract) in isolated MF_RUN_ROOT scaffolds; synthetic fixtures are integrity probes, not media quality evidence; no Hermes/Comfy/renderer invoked",
+ "at_utc": "2026-10-12T08:00:32Z",
+ "passed": 51,
+ "total": 51,
+ "results": [
+  {
+   "name": "A.probe_ebsynth_detected",
+   "expected": false,
+   "actual": false,
+   "pass": true,
+   "extra": {
+    "detail": "render runner present (native ebsynth.exe)"
+   }
+  },
+  {
+   "name": "A.probe_rerender_detected",
+   "expected": false,
+   "actual": false,
+   "pass": true,
+   "extra": {
+    "detail": "render runner present (script video_blend.py)"
+   }
+  },
+  {
+   "name": "A.probe_sam2_detected",
+   "expected": false,
+   "actual": false,
+   "pass": true,
+   "extra": {
+    "detail": "render runner present (script sam2_masks.py)"
+   }
+  },
+  {
+   "name": "A.probe_idle_quiet",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "A.probe_packet_argv_no_falsepos",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "B.stale_binding_NR",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {
+    "errors": [
+     "binding invocation_id: receipt='OLD' dispatch='NEW'",
+     "binding owner_sid: receipt=None dispatch='RIGHT'",
+     "result invocation_id: 'OLD' != 'NEW'",
+     "result owner_sid: 'WRONG' != 'RIGHT'"
+    ]
+   }
+  },
+  {
+   "name": "B.unknown_decision_NR",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {
+    "errors": [
+     "binding invocation_id: receipt='OLD' dispatch='NEW'",
+     "unknown decision: 'UNRECOGNIZED'",
+     "result invocation_id: 'OLD' != 'NEW'"
+    ]
+   }
+  },
+  {
+   "name": "B.valid_bound_kept",
+   "expected": "TASK_SUBMITTED",
+   "actual": "TASK_SUBMITTED",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "C.refuse_rc",
+   "expected": 4,
+   "actual": 4,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "C.no_spawn",
+   "expected": false,
+   "actual": false,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "C.refused_reason",
+   "expected": "gpu_lease_barrier",
+   "actual": "gpu_lease_barrier",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "C.lease_untouched",
+   "expected": "ACTIVE",
+   "actual": "ACTIVE",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "D.refuse_rc",
+   "expected": 4,
+   "actual": 4,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "D.no_spawn",
+   "expected": false,
+   "actual": false,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "D.reason_reservation_in_flight",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "E.rc",
+   "expected": 0,
+   "actual": 0,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "E.spawned",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "E.adopted",
+   "expected": "RELEASED",
+   "actual": "RELEASED",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "E.adopted_by",
+   "expected": "20261007_234033_cc0b6d",
+   "actual": "20261007_234033_cc0b6d",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "E.outcome",
+   "expected": "CONTINUE_REQUIRED",
+   "actual": "CONTINUE_REQUIRED",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "F.rc",
+   "expected": 0,
+   "actual": 0,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "F.spawned",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "F.adopted",
+   "expected": "RELEASED",
+   "actual": "RELEASED",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "G.rc",
+   "expected": 0,
+   "actual": 0,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "G.spawned",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "G.outcome_NR",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "G.decision_NR",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "G.lease_kept",
+   "expected": false,
+   "actual": false,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "G.lease_reason_unknown",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "H.loser_rc",
+   "expected": 4,
+   "actual": 4,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "H.loser_refused_lock",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "H.winner_rc",
+   "expected": 0,
+   "actual": 0,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "H.exactly_one_child",
+   "expected": 1,
+   "actual": 1,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "I.rc",
+   "expected": 0,
+   "actual": 0,
+   "pass": true,
+   "extra": {
+    "wall_s": 31.2
+   }
+  },
+  {
+   "name": "I.timed_out_false",
+   "expected": false,
+   "actual": false,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "I.has_progressing_audit",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {
+    "statuses": [
+     "PROGRESSING"
+    ]
+   }
+  },
+  {
+   "name": "I.no_true_hang",
+   "expected": false,
+   "actual": false,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "I.outcome",
+   "expected": "CONTINUE_REQUIRED",
+   "actual": "CONTINUE_REQUIRED",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "J.timed_out_true",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {
+    "wall_s": 29.5
+   }
+  },
+  {
+   "name": "J.true_hang_audit",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "J.outcome_NR",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "J.wall_bounded",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {
+    "wall_s": 29.5
+   }
+  },
+  {
+   "name": "K.rc",
+   "expected": 0,
+   "actual": 0,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "K.outcome",
+   "expected": "TASK_SUBMITTED",
+   "actual": "TASK_SUBMITTED",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "K.decision",
+   "expected": "VERIFIABLE_SUBMISSION_PENDING_MANAGER_QA",
+   "actual": "VERIFIABLE_SUBMISSION_PENDING_MANAGER_QA",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "K.result_revision",
+   "expected": "r5",
+   "actual": "r5",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "L.outcome_NR",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "L.decision_NR",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "M.rc",
+   "expected": 0,
+   "actual": 0,
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "M.outcome_NR",
+   "expected": "NEEDS_RECONCILIATION",
+   "actual": "NEEDS_RECONCILIATION",
+   "pass": true,
+   "extra": {}
+  },
+  {
+   "name": "M.hash_mismatch_named",
+   "expected": true,
+   "actual": true,
+   "pass": true,
+   "extra": {
+    "error": "artifact hash mismatch: master"
+   }
+  }
+ ]
+}

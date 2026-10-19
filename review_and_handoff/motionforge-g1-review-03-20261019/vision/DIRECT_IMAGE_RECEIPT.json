@@ -1,0 +1,73 @@
+{
+  "utc": "2026-10-19T11:33:51.369527+00:00",
+  "purpose": "Single image smoke; no retries or manual account selection",
+  "endpoint": "http://127.0.0.1:20128/v1/chat/completions",
+  "requested_model": "ag/gemini-3.8-flash-high",
+  "image": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-03-20261019\\vision\\vision_fixture.png",
+  "image_sha256": "53b13d47c2c2ff5a60b082f680d93d34ad2b577db38b9f7008a1a981807e5b93",
+  "image_size": [
+    900,
+    560
+  ],
+  "image_bytes": 14522,
+  "prompt": "Read only the attached image. Return JSON with code (exact top text), left_shape, left_color, center_shape, center_color, right_shape_count, right_color. If no pixels are visible say IMAGE_NOT_VISIBLE. Do not infer the code from context.",
+  "expected": {
+    "code": "VIOLET-6DLARH",
+    "left_shape": "triangle",
+    "left_color": "red",
+    "center_shape": "circle",
+    "center_color": "blue",
+    "right_shape_count": 3,
+    "right_color": "green"
+  },
+  "http_status": 200,
+  "seconds": 10.953,
+  "raw_response_redacted": {
+    "id": "chatcmpl-4f_VaqznF8O6vr0PydOjuQM",
+    "object": "chat.completion",
+    "created": 1792409631,
+    "model": "gemini-3.8-flash-n",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"code\": \"VIOLET-6DLARH\",\n  \"left_shape\": \"triangle\",\n  \"left_color\": \"red\",\n  \"center_shape\": \"circle\",\n  \"center_color\": \"blue\",\n  \"right_shape_count\": 3,\n  \"right_color\": \"green\"\n}\n```"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3675,
+      "completion_tokens": 85,
+      "total_tokens": 3760,
+      "completion_tokens_details": {
+        "reasoning_tokens": 521
+      }
+    }
+  },
+  "checks": {
+    "code_exact": true,
+    "left_triangle": true,
+    "left_red": true,
+    "center_circle": true,
+    "center_blue": true,
+    "right_count": true,
+    "right_green": true
+  },
+  "pass": true,
+  "usage_rows": [
+    {
+      "id": 64367,
+      "timestamp": "2026-10-19T11:33:51.367Z",
+      "provider": "antigravity",
+      "model": "gemini-3.8-flash-high",
+      "connection_prefix": "6c18a210",
+      "status": "ok",
+      "promptTokens": 1154,
+      "completionTokens": 85
+    }
+  ],
+  "request_count": 1,
+  "manual_account_override": false
+}

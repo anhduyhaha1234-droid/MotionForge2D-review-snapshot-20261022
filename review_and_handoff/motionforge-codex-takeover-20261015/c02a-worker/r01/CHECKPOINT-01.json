@@ -1,0 +1,35 @@
+{
+  "task": "CODEX-C02A-DEPENDENCY-VERIFICATION",
+  "finding": "C02A-R01",
+  "owner": "/root/motionforge_c02a_coder",
+  "model": "gpt-6-sol",
+  "reasoning": "max",
+  "fallback": "disabled",
+  "status": "CORRECTION_RUNNING",
+  "rules": "760 lines fully reloaded before resume",
+  "resume_preflight": "RESUME_PREFLIGHT_C02A_R01_20261016T1412.json ok=true",
+  "preimages": "candidate01 byte-matched r01/preimages; root partial snapshots preimages/c02a-r01-resume-1412",
+  "source_cache": {
+    "sha256": "be1d2f123ba71c355fdea0f904172eaeaf44c442994048038554a18a7864f8f2",
+    "bytes": 10610,
+    "lines": 229,
+    "delta": "iterative depth-256 JSON value walk and controlled digest encode exceptions"
+  },
+  "source_test": {
+    "sha256": "195ead0031f16098087df5f56b5b9ac0e5ddc7a58a733ea6a0e0c22168650219",
+    "bytes": 23075,
+    "lines": 458,
+    "delta": "settings/extra nested matrix, parsed nested assembly tripwire, concise diagnostic print"
+  },
+  "unchanged": {
+    "gate": "8c2e3f9eedd4d8e11832809c2b72293db17df1fb5a4012bd39fa396f93143f94",
+    "c01_test": "351c39e764e53d67466688d9ec032cf9e352167e105ee0be580129f1db38fdf7"
+  },
+  "red": [
+    "root nesting probe 4/8 exit1",
+    "focused two-test NESTING_RED.txt exit1, 5 RecursionError cases"
+  ],
+  "tests": "green tests not yet run",
+  "next": "run focused nesting tests; if green run root nesting probe, original 55-case probe, full affected C01+C02A modules; self-review and candidate02",
+  "live_jobs": []
+}

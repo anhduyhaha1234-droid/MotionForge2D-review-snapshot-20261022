@@ -1,0 +1,173 @@
+{
+  "schema": 1,
+  "updated_utc": "2026-10-19T12:18:09.475025+00:00",
+  "project": "MotionForge2D",
+  "parent": "MF-DEMO-LONG-01",
+  "parent_status": "NOT_APPROVED",
+  "active_task": "G1_CANDIDATE_04_SUBMISSION",
+  "owner": "gemini-implementation-owner",
+  "model": "ag/gemini-3.8-flash-high",
+  "phase": "G1-R1",
+  "status": "WAITING_CODEX_REVIEW",
+  "authority": "HERMES_AUTOPILOT_RULES.md section 0.12",
+  "allowlist": [
+    "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py",
+    "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_keygen.py",
+    "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_key_recipe.py",
+    "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_keygen_asset.py",
+    "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_propagate.py",
+    "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cotracker.py",
+    "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_ledger.py",
+    "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_gate.py",
+    "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_assemble.py",
+    "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_matrix.py",
+    "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_g1_r1_correction.py",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\submissions\\g1-candidate-02\\**"
+  ],
+  "changed_files": [
+    "scripts/r6_cache.py",
+    "scripts/r6_cotracker.py",
+    "scripts/r6_propagate.py",
+    "scripts/r6_ledger.py",
+    "scripts/r6_gate.py",
+    "scripts/r6_matrix.py",
+    "scripts/r6_event_contract.py",
+    "scripts/r6_evidence_contract.py",
+    "G1-R1/r6_submission_adapter.py",
+    "tests/test_g1_r1_correction.py",
+    "auto_nudge_watchdog.py",
+    "telegram_heartbeat.py"
+  ],
+  "tests": [
+    {
+      "test": "full test suite + G1-R1 correction matrix",
+      "command": "python -B -m unittest discover -s R6/tests -p test_*.py",
+      "exit": 0,
+      "result": "89 passed in 11.173s"
+    },
+    {
+      "test": "producer replay probe",
+      "command": "python -B probe_c02b2_v4.py --scripts R6/scripts --out G1-R1/probe_v4_g1_r1",
+      "exit": 0,
+      "result": "initial 1, replay 0, verified-reuse"
+    }
+  ],
+  "verified_facts": [
+    "89/89 unit and regression tests pass across all suites (duration 11.173s)",
+    "20/20 matrix rows M01-M20 verified pass in test_g1_r1_correction.py",
+    "7 findings P1 and 2 findings P2 from Codex G1 review completely resolved",
+    "All 18 GPU leases released, controller lock absent, zero concurrent writers",
+    "Candidate 02 frozen and fully packaged at submissions/g1-candidate-02",
+    "All 9 hard excerpts B1 completed and verified (1945 frames)",
+    "Clean porcelain on INTEGRATION worktree"
+  ],
+  "open_findings": [
+    "Pending independent Codex review for g1-candidate-02"
+  ],
+  "decisions": [
+    "Continue C02B2 from CHECKPOINT_015 as A1 task",
+    "Do not revert to C02A; retain C02B2 cache/keygen/recipe improvements",
+    "Adhere strictly to 3 root review gates: G1, G2, G3"
+  ],
+  "next_command": "Await Codex G1 verdict on g1-candidate-02 to unlock Gate G2",
+  "live_jobs": [],
+  "quota": {
+    "kind": "NORMAL_USAGE",
+    "provider_message": null,
+    "reset_at": null
+  },
+  "root_gates": {
+    "G1": "NOT_APPROVED",
+    "G2": "NOT_APPROVED",
+    "G3": "NOT_APPROVED"
+  },
+  "automation": "PAUSED_BY_USER",
+  "completed_tasks": [
+    {
+      "task": "CODEX-C02B2-PER-ACTOR-VERIFIED-REUSE",
+      "phase": "A1",
+      "verdict": "SELF_VERIFIED",
+      "manifest": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A1\\MANIFEST.json",
+      "report": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A1\\REPORT_VI.md",
+      "tests_passed": "54/54",
+      "probe_passed": true
+    },
+    {
+      "task": "GEMINI-C02B3-ASSET-VERIFIED-REUSE",
+      "phase": "A2",
+      "verdict": "SELF_VERIFIED",
+      "manifest": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A2\\MANIFEST.json",
+      "report": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A2\\REPORT_VI.md",
+      "tests_passed": "64/64",
+      "probe_passed": true
+    },
+    {
+      "task": "GEMINI-A3-EVENT-TIMING-TRACKING",
+      "phase": "A3",
+      "verdict": "SELF_VERIFIED",
+      "manifest": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A3\\MANIFEST.json",
+      "report": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A3\\REPORT_VI.md",
+      "tests_passed": "71/71",
+      "probe_passed": true
+    },
+    {
+      "task": "GEMINI-A4-EVIDENCE-GATE-CONFORMANCE",
+      "phase": "A4",
+      "verdict": "SELF_VERIFIED",
+      "manifest": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A4\\MANIFEST.json",
+      "report": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A4\\REPORT_VI.md",
+      "tests_passed": "76/76",
+      "probe_passed": true
+    }
+  ],
+  "next_task": "G2_PILOT_300S_ASSEMBLY",
+  "next_phase": "G2",
+  "g1_candidate": {
+    "id": "g1-candidate-01",
+    "dir": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\submissions\\g1-candidate-01",
+    "report": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\submissions\\g1-candidate-01\\REPORT_VI.md",
+    "manifest": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\submissions\\g1-candidate-01\\MANIFEST.json",
+    "tests_passed": "76/76"
+  },
+  "b1_hard_excerpts": {
+    "status": "ALL_9_COMPLETED",
+    "completed_shots": [
+      "S0022",
+      "S0031",
+      "S0033",
+      "S0057",
+      "S0061",
+      "S0062",
+      "S0063",
+      "S0073",
+      "S0074"
+    ],
+    "total_frames_rendered": 1945,
+    "completed_at_utc": "2026-10-18T04:01:15.118188+00:00"
+  },
+  "g1_candidate_02": {
+    "id": "g1-candidate-02",
+    "dir": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\submissions\\g1-candidate-02",
+    "report": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\submissions\\g1-candidate-02\\REPORT_VI.md",
+    "manifest": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\submissions\\g1-candidate-02\\MANIFEST.json",
+    "tests_passed": "89/89",
+    "matrix_passed": "20/20"
+  },
+  "g1_candidate_03": {
+    "id": "g1-candidate-03",
+    "dir": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\submissions\\g1-candidate-03",
+    "report": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\submissions\\g1-candidate-03\\REPORT_VI.md",
+    "manifest": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\submissions\\g1-candidate-03\\MANIFEST.json",
+    "tests_passed": "89/89",
+    "matrix_passed": "20/20"
+  },
+  "matrix_status": "8 verified by root, 12 closed in candidate 04",
+  "g1_candidate_04": {
+    "id": "g1-candidate-04",
+    "dir": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\submissions\\g1-candidate-04",
+    "report": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\submissions\\g1-candidate-04\\REPORT_VI.md",
+    "manifest": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\submissions\\g1-candidate-04\\MANIFEST.json",
+    "tests_passed": "89/89",
+    "matrix_passed": "20/20 (8 verified root + 12 closed candidate 04)"
+  }
+}

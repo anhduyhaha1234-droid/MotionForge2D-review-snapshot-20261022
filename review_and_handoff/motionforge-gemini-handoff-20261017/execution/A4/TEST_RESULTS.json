@@ -1,0 +1,66 @@
+{
+  "task": "GEMINI-A4-EVIDENCE-GATE-CONFORMANCE",
+  "executed_utc": "2026-10-17T17:46:31.094463+00:00",
+  "runner": "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\venv\\Scripts\\python.exe",
+  "suite_summary": {
+    "total_tests": 76,
+    "passed": 76,
+    "failed": 0,
+    "errors": 0,
+    "duration_seconds": 9.138
+  },
+  "modules": [
+    {
+      "module": "tests/test_codex_c01_review_binding.py",
+      "tests_count": 17,
+      "status": "PASS"
+    },
+    {
+      "module": "tests/test_codex_c02a_dependency_verification.py",
+      "tests_count": 13,
+      "status": "PASS"
+    },
+    {
+      "module": "tests/test_codex_c02b1_staged_source.py",
+      "tests_count": 10,
+      "status": "PASS"
+    },
+    {
+      "module": "tests/test_codex_c02b2_per_actor_reuse.py",
+      "tests_count": 14,
+      "status": "PASS"
+    },
+    {
+      "module": "tests/test_gemini_c02b3_asset_reuse.py",
+      "tests_count": 10,
+      "status": "PASS"
+    },
+    {
+      "module": "tests/test_gemini_a3_event_tracking.py",
+      "tests_count": 7,
+      "status": "PASS"
+    },
+    {
+      "module": "tests/test_gemini_a4_evidence_conformance.py",
+      "tests_count": 5,
+      "status": "PASS",
+      "cases": [
+        "EvidenceGateConformanceTests.test_g1_engineering_batch_conformance: PASS",
+        "EvidenceGateConformanceTests.test_invalid_matrix_keys_and_values: PASS",
+        "EvidenceGateConformanceTests.test_r6_assemble_pre_encoder_gate_blocked: PASS",
+        "EvidenceGateConformanceTests.test_r6_matrix_compute_rows: PASS",
+        "EvidenceGateConformanceTests.test_t13_two_controller_barrier_race_simulation: PASS"
+      ]
+    }
+  ],
+  "root_probe_v4": {
+    "command": "python -B probe_c02b2_v4.py --scripts R6/scripts --out WORK/A4/probe_v4_result",
+    "initial_generation_calls": 1,
+    "unchanged_replay_generation_calls": 0,
+    "skip_before_replay": [
+      true,
+      "verified-reuse"
+    ],
+    "pass": true
+  }
+}

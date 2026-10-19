@@ -1,0 +1,33 @@
+{
+ "invocation": "LONG01-R6e-20261012T1555Z-3e9b",
+ "utc": "2026-10-12T18:17:19Z",
+ "outcome_class": "NEEDS_RECONCILIATION",
+ "error_verbatim": "[WinError 2] The system cannot find the file specified: 'C:\\\\Users\\\\Admin\\\\Documents\\\\Codex\\\\work\\\\mf-delivery-runs\\\\20261005\\\\20261005T1643Z-wan-long\\\\tasks\\\\MF-DEMO-LONG-01\\\\corrections\\\\identity5m_20261008\\\\r6\\\\evidence\\\\terminal\\\\LONG01-R6e-20261012T1555Z-3e9b.json'",
+ "root_cause": "2h15m; hit 80/80 iteration budget BEFORE writing its record (3rd occurrence of this pattern); additionally the invocation LEFT a background chain running (pid 37968: S43/S61 gap keygen -> reviews -> propagate) which did NOT survive turn end (process tree closed) — S43/S61 blends = 0. Record not backfilled.",
+ "process_lesson": "bg processes spawned inside the worker do not survive the turn; batches must be driven to their receipt INSIDE the turn (poll or resume), and the record must be refreshed after EACH batch — not 'near the end'.",
+ "state_measured": {
+  "blend_dirs_with_content": 53,
+  "missing_blends": [
+   "S0043",
+   "S0061"
+  ],
+  "S0043_keys": "94 up to f0931; needs gap fids; older reviews now STALE-HASH (gate correctly raised SEMANTIC_REVIEW_TAMPERED for S0043_f0901) -> fresh reviews required before propagate",
+  "S0061_keys": "20 up to f0151; tail gap remains",
+  "keygen_rows": 1226,
+  "built_scripts": [
+   "r6_assemble.py",
+   "r6_qa.py",
+   "r6_matrix.py",
+   "r6_cotracker.py"
+  ],
+  "prop_logs": "prop_batch/prop_r2/prop_r3 done (last S0044 rc0 16:52Z); prop_asset done 17:47Z (with S43 rc=1 gate-block)"
+ },
+ "work_done_r6e": [
+  "Repair round-2 (S62 f33/S69 f101/S72 f71) + S21/S27/S28 fixes; S31 window + S44 review",
+  "Asset pass for zero-shots ran (prop_asset) — verify enumeration",
+  "Fixed prop pipeline: 27+ shots rc=0 (S22-S73 minus blocked, then repairs propagated)",
+  "Gate hit exactly 4x (correct blocks): S43 SEMANTIC_REVIEW_TAMPERED(race), S49 ABSENT 27/36, S43/S61 KEY_MISSING",
+  "Built assemble/qa/matrix/cotracker scripts (compiled)"
+ ],
+ "decision": "NR acknowledged (no backfill). R6f = final stretch: complete S43/S61 (keys->fresh reviews->propagate), enumerate 54/54, assemble+QA+matrix, record with CADENCE (refresh after each batch; correct name+dedupe), TASK_SUBMITTED only if 12 rows genuinely PASS."
+}

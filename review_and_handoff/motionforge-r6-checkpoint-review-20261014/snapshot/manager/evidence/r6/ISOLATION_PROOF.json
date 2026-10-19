@@ -1,0 +1,121 @@
+{
+ "utc": "2026-10-12T08:01:29Z",
+ "cut_utc": "2026-10-12T01:00:00Z",
+ "expected_changes": [
+  {
+   "path": "manager/scratch/r6_incident_preserve.py",
+   "at": "07:50:01Z"
+  },
+  {
+   "path": "manager/evidence/r6/incident_reconcile/INCIDENT_A_FROZEN_R4_DRIFT.json",
+   "at": "07:50:22Z"
+  },
+  {
+   "path": "manager/evidence/r6/incident_reconcile/INCIDENT_B_R5D_MANIFEST_STALE.json",
+   "at": "07:50:22Z"
+  },
+  {
+   "path": "manager/evidence/r6/incident_reconcile/RECONCILIATION_APPEND.md",
+   "at": "07:50:22Z"
+  },
+  {
+   "path": "manager/evidence/r6/guard_R4_tracks_baseline.jsonl",
+   "at": "07:50:31Z"
+  },
+  {
+   "path": "manager/evidence/r6/guard_R4_masks_baseline.jsonl",
+   "at": "07:50:35Z"
+  },
+  {
+   "path": "manager/evidence/r6/guard_R4_tracks_masks_summary.json",
+   "at": "07:50:35Z"
+  },
+  {
+   "path": "manager/scratch/r6_context_guard.py",
+   "at": "07:51:26Z"
+  },
+  {
+   "path": "manager/evidence/r6/CONTEXT_AUDIT_R6.json",
+   "at": "07:51:35Z"
+  },
+  {
+   "path": "manager/evidence/r6/GUARD_BASELINE_R6.json",
+   "at": "07:51:35Z"
+  },
+  {
+   "path": "manager/scratch/r6_patch_contract_suite.py",
+   "at": "07:53:01Z"
+  },
+  {
+   "path": "manager/tools/terminal_contract.py",
+   "at": "07:53:06Z"
+  },
+  {
+   "path": "manager/tests/test_r5_q11_consumers.py",
+   "at": "07:53:06Z"
+  },
+  {
+   "path": "manager/tools/__pycache__/terminal_contract.cpython-311.pyc",
+   "at": "07:53:06Z"
+  },
+  {
+   "path": "manager/tests/__pycache__/test_r5_q11_consumers.cpython-311.pyc",
+   "at": "07:53:06Z"
+  },
+  {
+   "path": "manager/evidence/r6/q11/q11_race_suite.py",
+   "at": "07:55:55Z"
+  },
+  {
+   "path": "manager/evidence/r6/q11/Q11_R6_RACE_RESULTS.json",
+   "at": "07:57:27Z"
+  },
+  {
+   "path": "manager/evidence/r6/Q11_R6_HARNESS_TEST_RESULTS.json",
+   "at": "08:00:32Z"
+  },
+  {
+   "path": "manager/evidence/r6/ISOLATION_PROOF.json",
+   "at": "08:01:08Z"
+  },
+  {
+   "path": "manager/scratch/r6_isolation_proof.py",
+   "at": "08:01:18Z"
+  }
+ ],
+ "unexpected_changes": [],
+ "r6_evidence_files": [
+  "CONTEXT_AUDIT_R6.json",
+  "GUARD_BASELINE_R6.json",
+  "ISOLATION_PROOF.json",
+  "Q11_R6_HARNESS_TEST_RESULTS.json",
+  "guard_R4_masks_baseline.jsonl",
+  "guard_R4_tracks_baseline.jsonl",
+  "guard_R4_tracks_masks_summary.json",
+  "incident_reconcile/INCIDENT_A_FROZEN_R4_DRIFT.json",
+  "incident_reconcile/INCIDENT_B_R5D_MANIFEST_STALE.json",
+  "incident_reconcile/RECONCILIATION_APPEND.md",
+  "incident_reconcile/preserved_bytes/R5D_TERMINAL_current.json",
+  "incident_reconcile/preserved_bytes/R5_MANIFEST_frozen.json",
+  "incident_reconcile/preserved_bytes/consumer_test_receipts__api_error.receipt.json",
+  "incident_reconcile/preserved_bytes/consumer_test_receipts__dupkeys.receipt.json",
+  "incident_reconcile/preserved_bytes/consumer_test_receipts__empty_cont.receipt.json",
+  "incident_reconcile/preserved_bytes/consumer_test_receipts__exit_nonzero.receipt.json",
+  "incident_reconcile/preserved_bytes/consumer_test_receipts__future_pass.receipt.json",
+  "incident_reconcile/preserved_bytes/consumer_test_receipts__matrix_mismatch.receipt.json",
+  "incident_reconcile/preserved_bytes/consumer_test_receipts__missing_artifact.receipt.json",
+  "incident_reconcile/preserved_bytes/consumer_test_receipts__ok_continue.receipt.json",
+  "incident_reconcile/preserved_bytes/consumer_test_receipts__ok_submitted.receipt.json",
+  "incident_reconcile/preserved_bytes/consumer_test_receipts__prose_only.receipt.json",
+  "incident_reconcile/preserved_bytes/consumer_test_receipts__quoted.receipt.json",
+  "incident_reconcile/preserved_bytes/consumer_test_receipts__truncated.receipt.json",
+  "incident_reconcile/preserved_bytes/consumer_test_receipts__wrong_invocation.receipt.json",
+  "incident_reconcile/preserved_bytes/consumer_test_receipts__wrong_owner.receipt.json",
+  "incident_reconcile/preserved_bytes/consumer_test_receipts__wrong_packet.receipt.json",
+  "incident_reconcile/preserved_bytes/r4__R4_HARNESS_TEST_RESULTS.json",
+  "q11/Q11_R6_RACE_RESULTS.json",
+  "q11/q11_race_suite.py"
+ ],
+ "new_files_in_r5_evidence_dir": [],
+ "passed": true
+}

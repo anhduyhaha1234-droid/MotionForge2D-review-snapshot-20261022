@@ -1,0 +1,85 @@
+{
+  "version": "1.0.0",
+  "name": "Example Spike Project",
+  "source_video": "examples/test_video.mp4",
+  "video_metadata": {
+    "width": 320,
+    "height": 240,
+    "fps": 30.0,
+    "duration_seconds": 3.0,
+    "total_frames": 90,
+    "codec": "h264",
+    "has_audio": true,
+    "audio_codec": "aac",
+    "file_size_bytes": 0,
+    "file_path": ""
+  },
+  "scenes": [
+    {
+      "scene_id": 0,
+      "start_frame": 0,
+      "end_frame": 89,
+      "start_time_sec": 0.0,
+      "end_time_sec": 3.0,
+      "duration_sec": 3.0,
+      "frame_count": 90
+    }
+  ],
+  "objects": [
+    {
+      "object_id": "obj_0",
+      "name": "Moving Square",
+      "kind": "character",
+      "selection": {
+        "mode": "point",
+        "frame_index": 45,
+        "x": 160.0,
+        "y": 120.0
+      },
+      "scene_id": 0,
+      "replacement_image": "examples/replacement.png",
+      "motion": {
+        "scene_id": 0,
+        "frames": [
+          {
+            "frame_index": 0,
+            "centroid_x": 100.0,
+            "centroid_y": 120.0,
+            "bbox": {"x": 80, "y": 100, "width": 40, "height": 40},
+            "scale_x": 1.0,
+            "scale_y": 1.0,
+            "rotation_deg": 0.0,
+            "opacity": 1.0,
+            "visibility": true,
+            "area": 1600.0
+          },
+          {
+            "frame_index": 44,
+            "centroid_x": 160.0,
+            "centroid_y": 120.0,
+            "bbox": {"x": 140, "y": 100, "width": 40, "height": 40},
+            "scale_x": 1.0,
+            "scale_y": 1.0,
+            "rotation_deg": 0.0,
+            "opacity": 1.0,
+            "visibility": true,
+            "area": 1600.0
+          },
+          {
+            "frame_index": 89,
+            "centroid_x": 220.0,
+            "centroid_y": 120.0,
+            "bbox": {"x": 200, "y": 100, "width": 40, "height": 40},
+            "scale_x": 1.0,
+            "scale_y": 1.0,
+            "rotation_deg": 0.0,
+            "opacity": 1.0,
+            "visibility": true,
+            "area": 1600.0
+          }
+        ],
+        "reference_bbox": {"x": 140, "y": 100, "width": 40, "height": 40}
+      }
+    }
+  ]
+}

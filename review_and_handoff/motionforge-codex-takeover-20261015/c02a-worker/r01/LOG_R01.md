@@ -1,0 +1,13 @@
+# C02A-R01 execution log
+
+- Loaded all 760 lines of the current canonical rules, the R01 review and original C02A packet. Re-loaded rules after the usage-limit interruption; read the resume preflight and reconciled exact preserved bytes. Root reported `usage limit; try again at 2:08 PM`; continuation used the same owner/model/scope.
+- Verified candidate-01 hashes and copied four byte-matching preimages under `r01/preimages`. Cache preimage SHA256 `946935906625d79b95153a92d4cf86310551cfbc4533a3661f2011854aeae7a7`; C02A test preimage SHA256 `403e45568fddeda038b3f10a62cf3b311764d1e91e7a5f9ef9ca3fbf78877899`. Gate and C01 test stayed at their candidate-01 hashes.
+- Ran `python root_probe_c02a_nesting.py --scripts <R6/scripts> --out <r01/root-nesting-red>`: exit 1, 4/8. Parsed depth-400/800 records raised uncontrolled `RecursionError` in direct verify and real key gate. Receipt: `ROOT_NESTING_RED.txt` and `root-nesting-red/RESULT.json`.
+- Added focused settings/extra-top-level nesting and actual assembly regression tests by bounded patch. Ran `python -m unittest -v <two new C02A test methods>`: exit 1, two tests with five `RecursionError` errors. Raw receipt: `NESTING_RED.txt`.
+- Patched only `r6_cache.py` with an iterative, bounded JSON value walk and controlled digest-encoding failure. Reduced a test diagnostic print by a separate bounded patch. Post-patch hashes: cache `be1d2f123ba71c355fdea0f904172eaeaf44c442994048038554a18a7864f8f2` (10610 bytes, 229 lines); C02A test `195ead0031f16098087df5f56b5b9ac0e5ddc7a58a733ea6a0e0c22168650219` (23075 bytes, 458 lines).
+- Ran the two focused C02A regression methods: exit 0, 2/2. Receipt: `NESTING_GREEN_01.txt`.
+- Ran `python root_probe_c02a_nesting.py --scripts <R6/scripts> --out <r01/root-nesting-green-01>`: exit 0, 8/8. Receipts: `ROOT_NESTING_GREEN_01.txt`, `root-nesting-green-01/RESULT.json`.
+- Ran unchanged `python root_probe_c02a_dependencies.py --scripts <R6/scripts> --out <r01/root-55-green-01>`: exit 0, 55/55. Receipts: `ROOT_55_GREEN_01.txt`, `root-55-green-01/RESULT.json`.
+- Ran `python -m unittest -v test_codex_c01_review_binding test_codex_c02a_dependency_verification` with `C02A_WORKER_DIR` isolated under `r01/fixtures`: exit 0, 30/30. Receipt: `AFFECTED_FULL_01.txt`.
+- Audited candidate-01-to-02 diffs, all 24 protected hashes, exact unchanged gate/C01 test bytes, and duplicate definitions. Result: `SELF_REVIEW.json`; diffs copied to `candidate-02/DIFF_01.patch` and `DIFF_02.patch`.
+- Frozen four exact source/test snapshots in `candidate-02/files`; created candidate-02 manifest and stopped source/test writes for independent root review. No GPU, Hermes, Git mutation, or real media/model hashing.

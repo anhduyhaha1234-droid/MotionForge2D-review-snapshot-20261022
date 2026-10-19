@@ -1,0 +1,91 @@
+{
+  "absolute_deadline_epoch": null,
+  "allowed_root": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r4_cons_test\\r4",
+  "api_mode_pinned_in_packet": "chat_completions",
+  "base_url": "http://127.0.0.1:20128/v1",
+  "context_metrics": {
+    "compactions_observed": 0,
+    "context_window_advertised": 1000000,
+    "label": "observed counts; token estimate is the CLI's own",
+    "last_context_line": "Context: 12k/1M tokens (fixture)",
+    "max_output_setting": "16384",
+    "tool_actions_observed": 0
+  },
+  "controller_lock": "held",
+  "cwd": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r4_cons_test\\tasks\\MF-DEMO-LONG-01",
+  "exit_code": 0,
+  "fallback": false,
+  "gpu_lease_release": {
+    "children": [
+      {
+        "pid": 32836,
+        "state": "DEAD"
+      }
+    ],
+    "detail": "no queue job, no runner process",
+    "released": true
+  },
+  "invocation_id": "INV-quoted",
+  "launcher_pid": 19276,
+  "legacy_prose_outcome": {
+    "class": "EXIT0_NO_KNOWN_MARKER",
+    "detail": "read log payload before trusting",
+    "exit_code": 0,
+    "not_completed": null
+  },
+  "log": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r4_cons_test\\logs\\quoted.log",
+  "log_bytes": 266,
+  "max_tokens_effective_scheme": "HERMES_MAX_TOKENS env on child process (cli.py:4352); lever verified 2026-10-06 (HERMES_MAX_TOKENS=24 -> output cut at 24 tokens)",
+  "max_tokens_requested": "16384",
+  "max_turns": "80",
+  "max_turns_note": "invocation boundary, NOT a task stop gate (packet \u00a74)",
+  "model": "cmc/deepseek/deepseek-v4.1-flash",
+  "new_session": false,
+  "note": "exit code alone is NOT completion proof - read the log payload; check for finish_reason='length' / 'API call failed' / UsageLimit",
+  "outcome_class": "CONTINUE_REQUIRED",
+  "outcome_detail": {
+    "class": "CONTINUE_REQUIRED",
+    "decision": "PENDING_SAME_OWNER_CONTINUATION",
+    "legacy_prose_class": "EXIT0_NO_KNOWN_MARKER",
+    "source": "structured_terminal"
+  },
+  "owner_sid": "20261007_234033_cc0b6d",
+  "packet": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r4_cons_test\\packet.md",
+  "packet_bytes": 175,
+  "packet_file_sha256": "9ea6a28ab5f1aff4bb021f3661877d68aef494a01d720dc1611ad141e887799c",
+  "packet_sha256": "2f398b5cc85347d4cf708c01d49b76ea83667daa048331c9c82d31f6b6c9a54a",
+  "provider": "custom",
+  "remaining_seconds_at_dispatch": null,
+  "resume_session_requested": "20261007_234033_cc0b6d",
+  "revision": "r4",
+  "round": "packet.md",
+  "run_id": "20261005T1643Z-wan-long",
+  "session_id_actual": "20261007_234033_cc0b6d",
+  "skills": null,
+  "stall_kill_seconds": 60,
+  "task_id": "MF-DEMO-LONG-01",
+  "terminal_validation": {
+    "decision": "PENDING_SAME_OWNER_CONTINUATION",
+    "quality_accepted": false,
+    "result": {
+      "artifacts": [],
+      "invocation_id": "INV-quoted",
+      "matrix": {},
+      "owner_sid": "20261007_234033_cc0b6d",
+      "packet_sha256": "9ea6a28ab5f1aff4bb021f3661877d68aef494a01d720dc1611ad141e887799c",
+      "reason": "fixture quoted",
+      "remaining_work": [
+        "fixture step"
+      ],
+      "revision": "r4",
+      "run_id": "20261005T1643Z-wan-long",
+      "schema_version": "1.0",
+      "status": "CONTINUE_REQUIRED",
+      "task_id": "MF-DEMO-LONG-01"
+    }
+  },
+  "timed_out": false,
+  "toolsets": null,
+  "utc_end": "2026-10-11T17:54:24.256593+00:00",
+  "utc_start": "2026-10-11T17:54:21.976559+00:00"
+}

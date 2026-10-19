@@ -1,0 +1,22 @@
+{
+ "review_id": "keys:S0021_f0001",
+ "reviewer": "worker-vision+hash (vision-capable, artifact-bound)",
+ "reviewed_at": "2026-10-16T02:26:56Z",
+ "artifact": {
+  "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\r01\\root-nesting-red\\task\\corrections\\identity\\r6\\keys\\S0021\\f_0001_key.png",
+  "sha256": "2c70e12b7a0646f92279f427c7b38e7334d8e5389cff167a1dc30e73f826b683"
+ },
+ "inputs": {
+  "ledger_row_sha": "f4d884bab07eeb07af841e81a68af5f138318b94ee57cd273687a7df4742963f",
+  "deps_sha": "2b6d3c72c5667d42d940cd28c7af4725e57a98ee2324e19c1d8698dfb51e7cd3"
+ },
+ "expected": {
+  "shot": "S0021",
+  "fid": 1
+ },
+ "frames": [
+  1
+ ],
+ "verdict": "PASS",
+ "evidence": "nesting fixture only"
+}

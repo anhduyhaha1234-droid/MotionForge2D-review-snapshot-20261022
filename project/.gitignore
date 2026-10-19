@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Output (generated artifacts)
+output/
+output_m05/
+output/quality-baseline/
+/projects/
+
+# Model checkpoints (large binaries)
+models_checkpoints/*.pt
+models_checkpoints/*.pth
+models_checkpoints/*.bin
+
+# Environment
+.env
+.env.local
+*.log
+
+# FFmpeg temp
+*.tmp
+*.temp
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node (frontend, future)
+node_modules/
+.next/

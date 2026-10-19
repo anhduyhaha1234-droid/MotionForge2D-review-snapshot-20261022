@@ -1,0 +1,22 @@
+test_bad_json_and_non_object_are_gate_blocks (test_codex_c01_review_binding.ReviewBindingTests.test_bad_json_and_non_object_are_gate_blocks) ... ok
+test_blend_producer_schema_and_full_mapping (test_codex_c01_review_binding.ReviewBindingTests.test_blend_producer_schema_and_full_mapping) ... ok
+test_changed_dependency_blocks (test_codex_c01_review_binding.ReviewBindingTests.test_changed_dependency_blocks) ... ok
+test_current_producer_record_passes (test_codex_c01_review_binding.ReviewBindingTests.test_current_producer_record_passes) ... ok
+test_expected_and_reviewed_frame_identity (test_codex_c01_review_binding.ReviewBindingTests.test_expected_and_reviewed_frame_identity) ... ok
+test_extra_recorded_and_current_dependencies_block (test_codex_c01_review_binding.ReviewBindingTests.test_extra_recorded_and_current_dependencies_block) ... ok
+test_false_and_numeric_dependency_values_do_not_bind (test_codex_c01_review_binding.ReviewBindingTests.test_false_and_numeric_dependency_values_do_not_bind) ... ok
+test_missing_current_dependency_blocks (test_codex_c01_review_binding.ReviewBindingTests.test_missing_current_dependency_blocks) ... ok
+test_missing_recorded_dependency_blocks (test_codex_c01_review_binding.ReviewBindingTests.test_missing_recorded_dependency_blocks) ... ok
+test_nonstandard_json_constant_is_malformed (test_codex_c01_review_binding.ReviewBindingTests.test_nonstandard_json_constant_is_malformed) ... ok
+test_numeric_sha_and_missing_verdict_are_gate_blocks (test_codex_c01_review_binding.ReviewBindingTests.test_numeric_sha_and_missing_verdict_are_gate_blocks) ... ok
+test_other_path_with_identical_bytes_blocks (test_codex_c01_review_binding.ReviewBindingTests.test_other_path_with_identical_bytes_blocks) ... ok
+test_real_assembler_main_rejects_before_copy_and_encoder (test_codex_c01_review_binding.ReviewBindingTests.test_real_assembler_main_rejects_before_copy_and_encoder) ... ok
+test_real_gate_assemble_binds_review_to_consumed_blend_frames (test_codex_c01_review_binding.ReviewBindingTests.test_real_gate_assemble_binds_review_to_consumed_blend_frames) ... ok
+test_required_field_types_and_frames (test_codex_c01_review_binding.ReviewBindingTests.test_required_field_types_and_frames) ... ok
+test_review_identity_must_match_requested_kind_and_name (test_codex_c01_review_binding.ReviewBindingTests.test_review_identity_must_match_requested_kind_and_name) ... ok
+test_stale_artifact_blocks (test_codex_c01_review_binding.ReviewBindingTests.test_stale_artifact_blocks) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.346s
+
+OK

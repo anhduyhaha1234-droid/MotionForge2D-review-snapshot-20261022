@@ -1,0 +1,30 @@
+{
+ "at": "2026-10-12T14:46:30Z",
+ "decision": "SELECTED: keys-route (klein per-actor keys + upstream crop/stitch + stage-2 propagation). VACE 1.3B = NOT_SELECTED as primary engine for the pilot.",
+ "criteria_order": [
+  "identity",
+  "pose",
+  "contact",
+  "then speed/resource"
+ ],
+ "evidence": {
+  "S0073_window_1_81": {
+   "vace_base": "reskin E6 clear (hair/face/outfit changed), layout/pose/book kept; wall 151.4s",
+   "vace_perturb_B01_ref": "E6 appearance changed again with the swapped ref -> REF BINDING PROVEN (target changes, neighbors/props unchanged)",
+   "keys_route": "reskin applied; rim/pose residuals on some fids (repair queue) but identity change stronger",
+   "verdict": "VACE good on S73 (single-role window)"
+  },
+  "S0062_window_32_112": {
+   "vace_base": "pose/layout kept; E6 area untouched; multi-role identity weak (E1 reskin incomplete); earlier note: E1 face artifacts f72+ in first read",
+   "keys_route": "E1/E2 reskinned (identity strong); artifacts moderate (moderate face stretch), no severe class",
+   "verdict": "KEYS stronger identity; VACE weaker identity on multi-role windows"
+  }
+ },
+ "not_selected_reason_vace": "Multi-role window S62: identity reskin incomplete/weak (goal = visible identity change); minor face artifacts near window end. Kept as REGISTERED ALTERNATIVE for windows where keys-route repeatedly fails pose/contact (evidence retained: 3 runs, receipts R6_VACE_RUNS.jsonl, graphs with TrimVideoLatent contract, actual-ref perturb proof).",
+ "sheets": [
+  "evidence/R6d_S5_S73_src_vs_vace_vs_perturb.png",
+  "evidence/R6d_S5_S62_src_vs_vace_vs_keys.png"
+ ],
+ "trim_contract": "TrimVideoLatent(samples=KSampler, trim_amount=WanVaceToVideo.output3) -> VAEDecode (no decoded-frame cutting)",
+ "note": "VRAM peaks recorded client-side = 0; server-side sampler needed next VACE use (documented limitation)"
+}

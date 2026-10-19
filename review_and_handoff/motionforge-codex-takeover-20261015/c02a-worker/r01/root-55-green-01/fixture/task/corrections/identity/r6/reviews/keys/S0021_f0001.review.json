@@ -1,0 +1,22 @@
+{
+ "review_id": "keys:S0021_f0001",
+ "reviewer": "root-independent",
+ "reviewed_at": "2026-10-16T07:19:26Z",
+ "artifact": {
+  "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02a-worker\\r01\\root-55-green-01\\fixture\\task\\corrections\\identity\\r6\\keys\\S0021\\f_0001_key.png",
+  "sha256": "3ae0d00d770c87e233f8d0f7e660a485eedc72e4ce9a12c9d07fbf669205bbec"
+ },
+ "inputs": {
+  "ledger_row_sha": "9f7b537ad06af9a5c39d5b9414ce8b0b598f622fffe869f6617cce6baeabaf42",
+  "deps_sha": "d3feec426c7d382051dd5f3c2dbce8a41ce211a143342ba5fd1178fcc2e6f46e"
+ },
+ "expected": {
+  "shot": "S0021",
+  "fid": 1
+ },
+ "frames": [
+  1
+ ],
+ "verdict": "PASS",
+ "evidence": "isolated dependency integrity fixture"
+}

@@ -1,0 +1,46 @@
+{
+  "utc": "2026-10-16T07:31:03.5005066Z",
+  "task": "CODEX-C02B1-STAGED-SOURCE-FRESHNESS",
+  "owner": "/root/motionforge_c02b1_coder",
+  "model": "gpt-6-sol/max/no fallback",
+  "intent": "Replace nonempty-only staged reuse with versioned exact provenance",
+  "allowlist": [
+    "R6/scripts/r6_common.py related helper/imports",
+    "R6/tests/test_codex_c02b1_staged_source.py",
+    "OUT/c02b1-worker/**"
+  ],
+  "files": [
+    {
+      "sha": "17bf5799c445a6f7133c61d53b9d5c41083307add1d7b6a50acdf83c294c15e3",
+      "path": "r6_common.py"
+    },
+    {
+      "sha": "26bd90e5137da23aafdab7989c596f35949b9509c5364273478d4d4df76d93a2",
+      "path": "test_codex_c02b1_staged_source.py"
+    }
+  ],
+  "commands": [
+    {
+      "result": "2/7, stale cache reproduced",
+      "name": "baseline_root_probe",
+      "exit": 1
+    },
+    {
+      "result": "same-path same-size source mutation returned old FRAME-SOURCE-A output",
+      "name": "red_unittest",
+      "exit": 1
+    }
+  ],
+  "decisions": [
+    "sidecar strict typed versioned identity",
+    "unique sibling temp extraction; pending marker before output publish"
+  ],
+  "remaining": [
+    "bounded common patch",
+    "extend finite matrix and real FFmpeg fixture",
+    "full affected tests and self-review",
+    "freeze candidate"
+  ],
+  "next_command": "Apply bounded r6_common.py import/helper/stage_frame patches",
+  "live_jobs": []
+}

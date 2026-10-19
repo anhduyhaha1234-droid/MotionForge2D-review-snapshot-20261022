@@ -1,0 +1,13 @@
+{
+ "review_id": "keys:minimal",
+ "reviewer": "",
+ "reviewed_at": "2026-10-14T03:52:11Z",
+ "artifact": {
+  "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-r6-checkpoint-review-20261014\\fresh_probes_second\\white.png",
+  "sha256": "d0953ebbb4a39871d61a377e22a1e0d96bb6044e3f6379f81ab340de4979f932"
+ },
+ "inputs": {},
+ "expected": {},
+ "verdict": "PASS",
+ "evidence": "unverified synthetic empty review"
+}

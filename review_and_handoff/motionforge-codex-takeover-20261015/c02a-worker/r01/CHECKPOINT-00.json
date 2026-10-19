@@ -1,0 +1,22 @@
+{
+  "task": "CODEX-C02A-DEPENDENCY-VERIFICATION",
+  "finding": "C02A-R01",
+  "owner": "/root/motionforge_c02a_coder",
+  "model": "gpt-6-sol",
+  "reasoning": "max",
+  "status": "CORRECTION_RUNNING",
+  "scope": [
+    "R6/scripts/r6_cache.py",
+    "R6/tests/test_codex_c02a_dependency_verification.py",
+    "OUT/c02a-worker/r01/**"
+  ],
+  "rules": "entire canonical HERMES_AUTOPILOT_RULES.md reread",
+  "candidate01": "frozen",
+  "preimages": "four byte-matching snapshots under r01/preimages",
+  "source_hash": "946935906625d79b95153a92d4cf86310551cfbc4533a3661f2011854aeae7a7",
+  "test_hash": "403e45568fddeda038b3f10a62cf3b311764d1e91e7a5f9ef9ca3fbf78877899",
+  "decision": "bounded nesting validation through settings and full record; preserve consumer wiring",
+  "tests": "not yet run this correction",
+  "next": "capture red reproduction; add finite regression matrix; patch cache; run focused and full affected tests",
+  "live_jobs": []
+}

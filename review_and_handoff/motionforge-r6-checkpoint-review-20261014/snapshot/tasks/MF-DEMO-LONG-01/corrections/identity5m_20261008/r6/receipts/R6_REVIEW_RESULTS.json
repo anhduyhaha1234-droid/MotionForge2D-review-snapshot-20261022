@@ -1,0 +1,209 @@
+{
+ "at": "2026-10-12T13:45:34Z",
+ "method": "vision sheets 8-12 keys/shot (evenly sampled incl. boundaries), per-key verdicts; artefacts bound to keys/ dir state at review time",
+ "shots": {
+  "S0021": {
+   "fails": [
+    46,
+    51,
+    61,
+    96
+   ],
+   "notes": "E4 mask was wall-blob (35k px) - fixed in fix-chain (reseed); keys regen done 13:11Z; RE-REVIEW needed"
+  },
+  "S0022": {
+   "fails": [],
+   "notes": "structurally OK; E2 hair reads copper-brown = B02 design (expected reskin), not an error"
+  },
+  "S0023": {
+   "fails": [],
+   "notes": "halo rows f31/41/81/91/101/121/123 flagged cosmetic (repair queue)"
+  },
+  "S0024": {
+   "fails": [],
+   "notes": "prop continuity (orange bottle appears f31 source-driven)"
+  },
+  "S0025": {
+   "fails": [
+    121,
+    125
+   ],
+   "notes": "f121 dark-torso artifact; f125 profile turn / face deformed (pose-drift at shot end)"
+  },
+  "S0026": {
+   "fails": [
+    51
+   ],
+   "notes": "f51 headset artifact added; f31/f61 outfit color drift (minor)"
+  },
+  "S0027": {
+   "fails": [
+    11,
+    31,
+    91,
+    101,
+    121,
+    151,
+    159
+   ],
+   "notes": "giant-face frames from E2 wall-blob mask - fixed in fix-chain; keys regen done 13:16Z; RE-REVIEW needed"
+  },
+  "S0028": {
+   "fails": [
+    121,
+    141,
+    143
+   ],
+   "notes": "extra-person/garbage from E4+E5 wall-blob masks - fixed in fix-chain; keys regen done 13:19Z; RE-REVIEW needed"
+  },
+  "S0029": {
+   "fails": [],
+   "notes": "outfit change = B07 reskin (expected); suspect head-detach + phone-at-ear unclear at low res - spot-check queue"
+  },
+  "S0030": {
+   "fails": [
+    51
+   ],
+   "notes": "f51 face distort; outfit color blue vs B04 lavender - reskin color note"
+  },
+  "S0031": {
+   "fails": [
+    61,
+    139,
+    171,
+    191,
+    221,
+    251,
+    291,
+    313
+   ],
+   "notes": "E2 lost from f139+ (E2 wall-strip mask, reseeded f60 in fix-chain); keys regen IN PROGRESS 13:27Z; RE-REVIEW needed"
+  },
+  "S0033": {
+   "fails": [],
+   "notes": "clean (11/11 sampled OK)"
+  },
+  "S0034": {
+   "fails": [
+    41
+   ],
+   "notes": "f41 phone/pose suspect; phone color change mid-shot (minor)"
+  },
+  "S0036": {
+   "fails": [],
+   "notes": "clean"
+  },
+  "S0038": {
+   "fails": [],
+   "notes": "clean"
+  },
+  "S0039": {
+   "fails": [
+    31,
+    61
+   ],
+   "notes": "torso dark-color flicker at f31/f61"
+  },
+  "S0041": {
+   "fails": [],
+   "notes": "f123+ E2 absent in KEY while ledger says visible - UNKNOWN: source-verify (E2 may exit; if source has him, our edit lost him) -> BLOCK for those fids until checked"
+  },
+  "S0044": {
+   "fails": [],
+   "notes": "clean; outfit drift notes only"
+  },
+  "S0046": {
+   "fails": [],
+   "notes": "clean (static)"
+  },
+  "S0048": {
+   "fails": [
+    21,
+    31
+   ],
+   "notes": "hair ghosting/mottling right-character f21/f31"
+  },
+  "S0051": {
+   "fails": [],
+   "notes": "clean"
+  },
+  "S0053": {
+   "fails": [],
+   "notes": "clean"
+  },
+  "S0055": {
+   "fails": [
+    71,
+    111,
+    221,
+    361,
+    397
+   ],
+   "notes": "pose standing vs seated + missing props (folder/chair/table) at listed fids; f361 face changed"
+  },
+  "S0056": {
+   "fails": [
+    11,
+    31
+   ],
+   "notes": "f11 outfit color jump; f31 seated-too-low suspect"
+  },
+  "S0057": {
+   "fails": [],
+   "notes": "head E1+E2 kept till ~f91, tail clean - reskin real, PASS"
+  },
+  "S0062": {
+   "fails": [
+    33
+   ],
+   "notes": "f33 entrant looks like white-shirt businessman + missing E2; verify vs source crop at entry"
+  },
+  "S0063": {
+   "fails": [
+    1,
+    3,
+    21,
+    28
+   ],
+   "notes": "f1 right-char wrong design (silver/tie); f3/f28 left E6 replaced by male; f21 E1 back-turned"
+  },
+  "S0064": {
+   "fails": [],
+   "notes": "OLD keys: E2 only wisps; E2 wall-mask fixed in fix-chain (reseed); keys regen PENDING -> RE-REVIEW"
+  },
+  "S0068": {
+   "fails": [
+    11,
+    21,
+    31,
+    36
+   ],
+   "notes": "f21 E1 face swapped (severe); f11/f36 outfit missing vest/tie; f31 chair color change"
+  },
+  "S0069": {
+   "fails": [],
+   "notes": "PENDING review (vision throttled at close of invocation) -> R6d"
+  },
+  "S0070": {
+   "fails": [],
+   "notes": "PENDING review -> R6d"
+  },
+  "S0071": {
+   "fails": [],
+   "notes": "PENDING review -> R6d"
+  },
+  "S0072": {
+   "fails": [],
+   "notes": "PENDING review -> R6d"
+  },
+  "S0073": {
+   "fails": [],
+   "notes": "PENDING review -> R6d"
+  },
+  "S0067": {
+   "fails": [],
+   "notes": "PENDING review -> R6d"
+  }
+ },
+ "repair_queue_summary": "Concentrated causes: (1) wall-blob masks E4/E5/E2 (S21/27/28/31/44/64) -> reseeded + regen IN FLIGHT; (2) pose-turn/face-distort single keys (S25/S30/S34/S48/S55/S68/S63); (3) outfit continuity flickers (S26/S39/S55/S56/S68); (4) S41 E2 presence f123+ UNKNOWN source-check; (5) halos S23 cosmetic."
+}

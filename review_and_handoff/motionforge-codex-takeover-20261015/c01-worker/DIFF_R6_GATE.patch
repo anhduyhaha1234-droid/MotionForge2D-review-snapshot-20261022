@@ -1,0 +1,185 @@
+diff --git "a/C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\preimages\\r6_gate.py" "b/C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_gate.py"
+index b4d6b3d..49bee26 100644
+--- "a/C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\preimages\\r6_gate.py"
++++ "b/C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_gate.py"
+@@ -8,7 +8,8 @@ Gate(kind_path): review exists AND artifact sha matches now AND input lineage ma
+ No file-count / existence-only / correlation substitute.
+ """
+ from __future__ import annotations
+-import hashlib, json, time
++import hashlib, json, math, re, time
++from datetime import datetime
+ from pathlib import Path
+ import sys
+ sys.path.insert(0, str(Path(__file__).resolve().parent))
+@@ -46,44 +47,154 @@ def write_review(kind: str, name: str, artifact: Path, inputs: dict, expected: d
+ 
+ def load_review(kind: str, name: str):
+     p = REV / kind / f"{name}.review.json"
+-    if not p.exists():
++    try:
++        def unique_keys(pairs):
++            record = {}
++            for key, value in pairs:
++                if key in record:
++                    raise ValueError(f"duplicate field {key}")
++                record[key] = value
++            return record
++
++        def reject_constant(value):
++            raise ValueError(f"non-JSON constant {value}")
++
++        return json.loads(p.read_text(encoding="utf-8"), object_pairs_hook=unique_keys,
++                          parse_constant=reject_constant)
++    except FileNotFoundError:
+         return None
+-    return json.loads(p.read_text(encoding="utf-8"))
++    except (OSError, UnicodeError, ValueError) as exc:
++        raise GateBlock(f"SEMANTIC_REVIEW_MALFORMED {kind}:{name}: {exc}") from exc
+ 
+ 
+ class GateBlock(Exception):
+     pass
+ 
+ 
++def _nonempty_text(value):
++    return type(value) is str and bool(value.strip())
++
++
++def _binding_value(value):
++    """Accept complete JSON dependency values without Python's bool/int equality alias."""
++    if type(value) is str:
++        return bool(value.strip())
++    if type(value) is int:
++        return True
++    if type(value) is float:
++        return math.isfinite(value)
++    if type(value) is list:
++        return bool(value) and all(_binding_value(v) for v in value)
++    if type(value) is dict:
++        return bool(value) and all(_nonempty_text(k) and _binding_value(v) for k, v in value.items())
++    return False
++
++
++def _valid_inputs(inputs):
++    if type(inputs) is not dict or not inputs:
++        return False
++    for key, value in inputs.items():
++        if not _nonempty_text(key) or not _binding_value(value):
++            return False
++        if key.endswith(("_sha", "_sha256")) and (
++            type(value) is not str or not re.fullmatch(r"[0-9a-fA-F]{64}", value)
++        ):
++            return False
++    return True
++
++
+ def require_review(kind: str, name: str, artifact: Path, inputs_now: dict):
+     """Block unless a PASS review exists that binds this exact artifact + current inputs.
+ 
+-    F02: mandatory review fields — inputs/expected/reviewer/evidence/frames must all be present
+-    and non-empty; an empty binding ({}) may never be accepted.
++    F02: review identity, artifact path+bytes and the entire typed dependency map
++    must match the consumer; a subset binding cannot authorize assembly.
+     """
+     r = load_review(kind, name)
+     if r is None:
+         raise GateBlock(f"SEMANTIC_REVIEW_ABSENT {kind}:{name}")
+-    if not str(r.get("reviewer") or "").strip():
++    if type(r) is not dict:
++        raise GateBlock(f"SEMANTIC_REVIEW_MALFORMED {kind}:{name}: record is not an object")
++    if r.get("review_id") != f"{kind}:{name}" or type(r.get("review_id")) is not str:
++        raise GateBlock(f"SEMANTIC_REVIEW_IDENTITY_MISMATCH {kind}:{name}")
++    if r.get("reviewer") is None or r.get("reviewer") == "":
+         raise GateBlock(f"SEMANTIC_REVIEW_REVIEWER_MISSING {kind}:{name}")
+-    if not str(r.get("evidence") or "").strip():
++    if not _nonempty_text(r["reviewer"]):
++        raise GateBlock(f"SEMANTIC_REVIEW_MALFORMED {kind}:{name}: reviewer")
++    if r.get("evidence") is None or r.get("evidence") == "":
+         raise GateBlock(f"SEMANTIC_REVIEW_EVIDENCE_MISSING {kind}:{name}")
+-    if not isinstance(r.get("inputs"), dict) or not r["inputs"]:
++    if not _nonempty_text(r["evidence"]):
++        raise GateBlock(f"SEMANTIC_REVIEW_MALFORMED {kind}:{name}: evidence")
++    if not _nonempty_text(r.get("reviewed_at")):
++        raise GateBlock(f"SEMANTIC_REVIEW_MALFORMED {kind}:{name}: reviewed_at")
++    try:
++        datetime.strptime(r["reviewed_at"], "%Y-%m-%dT%H:%M:%SZ")
++    except ValueError as exc:
++        raise GateBlock(f"SEMANTIC_REVIEW_MALFORMED {kind}:{name}: reviewed_at") from exc
++    if type(r.get("inputs")) is dict and not r["inputs"]:
+         raise GateBlock(f"SEMANTIC_REVIEW_INPUTS_EMPTY {kind}:{name}")
+-    if not isinstance(r.get("expected"), dict) or not r["expected"]:
++    if not _valid_inputs(r.get("inputs")) or not _valid_inputs(inputs_now):
++        raise GateBlock(f"SEMANTIC_REVIEW_INPUTS_MALFORMED {kind}:{name}")
++    expected = r.get("expected")
++    if type(expected) is dict and not expected:
+         raise GateBlock(f"SEMANTIC_REVIEW_EXPECTED_EMPTY {kind}:{name}")
++    if type(expected) is not dict or not expected or any(not _nonempty_text(k) for k in expected):
++        raise GateBlock(f"SEMANTIC_REVIEW_MALFORMED {kind}:{name}: expected")
++    if "shot" in expected and not _nonempty_text(expected["shot"]):
++        raise GateBlock(f"SEMANTIC_REVIEW_MALFORMED {kind}:{name}: expected.shot")
++    for field in ("fid", "frames"):
++        if field in expected and (type(expected[field]) is not int or expected[field] < 1):
++            raise GateBlock(f"SEMANTIC_REVIEW_MALFORMED {kind}:{name}: expected.{field}")
+     frames = r.get("frames")
+-    if not isinstance(frames, list) or not frames:
++    if type(frames) is list and not frames:
+         raise GateBlock(f"SEMANTIC_REVIEW_FRAMES_MISSING {kind}:{name}")
+-    if r["verdict"] != "PASS":
++    if type(frames) is not list or not frames or any(type(f) is not int or f < 1 for f in frames):
++        raise GateBlock(f"SEMANTIC_REVIEW_MALFORMED {kind}:{name}: frames")
++    if len(set(frames)) != len(frames):
++        raise GateBlock(f"SEMANTIC_REVIEW_MALFORMED {kind}:{name}: duplicate frames")
++    key_name = re.fullmatch(r"(S\d+)_f(\d+)", name) if kind == "keys" else None
++    blend_name = re.fullmatch(r"(S\d+)_blend", name) if kind == "blend" else None
++    if key_name:
++        fid = int(key_name.group(2))
++        if expected.get("shot") != key_name.group(1) or expected.get("fid") != fid:
++            raise GateBlock(f"SEMANTIC_REVIEW_IDENTITY_MISMATCH {kind}:{name}: expected")
++        if frames != [fid]:
++            raise GateBlock(f"SEMANTIC_REVIEW_FRAME_IDENTITY_MISMATCH {kind}:{name}")
++    if blend_name:
++        if expected.get("shot") != blend_name.group(1) or expected.get("frames") != len(frames):
++            raise GateBlock(f"SEMANTIC_REVIEW_IDENTITY_MISMATCH {kind}:{name}: expected")
++        if frames != list(range(1, len(frames) + 1)):
++            raise GateBlock(f"SEMANTIC_REVIEW_FRAME_IDENTITY_MISMATCH {kind}:{name}")
++    verdict = r.get("verdict")
++    if not _nonempty_text(verdict):
++        raise GateBlock(f"SEMANTIC_REVIEW_MALFORMED {kind}:{name}: verdict")
++    if verdict != "PASS":
+         raise GateBlock(f"SEMANTIC_REVIEW_{r['verdict']} {kind}:{name}")
+-    if r["artifact"]["sha256"] != K.sha(artifact):
++    reviewed_artifact = r.get("artifact")
++    if type(reviewed_artifact) is not dict or not _nonempty_text(reviewed_artifact.get("path")):
++        raise GateBlock(f"SEMANTIC_REVIEW_MALFORMED {kind}:{name}: artifact.path")
++    reviewed_sha = reviewed_artifact.get("sha256")
++    if type(reviewed_sha) is not str or not re.fullmatch(r"[0-9a-fA-F]{64}", reviewed_sha):
++        raise GateBlock(f"SEMANTIC_REVIEW_MALFORMED {kind}:{name}: artifact.sha256")
++    try:
++        current_path = Path(artifact).resolve(strict=True)
++        review_path = Path(reviewed_artifact["path"])
++        if not review_path.is_absolute() or review_path.resolve(strict=True) != current_path:
++            raise GateBlock(f"SEMANTIC_REVIEW_ARTIFACT_PATH_MISMATCH {kind}:{name}")
++        current_sha = K.sha(current_path)
++    except (OSError, TypeError, ValueError) as exc:
++        raise GateBlock(f"SEMANTIC_REVIEW_ARTIFACT_PATH_MISMATCH {kind}:{name}: {exc}") from exc
++    if reviewed_sha.lower() != current_sha.lower():
+         raise GateBlock(f"SEMANTIC_REVIEW_TAMPERED artifact hash mismatch {kind}:{name}")
+-    for k, v in r["inputs"].items():
+-        if k not in inputs_now:
+-            raise GateBlock(f"SEMANTIC_REVIEW_INPUT_MISSING {k} {kind}:{name}")
+-        if inputs_now[k] != v:
+-            raise GateBlock(f"SEMANTIC_REVIEW_STALE input {k} changed {kind}:{name}")
++    recorded_keys, current_keys = set(r["inputs"]), set(inputs_now)
++    if recorded_keys != current_keys:
++        raise GateBlock(f"SEMANTIC_REVIEW_INPUT_SET_MISMATCH {kind}:{name}: "
++                        f"unrecorded={sorted(current_keys - recorded_keys)} "
++                        f"no_longer_current={sorted(recorded_keys - current_keys)}")
++    for key in sorted(current_keys):
++        recorded = json.dumps(r["inputs"][key], sort_keys=True, separators=(",", ":"), allow_nan=False)
++        current = json.dumps(inputs_now[key], sort_keys=True, separators=(",", ":"), allow_nan=False)
++        if recorded != current:
++            raise GateBlock(f"SEMANTIC_REVIEW_STALE input {key} changed {kind}:{name}")
+     return r
+ 
+ 

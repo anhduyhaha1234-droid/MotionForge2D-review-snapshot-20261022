@@ -1,0 +1,28 @@
+# S10 C3 Reality-Correction Reliability Ledger (verified 2026-08-29)
+
+Worktree `s08-integration` HEAD `d3f6f79`, J1-v4 13/13, BUILD_ID `UoAHhbO6..`, DAG `T03-C3 -> J1 -> T04A-C3 -> J2 -> T01C-C5-static -> J3 -> T04C-C2 -> EXIT`, manager route `--provider custom -m meta` (Meta-max, TTFB 900).
+
+## 1. Model routing — probe before dispatch
+- Bare `deepseek-v4-flash` -> 9Router `kv[deepseek-v4-flash]=cmc -> OpenRouter` 402 `71410>60990`, `64350>58353`, `in_flight_budget_exhausted` (manager 215k in-flight + worker prefill). `ocg/deepseek-v4-flash -> ocg -> opencode-go` (3 keys, 1945 success) pongs; `ocg/muse-spark` via `muse/opencode` 404 `No active credentials for opencode-go`; `meta` via `custom` -> combo `cmc/meta + ocg/muse-spark` pongs — correct Meta-max is `--provider custom -m meta`.
+- Rule: `HERMES_CODEX_TTFB_TIMEOUT_SECONDS=900 hermes --provider custom -m <id> -z "ping" --yolo` must pong before every dispatch. Log exact pair in `S10-SESSION_REGISTRY.md` as `USER MODEL OVERRIDE C2-vX: <provider/model>`. Tiny ping pong does not prove 60k prefill will pass, but wrong-route 402 is deterministic.
+
+## 2. Transient wrapper = infinite same-session retry
+- Signatures: `dispatch.log 90B [CommandCode error server_error Network connection lost] EXIT=0` (T03/T04A) or `7B EXIT=1` (T04C) with no worker stdout. Not a verdict.
+- Rules §7: `RUNNING_RETRY_WAIT`, wait 5 min, resume EXACT owner with identical prompt and route unbounded. Never poll densely (in-flight contention), never `killall python`, never broad kill — only `process(action='kill', session_id=...)` after launch-record + cmdline/port/log ownership proof. Record `*-r2.log` etc.
+
+## 3. Dispatch quoting trap
+- `hermes --resume <id> -z "multi-line with \"quotes\""` -> `bash: unexpected EOF while looking for matching "'"`. Fix: write `output/s10/c3/<task>/prompt*.txt` then `-z "$(cat output/.../prompt*.txt)"`. Verified fix for T04A-C3 R3 after R2 quoting EXIT 2.
+
+## 4. T03 recompute — real renderer + Windows path budget
+- P0 fabric `app/services/s10_recompute.py:637-696`: `hash(correction)->numpy.zeros(64,64,3)` BGR + `route/effective_adapter = correction_kind` (no adapter call) replaced by calling corrected T02 executor `S10MultiRoleService.execute_role_chunk` (pattern `s10_full_apply_jobs.py:560 _render_chunk_via_real_executor`) with pinned source identity/hash (`_load_source_media`), pack/version, asset identities (`_load_replacement_asset`), role/layer/shot/range, dep/contact/z_order/visibility (`RoleMapping deps/contact_anchor/z_order/affected_region`), route authority (`_authoritative_mapping_by_layer`) and correction provenance. `route`/`effective_adapter` must equal renderer return (`SpriteAffineAdapter/sprite_affine`), `correction_kind` stays provenance. Perturbed `affected_region` delta `(corr_hash%7)*0.005` proves bytes change deterministically via real adapter.
+- P1 path `FileNotFoundError at :695` for `*.mp4.evidence.json.staging` is path-length on nested `C:/…/Temp/s10c3-…/a*20/b*20/deep_root`, not missing mkdir. Fix: `_base_dir_rel=s10_recompute/{run8}/{corr8}` (`sha256(run)[:8]`, <30 chars), artifact `c_{idx:04d}.mp4`, evidence via `ManagedRoot.atomic_write_bytes(evidence_rel, _ev_bytes)` same-dir random staging fsync+verify, stitch `s10_recompute/{_run_s}/{_corr_s}/full_{hash}.mp4`. Never shorten reviewer root or drop sidecar. Instrumented tests: `test_c3_affected_adapter_invocation_and_evidence` (patch count + exact identities), `test_c3_decodable_media_and_atomic_evidence` (range/timebase 30/1, SHA/size, in-root atomic no orphan), `test_c3_nested_windows_root_path_budget` (rel<80 ev_rel<100 abs<260), `test_c3_no_fabric_sources` (grep 0).
+
+## 5. T04A structural gate — fail closed
+- Defects `app/api/routes/s10_full_apply.py:1086-1106` even-spacing/sentinel, `1175-1191` fixed arrays `[0.05,0.1,0.08]`/`[0.3,0.5,0.4]`/`[0.2,0.4,0.3]`/`[0.05,0.08,0.06]` on both `_has_motion` branches, `1193-1209` `0/0/False` on missing z/vis/clip, `1227-1241` midpoint `//2` + `shot_a` annotations, `chunk-derived` hash.
+- Fix: source cuts ONLY from persisted `segments start_frame>0` boundaries (`[50]` for 2 shots, not `frame_count`), `StructuralLockManifest` `allowed_keys` forbids `cut_frames`; metrics/z/vis/clip `None` fail-closed when `_has_motion/_has_z_rows/_has_segments` absent with `measurement_source=motion-measured|unsupported-no-motion`; annotations `None` when any authority missing (delete `shot_a`/midpoint). Motion JOIN must be `JOIN occurrence_segment ON sm.occurrence_segment_id=os.id WHERE sm.workspace_id=:ws AND os.video_item_id=:vid` (`segment_motion` has no `video_item_id`). `segment_motion` NOT NULL `transform_json='{}'` + `point_track_flow_ref_json='{}'` required or `except: pass` swallows `IntegrityError` and forces `BLOCKED` (R2 38/41 -> R3 41/41). Seeds need `workspace_id`, `object_relative` (not `translate`), `logical_id`/`reasons_json`, real FKs.
+
+## 6. J-gate never trusts worker counts
+- After `TASK_SUBMITTED`, manager re-runs `MOTIONFORGE_DATABASE_URL="" python -m pytest <focused> -q -p no:cacheprovider --override-ini="addopts=" --basetemp="C:/…/Temp/s10c3-j<k>a"` x2 plus `J1-v4 13/13` sha256 re-hash, `ruff --select F` green, exact 9-file `mypy --ignore-missing-imports` green, `git diff --check` 0, `git status` allowlist. Stale `BUILD_ID g3s0EKH…` vs current `UoAHhbO6…` is drift.
+
+## 7. Heartbeat ETA
+- On `có đang chạy ko`/`bao lâu thì xong`/`estimate`/`essti`/`bao h xong` answer lead-with-status (owner+route+phase) + table `anchor: YYYY-MM-DD HH:MM +07` with per-gate ETA; update `S10-SESSION_REGISTRY.md` append-only after every dispatch/exit/gate.

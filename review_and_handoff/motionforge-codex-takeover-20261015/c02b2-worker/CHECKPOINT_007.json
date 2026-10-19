@@ -1,0 +1,47 @@
+{
+  "baseline": "unchanged reviewed replay reproduced, +1 generation, exit1, c02b2-worker/baseline-repro-01/RESULT.json",
+  "decisions": [
+    "v3 retained for recorded validation but denied complete skip",
+    "read-only effective recipe binds ledger/storyboard/template/code",
+    "v4 captures staged source receipt, all selected masks, per-generated refs/crop/edit/graph"
+  ],
+  "remaining": [
+    "fixture extension",
+    "new finite matrix",
+    "affected tests",
+    "self-review and freeze"
+  ],
+  "live_jobs": [],
+  "model": "gpt-6-sol/max/no-fallback",
+  "next": "extend worker-owned root probe fixture then run producer replay",
+  "tests": [
+    "AST parse cache/keygen/helper exit0; no runtime tests yet"
+  ],
+  "owner": "/root/motionforge_c02b2_coder",
+  "task": "CODEX-C02B2-PER-ACTOR-VERIFIED-REUSE",
+  "phase": "producer emits v4 candidate; first integration test pending",
+  "files": [
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py",
+      "sha256": "3aa55ae2cc273d35a73a6df94cd41586226326a00a5228c927a7492c1711105e",
+      "bytes": 23831,
+      "lines": 442
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_keygen.py",
+      "sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+      "bytes": 9004,
+      "lines": 180
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_key_recipe.py",
+      "sha256": "e18fc9d20de1cbf2a3a8f7da2e68fc99c59260701bfbd3dca75106a7cbe8e2bd",
+      "bytes": 6361,
+      "lines": 138
+    },
+    {
+      "state": "not yet created",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c02b2_per_actor_reuse.py"
+    }
+  ]
+}

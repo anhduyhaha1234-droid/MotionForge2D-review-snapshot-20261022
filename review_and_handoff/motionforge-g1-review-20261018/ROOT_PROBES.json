@@ -1,0 +1,111 @@
+{
+  "at_utc": "2026-10-18T04:21:30.723682+00:00",
+  "probes": [
+    {
+      "probe": "cotracker_cli_help",
+      "expected": "exit 0, usage",
+      "actual": {
+        "exit": 1,
+        "stderr": "NameError: name 'argparse' is not defined"
+      }
+    },
+    {
+      "probe": "matrix_empty_artifacts",
+      "expected": "no PASS from empty image/json/test/mp4",
+      "actual": {
+        "Q01": "PASS",
+        "Q05": "PASS",
+        "Q07": "PASS",
+        "Q08": "PASS"
+      }
+    },
+    {
+      "probe": "manifest_work_parent",
+      "expected": "includes ordinary file outside R6/work",
+      "actual": {
+        "at": "2026-10-18T04:21:25Z",
+        "count": 0,
+        "items": []
+      }
+    },
+    {
+      "probe": "unknown_gate_mode",
+      "expected": "GateBlock",
+      "actual": true
+    },
+    {
+      "probe": "final_gate_no_artifacts",
+      "expected": "GateBlock for missing evidence/artifacts",
+      "actual": true
+    },
+    {
+      "probe": "tracker_empty_tensors",
+      "expected": "reject empty T/N",
+      "actual": [
+        true,
+        "ok"
+      ]
+    },
+    {
+      "probe": "tracker_nonfinite_visibility",
+      "expected": "reject nonfinite visibility",
+      "actual": [
+        true,
+        "ok"
+      ]
+    },
+    {
+      "probe": "tracker_invalid_visibility_range",
+      "expected": "reject visibility=9",
+      "actual": [
+        true,
+        "ok"
+      ]
+    },
+    {
+      "probe": "entry_exit_occlusion_release_keys",
+      "expected": "include visibility transitions at 20/50 and contact-end boundary",
+      "actual": [
+        10,
+        30
+      ]
+    },
+    {
+      "probe": "asset_valid_control",
+      "expected": "accept genuine fixture deps",
+      "actual": [
+        true,
+        "ok"
+      ]
+    },
+    {
+      "probe": "asset_missing_consumed_grey",
+      "expected": "reject missing consumed R1/R2 ref",
+      "actual": [
+        true,
+        "ok"
+      ]
+    },
+    {
+      "probe": "asset_graph_sampler_differs_recipe",
+      "expected": "reject graph heun vs recipe euler",
+      "actual": {
+        "recipe": "euler",
+        "graph": "heun",
+        "verifier": [
+          true,
+          "ok"
+        ]
+      }
+    },
+    {
+      "probe": "propagate_cli_child_failure",
+      "expected": "parent nonzero exit and durable failure receipt",
+      "actual": {
+        "exit": 0,
+        "stdout": "BLOCK S0021: PROPAGATE BLOCK [S0021] run 0 rc=2\nROOT_PROBE_PARENT_RETURNED_NORMALLY\n",
+        "stderr": ""
+      }
+    }
+  ]
+}

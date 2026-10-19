@@ -1,0 +1,45 @@
+{
+  "utc": "2026-10-16T07:33:42.0650256Z",
+  "task": "CODEX-C02B1-STAGED-SOURCE-FRESHNESS",
+  "owner": "/root/motionforge_c02b1_coder",
+  "model": "gpt-6-sol/max/no fallback",
+  "intent": "Complete S4-S6 failure and real-FFmpeg evidence",
+  "allowlist": [
+    "R6/scripts/r6_common.py related helpers/imports",
+    "R6/tests/test_codex_c02b1_staged_source.py",
+    "OUT/c02b1-worker/**"
+  ],
+  "files": [
+    {
+      "path": "r6_common.py",
+      "sha": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc",
+      "lines": 241,
+      "bytes": 10578
+    },
+    {
+      "path": "test_codex_c02b1_staged_source.py",
+      "sha": "d65af3b173136b319ea0ecd586101f88c347e003f8ff156e138ad8107c6ddefa",
+      "lines": 149,
+      "bytes": 6688
+    }
+  ],
+  "commands": [
+    {
+      "name": "unittest_s1_s3",
+      "exit": 0,
+      "result": "5 tests, all pass; malformed receipt variants verified"
+    }
+  ],
+  "decisions": [
+    "Copied receipts, source path/bytes/frame/output mutations all force extraction",
+    "Strict parser rejects duplicate/deep/oversized/type-invalid/incomplete records"
+  ],
+  "remaining": [
+    "S4-S5 failure and publication tests",
+    "S6 real FFmpeg pixel test",
+    "root seven-case and C01+C02A full modules",
+    "self-review/freeze"
+  ],
+  "next_command": "Patch isolated test with S4/S5 cases",
+  "live_jobs": []
+}

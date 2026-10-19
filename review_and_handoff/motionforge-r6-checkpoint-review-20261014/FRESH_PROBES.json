@@ -1,0 +1,380 @@
+{
+  "empty_binding_review": {
+    "expected": "BLOCK required input/semantic fields absent",
+    "actual": "ACCEPTED",
+    "meaning": "Integrity bypass only; not a claim a machine can judge arbitrary image semantics."
+  },
+  "stale_nonempty_binding_control": {
+    "expected": "BLOCK",
+    "actual": "SEMANTIC_REVIEW_STALE input deps_sha changed keys:control"
+  },
+  "nine_stale_one_fresh": {
+    "expected": "BLOCK nine stale outputs",
+    "actual": {
+      "shot": "S0099",
+      "frames": 10,
+      "fresh": true
+    }
+  },
+  "actual_propagation_partial_refresh": {
+    "expected": "BLOCK stale prior outputs despite outer rc0",
+    "actual": "SystemExit: PROPAGATE BLOCK [S0098]: stale outputs (no writes during run)",
+    "runner": "synthetic failure injection; approved input-gate stub; no inference"
+  },
+  "event_reader_S0034": {
+    "actual_selected": [],
+    "actual_source_events": {
+      "events": [],
+      "contacts": [
+        {
+          "entity": "E8",
+          "prop": "P1",
+          "part": "hand_R",
+          "from": 0
+        }
+      ]
+    }
+  },
+  "event_reader_S0061": {
+    "actual_selected": [],
+    "actual_source_events": {
+      "events": [
+        {
+          "f": 0,
+          "event": "car arrives",
+          "src_frame": 10036
+        },
+        {
+          "f": 104,
+          "event": "E1+E2 exit and walk to bank",
+          "src_frame": 10140
+        }
+      ],
+      "contacts": []
+    }
+  },
+  "event_reader_S0073": {
+    "actual_selected": [],
+    "actual_source_events": {
+      "events": [],
+      "contacts": []
+    }
+  },
+  "keys_omitted_by_grid_staging": [
+    {
+      "shot": "S0021",
+      "off_grid_fids": [
+        42,
+        44,
+        46,
+        96
+      ]
+    },
+    {
+      "shot": "S0022",
+      "off_grid_fids": [
+        115
+      ]
+    },
+    {
+      "shot": "S0023",
+      "off_grid_fids": [
+        3,
+        123
+      ]
+    },
+    {
+      "shot": "S0024",
+      "off_grid_fids": [
+        3,
+        117
+      ]
+    },
+    {
+      "shot": "S0025",
+      "off_grid_fids": [
+        125
+      ]
+    },
+    {
+      "shot": "S0027",
+      "off_grid_fids": [
+        159
+      ]
+    },
+    {
+      "shot": "S0028",
+      "off_grid_fids": [
+        143
+      ]
+    },
+    {
+      "shot": "S0030",
+      "off_grid_fids": [
+        79
+      ]
+    },
+    {
+      "shot": "S0031",
+      "off_grid_fids": [
+        19,
+        23,
+        99,
+        103,
+        139,
+        143,
+        179,
+        183,
+        313
+      ]
+    },
+    {
+      "shot": "S0032",
+      "off_grid_fids": [
+        939
+      ]
+    },
+    {
+      "shot": "S0033",
+      "off_grid_fids": [
+        168
+      ]
+    },
+    {
+      "shot": "S0034",
+      "off_grid_fids": [
+        214
+      ]
+    },
+    {
+      "shot": "S0035",
+      "off_grid_fids": [
+        39
+      ]
+    },
+    {
+      "shot": "S0036",
+      "off_grid_fids": [
+        90
+      ]
+    },
+    {
+      "shot": "S0037",
+      "off_grid_fids": [
+        77
+      ]
+    },
+    {
+      "shot": "S0039",
+      "off_grid_fids": [
+        70
+      ]
+    },
+    {
+      "shot": "S0040",
+      "off_grid_fids": [
+        84
+      ]
+    },
+    {
+      "shot": "S0041",
+      "off_grid_fids": [
+        29,
+        33,
+        119,
+        123,
+        159,
+        163,
+        356
+      ]
+    },
+    {
+      "shot": "S0042",
+      "off_grid_fids": [
+        126
+      ]
+    },
+    {
+      "shot": "S0043",
+      "off_grid_fids": [
+        1078
+      ]
+    },
+    {
+      "shot": "S0044",
+      "off_grid_fids": [
+        76
+      ]
+    },
+    {
+      "shot": "S0045",
+      "off_grid_fids": [
+        57
+      ]
+    },
+    {
+      "shot": "S0046",
+      "off_grid_fids": [
+        77
+      ]
+    },
+    {
+      "shot": "S0047",
+      "off_grid_fids": [
+        79
+      ]
+    },
+    {
+      "shot": "S0048",
+      "off_grid_fids": [
+        34
+      ]
+    },
+    {
+      "shot": "S0049",
+      "off_grid_fids": [
+        347
+      ]
+    },
+    {
+      "shot": "S0050",
+      "off_grid_fids": [
+        115
+      ]
+    },
+    {
+      "shot": "S0051",
+      "off_grid_fids": [
+        84
+      ]
+    },
+    {
+      "shot": "S0052",
+      "off_grid_fids": [
+        100
+      ]
+    },
+    {
+      "shot": "S0053",
+      "off_grid_fids": [
+        203
+      ]
+    },
+    {
+      "shot": "S0055",
+      "off_grid_fids": [
+        397
+      ]
+    },
+    {
+      "shot": "S0056",
+      "off_grid_fids": [
+        83
+      ]
+    },
+    {
+      "shot": "S0057",
+      "off_grid_fids": [
+        235
+      ]
+    },
+    {
+      "shot": "S0058",
+      "off_grid_fids": [
+        134
+      ]
+    },
+    {
+      "shot": "S0059",
+      "off_grid_fids": [
+        167
+      ]
+    },
+    {
+      "shot": "S0060",
+      "off_grid_fids": [
+        193
+      ]
+    },
+    {
+      "shot": "S0061",
+      "off_grid_fids": [
+        3,
+        103,
+        105,
+        107,
+        356
+      ]
+    },
+    {
+      "shot": "S0062",
+      "off_grid_fids": [
+        3,
+        33,
+        35,
+        250
+      ]
+    },
+    {
+      "shot": "S0063",
+      "off_grid_fids": [
+        3,
+        28
+      ]
+    },
+    {
+      "shot": "S0065",
+      "off_grid_fids": [
+        102
+      ]
+    },
+    {
+      "shot": "S0066",
+      "off_grid_fids": [
+        75
+      ]
+    },
+    {
+      "shot": "S0067",
+      "off_grid_fids": [
+        122
+      ]
+    },
+    {
+      "shot": "S0068",
+      "off_grid_fids": [
+        36
+      ]
+    },
+    {
+      "shot": "S0069",
+      "off_grid_fids": [
+        118
+      ]
+    },
+    {
+      "shot": "S0070",
+      "off_grid_fids": [
+        143
+      ]
+    },
+    {
+      "shot": "S0071",
+      "off_grid_fids": [
+        49
+      ]
+    },
+    {
+      "shot": "S0072",
+      "off_grid_fids": [
+        144
+      ]
+    },
+    {
+      "shot": "S0073",
+      "off_grid_fids": [
+        179
+      ]
+    }
+  ]
+}

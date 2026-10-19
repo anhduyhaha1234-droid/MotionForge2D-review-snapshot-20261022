@@ -1,0 +1,41 @@
+{
+  "remaining": [
+    "make test masks PNG",
+    "add finite cases",
+    "run/fix",
+    "review/freeze"
+  ],
+  "task": "CODEX-C02B2-PER-ACTOR-VERIFIED-REUSE",
+  "live_jobs": [],
+  "files": [
+    {
+      "bytes": 24050,
+      "lines": 445,
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py",
+      "sha256": "8d4b0c7ad5336e7e6c2a68a12f2a622fbccf900575afd2c1249f31863ae4243d"
+    },
+    {
+      "bytes": 9004,
+      "lines": 180,
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_keygen.py",
+      "sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282"
+    },
+    {
+      "bytes": 6361,
+      "lines": 138,
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_key_recipe.py",
+      "sha256": "e18fc9d20de1cbf2a3a8f7da2e68fc99c59260701bfbd3dca75106a7cbe8e2bd"
+    },
+    {
+      "bytes": 9233,
+      "lines": 208,
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c02b2_per_actor_reuse.py",
+      "sha256": "9a3b987d1e188de1aec5cb6e7a34e44ed4ff24987fb014ac44d46158c2ff42f4"
+    }
+  ],
+  "phase": "gate mask verification decoupled from vendored adapter import",
+  "owner": "/root/motionforge_c02b2_coder",
+  "verification": "AST parse exit0; runtime rerun pending",
+  "model": "gpt-6-sol/max/no-fallback",
+  "next": "patch fixture masks to PNG, verify standalone gate path"
+}

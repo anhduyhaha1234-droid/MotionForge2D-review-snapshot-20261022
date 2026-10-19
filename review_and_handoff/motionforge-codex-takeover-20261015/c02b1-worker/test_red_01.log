@@ -1,0 +1,14 @@
+test_same_path_same_size_source_mutation_reextracts (test_codex_c02b1_staged_source.StagedSourceTests.test_same_path_same_size_source_mutation_reextracts) ... FAIL
+
+======================================================================
+FAIL: test_same_path_same_size_source_mutation_reextracts (test_codex_c02b1_staged_source.StagedSourceTests.test_same_path_same_size_source_mutation_reextracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c02b1_staged_source.py", line 55, in test_same_path_same_size_source_mutation_reextracts
+    self.assertEqual(self.dst.read_bytes(), b"FRAME-SOURCE-B-0")
+AssertionError: b'FRAME-SOURCE-A-0' != b'FRAME-SOURCE-B-0'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.018s
+
+FAILED (failures=1)

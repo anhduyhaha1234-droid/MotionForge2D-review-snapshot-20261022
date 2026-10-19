@@ -1,0 +1,17 @@
+{
+  "task": "CODEX-C02A-DEPENDENCY-VERIFICATION",
+  "finding": "C02A-R01",
+  "owner": "/root/motionforge_c02a_coder",
+  "model": "gpt-6-sol",
+  "reasoning": "max",
+  "status": "CORRECTION_RUNNING",
+  "cache_sha256": "be1d2f123ba71c355fdea0f904172eaeaf44c442994048038554a18a7864f8f2",
+  "test_sha256": "195ead0031f16098087df5f56b5b9ac0e5ddc7a58a733ea6a0e0c22168650219",
+  "green": [
+    "NESTING_GREEN_01.txt: 2/2 tests exit0; settings and extra top-level depth 10/200 pass, 400/800 controlled reject, 1200 parser reject; skip policy retained; assembly tripwire block",
+    "ROOT_NESTING_GREEN_01.txt and root-nesting-green-01/RESULT.json: 8/8 exit0"
+  ],
+  "remaining": "original55case matrix, full affected modules, static/scope self-review, candidate02 freeze",
+  "next": "run root_probe_c02a_dependencies.py on current files",
+  "live_jobs": []
+}

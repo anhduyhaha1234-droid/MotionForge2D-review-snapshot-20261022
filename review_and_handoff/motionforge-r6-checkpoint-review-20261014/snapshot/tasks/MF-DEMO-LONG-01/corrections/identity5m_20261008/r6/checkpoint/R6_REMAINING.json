@@ -1,0 +1,7 @@
+[
+ "S43 propagate retry queued in chain (after prop_asset done; records rebound). S49 retry same chain.",
+ "prop_asset tail: S65 S66 S74 remaining + S35/37/40 retry launched separately (verify rc).",
+ "S8: run r6_assemble.py when all 54 blends ready -> master + comparison source|R5|R6; then r6_qa.py sheets -> vision QA all54 (head/event/tail) + 2s scan + seams + dense contact/entry/occlusion/zoom.",
+ "S9: r6_matrix.py -> matrix+evidence+manifest; then final record (dedupe, correct invocation name; manifest hash AFTER record where required)",
+ "Residuals logged for reviewer: S44 f31/f51 outfit variant; S43 f841 pose note; S45 f21 binder colour; S32 f751 source-fade; CoTracker S34 drift 0.91px (S61/S73 pending); VACE client-side VRAM reading caveat"
+]

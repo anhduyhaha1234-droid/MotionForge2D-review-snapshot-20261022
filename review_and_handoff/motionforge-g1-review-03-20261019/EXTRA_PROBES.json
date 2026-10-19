@@ -1,0 +1,185 @@
+{
+  "utc": "2026-10-19T11:43:14.315293+00:00",
+  "strict_events": [
+    {
+      "input": {
+        "frame": 43.9
+      },
+      "result": {
+        "returned": 43
+      }
+    },
+    {
+      "input": {
+        "frame": true
+      },
+      "result": {
+        "returned": 1
+      }
+    },
+    {
+      "input": {
+        "frame": "43"
+      },
+      "result": {
+        "returned": 43
+      }
+    },
+    {
+      "input": {
+        "f": 42.8,
+        "frame": 43.2
+      },
+      "result": {
+        "returned": 43
+      }
+    }
+  ],
+  "installed_strictint_comparison": [
+    {
+      "input": 43.9,
+      "result": {
+        "exception": "ValidationError",
+        "detail": "1 validation error for int\n  Input should be a valid integer [type=int_type, input_value=43.9, input_type=float]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_type"
+      }
+    },
+    {
+      "input": true,
+      "result": {
+        "exception": "ValidationError",
+        "detail": "1 validation error for int\n  Input should be a valid integer [type=int_type, input_value=True, input_type=bool]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_type"
+      }
+    },
+    {
+      "input": "43",
+      "result": {
+        "exception": "ValidationError",
+        "detail": "1 validation error for int\n  Input should be a valid integer [type=int_type, input_value='43', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_type"
+      }
+    },
+    {
+      "input": 43,
+      "result": {
+        "returned": 43
+      }
+    }
+  ],
+  "focused_asset_suite": {
+    "run": 10,
+    "failures": 0,
+    "errors": 0,
+    "raw": "test_t3_black_passthrough_rejects_non_flat_source (test_gemini_c02b3_asset_reuse.AssetBlackPassthroughTests.test_t3_black_passthrough_rejects_non_flat_source) ... {\"shot\": \"S0035\", \"fid\": 1, \"mode\": \"black_pass\", \"sha16\": \"88023d90926d5a69\"}\nok\ntest_t3_black_passthrough_replay_unchanged (test_gemini_c02b3_asset_reuse.AssetBlackPassthroughTests.test_t3_black_passthrough_replay_unchanged) ... {\"shot\": \"S0035\", \"fid\": 1, \"mode\": \"black_pass\", \"sha16\": \"88023d90926d5a69\"}\n{\"shot\": \"S0035\", \"fid\": 1, \"skipped\": \"verified-reuse\"}\nok\ntest_t1_asset_restyle_replay_unchanged (test_gemini_c02b3_asset_reuse.AssetRestyleVerifiedReuseTests.test_t1_asset_restyle_replay_unchanged) ... {\"shot\": \"S0035\", \"fid\": 1, \"wall\": 0.0, \"sha16\": \"07077383b8d2e601\"}\n{\"shot\": \"S0035\", \"fid\": 1, \"skipped\": \"verified-reuse\"}\nok\ntest_t1_missing_review_blocks_skip (test_gemini_c02b3_asset_reuse.AssetRestyleVerifiedReuseTests.test_t1_missing_review_blocks_skip) ... {\"shot\": \"S0035\", \"fid\": 1, \"wall\": 0.0, \"sha16\": \"07077383b8d2e601\"}\n{\"shot\": \"S0035\", \"fid\": 1, \"wall\": 0.0, \"sha16\": \"07077383b8d2e601\"}\nok\ntest_t1_wrong_review_blocks_skip (test_gemini_c02b3_asset_reuse.AssetRestyleVerifiedReuseTests.test_t1_wrong_review_blocks_skip) ... {\"shot\": \"S0035\", \"fid\": 1, \"wall\": 0.0, \"sha16\": \"07077383b8d2e601\"}\nok\ntest_t2_same_path_same_size_mutations_and_restores (test_gemini_c02b3_asset_reuse.AssetRestyleVerifiedReuseTests.test_t2_same_path_same_size_mutations_and_restores) ... {\"shot\": \"S0035\", \"fid\": 1, \"wall\": 0.0, \"sha16\": \"07077383b8d2e601\"}\nok\ntest_t2_settings_and_storyboard_mutations (test_gemini_c02b3_asset_reuse.AssetRestyleVerifiedReuseTests.test_t2_settings_and_storyboard_mutations) ... {\"shot\": \"S0035\", \"fid\": 1, \"wall\": 0.0, \"sha16\": \"07077383b8d2e601\"}\nok\ntest_t4_legacy_v3_asset_record_denial (test_gemini_c02b3_asset_reuse.AssetRestyleVerifiedReuseTests.test_t4_legacy_v3_asset_record_denial) ... {\"shot\": \"S0035\", \"fid\": 1, \"wall\": 0.0, \"sha16\": \"07077383b8d2e601\"}\nok\ntest_t5_blank_edit_failure_does_not_publish_deps (test_gemini_c02b3_asset_reuse.AssetRestyleVerifiedReuseTests.test_t5_blank_edit_failure_does_not_publish_deps) ... ok\ntest_t5_injected_post_failure_does_not_publish_deps (test_gemini_c02b3_asset_reuse.AssetRestyleVerifiedReuseTests.test_t5_injected_post_failure_does_not_publish_deps) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 1.581s\n\nOK\n",
+    "scope": "Only asset module10, not broad89. Exact snapshot; external inference/storage stubbed by fixture."
+  },
+  "actual_producer_reuse_mutations": {
+    "valid": [
+      true,
+      "verified-reuse"
+    ],
+    "cases": [
+      {
+        "tag": "wrong_grey",
+        "skip_allowed": [
+          false,
+          "dep changed: complete asset deps invalid: generated asset graph R1_LOAD does not reference canonical grey ref 'identity5m_20261008/r6/_grey_64.png': wrong_invocation/fake_grey.png"
+        ],
+        "deps_verify": [
+          false,
+          "complete asset deps invalid: generated asset graph R1_LOAD does not reference canonical grey ref 'identity5m_20261008/r6/_grey_64.png': wrong_invocation/fake_grey.png"
+        ]
+      },
+      {
+        "tag": "missing_R1",
+        "skip_allowed": [
+          false,
+          "dep changed: complete asset deps invalid: generated asset graph missing required node R1_LOAD"
+        ],
+        "deps_verify": [
+          false,
+          "complete asset deps invalid: generated asset graph missing required node R1_LOAD"
+        ]
+      }
+    ]
+  },
+  "upstream_names": {
+    "file": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r4\\vendor\\Rerender_A_Video-dfaf9d8825f226a2f0a0b731ab2adc84a3f2ebd2\\blender\\video_sequence.py",
+    "sha256": "ed40afd1b705d9c37f375a8ffe68aaef784f61a2b0412c62357474b3e54b04dc",
+    "beg": 11,
+    "end": 21,
+    "actual_names": [
+      "0011.jpg",
+      "0012.jpg",
+      "0013.jpg",
+      "0014.jpg",
+      "0015.jpg",
+      "0016.jpg",
+      "0017.jpg",
+      "0018.jpg",
+      "0019.jpg",
+      "0020.jpg"
+    ],
+    "candidate_required": [
+      "0001.jpg",
+      "0002.jpg",
+      "0003.jpg",
+      "0004.jpg",
+      "0005.jpg",
+      "0006.jpg",
+      "0007.jpg",
+      "0008.jpg",
+      "0009.jpg",
+      "0010.jpg"
+    ],
+    "scope": "Pure upstream naming API only; no flow/model/GPU invoked"
+  },
+  "ffprobe_same_fake_video": {
+    "command": [
+      "ffprobe",
+      "-v",
+      "error",
+      "-show_streams",
+      "-show_format",
+      "-of",
+      "json",
+      "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-03-audit\\sandbox\\r6\\continuations\\test-matrix\\outputs\\R6G_MASTER.mp4"
+    ],
+    "exit": 1,
+    "stdout": "{\n\n}\n",
+    "stderr": "[mov,mp4,m4a,3gp,3g2,mj2 @ 00000221317f9e80] moov atom not found\nC:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-03-audit\\sandbox\\r6\\continuations\\test-matrix\\outputs\\R6G_MASTER.mp4: Invalid data found when processing input\n"
+  },
+  "cpu_fixture_generation": {
+    "command": [
+      "ffmpeg",
+      "-v",
+      "error",
+      "-f",
+      "lavfi",
+      "-i",
+      "testsrc2=size=320x180:rate=30",
+      "-frames:v",
+      "3",
+      "-c:v",
+      "mpeg4",
+      "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-03-extra\\valid_3_frames.mp4"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "ffprobe_valid_control": {
+    "command": [
+      "ffprobe",
+      "-v",
+      "error",
+      "-count_frames",
+      "-show_streams",
+      "-show_format",
+      "-of",
+      "json",
+      "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-03-extra\\valid_3_frames.mp4"
+    ],
+    "exit": 0,
+    "stdout": "{\n    \"streams\": [\n        {\n            \"index\": 0,\n            \"codec_name\": \"mpeg4\",\n            \"codec_long_name\": \"MPEG-4 part 2\",\n            \"profile\": \"Simple Profile\",\n            \"codec_type\": \"video\",\n            \"codec_tag_string\": \"mp4v\",\n            \"codec_tag\": \"0x7634706d\",\n            \"mime_codec_string\": \"mp4v.20\",\n            \"width\": 320,\n            \"height\": 180,\n            \"coded_width\": 320,\n            \"coded_height\": 180,\n            \"has_b_frames\": 0,\n            \"sample_aspect_ratio\": \"1:1\",\n            \"display_aspect_ratio\": \"16:9\",\n            \"pix_fmt\": \"yuv420p\",\n            \"level\": 1,\n            \"chroma_location\": \"left\",\n            \"refs\": 1,\n            \"quarter_sample\": \"false\",\n            \"divx_packed\": \"false\",\n            \"id\": \"0x1\",\n            \"r_frame_rate\": \"30/1\",\n            \"avg_frame_rate\": \"30/1\",\n            \"time_base\": \"1/15360\",\n            \"start_pts\": 0,\n            \"start_time\": \"0.000000\",\n            \"duration_ts\": 1536,\n            \"duration\": \"0.100000\",\n            \"bit_rate\": \"1776080\",\n            \"nb_frames\": \"3\",\n            \"nb_read_frames\": \"3\",\n            \"extradata_size\": 47,\n            \"disposition\": {\n                \"default\": 1,\n                \"dub\": 0,\n                \"original\": 0,\n                \"comment\": 0,\n                \"lyrics\": 0,\n                \"karaoke\": 0,\n                \"forced\": 0,\n                \"hearing_impaired\": 0,\n                \"visual_impaired\": 0,\n                \"clean_effects\": 0,\n                \"attached_pic\": 0,\n                \"timed_thumbnails\": 0,\n                \"non_diegetic\": 0,\n                \"captions\": 0,\n                \"descriptions\": 0,\n                \"metadata\": 0,\n                \"dependent\": 0,\n                \"still_image\": 0,\n                \"multilayer\": 0\n            },\n            \"tags\": {\n                \"language\": \"und\",\n                \"handler_name\": \"VideoHandler\",\n                \"encoder\": \"Lavc62.28.102 mpeg4\"\n            }\n        }\n    ],\n    \"format\": {\n        \"filename\": \"C:\\\\Users\\\\Admin\\\\Documents\\\\Codex\\\\2026-10-12\\\\a-l-m-video-ra-m-2\\\\work\\\\g1-review-03-extra\\\\valid_3_frames.mp4\",\n        \"nb_streams\": 1,\n        \"nb_programs\": 0,\n        \"nb_stream_groups\": 0,\n        \"format_name\": \"mov,mp4,m4a,3gp,3g2,mj2\",\n        \"format_long_name\": \"QuickTime / MOV\",\n        \"start_time\": \"0.000000\",\n        \"duration\": \"0.100000\",\n        \"size\": \"23110\",\n        \"bit_rate\": \"1848800\",\n        \"probe_score\": 100,\n        \"tags\": {\n            \"major_brand\": \"isom\",\n            \"minor_version\": \"512\",\n            \"compatible_brands\": \"isomiso2mp41\",\n            \"encoder\": \"Lavf62.12.102\"\n        }\n    }\n}\n",
+    "stderr": ""
+  }
+}

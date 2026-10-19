@@ -1,0 +1,58 @@
+--- rules_before
++++ rules_after
+@@ -765,6 +765,45 @@
+ 
+ Nếu review đồng thời tạo prompt Hermes tiếp theo, phần Session Opening Proposal phải khớp chính xác task/session/model/wave trong prompt; không được đưa một phương án trong chat nhưng cấp quyền khác trong file.
+ 
++### 10.1. Mỗi review phải phân tích nguyên nhân và nghiên cứu phương án tái sử dụng — user18/10/2026
++
++Áp dụng cho mọi review MotionForge2D tiếp theo, gồm code, harness, media và sản
++phẩm. Không mặc định tiếp tục vá cách làm hiện tại chỉ vì đã đầu tư nhiều lượt.
++Reviewer phải đưa ra quyết định kỹ thuật dựa trên bằng chứng trước prompt sửa.
++
++- Với mỗi finding trọng yếu hoặc nhóm lỗi chung cơ chế, ghi chuỗi nguyên nhân:
++  symptom -> actual failing call path -> nguyên nhân -> vì sao test/self-review
++  cũ bỏ sót. Phân biệt lỗi dữ liệu, contract, adapter/wiring, thuật toán/model,
++  orchestration và overclaim evidence; phần chưa chứng minh ghi hypothesis.
++- Trong mỗi review, tra cứu nguồn chính thức/GitHub có liên quan để so sánh
++  sửa tối thiểu, tái dùng thành phần đã cài, tích hợp upstream hoặc thay module.
++  Ưu tiên repo/library/node/workflow đang có trước khi thêm dependency; lỗi
++  cục bộ như thiếu import vẫn có thể chọn sửa nhỏ, nhưng phải giải thích vì sao
++  thay engine không xử lý đúng nguyên nhân. Không cố thay công nghệ cho đủ mục.
++- Research phải có URL trực tiếp tới repo/source/docs, ngày kiểm tra, version/
++  commit khi chọn tích hợp, khả năng thực tế và giới hạn. Đối chiếu license,
++  Windows/Python/Torch/CUDA/GPU/runtime hiện có, input/output contracts, mức
++  bảo trì và chi phí chuyển đổi. Không lấy stars/README/demo làm proof phù hợp.
++- Mỗi nhóm phải chốt PATCH / REUSE_INSTALLED / ADOPT_UPSTREAM / REPLACE /
++  DEFER_WITH_REASON, phần được thay hoặc giữ, lý do và kiểm chứng cần chạy.
++  Phương án đề xuất khác với đã cài, đã wired, đã kiểm chứng unit và đã đạt
++  media/product acceptance. Thư viện schema không tự chứng minh semantic PASS.
++- Với phương án thay thế có triển vọng, dùng cùng fixture/source unit và
++  acceptance để so sánh với baseline; giữ raw outputs/hash, chất lượng, thời
++  gian/tài nguyên và regression. Chỉ benchmark GPU khi scope đã mở. Chưa thử
++  thì ghi PROPOSED/UNVERIFIED, không claim dùng được hoặc tự nâng verdict.
++- Hai lượt cùng cơ chế vẫn không tiến bộ phải đánh giá lại giả thuyết và
++  phương án thay thế; không blind retry/seed sweep hoặc vá lặp vì sunk cost.
++  Đây không phải trần số vòng hay deadline PM mới. Có thể tái dùng nghiên cứu
++  đã khóa phiên bản khi kiểm lại compatibility/delta và dẫn nguồn trong review;
++  không quét lại toàn GitHub, cài toàn shortlist hoặc viết lại cả dự án.
++- Báo cáo review và prompt correction phải chứa bảng root cause -> phương án
++  sẵn có -> lựa chọn -> evidence/acceptance. Giữ frozen verdict/evidence cũ;
++  thêm research addendum hoặc prompt phiên bản mới, không viết lại lịch sử.
++
++Mục này cập nhật phương pháp review/research; không tự đổi owner/model,
++write-set, quyền dispatch, lịch monitor hay các acceptance gates đang áp dụng.
++
+ ## 11. Từ vựng trạng thái chuẩn
+ 
+ - `RULES_LOADED`
+@@ -801,6 +840,9 @@
+       bytes, patch-only guard cho file hiện hữu và post-worker shrink verification.
+ - [ ] Gate chạy theo thứ tự micro -> matrix -> focused/static -> final broad;
+       không dùng broad xanh để waive một binary row còn mở.
++- [ ] Có root-cause analysis và giải thích vì sao test/self-review bỏ sót.
++- [ ] Đã research nguồn chính thức/GitHub liên quan; có reuse/replace decision,
++      compatibility/license, trạng thái kiểm chứng và proof gate theo §10.1.
+ - [ ] Có test/evidence/terminal state và dừng để Codex review sau sprint.
+ - [ ] Sau review đã đưa Session Opening Proposal: new/resume/recovery, context health, model, dependency, write-set, parallel wave và dispatch authority.
+ 

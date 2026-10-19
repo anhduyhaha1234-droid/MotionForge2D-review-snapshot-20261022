@@ -1,0 +1,72 @@
+[
+ {
+  "sid": "S0021",
+  "full": true,
+  "rc": 0
+ },
+ {
+  "sid": "S0031",
+  "full": true,
+  "rc": 0
+ },
+ {
+  "sid": "S0021",
+  "fid": 61,
+  "ok": false
+ },
+ {
+  "sid": "S0021",
+  "fid": 96,
+  "ok": false
+ },
+ {
+  "sid": "S0027",
+  "fid": 101,
+  "ok": true
+ },
+ {
+  "sid": "S0027",
+  "fid": 121,
+  "ok": true
+ },
+ {
+  "sid": "S0027",
+  "fid": 131,
+  "ok": true
+ },
+ {
+  "sid": "S0027",
+  "fid": 151,
+  "ok": true
+ },
+ {
+  "sid": "S0027",
+  "fid": 159,
+  "ok": true
+ },
+ {
+  "sid": "S0028",
+  "fid": 131,
+  "ok": true
+ },
+ {
+  "sid": "S0028",
+  "fid": 143,
+  "ok": true
+ },
+ {
+  "sid": "S0062",
+  "fid": 33,
+  "ok": true
+ },
+ {
+  "sid": "S0069",
+  "fid": 101,
+  "ok": true
+ },
+ {
+  "sid": "S0072",
+  "fid": 71,
+  "ok": true
+ }
+]

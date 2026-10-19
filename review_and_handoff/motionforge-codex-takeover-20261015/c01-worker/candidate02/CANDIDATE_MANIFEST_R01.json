@@ -1,0 +1,154 @@
+{
+  "task": "CODEX-C01-REVIEW-BINDING",
+  "review_finding": "C01-R01",
+  "candidate": "candidate02",
+  "status": "TASK_SUBMITTED_PENDING_ROOT_REVIEW",
+  "owner": "/root/motionforge_c01_coder",
+  "model": "gpt-6-sol",
+  "reasoning": "max",
+  "created_utc": "2026-10-15T21:11:48.1353479Z",
+  "files": [
+    {
+      "role": "gate",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_gate.py",
+      "sha256": "4c3f7a7213f7761b7f5cbf53d7257bfd1c893e7f50d04d4ffda38a2e3cf13996",
+      "bytes": 17408,
+      "lines": 356
+    },
+    {
+      "role": "test",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c01_review_binding.py",
+      "sha256": "e2744bc198bc91fe71ce4b2afafb9682e427c17c7ac0c1207b3a7643dbf2d330",
+      "bytes": 13629,
+      "lines": 310
+    },
+    {
+      "role": "protected_assembler",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_assemble.py",
+      "sha256": "0509d5f67ffcce1721701f0c064ea4d68dd8660c6dca9f6f4967eb78727301c2",
+      "bytes": 4287,
+      "lines": 89
+    },
+    {
+      "role": "protected_common",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_common.py",
+      "sha256": "17bf5799c445a6f7133c61d53b9d5c41083307add1d7b6a50acdf83c294c15e3",
+      "bytes": 6014,
+      "lines": 138
+    },
+    {
+      "role": "gate_preimage",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\preimages\\r6_gate.py",
+      "sha256": "62c2bfee57f438baa3addb087d2045c68d042dc6d0d70a8bb6fc8b5036f1b8c0",
+      "bytes": 16181,
+      "lines": 335
+    },
+    {
+      "role": "test_preimage",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\preimages\\test_codex_c01_review_binding.py",
+      "sha256": "83303567eb49ed25f9a0cce706c30b9a8d8efb8d863b494f68985ac860542ce8",
+      "bytes": 9632,
+      "lines": 227
+    },
+    {
+      "role": "gate_diff",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\DIFF_GATE_R01.patch",
+      "sha256": "9816391e6b6546807bd8e81f3f623bac30973e7c1e53558cd822700c409b371d",
+      "bytes": 3880,
+      "lines": 55
+    },
+    {
+      "role": "test_diff",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\DIFF_TEST_R01.patch",
+      "sha256": "91b5d62c590fedfe02fa84ee134ce79fc8caa4c9b1212b4d2609e219805c6b1e",
+      "bytes": 5801,
+      "lines": 101
+    },
+    {
+      "role": "red_tests",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\RED_TESTS.txt",
+      "sha256": "1603bfad89b41573f692dab0abed42b300456291d9af8253c421601ddc56d6b8",
+      "bytes": 3078,
+      "lines": 37
+    },
+    {
+      "role": "red_numeric_frames",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\RED_NUMERIC_FRAMES.txt",
+      "sha256": "1dbceba5ea05715cde4fc1bdab69522f851f358954e5a67baebcead34e88854b",
+      "bytes": 1449,
+      "lines": 18
+    },
+    {
+      "role": "full_c01_tests",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\FINAL_FULL_C01_TESTS.txt",
+      "sha256": "6029d8dab9f60f8a976b8c3c591526132b4a1244a41c4a977015358effb382db",
+      "bytes": 121,
+      "lines": 5
+    },
+    {
+      "role": "root_review_probe",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\final_root_review_probe\\RESULT.json",
+      "sha256": "32ed80a8014aefbbe48841b66d1aa57042847342be060dbe8517a0cb5a7351d6",
+      "bytes": 6997,
+      "lines": 225
+    },
+    {
+      "role": "root_blend_probe",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\final_root_blend_probe\\RESULT.json",
+      "sha256": "d722e5339ff0b74801ff33cde1334efccf050740c28deabd094c4f5e15a1c075",
+      "bytes": 918,
+      "lines": 30
+    },
+    {
+      "role": "historic_f02",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\EXISTING_GATE_SAFE.txt",
+      "sha256": "1790d5b11fd4360c24ac5b00c9c8d4fb3cd3c5830edcec81e4557b8a60e9b59e",
+      "bytes": 80,
+      "lines": 2
+    },
+    {
+      "role": "schema_survey",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\EXISTING_REVIEW_SCHEMA_SURVEY.json",
+      "sha256": "6c7dfbcedc95aa7638c0fc0b62329ecfdbf1e97b010c34bd973be687ec2dd2b4",
+      "bytes": 1109,
+      "lines": 36
+    }
+  ],
+  "checks": [
+    {
+      "name": "full C01 module",
+      "result": "17 tests OK",
+      "exit_code": 0,
+      "raw": "FINAL_FULL_C01_TESTS.txt"
+    },
+    {
+      "name": "independent review binding probe",
+      "result": "30/30 pass",
+      "exit_code": 0,
+      "raw": "final_root_review_probe/RESULT.json"
+    },
+    {
+      "name": "independent blend frame probe",
+      "result": "full accept; truncated and overlong block",
+      "exit_code": 0,
+      "raw": "final_root_blend_probe/RESULT.json"
+    },
+    {
+      "name": "unchanged historic F02 bodies",
+      "result": "2 pass",
+      "exit_code": 0,
+      "raw": "EXISTING_GATE_SAFE.txt"
+    },
+    {
+      "name": "read-only historical review schema survey",
+      "result": "54 blend and 1013 key record shapes accepted; 3 malformed fixtures blocked",
+      "exit_code": 0,
+      "raw": "EXISTING_REVIEW_SCHEMA_SURVEY.json"
+    }
+  ],
+  "limitations": [
+    "No semantic media quality or model/source dependency recomputation claim.",
+    "No production render, encoder, historical review rewrite, or Git commit.",
+    "Independent root review remains required for acceptance."
+  ]
+}

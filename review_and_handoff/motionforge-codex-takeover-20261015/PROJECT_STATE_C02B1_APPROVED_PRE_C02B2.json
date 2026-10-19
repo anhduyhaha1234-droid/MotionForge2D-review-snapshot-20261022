@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "updated_utc": "2026-10-16T12:19:49.5509917Z",
+  "project": "MotionForge2D",
+  "parent": "MF-DEMO-LONG-01",
+  "parent_status": "NOT_APPROVED",
+  "task": "CODEX-C02B1-STAGED-SOURCE-FRESHNESS",
+  "status": "C02B1_APPROVED",
+  "model": "gpt-6-sol",
+  "reasoning": "max",
+  "owner": "/root/motionforge_c02b1_coder",
+  "root_role": "independent PM/reviewer",
+  "active_writer": false,
+  "task_packet": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\TASK_C02B1.md",
+  "current_baseline": "R6g actual bytes; no new R6g master submitted",
+  "next_action": "Prepare bounded per-actor verified reuse task after current preflight; no writer yet",
+  "quota": {
+    "research_agents_error": "Your workspace is out of credits. Ask your workspace owner to refill in order to continue.",
+    "context_remaining": "UNKNOWN",
+    "coder_prior_error": "C02A-R01: usage limit; try again at 2:08 PM",
+    "last_check": "QUOTA_20261016T1917.json",
+    "ordinary_usage_allowed": true,
+    "primary_used_percent": 2,
+    "weekly_used_percent": 63,
+    "reset_observed": true
+  },
+  "roadmap": [
+    "C02B1 staged-source freshness",
+    "C02B2 complete producer capture/settings/reuse",
+    "Event/child outcome correctness",
+    "Evidence/media corrections after engineering gates",
+    "300s pilot independent semantic acceptance",
+    "Tool integration and full source after pilot approval"
+  ],
+  "checkpoint_contract": [
+    "intent",
+    "files+hashes",
+    "decisions",
+    "test commands+exit",
+    "remaining",
+    "next command",
+    "live jobs"
+  ],
+  "no_fallback": true,
+  "checkpoint": "c02b1-worker/TERMINAL_CHECKPOINT.json",
+  "automation": {
+    "id": "motionforge-checkpoint-v-quota",
+    "status": "ACTIVE",
+    "interval": "hourly",
+    "purpose": "meaningful status/quota changes in original chat"
+  },
+  "root_review": "C02B1_REVIEW_01.md",
+  "resume_preflight": "root-review/C02B1_RECONCILIATION_20261016T1917.json",
+  "candidate_manifest": "c02b1-worker/candidate-01/MANIFEST.json",
+  "completed_tasks": [
+    {
+      "task": "CODEX-C01-REVIEW-BINDING",
+      "verdict": "APPROVED",
+      "review": "C01_REVIEW_02.md",
+      "candidate": "c01-worker/candidate02/CANDIDATE_MANIFEST_R01.json",
+      "root_probes": "30/30 + 3/3",
+      "root_module": "17/17"
+    },
+    {
+      "task": "CODEX-C02A-DEPENDENCY-VERIFICATION",
+      "verdict": "APPROVED",
+      "review": "C02A_REVIEW_02.md",
+      "candidate": "c02a-worker/candidate-02/MANIFEST.json",
+      "root_probes": "55/55 + 8/8",
+      "root_module": "30/30"
+    },
+    {
+      "task": "CODEX-C02B1-STAGED-SOURCE-FRESHNESS",
+      "verdict": "APPROVED",
+      "review": "C02B1_REVIEW_01.md",
+      "candidate": "c02b1-worker/candidate-01/MANIFEST.json",
+      "root_probes": "7/7",
+      "root_module": "10/10 + 30/30"
+    }
+  ]
+}

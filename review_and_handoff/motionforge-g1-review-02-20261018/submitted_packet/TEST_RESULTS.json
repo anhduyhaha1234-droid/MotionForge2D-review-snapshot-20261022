@@ -1,0 +1,30 @@
+{
+  "submission": "g1-candidate-02",
+  "gate": "G1",
+  "correction_branch": "G1-R1",
+  "executed_utc": "2026-10-18T04:55:52.065528+00:00",
+  "runner": "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\venv\\Scripts\\python.exe",
+  "summary": {
+    "total_tests": 89,
+    "passed": 89,
+    "failed": 0,
+    "errors": 0,
+    "duration_seconds": 11.173
+  },
+  "breakdown": {
+    "test_codex_c01_review_binding.py": "17/17 PASS (h\u1ed3i quy C01)",
+    "test_codex_c02a_dependency_verification.py": "13/13 PASS (h\u1ed3i quy C02A)",
+    "test_codex_c02b1_staged_source.py": "10/10 PASS (h\u1ed3i quy C02B1)",
+    "test_codex_c02b2_per_actor_reuse.py": "14/14 PASS (A1 per-actor reuse)",
+    "test_gemini_c02b3_asset_reuse.py": "10/10 PASS (A2 asset reuse)",
+    "test_gemini_a3_event_tracking.py": "7/7 PASS (A3 event timing & tracking)",
+    "test_gemini_a4_evidence_conformance.py": "5/5 PASS (A4 gate conformance)",
+    "test_g1_r1_correction.py": "13/13 PASS (M01-M20 G1-R1 correction matrix)"
+  },
+  "producer_replay_probe": {
+    "script": "probe_c02b2_v4.py",
+    "initial_calls": 1,
+    "replay_calls": 0,
+    "status": "PASS (verified-reuse)"
+  }
+}

@@ -1,0 +1,97 @@
+[
+  {
+    "cell": null,
+    "code": "F821",
+    "end_location": {
+      "column": 27,
+      "row": 161
+    },
+    "filename": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-03-20261019\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_propagate.py",
+    "fix": null,
+    "location": {
+      "column": 22,
+      "row": 161
+    },
+    "message": "Undefined name `Image`",
+    "name": "undefined-name",
+    "noqa_row": 161,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/undefined-name"
+  },
+  {
+    "cell": null,
+    "code": "F821",
+    "end_location": {
+      "column": 19,
+      "row": 171
+    },
+    "filename": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-03-20261019\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_propagate.py",
+    "fix": null,
+    "location": {
+      "column": 14,
+      "row": 171
+    },
+    "message": "Undefined name `Image`",
+    "name": "undefined-name",
+    "noqa_row": 171,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/undefined-name"
+  },
+  {
+    "cell": null,
+    "code": "F821",
+    "end_location": {
+      "column": 19,
+      "row": 173
+    },
+    "filename": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-03-20261019\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_propagate.py",
+    "fix": null,
+    "location": {
+      "column": 14,
+      "row": 173
+    },
+    "message": "Undefined name `Image`",
+    "name": "undefined-name",
+    "noqa_row": 173,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/undefined-name"
+  },
+  {
+    "cell": null,
+    "code": "F821",
+    "end_location": {
+      "column": 23,
+      "row": 177
+    },
+    "filename": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-03-20261019\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_propagate.py",
+    "fix": null,
+    "location": {
+      "column": 18,
+      "row": 177
+    },
+    "message": "Undefined name `Image`",
+    "name": "undefined-name",
+    "noqa_row": 177,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/undefined-name"
+  },
+  {
+    "cell": null,
+    "code": "F821",
+    "end_location": {
+      "column": 23,
+      "row": 189
+    },
+    "filename": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-03-20261019\\candidate\\task\\corrections\\identity\\r6\\scripts\\r6_propagate.py",
+    "fix": null,
+    "location": {
+      "column": 18,
+      "row": 189
+    },
+    "message": "Undefined name `Image`",
+    "name": "undefined-name",
+    "noqa_row": 189,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/undefined-name"
+  }
+]

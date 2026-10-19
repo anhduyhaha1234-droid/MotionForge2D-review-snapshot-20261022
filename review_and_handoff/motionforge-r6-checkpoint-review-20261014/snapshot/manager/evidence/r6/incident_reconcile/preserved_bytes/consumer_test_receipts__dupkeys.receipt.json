@@ -1,0 +1,76 @@
+{
+  "absolute_deadline_epoch": null,
+  "allowed_root": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r4_cons_test\\r4",
+  "api_mode_pinned_in_packet": "chat_completions",
+  "base_url": "http://127.0.0.1:20128/v1",
+  "context_metrics": {
+    "compactions_observed": 0,
+    "context_window_advertised": 1000000,
+    "label": "observed counts; token estimate is the CLI's own",
+    "last_context_line": "Context: 12k/1M tokens (fixture)",
+    "max_output_setting": "16384",
+    "tool_actions_observed": 0
+  },
+  "controller_lock": "held",
+  "cwd": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r4_cons_test\\tasks\\MF-DEMO-LONG-01",
+  "exit_code": 0,
+  "fallback": false,
+  "gpu_lease_release": {
+    "children": [
+      {
+        "pid": 46588,
+        "state": "DEAD"
+      }
+    ],
+    "detail": "no queue job, no runner process",
+    "released": true
+  },
+  "invocation_id": "INV-dupkeys",
+  "launcher_pid": 50140,
+  "legacy_prose_outcome": {
+    "class": "EXIT0_NO_KNOWN_MARKER",
+    "detail": "read log payload before trusting",
+    "exit_code": 0,
+    "not_completed": null
+  },
+  "log": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r4_cons_test\\logs\\dupkeys.log",
+  "log_bytes": 217,
+  "max_tokens_effective_scheme": "HERMES_MAX_TOKENS env on child process (cli.py:4352); lever verified 2026-10-06 (HERMES_MAX_TOKENS=24 -> output cut at 24 tokens)",
+  "max_tokens_requested": "16384",
+  "max_turns": "80",
+  "max_turns_note": "invocation boundary, NOT a task stop gate (packet \u00a74)",
+  "model": "cmc/deepseek/deepseek-v4.1-flash",
+  "new_session": false,
+  "note": "exit code alone is NOT completion proof - read the log payload; check for finish_reason='length' / 'API call failed' / UsageLimit",
+  "outcome_class": "NEEDS_RECONCILIATION",
+  "outcome_detail": {
+    "class": "NEEDS_RECONCILIATION",
+    "error": "duplicate JSON key: status",
+    "legacy_prose_class": "EXIT0_NO_KNOWN_MARKER",
+    "source": "structured_terminal"
+  },
+  "owner_sid": "20261007_234033_cc0b6d",
+  "packet": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mf_r4_cons_test\\packet.md",
+  "packet_bytes": 176,
+  "packet_file_sha256": "9ea6a28ab5f1aff4bb021f3661877d68aef494a01d720dc1611ad141e887799c",
+  "packet_sha256": "714fd461f274b543cad0a8f44791eec1f255efa36cc5595ab8fb023adad3e13e",
+  "provider": "custom",
+  "remaining_seconds_at_dispatch": null,
+  "resume_session_requested": "20261007_234033_cc0b6d",
+  "revision": "r4",
+  "round": "packet.md",
+  "run_id": "20261005T1643Z-wan-long",
+  "session_id_actual": "20261007_234033_cc0b6d",
+  "skills": null,
+  "stall_kill_seconds": 60,
+  "task_id": "MF-DEMO-LONG-01",
+  "terminal_validation": {
+    "decision": "NEEDS_RECONCILIATION",
+    "error": "duplicate JSON key: status",
+    "quality_accepted": false
+  },
+  "timed_out": false,
+  "toolsets": null,
+  "utc_end": "2026-10-11T17:55:02.976187+00:00",
+  "utc_start": "2026-10-11T17:55:00.749121+00:00"
+}

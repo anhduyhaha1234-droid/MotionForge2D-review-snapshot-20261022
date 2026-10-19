@@ -1,0 +1,385 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-17T05:33:20.937823+00:00",
+  "task": "CODEX-C02B2-PER-ACTOR-VERIFIED-REUSE",
+  "parent": "MF-DEMO-LONG-01",
+  "parent_status": "NOT_APPROVED",
+  "owner": "gemini-implementation-owner",
+  "session_id": "gemini_20261017_r6_takeover",
+  "model": "ag/gemini-3.8-flash-high",
+  "provider_route": "http://127.0.0.1:20128/v1",
+  "authority": "HERMES_AUTOPILOT_RULES.md section 0.12",
+  "python": {
+    "executable": "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\venv\\Scripts\\python.exe",
+    "version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "platform": "win32"
+  },
+  "repositories": {
+    "main": {
+      "path": "C:\\Users\\Admin\\MotionForge2D",
+      "head": "a40e368f7c47c232cf2eeed9fb185c5972cb98ba",
+      "dirty": true
+    },
+    "integration": {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-20260927\\INTEGRATION",
+      "head": "a52fca897906fd61a088016dd802718fdf06d217",
+      "dirty": false
+    }
+  },
+  "controller": {
+    "lock_file_exists": false,
+    "meta": {
+      "acquired_utc": "2026-10-15T17:00:37.908813+00:00",
+      "created": "20261016000037.725340+420",
+      "name": "python.exe",
+      "note": "User-authorized terminal Hermes to Codex owner transfer; CPU C01 only",
+      "owner_sid": "codex-root-takeover-20261015",
+      "pid": 46728,
+      "release_outcome": "CODEX_TAKEOVER_PREFLIGHT_OK",
+      "released_utc": "2026-10-15T17:00:46.197127+00:00",
+      "run": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long"
+    },
+    "holder": null
+  },
+  "wan_runner_lock": {
+    "exists": true,
+    "pid_in_lock": 30072,
+    "pid_running": false
+  },
+  "leases": {
+    "total_count": 18,
+    "all_released": true,
+    "active_leases": []
+  },
+  "quiescence_verified": true,
+  "c02b2_checkpoint015_verified": true,
+  "protected_27_files_verified": true,
+  "media_pins_verified": true,
+  "c02b2_files": [
+    {
+      "name": "r6_cache.py",
+      "live_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py",
+      "preimage_path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\preimages\\c02b2_takeover\\r6_cache.py",
+      "sha256": "8d4b0c7ad5336e7e6c2a68a12f2a622fbccf900575afd2c1249f31863ae4243d",
+      "bytes": 24050,
+      "lines": 445
+    },
+    {
+      "name": "r6_keygen.py",
+      "live_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_keygen.py",
+      "preimage_path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\preimages\\c02b2_takeover\\r6_keygen.py",
+      "sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+      "bytes": 9004,
+      "lines": 180
+    },
+    {
+      "name": "r6_key_recipe.py",
+      "live_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_key_recipe.py",
+      "preimage_path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\preimages\\c02b2_takeover\\r6_key_recipe.py",
+      "sha256": "e18fc9d20de1cbf2a3a8f7da2e68fc99c59260701bfbd3dca75106a7cbe8e2bd",
+      "bytes": 6361,
+      "lines": 138
+    },
+    {
+      "name": "test_codex_c02b2_per_actor_reuse.py",
+      "live_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c02b2_per_actor_reuse.py",
+      "preimage_path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\preimages\\c02b2_takeover\\test_codex_c02b2_per_actor_reuse.py",
+      "sha256": "c8e272a60340683c0128bdfd980a078975030dfa7ec6d98977bcc55a304abd99",
+      "bytes": 9246,
+      "lines": 208
+    }
+  ],
+  "protected_files": [
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_adapter.py",
+      "relative": "scripts/r6_adapter.py",
+      "role": "protected",
+      "expected_sha256": "2b16108c5d92264b5e686d6aedeb5d357fc5ee9539be3cfff3b8979c17f9b5b3",
+      "actual_sha256": "2b16108c5d92264b5e686d6aedeb5d357fc5ee9539be3cfff3b8979c17f9b5b3",
+      "bytes": 6493,
+      "lines": 131,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_assemble.py",
+      "relative": "scripts/r6_assemble.py",
+      "role": "protected",
+      "expected_sha256": "0509d5f67ffcce1721701f0c064ea4d68dd8660c6dca9f6f4967eb78727301c2",
+      "actual_sha256": "0509d5f67ffcce1721701f0c064ea4d68dd8660c6dca9f6f4967eb78727301c2",
+      "bytes": 4287,
+      "lines": 89,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py",
+      "relative": "scripts/r6_cache.py",
+      "role": "writable",
+      "expected_sha256": "be1d2f123ba71c355fdea0f904172eaeaf44c442994048038554a18a7864f8f2",
+      "actual_sha256": "8d4b0c7ad5336e7e6c2a68a12f2a622fbccf900575afd2c1249f31863ae4243d",
+      "bytes": 24050,
+      "lines": 445,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_common.py",
+      "relative": "scripts/r6_common.py",
+      "role": "protected",
+      "expected_sha256": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc",
+      "actual_sha256": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc",
+      "bytes": 10578,
+      "lines": 241,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cotracker.py",
+      "relative": "scripts/r6_cotracker.py",
+      "role": "protected",
+      "expected_sha256": "255e802f4547ac333e77075c8c145b3dc912ba77231248d840c1bc037501cf7c",
+      "actual_sha256": "255e802f4547ac333e77075c8c145b3dc912ba77231248d840c1bc037501cf7c",
+      "bytes": 8657,
+      "lines": 185,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_gate.py",
+      "relative": "scripts/r6_gate.py",
+      "role": "protected",
+      "expected_sha256": "8c2e3f9eedd4d8e11832809c2b72293db17df1fb5a4012bd39fa396f93143f94",
+      "actual_sha256": "8c2e3f9eedd4d8e11832809c2b72293db17df1fb5a4012bd39fa396f93143f94",
+      "bytes": 17804,
+      "lines": 367,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_graph.py",
+      "relative": "scripts/r6_graph.py",
+      "role": "protected",
+      "expected_sha256": "832d5d44df486c3f10ec8194e7ab170ac4f5a77af0ab46ede176005904981d21",
+      "actual_sha256": "832d5d44df486c3f10ec8194e7ab170ac4f5a77af0ab46ede176005904981d21",
+      "bytes": 5508,
+      "lines": 99,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_keygen.py",
+      "relative": "scripts/r6_keygen.py",
+      "role": "writable",
+      "expected_sha256": "c0c9ca41ad9ebd17995a2380e869bebb8b36aafb7f5625d8cb72fc265925658d",
+      "actual_sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+      "bytes": 9004,
+      "lines": 180,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_keygen_asset.py",
+      "relative": "scripts/r6_keygen_asset.py",
+      "role": "protected",
+      "expected_sha256": "c38b6a5c65905f6cc4d094d501785c5b7312da5ae4b617ef1cd716f5d0347b91",
+      "actual_sha256": "c38b6a5c65905f6cc4d094d501785c5b7312da5ae4b617ef1cd716f5d0347b91",
+      "bytes": 5934,
+      "lines": 122,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_ledger.py",
+      "relative": "scripts/r6_ledger.py",
+      "role": "protected",
+      "expected_sha256": "5797fe9f11e1b8178f0d35bff5ca6bc575cb895ebea98831dcd5a65e2b81c131",
+      "actual_sha256": "5797fe9f11e1b8178f0d35bff5ca6bc575cb895ebea98831dcd5a65e2b81c131",
+      "bytes": 9820,
+      "lines": 154,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_matrix.py",
+      "relative": "scripts/r6_matrix.py",
+      "role": "protected",
+      "expected_sha256": "2403a0d934cdd403a13cf385133a02dd7f0390cdb734c80ce32c4825ad8ddaa1",
+      "actual_sha256": "2403a0d934cdd403a13cf385133a02dd7f0390cdb734c80ce32c4825ad8ddaa1",
+      "bytes": 4678,
+      "lines": 95,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_probes.py",
+      "relative": "scripts/r6_probes.py",
+      "role": "protected",
+      "expected_sha256": "739a1eaed3dd8bb200219d2ef93a353d0fa88a95695f9316bfd1c20f02acea15",
+      "actual_sha256": "739a1eaed3dd8bb200219d2ef93a353d0fa88a95695f9316bfd1c20f02acea15",
+      "bytes": 10969,
+      "lines": 236,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_propagate.py",
+      "relative": "scripts/r6_propagate.py",
+      "role": "protected",
+      "expected_sha256": "bcd22a7676b178a28f1c75baaaae23adec48a89ae5a40cd3765b44f5f824bf01",
+      "actual_sha256": "bcd22a7676b178a28f1c75baaaae23adec48a89ae5a40cd3765b44f5f824bf01",
+      "bytes": 10020,
+      "lines": 218,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_qa.py",
+      "relative": "scripts/r6_qa.py",
+      "role": "protected",
+      "expected_sha256": "220a63574a5fce3b60e4dda3fca7b3779b65a96044199cbfe9f528d26ee58098",
+      "actual_sha256": "220a63574a5fce3b60e4dda3fca7b3779b65a96044199cbfe9f528d26ee58098",
+      "bytes": 3165,
+      "lines": 72,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_sam2.py",
+      "relative": "scripts/r6_sam2.py",
+      "role": "protected",
+      "expected_sha256": "30c8279602a1355f64beecbb23895bf8a26a1d63fa317e17518466cef2b2bfe6",
+      "actual_sha256": "30c8279602a1355f64beecbb23895bf8a26a1d63fa317e17518466cef2b2bfe6",
+      "bytes": 13054,
+      "lines": 243,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_upload.py",
+      "relative": "scripts/r6_upload.py",
+      "role": "protected",
+      "expected_sha256": "057179db2b539965d88aed3e3f25a0251cf7e6d9959a6f9ce1f7514783e04967",
+      "actual_sha256": "057179db2b539965d88aed3e3f25a0251cf7e6d9959a6f9ce1f7514783e04967",
+      "bytes": 1469,
+      "lines": 29,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_upload_video.py",
+      "relative": "scripts/r6_upload_video.py",
+      "role": "protected",
+      "expected_sha256": "64a9ea96560c9d9f4183bdc1983684369236c84f1a5382a3aafbe0e390306de9",
+      "actual_sha256": "64a9ea96560c9d9f4183bdc1983684369236c84f1a5382a3aafbe0e390306de9",
+      "bytes": 1443,
+      "lines": 29,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_vace.py",
+      "relative": "scripts/r6_vace.py",
+      "role": "protected",
+      "expected_sha256": "1f3d8e00062f6c1f22503e17ca7ed9ff1c7f266f45796586ce4458a7eea02140",
+      "actual_sha256": "1f3d8e00062f6c1f22503e17ca7ed9ff1c7f266f45796586ce4458a7eea02140",
+      "bytes": 7784,
+      "lines": 137,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_validate_masks.py",
+      "relative": "scripts/r6_validate_masks.py",
+      "role": "protected",
+      "expected_sha256": "d5862e81ae29c95d0254aa7590aaf3d992179e5f35d8fa1e34a98f4bc6e067c4",
+      "actual_sha256": "d5862e81ae29c95d0254aa7590aaf3d992179e5f35d8fa1e34a98f4bc6e067c4",
+      "bytes": 2062,
+      "lines": 51,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_write_reviews.py",
+      "relative": "scripts/r6_write_reviews.py",
+      "role": "protected",
+      "expected_sha256": "4b5cf37da03658ad33b3e8e9e603b4d99697416b14b0f2d91ba06fd2696cc476",
+      "actual_sha256": "4b5cf37da03658ad33b3e8e9e603b4d99697416b14b0f2d91ba06fd2696cc476",
+      "bytes": 2510,
+      "lines": 54,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6g_blend_review.py",
+      "relative": "scripts/r6g_blend_review.py",
+      "role": "protected",
+      "expected_sha256": "a8005d02280deabacaf88cdcd19f9e652470df5b737908a91e001a9495e9caf8",
+      "actual_sha256": "a8005d02280deabacaf88cdcd19f9e652470df5b737908a91e001a9495e9caf8",
+      "bytes": 2392,
+      "lines": 58,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\write_terminal_record_r6.py",
+      "relative": "scripts/write_terminal_record_r6.py",
+      "role": "protected",
+      "expected_sha256": "34872812d5fd4804caf8ecde745ddf9bfb35aee8f66b2ee292f20ef34c786317",
+      "actual_sha256": "34872812d5fd4804caf8ecde745ddf9bfb35aee8f66b2ee292f20ef34c786317",
+      "bytes": 4613,
+      "lines": 107,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\write_terminal_record_r6c.py",
+      "relative": "scripts/write_terminal_record_r6c.py",
+      "role": "protected",
+      "expected_sha256": "1136e48e993079740d6175907270ad981ec912ea5a9792657463966feb633b86",
+      "actual_sha256": "1136e48e993079740d6175907270ad981ec912ea5a9792657463966feb633b86",
+      "bytes": 5340,
+      "lines": 117,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\write_terminal_record_r6d.py",
+      "relative": "scripts/write_terminal_record_r6d.py",
+      "role": "protected",
+      "expected_sha256": "ec3102b30d5a011ace5dd7a777fdf4cfed9624652f514e9604b24e04bba14e1a",
+      "actual_sha256": "ec3102b30d5a011ace5dd7a777fdf4cfed9624652f514e9604b24e04bba14e1a",
+      "bytes": 5677,
+      "lines": 124,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\write_terminal_record_r6f.py",
+      "relative": "scripts/write_terminal_record_r6f.py",
+      "role": "protected",
+      "expected_sha256": "0f1483d87d601f4da2b1ad128ad24d9d5c98f19642f198364d0711f8b8e0376a",
+      "actual_sha256": "0f1483d87d601f4da2b1ad128ad24d9d5c98f19642f198364d0711f8b8e0376a",
+      "bytes": 6280,
+      "lines": 135,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\write_terminal_record_r6g.py",
+      "relative": "scripts/write_terminal_record_r6g.py",
+      "role": "protected",
+      "expected_sha256": "fcba352acd4dc359398cd6a1af4ad8ccb493f8ae940fcc38a7f8f3d63ce17845",
+      "actual_sha256": "fcba352acd4dc359398cd6a1af4ad8ccb493f8ae940fcc38a7f8f3d63ce17845",
+      "bytes": 6617,
+      "lines": 140,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c01_review_binding.py",
+      "relative": "tests/test_codex_c01_review_binding.py",
+      "role": "protected",
+      "expected_sha256": "351c39e764e53d67466688d9ec032cf9e352167e105ee0be580129f1db38fdf7",
+      "actual_sha256": "351c39e764e53d67466688d9ec032cf9e352167e105ee0be580129f1db38fdf7",
+      "bytes": 14693,
+      "lines": 330,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c02a_dependency_verification.py",
+      "relative": "tests/test_codex_c02a_dependency_verification.py",
+      "role": "protected",
+      "expected_sha256": "195ead0031f16098087df5f56b5b9ac0e5ddc7a58a733ea6a0e0c22168650219",
+      "actual_sha256": "195ead0031f16098087df5f56b5b9ac0e5ddc7a58a733ea6a0e0c22168650219",
+      "bytes": 23075,
+      "lines": 458,
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c02b1_staged_source.py",
+      "relative": "tests/test_codex_c02b1_staged_source.py",
+      "role": "protected",
+      "expected_sha256": "61bfe454456c452756ddbbf05b55678e146114cb6d2653bff77f4ee92af46aec",
+      "actual_sha256": "61bfe454456c452756ddbbf05b55678e146114cb6d2653bff77f4ee92af46aec",
+      "bytes": 14350,
+      "lines": 300,
+      "matches": true
+    }
+  ],
+  "ok": true
+}

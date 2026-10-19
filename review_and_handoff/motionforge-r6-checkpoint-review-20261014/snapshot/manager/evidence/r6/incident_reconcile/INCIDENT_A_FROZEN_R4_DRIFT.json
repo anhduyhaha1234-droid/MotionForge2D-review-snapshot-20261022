@@ -1,0 +1,470 @@
+{
+ "utc": "2026-10-12T07:50:22Z",
+ "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-02\\ti-p-qu-n-d-n\\outputs\\motionforge-r5-review-20261012\\FRESH_PROBES_R5.json",
+ "summary": "16 frozen R4 evidence files drifted (1 report + 15 receipts); 5 allowed harness/registry paths also drifted (scoped in R5)",
+ "frozen_files": [
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\evidence\\r4\\R4_HARNESS_TEST_RESULTS.json",
+   "frozen_R4_evidence": true,
+   "before": {
+    "sha256": "890d0fe2c5cf3459654f5d395f450f7e2a5ece145b453b4b381b27a71dc4b60a",
+    "bytes": 11410,
+    "mtime": 1791698490.1426187,
+    "lines": 528
+   },
+   "after": {
+    "sha256": "e051618d0e637232aa19bc9fdb62b11ff7c53a93865afe1d9b8860c4b887e005",
+    "bytes": 11410,
+    "mtime": 1791741442.0202708,
+    "lines": 528
+   },
+   "current_prefl_r6": {
+    "sha256": "e051618d0e637232aa19bc9fdb62b11ff7c53a93865afe1d9b8860c4b887e005",
+    "bytes": 11410,
+    "matches_after": true
+   }
+  },
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\evidence\\r4\\consumer_test_receipts\\api_error.receipt.json",
+   "frozen_R4_evidence": true,
+   "before": {
+    "sha256": "1a5ec72dc458a838481f4fd2e8b41bf908cfef9b18767724a3af35e5b698952e",
+    "bytes": 2996,
+    "mtime": 1791698457.0992546,
+    "lines": 76
+   },
+   "after": {
+    "sha256": "dc6a19fa0db4605053f5f73af7a22de376342437a236a923a6f0832db2a34247",
+    "bytes": 2996,
+    "mtime": 1791741368.9470284,
+    "lines": 76
+   },
+   "current_prefl_r6": {
+    "sha256": "dc6a19fa0db4605053f5f73af7a22de376342437a236a923a6f0832db2a34247",
+    "bytes": 2996,
+    "matches_after": true
+   }
+  },
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\evidence\\r4\\consumer_test_receipts\\dupkeys.receipt.json",
+   "frozen_R4_evidence": true,
+   "before": {
+    "sha256": "5e6374b296a3f1d9ccddab2092cade17fcc2f59e98142bc76facc1c64d5215fd",
+    "bytes": 2959,
+    "mtime": 1791698412.2391047,
+    "lines": 76
+   },
+   "after": {
+    "sha256": "ff31bdde0ea86a50008e3703c518948ea795495a6b117b8a1ebe55e9caf6bf8b",
+    "bytes": 2960,
+    "mtime": 1791741310.2121053,
+    "lines": 76
+   },
+   "current_prefl_r6": {
+    "sha256": "ff31bdde0ea86a50008e3703c518948ea795495a6b117b8a1ebe55e9caf6bf8b",
+    "bytes": 2960,
+    "matches_after": true
+   }
+  },
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\evidence\\r4\\consumer_test_receipts\\empty_cont.receipt.json",
+   "frozen_R4_evidence": true,
+   "before": {
+    "sha256": "c5e853683d81ea7c7c8cb9b9e1bf18ef53b9bcddf9dcbfbfce97c9942e2e6d88",
+    "bytes": 3464,
+    "mtime": 1791698472.0554292,
+    "lines": 76
+   },
+   "after": {
+    "sha256": "716438dc7ef73c8e8012a084e7cbea8dd97b87d2021c9f4da6c233ef26ea4a1b",
+    "bytes": 3464,
+    "mtime": 1791741388.4946332,
+    "lines": 76
+   },
+   "current_prefl_r6": {
+    "sha256": "716438dc7ef73c8e8012a084e7cbea8dd97b87d2021c9f4da6c233ef26ea4a1b",
+    "bytes": 3464,
+    "matches_after": true
+   }
+  },
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\evidence\\r4\\consumer_test_receipts\\exit_nonzero.receipt.json",
+   "frozen_R4_evidence": true,
+   "before": {
+    "sha256": "f823a30f74de7386ef23e8b68f393d778e20b6fe3f51b7dfd7a2663c80a73c1c",
+    "bytes": 3001,
+    "mtime": 1791698464.5865307,
+    "lines": 77
+   },
+   "after": {
+    "sha256": "a7df618a03ff233b4db8a9b1c08b2c57843f2ecd960ce72984981359d3025f3c",
+    "bytes": 3002,
+    "mtime": 1791741378.6310303,
+    "lines": 77
+   },
+   "current_prefl_r6": {
+    "sha256": "a7df618a03ff233b4db8a9b1c08b2c57843f2ecd960ce72984981359d3025f3c",
+    "bytes": 3002,
+    "matches_after": true
+   }
+  },
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\evidence\\r4\\consumer_test_receipts\\future_pass.receipt.json",
+   "frozen_R4_evidence": true,
+   "before": {
+    "sha256": "04aeff75d071176433e9054061d138028418f4ebbef1ec2a6f55db06fef4fb8e",
+    "bytes": 3502,
+    "mtime": 1791698374.8045304,
+    "lines": 92
+   },
+   "after": {
+    "sha256": "459b772cdda103c699b421d3002720bf179440e99363258c63822b445a028722",
+    "bytes": 3503,
+    "mtime": 1791741261.7489305,
+    "lines": 92
+   },
+   "current_prefl_r6": {
+    "sha256": "459b772cdda103c699b421d3002720bf179440e99363258c63822b445a028722",
+    "bytes": 3503,
+    "matches_after": true
+   }
+  },
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\evidence\\r4\\consumer_test_receipts\\matrix_mismatch.receipt.json",
+   "frozen_R4_evidence": true,
+   "before": {
+    "sha256": "6dc1ae7c6f349b6f0e7f767fcc7e3de8c9f37f580f6b15e4fb10c12653b5e366",
+    "bytes": 2986,
+    "mtime": 1791698449.6314688,
+    "lines": 76
+   },
+   "after": {
+    "sha256": "35228c3a003ef428e866588b2f8fad6c282f4895c657d9bceaff291c19bb3238",
+    "bytes": 2986,
+    "mtime": 1791741359.2489347,
+    "lines": 76
+   },
+   "current_prefl_r6": {
+    "sha256": "35228c3a003ef428e866588b2f8fad6c282f4895c657d9bceaff291c19bb3238",
+    "bytes": 2986,
+    "matches_after": true
+   }
+  },
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\evidence\\r4\\consumer_test_receipts\\missing_artifact.receipt.json",
+   "frozen_R4_evidence": true,
+   "before": {
+    "sha256": "24146cbdeffb8cb81dd77246358cbfafd84c4495bab1b46024f4ed6aee568d06",
+    "bytes": 3230,
+    "mtime": 1791698442.1338997,
+    "lines": 76
+   },
+   "after": {
+    "sha256": "73b5964b4406aba39dff29d6e546cbd0d6be589ba3cf3fa9c18fbabf5b9e0a28",
+    "bytes": 3230,
+    "mtime": 1791741349.3620584,
+    "lines": 76
+   },
+   "current_prefl_r6": {
+    "sha256": "73b5964b4406aba39dff29d6e546cbd0d6be589ba3cf3fa9c18fbabf5b9e0a28",
+    "bytes": 3230,
+    "matches_after": true
+   }
+  },
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\evidence\\r4\\consumer_test_receipts\\ok_continue.receipt.json",
+   "frozen_R4_evidence": true,
+   "before": {
+    "sha256": "a213f6cbcfe8c39d372262a5730fc0ff5c0eb3959046c9ad429c25436b53e627",
+    "bytes": 3464,
+    "mtime": 1791698367.2981741,
+    "lines": 92
+   },
+   "after": {
+    "sha256": "489b432ff6cdc81fdfef37c9fba8c670615d4f4b9433b69dd5159ee08bc55e58",
+    "bytes": 3464,
+    "mtime": 1791741251.900795,
+    "lines": 92
+   },
+   "current_prefl_r6": {
+    "sha256": "489b432ff6cdc81fdfef37c9fba8c670615d4f4b9433b69dd5159ee08bc55e58",
+    "bytes": 3464,
+    "matches_after": true
+   }
+  },
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\evidence\\r4\\consumer_test_receipts\\ok_submitted.receipt.json",
+   "frozen_R4_evidence": true,
+   "before": {
+    "sha256": "55a14b3982ff793f143b6544bb7471288932e0a3ee7e568a212685dc5b1b9f8c",
+    "bytes": 4962,
+    "mtime": 1791698389.7754087,
+    "lines": 128
+   },
+   "after": {
+    "sha256": "2bf163856bb2b3b4fbe0123abdf251e9806526e7e8853711c26154d05e9c1806",
+    "bytes": 4962,
+    "mtime": 1791741281.2137175,
+    "lines": 128
+   },
+   "current_prefl_r6": {
+    "sha256": "2bf163856bb2b3b4fbe0123abdf251e9806526e7e8853711c26154d05e9c1806",
+    "bytes": 4962,
+    "matches_after": true
+   }
+  },
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\evidence\\r4\\consumer_test_receipts\\prose_only.receipt.json",
+   "frozen_R4_evidence": true,
+   "before": {
+    "sha256": "087ae77eea5c7351ff5b9f7b7aa48291e9040173ae7de429093db0f70ed4f922",
+    "bytes": 3270,
+    "mtime": 1791698397.2704434,
+    "lines": 77
+   },
+   "after": {
+    "sha256": "5fa198403859bc2c4662bff3f81dc57d0ee9ddf5c251e2cbfe8a9971358eeff4",
+    "bytes": 3270,
+    "mtime": 1791741290.8745582,
+    "lines": 77
+   },
+   "current_prefl_r6": {
+    "sha256": "5fa198403859bc2c4662bff3f81dc57d0ee9ddf5c251e2cbfe8a9971358eeff4",
+    "bytes": 3270,
+    "matches_after": true
+   }
+  },
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\evidence\\r4\\consumer_test_receipts\\quoted.receipt.json",
+   "frozen_R4_evidence": true,
+   "before": {
+    "sha256": "658545de126a5209435780b8a2533ca0c19862b56e35ee4213a55d38039f1cad",
+    "bytes": 3443,
+    "mtime": 1791698382.279349,
+    "lines": 91
+   },
+   "after": {
+    "sha256": "f77abd5c0c60347fcb98c371c5f7ffe8008c3d66a91524a251a78436eb2bd3bf",
+    "bytes": 3444,
+    "mtime": 1791741271.5127423,
+    "lines": 91
+   },
+   "current_prefl_r6": {
+    "sha256": "f77abd5c0c60347fcb98c371c5f7ffe8008c3d66a91524a251a78436eb2bd3bf",
+    "bytes": 3444,
+    "matches_after": true
+   }
+  },
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\evidence\\r4\\consumer_test_receipts\\truncated.receipt.json",
+   "frozen_R4_evidence": true,
+   "before": {
+    "sha256": "bc29c35206e692f64f6749b3d726aa4ebc09fc870edb55f0a297c4e28c873d43",
+    "bytes": 2998,
+    "mtime": 1791698404.7387593,
+    "lines": 76
+   },
+   "after": {
+    "sha256": "c2c705a0c207238724ea221c70a03375a6917ee09d53100b97c154f99994cd66",
+    "bytes": 2998,
+    "mtime": 1791741300.532464,
+    "lines": 76
+   },
+   "current_prefl_r6": {
+    "sha256": "c2c705a0c207238724ea221c70a03375a6917ee09d53100b97c154f99994cd66",
+    "bytes": 2998,
+    "matches_after": true
+   }
+  },
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\evidence\\r4\\consumer_test_receipts\\wrong_invocation.receipt.json",
+   "frozen_R4_evidence": true,
+   "before": {
+    "sha256": "ca0c5d4e952873bf75ea093f6d1c40383f5456f5669ab45b0613c3388fc905ac",
+    "bytes": 3010,
+    "mtime": 1791698427.1843896,
+    "lines": 76
+   },
+   "after": {
+    "sha256": "e2413c950f6ab710761b0897fd03345bc622fbd20b4d3916db32cde3f6c5ae6f",
+    "bytes": 3010,
+    "mtime": 1791741329.9753816,
+    "lines": 76
+   },
+   "current_prefl_r6": {
+    "sha256": "e2413c950f6ab710761b0897fd03345bc622fbd20b4d3916db32cde3f6c5ae6f",
+    "bytes": 3010,
+    "matches_after": true
+   }
+  },
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\evidence\\r4\\consumer_test_receipts\\wrong_owner.receipt.json",
+   "frozen_R4_evidence": true,
+   "before": {
+    "sha256": "10ac3703b807727a382e391061455b6bd515df7fd31cd2a825cfc137c68779f9",
+    "bytes": 2992,
+    "mtime": 1791698419.713967,
+    "lines": 76
+   },
+   "after": {
+    "sha256": "97aee3b2775017e172b5e81c63403c767f72aa594091d3349305a575d5cde431",
+    "bytes": 2991,
+    "mtime": 1791741320.1851456,
+    "lines": 76
+   },
+   "current_prefl_r6": {
+    "sha256": "97aee3b2775017e172b5e81c63403c767f72aa594091d3349305a575d5cde431",
+    "bytes": 2991,
+    "matches_after": true
+   }
+  },
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\evidence\\r4\\consumer_test_receipts\\wrong_packet.receipt.json",
+   "frozen_R4_evidence": true,
+   "before": {
+    "sha256": "b76e041f34e2ae3afd2f1489268b404ba2972a20c034818a7a2c4d9cf21c891a",
+    "bytes": 3002,
+    "mtime": 1791698434.6585124,
+    "lines": 76
+   },
+   "after": {
+    "sha256": "169fe8cb7c163f6a8f0ff7dd6fb2fc4a9b5b257a93d6b440fec714057617630c",
+    "bytes": 3002,
+    "mtime": 1791741339.6842122,
+    "lines": 76
+   },
+   "current_prefl_r6": {
+    "sha256": "169fe8cb7c163f6a8f0ff7dd6fb2fc4a9b5b257a93d6b440fec714057617630c",
+    "bytes": 3002,
+    "matches_after": true
+   }
+  }
+ ],
+ "allowed_files": [
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\tools\\dispatch_long.py",
+   "frozen_R4_evidence": false,
+   "before": {
+    "sha256": "ab17cbca30a9b364717b2ac7e208d690e2277555cf272d6f368cc3753e6c805d",
+    "bytes": 22677,
+    "mtime": 1791698198.085545,
+    "lines": 413
+   },
+   "after": {
+    "sha256": "78d1bc1fafc65868e07a5c64687716b1f64d577002e28216437db43265cb16fa",
+    "bytes": 28619,
+    "mtime": 1791741046.6770205,
+    "lines": 514
+   },
+   "current_prefl_r6": {
+    "sha256": "78d1bc1fafc65868e07a5c64687716b1f64d577002e28216437db43265cb16fa",
+    "bytes": 28619,
+    "matches_after": true
+   }
+  },
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\tools\\heartbeat_long.py",
+   "frozen_R4_evidence": false,
+   "before": {
+    "sha256": "242033f97c454a29b73ed96aa3053ae784dea4ec5b3b9a38c96e14533e0e3a8d",
+    "bytes": 16049,
+    "mtime": 1791698096.294169,
+    "lines": 367
+   },
+   "after": {
+    "sha256": "278c88588b4354d9093ce665be90b90b48920a89c04b6ee48f5145e3f500c450",
+    "bytes": 19836,
+    "mtime": 1791740504.274598,
+    "lines": 427
+   },
+   "current_prefl_r6": {
+    "sha256": "278c88588b4354d9093ce665be90b90b48920a89c04b6ee48f5145e3f500c450",
+    "bytes": 19836,
+    "matches_after": true
+   }
+  },
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\registry\\SESSION_REGISTRY.json",
+   "frozen_R4_evidence": false,
+   "before": {
+    "sha256": "7c081cdb05ba0dbad89e2aafcd80e10ea1d720c8d9187b7a7efd9def2a527625",
+    "bytes": 6669,
+    "mtime": 1791697817.2824516,
+    "lines": 115
+   },
+   "after": {
+    "sha256": "2932a0cc7964b6bfe9f3dbc09d729842e80408983404af4f88663a905fcb16a3",
+    "bytes": 10865,
+    "mtime": 1791766608.977737,
+    "lines": 138
+   },
+   "current_prefl_r6": {
+    "sha256": "2932a0cc7964b6bfe9f3dbc09d729842e80408983404af4f88663a905fcb16a3",
+    "bytes": 10865,
+    "matches_after": true
+   }
+  },
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\tools\\invocation_runtime.py",
+   "frozen_R4_evidence": false,
+   "before": {
+    "sha256": "83a8d43a30c1d577b2b3cdeccfbf6ca87e4847899bb8423e8329f6a585243d81",
+    "bytes": 13635,
+    "mtime": 1791702985.9615304,
+    "lines": 349
+   },
+   "after": {
+    "sha256": "86fc59156a357da7aa6b8691dfccc983b009548e7af4e2ea9ad9b226336b1775",
+    "bytes": 25380,
+    "mtime": 1791740300.5661678,
+    "lines": 600
+   },
+   "current_prefl_r6": {
+    "sha256": "86fc59156a357da7aa6b8691dfccc983b009548e7af4e2ea9ad9b226336b1775",
+    "bytes": 25380,
+    "matches_after": true
+   }
+  },
+  {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\manager\\tools\\terminal_contract.py",
+   "frozen_R4_evidence": false,
+   "before": {
+    "sha256": "86901b8a11aa924a68077c815385ec729dbd94f4765df3cf160fe96beb221e7c",
+    "bytes": 5491,
+    "mtime": 1791697840.4426942,
+    "lines": 117
+   },
+   "after": {
+    "sha256": "80fce2e5c7e319db5732a5e78610bdc70048383baa94948ebdcece5c0438c461",
+    "bytes": 5850,
+    "mtime": 1791740524.786475,
+    "lines": 120
+   },
+   "current_prefl_r6": {
+    "sha256": "80fce2e5c7e319db5732a5e78610bdc70048383baa94948ebdcece5c0438c461",
+    "bytes": 5850,
+    "matches_after": true
+   }
+  }
+ ],
+ "current_vs_after_mismatches": [],
+ "preserved_copies": [
+  "consumer_test_receipts__api_error.receipt.json",
+  "consumer_test_receipts__dupkeys.receipt.json",
+  "consumer_test_receipts__empty_cont.receipt.json",
+  "consumer_test_receipts__exit_nonzero.receipt.json",
+  "consumer_test_receipts__future_pass.receipt.json",
+  "consumer_test_receipts__matrix_mismatch.receipt.json",
+  "consumer_test_receipts__missing_artifact.receipt.json",
+  "consumer_test_receipts__ok_continue.receipt.json",
+  "consumer_test_receipts__ok_submitted.receipt.json",
+  "consumer_test_receipts__prose_only.receipt.json",
+  "consumer_test_receipts__quoted.receipt.json",
+  "consumer_test_receipts__truncated.receipt.json",
+  "consumer_test_receipts__wrong_invocation.receipt.json",
+  "consumer_test_receipts__wrong_owner.receipt.json",
+  "consumer_test_receipts__wrong_packet.receipt.json",
+  "r4__R4_HARNESS_TEST_RESULTS.json"
+ ],
+ "policy": "No restore/backdate/refresh. Current bytes preserved here; the reviewer probe pair (before/after) is authoritative history. R6 guard treats all 16 + R4 tracks/masks as protected."
+}

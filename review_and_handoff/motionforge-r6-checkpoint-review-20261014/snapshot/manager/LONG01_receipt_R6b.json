@@ -1,0 +1,81 @@
+{
+  "absolute_deadline_epoch": null,
+  "allowed_root": "C:/Users/Admin/Documents/Codex/work/mf-delivery-runs/20261005/20261005T1643Z-wan-long/tasks/MF-DEMO-LONG-01/corrections/identity5m_20261008/r6",
+  "api_mode_pinned_in_packet": "chat_completions",
+  "base_url": "http://127.0.0.1:20128/v1",
+  "context_metrics": {
+    "compactions_observed": 1,
+    "context_window_advertised": 1000000,
+    "label": "observed counts; token estimate is the CLI's own",
+    "last_context_line": null,
+    "max_output_setting": "16384",
+    "tool_actions_observed": 165
+  },
+  "controller_lock": "held",
+  "cwd": "tasks/MF-DEMO-LONG-01",
+  "exit_code": 0,
+  "fallback": false,
+  "gpu_lease_release": {
+    "children": [
+      {
+        "pid": 36432,
+        "state": "DEAD"
+      },
+      {
+        "pid": 34488,
+        "state": "DEAD"
+      }
+    ],
+    "detail": "no queue job, no runner process",
+    "released": true
+  },
+  "invocation_id": "LONG01-R6b-20261012T0825Z-1d8c",
+  "launcher_pid": 43140,
+  "legacy_prose_outcome": {
+    "class": "CONTINUE_REQUIRED",
+    "exit_code": 0,
+    "marker": "continue_required",
+    "match_pos": 166850,
+    "not_completed": true
+  },
+  "log": "tasks/MF-DEMO-LONG-01/worker_R6b.log",
+  "log_bytes": 237060,
+  "max_tokens_effective_scheme": "HERMES_MAX_TOKENS env on child process (cli.py:4352); lever verified 2026-10-06 (HERMES_MAX_TOKENS=24 -> output cut at 24 tokens)",
+  "max_tokens_requested": "16384",
+  "max_turns": "80",
+  "max_turns_note": "invocation boundary, NOT a task stop gate (packet \u00a74)",
+  "model": "cmc/deepseek/deepseek-v4.1-flash",
+  "new_session": false,
+  "note": "exit code alone is NOT completion proof - read the log payload; check for finish_reason='length' / 'API call failed' / UsageLimit",
+  "outcome_class": "NEEDS_RECONCILIATION",
+  "outcome_detail": {
+    "class": "NEEDS_RECONCILIATION",
+    "error": "[WinError 2] The system cannot find the file specified: 'C:\\\\Users\\\\Admin\\\\Documents\\\\Codex\\\\work\\\\mf-delivery-runs\\\\20261005\\\\20261005T1643Z-wan-long\\\\tasks\\\\MF-DEMO-LONG-01\\\\corrections\\\\identity5m_20261008\\\\r6\\\\evidence\\\\terminal\\\\LONG01-R6b-20261012T0825Z-1d8c.json'",
+    "legacy_prose_class": "CONTINUE_REQUIRED",
+    "source": "structured_terminal"
+  },
+  "owner_sid": "20261007_234033_cc0b6d",
+  "packet": "manager/packets/LONG01_R6b.md",
+  "packet_bytes": 2849,
+  "packet_file_sha256": "188826b879ca8ec642f70458f5e2d508f9163cb84555a676148f16db850d2f57",
+  "packet_sha256": "c666b7747d73684a77c67b920907d50f3e1bbb24b5ad75af636ffd8a3478df76",
+  "provider": "custom",
+  "remaining_seconds_at_dispatch": null,
+  "resume_session_requested": "20261007_234033_cc0b6d",
+  "revision": "r6",
+  "round": "LONG01_R6b.md",
+  "run_id": "20261005T1643Z-wan-long",
+  "session_id_actual": "20261007_234033_cc0b6d",
+  "skills": null,
+  "stall_kill_seconds": 3600,
+  "task_id": "MF-DEMO-LONG-01",
+  "terminal_validation": {
+    "decision": "NEEDS_RECONCILIATION",
+    "error": "[WinError 2] The system cannot find the file specified: 'C:\\\\Users\\\\Admin\\\\Documents\\\\Codex\\\\work\\\\mf-delivery-runs\\\\20261005\\\\20261005T1643Z-wan-long\\\\tasks\\\\MF-DEMO-LONG-01\\\\corrections\\\\identity5m_20261008\\\\r6\\\\evidence\\\\terminal\\\\LONG01-R6b-20261012T0825Z-1d8c.json'",
+    "quality_accepted": false
+  },
+  "timed_out": false,
+  "toolsets": null,
+  "utc_end": "2026-10-12T12:06:09.842897+00:00",
+  "utc_start": "2026-10-12T08:23:15.335751+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "owner": "/root/motionforge_c02b2_coder",
+  "files": [
+    {
+      "bytes": 4687,
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c02b2-worker\\probe_c02b2_v4.py",
+      "lines": 60,
+      "sha256": "22600137d75e71d0fe40502355096ee13c36e9ac7187fc977f219645bd29be03"
+    }
+  ],
+  "task": "CODEX-C02B2-PER-ACTOR-VERIFIED-REUSE",
+  "phase": "fixture path fix after replay setup error",
+  "last_test": "v4-replay-01 exit1 FileExistsError; no producer run reached",
+  "live_jobs": [],
+  "next": "run v4 replay in a fresh fixture output",
+  "model": "gpt-6-sol/max/no-fallback"
+}

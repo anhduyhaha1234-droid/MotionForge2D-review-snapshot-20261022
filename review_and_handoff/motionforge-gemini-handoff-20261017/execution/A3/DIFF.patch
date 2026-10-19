@@ -1,0 +1,162 @@
+--- preimage/scripts/r6_propagate.py
++++ r6/scripts/r6_propagate.py
+@@ -20,7 +20,7 @@
+ import r6_gate as G  # noqa: E402
+ 
+ REC = K.R6 / "receipts/R6_PROPAGATE_RUNS.jsonl"
+-NS = K.R6 / "continuations/LONG01-R6g-20261014T0725Z-1572"
++NS = Path(os.environ.get("R6_PROPAGATE_NS", K.R6 / "continuations/LONG01-R6g-20261014T0725Z-1572"))
+ 
+ 
+ def blend_script():
+@@ -32,14 +32,17 @@
+ def event_fids_for(sid: str, row: dict) -> set:
+     ev = set()
+     for e in row.get("events", []):
+-        if isinstance(e, dict) and "frame" in e:
+-            ev.add(int(e["frame"]))
++        if isinstance(e, dict):
++            if "frame" in e:
++                ev.add(int(e["frame"]))
++            elif "f" in e:
++                ev.add(int(e["f"]) + 1)
+     for c in row.get("contacts", []):
+         if isinstance(c, dict) and "from" in c:
+             ev.add(int(c["from"]) + 1)
+-    for a in row["actors"]:
+-        for w in a["class_windows"]:
+-            if w["from"] > 1 and w["class"] in ("VISIBLE", "PARTIALLY_VISIBLE"):
++    for a in row.get("actors", []):
++        for w in a.get("class_windows", []):
++            if w.get("from", 0) > 1 and w.get("class") in ("VISIBLE", "PARTIALLY_VISIBLE"):
+                 ev.add(int(w["from"]))
+     return ev
+ 
+@@ -53,20 +56,22 @@
+     return sorted(fids)
+ 
+ 
+-def plan_runs(key_fids: list, m: int) -> list:
++def plan_runs(key_fids: list, m: int, cuts: list | None = None) -> list:
+     """Decompose [1..m] into runs whose internal spacing is uniform: consecutive runs split where
+-    the spacing between consecutive key fids changes."""
+-    seq = sorted(set(key_fids) | {1, m})
++    the spacing between consecutive key fids changes, and never interpolate across hard cuts."""
++    cut_set = set(cuts or [])
++    seq = sorted(set(key_fids) | {1, m} | cut_set)
+     runs = []
+     cur = [seq[0]]
+     for a, b in zip(seq, seq[1:]):
+         d = b - a
+-        if len(cur) >= 2 and (cur[-1] - cur[-2]) != d:
++        if len(cur) >= 2 and ((cur[-1] - cur[-2]) != d or cur[-1] in cut_set):
+             runs.append(cur)
+             cur = [cur[-1]]
+         cur.append(b)
+-    runs.append(cur)
+-    return runs
++    if cur not in runs:
++        runs.append(cur)
++    return [r for r in runs if len(r) >= 2]
+ 
+ 
+ def run_one(base: Path, beg: int, end: int, itv: int, script: Path, nproc: int):
+
+--- preimage/scripts/r6_cotracker.py
++++ r6/scripts/r6_cotracker.py
+@@ -17,6 +17,22 @@
+ OUTD = K.R6 / "evidence/cotracker"
+ OUTD.mkdir(parents=True, exist_ok=True)
+ REC = K.R6 / "receipts/R6_COTRACKER_RUNS.jsonl"
++
++
++
++def validate_cotracker_tensors(tr: np.ndarray, vis: np.ndarray, expected_T: int, expected_N: int) -> tuple[bool, str]:
++    """Validate cotracker outputs: (T,N,2) float32, (T,N) bool/uint8, finite, within canvas bounds."""
++    if not isinstance(tr, np.ndarray) or not isinstance(vis, np.ndarray):
++        return False, "tracks and vis must be numpy arrays"
++    if tr.shape != (expected_T, expected_N, 2):
++        return False, f"tracks shape mismatch: {tr.shape} vs {(expected_T, expected_N, 2)}"
++    if vis.shape != (expected_T, expected_N):
++        return False, f"vis shape mismatch: {vis.shape} vs {(expected_T, expected_N)}"
++    if not np.isfinite(tr).all():
++        return False, "tracks contain non-finite values (NaN or Inf)"
++    if (tr[..., 0] < -32).any() or (tr[..., 0] > 672).any() or (tr[..., 1] < -32).any() or (tr[..., 1] > 400).any():
++        return False, "tracks coordinates far outside canvas bounds"
++    return True, "ok"
+ 
+ 
+ def ckpt():
+@@ -99,6 +115,9 @@
+         tr, vis = model(vid, queries=q)
+         tr = tr[0].detach().cpu().numpy(); vis = vis[0].detach().cpu().numpy()
+         wall = round(time.time() - t0, 1)
++        ok, why = validate_cotracker_tensors(tr, vis, T, len(sq["pts"]))
++        if not ok:
++            raise SystemExit(f"COTRACKER_TENSOR_INVALID {sid} {kind}: {why}")
+         np.save(OUTD / f"{sid}_{kind}_tracks.npy", tr)
+         np.save(OUTD / f"{sid}_{kind}_vis.npy", vis)
+         out[kind] = {"wall_s": wall, "T": int(tr.shape[0]), "N": int(tr.shape[1])}
+@@ -141,7 +160,7 @@
+     except Exception:
+         font = _F.load_default()
+     w0 = windows[0]
+-    ev_dir = K.R6 / "continuations/LONG01-R6g-20261014T0725Z-1572/evidence/cotracker"
++    ev_dir = Path(os.environ.get("R6_COTRACKER_EV_DIR", OUTD))
+     ev_dir.mkdir(parents=True, exist_ok=True)
+     tiles = []
+     for tag in ("before", "contact", "hold", "release"):
+@@ -155,7 +174,7 @@
+         x = 4 + j * (320 + 6)
+         dr.text((x, 4), f"{sid} {tag}", fill=(255, 220, 80), font=font)
+         c.paste(_I.fromarray(a).resize((320, 180)), (x, 20))
+-        c.paste(_I.fromarray(b).resize((320, 180)), (x, 20 + 190)) if False else None
++        c.paste(_I.fromarray(b).resize((320, 180)), (x, 20 + 190))
+     c.save(ev_dir / f"{sid}_windows_strip.png")
+     vram = round(torch.cuda.max_memory_allocated() / 2**20) if torch.cuda.is_available() else 0
+     qsnap = OUTD / f"{sid}_queries.npy"
+
+--- preimage/scripts/r6_ledger.py
++++ r6/scripts/r6_ledger.py
+@@ -105,8 +105,23 @@
+         sid = r["shot"]
+         grid = json.loads((R5_SB / f"{sid}.json").read_text(encoding="utf-8"))
+         fids = [k["fid"] for k in grid["keys"]]
++        ev_fids = set()
++        for e in r.get("events", []):
++            if isinstance(e, dict):
++                if "f" in e:
++                    ev_fids.add(int(e["f"]) + 1)
++                elif "frame" in e:
++                    ev_fids.add(int(e["frame"]))
++        for c in r.get("contacts", []):
++            if isinstance(c, dict) and "from" in c:
++                ev_fids.add(int(c["from"]) + 1)
++        for a in r.get("actors", []):
++            for w in a.get("class_windows", []):
++                if w.get("from", 0) > 1 and w.get("class") in ("VISIBLE", "PARTIALLY_VISIBLE"):
++                    ev_fids.add(int(w["from"]))
++        all_fids = sorted(set(fids) | {f for f in ev_fids if 1 <= f <= r["n"]})
+         keys = []
+-        for fid in fids:
++        for fid in all_fids:
+             exp = {}
+             for a in r["actors"]:
+                 cls = "NOT_PRESENT"
+
+--- preimage/scripts/r6_gate.py
++++ r6/scripts/r6_gate.py
+@@ -250,8 +250,11 @@
+     sb = json.loads((K.R6 / "storyboard" / f"{sid}.json").read_text(encoding="utf-8"))
+     ev_fids = set()
+     for e in row.get("events", []):
+-        if isinstance(e, dict) and "frame" in e:
+-            ev_fids.add(int(e["frame"]))
++        if isinstance(e, dict):
++            if "frame" in e:
++                ev_fids.add(int(e["frame"]))
++            elif "f" in e:
++                ev_fids.add(int(e["f"]) + 1)
+     for c in row.get("contacts", []):
+         if isinstance(c, dict) and "from" in c:
+             ev_fids.add(int(c["from"]) + 1)  # r3 'from' 0-based -> fid 1-based

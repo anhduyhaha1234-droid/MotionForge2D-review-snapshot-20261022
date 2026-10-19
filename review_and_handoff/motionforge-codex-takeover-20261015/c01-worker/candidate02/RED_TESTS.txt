@@ -1,0 +1,37 @@
+FFFF
+======================================================================
+FAIL: test_blend_producer_schema_and_full_mapping (__main__.ReviewBindingTests.test_blend_producer_schema_and_full_mapping)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 195, in test_blend_producer_schema_and_full_mapping
+    with self.assertRaisesRegex(self.gate.GateBlock, "CURRENT_FRAMES_MALFORMED"):
+AssertionError: GateBlock not raised
+
+======================================================================
+FAIL: test_real_gate_assemble_binds_review_to_consumed_blend_frames (__main__.ReviewBindingTests.test_real_gate_assemble_binds_review_to_consumed_blend_frames) (case='truncated')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 262, in test_real_gate_assemble_binds_review_to_consumed_blend_frames
+    with self.assertRaisesRegex(self.gate.GateBlock, "ASSEMBLE_BLOCKED.*FRAME_IDENTITY"):
+AssertionError: GateBlock not raised
+
+======================================================================
+FAIL: test_real_gate_assemble_binds_review_to_consumed_blend_frames (__main__.ReviewBindingTests.test_real_gate_assemble_binds_review_to_consumed_blend_frames) (case='overlong')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 262, in test_real_gate_assemble_binds_review_to_consumed_blend_frames
+    with self.assertRaisesRegex(self.gate.GateBlock, "ASSEMBLE_BLOCKED.*FRAME_IDENTITY"):
+AssertionError: GateBlock not raised
+
+======================================================================
+FAIL: test_real_gate_assemble_binds_review_to_consumed_blend_frames (__main__.ReviewBindingTests.test_real_gate_assemble_binds_review_to_consumed_blend_frames) (case='reordered')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 262, in test_real_gate_assemble_binds_review_to_consumed_blend_frames
+    with self.assertRaisesRegex(self.gate.GateBlock, "ASSEMBLE_BLOCKED.*FRAME_IDENTITY"):
+AssertionError: GateBlock not raised
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.081s
+
+FAILED (failures=4)

@@ -1,0 +1,66 @@
+{
+  "version": "2.0.0",
+  "name": "Schema Problems",
+  "source_video": "projects/schema_problems/media.mp4",
+  "scenes": [
+    {
+      "scene_id": 0,
+      "start_frame": 0,
+      "end_frame": 5,
+      "start_time_sec": 0.0,
+      "end_time_sec": 1.0,
+      "duration_sec": 1.0,
+      "frame_count": 6
+    },
+    {
+      "scene_id": 0,
+      "start_frame": 6,
+      "end_frame": 10,
+      "start_time_sec": 1.0,
+      "end_time_sec": 2.0,
+      "duration_sec": 1.0,
+      "frame_count": 5
+    },
+    {
+      "scene_id": 1,
+      "start_frame": 99,
+      "end_frame": 50,
+      "start_time_sec": 0.0,
+      "end_time_sec": 1.0,
+      "duration_sec": 1.0,
+      "frame_count": 1
+    }
+  ],
+  "objects": [
+    {
+      "object_id": "dup",
+      "name": "First",
+      "kind": "character",
+      "scene_id": 0,
+      "selection": {
+        "mode": "point",
+        "frame_index": 0,
+        "x": 0.0,
+        "y": 0.0
+      },
+      "motion": null
+    },
+    {
+      "object_id": "dup",
+      "name": "Second",
+      "kind": "character",
+      "scene_id": 0,
+      "selection": {
+        "mode": "point",
+        "frame_index": 0,
+        "x": 0.0,
+        "y": 0.0
+      },
+      "motion": null
+    }
+  ],
+  "channel_id": "",
+  "task_status": "draft",
+  "created_at": "",
+  "updated_at": ""
+}

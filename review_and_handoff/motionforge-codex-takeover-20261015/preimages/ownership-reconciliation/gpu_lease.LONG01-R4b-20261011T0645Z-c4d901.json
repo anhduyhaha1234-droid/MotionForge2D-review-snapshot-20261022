@@ -1,0 +1,36 @@
+{
+  "acquired_utc": "2026-10-11T06:39:58.978059+00:00",
+  "children": [
+    {
+      "created": "20261011133958.969268+420",
+      "name": "hermes.exe",
+      "pid": 34996
+    }
+  ],
+  "detached": false,
+  "invocation_id": "LONG01-R4b-20261011T0645Z-c4d901",
+  "job": "LONG01_R4b.md",
+  "launcher_pid": 33452,
+  "owner_sid": "20261007_234033_cc0b6d",
+  "release_attempts": [
+    {
+      "at_utc": "2026-10-11T07:13:04.116504+00:00",
+      "children": [
+        {
+          "pid": 34996,
+          "state": "DEAD"
+        }
+      ],
+      "context": "controller_exit",
+      "render_probe": {
+        "detail": "no queue job, no runner process",
+        "quiet": true
+      }
+    }
+  ],
+  "release_reason": "no queue job, no runner process",
+  "released_utc": "2026-10-11T07:13:04.116504+00:00",
+  "run": "20261005T1643Z-wan-long",
+  "run_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long",
+  "status": "RELEASED"
+}

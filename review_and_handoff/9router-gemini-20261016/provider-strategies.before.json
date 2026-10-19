@@ -1,0 +1,25 @@
+{
+  "opencode-go": {
+    "fallbackStrategy": "round-robin",
+    "stickyRoundRobinLimit": 1
+  },
+  "openrouter": {
+    "fallbackStrategy": "round-robin",
+    "stickyRoundRobinLimit": 1
+  },
+  "commandcode": {
+    "fallbackStrategy": "round-robin",
+    "stickyRoundRobinLimit": 1
+  },
+  "openai-compatible-chat-d3d114f5-40a5-4aaa-bfc6-fb0d63371f66": {
+    "fallbackStrategy": "round-robin",
+    "stickyRoundRobinLimit": 1
+  },
+  "openai-compatible-chat-54d0e38d-e178-4771-9177-a17d26a64b83": {
+    "fallbackStrategy": "round-robin",
+    "stickyRoundRobinLimit": 1
+  },
+  "opencode": {
+    "proxyPoolId": "4d92ffe2-cdf9-4ef6-b6ee-93db36d0a26d"
+  }
+}

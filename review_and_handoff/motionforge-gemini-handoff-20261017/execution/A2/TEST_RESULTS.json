@@ -1,0 +1,61 @@
+{
+  "task": "GEMINI-C02B3-ASSET-VERIFIED-REUSE",
+  "executed_utc": "2026-10-17T08:53:01.288958+00:00",
+  "runner": "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\venv\\Scripts\\python.exe",
+  "suite_summary": {
+    "total_tests": 64,
+    "passed": 64,
+    "failed": 0,
+    "errors": 0,
+    "duration_seconds": 5.583
+  },
+  "modules": [
+    {
+      "module": "tests/test_codex_c01_review_binding.py",
+      "tests_count": 17,
+      "status": "PASS"
+    },
+    {
+      "module": "tests/test_codex_c02a_dependency_verification.py",
+      "tests_count": 13,
+      "status": "PASS"
+    },
+    {
+      "module": "tests/test_codex_c02b1_staged_source.py",
+      "tests_count": 10,
+      "status": "PASS"
+    },
+    {
+      "module": "tests/test_codex_c02b2_per_actor_reuse.py",
+      "tests_count": 14,
+      "status": "PASS"
+    },
+    {
+      "module": "tests/test_gemini_c02b3_asset_reuse.py",
+      "tests_count": 10,
+      "status": "PASS",
+      "cases": [
+        "AssetRestyleVerifiedReuseTests.test_t1_asset_restyle_replay_unchanged: PASS",
+        "AssetRestyleVerifiedReuseTests.test_t1_missing_review_blocks_skip: PASS",
+        "AssetRestyleVerifiedReuseTests.test_t1_wrong_review_blocks_skip: PASS",
+        "AssetRestyleVerifiedReuseTests.test_t2_same_path_same_size_mutations_and_restores: PASS",
+        "AssetRestyleVerifiedReuseTests.test_t2_settings_and_storyboard_mutations: PASS",
+        "AssetRestyleVerifiedReuseTests.test_t4_legacy_v3_asset_record_denial: PASS",
+        "AssetRestyleVerifiedReuseTests.test_t5_injected_post_failure_does_not_publish_deps: PASS",
+        "AssetRestyleVerifiedReuseTests.test_t5_blank_edit_failure_does_not_publish_deps: PASS",
+        "AssetBlackPassthroughTests.test_t3_black_passthrough_replay_unchanged: PASS",
+        "AssetBlackPassthroughTests.test_t3_black_passthrough_rejects_non_flat_source: PASS"
+      ]
+    }
+  ],
+  "root_probe_v4": {
+    "command": "python -B probe_c02b2_v4.py --scripts R6/scripts --out WORK/A2/probe_v4_result",
+    "initial_generation_calls": 1,
+    "unchanged_replay_generation_calls": 0,
+    "skip_before_replay": [
+      true,
+      "verified-reuse"
+    ],
+    "pass": true
+  }
+}

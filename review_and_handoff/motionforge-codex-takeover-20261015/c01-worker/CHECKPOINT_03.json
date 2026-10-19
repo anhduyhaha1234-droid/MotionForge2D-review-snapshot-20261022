@@ -1,0 +1,23 @@
+{
+  "status": "TASK_SUBMITTED_PENDING_ROOT_REVIEW",
+  "task": "CODEX-C01-REVIEW-BINDING",
+  "owner_model": "gpt-6-sol/max",
+  "rules_loaded": true,
+  "allowlist": ["R6/scripts/r6_gate.py", "R6/tests/test_codex_c01_review_binding.py", "OUT/c01-worker/**"],
+  "candidate_manifest": "CANDIDATE_MANIFEST_FINAL.json",
+  "candidate_manifest_sha256": "F6161FFCAE80BD700D84749F635307018A7EB7A475367EFAEFF726CE186A8DEE",
+  "gate_sha256": "62C2BFEE57F438BAA3ADDB087D2045C68D042DC6D0D70A8BB6FC8B5036F1B8C0",
+  "test_sha256": "83303567EB49ED25F9A0CCE706C30B9A8D8EFB8D863B494F68985AC860542CE8",
+  "protected_assembler_sha256": "0509D5F67FFCCE1721701F0C064EA4D68DD8660C6DCA9F6F4967EB78727301C2",
+  "protected_common_sha256": "17BF5799C445A6F7133C61D53B9D5C41083307ADD1D7B6A50ACDF83C294C15E3",
+  "self_review": "SELF_REVIEW.md",
+  "self_review_sha256": "5E7EBF553C44ACD0B4C24A59CE7DA141BC6305858044443C8DF9A9B7FA5EB625",
+  "tests": [
+    {"command": "C01_WORKER_DIR=<OUT>/c01-worker python -B R6/tests/test_codex_c01_review_binding.py", "exit": 0, "result": "16 tests OK", "raw": "FINAL_FOCUSED_TEST_OUTPUT.txt"},
+    {"command": "python -B OUT/c01-worker/run_existing_gate_safe.py R6", "exit": 0, "result": "2 unchanged historic F02 functions PASS", "raw": "EXISTING_GATE_SAFE_OUTPUT.txt"},
+    {"command": "python -B OUT/c01-worker/inspect_existing_reviews.py R6", "exit": 0, "result": "1013 key + 54 blend records accepted for shape/artifact", "raw": "EXISTING_REVIEW_SCHEMA_SURVEY.json"}
+  ],
+  "live_jobs_started_by_c01": [],
+  "remaining": "Independent root review on exact manifest hashes; C02 dependency recomputation and semantic media acceptance remain separate tasks.",
+  "next_command": "Root: inspect CANDIDATE_MANIFEST_FINAL.json, DIFF_R6_GATE.patch and DIFF_NEW_TEST_FINAL.patch; run fresh isolated probes on pinned candidate; return findings to this owner if needed."
+}

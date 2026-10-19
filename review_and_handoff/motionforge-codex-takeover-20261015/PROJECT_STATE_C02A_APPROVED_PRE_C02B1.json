@@ -1,0 +1,84 @@
+{
+  "schema": 1,
+  "updated_utc": "2026-10-16T07:25:41.961147+00:00",
+  "project": "MotionForge2D",
+  "parent": "MF-DEMO-LONG-01",
+  "parent_status": "NOT_APPROVED",
+  "task": "CODEX-C02A-DEPENDENCY-VERIFICATION",
+  "status": "C02A_APPROVED",
+  "model": "gpt-6-sol",
+  "reasoning": "max",
+  "owner": "/root/motionforge_c02a_coder",
+  "root_role": "independent PM/reviewer",
+  "active_writer": false,
+  "task_packet": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\TASK_C02A.md",
+  "current_baseline": "R6g actual bytes; no new R6g master submitted",
+  "next_action": "Same owner resumed from preserved partial R01 patch; self-review then independent root review of candidate02",
+  "quota": {
+    "research_agents_error": "Your workspace is out of credits. Ask your workspace owner to refill in order to continue.",
+    "context_remaining": "UNKNOWN",
+    "coder_prior_error": "C02A-R01: usage limit; try again at 2:08 PM",
+    "last_check": "QUOTA_RESUME_20261016T1412.json",
+    "ordinary_usage_allowed": true,
+    "primary_used_percent": 4,
+    "weekly_used_percent": 48,
+    "reset_observed": true
+  },
+  "roadmap": [
+    "C02A strict recorded dependency verification/current-file gate",
+    "C02B complete producer capture/settings/reuse/staged-source freshness",
+    "Event/child outcome correctness",
+    "Evidence and media corrections after engineering gates",
+    "300s pilot independent semantic acceptance",
+    "Tool integration and full-source scope after pilot approval"
+  ],
+  "checkpoint_contract": [
+    "intent",
+    "files+hashes",
+    "decisions",
+    "test commands+exit",
+    "remaining",
+    "next command",
+    "live jobs"
+  ],
+  "no_fallback": true,
+  "checkpoint": "c02a-worker/r01/CHECKPOINT-04.json",
+  "root_baseline_probes": {
+    "passed": 9,
+    "total": 30,
+    "receipt": "root-review/baseline-pinned/RESULT.json"
+  },
+  "automation": {
+    "id": "motionforge-checkpoint-v-quota",
+    "status": "ACTIVE",
+    "interval": "hourly",
+    "purpose": "meaningful status/quota changes in original chat"
+  },
+  "root_review": "C02A_REVIEW_02.md",
+  "resume_preflight": "RESUME_PREFLIGHT_C02A_R01_20261016T1412.json",
+  "root_candidate_01_probes": {
+    "initial_probes": "30/30 pass",
+    "worker_module_rerun": "16/16 pass",
+    "additional_blend_identity": "1/3 pass; truncated and overlong wrongly accepted",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "candidate_manifest": "c02a-worker/candidate-02/MANIFEST.json",
+  "completed_tasks": [
+    {
+      "task": "CODEX-C01-REVIEW-BINDING",
+      "verdict": "APPROVED",
+      "review": "C01_REVIEW_02.md",
+      "candidate": "c01-worker/candidate02/CANDIDATE_MANIFEST_R01.json",
+      "root_probes": "30/30 + 3/3",
+      "root_module": "17/17"
+    },
+    {
+      "task": "CODEX-C02A-DEPENDENCY-VERIFICATION",
+      "verdict": "APPROVED",
+      "review": "C02A_REVIEW_02.md",
+      "candidate": "c02a-worker/candidate-02/MANIFEST.json",
+      "root_probes": "55/55 + 8/8",
+      "root_module": "30/30"
+    }
+  ]
+}

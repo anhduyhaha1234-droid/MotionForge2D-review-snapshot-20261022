@@ -1,0 +1,9 @@
+{
+  "timestamp_utc": "2026-10-19T03:25:22.602704+00:00",
+  "active_writers": 0,
+  "gpu_jobs": [],
+  "controller_lock": false,
+  "all_leases_released": true,
+  "watchdog_state": "ACTIVE_MONITORING_NO_NUDGE_DURING_REVIEW",
+  "candidate_state": "FROZEN_FOR_CODEX_REVIEW"
+}

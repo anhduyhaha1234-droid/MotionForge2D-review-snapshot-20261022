@@ -1,0 +1,19 @@
+--- before/ROADMAP.md
++++ after/ROADMAP.md
+@@ -1,4 +1,16 @@
+ # MotionForge 2D - Epic, Sprint and Task Roadmap
++
++### Prepared17/10/2026 — Gemini Phase1 execution plan, NOT DISPATCHED
++
++Canonical rules§0.12 mở lane mới khi user giao prompt tại
++`C:/Users/Admin/Documents/Codex/2026-10-12/a-l-m-video-ra-m-2/outputs/motionforge-gemini-handoff-20261017/PROMPT_GEMINI_MOTIONFORGE_VI.md`.
++A: finish C02B2 → asset provenance → event/child/tracking → evidence/lease;
++Codex G1 trước media. B: hard excerpts → exact300s pilot; Codex G2 trước
++full-source/app integration. C: reconcile existing Phase1 implementation,
++production/library/generator/import/objects/demo/apply/jobs/review/export/reopen,
++full-source/4K proof; Codex G3 cuối. Task trong batch tự review tuần tự, không
++bỏ independent milestone gates. State vẫn PAUSED_BY_USER, heartbeat PAUSED;
++không có dispatch/transfer hoặc acceptance mới từ bản kế hoạch này.
+ 
+ ### Codex takeover15/10/2026 — C01, user-authorized
+ 

@@ -1,0 +1,112 @@
+{
+  "at_utc": "2026-10-19T11:56:25.258497+00:00",
+  "candidate_live_stable": true,
+  "files": [
+    {
+      "relative": "REVIEW_VI.md",
+      "sha256": "bcf525927c8f56fc03844d0f0921e231ce034b01157a989b40ae4958f6e069ae",
+      "bytes": 10868
+    },
+    {
+      "relative": "CORRECTION_MATRIX.md",
+      "sha256": "fee5c19585251f5862d906752fcce4cbe04365fb42e8d37c8c235117f03d1022",
+      "bytes": 2583
+    },
+    {
+      "relative": "RESEARCH_DECISIONS_VI.md",
+      "sha256": "0076e9cf462290af6ffcf350b42132840e017e549d086cbb9cbaff67b1e193a1",
+      "bytes": 6158
+    },
+    {
+      "relative": "SESSION_OPENING_PROPOSAL.md",
+      "sha256": "483914f7ad3b7fc29a86443db5a19aef8dc117d0410a27c7764a5ce293a4af2a",
+      "bytes": 2452
+    },
+    {
+      "relative": "PROMPT_GUI_GEMINI_VI.md",
+      "sha256": "a6364099f38b44bdcc9a8be8b4b0e972ba46e8fd3c45de0d9211216bb88611a4",
+      "bytes": 17349
+    },
+    {
+      "relative": "VERDICT.json",
+      "sha256": "b564487fae165a3a07a27d77372097103519674917cf030f9a25d812ae0de1f8",
+      "bytes": 1813
+    },
+    {
+      "relative": "CANDIDATE_IDENTITY.json",
+      "sha256": "58d8ddfe1b7c1a835c8a3bae2f4fbd62a2cb86958fb6ae288ac4267098a1e50d",
+      "bytes": 26514
+    },
+    {
+      "relative": "POST_REVIEW_HASH_CHECK.json",
+      "sha256": "19fe48142793d79b2e6ffc02dc1e06bb3b467f642adf2247e4ac6b3876ec0f3e",
+      "bytes": 5262
+    },
+    {
+      "relative": "ROOT_PROBES.json",
+      "sha256": "02582c82f974efd8fe742d2a1730e672bfbf91e5ba22e865f276fd95a660481c",
+      "bytes": 9507
+    },
+    {
+      "relative": "EXTRA_PROBES.json",
+      "sha256": "65ffad35457edc80b1760ae093a0401a8a39f061feef788de70ec3ba903ba86e",
+      "bytes": 10905
+    },
+    {
+      "relative": "EVENT_CONTROLS.json",
+      "sha256": "44319a64970746688f12bf6778662acc9deae16af13071ffa97fb64ca891b14d",
+      "bytes": 1439
+    },
+    {
+      "relative": "PROPAGATION_BOUNDARIES.json",
+      "sha256": "ae7c42916edfa0f5325b95a3856d190008793a83348da047638698663cc8eca2",
+      "bytes": 3893
+    },
+    {
+      "relative": "RUFF_F821.json",
+      "sha256": "033efcc05630d2f2026c746fb3aa47dc481e71710108a3c590e90f02103fbeb4",
+      "bytes": 2857
+    },
+    {
+      "relative": "Q11_BINDING_AUDIT.json",
+      "sha256": "eb1e9bcfe5d129aa9329016c098c295d0dfe8297ddab906943464b3241aa9103",
+      "bytes": 3112
+    },
+    {
+      "relative": "delegated_audit/PROBE_RESULTS.json",
+      "sha256": "0088510275d615fb775061cb3e094c4f93cc14b525015b7049b9b8b8333c66bd",
+      "bytes": 3572
+    },
+    {
+      "relative": "vision/README_VI.md",
+      "sha256": "388588880d1caf9c341321bb75c60eec6b51089b57671ade985e11095b72821b",
+      "bytes": 3162
+    },
+    {
+      "relative": "vision/motionforge_vision_qc.py",
+      "sha256": "3c9fe65f22675ea84c044a295056fd61ecf55935cac308d38cc2b997f5392590",
+      "bytes": 5462
+    },
+    {
+      "relative": "vision/DIRECT_IMAGE_RECEIPT.json",
+      "sha256": "b46d50f807fbc15a47ac3d68be95cb5a34a89367675b70407e203e4acdb67414",
+      "bytes": 2453
+    },
+    {
+      "relative": "vision/HELPER_LIVE_RECEIPT.json",
+      "sha256": "32a5b84557ba90413b8d95ca101bf80546785a6f62e65414b395d5ec7b971e55",
+      "bytes": 1780
+    },
+    {
+      "relative": "vision/VERIFICATION.json",
+      "sha256": "d3b95ec489f9136c9153b6e03999b1f538c8bc2777e740eadc246c410d1c81b4",
+      "bytes": 1464
+    },
+    {
+      "relative": "vision/NATIVE_TOOL_TIMEOUT.json",
+      "sha256": "db94ae5c9753385876b37e3dca8897e2bde5fc0c10d03bf767318a26c02299d4",
+      "bytes": 660
+    }
+  ],
+  "scope": "Reviewer artifacts plus scoped vision helper; no candidate production changes."
+}

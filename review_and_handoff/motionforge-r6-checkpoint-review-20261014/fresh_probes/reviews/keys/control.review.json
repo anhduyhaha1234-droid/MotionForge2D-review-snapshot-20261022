@@ -1,0 +1,15 @@
+{
+ "review_id": "keys:control",
+ "reviewer": "worker-vision+hash (vision-capable, artifact-bound)",
+ "reviewed_at": "2026-10-14T03:51:42Z",
+ "artifact": {
+  "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-r6-checkpoint-review-20261014\\fresh_probes\\white.png",
+  "sha256": "d0953ebbb4a39871d61a377e22a1e0d96bb6044e3f6379f81ab340de4979f932"
+ },
+ "inputs": {
+  "deps_sha": "good"
+ },
+ "expected": {},
+ "verdict": "PASS",
+ "evidence": "synthetic integrity control"
+}

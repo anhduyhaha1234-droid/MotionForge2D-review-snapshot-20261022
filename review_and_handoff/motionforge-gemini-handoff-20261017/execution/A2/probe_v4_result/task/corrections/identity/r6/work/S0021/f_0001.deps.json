@@ -1,0 +1,135 @@
+{
+ "kind": "r6_key_deps_v4_per_actor",
+ "shot": "S0021",
+ "fid": 1,
+ "source": {
+  "role": "source",
+  "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A2\\probe_v4_result\\task\\source\\source_full.mp4",
+  "sha256": "373b52bd748856658b14638b35b522d5621183f87270f98cd130d58b8d30ee66"
+ },
+ "model": {
+  "role": "model",
+  "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A2\\probe_v4_result\\model.bin",
+  "sha256": "ccdbfb9993be88c536b0b7cd2abe60eda83c7ce1ad530c6a2ada81510ff1548c"
+ },
+ "recipe": {
+  "mode": "per_actor_klein",
+  "shot": "S0021",
+  "fid": 1,
+  "gframe": 0,
+  "span": [
+   0,
+   3
+  ],
+  "ledger_row_sha": "516ac2dd1635d1eb2b49fe117b131f24880a4b3b4539139f26bec564a54628a5",
+  "storyboard_sha": "1233573bc053387f514ed2a829d3e0e067133043b48ec0f0fa3ecae419cc79b7",
+  "only_entity": null,
+  "selection": [
+   {
+    "entity": "E1",
+    "class": "VISIBLE"
+   }
+  ],
+  "casts": [
+   {
+    "entity": "E1",
+    "front": "B01_Khang_front_bust.png",
+    "profile": "B01_Khang_profile.png",
+    "description": "B01 Khang (wide square face, short black coily hair, straight brows, short wide nose, small chin stubble; forest-green shirt)",
+    "prompt": "Reference image 1 is a close crop of exactly ONE animation character (possibly small, lying, seated or partially out of frame). Repaint EXACTLY that one existing character IN ITS PLACE, pixel region and pose. NEVER draw a second figure, a standing figure, a portrait or any new person anywhere. If the character is small in the crop, repaint them small; do not enlarge or move them. Reference image 1 is a close crop of one animation frame. Redraw ONLY the ONE main person of reference image 1 (the person it is centred on) to look EXACTLY like B01 Khang (wide square face, short black coily hair, straight brows, short wide nose, small chin stubble; forest-green shirt) shown in reference image 2 (front view) and reference image 3 (profile view): same face, same hair, same clothing design and colours. The person must stay in EXACTLY the same position, scale, pose and silhouette as in reference image 1, with the same action, hand positions and held objects. Do NOT redraw, move or change any other person, object or the background that may be visible at the edges of reference image 1 - keep every non-person element identical. Do not shift, rescale or re-render the background: every background pixel in your output must match reference image 1 exactly - the background must look untouched. CRITICAL: do NOT add ANY face, head, portrait, figure or person that is not already present in reference image 1. Draw NOTHING in empty areas, sky, walls or background regions. Every object and prop of reference image 1 (book, folder, car, furniture, glass, phone) must remain EXACTLY in place - never remove, move, repaint or restyle any object. Flat 2D cel-shaded animation style: solid flat colour fills, one hard shadow tone per shape, thin clean outlines, no gradients, no photographic texture, no 3D rendering. No text, captions, subtitles, logo or watermark anywhere in the image."
+   }
+  ],
+  "ctx_factor": 1.02,
+  "seed_off": 0,
+  "seed": 2026122401,
+  "steps": 4,
+  "sampler": "euler",
+  "cfg": 1.0,
+  "model_name": "model.bin",
+  "clip_name": "qwen_3_4b.safetensors",
+  "vae_name": "flux2-vae.safetensors",
+  "template": {
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A2\\probe_v4_result\\task\\graph\\reuse_bundle\\shot_anchor_v1.baseline.api.json",
+   "sha256": "b88db5288be6e8c53fb111438a279046d1511d08206d9a2c84a524ba5fc0e78a"
+  },
+  "code_sha256": {
+   "r6_key_recipe.py": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9",
+   "r6_keygen.py": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+   "r6_graph.py": "832d5d44df486c3f10ec8194e7ab170ac4f5a77af0ab46ede176005904981d21",
+   "r6_adapter.py": "2b16108c5d92264b5e686d6aedeb5d357fc5ee9539be3cfff3b8979c17f9b5b3",
+   "r6_upload.py": "057179db2b539965d88aed3e3f25a0251cf7e6d9959a6f9ce1f7514783e04967",
+   "r6_common.py": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc"
+  }
+ },
+ "consumed": {
+  "staged_source": {
+   "role": "staged_source",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A2\\probe_v4_result\\task\\corrections\\identity\\r6\\work\\S0021\\f_0001_src.png",
+   "sha256": "e15f6533426dc4928347153c5ed6fe4e617dabf1415853edeb924f4a5ab657a3"
+  },
+  "stage_receipt": {
+   "role": "stage_receipt",
+   "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A2\\probe_v4_result\\task\\corrections\\identity\\r6\\work\\S0021\\f_0001_src.png.stage.json",
+   "sha256": "0ca007754c67465995c592f6071979515770b98f4e0c7091128493feb984ac76"
+  },
+  "masks": [
+   {
+    "role": "mask",
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A2\\probe_v4_result\\task\\corrections\\identity\\r6\\masks\\S0021\\E1\\f_0001.png",
+    "sha256": "c4a4fb536c984474bb80498493e3e92d6daed91def83b577a00c07547e8a907e",
+    "entity": "E1"
+   }
+  ],
+  "actors": [
+   {
+    "entity": "E1",
+    "class": "VISIBLE",
+    "status": "generated",
+    "auth_front": {
+     "role": "auth_front",
+     "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A2\\probe_v4_result\\task\\corrections\\identity\\r4\\assets\\cast_b\\B01_Khang_front_bust.png",
+     "sha256": "97316597f442490b4f8bb7b3be3f16b452c31f12a37cbe03bed54e97e6430fd7",
+     "entity": "E1"
+    },
+    "auth_profile": {
+     "role": "auth_profile",
+     "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A2\\probe_v4_result\\task\\corrections\\identity\\r4\\assets\\cast_b\\B01_Khang_profile.png",
+     "sha256": "0b32e59d54c338edd92b1e0221315153109616b1c1053397ccdd6e8d2006bfbc",
+     "entity": "E1"
+    },
+    "staged_front": {
+     "role": "staged_front",
+     "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A2\\probe_v4_result\\task\\input\\identity5m_20261008\\r6\\keys\\cast_refs\\B01_Khang_front_bust.png",
+     "sha256": "97316597f442490b4f8bb7b3be3f16b452c31f12a37cbe03bed54e97e6430fd7",
+     "entity": "E1"
+    },
+    "staged_profile": {
+     "role": "staged_profile",
+     "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A2\\probe_v4_result\\task\\input\\identity5m_20261008\\r6\\keys\\cast_refs\\B01_Khang_profile.png",
+     "sha256": "0b32e59d54c338edd92b1e0221315153109616b1c1053397ccdd6e8d2006bfbc",
+     "entity": "E1"
+    },
+    "crop": {
+     "role": "crop",
+     "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A2\\probe_v4_result\\task\\corrections\\identity\\r6\\work\\S0021\\f_0001_E1_crop.png",
+     "sha256": "a953f8ba6130e799bcc28b18d156c277632968bd686717d0d8cc46d99f688680",
+     "entity": "E1"
+    },
+    "edit": {
+     "role": "edit",
+     "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A2\\probe_v4_result\\task\\output\\edited.png",
+     "sha256": "7489aa4701212636556ca9c4c2437d41b9ad8ab3fc44cb119805336468e16540",
+     "entity": "E1"
+    },
+    "graph": {
+     "role": "graph",
+     "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A2\\probe_v4_result\\task\\corrections\\identity\\r6\\workflows\\r6_crop_S0021_f1_E1.json",
+     "sha256": "a4c884c758b613c224f8b6fc5926cc3e277d938b6322d3e845c6e80688c507c8",
+     "entity": "E1"
+    }
+   }
+  ]
+ },
+ "exclusion": "R3_LOAD gray upload is unreachable from GUIDER; it cannot affect the saved key",
+ "deps_sha": "90604383a2f8a28441549229c8109354a9823967320fa3009499cbe993995b41"
+}

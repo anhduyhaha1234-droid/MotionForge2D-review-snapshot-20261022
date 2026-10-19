@@ -1,0 +1,14 @@
+{
+  "command": [
+    "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\venv\\Scripts\\python.exe",
+    "-B",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-fixtures\\propagate_cli_driver_v2.py",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-20261018\\candidate\\task\\corrections\\identity\\r6\\scripts",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-fixtures\\propagate-invocation-v2",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-review-fixtures\\failing_upstream_fixture.py"
+  ],
+  "exit_code": 0,
+  "stdout": "BLOCK S0021: PROPAGATE BLOCK [S0021] run 0 rc=7\nROOT_PROBE_PARENT_RETURNED_NORMALLY\n",
+  "stderr": "",
+  "at_utc": "2026-10-18T04:22:05.057367+00:00"
+}

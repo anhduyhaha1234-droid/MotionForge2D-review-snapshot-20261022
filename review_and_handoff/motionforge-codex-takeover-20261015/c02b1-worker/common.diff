@@ -1,0 +1,137 @@
+--- preimages/r6_common.py
++++ C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\scripts\r6_common.py
+@@ -7,7 +7,7 @@
+ Paths: ALL outputs under R6/C or INPUT-root r6. R4/R5 strictly read-only.
+ """
+ from __future__ import annotations
+-import hashlib, json, subprocess, time
++import hashlib, json, os, subprocess, tempfile, time
+ from pathlib import Path
+ 
+ R6 = Path(__file__).resolve().parents[1]
+@@ -75,15 +75,118 @@
+     return PLAN[sid]["start_frame"] + fid - 1
+ 
+ 
++_STAGE_CONTRACT = "r6.stage_frame.v1.ffmpeg-ss-30fps-1frame-no-pad"
++_STAGE_RECORD_LIMIT = 4096
++_STAGE_KEYS = {"contract", "source_path", "source_sha256", "sid", "gframe",
++               "output_path", "output_sha256", "output_size"}
++
++
++def _stage_source_identity() -> tuple[str, str]:
++    try:
++        source = Path(SRC).resolve(strict=True)
++        if not source.is_file():
++            raise OSError("source is not a regular file")
++        return str(source), sha(source)
++    except OSError as exc:
++        raise RuntimeError(f"stage_frame source unavailable: {SRC}") from exc
++
++
++def _stage_record(path: Path) -> dict | None:
++    """Reject old, malformed, duplicated, oversized or wrongly typed receipts."""
++    def unique_pairs(pairs):
++        obj = {}
++        for key, value in pairs:
++            if key in obj:
++                raise ValueError("duplicate staged-source receipt key")
++            obj[key] = value
++        return obj
++
++    try:
++        if path.is_symlink() or path.stat().st_size > _STAGE_RECORD_LIMIT:
++            return None
++        raw = path.read_bytes()
++        if len(raw) > _STAGE_RECORD_LIMIT:
++            return None
++        record = json.loads(raw.decode("utf-8"), object_pairs_hook=unique_pairs)
++    except (OSError, UnicodeError, ValueError, RecursionError):
++        return None
++    if type(record) is not dict or set(record) != _STAGE_KEYS:
++        return None
++    if any(type(record[key]) is not str for key in
++           ("contract", "source_path", "source_sha256", "sid", "output_path", "output_sha256")):
++        return None
++    if type(record["gframe"]) is not int or type(record["output_size"]) is not int:
++        return None
++    return record
++
++
++def _stage_temp(target: Path, suffix: str) -> Path:
++    fd, name = tempfile.mkstemp(prefix=f".{target.stem}.stage-", suffix=suffix, dir=target.parent)
++    os.close(fd)
++    return Path(name)
++
++
+ def stage_frame(sid: str, gframe: int, dst: Path) -> Path:
+-    """Extract ONE source frame at canonical canvas 640x360 (no pad)."""
+-    if dst.exists() and dst.stat().st_size > 0:
++    """Extract one canonical 640x360 source frame with exact staged provenance."""
++    if type(sid) is not str or sid not in PLAN:
++        raise ValueError(f"stage_frame unknown shot: {sid!r}")
++    shot = PLAN[sid]
++    if (type(gframe) is not int or gframe < 0 or
++            not shot["start_frame"] <= gframe < shot["start_frame"] + shot["frames"]):
++        raise ValueError(f"stage_frame invalid global frame {gframe!r} for {sid}")
++    dst = Path(dst)
++    if dst.is_symlink():
++        raise ValueError(f"stage_frame destination is a symlink: {dst}")
++    output_path = str(dst.resolve(strict=False))
++    source_path, source_sha = _stage_source_identity()
++    identity = {"contract": _STAGE_CONTRACT, "source_path": source_path,
++                "source_sha256": source_sha, "sid": sid, "gframe": gframe,
++                "output_path": output_path}
++    receipt = dst.with_name(dst.name + ".stage.json")
++    record = _stage_record(receipt)
++    if record is not None and all(record[key] == value for key, value in identity.items()):
++        try:
++            if (dst.is_file() and dst.stat().st_size > 0 and
++                    record["output_size"] == dst.stat().st_size and
++                    record["output_sha256"] == sha(dst) and
++                    _stage_source_identity() == (source_path, source_sha)):
++                return dst
++        except OSError:
++            pass
++
++    output_tmp = pending_tmp = record_tmp = None
++    try:
++        output_tmp = _stage_temp(dst, dst.suffix)
++        try:
++            result = subprocess.run(["ffmpeg", "-y", "-v", "error", "-ss", f"{gframe/30:.6f}",
++                                     "-i", str(SRC), "-frames:v", "1", str(output_tmp)],
++                                    capture_output=True, text=True)
++        except OSError as exc:
++            raise RuntimeError(f"stage_frame extractor unavailable {sid} g{gframe}") from exc
++        if result.returncode != 0 or not output_tmp.is_file() or output_tmp.stat().st_size == 0:
++            raise RuntimeError(f"stage_frame failed {sid} g{gframe}: {(result.stderr or '')[-300:]}")
++        if _stage_source_identity() != (source_path, source_sha):
++            raise RuntimeError(f"stage_frame source changed during extraction {sid} g{gframe}")
++
++        record = {**identity, "output_sha256": sha(output_tmp), "output_size": output_tmp.stat().st_size}
++        pending_tmp = _stage_temp(receipt, ".tmp")
++        pending_tmp.write_bytes(b'{"state":"pending"}')
++        record_tmp = _stage_temp(receipt, ".tmp")
++        record_tmp.write_text(json.dumps(record, sort_keys=True, separators=(",", ":")), encoding="utf-8")
++        # Invalidate the old receipt first. A failure after frame publication cannot bless it.
++        os.replace(pending_tmp, receipt)
++        pending_tmp = None
++        os.replace(output_tmp, dst)
++        output_tmp = None
++        os.replace(record_tmp, receipt)
++        record_tmp = None
+         return dst
+-    r = subprocess.run(["ffmpeg", "-y", "-v", "error", "-ss", f"{gframe/30:.6f}", "-i", str(SRC),
+-                        "-frames:v", "1", str(dst)], capture_output=True, text=True)
+-    if r.returncode != 0 or not dst.exists() or dst.stat().st_size == 0:
+-        raise RuntimeError(f"stage_frame failed {sid} g{gframe}: {r.stderr[-300:]}")
+-    return dst
++    except OSError as exc:
++        raise RuntimeError(f"stage_frame staging failed {sid} g{gframe}: {exc}") from exc
++    finally:
++        for temp in (output_tmp, pending_tmp, record_tmp):
++            if temp is not None:
++                temp.unlink(missing_ok=True)
+ 
+ 
+ def pad_to_368(img):

@@ -1,0 +1,11 @@
+{
+  "acquired_utc": "2026-10-15T17:00:37.908813+00:00",
+  "created": "20261016000037.725340+420",
+  "name": "python.exe",
+  "note": "User-authorized terminal Hermes to Codex owner transfer; CPU C01 only",
+  "owner_sid": "codex-root-takeover-20261015",
+  "pid": 46728,
+  "release_outcome": "CODEX_TAKEOVER_PREFLIGHT_OK",
+  "released_utc": "2026-10-15T17:00:46.197127+00:00",
+  "run": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long"
+}

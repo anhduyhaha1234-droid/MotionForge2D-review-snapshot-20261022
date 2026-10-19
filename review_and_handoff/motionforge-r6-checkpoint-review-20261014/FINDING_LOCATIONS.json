@@ -1,0 +1,152 @@
+{
+  "r6_assemble.py": [
+    {
+      "line": 19,
+      "text": "def main():"
+    },
+    {
+      "line": 32,
+      "text": "if got < avail:"
+    },
+    {
+      "line": 69,
+      "text": "\"-ss\", \"300\", \"-i\", str(master), \"-filter_complex\", filt, \"-map\", \"[v]\","
+    }
+  ],
+  "r6_gate.py": [
+    {
+      "line": 56,
+      "text": "def require_review(kind: str, name: str, artifact: Path, inputs_now: dict):"
+    },
+    {
+      "line": 65,
+      "text": "for k, v in r[\"inputs\"].items():"
+    },
+    {
+      "line": 105,
+      "text": "missing_ev = [f for f in sorted(ev_fids) if f <= n and not any(abs(f - kf) <= 5 for kf in key_fids)]"
+    },
+    {
+      "line": 122,
+      "text": "newest = max((f.stat().st_mtime for f in bd.iterdir() if f.is_file()), default=0)"
+    },
+    {
+      "line": 128,
+      "text": "def gate_assemble(shot_plan: list):"
+    },
+    {
+      "line": 157,
+      "text": "bad = {k: v for k, v in rows.items() if v != \"PASS\"}"
+    }
+  ],
+  "r6_propagate.py": [
+    {
+      "line": 60,
+      "text": "for fid in range(1, m + 1, itv):"
+    },
+    {
+      "line": 88,
+      "text": "newest = max((f.stat().st_mtime for f in bd.iterdir() if f.is_file()), default=0)"
+    },
+    {
+      "line": 99,
+      "text": "# completed: materialize tail frame(s) from the final key"
+    }
+  ],
+  "r6_cotracker.py": [
+    {
+      "line": 64,
+      "text": "T = min(len(src), len(gen))"
+    },
+    {
+      "line": 68,
+      "text": "events = [e for e in ev.get(sid, [])] if isinstance(ev.get(sid), list) else ev.get(sid, {}).get(\"events\", [])"
+    },
+    {
+      "line": 72,
+      "text": "qs.append([0, 100 + gx * 55, 80 + gy * 25])"
+    }
+  ],
+  "r6_cache.py": [
+    {
+      "line": 21,
+      "text": "def build_deps(sid: str, fid: int, consumed: dict, settings: dict) -> dict:"
+    },
+    {
+      "line": 46,
+      "text": "def verify_deps(dep: dict) -> tuple[bool, str]:"
+    },
+    {
+      "line": 61,
+      "text": "def skip_allowed(sid: str, fid: int, key_png: Path) -> tuple[bool, str]:"
+    }
+  ],
+  "r6_matrix.py": [
+    {
+      "line": 14,
+      "text": "R(\"Q01\", \"source-lock integrity\", \"PASS\", \"source sha 5a175454 unchanged (pre/post checks in receipts)\")"
+    },
+    {
+      "line": 15,
+      "text": "R(\"Q02\", \"actor ledger correctness\", \"PASS\", \"ledger rebuilt: 54 shots, 74 visible/4 partial/7 not_present; classes frame-window-based; zero-explicit 5\")"
+    },
+    {
+      "line": 16,
+      "text": "R(\"Q03\", \"mask correctness\", \"PARTIAL\", \"all people-shots masked & validated; E4/E5/E2 wall-blob class fixed via neg-prompt reseeding (6 shots); validation ledger-wide\")"
+    },
+    {
+      "line": 17,
+      "text": "R(\"Q04\", \"keys identity change\", \"PASS\", \"per-actor klein via upstream crop/stitch; 36/36 shots reviewed; identity change verified on sheets + strips\")"
+    },
+    {
+      "line": 18,
+      "text": "R(\"Q05\", \"key quality gate\", \"PARTIAL\", \"artifact-bound review gate BLOCKS propagate; 59 first-pass fails -> round-1 repairs 47/50 OK; residuals logged (S32 f561 fixed; S43 f841 pose note; outfit-continuity class noted)\")"
+    },
+    {
+      "line": 19,
+      "text": "R(\"Q06\", \"propagation freshness\", \"PASS\", \"r6_propagate: rc!=0/partial/stale => BLOCK, no tail-fill; fresh_complete in receipts\")"
+    },
+    {
+      "line": 20,
+      "text": "R(\"Q07\", \"VACE conformance\", \"PASS\", \"TrimVideoLatent contract graph; S73 base+perturb+S62 runs real; ref-binding proven by perturb; keys-route selected (S5)\")"
+    },
+    {
+      "line": 21,
+      "text": "R(\"Q08\", \"engine decision\", \"PASS\", \"S5 receipt: keys-route SELECTED; VACE NOT_SELECTED reason documented; VACE kept as validated alternative\")"
+    },
+    {
+      "line": 22,
+      "text": "R(\"Q09\", \"zero-shot asset pass\", \"PASS\", \"17 shots asset restyle; text legibility verified on 4 review sheets (greeked body = source design); black frames passthrough in-source\")"
+    },
+    {
+      "line": 23,
+      "text": "R(\"Q10\", \"cotracker event metric\", \"SEE RECEIPT\", \"tracks/visibility raw arrays for S34/S61/S73 vs source (receipt R6_COTRACKER_RUNS.jsonl)\")"
+    },
+    {
+      "line": 24,
+      "text": "R(\"Q11\", \"race/Q11 suite\", \"PASS (Manager-closed R6)\", \"51/51 new suite + 70/70 regression (manager/evidence/r6)\")"
+    },
+    {
+      "line": 25,
+      "text": "R(\"Q12\", \"master + comparison\", \"SEE ASSEMBLY\", \"master 9000f + comparison source|R5|R6 (receipt R6_ASSEMBLY_RECEIPT.json)\")"
+    }
+  ],
+  "r6_qa.py": [
+    {
+      "line": 48,
+      "text": "evs = ev.get(sid)"
+    },
+    {
+      "line": 49,
+      "text": "ef = None"
+    },
+    {
+      "line": 51,
+      "text": "ef = int(evs[0].get(\"f0\", 1))"
+    },
+    {
+      "line": 63,
+      "text": "rec = {\"at\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()), \"shots\": len(shots), \"sheets\": sheets}"
+    }
+  ]
+}

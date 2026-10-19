@@ -1,0 +1,95 @@
+import os
+import sys
+import time
+import json
+import urllib.request
+import urllib.parse
+from datetime import datetime, timezone, timedelta
+
+[CREDENTIAL_OR_RECIPIENT_LINE_REDACTED]
+ENV_FILE = r"C:\Users\Admin\AppData\Local\hermes\.env"
+WORK_DIR = r"C:\Users\Admin\Documents\Codex\2026-10-12\a-l-m-video-ra-m-2\outputs\motionforge-gemini-handoff-20261017\execution"
+STATE_FILE = os.path.join(WORK_DIR, "STATE.json")
+LOG_FILE = os.path.join(WORK_DIR, "telegram_heartbeat.log")
+
+def get_token():
+    if os.path.exists(ENV_FILE):
+        for line in open(ENV_FILE, "r", encoding="utf-8", errors="ignore"):
+[CREDENTIAL_OR_RECIPIENT_LINE_REDACTED]
+                return line.strip().split("=", 1)[1].strip()
+    return None
+
+def send_tg(text):
+[CREDENTIAL_OR_RECIPIENT_LINE_REDACTED]
+    if not token:
+        return False
+    url = f"https://api.telegram.org/bot{token}/sendMessage"
+    data = urllib.parse.urlencode({
+        "chat_id": CHAT_ID,
+        "text": text,
+        "parse_mode": "HTML"
+    }).encode()
+    try:
+        req = urllib.request.Request(url, data=data)
+        res = json.loads(urllib.request.urlopen(req, timeout=15).read().decode())
+        return res.get("ok", False)
+    except Exception as e:
+        with open(LOG_FILE, "a", encoding="utf-8") as f:
+            f.write(f"[{datetime.now()}] Send error: {e}\n")
+        return False
+
+def build_status_msg():
+    now_utc = datetime.now(timezone.utc)
+    now_vn = now_utc.astimezone(timezone(timedelta(hours=7)))
+    vn_time_str = now_vn.strftime("%H:%M %d/%m/%Y (+07)")
+    
+    active_task = "GEMINI-C02B3-ASSET-VERIFIED-REUSE"
+    status = "RUNNING"
+    phase = "A2"
+    completed_info = "A1: CODEX-C02B2 (SELF_VERIFIED, 54/54 tests PASS)"
+    
+    if os.path.exists(STATE_FILE):
+        try:
+            with open(STATE_FILE, "r", encoding="utf-8") as f:
+                st = json.load(f)
+                active_task = st.get("active_task", active_task)
+                status = st.get("status", status)
+                phase = st.get("phase", phase)
+                completed = st.get("completed_tasks", [])
+                if completed:
+                    c_tasks = [f"{c.get('phase', '')}: {c.get('task', '')} ({c.get('verdict', '')})" for c in completed]
+                    completed_info = ", ".join(c_tasks)
+        except Exception:
+            pass
+            
+    msg = (
+        f"💓 <b>[MotionForge2D Heartbeat — {vn_time_str}]</b>\n\n"
+        f"• <b>Trạng thái:</b> Đang thực thi liên tục 24/24 (<code>{status}</code>)\n"
+        f"• <b>Giai đoạn hiện tại:</b> Batch A (Engineering tuần tự)\n"
+        f"• <b>Task đang chạy:</b> <code>{active_task}</code> ({phase})\n"
+        f"• <b>Đã hoàn tất tự kiểm:</b> {completed_info}\n"
+        f"• <b>Tiến độ Batch A:</b> 1/4 task self-verified, 0/4 Codex approved\n"
+        f"• <b>Mục tiêu kế tiếp:</b> Hoàn tất A2 -&gt; A3 -&gt; A4 -&gt; Nộp Cổng G1 (~23:00 hôm nay)\n\n"
+        f"<i>(Heartbeat tự động mỗi 30 phút gửi trực tiếp vào Telegram)</i>"
+    )
+    return msg
+
+def main():
+    with open(LOG_FILE, "a", encoding="utf-8") as f:
+        f.write(f"[{datetime.now()}] Telegram heartbeat monitor started.\n")
+    
+    # Send initial heartbeat immediately
+    init_msg = build_status_msg()
+    ok = send_tg(init_msg)
+    with open(LOG_FILE, "a", encoding="utf-8") as f:
+        f.write(f"[{datetime.now()}] Initial heartbeat sent: {ok}\n")
+    
+    while True:
+        time.sleep(1800)  # 30 minutes
+        msg = build_status_msg()
+        ok = send_tg(msg)
+        with open(LOG_FILE, "a", encoding="utf-8") as f:
+            f.write(f"[{datetime.now()}] Sent heartbeat, success={ok}\n")
+
+if __name__ == "__main__":
+    main()

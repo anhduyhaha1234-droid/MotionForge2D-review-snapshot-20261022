@@ -1,0 +1,22 @@
+{
+ "review_id": "keys:S0021_f0001",
+ "reviewer": "worker-vision+hash (vision-capable, artifact-bound)",
+ "reviewed_at": "2026-10-15T21:09:49Z",
+ "artifact": {
+  "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\postpatch_root_blend_probe\\task\\corrections\\identity\\r6\\keys\\S0021\\f_0001_key.png",
+  "sha256": "b24c390c3f28c8d99c7241ffb8a894fe313974cbf17e49aeac46d71c930340c0"
+ },
+ "inputs": {
+  "ledger_row_sha": "f4d884bab07eeb07af841e81a68af5f138318b94ee57cd273687a7df4742963f",
+  "deps_sha": "e2f78e54d06605bde6d252e2de9d5c2dcd966d1547bdb7305952f8580c8109ab"
+ },
+ "expected": {
+  "shot": "S0021",
+  "fid": 1
+ },
+ "frames": [
+  1
+ ],
+ "verdict": "PASS",
+ "evidence": "fixture only"
+}

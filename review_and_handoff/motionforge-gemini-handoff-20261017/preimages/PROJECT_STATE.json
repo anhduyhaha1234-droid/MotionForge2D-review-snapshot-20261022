@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "updated_utc": "2026-10-16T15:22:43.5980856Z",
+  "project": "MotionForge2D",
+  "parent": "MF-DEMO-LONG-01",
+  "parent_status": "NOT_APPROVED",
+  "task": "CODEX-C02B2-PER-ACTOR-VERIFIED-REUSE",
+  "status": "PAUSED_BY_USER",
+  "model": "gpt-6-sol",
+  "reasoning": "max",
+  "owner": "/root/motionforge_c02b2_coder",
+  "root_role": "independent PM/reviewer",
+  "active_writer": false,
+  "task_packet": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\TASK_C02B2.md",
+  "current_baseline": "R6g actual bytes; no new R6g master submitted",
+  "next_action": "Wait for explicit user continuation; C02B2 remains unapproved and must finish self-review then independent root review",
+  "quota": {
+    "research_agents_error": "Your workspace is out of credits. Ask your workspace owner to refill in order to continue.",
+    "context_remaining": "UNKNOWN",
+    "coder_prior_error": "C02B2 usage limit; provider retry Oct 17th, 2026 12:16 AM",
+    "last_check": "QUOTA_PAUSE_20261016.json",
+    "ordinary_usage_allowed": true,
+    "primary_used_percent": 7,
+    "weekly_used_percent": 1,
+    "reset_observed": true
+  },
+  "roadmap": [
+    "C02B2 per-actor complete verified reuse",
+    "C02B3 asset producer provenance/reuse and legacy-media gate decision",
+    "Event/child outcome correctness",
+    "Evidence/media correction after engineering gates",
+    "300s pilot semantic acceptance",
+    "Tool integration and full source after pilot approval"
+  ],
+  "checkpoint_contract": [
+    "intent",
+    "files+hashes",
+    "decisions",
+    "test commands+exit",
+    "remaining",
+    "next command",
+    "live jobs"
+  ],
+  "no_fallback": true,
+  "checkpoint": "c02b2-worker/CHECKPOINT_015.json",
+  "automation": {
+    "id": "motionforge-checkpoint-v-quota",
+    "status": "PAUSED",
+    "interval": "hourly",
+    "purpose": "meaningful status/quota changes in original chat"
+  },
+  "root_review": "C02B1_REVIEW_01.md",
+  "resume_preflight": "C02B2_PREFLIGHT.json",
+  "candidate_manifest": "c02b1-worker/candidate-01/MANIFEST.json",
+  "completed_tasks": [
+    {
+      "task": "CODEX-C01-REVIEW-BINDING",
+      "verdict": "APPROVED",
+      "review": "C01_REVIEW_02.md",
+      "candidate": "c01-worker/candidate02/CANDIDATE_MANIFEST_R01.json",
+      "root_probes": "30/30 + 3/3",
+      "root_module": "17/17"
+    },
+    {
+      "task": "CODEX-C02A-DEPENDENCY-VERIFICATION",
+      "verdict": "APPROVED",
+      "review": "C02A_REVIEW_02.md",
+      "candidate": "c02a-worker/candidate-02/MANIFEST.json",
+      "root_probes": "55/55 + 8/8",
+      "root_module": "30/30"
+    },
+    {
+      "task": "CODEX-C02B1-STAGED-SOURCE-FRESHNESS",
+      "verdict": "APPROVED",
+      "review": "C02B1_REVIEW_01.md",
+      "candidate": "c02b1-worker/candidate-01/MANIFEST.json",
+      "root_probes": "7/7",
+      "root_module": "10/10 + 30/30"
+    }
+  ],
+  "pause_receipt": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\pause-20261016T222242\\PAUSE_RECEIPT.json",
+  "progress_report": "PROGRESS_AND_PAUSE_20261016.md"
+}

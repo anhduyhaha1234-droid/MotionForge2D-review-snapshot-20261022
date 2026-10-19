@@ -1,0 +1,124 @@
+{
+  "observed_at": "2026-10-17T23:29:51.752422+07:00",
+  "state": {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\STATE.json",
+    "bytes": 3942,
+    "sha256": "74c605fe5e0d1ae11608cf548ff038f70d5fb651b8daaa9e99581509ed143bb1",
+    "mtime_local": "2026-10-17T15:53:01.291961+07:00"
+  },
+  "checkpoint": {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\CHECKPOINT.json",
+    "bytes": 4644,
+    "sha256": "1035ca54ce8a870d78b3908b5abc31874b903f37f9c84cc8fe5b45f4d93a0dd6",
+    "mtime_local": "2026-10-17T15:53:01.295961+07:00"
+  },
+  "checkpoint_hash_checks": [
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py",
+      "bytes": 31946,
+      "sha256": "e295e10d5c1509b40655f5fcf4bc8be5f5eb7c39e03df769c3b1ca1bd4f115e5",
+      "mtime_local": "2026-10-17T15:49:06.104485+07:00",
+      "recorded_sha256": "8d4b0c7ad5336e7e6c2a68a12f2a622fbccf900575afd2c1249f31863ae4243d",
+      "matches": false
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_keygen.py",
+      "bytes": 9004,
+      "sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+      "mtime_local": "2026-10-16T19:31:27.352667+07:00",
+      "recorded_sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_key_recipe.py",
+      "bytes": 10608,
+      "sha256": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9",
+      "mtime_local": "2026-10-17T15:47:43.556843+07:00",
+      "recorded_sha256": "e18fc9d20de1cbf2a3a8f7da2e68fc99c59260701bfbd3dca75106a7cbe8e2bd",
+      "matches": false
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c02b2_per_actor_reuse.py",
+      "bytes": 24521,
+      "sha256": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24",
+      "mtime_local": "2026-10-17T12:41:57.362363+07:00",
+      "recorded_sha256": "c8e272a60340683c0128bdfd980a078975030dfa7ec6d98977bcc55a304abd99",
+      "matches": false
+    }
+  ],
+  "latest_source_and_tests": [
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_gemini_c02b3_asset_reuse.py",
+      "bytes": 14696,
+      "sha256": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b",
+      "mtime_local": "2026-10-17T15:51:33.964984+07:00"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_keygen_asset.py",
+      "bytes": 6467,
+      "sha256": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e",
+      "mtime_local": "2026-10-17T15:49:38.768515+07:00"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py",
+      "bytes": 31946,
+      "sha256": "e295e10d5c1509b40655f5fcf4bc8be5f5eb7c39e03df769c3b1ca1bd4f115e5",
+      "mtime_local": "2026-10-17T15:49:06.104485+07:00"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_key_recipe.py",
+      "bytes": 10608,
+      "sha256": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9",
+      "mtime_local": "2026-10-17T15:47:43.556843+07:00"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c02b2_per_actor_reuse.py",
+      "bytes": 24521,
+      "sha256": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24",
+      "mtime_local": "2026-10-17T12:41:57.362363+07:00"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_keygen.py",
+      "bytes": 9004,
+      "sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282",
+      "mtime_local": "2026-10-16T19:31:27.352667+07:00"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c02b1_staged_source.py",
+      "bytes": 14350,
+      "sha256": "61bfe454456c452756ddbbf05b55678e146114cb6d2653bff77f4ee92af46aec",
+      "mtime_local": "2026-10-16T14:34:55.123182+07:00"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_common.py",
+      "bytes": 10578,
+      "sha256": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc",
+      "mtime_local": "2026-10-16T14:31:58.328903+07:00"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c02a_dependency_verification.py",
+      "bytes": 23075,
+      "sha256": "195ead0031f16098087df5f56b5b9ac0e5ddc7a58a733ea6a0e0c22168650219",
+      "mtime_local": "2026-10-16T09:28:25.089778+07:00"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c01_review_binding.py",
+      "bytes": 14693,
+      "sha256": "351c39e764e53d67466688d9ec032cf9e352167e105ee0be580129f1db38fdf7",
+      "mtime_local": "2026-10-16T09:13:39.888196+07:00"
+    }
+  ],
+  "a3_directory_exists": false,
+  "heartbeat": {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\telegram_heartbeat.py",
+    "bytes": 5456,
+    "sha256": "ebf271168519b5a14e7a7db351fc3143798b69a4cea12838cf63276b3d4165a3",
+    "mtime_local": "2026-10-17T23:27:39.256958+07:00"
+  },
+  "heartbeat_log": {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\telegram_heartbeat.log",
+    "bytes": 1526,
+    "sha256": "ce91f23a256148e1cca95235caaf2eb0b30e2ef6fa1d1a78ab365a677a5fd944",
+    "mtime_local": "2026-10-17T23:27:54.406313+07:00"
+  }
+}

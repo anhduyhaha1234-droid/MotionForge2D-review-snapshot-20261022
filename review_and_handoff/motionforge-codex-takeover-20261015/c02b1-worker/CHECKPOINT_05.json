@@ -1,0 +1,44 @@
+{
+  "utc": "2026-10-16T07:34:28.6320825Z",
+  "task": "CODEX-C02B1-STAGED-SOURCE-FRESHNESS",
+  "owner": "/root/motionforge_c02b1_coder",
+  "model": "gpt-6-sol/max/no fallback",
+  "allowlist": [
+    "R6/scripts/r6_common.py related helpers/imports",
+    "R6/tests/test_codex_c02b1_staged_source.py",
+    "OUT/c02b1-worker/**"
+  ],
+  "intent": "Add real FFmpeg fixture and finish independent verification",
+  "files": [
+    {
+      "bytes": 10578,
+      "path": "r6_common.py",
+      "lines": 241,
+      "sha": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc"
+    },
+    {
+      "bytes": 11057,
+      "path": "test_codex_c02b1_staged_source.py",
+      "lines": 243,
+      "sha": "f671bb5857d345f6c1426dbc06422b042d3d213d038a12859e13580e90207f3a"
+    }
+  ],
+  "commands": [
+    {
+      "result": "9 tests, all pass; includes failure and partial publication controls",
+      "name": "unittest_s1_s5",
+      "exit": 0
+    }
+  ],
+  "decisions": [
+    "Extractor fail/missing/empty leaves prior valid pair exact",
+    "Final sidecar publication failure leaves pending marker; next call regenerates"
+  ],
+  "remaining": [
+    "S6 real FFmpeg pixel/content fixture",
+    "root seven-case probe and C01+C02A full modules",
+    "scope/protected audit and candidate freeze"
+  ],
+  "next_command": "Patch real FFmpeg test and run",
+  "live_jobs": []
+}

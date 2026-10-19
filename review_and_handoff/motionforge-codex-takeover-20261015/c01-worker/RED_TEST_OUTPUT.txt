@@ -1,0 +1,183 @@
+EF..FF.FFFFFFFFFFFF.
+======================================================================
+ERROR: test_bad_json_and_non_object_are_gate_blocks (__main__.ReviewBindingTests.test_bad_json_and_non_object_are_gate_blocks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 121, in test_bad_json_and_non_object_are_gate_blocks
+    self.blocked("MALFORMED")
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 77, in blocked
+    self.require(artifact, inputs)
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 70, in require
+    return self.gate.require_review(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\scripts\r6_gate.py", line 64, in require_review
+    r = load_review(kind, name)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\scripts\r6_gate.py", line 51, in load_review
+    return json.loads(p.read_text(encoding="utf-8"))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+
+======================================================================
+FAIL: test_blend_producer_schema_and_full_mapping (__main__.ReviewBindingTests.test_blend_producer_schema_and_full_mapping)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 165, in test_blend_producer_schema_and_full_mapping
+    with self.assertRaisesRegex(self.gate.GateBlock, "INPUT_SET"):
+AssertionError: GateBlock not raised
+
+======================================================================
+FAIL: test_extra_recorded_and_current_dependencies_block (__main__.ReviewBindingTests.test_extra_recorded_and_current_dependencies_block)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 101, in test_extra_recorded_and_current_dependencies_block
+    self.blocked("INPUT_SET", inputs={**self.inputs, "extra": "x"})
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 76, in blocked
+    with self.assertRaisesRegex(self.gate.GateBlock, code):
+AssertionError: GateBlock not raised
+
+======================================================================
+FAIL: test_false_and_numeric_dependency_values_do_not_bind (__main__.ReviewBindingTests.test_false_and_numeric_dependency_values_do_not_bind)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 142, in test_false_and_numeric_dependency_values_do_not_bind
+    self.blocked("INPUT", inputs={"ledger_row_sha": self.inputs["ledger_row_sha"], "deps_sha": 0})
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 76, in blocked
+    with self.assertRaisesRegex(self.gate.GateBlock, code):
+AssertionError: GateBlock not raised
+
+======================================================================
+FAIL: test_missing_recorded_dependency_blocks (__main__.ReviewBindingTests.test_missing_recorded_dependency_blocks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 86, in test_missing_recorded_dependency_blocks
+    self.blocked("INPUT_SET")
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 76, in blocked
+    with self.assertRaisesRegex(self.gate.GateBlock, code):
+AssertionError: GateBlock not raised
+
+======================================================================
+FAIL: test_other_path_with_identical_bytes_blocks (__main__.ReviewBindingTests.test_other_path_with_identical_bytes_blocks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 111, in test_other_path_with_identical_bytes_blocks
+    self.blocked("ARTIFACT_PATH", artifact=other)
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 76, in blocked
+    with self.assertRaisesRegex(self.gate.GateBlock, code):
+AssertionError: GateBlock not raised
+
+======================================================================
+FAIL: test_real_assembler_main_rejects_before_copy_and_encoder (__main__.ReviewBindingTests.test_real_assembler_main_rejects_before_copy_and_encoder)
+----------------------------------------------------------------------
+c01_isolated_gate.GateBlock: ASSEMBLE_BLOCKED BLEND_MANIFEST_MISSING S0099
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 195, in test_real_assembler_main_rejects_before_copy_and_encoder
+    with self.assertRaisesRegex(self.gate.GateBlock, "ASSEMBLE_BLOCKED.*INPUT_SET"):
+AssertionError: "ASSEMBLE_BLOCKED.*INPUT_SET" does not match "ASSEMBLE_BLOCKED BLEND_MANIFEST_MISSING S0099"
+
+======================================================================
+FAIL: test_required_field_types_and_frames (__main__.ReviewBindingTests.test_required_field_types_and_frames) (field='reviewer', value=7)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 136, in test_required_field_types_and_frames
+    self.blocked("MALFORMED")
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 76, in blocked
+    with self.assertRaisesRegex(self.gate.GateBlock, code):
+AssertionError: GateBlock not raised
+
+======================================================================
+FAIL: test_required_field_types_and_frames (__main__.ReviewBindingTests.test_required_field_types_and_frames) (field='evidence', value=['text'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 136, in test_required_field_types_and_frames
+    self.blocked("MALFORMED")
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 76, in blocked
+    with self.assertRaisesRegex(self.gate.GateBlock, code):
+AssertionError: GateBlock not raised
+
+======================================================================
+FAIL: test_required_field_types_and_frames (__main__.ReviewBindingTests.test_required_field_types_and_frames) (field='reviewed_at', value=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 136, in test_required_field_types_and_frames
+    self.blocked("MALFORMED")
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 76, in blocked
+    with self.assertRaisesRegex(self.gate.GateBlock, code):
+AssertionError: GateBlock not raised
+
+======================================================================
+FAIL: test_required_field_types_and_frames (__main__.ReviewBindingTests.test_required_field_types_and_frames) (field='frames', value=['1'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 136, in test_required_field_types_and_frames
+    self.blocked("MALFORMED")
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 76, in blocked
+    with self.assertRaisesRegex(self.gate.GateBlock, code):
+AssertionError: GateBlock not raised
+
+======================================================================
+FAIL: test_required_field_types_and_frames (__main__.ReviewBindingTests.test_required_field_types_and_frames) (field='frames', value=[True])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 136, in test_required_field_types_and_frames
+    self.blocked("MALFORMED")
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 76, in blocked
+    with self.assertRaisesRegex(self.gate.GateBlock, code):
+AssertionError: GateBlock not raised
+
+======================================================================
+FAIL: test_required_field_types_and_frames (__main__.ReviewBindingTests.test_required_field_types_and_frames) (field='frames', value=[0])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 136, in test_required_field_types_and_frames
+    self.blocked("MALFORMED")
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 76, in blocked
+    with self.assertRaisesRegex(self.gate.GateBlock, code):
+AssertionError: GateBlock not raised
+
+======================================================================
+FAIL: test_required_field_types_and_frames (__main__.ReviewBindingTests.test_required_field_types_and_frames) (field='expected', value={'shot': 'S0099', 'fid': False})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 136, in test_required_field_types_and_frames
+    self.blocked("MALFORMED")
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 76, in blocked
+    with self.assertRaisesRegex(self.gate.GateBlock, code):
+AssertionError: GateBlock not raised
+
+======================================================================
+FAIL: test_required_field_types_and_frames (__main__.ReviewBindingTests.test_required_field_types_and_frames) (field='artifact', value={'path': False, 'sha256': 'e832750a4ae613cd533b1efbccdb2d181885aa94ae813f386ebeac2b6c5ff812'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 136, in test_required_field_types_and_frames
+    self.blocked("MALFORMED")
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 76, in blocked
+    with self.assertRaisesRegex(self.gate.GateBlock, code):
+AssertionError: GateBlock not raised
+
+======================================================================
+FAIL: test_review_identity_must_match_requested_kind_and_name (__main__.ReviewBindingTests.test_review_identity_must_match_requested_kind_and_name)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 117, in test_review_identity_must_match_requested_kind_and_name
+    self.blocked("IDENTITY")
+  File "C:\Users\Admin\Documents\Codex\work\mf-delivery-runs\20261005\20261005T1643Z-wan-long\tasks\MF-DEMO-LONG-01\corrections\identity5m_20261008\r6\tests\test_codex_c01_review_binding.py", line 76, in blocked
+    with self.assertRaisesRegex(self.gate.GateBlock, code):
+AssertionError: GateBlock not raised
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.208s
+
+FAILED (failures=15, errors=1)

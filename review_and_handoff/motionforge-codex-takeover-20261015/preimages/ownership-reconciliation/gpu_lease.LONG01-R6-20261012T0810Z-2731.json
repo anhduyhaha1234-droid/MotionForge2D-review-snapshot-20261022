@@ -1,0 +1,51 @@
+{
+  "acquired_utc": "2026-10-12T08:04:10.183498+00:00",
+  "children": [
+    {
+      "created": "20261012150407.863571+420",
+      "name": "hermes.exe",
+      "pid": 24972
+    },
+    {
+      "created": "20261012150407.882372+420",
+      "name": "python.exe",
+      "pid": 20760
+    }
+  ],
+  "detached": false,
+  "invocation_id": "LONG01-R6-20261012T0810Z-2731",
+  "job": "LONG01_R6.md",
+  "launcher": {
+    "created": "20261012150407.678853+420",
+    "name": "python.exe",
+    "pid": 28604
+  },
+  "launcher_pid": 28604,
+  "owner_sid": "20261007_234033_cc0b6d",
+  "release_attempts": [
+    {
+      "at_utc": "2026-10-12T08:20:58.178005+00:00",
+      "children": [
+        {
+          "pid": 24972,
+          "state": "DEAD"
+        },
+        {
+          "pid": 20760,
+          "state": "DEAD"
+        }
+      ],
+      "context": "controller_exit",
+      "render_probe": {
+        "detail": "no queue job, no runner process",
+        "quiet": true
+      }
+    }
+  ],
+  "release_reason": "no queue job, no runner process",
+  "released_utc": "2026-10-12T08:20:58.178005+00:00",
+  "reserved_utc": "2026-10-12T08:04:07.860862+00:00",
+  "run": "20261005T1643Z-wan-long",
+  "run_path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long",
+  "status": "RELEASED"
+}

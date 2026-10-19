@@ -1,0 +1,101 @@
+diff --git "a/C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\preimages\\test_codex_c01_review_binding.py" "b/C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c01_review_binding.py"
+index 10e8562..a14f68a 100644
+--- "a/C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-codex-takeover-20261015\\c01-worker\\candidate02\\preimages\\test_codex_c01_review_binding.py"
++++ "b/C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c01_review_binding.py"
+@@ -183,6 +183,22 @@ class ReviewBindingTests(unittest.TestCase):
+             reviewer="reviewer", frames=[1],
+         )
+         self.gate.require_review("blend", "S0099_blend", manifest, inputs)
++        malformed_inputs = {
++            **inputs,
++            "frames": [{**inputs["frames"][0], "name": "frame-one.jpg"}],
++        }
++        self.gate.write_review(
++            "blend", "S0099_blend", manifest, malformed_inputs,
++            {"shot": "S0099", "frames": 1}, "PASS", "frame checked",
++            reviewer="reviewer", frames=[1],
++        )
++        with self.assertRaisesRegex(self.gate.GateBlock, "CURRENT_FRAMES_MALFORMED"):
++            self.gate.require_review("blend", "S0099_blend", manifest, malformed_inputs)
++        self.gate.write_review(
++            "blend", "S0099_blend", manifest, inputs,
++            {"shot": "S0099", "frames": 1}, "PASS", "frame checked",
++            reviewer="reviewer", frames=[1],
++        )
+         review_path = self.gate.REV / "blend" / "S0099_blend.review.json"
+         record = json.loads(review_path.read_text(encoding="utf-8"))
+         record["inputs"].pop("child_outcomes_sha")
+@@ -190,6 +206,73 @@ class ReviewBindingTests(unittest.TestCase):
+         with self.assertRaisesRegex(self.gate.GateBlock, "INPUT_SET"):
+             self.gate.require_review("blend", "S0099_blend", manifest, inputs)
+ 
++    def test_real_gate_assemble_binds_review_to_consumed_blend_frames(self):
++        sid = "S0099"
++        row = {"shot": sid, "n": 3, "events": [], "contacts": [], "actors": []}
++        self.k.R6.mkdir(exist_ok=True)
++        (self.k.R6 / "source_actor_ledger.jsonl").write_text(
++            json.dumps(row) + "\n", encoding="utf-8",
++        )
++        storyboard = self.k.R6 / "storyboard" / f"{sid}.json"
++        storyboard.parent.mkdir()
++        storyboard.write_text(json.dumps({"keys": [{"fid": 1}]}), encoding="utf-8")
++        self.gate.write_review(
++            "keys", self.name, self.artifact,
++            self.gate.key_inputs_now(sid, 1, self.artifact),
++            {"shot": sid, "fid": 1}, "PASS", "key checked",
++            reviewer="reviewer", frames=[1],
++        )
++        blend_dir = self.k.R6 / "work" / sid / "blend"
++        blend_dir.mkdir(parents=True)
++        current_frames = []
++        for fid in range(1, 4):
++            frame = blend_dir / f"{fid:04d}.jpg"
++            frame.write_bytes(f"fixture frame {fid}".encode())
++            current_frames.append({
++                "name": frame.name,
++                "size": frame.stat().st_size,
++                "sha256": self.k.sha(frame),
++            })
++        manifest = blend_dir.parent / "blend_manifest.json"
++        for label, manifest_frames, reviewed, count, accepted in (
++            ("full", current_frames, [1, 2, 3], 3, True),
++            ("truncated", current_frames, [1], 1, False),
++            ("overlong", current_frames, [1, 2, 3, 4], 4, False),
++            ("reordered", [current_frames[0], current_frames[2], current_frames[1]],
++             [1, 2, 3], 3, False),
++        ):
++            with self.subTest(case=label):
++                manifest.write_text(json.dumps({
++                    "frames": manifest_frames,
++                    "blend_dir": str(blend_dir),
++                    "child_outcomes": [{"rc": 0}],
++                    "decode_ok": True,
++                    "key_set_sha": "c" * 64,
++                    "child_outcomes_sha": "d" * 64,
++                }), encoding="utf-8")
++                self.gate.write_review(
++                    "blend", f"{sid}_blend", manifest,
++                    self.gate.blend_inputs_now(sid),
++                    {"shot": sid, "frames": count}, "PASS", "blend checked",
++                    reviewer="reviewer", frames=reviewed,
++                )
++                if accepted:
++                    self.assertTrue(self.gate.gate_assemble([(sid, 3)]))
++                else:
++                    with self.assertRaisesRegex(self.gate.GateBlock, "ASSEMBLE_BLOCKED.*FRAME_IDENTITY"):
++                        self.gate.gate_assemble([(sid, 3)])
++        manifest.write_text(json.dumps({
++            "frames": [True, current_frames[1], current_frames[2]],
++            "blend_dir": str(blend_dir),
++            "child_outcomes": [{"rc": 0}],
++            "decode_ok": True,
++        }), encoding="utf-8")
++        with self.assertRaisesRegex(self.gate.GateBlock, "CURRENT_FRAMES_MALFORMED"):
++            self.gate.gate_assemble([(sid, 3)])
++        manifest.write_text(json.dumps({"frames": 3}), encoding="utf-8")
++        with self.assertRaisesRegex(self.gate.GateBlock, "BLEND_MANIFEST_COUNT"):
++            self.gate.gate_assemble([(sid, 3)])
++
+     def test_real_assembler_main_rejects_before_copy_and_encoder(self):
+         self.inputs = {"ledger_row_sha": "a" * 64, "deps_sha": "b" * 64}
+         record = self.record()

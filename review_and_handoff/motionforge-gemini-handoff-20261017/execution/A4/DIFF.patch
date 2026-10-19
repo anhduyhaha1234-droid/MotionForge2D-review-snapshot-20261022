@@ -1,0 +1,71 @@
+--- preimage/scripts/r6_assemble.py
++++ r6/scripts/r6_assemble.py
+@@ -6,14 +6,14 @@
+ Frames sourced from each shot's manifest blend_dir (validated by the gate).
+ """
+ from __future__ import annotations
+-import json, shutil, sys, time
++import json, os, shutil, sys, time
+ from pathlib import Path
+ HERE = Path(__file__).resolve().parent
+ sys.path.insert(0, str(HERE))
+ import r6_common as K  # noqa: E402
+ import r6_gate as G  # noqa: E402
+ 
+-NS = K.R6 / "continuations/LONG01-R6g-20261014T0725Z-1572"
++NS = Path(os.environ.get("R6_INVOCATION_DIR", K.R6 / "continuations/LONG01-R6g-20261014T0725Z-1572"))
+ OUT = NS / "outputs"
+ OUT.mkdir(parents=True, exist_ok=True)
+ FR = NS / "assembly_frames"
+
+--- preimage/scripts/r6_matrix.py
++++ r6/scripts/r6_matrix.py
+@@ -4,13 +4,13 @@
+ Emits R6_MATRIX_EVIDENCE.json + R6_MANIFEST.json (recursive; manifest hash AFTER final record).
+ """
+ from __future__ import annotations
+-import hashlib, json, sys, time
++import hashlib, json, os, sys, time
+ from pathlib import Path
+ HERE = Path(__file__).resolve().parent
+ sys.path.insert(0, str(HERE))
+ import r6_common as K  # noqa: E402
+ 
+-NS = K.R6 / "continuations/LONG01-R6g-20261014T0725Z-1572"
++NS = Path(os.environ.get("R6_INVOCATION_DIR", K.R6 / "continuations/LONG01-R6g-20261014T0725Z-1572"))
+ 
+ 
+ def _exists(p):
+
+--- preimage/scripts/r6_gate.py
++++ r6/scripts/r6_gate.py
+@@ -368,3 +368,29 @@
+         if not p.exists() or K.sha(p) != a["sha256"]:
+             raise GateBlock(f"ARTIFACT_HASH_STALE {p}")
+     return True
++
++def gate_batch_conformance(record: dict, mode: str = "engineering") -> bool:
++    """Validate batch submission:
++    - 'engineering' (G1): Q05, Q07 must be PASS; media Qs remain honestly UNKNOWN/FAIL until G2.
++    - 'final' (G3): all 12 Qs must be PASS.
++    """
++    matrix = record.get("matrix", {})
++    exp_keys = {f"Q{i:02d}" for i in range(1, 13)}
++    if set(matrix.keys()) != exp_keys:
++        raise GateBlock(f"MATRIX_KEYS {sorted(matrix.keys())}")
++    for q, val in matrix.items():
++        if val not in ("PASS", "FAIL", "UNKNOWN"):
++            raise GateBlock(f"INVALID_VERDICT_VALUE {q}={val}")
++    if mode == "engineering":
++        if matrix.get("Q05") != "PASS" or matrix.get("Q07") != "PASS":
++            raise GateBlock(f"ENGINEERING_BATCH_Q_NOT_PASS Q05={matrix.get('Q05')}, Q07={matrix.get('Q07')}")
++        # Disallow false claims of media PASS before actual media rendering
++        for mq in ("Q01", "Q04", "Q06", "Q09", "Q12"):
++            if matrix.get(mq) == "PASS":
++                raise GateBlock(f"PREMATURE_MEDIA_PASS_IN_ENGINEERING_BATCH {mq}")
++    elif mode == "final":
++        bad = {k: v for k, v in matrix.items() if v != "PASS"}
++        if bad:
++            raise GateBlock(f"FINAL_SUBMISSION_NOT_ALL_PASS {bad}")
++    return True
++

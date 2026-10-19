@@ -1,0 +1,71 @@
+{
+  "utc": "2026-10-12T10:46:42.174512+00:00",
+  "source_repositories": 15,
+  "source_fetch_errors": [
+    {
+      "path": "skills/remotion-markup/rules/animations.md",
+      "url": "https://raw.githubusercontent.com/remotion-dev/skills/7ba4dcf8ebe1626b00baa41e1f2478113719b60b/skills/remotion-markup/rules/animations.md",
+      "error": "HTTP Error 404: Not Found",
+      "downloaded_not_necessarily_read_in_full": true
+    },
+    {
+      "path": "skills/remotion-markup/rules/timing.md",
+      "url": "https://raw.githubusercontent.com/remotion-dev/skills/7ba4dcf8ebe1626b00baa41e1f2478113719b60b/skills/remotion-markup/rules/timing.md",
+      "error": "HTTP Error 404: Not Found",
+      "downloaded_not_necessarily_read_in_full": true
+    }
+  ],
+  "skill_validation": "Skill is valid!",
+  "contract_checks": {
+    "passed": 20,
+    "total": 20
+  },
+  "broken_relative_links": [],
+  "files": [
+    {
+      "path": "CONTEXT_RECEIPT.json",
+      "sha256": "c3ec2c74be6b78204c14acf5cfb7e953459e2b99544b28fad93b18950159ae96",
+      "bytes": 4399
+    },
+    {
+      "path": "CONTRACT_CHECKS.json",
+      "sha256": "fee754505d18ca81b4c09dbd7b1558e3c945ab5f5ae39a1097339433ea117c2d",
+      "bytes": 4124
+    },
+    {
+      "path": "motionforge-video-craft/assets/cue-plan.example.json",
+      "sha256": "b0d4da9b0e31f50d62d979752a2e86975e6797b0070786b27ccdfae687549533",
+      "bytes": 749
+    },
+    {
+      "path": "motionforge-video-craft/references/FEATURE_CONTRACT_VI.md",
+      "sha256": "1c88adbc67fdb2542548a128e9922d8597a8996f041b60149856787d8f8c29fc",
+      "bytes": 12957
+    },
+    {
+      "path": "motionforge-video-craft/references/SOURCE_LOCK.json",
+      "sha256": "ab92250c87a3ebbc92d9bdae5226690f03791ce72f5cf938eb2ea400c98d4920",
+      "bytes": 85462
+    },
+    {
+      "path": "motionforge-video-craft/references/TECH_ADOPTION_VI.md",
+      "sha256": "3b890da6296fcfe871bacee08bc7c62c7d12bb139567e6b28b79498e730d4536",
+      "bytes": 10931
+    },
+    {
+      "path": "motionforge-video-craft/scripts/validate_cues.py",
+      "sha256": "d6dfb8432861902eee9dfd90030a2e48dca1dc51a3ff2381cf0812688f35204c",
+      "bytes": 5335
+    },
+    {
+      "path": "motionforge-video-craft/SKILL.md",
+      "sha256": "8e5baff424dc1ac06e1d99df4dd6aeacc25596d87c08b75e530fb023126ad7f4",
+      "bytes": 4825
+    },
+    {
+      "path": "README_VI.md",
+      "sha256": "9c0b0ca192ad102ce7ee47393db56f085178de1f7b586cfa1dfe5e7b5d61997a",
+      "bytes": 2837
+    }
+  ]
+}

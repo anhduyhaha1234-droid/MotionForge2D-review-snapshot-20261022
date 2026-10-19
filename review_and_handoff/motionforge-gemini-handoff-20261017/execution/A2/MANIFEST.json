@@ -1,0 +1,68 @@
+{
+  "schema": 1,
+  "task": "GEMINI-C02B3-ASSET-VERIFIED-REUSE",
+  "phase": "A2",
+  "status": "SELF_VERIFIED",
+  "created_utc": "2026-10-17T08:53:01.288958+00:00",
+  "owner": "gemini-implementation-owner",
+  "model": "ag/gemini-3.8-flash-high",
+  "files": [
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_keygen_asset.py",
+      "relative": "scripts/r6_keygen_asset.py",
+      "sha256": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e",
+      "bytes": 6467,
+      "lines": 141
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py",
+      "relative": "scripts/r6_cache.py",
+      "sha256": "e295e10d5c1509b40655f5fcf4bc8be5f5eb7c39e03df769c3b1ca1bd4f115e5",
+      "bytes": 31946,
+      "lines": 588
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_key_recipe.py",
+      "relative": "scripts/r6_key_recipe.py",
+      "sha256": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9",
+      "bytes": 10608,
+      "lines": 223
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_gemini_c02b3_asset_reuse.py",
+      "relative": "tests/test_gemini_c02b3_asset_reuse.py",
+      "sha256": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b",
+      "bytes": 14696,
+      "lines": 331
+    }
+  ],
+  "tests": {
+    "c01_review_binding": {
+      "count": 17,
+      "status": "PASS"
+    },
+    "c02a_dependency_verification": {
+      "count": 13,
+      "status": "PASS"
+    },
+    "c02b1_staged_source": {
+      "count": 10,
+      "status": "PASS"
+    },
+    "c02b2_per_actor_reuse": {
+      "count": 14,
+      "status": "PASS"
+    },
+    "c02b3_asset_reuse": {
+      "count": 10,
+      "status": "PASS"
+    },
+    "total_tests": 64,
+    "total_passed": 64,
+    "probe_v4_replay": {
+      "status": "PASS",
+      "initial": 1,
+      "replay": 0
+    }
+  }
+}

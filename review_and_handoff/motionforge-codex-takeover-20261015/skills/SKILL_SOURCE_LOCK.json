@@ -1,0 +1,177 @@
+[
+  {
+    "name": "verification-before-completion",
+    "repo": "obra/superpowers",
+    "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+    "source": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/verification-before-completion/SKILL.md",
+    "installed_path": "C:\\Users\\Admin\\.codex\\skills\\verification-before-completion",
+    "remote_skill_sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+    "installed_skill_sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+    "remote_exact_bytes": true,
+    "remote_lf_normalized_equal": true,
+    "line_ending_note": "Git sparse checkout may use Windows CRLF; normalized comparison preserves all text.",
+    "license": "MIT",
+    "license_url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/LICENSE",
+    "license_sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+    "files": [
+      {
+        "path": "skills\\vendor\\github\\verification-before-completion\\SKILL.md",
+        "sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+        "bytes": 3646
+      }
+    ]
+  },
+  {
+    "name": "systematic-debugging",
+    "repo": "obra/superpowers",
+    "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+    "source": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/systematic-debugging/SKILL.md",
+    "installed_path": "C:\\Users\\Admin\\.codex\\skills\\systematic-debugging",
+    "remote_skill_sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202",
+    "installed_skill_sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202",
+    "remote_exact_bytes": true,
+    "remote_lf_normalized_equal": true,
+    "line_ending_note": "Git sparse checkout may use Windows CRLF; normalized comparison preserves all text.",
+    "license": "MIT",
+    "license_url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/LICENSE",
+    "license_sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+    "files": [
+      {
+        "path": "skills\\vendor\\github\\systematic-debugging\\condition-based-waiting-example.ts",
+        "sha256": "40ae5ebe497fdf310200e43fe986552546d0a22837c0d39e855db1cfd33eb88e",
+        "bytes": 5054
+      },
+      {
+        "path": "skills\\vendor\\github\\systematic-debugging\\condition-based-waiting.md",
+        "sha256": "e89fec8400d6cd50f43407cec9fab50976ba4d55d0ec2eb51c0bd68036b54c26",
+        "bytes": 3516
+      },
+      {
+        "path": "skills\\vendor\\github\\systematic-debugging\\CREATION-LOG.md",
+        "sha256": "c24733a5b1821bd6bed1fc950261f0b9f4e90097e0bbb96459d8179713730789",
+        "bytes": 4257
+      },
+      {
+        "path": "skills\\vendor\\github\\systematic-debugging\\defense-in-depth.md",
+        "sha256": "1e175fb86fc357e58c6aebf5441e481e1b7868b4380c0456b63a17eefbd18ba7",
+        "bytes": 3650
+      },
+      {
+        "path": "skills\\vendor\\github\\systematic-debugging\\find-polluter.sh",
+        "sha256": "dd7b8f13c4cc2a24b33ff87b18da9248f3e1c80a085c3316224f69ff0fa5c43c",
+        "bytes": 1986
+      },
+      {
+        "path": "skills\\vendor\\github\\systematic-debugging\\root-cause-tracing.md",
+        "sha256": "75b933b6a8c40bdb2031b10f21654395b56ec6ab6bc7b018c18d3fe57aeb7fb8",
+        "bytes": 5321
+      },
+      {
+        "path": "skills\\vendor\\github\\systematic-debugging\\SKILL.md",
+        "sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202",
+        "bytes": 9530
+      },
+      {
+        "path": "skills\\vendor\\github\\systematic-debugging\\test-academic.md",
+        "sha256": "fe2ba480d78ac0d686dc025f41c2a32a43d642bf533f91b0c6053a04d35d6486",
+        "bytes": 653
+      },
+      {
+        "path": "skills\\vendor\\github\\systematic-debugging\\test-pressure-1.md",
+        "sha256": "0b6a915db0054577819834c79be9eb614e97bddba10d73768e1fbe91cfed048a",
+        "bytes": 1900
+      },
+      {
+        "path": "skills\\vendor\\github\\systematic-debugging\\test-pressure-2.md",
+        "sha256": "b2030aeffba07050e8ad573ddf87486457c4a016a786bb326235bebd856f2016",
+        "bytes": 2283
+      },
+      {
+        "path": "skills\\vendor\\github\\systematic-debugging\\test-pressure-3.md",
+        "sha256": "96b50a52e2c7989c9cf20fb752c47c1e9a3a70dc362f8f7989f8f5b64dac7708",
+        "bytes": 2692
+      }
+    ]
+  },
+  {
+    "name": "writing-plans",
+    "repo": "obra/superpowers",
+    "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+    "source": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/writing-plans/SKILL.md",
+    "installed_path": "C:\\Users\\Admin\\.codex\\skills\\writing-plans",
+    "remote_skill_sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a",
+    "installed_skill_sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a",
+    "remote_exact_bytes": true,
+    "remote_lf_normalized_equal": true,
+    "line_ending_note": "Git sparse checkout may use Windows CRLF; normalized comparison preserves all text.",
+    "license": "MIT",
+    "license_url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/LICENSE",
+    "license_sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+    "files": [
+      {
+        "path": "skills\\vendor\\github\\writing-plans\\SKILL.md",
+        "sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a",
+        "bytes": 10335
+      }
+    ]
+  },
+  {
+    "name": "receiving-code-review",
+    "repo": "obra/superpowers",
+    "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+    "source": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/receiving-code-review/SKILL.md",
+    "installed_path": "C:\\Users\\Admin\\.codex\\skills\\receiving-code-review",
+    "remote_skill_sha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438",
+    "installed_skill_sha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438",
+    "remote_exact_bytes": true,
+    "remote_lf_normalized_equal": true,
+    "line_ending_note": "Git sparse checkout may use Windows CRLF; normalized comparison preserves all text.",
+    "license": "MIT",
+    "license_url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/LICENSE",
+    "license_sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+    "files": [
+      {
+        "path": "skills\\vendor\\github\\receiving-code-review\\SKILL.md",
+        "sha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438",
+        "bytes": 6203
+      }
+    ]
+  },
+  {
+    "name": "context-compression",
+    "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+    "commit": "9ff0c99108b36d3b886defd825d8ac1f47dba374",
+    "source": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/9ff0c99108b36d3b886defd825d8ac1f47dba374/skills/context-compression/SKILL.md",
+    "installed_path": "C:\\Users\\Admin\\.codex\\skills\\context-compression",
+    "remote_skill_sha256": "ab4fd1e1046db339d83ead5089d4cb9d9c487232945d4ff6be90e08a03f6cfea",
+    "installed_skill_sha256": "d76d904dd2d36dc00e3e37ad03e119f6dca9a367d153fa25889978bb52937cfc",
+    "remote_exact_bytes": false,
+    "remote_lf_normalized_equal": true,
+    "line_ending_note": "Git sparse checkout may use Windows CRLF; normalized comparison preserves all text.",
+    "license": "MIT",
+    "license_url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/9ff0c99108b36d3b886defd825d8ac1f47dba374/LICENSE",
+    "license_sha256": "65bc33b0759a48b980962833b12bcb820404da9f5256bff39c00e89471bcf209",
+    "files": [
+      {
+        "path": "skills\\vendor\\github\\context-compression\\SKILL.md",
+        "sha256": "d76d904dd2d36dc00e3e37ad03e119f6dca9a367d153fa25889978bb52937cfc",
+        "bytes": 18788
+      },
+      {
+        "path": "skills\\vendor\\github\\context-compression\\references\\evaluation-framework.md",
+        "sha256": "a42333947bd1a0b72c87f5a2662ad119029f166eb954dd7b963efde36efcb353",
+        "bytes": 8662
+      },
+      {
+        "path": "skills\\vendor\\github\\context-compression\\scripts\\compression_evaluator.py",
+        "sha256": "3d51c4ef3e780a42c0f73ee235c97cab28013563993b0e97b06aa4d3aec831d5",
+        "bytes": 31165
+      },
+      {
+        "path": "skills\\vendor\\github\\context-compression\\tests\\test_compression_evaluator.py",
+        "sha256": "84af59d0c62637ee0c3d1ead73fc6ce25d91346804a70734ac9445af8d06ec33",
+        "bytes": 2151
+      }
+    ]
+  }
+]

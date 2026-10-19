@@ -1,0 +1,374 @@
+"""C02A: recorded v3 dependencies must bind real key and assembly consumers.
+
+All files and modules are isolated under a temporary fixture root. No production
+model, source video, GPU process, or existing R6 artifact is opened by these tests.
+"""
+from __future__ import annotations
+
+import hashlib
+import importlib.util
+import json
+import copy
+import os
+import sys
+import tempfile
+import types
+import unittest
+from pathlib import Path
+from unittest.mock import patch
+
+
+SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
+WORKER = Path(os.environ.get("C02A_WORKER_DIR", tempfile.gettempdir())).resolve()
+DROP = object()
+
+
+def load_source(name: str, path: Path):
+    spec = importlib.util.spec_from_file_location(name, path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+class DependencyVerificationTests(unittest.TestCase):
+    def setUp(self):
+        WORKER.mkdir(parents=True, exist_ok=True)
+        self.sandbox = tempfile.TemporaryDirectory(prefix="c02a-fixture-", dir=WORKER)
+        self.addCleanup(self.sandbox.cleanup)
+        self.root = Path(self.sandbox.name)
+        self.sid, self.fid = "S0099", 3
+        self.k = types.ModuleType("r6_common")
+        self.k.R6 = self.root / "r6"
+        self.k.SRC = self.root / "source.mp4"
+        self.k.PLAN = {self.sid: {"start_frame": 12, "frames": 9000}}
+        self.k.SHOTS = [self.sid]
+        self.k.D = self.root / "data"
+        self.k.R5 = self.root / "r5"
+        self.k.SPAN_B = 9012
+        self.k.AUDIO_SS = 94
+        self.k.sha = lambda path: hashlib.sha256(Path(path).read_bytes()).hexdigest()
+        self.k.run = lambda *args, **kwargs: self.fail("encoder reached")
+        self.k.gframe_of = lambda sid, fid: self.k.PLAN[sid]["start_frame"] + fid - 1
+        self.k.SRC.write_bytes(b"small source bytes")
+        self.k.R6.mkdir()
+        (self.k.R6 / "source_actor_ledger.jsonl").write_text(
+            json.dumps({"shot": self.sid, "n": 9000, "events": [],
+                        "contacts": [], "actors": []}) + "\n", encoding="utf-8")
+        self.model = self.root / "model.safetensors"
+        self.model.write_bytes(b"small model bytes")
+        self.cast = self.root / "cast.png"
+        self.cast.write_bytes(b"small cast bytes")
+        self.mask = self.root / "mask.png"
+        self.mask.write_bytes(b"small mask bytes")
+        self.graph = self.root / "graph.json"
+        self.graph.write_bytes(b'{"node": 1}')
+        self.modules_patch = patch.dict(sys.modules, {"r6_common": self.k})
+        self.modules_patch.start()
+        self.addCleanup(self.modules_patch.stop)
+        self.cache = load_source("c02a_isolated_cache", SCRIPTS / "r6_cache.py")
+        self.cache.MODEL_PATH = self.model
+        self.module_cache_patch = patch.dict(sys.modules, {"r6_cache": self.cache})
+        self.module_cache_patch.start()
+        self.addCleanup(self.module_cache_patch.stop)
+        self.gate = load_source("c02a_isolated_gate", SCRIPTS / "r6_gate.py")
+
+    def build(self, *, passthrough=False):
+        consumed = {"source_span_lo": 12, "source_span_hi": 9012,
+                    "gframe": 14, "casts": [] if passthrough else [self.cast],
+                    "masks": [] if passthrough else [self.mask],
+                    "graph": None if passthrough else self.graph}
+        settings = ({"mode": "keep_source_no_visible_actor"} if passthrough else
+                    {"model": "flux-2-klein-4b-fp8", "steps": 4,
+                     "sampler": "euler", "cfg": 1.0, "seed": 2026101400})
+        return self.cache.build_deps(self.sid, self.fid, consumed, settings)
+
+    def reseal(self, dep):
+        dep["deps_sha"] = hashlib.sha256(json.dumps(
+            {key: value for key, value in dep.items() if key != "deps_sha"},
+            sort_keys=True).encode()).hexdigest()
+        return dep
+
+    def changed(self, baseline, path, value, *, reseal=True):
+        dep = copy.deepcopy(baseline)
+        item = dep
+        for key in path[:-1]:
+            item = item[key]
+        if value is DROP:
+            del item[path[-1]]
+        else:
+            item[path[-1]] = value
+        return self.reseal(dep) if reseal and "deps_sha" in dep else dep
+
+    def assert_invalid(self, label, dep):
+        ok, why = self.cache.verify_deps(dep, self.sid, self.fid)
+        self.assertFalse(ok, f"{label} accepted: {why}")
+        self.assertIsInstance(why, str)
+        self.assertTrue(why)
+        print(f"CASE {label}: blocked: {why}")
+
+    def key_path(self):
+        return self.k.R6 / "keys" / self.sid / f"f_{self.fid:04d}_key.png"
+
+    def deps_path(self):
+        return self.k.R6 / "work" / self.sid / f"f_{self.fid:04d}.deps.json"
+
+    def write_deps(self, dep):
+        path = self.deps_path()
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(dep), encoding="utf-8")
+
+    def prepare_key_review(self):
+        key = self.key_path()
+        key.parent.mkdir(parents=True, exist_ok=True)
+        key.write_bytes(b"tiny key bytes")
+        dep = self.build()
+        self.write_deps(dep)
+        storyboard = self.k.R6 / "storyboard" / f"{self.sid}.json"
+        storyboard.parent.mkdir(parents=True, exist_ok=True)
+        storyboard.write_text(json.dumps({"keys": [{"fid": self.fid}],
+                                         "zero_explicit": False}), encoding="utf-8")
+        self.gate.write_review(
+            "keys", f"{self.sid}_f{self.fid:04d}", key,
+            self.gate.key_inputs_now(self.sid, self.fid, key),
+            {"shot": self.sid, "fid": self.fid}, "PASS", "isolated key checked",
+            reviewer="fixture-reviewer", frames=[self.fid],
+        )
+        return dep
+
+    def prepare_blend_review(self):
+        blend_dir = self.k.R6 / "work" / self.sid / "blend"
+        blend_dir.mkdir(parents=True, exist_ok=True)
+        frames = []
+        for frame_id in range(1, 4):
+            frame = blend_dir / f"{frame_id:04d}.jpg"
+            frame.write_bytes(f"frame {frame_id}".encode())
+            frames.append({"name": frame.name, "size": frame.stat().st_size,
+                           "sha256": self.k.sha(frame)})
+        manifest = blend_dir.parent / "blend_manifest.json"
+        manifest.write_text(json.dumps({"frames": frames, "blend_dir": str(blend_dir),
+                                        "child_outcomes": [{"rc": 0}], "decode_ok": True,
+                                        "key_set_sha": "a" * 64,
+                                        "child_outcomes_sha": "b" * 64}), encoding="utf-8")
+        self.gate.write_review(
+            "blend", f"{self.sid}_blend", manifest,
+            self.gate.blend_inputs_now(self.sid),
+            {"shot": self.sid, "frames": 3}, "PASS", "isolated blend checked",
+            reviewer="fixture-reviewer", frames=[1, 2, 3],
+        )
+
+    def test_empty_record_fails_closed(self):
+        ok, why = self.cache.verify_deps({})
+        self.assertFalse(ok, why)
+
+    def test_real_builder_record_verifies(self):
+        for passthrough in (False, True):
+            with self.subTest(passthrough=passthrough):
+                dep = self.build(passthrough=passthrough)
+                self.assertEqual(self.cache.verify_deps(dep, self.sid, self.fid), (True, "ok"))
+
+    def test_gate_key_blocks_missing_deps(self):
+        key = self.k.R6 / "keys" / self.sid / f"f_{self.fid:04d}_key.png"
+        key.parent.mkdir(parents=True)
+        key.write_bytes(b"key")
+        with self.assertRaisesRegex(self.gate.GateBlock, "DEPS"):
+            self.gate.gate_key(self.sid, self.fid)
+
+    def test_record_shape_and_type_matrix(self):
+        base = self.build()
+        cases = [
+            ("missing_kind", ("kind",), DROP),
+            ("missing_shot", ("shot",), DROP),
+            ("missing_fid", ("fid",), DROP),
+            ("missing_source", ("source",), DROP),
+            ("missing_model", ("model",), DROP),
+            ("missing_casts", ("casts",), DROP),
+            ("missing_masks", ("masks",), DROP),
+            ("missing_graph", ("graph",), DROP),
+            ("missing_settings", ("settings",), DROP),
+            ("missing_deps_sha", ("deps_sha",), DROP),
+            ("kind_number", ("kind",), 3),
+            ("shot_list", ("shot",), [self.sid]),
+            ("fid_bool", ("fid",), True),
+            ("fid_float", ("fid",), 3.0),
+            ("source_list", ("source",), []),
+            ("model_list", ("model",), []),
+            ("casts_object", ("casts",), {}),
+            ("masks_null", ("masks",), None),
+            ("graph_list", ("graph",), []),
+            ("settings_empty", ("settings",), {}),
+            ("settings_list", ("settings",), []),
+            ("deps_sha_bool", ("deps_sha",), True),
+            ("source_path_missing", ("source", "path"), DROP),
+            ("source_hash_missing", ("source", "sha256"), DROP),
+            ("source_hash_empty", ("source", "sha256"), ""),
+            ("source_hash_nonhex", ("source", "sha256"), "g" * 64),
+            ("source_gframe_bool", ("source", "gframe"), True),
+            ("source_span_bool", ("source", "span", 0), True),
+            ("source_span_short", ("source", "span"), [12]),
+            ("model_path_missing", ("model", "path"), DROP),
+            ("model_hash_missing", ("model", "sha256"), DROP),
+            ("cast_path_missing", ("casts", 0, "path"), DROP),
+            ("cast_hash_missing", ("casts", 0, "sha256"), DROP),
+            ("mask_record_number", ("masks", 0), 7),
+            ("graph_hash_missing", ("graph", "sha256"), DROP),
+            ("generated_graph_null", ("graph",), None),
+            ("source_relative_path", ("source", "path"), "source.mp4"),
+            ("settings_mode_bool", ("settings", "mode"), False),
+            ("settings_mode_null", ("settings", "mode"), None),
+        ]
+        self.assertEqual(len(cases), 39)
+        for label, path, value in cases:
+            with self.subTest(case=label):
+                self.assert_invalid(label, self.changed(
+                    base, path, value, reseal=label != "deps_sha_bool"))
+        for label, value in (("null_record", None), ("list_record", []),
+                             ("string_record", "x"), ("bool_record", False)):
+            with self.subTest(case=label):
+                self.assert_invalid(label, value)
+        print("MATRIX shape/type: 43 negative cases")
+
+    def test_consumer_identity_matrix_with_resealed_digest(self):
+        base = self.build()
+        source_copy = self.root / "same-source.mp4"
+        source_copy.write_bytes(self.k.SRC.read_bytes())
+        model_copy = self.root / "same-model.safetensors"
+        model_copy.write_bytes(self.model.read_bytes())
+        cases = [
+            ("wrong_kind", ("kind",), "r6_key_deps_v2"),
+            ("wrong_shot", ("shot",), "S0098"),
+            ("wrong_fid", ("fid",), 4),
+            ("wrong_source_path_same_bytes", ("source", "path"), str(source_copy)),
+            ("wrong_model_path_same_bytes", ("model", "path"), str(model_copy)),
+            ("wrong_gframe", ("source", "gframe"), 15),
+            ("wrong_span", ("source", "span"), [12, 9011]),
+        ]
+        self.assertEqual(len(cases), 7)
+        for label, path, value in cases:
+            with self.subTest(case=label):
+                self.assert_invalid(label, self.changed(base, path, value))
+        combined = copy.deepcopy(base)
+        combined.update(kind="r6_key_deps_v2", shot="S0098", fid=4)
+        combined["source"].update(path=str(source_copy), gframe=15, span=[12, 9011])
+        combined["model"]["path"] = str(model_copy)
+        self.assert_invalid("combined_wrong_identity", self.reseal(combined))
+        print("MATRIX identity: 8 negative cases, all with recomputed digest")
+
+    def test_digest_and_same_size_file_mutation_matrix(self):
+        dep = self.build()
+        self.assert_invalid("self_digest_tamper", self.changed(
+            dep, ("deps_sha",), "0" * 64, reseal=False))
+        files = (("source", self.k.SRC), ("model", self.model), ("cast", self.cast),
+                 ("mask", self.mask), ("graph", self.graph))
+        self.assertEqual(len(files), 5)
+        for label, path in files:
+            with self.subTest(case=label):
+                original = path.read_bytes()
+                path.write_bytes(bytes([original[0] ^ 1]) + original[1:])
+                self.assertEqual(path.stat().st_size, len(original))
+                self.assert_invalid(f"{label}_same_size_mutation", dep)
+                path.write_bytes(original)
+                self.assertEqual(self.cache.verify_deps(dep, self.sid, self.fid), (True, "ok"))
+                print(f"CASE {label}_restored: verified")
+        for label, path in (("source_missing", self.k.SRC),
+                            ("model_missing", self.model), ("cast_missing", self.cast),
+                            ("mask_missing", self.mask), ("graph_missing", self.graph)):
+            with self.subTest(case=label):
+                original = path.read_bytes()
+                path.unlink()
+                self.assert_invalid(label, dep)
+                path.write_bytes(original)
+        unreadable = self.changed(dep, ("casts", 0, "path"), str(self.root))
+        self.assert_invalid("cast_directory_unreadable", unreadable)
+        print("MATRIX bytes/path: 12 negative cases, 5 restored controls")
+
+    def test_strict_json_loader_matrix(self):
+        path = self.root / "record.deps.json"
+        valid = json.dumps(self.build())
+        cases = (("syntax", "{bad"), ("duplicate", '{"kind":"other",' + valid[1:]),
+                 ("nan", valid[:-1] + ',"x":NaN}'),
+                 ("infinity", valid[:-1] + ',"x":Infinity}'),
+                 ("nonobject", "[]"),
+                 ("excessive_nesting", "[" * 1200 + "0" + "]" * 1200))
+        self.assertEqual(len(cases), 6)
+        for label, raw in cases:
+            with self.subTest(case=label):
+                path.write_text(raw, encoding="utf-8")
+                dep, why = self.cache.load_deps(path)
+                if why == "ok":
+                    self.assert_invalid(label, dep)
+                else:
+                    self.assertIsNone(dep)
+                    print(f"CASE json_{label}: blocked: {why}")
+        path.write_bytes(b"\xff")
+        dep, why = self.cache.load_deps(path)
+        self.assertIsNone(dep)
+        self.assertNotEqual(why, "ok")
+        print(f"CASE json_invalid_utf8: blocked: {why}")
+        path.unlink()
+        dep, why = self.cache.load_deps(path)
+        self.assertIsNone(dep)
+        self.assertNotEqual(why, "ok")
+        print(f"CASE json_missing_file: blocked: {why}")
+        print("MATRIX JSON: 8 negative cases")
+
+    def test_valid_record_through_real_key_and_assembly_gates(self):
+        self.prepare_key_review()
+        self.prepare_blend_review()
+        self.assertEqual(self.gate.gate_key(self.sid, self.fid)["verdict"], "PASS")
+        self.assertTrue(self.gate.gate_assemble([(self.sid, 3)]))
+
+    def test_omitted_source_and_hash_block_real_consumer_and_assembler(self):
+        baseline = self.prepare_key_review()
+        self.prepare_blend_review()
+        self.k.D.mkdir()
+        (self.k.D / "chunk_plan.json").write_text(json.dumps({"chunks": [
+            {"unit_id": self.sid, "start_frame": 12, "frames": 9000},
+        ]}), encoding="utf-8")
+        with patch.dict(sys.modules, {"r6_common": self.k, "r6_gate": self.gate}):
+            assembler = load_source("c02a_isolated_assembler", SCRIPTS / "r6_assemble.py")
+        calls = []
+        self.k.run = lambda *args, **kwargs: calls.append(args) or self.fail("encoder reached")
+        cases = (("omitted_source", ("source",)),
+                 ("omitted_source_hash", ("source", "sha256")))
+        self.assertEqual(len(cases), 2)
+        for label, field in cases:
+            with self.subTest(case=label):
+                dep = self.changed(baseline, field, DROP)
+                self.write_deps(dep)
+                with self.assertRaisesRegex(self.gate.GateBlock, "KEY_DEPS_INVALID"):
+                    self.gate.gate_key(self.sid, self.fid)
+                with self.assertRaisesRegex(self.gate.GateBlock, "ASSEMBLE_BLOCKED.*KEY_DEPS_INVALID"):
+                    self.gate.gate_assemble([(self.sid, 3)])
+                with patch.object(assembler.shutil, "copyfile", side_effect=AssertionError("copy reached")):
+                    with self.assertRaisesRegex(self.gate.GateBlock, "ASSEMBLE_BLOCKED.*KEY_DEPS_INVALID"):
+                        assembler.main()
+                self.assertFalse(assembler.FR.exists(), "assembler copied before dependency gate")
+                self.assertEqual(calls, [], "assembler reached encoder")
+                print(f"CASE {label}: key, assembly gate, assembler entry blocked before copy/encoder")
+        self.write_deps(baseline)
+        self.assertTrue(self.gate.gate_assemble([(self.sid, 3)]))
+
+    def test_invalid_json_blocks_real_key_consumer(self):
+        self.prepare_key_review()
+        raw = self.deps_path().read_text(encoding="utf-8")
+        cases = (("syntax", "{bad"), ("duplicate", '{"kind":"bad",' + raw[1:]),
+                 ("non_json_constant", raw[:-1] + ',"extra":NaN}'))
+        self.assertEqual(len(cases), 3)
+        for label, text in cases:
+            with self.subTest(case=label):
+                self.deps_path().write_text(text, encoding="utf-8")
+                with self.assertRaisesRegex(self.gate.GateBlock, "KEY_DEPS_MALFORMED"):
+                    self.gate.gate_key(self.sid, self.fid)
+                print(f"CASE consumer_json_{label}: controlled GateBlock")
+
+    def test_skip_keeps_current_settings_comparison(self):
+        dep = self.prepare_key_review()
+        with patch.dict(sys.modules, {"r6_gate": self.gate}):
+            allowed, why = self.cache.skip_allowed(self.sid, self.fid, self.key_path())
+        self.assertFalse(allowed)
+        self.assertIn("settings changed now", why)
+        self.assertEqual(self.cache.verify_deps(dep, self.sid, self.fid), (True, "ok"))
+
+
+if __name__ == "__main__":
+    unittest.main()

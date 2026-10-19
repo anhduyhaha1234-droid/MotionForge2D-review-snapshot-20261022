@@ -1,0 +1,36 @@
+{
+  "counts": [
+    {
+      "kind": "blend",
+      "outcome": "ACCEPTED_RECORD_SHAPE_AND_ARTIFACT",
+      "count": 54
+    },
+    {
+      "kind": "keys",
+      "outcome": "ACCEPTED_RECORD_SHAPE_AND_ARTIFACT",
+      "count": 1013
+    },
+    {
+      "kind": "keys",
+      "outcome": "SEMANTIC_REVIEW_IDENTITY_MISMATCH",
+      "count": 1
+    },
+    {
+      "kind": "keys",
+      "outcome": "SEMANTIC_REVIEW_INPUTS_MALFORMED",
+      "count": 2
+    }
+  ],
+  "examples": [
+    {
+      "kind": "keys",
+      "outcome": "SEMANTIC_REVIEW_IDENTITY_MISMATCH",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\reviews\\keys\\S0074_f9999.review.json"
+    },
+    {
+      "kind": "keys",
+      "outcome": "SEMANTIC_REVIEW_INPUTS_MALFORMED",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\reviews\\keys\\FX_bad_reenc.review.json"
+    }
+  ]
+}

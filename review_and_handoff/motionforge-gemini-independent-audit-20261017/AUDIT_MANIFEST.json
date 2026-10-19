@@ -1,0 +1,66 @@
+{
+  "created_utc": "2026-10-17T16:31:34.394187+00:00",
+  "scope": "read-only independent liveness/progress audit; no project changes or fresh tests",
+  "files": [
+    {
+      "file": "FILES_EVIDENCE.json",
+      "bytes": 7417,
+      "sha256": "f99bf56ca58d74ac0214f075923a5a4d5064ef384a2cb2c8429d9e3deb1cb60d"
+    },
+    {
+      "file": "HEARTBEAT_CURRENT_REDACTED.txt",
+      "bytes": 5610,
+      "sha256": "a9cfc2839ef9725e4181b6ffe66210f8688efa427718b23fc259b9ca1e8639e5"
+    },
+    {
+      "file": "heartbeat_message_295632_redacted.txt",
+      "bytes": 3668,
+      "sha256": "10f183639f5998740087385e099835c40ac89de00c945f32010ab189f6781100"
+    },
+    {
+      "file": "heartbeat_message_295642_redacted.txt",
+      "bytes": 3845,
+      "sha256": "eebb6f7f6e6f3faf5e6acbc2540d44e804616c40fe79d289715c09fd142d44c9"
+    },
+    {
+      "file": "heartbeat_message_295748_redacted.txt",
+      "bytes": 5610,
+      "sha256": "a9cfc2839ef9725e4181b6ffe66210f8688efa427718b23fc259b9ca1e8639e5"
+    },
+    {
+      "file": "HISTORICAL_TEST_OUTPUTS.json",
+      "bytes": 38118,
+      "sha256": "6d4f7235a93221adb8bff30267c5e985912cf023bfb1dbe165f1f9116ac2a2f1"
+    },
+    {
+      "file": "PROCESS_QUEUE_SNAPSHOT.json",
+      "bytes": 1528,
+      "sha256": "98038bcc48e14294a17ec08a364c18b7dc8d22abcad260b4f17c1917de22a73f"
+    },
+    {
+      "file": "REPORT_VI.md",
+      "bytes": 8457,
+      "sha256": "0ff51e20605b3d3894e18bab0b50587e2ca62494ad5933b0c3f9b558868af2ea"
+    },
+    {
+      "file": "ROUTER_USAGE.json",
+      "bytes": 12003,
+      "sha256": "9cd5d6d7c7063255fa1fb73c6655e417d24947dce30b79df10a373449c246d17"
+    },
+    {
+      "file": "SESSION_EVIDENCE.json",
+      "bytes": 15847,
+      "sha256": "029300a20cec02dd981d8787ad82ce4af2ac57e48f084aec88713cb80aee6c0b"
+    },
+    {
+      "file": "SNAPSHOT_CHECKPOINT.json",
+      "bytes": 4646,
+      "sha256": "7fa8a1936af9aa5e25cc571fbffe8fee9f5a6c6267ab6af7c4fed916549b7030"
+    },
+    {
+      "file": "SNAPSHOT_STATE.json",
+      "bytes": 3944,
+      "sha256": "f6e99eefe15441e45ab7e66204f57470f90e8d01f10f3180f649bddb6e9c11c5"
+    }
+  ]
+}

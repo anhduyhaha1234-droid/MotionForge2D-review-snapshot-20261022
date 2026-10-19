@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "updated_utc": "2026-10-17T08:53:01.288958+00:00",
+  "project": "MotionForge2D",
+  "parent": "MF-DEMO-LONG-01",
+  "parent_status": "NOT_APPROVED",
+  "active_task": "GEMINI-A3-EVENT-TIMING-TRACKING",
+  "owner": "gemini-implementation-owner",
+  "model": "ag/gemini-3.8-flash-high",
+  "phase": "A3",
+  "status": "A2_SELF_VERIFIED",
+  "authority": "HERMES_AUTOPILOT_RULES.md section 0.12",
+  "allowlist": [
+    "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_cache.py",
+    "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_keygen.py",
+    "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\scripts\\r6_key_recipe.py",
+    "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\tests\\test_codex_c02b2_per_actor_reuse.py",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A1\\**"
+  ],
+  "changed_files": [],
+  "tests": [
+    {
+      "test": "checkpoint015 baseline producer replay",
+      "command": "python -B probe_c02b2_v4.py --scripts R6/scripts --out c02b2-worker/v4-replay-03",
+      "exit": 0,
+      "result": "first generation 1, replay 0"
+    }
+  ],
+  "verified_facts": [
+    "All 4 C02B2 files match CHECKPOINT_015 exactly",
+    "All 27 protected files match C02B2_PREFLIGHT exactly",
+    "All 18 GPU leases released, controller lock absent, wan_runner PID 30072 dead",
+    "Previous owner /root/motionforge_c02b2_coder terminal errored",
+    "Zero concurrent writers proven"
+  ],
+  "open_findings": [
+    "C02B2 incomplete: full P1-P5 finite matrix remaining",
+    "standalone gate import without heavy adapter remaining",
+    "final regression of 40 approved C01/C02A/C02B1 tests remaining",
+    "self-review and candidate freeze remaining"
+  ],
+  "decisions": [
+    "Continue C02B2 from CHECKPOINT_015 as A1 task",
+    "Do not revert to C02A; retain C02B2 cache/keygen/recipe improvements",
+    "Adhere strictly to 3 root review gates: G1, G2, G3"
+  ],
+  "next_command": "Run initial focused test suite on test_codex_c02b2_per_actor_reuse.py",
+  "live_jobs": [],
+  "quota": {
+    "kind": "NORMAL_USAGE",
+    "provider_message": null,
+    "reset_at": null
+  },
+  "root_gates": {
+    "G1": "NOT_APPROVED",
+    "G2": "NOT_APPROVED",
+    "G3": "NOT_APPROVED"
+  },
+  "automation": "PAUSED_BY_USER",
+  "completed_tasks": [
+    {
+      "task": "CODEX-C02B2-PER-ACTOR-VERIFIED-REUSE",
+      "phase": "A1",
+      "verdict": "SELF_VERIFIED",
+      "manifest": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A1\\MANIFEST.json",
+      "report": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A1\\REPORT_VI.md",
+      "tests_passed": "54/54",
+      "probe_passed": true
+    },
+    {
+      "task": "GEMINI-C02B3-ASSET-VERIFIED-REUSE",
+      "phase": "A2",
+      "verdict": "SELF_VERIFIED",
+      "manifest": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A2\\MANIFEST.json",
+      "report": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-gemini-handoff-20261017\\execution\\A2\\REPORT_VI.md",
+      "tests_passed": "64/64",
+      "probe_passed": true
+    }
+  ],
+  "next_task": "GEMINI-A3-EVENT-TIMING-TRACKING",
+  "next_phase": "A3"
+}
