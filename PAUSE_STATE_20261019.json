@@ -1,0 +1,55 @@
+{
+  "status": "PAUSED_FOR_MACHINE_MIGRATION",
+  "created_utc": "2026-10-19T16:08:22.061462+00:00",
+  "original_repo_head": "a40e368f7c47c232cf2eeed9fb185c5972cb98ba",
+  "portable_repo": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019",
+  "portable_repo_private": true,
+  "release": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/tag/v2026-10-19-portable",
+  "binary_archive_parts": 31,
+  "binary_archive_bytes": 25250490564,
+  "remote_sha256_all_match": true,
+  "archive_crc_all_match": true,
+  "unique_project_asset_files": 281469,
+  "source_manifest_files": 6083,
+  "source_project_files": 626,
+  "candidate": "g1-candidate-04",
+  "candidate_files": 18,
+  "candidate_18_live_hashes_match_at_final_audit": true,
+  "g1_status": "PENDING_INDEPENDENT_CODEX_REVIEW",
+  "g2_media": "BLOCKED_DEPENDENCY_G1",
+  "g3_product": "BLOCKED_DEPENDENCY_G2",
+  "gemini_owner_session_id": "20261017_115944_b2a338",
+  "gemini_owner_last_message": {
+    "id": 299976,
+    "unix_time": 1792425299.1091433,
+    "finish_reason": "stop"
+  },
+  "stopped_on_old_machine": {
+    "auto_nudge_watchdog_pids": [
+      48180,
+      27108,
+      35364,
+      15684
+    ],
+    "heartbeat_long_pids": [
+      30192,
+      47784,
+      12080,
+      47868
+    ],
+    "ComfyUI_pids": [
+      27420,
+      39004
+    ],
+    "codex_automation": "motionforge-checkpoint-v-quota PAUSED",
+    "hermes_cron": "c6h-heartbeat-30m enabled=false"
+  },
+  "preserved_not_uploaded": [
+    "Antigravity/9router OAuth and API credentials",
+    "Hermes/Codex session databases",
+    "shared runtime third-party weights; see RUNTIME_INVENTORY.json",
+    "reinstallable venv/node_modules/cache",
+    "Windows Notifications OS backups"
+  ],
+  "next_action": "On new machine restore from private repo + release, reauthenticate/reinstall, audit owner transfer and review candidate04; no Media until G1 approved."
+}

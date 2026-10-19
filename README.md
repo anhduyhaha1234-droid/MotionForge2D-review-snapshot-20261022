@@ -12,5 +12,7 @@ Xem [phạm vi bản sao](./PHAM_VI_BAN_SAO_VI.md) để biết chính xác ph�
 - `review_tools/`: script kiểm chứng của reviewer, lưu để tái lập bằng chứng.
 - `ASSET_RELEASE_MANIFEST.json`: tên và SHA-256 của các phần ZIP dữ liệu lớn trong GitHub Release `v2026-10-19-portable`.
 - `PORTABLE_SOURCE_MANIFEST.json`: hash byte của source/rules/handoff trong repo này.
+- `PAUSE_STATE_20261019.json`: trạng thái gate, owner và tiến trình khi dừng máy cũ.
+- `REMOTE_RELEASE_AUDIT.json` và `ARCHIVE_VERIFY_RECEIPT_FINAL.json`: xác nhận 31/31 asset trên GitHub khớp digest và CRC ZIP.
 
 Trạng thái đóng gói: Gemini đã nộp `g1-candidate-04` nhưng **chưa có verdict G1 độc lập**. Gói B Media và full-source/app integration vẫn khóa theo `project/docs/pm/HERMES_AUTOPILOT_RULES.md` §0.12.

@@ -90,5 +90,5 @@ assert len(results)==len(data['parts'])
 receipt={'at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'repo':REPO,'release':release['html_url'],
  'tag':TAG,'commit':HEAD,'assets':sorted(results,key=lambda x:x['name']),'all_size_verified':True,
  'all_remote_digest_verified':all(r.get('digest')=='sha256:'+next(p['sha256'] for p in data['parts'] if p['name']==r['name']) for r in results)}
-(P/'GITHUB_RELEASE_UPLOAD_RECEIPT.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2),encoding='utf-8')
+(P/'GITHUB_RELEASE_UPLOAD_RECEIPT_FINAL.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2),encoding='utf-8')
 print('COMPLETE',len(results),'all_remote_digest_verified',receipt['all_remote_digest_verified'],flush=True)

@@ -1,0 +1,228 @@
+{
+  "at_utc": "2026-10-19T16:07:20.611761+00:00",
+  "repo": "anhduyhaha1234-droid/MotionForge2D-handoff-20261019",
+  "release": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/tag/v2026-10-19-portable",
+  "tag": "v2026-10-19-portable",
+  "commit": "d5ab4ac3960cb7ed6d651a74c0e69ab29c33cfae",
+  "assets": [
+    {
+      "name": "motionforge-assets-001.zip",
+      "state": "already_uploaded",
+      "bytes": 935634609,
+      "digest": "sha256:2ef227f7a278708b1d39484ae17f5798b640c00413122c7d6c954ba2b8a5d3e3",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-001.zip"
+    },
+    {
+      "name": "motionforge-assets-002.zip",
+      "state": "already_uploaded",
+      "bytes": 939480496,
+      "digest": "sha256:03e1cad444adac2f3d86836c538c4c0d41afba70fcf33c2c454b7dfa982cac12",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-002.zip"
+    },
+    {
+      "name": "motionforge-assets-003.zip",
+      "state": "already_uploaded",
+      "bytes": 937521681,
+      "digest": "sha256:7ae2f257343f504e737d64d1a9fd7ac44353bbaf1340a36e6a9976cd1281e39c",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-003.zip"
+    },
+    {
+      "name": "motionforge-assets-004.zip",
+      "state": "already_uploaded",
+      "bytes": 936284187,
+      "digest": "sha256:7aeec645a46f5cc027fa927cc95629ac536a4b684c2051d6a11ee663ec5d9b93",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-004.zip"
+    },
+    {
+      "name": "motionforge-assets-005.zip",
+      "state": "already_uploaded",
+      "bytes": 531242186,
+      "digest": "sha256:ecbe53abd85947c96893bed6a7d590550c19f74827b8f9edf1c0f038935350af",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-005.zip"
+    },
+    {
+      "name": "motionforge-assets-006.zip",
+      "state": "already_uploaded",
+      "bytes": 851088524,
+      "digest": "sha256:73681139c992ec2ae58fc8b969a6b0663e13d5a141819359c8ff1bc003b4cadc",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-006.zip"
+    },
+    {
+      "name": "motionforge-assets-007.zip",
+      "state": "already_uploaded",
+      "bytes": 914724648,
+      "digest": "sha256:343bb1691dd1972c9e2ba2bfaa5132aec3bf4c4f344bc1f3f3ff328d115767e4",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-007.zip"
+    },
+    {
+      "name": "motionforge-assets-008.zip",
+      "state": "already_uploaded",
+      "bytes": 943106662,
+      "digest": "sha256:325db16e8623de09e1059e8eeb195ad2e7842c6cac04e0dbadc0820ba1ebdcf2",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-008.zip"
+    },
+    {
+      "name": "motionforge-assets-009.zip",
+      "state": "already_uploaded",
+      "bytes": 944498407,
+      "digest": "sha256:ea40c4028812ff2d276e3d6572bc4e79dd6d9f6545c5284774176d4ee279aed6",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-009.zip"
+    },
+    {
+      "name": "motionforge-assets-010.zip",
+      "state": "already_uploaded",
+      "bytes": 939257699,
+      "digest": "sha256:ee3c4223299c4dd20afa6c628e4f6d5148792533054a2a19d2d10f547128fa99",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-010.zip"
+    },
+    {
+      "name": "motionforge-assets-011.zip",
+      "state": "already_uploaded",
+      "bytes": 921314510,
+      "digest": "sha256:838d581255572e179b529d4ac923365895a686cbb4132b0aac8a70fe4fdd9649",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-011.zip"
+    },
+    {
+      "name": "motionforge-assets-012.zip",
+      "state": "already_uploaded",
+      "bytes": 419415876,
+      "digest": "sha256:d3a4611710d5a96b2cf03b98dc8463e2730adb08e0e87012eeddfb50c26f2e59",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-012.zip"
+    },
+    {
+      "name": "motionforge-assets-013.zip",
+      "state": "already_uploaded",
+      "bytes": 836806600,
+      "digest": "sha256:f54fe696e86987e035eb797b75fcf3101c6056f7804908408a43eb97c9c2e092",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-013.zip"
+    },
+    {
+      "name": "motionforge-assets-014.zip",
+      "state": "already_uploaded",
+      "bytes": 818487390,
+      "digest": "sha256:1b0b60724d85e7994ded68af6adaaa627e9db5e12b7ce6fb0973158c4e428803",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-014.zip"
+    },
+    {
+      "name": "motionforge-assets-015.zip",
+      "state": "already_uploaded",
+      "bytes": 817520344,
+      "digest": "sha256:a5cc61338caa6b1ceff30954aa53d43ca20463d6546d00c4efe805d8c8389a6f",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-015.zip"
+    },
+    {
+      "name": "motionforge-assets-016.zip",
+      "state": "already_uploaded",
+      "bytes": 928669359,
+      "digest": "sha256:b47343a52efbc76712efe697c0a16c9b160b29b788eba7bbc4844f1f4edbe02b",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-016.zip"
+    },
+    {
+      "name": "motionforge-assets-017.zip",
+      "state": "already_uploaded",
+      "bytes": 920572057,
+      "digest": "sha256:79dd6bfb6063abc87b26e3f3eaeb265e48e6bf664859faffa2687b09c7292861",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-017.zip"
+    },
+    {
+      "name": "motionforge-assets-018.zip",
+      "state": "already_uploaded",
+      "bytes": 922631681,
+      "digest": "sha256:cc84e2be738708f1e687c493ed53f22c4fadec07746a540f9c5666d0a09a4cdc",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-018.zip"
+    },
+    {
+      "name": "motionforge-assets-019.zip",
+      "state": "already_uploaded",
+      "bytes": 930989487,
+      "digest": "sha256:ddf44a0dc6288933f12044c2566f91eef426e0b4946580fcf6e20b8e31bea780",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-019.zip"
+    },
+    {
+      "name": "motionforge-assets-020.zip",
+      "state": "already_uploaded",
+      "bytes": 926359009,
+      "digest": "sha256:4b00785a8982c53da991be2031945752aade9e33de815c3d407216d1eadf96fa",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-020.zip"
+    },
+    {
+      "name": "motionforge-assets-021.zip",
+      "state": "already_uploaded",
+      "bytes": 883337562,
+      "digest": "sha256:40c427cbb84d8c3096ec77ce0c83036284ce11e4fd00205b2d8a939f66c451e3",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-021.zip"
+    },
+    {
+      "name": "motionforge-assets-022.zip",
+      "state": "already_uploaded",
+      "bytes": 926621272,
+      "digest": "sha256:c976e243eadbfed65c794625e834fadabc3ea714f83c363550672030843ce47d",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-022.zip"
+    },
+    {
+      "name": "motionforge-assets-023.zip",
+      "state": "already_uploaded",
+      "bytes": 924771232,
+      "digest": "sha256:e5342dcce43ee421261c1e21b325dd8f7e6db4e602ff31b35ecde0959b6f1374",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-023.zip"
+    },
+    {
+      "name": "motionforge-assets-024.zip",
+      "state": "already_uploaded",
+      "bytes": 866782694,
+      "digest": "sha256:da2e0316264be28be5e285c08530fea5645e9af8be281d4d489563fe2284b8bc",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-024.zip"
+    },
+    {
+      "name": "motionforge-assets-025.zip",
+      "state": "already_uploaded",
+      "bytes": 912869386,
+      "digest": "sha256:0c921ac8cd95443fc1f7b7eeb3c350ef7797105f6e33ff06f108a56dba97c0c1",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-025.zip"
+    },
+    {
+      "name": "motionforge-assets-026.zip",
+      "state": "already_uploaded",
+      "bytes": 908832760,
+      "digest": "sha256:4afbd7e4aa62fa87803f104c82bfa151c432a6cb5de8dba47aa03c15cccbba91",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-026.zip"
+    },
+    {
+      "name": "motionforge-assets-027.zip",
+      "state": "already_uploaded",
+      "bytes": 936379918,
+      "digest": "sha256:d6087fc663d653d806151f1b2f3c55aa9315759789ae0b9812fdd2b3dbd360a8",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-027.zip"
+    },
+    {
+      "name": "motionforge-assets-028.zip",
+      "state": "already_uploaded",
+      "bytes": 902269567,
+      "digest": "sha256:c35776a7982b9ddc21f5b987fbae37bcca8e266b00b47bbba0da8ef4e5005be4",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-028.zip"
+    },
+    {
+      "name": "motionforge-assets-029.zip",
+      "state": "already_uploaded",
+      "bytes": 669762806,
+      "digest": "sha256:e186c0d58611a39faa8ad04bd7b0c66f84c1365610a6d2630a0ae9b57977c320",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-029.zip"
+    },
+    {
+      "name": "motionforge-assets-extra.zip",
+      "state": "already_uploaded",
+      "bytes": 2568939,
+      "digest": "sha256:19f93ac808b4e775c4036e444e805177f37e4df33d611e2e4d9c73d2ebb5b103",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-extra.zip"
+    },
+    {
+      "name": "motionforge-assets-pause-delta.zip",
+      "state": "uploaded",
+      "bytes": 689016,
+      "digest": "sha256:5de59638e0d087fb3cd12601231755951b829ba948d91c47d1935e31eb68887c",
+      "url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/download/v2026-10-19-portable/motionforge-assets-pause-delta.zip"
+    }
+  ],
+  "all_size_verified": true,
+  "all_remote_digest_verified": true
+}

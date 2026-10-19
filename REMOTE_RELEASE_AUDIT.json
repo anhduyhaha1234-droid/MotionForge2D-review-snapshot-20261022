@@ -1,0 +1,13 @@
+{
+  "checked_utc": "2026-10-19T16:07:40.967200+00:00",
+  "repository_private": true,
+  "release_url": "https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019/releases/tag/v2026-10-19-portable",
+  "release_tag": "v2026-10-19-portable",
+  "assets_expected": 31,
+  "assets_found": 31,
+  "all_sizes_and_remote_sha256_match": true,
+  "total_remote_bytes": 25250490564,
+  "smoke_download": "motionforge-assets-extra.zip",
+  "smoke_download_sha256_match": true,
+  "tag_target_commitish": "b0980241ea6075e3c8f2880a9fe7cc1fb779be09"
+}
