@@ -3,6 +3,7 @@
 Kho này lưu **ảnh chụp mã nguồn đang sửa**, prompt/rules/skills của Codex và Hermes, các packet review, checkpoint, cùng chỉ mục dữ liệu video để tiếp tục trên máy khác. Kho gốc `anhduyhaha1234-droid/MotionForge2D` vẫn là lịch sử public; kho này là bản sao **private** và không thay đổi repo gốc.
 
 Đọc [hướng dãn cài lại để chạy tiếp dự án.md](./hướng%20dãn%20cài%20lại%20để%20chạy%20tiếp%20dự%20án.md) trước khi chạy bất kỳ agent hay render nào.
+Xem [phạm vi bản sao](./PHAM_VI_BAN_SAO_VI.md) để biết chính xác phần đã lưu và những dependency phải cài lại.
 
 - `project/`: source hiện tại, gồm thay đổi chưa commit, prompt và rules trong `docs/pm/`.
 - `source-history.bundle`: lịch sử các branch/tag của repo gốc, dùng để khôi phục Git history.

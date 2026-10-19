@@ -17,10 +17,14 @@ Ngày chụp: **19/10/2026**. Bản này dành cho Windows/PowerShell và một 
 3. Clone kho này. Tải **toàn bộ** asset của Release `v2026-10-19-portable` về cùng một thư mục. Nếu release/asset chưa đủ hoặc SHA không khớp, dừng phục hồi và dùng manifest xác định phần thiếu.
 
 ```powershell
-git clone https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019.git MotionForge2D-handoff
-Set-Location .\MotionForge2D-handoff
+$base = Join-Path $env:USERPROFILE 'MF'
+New-Item -ItemType Directory -Path $base -Force | Out-Null
+git -c core.longpaths=true clone https://github.com/anhduyhaha1234-droid/MotionForge2D-handoff-20261019.git (Join-Path $base 'handoff')
+Set-Location (Join-Path $base 'handoff')
 git -C . bundle verify .\source-history.bundle
 ```
+
+Đặt bản clone ở đường dẫn ngắn và bật `core.longpaths` khi clone: vài file evidence có đường dẫn hơn 260 ký tự nếu clone sâu trong `Documents/Codex/...`. Khi mở repo này bằng Git sau đó, dùng `git -c core.longpaths=true ...` hoặc đặt cấu hình `core.longpaths=true` riêng trong repo.
 
 Nếu đã cài GitHub CLI và đăng nhập bằng `gh auth login`, có thể tải toàn bộ ZIP nhanh hơn thao tác từng file trên web:
 

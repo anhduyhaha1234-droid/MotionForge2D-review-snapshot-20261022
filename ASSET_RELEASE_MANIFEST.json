@@ -219,6 +219,15 @@
       "sha256": "19f93ac808b4e775c4036e444e805177f37e4df33d611e2e4d9c73d2ebb5b103",
       "files": 94,
       "uncompressed_bytes": 72223587
+    },
+    {
+      "name": "motionforge-assets-pause-delta.zip",
+      "bytes": 689016,
+      "sha256": "5de59638e0d087fb3cd12601231755951b829ba948d91c47d1935e31eb68887c",
+      "files": 2,
+      "uncompressed_bytes": 15214279,
+      "apply_last": true,
+      "reason": "Two heartbeat logs changed while initial archive was building; final bytes after project monitors stopped."
     }
   ],
   "groups": {
@@ -254,7 +263,8 @@
   },
   "skipped": [],
   "source_rule": "Historical project media and delivery run preserved. Reinstallable environments and credential files excluded.",
-  "total_archive_bytes": 25249801548,
-  "total_files": 281469,
-  "large_runtime_model_omission": "Shared 88.7GB third-party model runtime is represented by RUNTIME_INVENTORY.json SHA-256 and pinned fetch scripts, not uploaded."
+  "total_archive_bytes": 25250490564,
+  "total_files": 281471,
+  "large_runtime_model_omission": "Shared 88.7GB third-party model runtime is represented by RUNTIME_INVENTORY.json SHA-256 and pinned fetch scripts, not uploaded.",
+  "restore_order": "Extract parts in manifest order; pause-delta ZIP last, with overwrite."
 }

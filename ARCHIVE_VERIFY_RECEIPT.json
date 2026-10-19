@@ -1,0 +1,157 @@
+{
+  "checked_utc": "2026-10-19T15:48:52.253914+00:00",
+  "parts": [
+    {
+      "part": "motionforge-assets-001.zip",
+      "files": 7516,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-002.zip",
+      "files": 9042,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-003.zip",
+      "files": 8244,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-004.zip",
+      "files": 9948,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-005.zip",
+      "files": 8802,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-006.zip",
+      "files": 134,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-007.zip",
+      "files": 8491,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-008.zip",
+      "files": 9765,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-009.zip",
+      "files": 9407,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-010.zip",
+      "files": 6448,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-011.zip",
+      "files": 17943,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-012.zip",
+      "files": 6224,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-013.zip",
+      "files": 1,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-014.zip",
+      "files": 4648,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-015.zip",
+      "files": 11755,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-016.zip",
+      "files": 10071,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-017.zip",
+      "files": 14308,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-018.zip",
+      "files": 15559,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-019.zip",
+      "files": 12984,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-020.zip",
+      "files": 13700,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-021.zip",
+      "files": 25564,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-022.zip",
+      "files": 13384,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-023.zip",
+      "files": 16206,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-024.zip",
+      "files": 8553,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-025.zip",
+      "files": 3348,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-026.zip",
+      "files": 6929,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-027.zip",
+      "files": 11413,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-028.zip",
+      "files": 7648,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-029.zip",
+      "files": 3340,
+      "crc_ok": true
+    },
+    {
+      "part": "motionforge-assets-extra.zip",
+      "files": 94,
+      "crc_ok": true
+    }
+  ],
+  "all_crc_ok": true,
+  "files_total": 281469
+}
