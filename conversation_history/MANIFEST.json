@@ -1,0 +1,10 @@
+{
+  "session_id": "01a12fab-871c-79a0-8b9b-1de57b46830e",
+  "source_record_sha256_at_snapshot": "cd9d3ddc5bc0dd234a01854308e16c110b80896779fee7a1385adaf8dc4dd7ca",
+  "last_message_utc": "2026-10-19T16:37:53.914Z",
+  "visible_message_count": 192,
+  "user_message_count": 55,
+  "assistant_message_count": 137,
+  "transcript_sha256": "2f616b35c057264dda81171b71073e06bec18135ea03360aa8f0e991898eeda8",
+  "scope": "Visible user and assistant text only; no tool logs, reasoning, credentials, or session database."
+}

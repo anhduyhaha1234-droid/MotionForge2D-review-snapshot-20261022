@@ -98,3 +98,7 @@ Prompt ngắn để đưa cho reviewer ở máy mới:
 ## 7. Ranh giới bản sao
 
 Kho Git giữ source, prompts, rules và skills. GitHub Release giữ media/project DB/RUN với SHA. Những thứ **không nên chuyển máy qua GitHub**: tài khoản/token, Hermes/Codex session DB, cache cài đặt, môi trường Python/Node dựng lại, và weights runtime ngoài RUN chưa rõ quyền phân phối. `PORTABLE_SOURCE_MANIFEST.json` liệt kê chính xác file source được chụp; `ASSET_RELEASE_MANIFEST.json` liệt kê chính xác các ZIP. Nếu cần *tiếp tục đúng cùng phiên Hermes* thay vì phục hồi từ checkpoint, giữ máy cũ để xuất/migrate theo cơ chế chính thức; bản handoff này chưa chứng minh khả năng chuyển nguyên session giữa máy.
+
+## 8. Đọc lại cuộc hội thoại trên máy khác
+
+Sau khi clone repo private, mở `conversation_history/LICH_SU_HOI_THOAI_20261019.md` để đọc các tin nhắn hiển thị trong cuộc chat Codex này. `conversation_history/MANIFEST.json` ghi số tin và mốc cuối đã chụp. Bản này là tài liệu tham khảo, không tự tạo lại cuộc chat gốc hay cập nhật theo tin nhắn mới. File không chứa log công cụ, suy luận nội bộ, tài khoản hoặc session database. Để tiếp tục công việc, mở một chat Codex mới trong bản clone và dùng trạng thái/gate cùng prompt reviewer ở §6.
