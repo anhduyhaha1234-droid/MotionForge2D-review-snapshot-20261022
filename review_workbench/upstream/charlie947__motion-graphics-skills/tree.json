@@ -1,0 +1,434 @@
+{
+  "sha": "229022ebca76972e119e36ada23a1648d51665ab",
+  "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/trees/229022ebca76972e119e36ada23a1648d51665ab",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e43b0f988953ae3a84b00331d0ccf5f7d51cb3cf",
+      "size": 10,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/e43b0f988953ae3a84b00331d0ccf5f7d51cb3cf"
+    },
+    {
+      "path": ".polish-metadata.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb1205b165b23ed470c7453ca89a9a7975dfae39",
+      "size": 582,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/bb1205b165b23ed470c7453ca89a9a7975dfae39"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82feab771185584190c5050ffc244a22cdd6f4f9",
+      "size": 1070,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/82feab771185584190c5050ffc244a22cdd6f4f9"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "543c666db7f45dc4f5a88fe66ed7622b4a031cd4",
+      "size": 15816,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/543c666db7f45dc4f5a88fe66ed7622b4a031cd4"
+    },
+    {
+      "path": "assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0164cacf5597d1385374332eae03b06a86faa99d",
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/trees/0164cacf5597d1385374332eae03b06a86faa99d"
+    },
+    {
+      "path": "assets/readme",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8be8873ce95db80dd59abe35ef662f9e74cdd029",
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/trees/8be8873ce95db80dd59abe35ef662f9e74cdd029"
+    },
+    {
+      "path": "assets/readme/charlie.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cb2c6ff40d6fc479b1ef04dfb2b9c1adcd66afe",
+      "size": 44871,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/1cb2c6ff40d6fc479b1ef04dfb2b9c1adcd66afe"
+    },
+    {
+      "path": "assets/readme/demo-launch.gif",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eacd7a6c612ccc92815ef930a600b242ddd95f4d",
+      "size": 4962226,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/eacd7a6c612ccc92815ef930a600b242ddd95f4d"
+    },
+    {
+      "path": "assets/readme/demo-milestone.gif",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9204c4a41f5aff17ed94aaae0478aeb7cbe1eb4b",
+      "size": 7161853,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/9204c4a41f5aff17ed94aaae0478aeb7cbe1eb4b"
+    },
+    {
+      "path": "assets/readme/hero-dark.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9e5271d65fe73d20581b5906601ab37aa56cfb9",
+      "size": 202228,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/d9e5271d65fe73d20581b5906601ab37aa56cfb9"
+    },
+    {
+      "path": "assets/readme/hero-light.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1decfd12e6aa54a69b80f7395cdf7b9bd89ae988",
+      "size": 277961,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/1decfd12e6aa54a69b80f7395cdf7b9bd89ae988"
+    },
+    {
+      "path": "assets/readme/social-preview.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b243cce9c6790b320ae6eb0db90a3d45c06ce453",
+      "size": 90342,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/b243cce9c6790b320ae6eb0db90a3d45c06ce453"
+    },
+    {
+      "path": "downloads",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "18c52fd59196b13ed1d7430bd1e416457223548a",
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/trees/18c52fd59196b13ed1d7430bd1e416457223548a"
+    },
+    {
+      "path": "downloads/motion-prompt-writer.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa7829a6253106f457db55cf26fe666006201c99",
+      "size": 2689,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/fa7829a6253106f457db55cf26fe666006201c99"
+    },
+    {
+      "path": "downloads/reference-to-motion.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81b23f470b4ccc687dadec119a8a76c301ac3c9b",
+      "size": 1933,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/81b23f470b4ccc687dadec119a8a76c301ac3c9b"
+    },
+    {
+      "path": "prompts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3bd7a0774e8732ffd77680727f18b1ce3a96468b",
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/trees/3bd7a0774e8732ffd77680727f18b1ce3a96468b"
+    },
+    {
+      "path": "prompts/brand-design-system.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc7d6cd6518c04a6627ad2beeb8601bf5ff3c904",
+      "size": 2506,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/fc7d6cd6518c04a6627ad2beeb8601bf5ff3c904"
+    },
+    {
+      "path": "prompts/briefs.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36f8a0a42fb6efe83d8caa8471a89944db7a1f9c",
+      "size": 2588,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/36f8a0a42fb6efe83d8caa8471a89944db7a1f9c"
+    },
+    {
+      "path": "prompts/effects.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d8d6c6e00fc36778203ac0a93d7007d82736abb",
+      "size": 8733,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/4d8d6c6e00fc36778203ac0a93d7007d82736abb"
+    },
+    {
+      "path": "prompts/polish.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba321a613d5061e4a6bef6785575670316858f89",
+      "size": 1660,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/ba321a613d5061e4a6bef6785575670316858f89"
+    },
+    {
+      "path": "prompts/start-here.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8f9a874ab519016a55d539fee656c0f1e561415",
+      "size": 1778,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/c8f9a874ab519016a55d539fee656c0f1e561415"
+    },
+    {
+      "path": "skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "34582d107d76e86d6b3046bd84ba692522f25cee",
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/trees/34582d107d76e86d6b3046bd84ba692522f25cee"
+    },
+    {
+      "path": "skills/animated-chart",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "57365f3fcdcd43a82f2b77617bc212d1c0c9aa2c",
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/trees/57365f3fcdcd43a82f2b77617bc212d1c0c9aa2c"
+    },
+    {
+      "path": "skills/animated-chart/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd6c9817f7e5844664666f87161b06894ae0cbae",
+      "size": 2840,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/dd6c9817f7e5844664666f87161b06894ae0cbae"
+    },
+    {
+      "path": "skills/apple-launch-film",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "58c8b4efe4c5712961ce42f1ed6bc42140159621",
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/trees/58c8b4efe4c5712961ce42f1ed6bc42140159621"
+    },
+    {
+      "path": "skills/apple-launch-film/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "826accbaac008d5ed6fff8be756204b6616f8158",
+      "size": 4322,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/826accbaac008d5ed6fff8be756204b6616f8158"
+    },
+    {
+      "path": "skills/brand-intake",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ca60a0ecef0f9500825f5582ca4bc74d506ec466",
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/trees/ca60a0ecef0f9500825f5582ca4bc74d506ec466"
+    },
+    {
+      "path": "skills/brand-intake/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0f7dc1b26c072c735ca4fa2be3b59e518153da1",
+      "size": 4723,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/b0f7dc1b26c072c735ca4fa2be3b59e518153da1"
+    },
+    {
+      "path": "skills/launch-video",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "83d7d92c4bae8efec9e1d706a09338ca079fd705",
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/trees/83d7d92c4bae8efec9e1d706a09338ca079fd705"
+    },
+    {
+      "path": "skills/launch-video/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "652833413928f8d407a7f7f17fdfe13f6d40cacd",
+      "size": 4488,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/652833413928f8d407a7f7f17fdfe13f6d40cacd"
+    },
+    {
+      "path": "skills/loop-cover",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "37dd7a51ccf2c1a8e5b612d45134bc003ce58118",
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/trees/37dd7a51ccf2c1a8e5b612d45134bc003ce58118"
+    },
+    {
+      "path": "skills/loop-cover/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e7366b5c90312934ca07288a152c310bc1231ef",
+      "size": 3753,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/6e7366b5c90312934ca07288a152c310bc1231ef"
+    },
+    {
+      "path": "skills/milestone-reveal",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d0092dd95e9dbae743046180adeb6ee14ea745ae",
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/trees/d0092dd95e9dbae743046180adeb6ee14ea745ae"
+    },
+    {
+      "path": "skills/milestone-reveal/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0a682f83ca3dfa4a4fe5c7f25720d99a431fdd4",
+      "size": 4119,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/a0a682f83ca3dfa4a4fe5c7f25720d99a431fdd4"
+    },
+    {
+      "path": "skills/model-showdown",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a56357116afd472d5a5c03a5f18da8fd4bdc9197",
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/trees/a56357116afd472d5a5c03a5f18da8fd4bdc9197"
+    },
+    {
+      "path": "skills/model-showdown/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32ed4df63065062e101f6ca0cfceaeb1d93c3309",
+      "size": 4282,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/32ed4df63065062e101f6ca0cfceaeb1d93c3309"
+    },
+    {
+      "path": "skills/motion-brief-writer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ab8529c887fa40c17b4380b732ca6d952bd8172b",
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/trees/ab8529c887fa40c17b4380b732ca6d952bd8172b"
+    },
+    {
+      "path": "skills/motion-brief-writer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "937256f9c97520cb7bb40d1e7fdb76272679ea9c",
+      "size": 4561,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/937256f9c97520cb7bb40d1e7fdb76272679ea9c"
+    },
+    {
+      "path": "skills/motion-effects",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "87291ccc97fb7a2d0f63b4ca8a652650cbb8d696",
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/trees/87291ccc97fb7a2d0f63b4ca8a652650cbb8d696"
+    },
+    {
+      "path": "skills/motion-effects/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6ba3d23f2dca4bab5e37bd8784fb9b14dbd334f",
+      "size": 8353,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/d6ba3d23f2dca4bab5e37bd8784fb9b14dbd334f"
+    },
+    {
+      "path": "skills/motion-effects/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d553b0229adee20f48d85a28e36b47e59b40ec11",
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/trees/d553b0229adee20f48d85a28e36b47e59b40ec11"
+    },
+    {
+      "path": "skills/motion-effects/references/effects.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bb25cf9a0e6cfb402d9b2e02f74fd85d212230f",
+      "size": 17189,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/0bb25cf9a0e6cfb402d9b2e02f74fd85d212230f"
+    },
+    {
+      "path": "skills/motion-prompt-writer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "24bea78b02688f7f31f55ce75eba75b35c889e1c",
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/trees/24bea78b02688f7f31f55ce75eba75b35c889e1c"
+    },
+    {
+      "path": "skills/motion-prompt-writer/CANON-FACTS.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "561cc92b4a3ab1651b7b53b595c50b3076d9a9ff",
+      "size": 305,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/561cc92b4a3ab1651b7b53b595c50b3076d9a9ff"
+    },
+    {
+      "path": "skills/motion-prompt-writer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5eddbdbb9117afb84d1b407295141c007dfb43d7",
+      "size": 4880,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/5eddbdbb9117afb84d1b407295141c007dfb43d7"
+    },
+    {
+      "path": "skills/newsletter-promo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c853b10c9c8f30bb3dd8572547e421a472b5711e",
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/trees/c853b10c9c8f30bb3dd8572547e421a472b5711e"
+    },
+    {
+      "path": "skills/newsletter-promo/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02fc3aba562abd17cabb9a1da4996970817691b4",
+      "size": 2517,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/02fc3aba562abd17cabb9a1da4996970817691b4"
+    },
+    {
+      "path": "skills/reel-export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2684d48e6b44d41e5ce342f57f01a93e4c450a2b",
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/trees/2684d48e6b44d41e5ce342f57f01a93e4c450a2b"
+    },
+    {
+      "path": "skills/reel-export/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4d43fd58ef32fb8ef8039b6cb83b9cdca9b9010",
+      "size": 3324,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/f4d43fd58ef32fb8ef8039b6cb83b9cdca9b9010"
+    },
+    {
+      "path": "skills/reference-to-motion",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "054e765e2d1176689620cf72b524649c7fc1ad56",
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/trees/054e765e2d1176689620cf72b524649c7fc1ad56"
+    },
+    {
+      "path": "skills/reference-to-motion/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69878eeacb18d23b767484c3d8cb35857df09ccc",
+      "size": 3405,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/69878eeacb18d23b767484c3d8cb35857df09ccc"
+    },
+    {
+      "path": "skills/title-sequence-3d",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "098926984463126b63c667a57ad899571c7a890b",
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/trees/098926984463126b63c667a57ad899571c7a890b"
+    },
+    {
+      "path": "skills/title-sequence-3d/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e482958bc50214fcfc79243440f040a2d5c06e5a",
+      "size": 3747,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/e482958bc50214fcfc79243440f040a2d5c06e5a"
+    },
+    {
+      "path": "skills/vox-explainer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "814cbf844114c194269157fe6f8799a7ef2e37f4",
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/trees/814cbf844114c194269157fe6f8799a7ef2e37f4"
+    },
+    {
+      "path": "skills/vox-explainer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6fdadb158bca06300e806fa7a36f6a71cbcc609",
+      "size": 5957,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/a6fdadb158bca06300e806fa7a36f6a71cbcc609"
+    },
+    {
+      "path": "validate-skills.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d90ce5d945819430c8343b9a33fa2ea5c6f4cff8",
+      "size": 6030,
+      "url": "https://api.github.com/repos/charlie947/motion-graphics-skills/git/blobs/d90ce5d945819430c8343b9a33fa2ea5c6f4cff8"
+    }
+  ],
+  "truncated": false
+}

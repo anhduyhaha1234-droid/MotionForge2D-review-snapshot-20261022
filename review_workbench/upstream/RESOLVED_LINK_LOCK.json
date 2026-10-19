@@ -1,0 +1,39 @@
+{
+  "repo": "199-biotechnologies/motion-dev-animations-skill",
+  "url": "https://github.com/199-biotechnologies/motion-dev-animations-skill",
+  "retrieved_utc": "2026-10-12T10:39:00.978989+00:00",
+  "files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/199-biotechnologies/motion-dev-animations-skill/3feedfb4dba8adae40fc9a5f9a23e3dda2121205/LICENSE",
+      "sha256": "97daaa79e07357dc36ea84a8b72823ffe0e358b2cbbc92a7402e5a9edfb195f7",
+      "bytes": 1076,
+      "local": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\upstream\\199-biotechnologies__motion-dev-animations-skill\\LICENSE"
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/199-biotechnologies/motion-dev-animations-skill/3feedfb4dba8adae40fc9a5f9a23e3dda2121205/README.md",
+      "sha256": "2e6e03e6132ee1a8dc7c3eb1deadd5d64608ce0a72be8487efbe4a10fe7fa698",
+      "bytes": 7941,
+      "local": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\upstream\\199-biotechnologies__motion-dev-animations-skill\\README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "url": "https://raw.githubusercontent.com/199-biotechnologies/motion-dev-animations-skill/3feedfb4dba8adae40fc9a5f9a23e3dda2121205/SKILL.md",
+      "sha256": "30228f629bcc1b0c245a2890eeec6d74a0bdcc8b38405b5adb9994b35930ba29",
+      "bytes": 11328,
+      "local": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\upstream\\199-biotechnologies__motion-dev-animations-skill\\SKILL.md"
+    }
+  ],
+  "commit": "3feedfb4dba8adae40fc9a5f9a23e3dda2121205",
+  "tree_truncated": false,
+  "skill_paths": [
+    "SKILL.md"
+  ],
+  "license_paths": [
+    "LICENSE"
+  ],
+  "code_candidates": [
+    "scripts/validate_motion_config.py"
+  ]
+}

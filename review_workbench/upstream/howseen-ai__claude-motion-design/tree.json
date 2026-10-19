@@ -1,0 +1,248 @@
+{
+  "sha": "3d90d349ef3fdde9b7e89de4df4a2159c9e8697f",
+  "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/trees/3d90d349ef3fdde9b7e89de4df4a2159c9e8697f",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d5386df2405496c9dea20c5110d289c7cc36f73",
+      "size": 253,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/6d5386df2405496c9dea20c5110d289c7cc36f73"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84de70a0ade344b077f2b0a09cc5f5568c2c1542",
+      "size": 1084,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/84de70a0ade344b077f2b0a09cc5f5568c2c1542"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e46b8ac2f6359ac1590dd26870642b4f15b9e0cf",
+      "size": 4900,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/e46b8ac2f6359ac1590dd26870642b4f15b9e0cf"
+    },
+    {
+      "path": "examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d5f10d0dffe7bf3e305f35c25b0c6117e3bbe51c",
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/trees/d5f10d0dffe7bf3e305f35c25b0c6117e3bbe51c"
+    },
+    {
+      "path": "examples/howseen-launch",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d2e85765744d7b0228b3a01dd1744e1f41e5523b",
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/trees/d2e85765744d7b0228b3a01dd1744e1f41e5523b"
+    },
+    {
+      "path": "examples/howseen-launch/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5ebd0cbeeb1e6d032e3879dbf7bd3ec8f8e8d40b",
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/trees/5ebd0cbeeb1e6d032e3879dbf7bd3ec8f8e8d40b"
+    },
+    {
+      "path": "examples/howseen-launch/assets/logo-mark.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55ad06fe1696c1d5ba750a000c27ae8a27d4313d",
+      "size": 6965,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/55ad06fe1696c1d5ba750a000c27ae8a27d4313d"
+    },
+    {
+      "path": "examples/howseen-launch/audio.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c44ed12b8517301b8b9bdc4dec549e0861632fe",
+      "size": 3320,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/8c44ed12b8517301b8b9bdc4dec549e0861632fe"
+    },
+    {
+      "path": "examples/howseen-launch/fetch_assets.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f54503da9a17d76037e64178c7bc2098814f1f1e",
+      "size": 2106,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/f54503da9a17d76037e64178c7bc2098814f1f1e"
+    },
+    {
+      "path": "examples/howseen-launch/film.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d45154c5da85f0a1b11dd0e8cab4104fe55b1f53",
+      "size": 28374,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/d45154c5da85f0a1b11dd0e8cab4104fe55b1f53"
+    },
+    {
+      "path": "examples/howseen-launch/preview.gif",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9de960583208f2bbef0ca7e5e96a2241dd8465d",
+      "size": 4180819,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/e9de960583208f2bbef0ca7e5e96a2241dd8465d"
+    },
+    {
+      "path": "examples/howseen-launch/render.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cb913d9d24d458ae05b7626d69693ba0e8ee9f3",
+      "size": 4177,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/2cb913d9d24d458ae05b7626d69693ba0e8ee9f3"
+    },
+    {
+      "path": "skill",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fb2effc2eae5f4fdd2694dfa5c51fe7830e6f812",
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/trees/fb2effc2eae5f4fdd2694dfa5c51fe7830e6f812"
+    },
+    {
+      "path": "skill/motion-design",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b6aa56b81b85ea5f1330d45045d000b0eedeb113",
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/trees/b6aa56b81b85ea5f1330d45045d000b0eedeb113"
+    },
+    {
+      "path": "skill/motion-design/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "623ce4a863b18cc44c4476e346e5cf819401d532",
+      "size": 33895,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/623ce4a863b18cc44c4476e346e5cf819401d532"
+    },
+    {
+      "path": "skill/motion-design/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b4839777f0596d5d9125668e0c9a083ff8a81966",
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/trees/b4839777f0596d5d9125668e0c9a083ff8a81966"
+    },
+    {
+      "path": "skill/motion-design/scripts/analyze_song.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "414a2026a3f3ebb0f44460331eccbf009f289532",
+      "size": 1260,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/414a2026a3f3ebb0f44460331eccbf009f289532"
+    },
+    {
+      "path": "skill/motion-design/scripts/audio_template.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c44ed12b8517301b8b9bdc4dec549e0861632fe",
+      "size": 3320,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/8c44ed12b8517301b8b9bdc4dec549e0861632fe"
+    },
+    {
+      "path": "skill/motion-design/scripts/mcp21_client.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "546aae5f3c3f12721aaeeb3bc4db722e935731d6",
+      "size": 2117,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/546aae5f3c3f12721aaeeb3bc4db722e935731d6"
+    },
+    {
+      "path": "skill/motion-design/scripts/mixkit_sfx_search.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67d09a1f51d2b9e5f689b70c7a183f3200fb5a89",
+      "size": 1011,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/67d09a1f51d2b9e5f689b70c7a183f3200fb5a89"
+    },
+    {
+      "path": "skill/motion-design/scripts/remake",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d6bce0c2ce3655b7c4eac5150100ab5793bd9b96",
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/trees/d6bce0c2ce3655b7c4eac5150100ab5793bd9b96"
+    },
+    {
+      "path": "skill/motion-design/scripts/remake/BRIEF_TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e15e648027821ac05da00cfde2b4029f47d91e7a",
+      "size": 2143,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/e15e648027821ac05da00cfde2b4029f47d91e7a"
+    },
+    {
+      "path": "skill/motion-design/scripts/remake/core.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90c7f0d647158d1f2da85f30d2f14ff61ad9c03c",
+      "size": 9359,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/90c7f0d647158d1f2da85f30d2f14ff61ad9c03c"
+    },
+    {
+      "path": "skill/motion-design/scripts/remake/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d399b2c92ecae2eeb678463ec3e4cc46656c0daf",
+      "size": 1200,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/d399b2c92ecae2eeb678463ec3e4cc46656c0daf"
+    },
+    {
+      "path": "skill/motion-design/scripts/remake/remake_analyze.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c29b4d9844da9dcb5a2accec40236c7f00b7f66",
+      "size": 2120,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/5c29b4d9844da9dcb5a2accec40236c7f00b7f66"
+    },
+    {
+      "path": "skill/motion-design/scripts/remake/remake_qa.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c191388a35aded862c877a229c797d860107e498",
+      "size": 1523,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/c191388a35aded862c877a229c797d860107e498"
+    },
+    {
+      "path": "skill/motion-design/scripts/remake/remake_render.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37cadb4525bd3b4e1eb20a2266ba6c0f718de339",
+      "size": 3304,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/37cadb4525bd3b4e1eb20a2266ba6c0f718de339"
+    },
+    {
+      "path": "skill/motion-design/scripts/remake/remake_stub.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10098a114f295b96d7071fd7a1e3b65cb8f0c8a8",
+      "size": 627,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/10098a114f295b96d7071fd7a1e3b65cb8f0c8a8"
+    },
+    {
+      "path": "skill/motion-design/scripts/remake/remake_sync.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e3fd3570a21489fde31a50d9cb120cd9c6bb673",
+      "size": 2578,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/6e3fd3570a21489fde31a50d9cb120cd9c6bb673"
+    },
+    {
+      "path": "skill/motion-design/scripts/render_template.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81638c1c05a0fd027bf68baba9427e7117737a74",
+      "size": 8143,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/81638c1c05a0fd027bf68baba9427e7117737a74"
+    },
+    {
+      "path": "skill/motion-design/scripts/svgl_logos.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4b92843bcdd3443454f767cb6da9264f98b8e50",
+      "size": 1268,
+      "url": "https://api.github.com/repos/howseen-ai/claude-motion-design/git/blobs/d4b92843bcdd3443454f767cb6da9264f98b8e50"
+    }
+  ],
+  "truncated": false
+}

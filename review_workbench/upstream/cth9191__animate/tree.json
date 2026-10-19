@@ -1,0 +1,1220 @@
+{
+  "sha": "7e5eb56feb2dd573f890e1b7b34748af43d58263",
+  "url": "https://api.github.com/repos/cth9191/animate/git/trees/7e5eb56feb2dd573f890e1b7b34748af43d58263",
+  "tree": [
+    {
+      "path": ".claude-plugin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "df0dc57408c4a888533dd6347d904d7c1f6ebfa7",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/df0dc57408c4a888533dd6347d904d7c1f6ebfa7"
+    },
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a747313cc71c824e9794125b6508bae076b2448a",
+      "size": 431,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/a747313cc71c824e9794125b6508bae076b2448a"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "054003ca93e1fc61f3fee25170a89b8f961a82a1",
+      "size": 237,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/054003ca93e1fc61f3fee25170a89b8f961a82a1"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c767b12e247eeb9b720340db05ae1a349ff2e6f",
+      "size": 1064,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/1c767b12e247eeb9b720340db05ae1a349ff2e6f"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c409111ba7a6709d728bafacbbd9aacfdc8bf300",
+      "size": 8298,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/c409111ba7a6709d728bafacbbd9aacfdc8bf300"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dbc02ab0a824d6f4b11446d8d579ce61b75dc178",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/dbc02ab0a824d6f4b11446d8d579ce61b75dc178"
+    },
+    {
+      "path": "docs/storyboard.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e35a74b24ec40799ab5316d0a6a6e1195d20fe1d",
+      "size": 4630248,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/e35a74b24ec40799ab5316d0a6a6e1195d20fe1d"
+    },
+    {
+      "path": "docs/styles.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a7774a034eda2ca4230319acd2e2a1e39e5c62c",
+      "size": 1273362,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/3a7774a034eda2ca4230319acd2e2a1e39e5c62c"
+    },
+    {
+      "path": "plugins",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "032d5b8e4e778d15e365a2f7147a3e363f7b9084",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/032d5b8e4e778d15e365a2f7147a3e363f7b9084"
+    },
+    {
+      "path": "plugins/animate",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0d568983ebdc4d07043c57051c2a0b9b58b1a7e8",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/0d568983ebdc4d07043c57051c2a0b9b58b1a7e8"
+    },
+    {
+      "path": "plugins/animate/.claude-plugin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ae0589cb49b0c543b58a7ac4f6179251e8159530",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/ae0589cb49b0c543b58a7ac4f6179251e8159530"
+    },
+    {
+      "path": "plugins/animate/.claude-plugin/plugin.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c14a0dd0270372ec6cb760b00465e5fe4cf5633",
+      "size": 699,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/0c14a0dd0270372ec6cb760b00465e5fe4cf5633"
+    },
+    {
+      "path": "plugins/animate/skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1b60866052a666e338fbe63357d143aab209cd5d",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/1b60866052a666e338fbe63357d143aab209cd5d"
+    },
+    {
+      "path": "plugins/animate/skills/animate",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "053d71c42fc5127b7ca9fdff9cb6514725ab2f99",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/053d71c42fc5127b7ca9fdff9cb6514725ab2f99"
+    },
+    {
+      "path": "plugins/animate/skills/animate/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09a2f3c5f07f2be6b88e9a9ebe515fae8e5f31fb",
+      "size": 18231,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/09a2f3c5f07f2be6b88e9a9ebe515fae8e5f31fb"
+    },
+    {
+      "path": "plugins/animate/skills/animate/craft.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01418e342f0392a1c2fec812a96465b90389e791",
+      "size": 10160,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/01418e342f0392a1c2fec812a96465b90389e791"
+    },
+    {
+      "path": "plugins/animate/skills/animate/examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "68b21d6cbadb944b8812d43eb560b66254142cb0",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/68b21d6cbadb944b8812d43eb560b66254142cb0"
+    },
+    {
+      "path": "plugins/animate/skills/animate/examples/history-of-ai",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c0f30d2d4e716813d45b7988969c87a67aa3ac95",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/c0f30d2d4e716813d45b7988969c87a67aa3ac95"
+    },
+    {
+      "path": "plugins/animate/skills/animate/examples/history-of-ai/brief.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e15ed773cd65e13705669fb334fba9867e2967c",
+      "size": 4829,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/5e15ed773cd65e13705669fb334fba9867e2967c"
+    },
+    {
+      "path": "plugins/animate/skills/animate/examples/history-of-ai/piece.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eec57c4fe75c06d97fd419dca787da4a9599c101",
+      "size": 580,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/eec57c4fe75c06d97fd419dca787da4a9599c101"
+    },
+    {
+      "path": "plugins/animate/skills/animate/examples/history-of-ai/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7fc3c8cee91fcac17220e5d2dc0f1e15e8a56343",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/7fc3c8cee91fcac17220e5d2dc0f1e15e8a56343"
+    },
+    {
+      "path": "plugins/animate/skills/animate/examples/history-of-ai/src/bridges.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e92ef14710a9356c863118066b72877a45870459",
+      "size": 3475,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/e92ef14710a9356c863118066b72877a45870459"
+    },
+    {
+      "path": "plugins/animate/skills/animate/examples/history-of-ai/src/head.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44961739a30fadd6664da5da3d188263d82d571e",
+      "size": 6774,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/44961739a30fadd6664da5da3d188263d82d571e"
+    },
+    {
+      "path": "plugins/animate/skills/animate/examples/history-of-ai/src/scenes.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53d31182256948140d9d1276522f21d88975a2c0",
+      "size": 47827,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/53d31182256948140d9d1276522f21d88975a2c0"
+    },
+    {
+      "path": "plugins/animate/skills/animate/examples/history-of-ai/src/score.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4023dc31c621d5a12d9480d29b0b7efa8d0a6a1",
+      "size": 9211,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/e4023dc31c621d5a12d9480d29b0b7efa8d0a6a1"
+    },
+    {
+      "path": "plugins/animate/skills/animate/grammar",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "94da82a7d4eb0d2b96ac78f61986cc7ddf8034a1",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/94da82a7d4eb0d2b96ac78f61986cc7ddf8034a1"
+    },
+    {
+      "path": "plugins/animate/skills/animate/grammar/FORMATS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f966be5250e894cefbf7315dd4256c216aa63003",
+      "size": 10912,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/f966be5250e894cefbf7315dd4256c216aa63003"
+    },
+    {
+      "path": "plugins/animate/skills/animate/grammar/FRAME.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e45fcd44d4f17372dd3ab7f35f99ae46078cf8f8",
+      "size": 3006,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/e45fcd44d4f17372dd3ab7f35f99ae46078cf8f8"
+    },
+    {
+      "path": "plugins/animate/skills/animate/grammar/STORY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd29690a3e0257cca33a468713f9c157249805ab",
+      "size": 6084,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/dd29690a3e0257cca33a468713f9c157249805ab"
+    },
+    {
+      "path": "plugins/animate/skills/animate/intake.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c011b08ce4545ff645cc180e0e96ad49c969385",
+      "size": 4898,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/1c011b08ce4545ff645cc180e0e96ad49c969385"
+    },
+    {
+      "path": "plugins/animate/skills/animate/kit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2f1b9ad78c6baf40a53559484f34d7b8190abe9b",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/2f1b9ad78c6baf40a53559484f34d7b8190abe9b"
+    },
+    {
+      "path": "plugins/animate/skills/animate/kit/board.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e44383fef2a54b6d1d409430dd3923488facc893",
+      "size": 2583,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/e44383fef2a54b6d1d409430dd3923488facc893"
+    },
+    {
+      "path": "plugins/animate/skills/animate/kit/core.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6929ea37e41bb6f85bf8ea16e0427c1e5c836fb9",
+      "size": 28964,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/6929ea37e41bb6f85bf8ea16e0427c1e5c836fb9"
+    },
+    {
+      "path": "plugins/animate/skills/animate/kit/morph.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71439c9c0afb69d358d7253f83c8fab927d62fa2",
+      "size": 9520,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/71439c9c0afb69d358d7253f83c8fab927d62fa2"
+    },
+    {
+      "path": "plugins/animate/skills/animate/kit/score-head.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5853ce94ff0230ab401ce48362a3bbb2ce545293",
+      "size": 11474,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/5853ce94ff0230ab401ce48362a3bbb2ce545293"
+    },
+    {
+      "path": "plugins/animate/skills/animate/kit/score-tail.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25cffc96455061283d031f002fe57b6bcbd3127a",
+      "size": 2366,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/25cffc96455061283d031f002fe57b6bcbd3127a"
+    },
+    {
+      "path": "plugins/animate/skills/animate/new-style.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe740294817911a8a292df0fe509d25072d415a1",
+      "size": 7464,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/fe740294817911a8a292df0fe509d25072d415a1"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1ce3cb03a0e35901afba89b368c0393e37787bec",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/1ce3cb03a0e35901afba89b368c0393e37787bec"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67e8bff3e09d384efff2039c864015e73d5ad48c",
+      "size": 7171,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/67e8bff3e09d384efff2039c864015e73d5ad48c"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/crosshatch",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9b912b0cc9a855656f94a7718dbf192d60487336",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/9b912b0cc9a855656f94a7718dbf192d60487336"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/crosshatch/STYLE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51ba6c8ed10d89a3047a2e84c89f97b704de7315",
+      "size": 3238,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/51ba6c8ed10d89a3047a2e84c89f97b704de7315"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/crosshatch/demo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c6937966eee75c5d9204c23a22ef08df358947f9",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/c6937966eee75c5d9204c23a22ef08df358947f9"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/crosshatch/demo/piece.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5894bebe467e1719c66cce5080e294fa530abf25",
+      "size": 326,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/5894bebe467e1719c66cce5080e294fa530abf25"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/crosshatch/demo/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e27aefd1ecf04f499f542603fc319f9d80c3f778",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/e27aefd1ecf04f499f542603fc319f9d80c3f778"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/crosshatch/demo/src/bridges.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a11af3fa2fa35275fffa70e025cf1f7f94ad76a",
+      "size": 590,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/7a11af3fa2fa35275fffa70e025cf1f7f94ad76a"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/crosshatch/demo/src/head.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06e090fff5635f0ce07e51d21a55ea845ea78d24",
+      "size": 2385,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/06e090fff5635f0ce07e51d21a55ea845ea78d24"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/crosshatch/demo/src/scenes.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c815dc1e35f76ef12bb56615b416a57a38247144",
+      "size": 3049,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/c815dc1e35f76ef12bb56615b416a57a38247144"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/crosshatch/demo/src/score.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f76202a1c4701a6453cdc2c208f3f60d6df13f81",
+      "size": 721,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/f76202a1c4701a6453cdc2c208f3f60d6df13f81"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/crosshatch/kit.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ccbf23d2877232f9b9a6b70eb36f68f36fe0e98",
+      "size": 10924,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/9ccbf23d2877232f9b9a6b70eb36f68f36fe0e98"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/crosshatch/sample.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54cdb356ad12895df88c273381dddcf12bafe4fd",
+      "size": 525760,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/54cdb356ad12895df88c273381dddcf12bafe4fd"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/cut-paper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dcd798c2503036a62b895239e81dea9bb4d8ea7f",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/dcd798c2503036a62b895239e81dea9bb4d8ea7f"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/cut-paper/STYLE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4024002e8fd117074fe25e38efa869878f737c2",
+      "size": 3203,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/e4024002e8fd117074fe25e38efa869878f737c2"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/cut-paper/demo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "357901173a0b76245a136ffb2f7691d2bc80fdbb",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/357901173a0b76245a136ffb2f7691d2bc80fdbb"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/cut-paper/demo/piece.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8733dd76568f8f7c8b2050d8832420f7222224c",
+      "size": 302,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/b8733dd76568f8f7c8b2050d8832420f7222224c"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/cut-paper/demo/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d9ca0034d73e8617d090106d29d769f7e4d4634e",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/d9ca0034d73e8617d090106d29d769f7e4d4634e"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/cut-paper/demo/src/bridges.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fec68715747b1f3bf87869e1e09b01fc7a3f4386",
+      "size": 919,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/fec68715747b1f3bf87869e1e09b01fc7a3f4386"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/cut-paper/demo/src/head.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "795a1848c85a71ddb5f378e5f7967ce3f7bc7871",
+      "size": 2999,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/795a1848c85a71ddb5f378e5f7967ce3f7bc7871"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/cut-paper/demo/src/scenes.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90fb51cbc81f9ae5e7993c4afc3c972da0ebb8e2",
+      "size": 3189,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/90fb51cbc81f9ae5e7993c4afc3c972da0ebb8e2"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/cut-paper/demo/src/score.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed74ae16d85c232abcadc073bc289fb726e40b34",
+      "size": 1328,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/ed74ae16d85c232abcadc073bc289fb726e40b34"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/cut-paper/kit.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cf1d1fa58dda94f530837b47924a241b63a0bc5",
+      "size": 17537,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/4cf1d1fa58dda94f530837b47924a241b63a0bc5"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/cut-paper/sample.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9740aa9677977d214238772d406b84e1bd0d3bc3",
+      "size": 468306,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/9740aa9677977d214238772d406b84e1bd0d3bc3"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/isometric",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "118a7ec0f1eac84062fddff7a9d47b28262a1da1",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/118a7ec0f1eac84062fddff7a9d47b28262a1da1"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/isometric/STYLE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "385d439f7403758a782868a3861f4b795d29331d",
+      "size": 9612,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/385d439f7403758a782868a3861f4b795d29331d"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/isometric/demo-dark",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "755ef6822714b5003dd1b228476b19e43095c561",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/755ef6822714b5003dd1b228476b19e43095c561"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/isometric/demo-dark/dark.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bee1af636bffa42694205e151111829de634f42",
+      "size": 75,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/8bee1af636bffa42694205e151111829de634f42"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/isometric/demo-dark/piece.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6ad0277db2050279b470b90bb061bd5d39fc8c5",
+      "size": 564,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/d6ad0277db2050279b470b90bb061bd5d39fc8c5"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/isometric/demo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "298dc896fb4e0638ce23498ae7fd5dd33e2c5adc",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/298dc896fb4e0638ce23498ae7fd5dd33e2c5adc"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/isometric/demo/piece.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc2a2475208231b6e14b5e439a58f245e67f469b",
+      "size": 323,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/dc2a2475208231b6e14b5e439a58f245e67f469b"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/isometric/demo/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "23882f7ca65e5ba7e8227944c5eae3bafca2cecb",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/23882f7ca65e5ba7e8227944c5eae3bafca2cecb"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/isometric/demo/src/bridges.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d931b15e0404f947cefc1ad563d9eef34b5bd34",
+      "size": 760,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/8d931b15e0404f947cefc1ad563d9eef34b5bd34"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/isometric/demo/src/head.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a789558a526931133765739ddaa6a4f9dda0e2ef",
+      "size": 2367,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/a789558a526931133765739ddaa6a4f9dda0e2ef"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/isometric/demo/src/scenes.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4f7a335d11180c5bf52861da4bf3748cb1c6418",
+      "size": 7086,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/d4f7a335d11180c5bf52861da4bf3748cb1c6418"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/isometric/demo/src/score.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "877baa55546429aa1e3d44784d628fca58f79506",
+      "size": 1106,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/877baa55546429aa1e3d44784d628fca58f79506"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/isometric/kit.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42553dca2ffc6810e9c12fd22c66f3601be0f8c6",
+      "size": 21868,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/42553dca2ffc6810e9c12fd22c66f3601be0f8c6"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/isometric/sample.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "058c616608c1493804bc33983433bd02b9abc345",
+      "size": 84284,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/058c616608c1493804bc33983433bd02b9abc345"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/math",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4afc6fc2cb7c1eea96a92c8a3bc37ff0fcf2fe5f",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/4afc6fc2cb7c1eea96a92c8a3bc37ff0fcf2fe5f"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/math/STYLE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f425dc9cc6e9996863ba121c0f4cc87f5bed8fc7",
+      "size": 10411,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/f425dc9cc6e9996863ba121c0f4cc87f5bed8fc7"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/math/demo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "949765a70cc4448bb3291814f3b0181c7bbc6aeb",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/949765a70cc4448bb3291814f3b0181c7bbc6aeb"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/math/demo/piece.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5571d997c610bc2b0dafdb2b0483e2c633d6d3b0",
+      "size": 308,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/5571d997c610bc2b0dafdb2b0483e2c633d6d3b0"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/math/demo/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "00f5659ed5098e35cabe8e04a7461dc0a32a40b5",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/00f5659ed5098e35cabe8e04a7461dc0a32a40b5"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/math/demo/src/bridges.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d96e53cf7304c96f86f901c99d2444f43e6a467b",
+      "size": 472,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/d96e53cf7304c96f86f901c99d2444f43e6a467b"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/math/demo/src/head.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd932b71b9b99423bfb50b3e528b00d7ffc53a88",
+      "size": 2843,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/cd932b71b9b99423bfb50b3e528b00d7ffc53a88"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/math/demo/src/scenes.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7aa4250c5b60b24bd1cf96c9a46115c405edbcdb",
+      "size": 7282,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/7aa4250c5b60b24bd1cf96c9a46115c405edbcdb"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/math/demo/src/score.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17498dd739070e8e4081019cb8fca1296e775133",
+      "size": 1146,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/17498dd739070e8e4081019cb8fca1296e775133"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/math/kit.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9924f9dfd5b13f746d1cb22dc04313c3dd259847",
+      "size": 27911,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/9924f9dfd5b13f746d1cb22dc04313c3dd259847"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/math/sample.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2148d7c338661629e29c5010649bf7827e3adc1",
+      "size": 73966,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/c2148d7c338661629e29c5010649bf7827e3adc1"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/pixel",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7a91a18e8ca84308275489cdc234cd591eeda3a0",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/7a91a18e8ca84308275489cdc234cd591eeda3a0"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/pixel/STYLE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f862112b54ab122c8b47c70efa4dba07d143881",
+      "size": 10496,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/5f862112b54ab122c8b47c70efa4dba07d143881"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/pixel/demo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5cf570f23628f9f6e602f09d6c99b935231c1caf",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/5cf570f23628f9f6e602f09d6c99b935231c1caf"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/pixel/demo/piece.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59442ccc2452cae602fb3317e84cb6ea5a4dd3b4",
+      "size": 311,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/59442ccc2452cae602fb3317e84cb6ea5a4dd3b4"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/pixel/demo/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e61d273da95980cdb13268df0f3a54912ee89d0",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/5e61d273da95980cdb13268df0f3a54912ee89d0"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/pixel/demo/src/bridges.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca5960f294721b31de8eba59544018a80f0e935a",
+      "size": 930,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/ca5960f294721b31de8eba59544018a80f0e935a"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/pixel/demo/src/head.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8cc5b4133c2045fe41bf6ec87cc946ae27f19ef",
+      "size": 2502,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/e8cc5b4133c2045fe41bf6ec87cc946ae27f19ef"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/pixel/demo/src/scenes.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae06c5315fd6ccab8bbc2e3502ed8baa2248d812",
+      "size": 10124,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/ae06c5315fd6ccab8bbc2e3502ed8baa2248d812"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/pixel/demo/src/score.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4438e6b24c01d0733029574b237902b945913e42",
+      "size": 2533,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/4438e6b24c01d0733029574b237902b945913e42"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/pixel/kit.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d186d16aa468740d8a2f8a055d7e9727475cc1a4",
+      "size": 34502,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/d186d16aa468740d8a2f8a055d7e9727475cc1a4"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/pixel/sample.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9df67ead8a949b4565808120cd78995914296eab",
+      "size": 79439,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/9df67ead8a949b4565808120cd78995914296eab"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/riso",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7e5f93ee3f3644e5f7eb1a8fcbdef6ec86e615d9",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/7e5f93ee3f3644e5f7eb1a8fcbdef6ec86e615d9"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/riso/STYLE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4dc745cbe6e8e1a6ab4df8a33b6ee29ea361d553",
+      "size": 9233,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/4dc745cbe6e8e1a6ab4df8a33b6ee29ea361d553"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/riso/demo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0768a331962b7dd3a7905a24f5610fd51bde9d22",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/0768a331962b7dd3a7905a24f5610fd51bde9d22"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/riso/demo/piece.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8659f5363b959837c1a63dcf79d48fae24c682b9",
+      "size": 308,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/8659f5363b959837c1a63dcf79d48fae24c682b9"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/riso/demo/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "115c33546de412198682d1b19fc39a016478dfc5",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/115c33546de412198682d1b19fc39a016478dfc5"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/riso/demo/src/bridges.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07d7c07e80dea15f056958ffdf204350cf590660",
+      "size": 961,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/07d7c07e80dea15f056958ffdf204350cf590660"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/riso/demo/src/head.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af4648ec47a2e42c7e1a0863b20f803281b74179",
+      "size": 2600,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/af4648ec47a2e42c7e1a0863b20f803281b74179"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/riso/demo/src/scenes.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4682768ec1a0cfe04ee17deecba7136ce63e49b",
+      "size": 13012,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/f4682768ec1a0cfe04ee17deecba7136ce63e49b"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/riso/demo/src/score.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a8a7118771883251b443ea3a6a6b12bb68b11d3",
+      "size": 1232,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/8a8a7118771883251b443ea3a6a6b12bb68b11d3"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/riso/kit.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5eb0f6805b9588643ea0ac99d4f01e81f4c609f6",
+      "size": 29326,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/5eb0f6805b9588643ea0ac99d4f01e81f4c609f6"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/riso/sample.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "871933b3a266a708258d395ec9808bbb4813a4b3",
+      "size": 1321993,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/871933b3a266a708258d395ec9808bbb4813a4b3"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/sketchbook",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "10ee401ba7debddd30443e8fb3b15291bc088b89",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/10ee401ba7debddd30443e8fb3b15291bc088b89"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/sketchbook/STYLE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fed82e9ae0943ba51ea737b77c4ee8ded73e79e4",
+      "size": 8740,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/fed82e9ae0943ba51ea737b77c4ee8ded73e79e4"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/sketchbook/demo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3fdc33fe25725912ae8ae869f77ef46a9625c2b2",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/3fdc33fe25725912ae8ae869f77ef46a9625c2b2"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/sketchbook/demo/piece.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "398a0e91fb5ded49c69f3cec4b71495a83b7c758",
+      "size": 326,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/398a0e91fb5ded49c69f3cec4b71495a83b7c758"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/sketchbook/demo/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5577d70bfe31fd78c80e604d4ad3af7d79a75b08",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/5577d70bfe31fd78c80e604d4ad3af7d79a75b08"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/sketchbook/demo/src/bridges.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d85c32f7659f3e1c76f3baea4d78334d0b532682",
+      "size": 760,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/d85c32f7659f3e1c76f3baea4d78334d0b532682"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/sketchbook/demo/src/head.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "324ca63fb6c20e021d417737103c06b97e387180",
+      "size": 2529,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/324ca63fb6c20e021d417737103c06b97e387180"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/sketchbook/demo/src/scenes.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12202785641d3c6ce1a6d34d361a4889f976a7f3",
+      "size": 10190,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/12202785641d3c6ce1a6d34d361a4889f976a7f3"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/sketchbook/demo/src/score.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff87b7cd42cc99fcd19f9aefe06afc51a9ed1cd4",
+      "size": 1408,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/ff87b7cd42cc99fcd19f9aefe06afc51a9ed1cd4"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/sketchbook/kit.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30a29915f2dc01da33febf66be69f7b33bf1d35d",
+      "size": 32195,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/30a29915f2dc01da33febf66be69f7b33bf1d35d"
+    },
+    {
+      "path": "plugins/animate/skills/animate/styles/sketchbook/sample.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51daebb1867931e7eb4f0dd94004340989302780",
+      "size": 594478,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/51daebb1867931e7eb4f0dd94004340989302780"
+    },
+    {
+      "path": "plugins/animate/skills/animate/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b1b5a20db615c7601a59eed965de5a2c71f512c4",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/b1b5a20db615c7601a59eed965de5a2c71f512c4"
+    },
+    {
+      "path": "plugins/animate/skills/animate/templates/beat-cut",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "feefce7784b703bd22f416a576aac57a442a34d7",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/feefce7784b703bd22f416a576aac57a442a34d7"
+    },
+    {
+      "path": "plugins/animate/skills/animate/templates/beat-cut/piece.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd1745455750ff560c965b2f5f8140f7aa2b120a",
+      "size": 347,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/dd1745455750ff560c965b2f5f8140f7aa2b120a"
+    },
+    {
+      "path": "plugins/animate/skills/animate/templates/beat-cut/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "417676cc489ae8ec1b0a84587673b65aa4ba7146",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/417676cc489ae8ec1b0a84587673b65aa4ba7146"
+    },
+    {
+      "path": "plugins/animate/skills/animate/templates/beat-cut/src/bridges.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf7c5adefe9e203e98f0a0721d0965a1a04b640f",
+      "size": 837,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/cf7c5adefe9e203e98f0a0721d0965a1a04b640f"
+    },
+    {
+      "path": "plugins/animate/skills/animate/templates/beat-cut/src/head.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "812178bac4444036603544ac4a724e385a1477ca",
+      "size": 3658,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/812178bac4444036603544ac4a724e385a1477ca"
+    },
+    {
+      "path": "plugins/animate/skills/animate/templates/beat-cut/src/scenes.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78d3ed563100091a5353999aee10f8256ce105b7",
+      "size": 3474,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/78d3ed563100091a5353999aee10f8256ce105b7"
+    },
+    {
+      "path": "plugins/animate/skills/animate/templates/beat-cut/src/score.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78063544c0c6096866f9a45e014cd2a025b85951",
+      "size": 865,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/78063544c0c6096866f9a45e014cd2a025b85951"
+    },
+    {
+      "path": "plugins/animate/skills/animate/templates/piece",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7d2ba5dc4948e25be14e3af029c336e1c10b35e8",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/7d2ba5dc4948e25be14e3af029c336e1c10b35e8"
+    },
+    {
+      "path": "plugins/animate/skills/animate/templates/piece/LOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5e327a3fe2f1189b7a8351016780c1c75e34f56",
+      "size": 251,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/c5e327a3fe2f1189b7a8351016780c1c75e34f56"
+    },
+    {
+      "path": "plugins/animate/skills/animate/templates/piece/brief.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "303e8b9d93dc03851499b65ebed930088cc4c91f",
+      "size": 648,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/303e8b9d93dc03851499b65ebed930088cc4c91f"
+    },
+    {
+      "path": "plugins/animate/skills/animate/templates/piece/piece.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99fb308523abfd510642dc4939670b1efa65e85a",
+      "size": 294,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/99fb308523abfd510642dc4939670b1efa65e85a"
+    },
+    {
+      "path": "plugins/animate/skills/animate/templates/piece/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2ad2d5ec27829d7344dda5d30e3223b240e94438",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/2ad2d5ec27829d7344dda5d30e3223b240e94438"
+    },
+    {
+      "path": "plugins/animate/skills/animate/templates/piece/src/bridges.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5049b1ea4e253703aaa8f2c3215a9194f45b63ea",
+      "size": 1021,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/5049b1ea4e253703aaa8f2c3215a9194f45b63ea"
+    },
+    {
+      "path": "plugins/animate/skills/animate/templates/piece/src/head.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d4b84c08743c4cfd50f6bf824f6a90b2722bc11",
+      "size": 4447,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/3d4b84c08743c4cfd50f6bf824f6a90b2722bc11"
+    },
+    {
+      "path": "plugins/animate/skills/animate/templates/piece/src/scenes.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27d5b77773920cbfca8e454631d34eafa18e0bd9",
+      "size": 4132,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/27d5b77773920cbfca8e454631d34eafa18e0bd9"
+    },
+    {
+      "path": "plugins/animate/skills/animate/templates/piece/src/score.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed74ae16d85c232abcadc073bc289fb726e40b34",
+      "size": 1328,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/ed74ae16d85c232abcadc073bc289fb726e40b34"
+    },
+    {
+      "path": "plugins/animate/skills/animate/templates/style",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9093dbc619630dd4c2fb832d9bc7874691ae7613",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/9093dbc619630dd4c2fb832d9bc7874691ae7613"
+    },
+    {
+      "path": "plugins/animate/skills/animate/templates/style/kit.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "889da8a98b7fa790738c2ea8854e299d36824f28",
+      "size": 3930,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/889da8a98b7fa790738c2ea8854e299d36824f28"
+    },
+    {
+      "path": "plugins/animate/skills/animate/tools",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9b7b7e81ad24044462b63a0f79b3f81f0486a420",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/9b7b7e81ad24044462b63a0f79b3f81f0486a420"
+    },
+    {
+      "path": "plugins/animate/skills/animate/tools/beats.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5359cff6f6fe2363c32c79c934bc4786118e718",
+      "size": 9220,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/f5359cff6f6fe2363c32c79c934bc4786118e718"
+    },
+    {
+      "path": "plugins/animate/skills/animate/tools/build.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "375644f79d4480029c9a282028c950fc4b1fdd13",
+      "size": 7751,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/375644f79d4480029c9a282028c950fc4b1fdd13"
+    },
+    {
+      "path": "plugins/animate/skills/animate/tools/capture.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2cbb97633d1ebc06316492e15450ed77e84e9e7",
+      "size": 2770,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/a2cbb97633d1ebc06316492e15450ed77e84e9e7"
+    },
+    {
+      "path": "plugins/animate/skills/animate/tools/compare.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56f70acc72c8bf35de454f35458eb6ec7d569a25",
+      "size": 6037,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/56f70acc72c8bf35de454f35458eb6ec7d569a25"
+    },
+    {
+      "path": "plugins/animate/skills/animate/tools/export.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1338167bd20a0253b2f18c8629d2b33dcbd7720c",
+      "size": 15576,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/1338167bd20a0253b2f18c8629d2b33dcbd7720c"
+    },
+    {
+      "path": "plugins/animate/skills/animate/tools/framehash.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30222843deff6948adce4805fd0a86d77d0256ed",
+      "size": 2226,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/30222843deff6948adce4805fd0a86d77d0256ed"
+    },
+    {
+      "path": "plugins/animate/skills/animate/tools/gallery.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "421f5606fc859f980607ea3c0ed2e47c1d0fa100",
+      "size": 4375,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/421f5606fc859f980607ea3c0ed2e47c1d0fa100"
+    },
+    {
+      "path": "plugins/animate/skills/animate/tools/gpu.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1a46539a8a789665013c2f27c2d11f71cd58c0b",
+      "size": 1531,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/a1a46539a8a789665013c2f27c2d11f71cd58c0b"
+    },
+    {
+      "path": "plugins/animate/skills/animate/tools/measure",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "16f3e92c3600638faa8b675cd6503876ef31a742",
+      "url": "https://api.github.com/repos/cth9191/animate/git/trees/16f3e92c3600638faa8b675cd6503876ef31a742"
+    },
+    {
+      "path": "plugins/animate/skills/animate/tools/measure/refs.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f8dfba8c6186bf1eff9eafbc0f2cf1f61d1cb8a",
+      "size": 7267,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/5f8dfba8c6186bf1eff9eafbc0f2cf1f61d1cb8a"
+    },
+    {
+      "path": "plugins/animate/skills/animate/tools/measure/shotlog.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6c189428a8aaf09fbea7df77260b5c450675083",
+      "size": 4845,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/a6c189428a8aaf09fbea7df77260b5c450675083"
+    },
+    {
+      "path": "plugins/animate/skills/animate/tools/review.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a364a024569f8ef71c82a1b4f75c7812a16092e",
+      "size": 31352,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/5a364a024569f8ef71c82a1b4f75c7812a16092e"
+    },
+    {
+      "path": "plugins/animate/skills/animate/tools/still.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a76634e2fbcea8d99d7e7f756288f7fcc390d9a4",
+      "size": 2592,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/a76634e2fbcea8d99d7e7f756288f7fcc390d9a4"
+    },
+    {
+      "path": "plugins/animate/skills/animate/tools/storyboard.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d51d82a3ebaffb4ad9cdb681be74ef5d4283435",
+      "size": 2191,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/5d51d82a3ebaffb4ad9cdb681be74ef5d4283435"
+    },
+    {
+      "path": "plugins/animate/skills/animate/tools/textcheck.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84c8e9e67b83c7246c945f3a8058057512010c00",
+      "size": 8698,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/84c8e9e67b83c7246c945f3a8058057512010c00"
+    },
+    {
+      "path": "plugins/animate/skills/animate/tools/tile.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f97dd87b278da4734ea19b738b54e43d5990e5a0",
+      "size": 3503,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/f97dd87b278da4734ea19b738b54e43d5990e5a0"
+    },
+    {
+      "path": "plugins/animate/skills/animate/tools/voice.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5facdfcaedcbf8007f9e4163210e932a3de5a1e",
+      "size": 7907,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/b5facdfcaedcbf8007f9e4163210e932a3de5a1e"
+    },
+    {
+      "path": "plugins/animate/skills/animate/tools/voice_words.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62138c72a73d7310b249f598f642a028de322509",
+      "size": 1006,
+      "url": "https://api.github.com/repos/cth9191/animate/git/blobs/62138c72a73d7310b249f598f642a028de322509"
+    }
+  ],
+  "truncated": false
+}

@@ -1,0 +1,260 @@
+{
+  "generated_utc": "2026-10-19T15:45:33.330771+00:00",
+  "archive_format": "zip-deflate-level1",
+  "logical_roots": {
+    "project_runtime/projects": "C:\\Users\\Admin\\MotionForge2D\\projects",
+    "project_runtime/output": "C:\\Users\\Admin\\MotionForge2D\\output",
+    "project_runtime/output_m05": "C:\\Users\\Admin\\MotionForge2D\\output_m05",
+    "project_runtime/data": "C:\\Users\\Admin\\MotionForge2D\\data",
+    "project_runtime/models_checkpoints": "C:\\Users\\Admin\\MotionForge2D\\models_checkpoints",
+    "delivery_run": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261005\\20261005T1643Z-wan-long"
+  },
+  "parts": [
+    {
+      "name": "motionforge-assets-001.zip",
+      "bytes": 935634609,
+      "sha256": "2ef227f7a278708b1d39484ae17f5798b640c00413122c7d6c954ba2b8a5d3e3",
+      "files": 7516,
+      "uncompressed_bytes": 949911705
+    },
+    {
+      "name": "motionforge-assets-002.zip",
+      "bytes": 939480496,
+      "sha256": "03e1cad444adac2f3d86836c538c4c0d41afba70fcf33c2c454b7dfa982cac12",
+      "files": 9042,
+      "uncompressed_bytes": 949941262
+    },
+    {
+      "name": "motionforge-assets-003.zip",
+      "bytes": 937521681,
+      "sha256": "7ae2f257343f504e737d64d1a9fd7ac44353bbaf1340a36e6a9976cd1281e39c",
+      "files": 8244,
+      "uncompressed_bytes": 949845169
+    },
+    {
+      "name": "motionforge-assets-004.zip",
+      "bytes": 936284187,
+      "sha256": "7aeec645a46f5cc027fa927cc95629ac536a4b684c2051d6a11ee663ec5d9b93",
+      "files": 9948,
+      "uncompressed_bytes": 949981525
+    },
+    {
+      "name": "motionforge-assets-005.zip",
+      "bytes": 531242186,
+      "sha256": "ecbe53abd85947c96893bed6a7d590550c19f74827b8f9edf1c0f038935350af",
+      "files": 8802,
+      "uncompressed_bytes": 634913686
+    },
+    {
+      "name": "motionforge-assets-006.zip",
+      "bytes": 851088524,
+      "sha256": "73681139c992ec2ae58fc8b969a6b0663e13d5a141819359c8ff1bc003b4cadc",
+      "files": 134,
+      "uncompressed_bytes": 948219849
+    },
+    {
+      "name": "motionforge-assets-007.zip",
+      "bytes": 914724648,
+      "sha256": "343bb1691dd1972c9e2ba2bfaa5132aec3bf4c4f344bc1f3f3ff328d115767e4",
+      "files": 8491,
+      "uncompressed_bytes": 949990605
+    },
+    {
+      "name": "motionforge-assets-008.zip",
+      "bytes": 943106662,
+      "sha256": "325db16e8623de09e1059e8eeb195ad2e7842c6cac04e0dbadc0820ba1ebdcf2",
+      "files": 9765,
+      "uncompressed_bytes": 949997419
+    },
+    {
+      "name": "motionforge-assets-009.zip",
+      "bytes": 944498407,
+      "sha256": "ea40c4028812ff2d276e3d6572bc4e79dd6d9f6545c5284774176d4ee279aed6",
+      "files": 9407,
+      "uncompressed_bytes": 949995633
+    },
+    {
+      "name": "motionforge-assets-010.zip",
+      "bytes": 939257699,
+      "sha256": "ee3c4223299c4dd20afa6c628e4f6d5148792533054a2a19d2d10f547128fa99",
+      "files": 6448,
+      "uncompressed_bytes": 949986975
+    },
+    {
+      "name": "motionforge-assets-011.zip",
+      "bytes": 921314510,
+      "sha256": "838d581255572e179b529d4ac923365895a686cbb4132b0aac8a70fe4fdd9649",
+      "files": 17943,
+      "uncompressed_bytes": 949972649
+    },
+    {
+      "name": "motionforge-assets-012.zip",
+      "bytes": 419415876,
+      "sha256": "d3a4611710d5a96b2cf03b98dc8463e2730adb08e0e87012eeddfb50c26f2e59",
+      "files": 6224,
+      "uncompressed_bytes": 576491985
+    },
+    {
+      "name": "motionforge-assets-013.zip",
+      "bytes": 836806600,
+      "sha256": "f54fe696e86987e035eb797b75fcf3101c6056f7804908408a43eb97c9c2e092",
+      "files": 1,
+      "uncompressed_bytes": 898083611
+    },
+    {
+      "name": "motionforge-assets-014.zip",
+      "bytes": 818487390,
+      "sha256": "1b0b60724d85e7994ded68af6adaaa627e9db5e12b7ce6fb0973158c4e428803",
+      "files": 4648,
+      "uncompressed_bytes": 948462689
+    },
+    {
+      "name": "motionforge-assets-015.zip",
+      "bytes": 817520344,
+      "sha256": "a5cc61338caa6b1ceff30954aa53d43ca20463d6546d00c4efe805d8c8389a6f",
+      "files": 11755,
+      "uncompressed_bytes": 869894719
+    },
+    {
+      "name": "motionforge-assets-016.zip",
+      "bytes": 928669359,
+      "sha256": "b47343a52efbc76712efe697c0a16c9b160b29b788eba7bbc4844f1f4edbe02b",
+      "files": 10071,
+      "uncompressed_bytes": 949875805
+    },
+    {
+      "name": "motionforge-assets-017.zip",
+      "bytes": 920572057,
+      "sha256": "79dd6bfb6063abc87b26e3f3eaeb265e48e6bf664859faffa2687b09c7292861",
+      "files": 14308,
+      "uncompressed_bytes": 949997735
+    },
+    {
+      "name": "motionforge-assets-018.zip",
+      "bytes": 922631681,
+      "sha256": "cc84e2be738708f1e687c493ed53f22c4fadec07746a540f9c5666d0a09a4cdc",
+      "files": 15559,
+      "uncompressed_bytes": 949928369
+    },
+    {
+      "name": "motionforge-assets-019.zip",
+      "bytes": 930989487,
+      "sha256": "ddf44a0dc6288933f12044c2566f91eef426e0b4946580fcf6e20b8e31bea780",
+      "files": 12984,
+      "uncompressed_bytes": 949965238
+    },
+    {
+      "name": "motionforge-assets-020.zip",
+      "bytes": 926359009,
+      "sha256": "4b00785a8982c53da991be2031945752aade9e33de815c3d407216d1eadf96fa",
+      "files": 13700,
+      "uncompressed_bytes": 949953861
+    },
+    {
+      "name": "motionforge-assets-021.zip",
+      "bytes": 883337562,
+      "sha256": "40c427cbb84d8c3096ec77ce0c83036284ce11e4fd00205b2d8a939f66c451e3",
+      "files": 25564,
+      "uncompressed_bytes": 899302279
+    },
+    {
+      "name": "motionforge-assets-022.zip",
+      "bytes": 926621272,
+      "sha256": "c976e243eadbfed65c794625e834fadabc3ea714f83c363550672030843ce47d",
+      "files": 13384,
+      "uncompressed_bytes": 949975991
+    },
+    {
+      "name": "motionforge-assets-023.zip",
+      "bytes": 924771232,
+      "sha256": "e5342dcce43ee421261c1e21b325dd8f7e6db4e602ff31b35ecde0959b6f1374",
+      "files": 16206,
+      "uncompressed_bytes": 949944899
+    },
+    {
+      "name": "motionforge-assets-024.zip",
+      "bytes": 866782694,
+      "sha256": "da2e0316264be28be5e285c08530fea5645e9af8be281d4d489563fe2284b8bc",
+      "files": 8553,
+      "uncompressed_bytes": 903883456
+    },
+    {
+      "name": "motionforge-assets-025.zip",
+      "bytes": 912869386,
+      "sha256": "0c921ac8cd95443fc1f7b7eeb3c350ef7797105f6e33ff06f108a56dba97c0c1",
+      "files": 3348,
+      "uncompressed_bytes": 949928311
+    },
+    {
+      "name": "motionforge-assets-026.zip",
+      "bytes": 908832760,
+      "sha256": "4afbd7e4aa62fa87803f104c82bfa151c432a6cb5de8dba47aa03c15cccbba91",
+      "files": 6929,
+      "uncompressed_bytes": 949934328
+    },
+    {
+      "name": "motionforge-assets-027.zip",
+      "bytes": 936379918,
+      "sha256": "d6087fc663d653d806151f1b2f3c55aa9315759789ae0b9812fdd2b3dbd360a8",
+      "files": 11413,
+      "uncompressed_bytes": 949971129
+    },
+    {
+      "name": "motionforge-assets-028.zip",
+      "bytes": 902269567,
+      "sha256": "c35776a7982b9ddc21f5b987fbae37bcca8e266b00b47bbba0da8ef4e5005be4",
+      "files": 7648,
+      "uncompressed_bytes": 913313099
+    },
+    {
+      "name": "motionforge-assets-029.zip",
+      "bytes": 669762806,
+      "sha256": "e186c0d58611a39faa8ad04bd7b0c66f84c1365610a6d2630a0ae9b57977c320",
+      "files": 3340,
+      "uncompressed_bytes": 703498366
+    },
+    {
+      "name": "motionforge-assets-extra.zip",
+      "bytes": 2568939,
+      "sha256": "19f93ac808b4e775c4036e444e805177f37e4df33d611e2e4d9c73d2ebb5b103",
+      "files": 94,
+      "uncompressed_bytes": 72223587
+    }
+  ],
+  "groups": {
+    "project_runtime/projects": {
+      "files": 40522,
+      "bytes": 4289698781
+    },
+    "project_runtime/output": {
+      "files": 1593,
+      "bytes": 88062584
+    },
+    "project_runtime/output_m05": {
+      "files": 1430,
+      "bytes": 54321134
+    },
+    "project_runtime/data": {
+      "files": 7,
+      "bytes": 2510848
+    },
+    "project_runtime/models_checkpoints": {
+      "files": 1,
+      "bytes": 898083611
+    },
+    "delivery_run": {
+      "files": 237822,
+      "bytes": 21012485389
+    },
+    "project_runtime/extra": {
+      "files": 94,
+      "bytes": 72223587,
+      "note": "project .codex-review, artifacts, diagnostics"
+    }
+  },
+  "skipped": [],
+  "source_rule": "Historical project media and delivery run preserved. Reinstallable environments and credential files excluded.",
+  "total_archive_bytes": 25249801548,
+  "total_files": 281469,
+  "large_runtime_model_omission": "Shared 88.7GB third-party model runtime is represented by RUNTIME_INVENTORY.json SHA-256 and pinned fetch scripts, not uploaded."
+}

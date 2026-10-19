@@ -1,0 +1,369 @@
+{
+  "sha": "1dcbe5e3fc6cf970bd10d3cc05f0a8a5d19d0383",
+  "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/trees/1dcbe5e3fc6cf970bd10d3cc05f0a8a5d19d0383",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82c4a10282d787949ad323fa06f39fb34fa48097",
+      "size": 59,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/82c4a10282d787949ad323fa06f39fb34fa48097"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c42cd8396a654633775f52fd9f79db0b510e625",
+      "size": 1247,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/9c42cd8396a654633775f52fd9f79db0b510e625"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "656eca77b5aedacdbcd0d9ea3452a3cfd2a5f544",
+      "size": 1066,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/656eca77b5aedacdbcd0d9ea3452a3cfd2a5f544"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c043b1ae3718633f5d7c6ea66e23ff96badd1468",
+      "size": 8041,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/c043b1ae3718633f5d7c6ea66e23ff96badd1468"
+    },
+    {
+      "path": "demo.gif",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33a40c804da27946ba4c57c813740a6bc9690361",
+      "size": 5174228,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/33a40c804da27946ba4c57c813740a6bc9690361"
+    },
+    {
+      "path": "demo.mp4",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73268c63395f988e9906e7ba2f43d33b6bad15b6",
+      "size": 2265533,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/73268c63395f988e9906e7ba2f43d33b6bad15b6"
+    },
+    {
+      "path": "examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ed7b09c4a16a0379fd07cf0f405480fbbe88ffb4",
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/trees/ed7b09c4a16a0379fd07cf0f405480fbbe88ffb4"
+    },
+    {
+      "path": "examples/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "967605d5c1b605bf8093ac40ae9b26e4d6f3f2a3",
+      "size": 1928,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/967605d5c1b605bf8093ac40ae9b26e4d6f3f2a3"
+    },
+    {
+      "path": "examples/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ac0478a079473455cc97888a45fa9155254fa23",
+      "size": 916,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/1ac0478a079473455cc97888a45fa9155254fa23"
+    },
+    {
+      "path": "examples/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "05690b4ddd14d25b2afdd6f02e12fbb0d3261391",
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/trees/05690b4ddd14d25b2afdd6f02e12fbb0d3261391"
+    },
+    {
+      "path": "examples/scripts/gen-sfx.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0b11bab5d62ff53da9727e0072716ac9b92ad57",
+      "size": 3391,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/c0b11bab5d62ff53da9727e0072716ac9b92ad57"
+    },
+    {
+      "path": "examples/scripts/gen-track.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e2df2f4d754dfad808717406e6b944a0e5b7950",
+      "size": 3640,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/6e2df2f4d754dfad808717406e6b944a0e5b7950"
+    },
+    {
+      "path": "examples/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "017b9c77e9bca1421d850b7d2d3d749b2f162c29",
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/trees/017b9c77e9bca1421d850b7d2d3d749b2f162c29"
+    },
+    {
+      "path": "examples/src/Root.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9319c247e3013a88ac7695b269f4bf2aacddceb",
+      "size": 3042,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/a9319c247e3013a88ac7695b269f4bf2aacddceb"
+    },
+    {
+      "path": "examples/src/codeedit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "70a06a7377ae503dc6eab38cce0ba4113e4d834b",
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/trees/70a06a7377ae503dc6eab38cce0ba4113e4d834b"
+    },
+    {
+      "path": "examples/src/codeedit/CodeEdit.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f38cec4f243c0c93b41d244bd96e3841170a6153",
+      "size": 14682,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/f38cec4f243c0c93b41d244bd96e3841170a6153"
+    },
+    {
+      "path": "examples/src/components",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6e8b3a104f1478df04f3f1ec9a758cf708eb6897",
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/trees/6e8b3a104f1478df04f3f1ec9a758cf708eb6897"
+    },
+    {
+      "path": "examples/src/components/Layers.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d135ce5846ffe8669ef76b0c6be2b7be8bbfd19",
+      "size": 2564,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/8d135ce5846ffe8669ef76b0c6be2b7be8bbfd19"
+    },
+    {
+      "path": "examples/src/components/Motion.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07f7be97f156495e8b730948f2c777cd0814e588",
+      "size": 4202,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/07f7be97f156495e8b730948f2c777cd0814e588"
+    },
+    {
+      "path": "examples/src/focuscat",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "60162725573c8186e317330a8fac7cf53405d8a7",
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/trees/60162725573c8186e317330a8fac7cf53405d8a7"
+    },
+    {
+      "path": "examples/src/focuscat/FocusCat.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b16c3bf50fb4745ca4556f50b60897128c9a5691",
+      "size": 18540,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/b16c3bf50fb4745ca4556f50b60897128c9a5691"
+    },
+    {
+      "path": "examples/src/focuscat/PixelCat.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "334cd5a188aa3a1ad6e63f12f494e49f93737e1d",
+      "size": 1877,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/334cd5a188aa3a1ad6e63f12f494e49f93737e1d"
+    },
+    {
+      "path": "examples/src/focuscat/theme2.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5db6d173fb5abe8153479bbeaf8673e765a7c827",
+      "size": 882,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/5db6d173fb5abe8153479bbeaf8673e765a7c827"
+    },
+    {
+      "path": "examples/src/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e78af8ba34df7b5e7173a381e75127c3b2766df9",
+      "size": 93,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/e78af8ba34df7b5e7173a381e75127c3b2766df9"
+    },
+    {
+      "path": "examples/src/scenes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "53eb9496659b14a88f2a2961a476fe4684ca0e63",
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/trees/53eb9496659b14a88f2a2961a476fe4684ca0e63"
+    },
+    {
+      "path": "examples/src/scenes/Bio.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2d1eecfcc4cc410c50ce32af73c72e384f01146",
+      "size": 1940,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/b2d1eecfcc4cc410c50ce32af73c72e384f01146"
+    },
+    {
+      "path": "examples/src/scenes/CTA.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9b58d28090769576c9167ff28a05af730a7175f",
+      "size": 1728,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/d9b58d28090769576c9167ff28a05af730a7175f"
+    },
+    {
+      "path": "examples/src/scenes/Hook.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b524f3d0b7f2a71abb0dd8d73426c2b6e9865f09",
+      "size": 1553,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/b524f3d0b7f2a71abb0dd8d73426c2b6e9865f09"
+    },
+    {
+      "path": "examples/src/scenes/Ships.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "317bc44bd451d0674bcd459a749177b49b917cc0",
+      "size": 3198,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/317bc44bd451d0674bcd459a749177b49b917cc0"
+    },
+    {
+      "path": "examples/src/selffix",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "67d19d7b8e2844fffc2cff2fc5653ea09e00bab1",
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/trees/67d19d7b8e2844fffc2cff2fc5653ea09e00bab1"
+    },
+    {
+      "path": "examples/src/selffix/SelfFix.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be5d8d46b946c7d93694e2de898e060c9b330081",
+      "size": 10749,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/be5d8d46b946c7d93694e2de898e060c9b330081"
+    },
+    {
+      "path": "examples/src/skill",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "50bf0a5dabd83794333eb65ee0824a4735c1608e",
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/trees/50bf0a5dabd83794333eb65ee0824a4735c1608e"
+    },
+    {
+      "path": "examples/src/skill/SkillPromo.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "619b5e4c04d8a7bb4bd6eb64a7ab940e03ba9358",
+      "size": 15681,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/619b5e4c04d8a7bb4bd6eb64a7ab940e03ba9358"
+    },
+    {
+      "path": "examples/src/theme.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4fcf97f1c378ef01242874cfd3c2bdc41a760ff",
+      "size": 840,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/f4fcf97f1c378ef01242874cfd3c2bdc41a760ff"
+    },
+    {
+      "path": "examples/videos",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5bac6e88307b0bdfdcfeaf3c7b25ae1f8ab53a8e",
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/trees/5bac6e88307b0bdfdcfeaf3c7b25ae1f8ab53a8e"
+    },
+    {
+      "path": "examples/videos/focus-cat-promo.mp4",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6e5724066d541802e7945d466b3299822445658",
+      "size": 2107978,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/a6e5724066d541802e7945d466b3299822445658"
+    },
+    {
+      "path": "examples/videos/focus-cat.gif",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce92bd7da3297e2afdc9c6c6a4a53059e60e45b4",
+      "size": 5785749,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/ce92bd7da3297e2afdc9c6c6a4a53059e60e45b4"
+    },
+    {
+      "path": "remotion-motion-graphics.skill",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb9f12517056b527428a4327a5056509bb96426f",
+      "size": 12226,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/bb9f12517056b527428a4327a5056509bb96426f"
+    },
+    {
+      "path": "remotion-motion-graphics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4d2faadcbd1e74c5c6c138f47e120dafbe9b61ab",
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/trees/4d2faadcbd1e74c5c6c138f47e120dafbe9b61ab"
+    },
+    {
+      "path": "remotion-motion-graphics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f2477f574c2908d3c755d4e6638b86e7b09492a",
+      "size": 7909,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/3f2477f574c2908d3c755d4e6638b86e7b09492a"
+    },
+    {
+      "path": "remotion-motion-graphics/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e1598496a0067a22accf9a0a759927e6ef04234",
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/trees/5e1598496a0067a22accf9a0a759927e6ef04234"
+    },
+    {
+      "path": "remotion-motion-graphics/assets/theme.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "742162fad3a987d14a9c56c9a7ab448244dcaa0c",
+      "size": 1150,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/742162fad3a987d14a9c56c9a7ab448244dcaa0c"
+    },
+    {
+      "path": "remotion-motion-graphics/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cabde7865dc598f64acccae318ca13b5f12b6262",
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/trees/cabde7865dc598f64acccae318ca13b5f12b6262"
+    },
+    {
+      "path": "remotion-motion-graphics/references/design-rules.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc5de01dbfd3af0bc358ec61c062f1da4db74b2c",
+      "size": 4332,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/bc5de01dbfd3af0bc358ec61c062f1da4db74b2c"
+    },
+    {
+      "path": "remotion-motion-graphics/references/motion-patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9735d51bc9df5dcfefb9ace41eccfbf9b0e545a",
+      "size": 9763,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/f9735d51bc9df5dcfefb9ace41eccfbf9b0e545a"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "daa2118614fcd84e8887b34fbde15de8e5437729",
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/trees/daa2118614fcd84e8887b34fbde15de8e5437729"
+    },
+    {
+      "path": "scripts/build-skill.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1886827f96734d73d2a4ffafaec1c81900a072ab",
+      "size": 405,
+      "url": "https://api.github.com/repos/haidrrrry/claude-remotion-skill/git/blobs/1886827f96734d73d2a4ffafaec1c81900a072ab"
+    }
+  ],
+  "truncated": false
+}

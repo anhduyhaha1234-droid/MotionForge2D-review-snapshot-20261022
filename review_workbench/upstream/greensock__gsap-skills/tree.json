@@ -1,0 +1,513 @@
+{
+  "sha": "aed9cfd3277740755f6bfc1155c7aa645403b760",
+  "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/aed9cfd3277740755f6bfc1155c7aa645403b760",
+  "tree": [
+    {
+      "path": ".claude-plugin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c71e45a3eb60417391f3fe1a6e4e93a0a1513ca9",
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/c71e45a3eb60417391f3fe1a6e4e93a0a1513ca9"
+    },
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b15dd187140329215cc5972df570077e76b3719",
+      "size": 737,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/1b15dd187140329215cc5972df570077e76b3719"
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91760e108c6e506abf4daafa2d7bdcf0f59cd0d8",
+      "size": 241,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/91760e108c6e506abf4daafa2d7bdcf0f59cd0d8"
+    },
+    {
+      "path": ".cursor-plugin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b0716a1fe6f0d0490cdb290db6e059de2d27cfb5",
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/b0716a1fe6f0d0490cdb290db6e059de2d27cfb5"
+    },
+    {
+      "path": ".cursor-plugin/marketplace.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edfe3b44d3c8078263fb86fd4e13b00e21fa4db2",
+      "size": 354,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/edfe3b44d3c8078263fb86fd4e13b00e21fa4db2"
+    },
+    {
+      "path": ".cursor-plugin/plugin.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12eb51b7f3e21eb0d514f84f6b9d09aabbfc2794",
+      "size": 603,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/12eb51b7f3e21eb0d514f84f6b9d09aabbfc2794"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "36fc59a96a9eb7400140ed52c4ad0027bc8be978",
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/36fc59a96a9eb7400140ed52c4ad0027bc8be978"
+    },
+    {
+      "path": ".github/copilot-instructions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8886fe3ae6f6e0d733f058a6da8750269081f3a4",
+      "size": 2965,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/8886fe3ae6f6e0d733f058a6da8750269081f3a4"
+    },
+    {
+      "path": ".github/instructions",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "75db7995eed79fc4a041c5d05eaa858870827d55",
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/75db7995eed79fc4a041c5d05eaa858870827d55"
+    },
+    {
+      "path": ".github/instructions/react.instructions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b58dd3057412ee53b507f911a9dfa281146c06c2",
+      "size": 1390,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/b58dd3057412ee53b507f911a9dfa281146c06c2"
+    },
+    {
+      "path": ".github/instructions/scrolltrigger.instructions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f51c055b33f2a3717f0af24e72be136444faad2d",
+      "size": 1761,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/f51c055b33f2a3717f0af24e72be136444faad2d"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e10791e2187b81870167faaf76538f7a1e45b082",
+      "size": 228,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/e10791e2187b81870167faaf76538f7a1e45b082"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63b8af152108f1fb870d3d4afd126d224b5b03eb",
+      "size": 1502,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/63b8af152108f1fb870d3d4afd126d224b5b03eb"
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "47dc3e3d863cfb5727b87d785d09abf9743c0a72",
+      "size": 9,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/47dc3e3d863cfb5727b87d785d09abf9743c0a72"
+    },
+    {
+      "path": "GEMINI.md",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "47dc3e3d863cfb5727b87d785d09abf9743c0a72",
+      "size": 9,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/47dc3e3d863cfb5727b87d785d09abf9743c0a72"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa2fe218371ee47b741db9d0fa7cf17cddc03eb8",
+      "size": 1066,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/fa2fe218371ee47b741db9d0fa7cf17cddc03eb8"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b7def98e5c1ad79d49c01d133f9370ebd65a2c5",
+      "size": 8508,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/5b7def98e5c1ad79d49c01d133f9370ebd65a2c5"
+    },
+    {
+      "path": "assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0b6b5d0d00c8d212f626da02333e3e705f43774f",
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/0b6b5d0d00c8d212f626da02333e3e705f43774f"
+    },
+    {
+      "path": "assets/gsap-green.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bcd4ebe15eecdf10724a7f9bc65db477b41bc4fb",
+      "size": 5522,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/bcd4ebe15eecdf10724a7f9bc65db477b41bc4fb"
+    },
+    {
+      "path": "assets/gsap-icon-inverted.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a944383fd829b4529da56b4061f3ac2db1effff",
+      "size": 2994,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/1a944383fd829b4529da56b4061f3ac2db1effff"
+    },
+    {
+      "path": "assets/gsap-icon-square.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d56f864b72a73295cd536cf60f31ea15f776193f",
+      "size": 2908,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/d56f864b72a73295cd536cf60f31ea15f776193f"
+    },
+    {
+      "path": "assets/gsap-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a755ddf23330c067c770685eb57303e7e1139c5",
+      "size": 5522,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/3a755ddf23330c067c770685eb57303e7e1139c5"
+    },
+    {
+      "path": "examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8e7c1148e9fef7f4e5ee557c6e6581e2b45624c7",
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/8e7c1148e9fef7f4e5ee557c6e6581e2b45624c7"
+    },
+    {
+      "path": "examples/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e611fb718fdcdd3de032b415790800e43827733",
+      "size": 1535,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/1e611fb718fdcdd3de032b415790800e43827733"
+    },
+    {
+      "path": "examples/nuxt",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ab9c35accbf4bb92684f38d85505465b7cc4714a",
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/ab9c35accbf4bb92684f38d85505465b7cc4714a"
+    },
+    {
+      "path": "examples/nuxt/app",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "44c841e7dfa4ef107cce7a0a6c0d15c0da6d5ee4",
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/44c841e7dfa4ef107cce7a0a6c0d15c0da6d5ee4"
+    },
+    {
+      "path": "examples/nuxt/app/app.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16d886ad3100ce285f72b9e83b570b4f45de8839",
+      "size": 37,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/16d886ad3100ce285f72b9e83b570b4f45de8839"
+    },
+    {
+      "path": "examples/nuxt/app/composables",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f8e5ff2e4828ffa3c0749cfac15ba0fe9e54e964",
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/f8e5ff2e4828ffa3c0749cfac15ba0fe9e54e964"
+    },
+    {
+      "path": "examples/nuxt/app/composables/useGSAP.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a41952d8ab4ec1043bd9ca74c098e9db486eb5c1",
+      "size": 2918,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/a41952d8ab4ec1043bd9ca74c098e9db486eb5c1"
+    },
+    {
+      "path": "examples/nuxt/app/pages",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a7d606857f5b22d9bdbb2324417a7b82ccf3966d",
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/a7d606857f5b22d9bdbb2324417a7b82ccf3966d"
+    },
+    {
+      "path": "examples/nuxt/app/pages/index.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "956404a387ccf996fe14ae96fe1bcc844508683a",
+      "size": 1010,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/956404a387ccf996fe14ae96fe1bcc844508683a"
+    },
+    {
+      "path": "examples/nuxt/nuxt.config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f77360511e7ece7868b3f991caf1a94c3d5fad3a",
+      "size": 85,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/f77360511e7ece7868b3f991caf1a94c3d5fad3a"
+    },
+    {
+      "path": "examples/nuxt/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bdeed7df9d9c5db450926c8672b8451df276794b",
+      "size": 359,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/bdeed7df9d9c5db450926c8672b8451df276794b"
+    },
+    {
+      "path": "examples/react",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fca91a8e06bee27d775ac7b452c54b5d49a697b1",
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/fca91a8e06bee27d775ac7b452c54b5d49a697b1"
+    },
+    {
+      "path": "examples/react/App.jsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb3fc15519cbf36e25510581b4eac25862c38eff",
+      "size": 1331,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/cb3fc15519cbf36e25510581b4eac25862c38eff"
+    },
+    {
+      "path": "examples/react/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ba41bb72d32c63d0a7c3ea682c2e9fe6feed56d",
+      "size": 305,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/2ba41bb72d32c63d0a7c3ea682c2e9fe6feed56d"
+    },
+    {
+      "path": "examples/react/main.jsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "569fdf2fddc90a70ca8e15870aa482afd5946a87",
+      "size": 217,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/569fdf2fddc90a70ca8e15870aa482afd5946a87"
+    },
+    {
+      "path": "examples/react/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e15fbab5fd7090e729d7d1beb44556e249417b4d",
+      "size": 414,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/e15fbab5fd7090e729d7d1beb44556e249417b4d"
+    },
+    {
+      "path": "examples/react/vite.config.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86759bd80f1f50338ae43a4d8bb4b2a6539aff65",
+      "size": 149,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/86759bd80f1f50338ae43a4d8bb4b2a6539aff65"
+    },
+    {
+      "path": "examples/vanilla",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7f719a639a8bc05782b9b948d9373d438e4cafc5",
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/7f719a639a8bc05782b9b948d9373d438e4cafc5"
+    },
+    {
+      "path": "examples/vanilla/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4800b1519e6d772cafcf1816213902f6af1bee1f",
+      "size": 1085,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/4800b1519e6d772cafcf1816213902f6af1bee1f"
+    },
+    {
+      "path": "examples/vanilla/main.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6c0d664426b43bdb3f6e76a61118eb30cdd5005",
+      "size": 1181,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/a6c0d664426b43bdb3f6e76a61118eb30cdd5005"
+    },
+    {
+      "path": "examples/vue",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "63e0e30f8b384f4edf3e1a288839d90392c23d3b",
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/63e0e30f8b384f4edf3e1a288839d90392c23d3b"
+    },
+    {
+      "path": "examples/vue/app.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "209550ba2be9bb71e390a25fed4150b01a621e25",
+      "size": 1859,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/209550ba2be9bb71e390a25fed4150b01a621e25"
+    },
+    {
+      "path": "examples/vue/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "576c19d01daf8f1672a22b91d715eb88e2921741",
+      "size": 328,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/576c19d01daf8f1672a22b91d715eb88e2921741"
+    },
+    {
+      "path": "examples/vue/main.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e76a2f60402833aaaa8068c484a6a7624612a2ca",
+      "size": 285,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/e76a2f60402833aaaa8068c484a6a7624612a2ca"
+    },
+    {
+      "path": "examples/vue/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1938025198d12e89921bca1e3c77ea5923e9e40d",
+      "size": 343,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/1938025198d12e89921bca1e3c77ea5923e9e40d"
+    },
+    {
+      "path": "examples/vue/vite.config.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37d3d6f22bd04d7e46ee0210b4a02878dddc2b4a",
+      "size": 158,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/37d3d6f22bd04d7e46ee0210b4a02878dddc2b4a"
+    },
+    {
+      "path": "skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e04df7c568f64e1d9e93e004bf129307e8f60d15",
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/e04df7c568f64e1d9e93e004bf129307e8f60d15"
+    },
+    {
+      "path": "skills/gsap-core",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "135754edd728103e329a8df8b471b197375b370e",
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/135754edd728103e329a8df8b471b197375b370e"
+    },
+    {
+      "path": "skills/gsap-core/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98639432f4112b664aa5e53cf5d8ea1a4697eff9",
+      "size": 14792,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/98639432f4112b664aa5e53cf5d8ea1a4697eff9"
+    },
+    {
+      "path": "skills/gsap-frameworks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5b086fa623be801882128fa16b2a9b446d193029",
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/5b086fa623be801882128fa16b2a9b446d193029"
+    },
+    {
+      "path": "skills/gsap-frameworks/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c2df8611b61d0c97abb8d32ed922ce8207424e5",
+      "size": 10621,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/3c2df8611b61d0c97abb8d32ed922ce8207424e5"
+    },
+    {
+      "path": "skills/gsap-performance",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "34dec2f051872f8d02df06de97450e448bac9c5e",
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/34dec2f051872f8d02df06de97450e448bac9c5e"
+    },
+    {
+      "path": "skills/gsap-performance/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05792acf5b0ea7fd30042cdc5e91282e8e047898",
+      "size": 4139,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/05792acf5b0ea7fd30042cdc5e91282e8e047898"
+    },
+    {
+      "path": "skills/gsap-plugins",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e31ccbdb75cf41f0e7df0fec567f6e07956eaca9",
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/e31ccbdb75cf41f0e7df0fec567f6e07956eaca9"
+    },
+    {
+      "path": "skills/gsap-plugins/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb5f7483038adf26a889c8b2b85e3ef2cf0141dc",
+      "size": 21579,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/bb5f7483038adf26a889c8b2b85e3ef2cf0141dc"
+    },
+    {
+      "path": "skills/gsap-react",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ac01a338b96fddbc6cf65a89858d2e6068887b39",
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/ac01a338b96fddbc6cf65a89858d2e6068887b39"
+    },
+    {
+      "path": "skills/gsap-react/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2e51805457943cd4982fe792b858c14fa2c3c8f",
+      "size": 6565,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/e2e51805457943cd4982fe792b858c14fa2c3c8f"
+    },
+    {
+      "path": "skills/gsap-scrolltrigger",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7838f515e05bfab0a79dd63368a409ddc7d76ee6",
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/7838f515e05bfab0a79dd63368a409ddc7d76ee6"
+    },
+    {
+      "path": "skills/gsap-scrolltrigger/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d8c09f2136c108595c9e0db859c4a39460e99cf",
+      "size": 18390,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/6d8c09f2136c108595c9e0db859c4a39460e99cf"
+    },
+    {
+      "path": "skills/gsap-timeline",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "37eb5d623c3e14367864d57160acb64f13950994",
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/37eb5d623c3e14367864d57160acb64f13950994"
+    },
+    {
+      "path": "skills/gsap-timeline/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fed372b0e5276b2a207d80bc23f81180a0dff55",
+      "size": 4394,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/1fed372b0e5276b2a207d80bc23f81180a0dff55"
+    },
+    {
+      "path": "skills/gsap-utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3f7aa617dd2dc7ebf21f30349b9c7b6d8640d789",
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/trees/3f7aa617dd2dc7ebf21f30349b9c7b6d8640d789"
+    },
+    {
+      "path": "skills/gsap-utils/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "367e405e027936ce6b5fb85ec996beb135715194",
+      "size": 12093,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/367e405e027936ce6b5fb85ec996beb135715194"
+    },
+    {
+      "path": "skills/llms.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97130f58e94f1019bbca7f709d9bca55dbe11acb",
+      "size": 3111,
+      "url": "https://api.github.com/repos/greensock/gsap-skills/git/blobs/97130f58e94f1019bbca7f709d9bca55dbe11acb"
+    }
+  ],
+  "truncated": false
+}

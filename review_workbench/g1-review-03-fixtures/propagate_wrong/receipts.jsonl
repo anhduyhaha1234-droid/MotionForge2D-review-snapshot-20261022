@@ -1,0 +1,1 @@
+{"shot": "S0021", "n": 3, "m": 3, "rc": 1, "runs": 1, "blocked": "run 0 missing expected frame 0001.jpg, got ['9001.jpg', '9002.jpg']", "at": "2026-10-19T11:40:06Z"}

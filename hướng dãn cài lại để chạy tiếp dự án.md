@@ -22,6 +22,12 @@ Set-Location .\MotionForge2D-handoff
 git -C . bundle verify .\source-history.bundle
 ```
 
+Nếu đã cài GitHub CLI và đăng nhập bằng `gh auth login`, có thể tải toàn bộ ZIP nhanh hơn thao tác từng file trên web:
+
+```powershell
+gh release download v2026-10-19-portable -R anhduyhaha1234-droid/MotionForge2D-handoff-20261019 -D .\assets
+```
+
 ## 3. Kiểm và giải nén dữ liệu
 
 Giả sử đã tải asset ZIP vào thư mục `assets` trong bản clone. Lệnh sau kiểm từng SHA-256 theo `ASSET_RELEASE_MANIFEST.json`; mọi part phải có đủ trước khi giải nén.
@@ -70,7 +76,7 @@ ffmpeg -version
 ffprobe -version
 ```
 
-ComfyUI trên máy cũ ở commit `73c9bad4d21e7addbe1d13bc92eee0f1431b017d` của `https://github.com/Comfy-Org/ComfyUI.git`. Cài lại repo/nodes và models theo `RUNTIME_INVENTORY.json` nếu có. **Các trọng số WAN/FLUX/VACE/Qwen/UMT5 lớn trong runtime dùng chung không được đưa vào GitHub**; lấy lại từ nguồn có quyền sử dụng và kiểm tên/kích thước/hash trước khi chạy. Không sao chép thư mục `excluded_unlicensed_weights`.
+ComfyUI trên máy cũ ở commit `73c9bad4d21e7addbe1d13bc92eee0f1431b017d` của `https://github.com/Comfy-Org/ComfyUI.git`. Cài lại repo/nodes và models theo `RUNTIME_INVENTORY.json` (có SHA-256 từng file). `runtime_rebuild/tools/fetch_models.sh` và `fetch_vace.sh` pin hai bộ Wan/VACE chính; các model khác cần truy lại nguồn trong packet công nghệ và giấy phép. **Các trọng số WAN/FLUX/VACE/Qwen/UMT5 lớn trong runtime dùng chung không được đưa vào GitHub**; lấy lại từ nguồn có quyền sử dụng và kiểm hash trước khi chạy. Không sao chép thư mục `excluded_unlicensed_weights`.
 
 Sau đó cài lại Codex/Hermes/9router và đăng nhập tài khoản của bạn. `agent_rules/codex_skills`, `agent_rules/codex_rules`, `agent_rules/hermes_skills`, `agent_rules/HERMES_SOUL.md` là bản tham chiếu; so với bản mới trước khi cài đè. Token GitHub, API key, OAuth Antigravity, database phiên Hermes/Codex và cấu hình cục bộ có secret không nằm trong kho. Kiểm route `ag/gemini-3.8-flash-high` bằng một yêu cầu nhỏ trước khi mở owner mới; không đổi model/fallback để né quota.
 

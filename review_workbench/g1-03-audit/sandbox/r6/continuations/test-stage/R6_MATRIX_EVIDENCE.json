@@ -1,0 +1,53 @@
+{
+ "at": "2026-10-19T11:35:24Z",
+ "rows": {
+  "Q01": {
+   "verdict": "UNKNOWN",
+   "evidence": "unverified label"
+  },
+  "Q02": {
+   "verdict": "UNKNOWN",
+   "evidence": "unverified label"
+  },
+  "Q03": {
+   "verdict": "UNKNOWN",
+   "evidence": "unverified label"
+  },
+  "Q04": {
+   "verdict": "UNKNOWN",
+   "evidence": "unverified label"
+  },
+  "Q05": {
+   "verdict": "PASS",
+   "evidence": "unverified label"
+  },
+  "Q06": {
+   "verdict": "UNKNOWN",
+   "evidence": "unverified label"
+  },
+  "Q07": {
+   "verdict": "PASS",
+   "evidence": "unverified label"
+  },
+  "Q08": {
+   "verdict": "UNKNOWN",
+   "evidence": "unverified label"
+  },
+  "Q09": {
+   "verdict": "UNKNOWN",
+   "evidence": "unverified label"
+  },
+  "Q10": {
+   "verdict": "UNKNOWN",
+   "evidence": "unverified label"
+  },
+  "Q11": {
+   "verdict": "UNKNOWN",
+   "evidence": "unverified label"
+  },
+  "Q12": {
+   "verdict": "UNKNOWN",
+   "evidence": "unverified label"
+  }
+ }
+}

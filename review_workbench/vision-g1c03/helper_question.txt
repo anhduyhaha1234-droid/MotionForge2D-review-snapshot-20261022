@@ -1,0 +1,1 @@
+Read only the attached image. Return JSON with code (exact top text), left_shape, left_color, center_shape, center_color, right_shape_count, right_color. If no pixels are visible say IMAGE_NOT_VISIBLE. Do not infer the code from context.

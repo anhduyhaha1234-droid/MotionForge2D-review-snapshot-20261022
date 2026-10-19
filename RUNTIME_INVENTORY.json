@@ -5,51 +5,63 @@
   "model_files_not_uploaded": [
     {
       "relative": "clip_vision/clip_vision_h.safetensors",
-      "bytes": 1264219396
+      "bytes": 1264219396,
+      "sha256": "64a7ef761bfccbadbaa3da77366aac4185a6c58fa5de5f589b42a65bcc21f161"
     },
     {
       "relative": "diffusion_models/flux-2-klein-4b-fp8.safetensors",
-      "bytes": 4070624520
+      "bytes": 4070624520,
+      "sha256": "97ed34fe0567e436200f2faee3939b88f2b5d99f8af2a4dc16532c4245c0ccb6"
     },
     {
       "relative": "diffusion_models/wan2.1_vace_1.3B_fp16.safetensors",
-      "bytes": 4309519800
+      "bytes": 4309519800,
+      "sha256": "640ccc0577e6a5d4bb15cd91b11b699ef914fc55f126c5a1c544e152130784f2"
     },
     {
       "relative": "diffusion_models/wan2.1_vace_14B_fp16.safetensors",
-      "bytes": 34675323640
+      "bytes": 34675323640,
+      "sha256": "f202a5c59b8a91ada1862c46a038214f1f7f216c61ec8350d25f69b919da4307"
     },
     {
       "relative": "diffusion_models/wan_animate_2_int8_convrot.safetensors",
-      "bytes": 16653175528
+      "bytes": 16653175528,
+      "sha256": "0580ecdd65e47e97c30df9670d13a6c4a131d26de5a1faf2ccc78392d5167584"
     },
     {
       "relative": "loras/lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors",
-      "bytes": 738005744
+      "bytes": 738005744,
+      "sha256": "85c4a61c30e0497aa44b91d93a893b624708461a56fe5485183b28fa07e2dfb3"
     },
     {
       "relative": "text_encoders/qwen_3_4b.safetensors",
-      "bytes": 8044982048
+      "bytes": 8044982048,
+      "sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a"
     },
     {
       "relative": "text_encoders/umt5_xxl_fp16.safetensors",
-      "bytes": 11366399385
+      "bytes": 11366399385,
+      "sha256": "7b8850f1961e1cf8a77cca4c964a358d303f490833c6c087d0cff4b2f99db2af"
     },
     {
       "relative": "text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors",
-      "bytes": 6735906897
+      "bytes": 6735906897,
+      "sha256": "c3355d30191f1f066b26d93fba017ae9809dce6c627dda5f6a66eaa651204f68"
     },
     {
       "relative": "vae/flux2-vae.safetensors",
-      "bytes": 336211292
+      "bytes": 336211292,
+      "sha256": "868fe7b343cc8f3a19dbcfcafbc3d5f888802be3f89bd81b65b3621a066ce8f3"
     },
     {
       "relative": "vae/Wan2_1_VAE_bf16.safetensors",
-      "bytes": 253806278
+      "bytes": 253806278,
+      "sha256": "1ab9a32cc2c740f6e39d80d367ce5dcc28db8c71b79b28670546b8973e9d75f9"
     },
     {
       "relative": "vae/wan_2.1_vae.safetensors",
-      "bytes": 253815318
+      "bytes": 253815318,
+      "sha256": "2fc39d31359a4b0a64f55876d8ff7fa8d780956ae2cb13463b0223e15148976b"
     }
   ],
   "shared_runtime_models_total_bytes": 88701989846,

@@ -1,0 +1,696 @@
+{
+  "sha": "e627941543d9988b155dc610bb9cc0115a5e365e",
+  "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/e627941543d9988b155dc610bb9cc0115a5e365e",
+  "tree": [
+    {
+      "path": ".claude",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "26bc6d1dc7a61faf2ef2a2927bd03c579fe89d70",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/26bc6d1dc7a61faf2ef2a2927bd03c579fe89d70"
+    },
+    {
+      "path": ".claude/skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cbd302abd169f398697d2c4b1a7eb8ce673cc5e5",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/cbd302abd169f398697d2c4b1a7eb8ce673cc5e5"
+    },
+    {
+      "path": ".claude/skills/motion-design",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "beb9e6329db52dd44ca4a6c18e2ca2846e25d4c5",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/beb9e6329db52dd44ca4a6c18e2ca2846e25d4c5"
+    },
+    {
+      "path": ".claude/skills/motion-design/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ecb09c805a91da37c288d4c3e9965da8ae2df43",
+      "size": 5734,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/7ecb09c805a91da37c288d4c3e9965da8ae2df43"
+    },
+    {
+      "path": ".claude/skills/review-loop",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e2f9ea0984130009059a88a4a79da775a48ee5cb",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/e2f9ea0984130009059a88a4a79da775a48ee5cb"
+    },
+    {
+      "path": ".claude/skills/review-loop/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db931cd30d9a1c6320f3016c7646f8e9780bb481",
+      "size": 2375,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/db931cd30d9a1c6320f3016c7646f8e9780bb481"
+    },
+    {
+      "path": ".claude/skills/sound-design",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1eae9c850add23b489d4a5033c6d885ee9e26a71",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/1eae9c850add23b489d4a5033c6d885ee9e26a71"
+    },
+    {
+      "path": ".claude/skills/sound-design/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5573b8126f41c59d1831a21f4043f1c1cb95b40",
+      "size": 4907,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/d5573b8126f41c59d1831a21f4043f1c1cb95b40"
+    },
+    {
+      "path": ".claude/skills/web-sims",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "87b8d8dd807df2cab33466984203203fa0577ae6",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/87b8d8dd807df2cab33466984203203fa0577ae6"
+    },
+    {
+      "path": ".claude/skills/web-sims/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4a6d217d9cd4bb2d32fb502e611dcdd5a5b02ea",
+      "size": 2650,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/a4a6d217d9cd4bb2d32fb502e611dcdd5a5b02ea"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "50e77fd6383ef4c337275436c7cc7b6687bc9f1f",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/50e77fd6383ef4c337275436c7cc7b6687bc9f1f"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7fdaa1d1caa7f646fce4c04527166b339da4adef",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/7fdaa1d1caa7f646fce4c04527166b339da4adef"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/showcase.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05d64783cc1eb4f8d094f98d88e6a28fcf8db7d9",
+      "size": 814,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/05d64783cc1eb4f8d094f98d88e6a28fcf8db7d9"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5cbbe3655b6be398c506d9a574ebc62a0ac8ce6",
+      "size": 92,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/d5cbbe3655b6be398c506d9a574ebc62a0ac8ce6"
+    },
+    {
+      "path": ".mcp.json.example",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "013d6c50bd55d53324fe911efe9381bdf1cdbd91",
+      "size": 504,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/013d6c50bd55d53324fe911efe9381bdf1cdbd91"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c806dd5ec80571f31541f979196019d86693efba",
+      "size": 4943,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/c806dd5ec80571f31541f979196019d86693efba"
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43c994c2d3617f947bcb5adf1933e21dabe46bb5",
+      "size": 11,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/43c994c2d3617f947bcb5adf1933e21dabe46bb5"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bbe20243170bcd0850e78e72b89936d7758cf87",
+      "size": 917,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/1bbe20243170bcd0850e78e72b89936d7758cf87"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d900ec3a275b17629db6512a7b2e8833e804ae78",
+      "size": 1066,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/d900ec3a275b17629db6512a7b2e8833e804ae78"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20b27daadd74df123feaa54366f9f20f6c2b8003",
+      "size": 9502,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/20b27daadd74df123feaa54366f9f20f6c2b8003"
+    },
+    {
+      "path": "examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "187662a67887e240887850baa129d32d1d763afb",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/187662a67887e240887850baa129d32d1d763afb"
+    },
+    {
+      "path": "examples/01-effort",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "965a4585f6ac7d83f2f6fb33dc9ffab344852063",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/965a4585f6ac7d83f2f6fb33dc9ffab344852063"
+    },
+    {
+      "path": "examples/01-effort/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f020366ab7cbd643f646d6bbb628a28b210cac87",
+      "size": 1521,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/f020366ab7cbd643f646d6bbb628a28b210cac87"
+    },
+    {
+      "path": "media",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "422a7fe71a7f5a8bd5deea244f756d5a48a85e8d",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/422a7fe71a7f5a8bd5deea244f756d5a48a85e8d"
+    },
+    {
+      "path": "media/preview.gif",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "384ed0186bafa586e5ee489315a59d835c59c7b9",
+      "size": 2117705,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/384ed0186bafa586e5ee489315a59d835c59c7b9"
+    },
+    {
+      "path": "media/sheet.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36fbab4d18c17d62496fb83a011600ff382cd518",
+      "size": 363900,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/36fbab4d18c17d62496fb83a011600ff382cd518"
+    },
+    {
+      "path": "media/sims",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "51cd1ea37fae6c9339c618482a8d48ddc4e82d13",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/51cd1ea37fae6c9339c618482a8d48ddc4e82d13"
+    },
+    {
+      "path": "media/sims/crawlers.gif",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45df86cbc0d41c12e689734d697ff759c2133a2f",
+      "size": 4809192,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/45df86cbc0d41c12e689734d697ff759c2133a2f"
+    },
+    {
+      "path": "media/sims/dossier.gif",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df39a28961465bf420b2c55e9a5f9a6f49ba50c7",
+      "size": 3819483,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/df39a28961465bf420b2c55e9a5f9a6f49ba50c7"
+    },
+    {
+      "path": "media/sims/engine.gif",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5e127d8b107a519cf16df3f591a5941bf54713b",
+      "size": 4052075,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/b5e127d8b107a519cf16df3f591a5941bf54713b"
+    },
+    {
+      "path": "media/wave.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "962ee79e5e5d41c0afdc46fdd3e7afce8099341f",
+      "size": 11711,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/962ee79e5e5d41c0afdc46fdd3e7afce8099341f"
+    },
+    {
+      "path": "package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a42bad435a105949d913cf461e5abb04928b1028",
+      "size": 143190,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/a42bad435a105949d913cf461e5abb04928b1028"
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eda8879e90ec55ca59a6dc203e386f2c63da6846",
+      "size": 1693,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/eda8879e90ec55ca59a6dc203e386f2c63da6846"
+    },
+    {
+      "path": "remotion.config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e27e7255bd7c02f4dc6bcb2feb35436ace7cf59",
+      "size": 522,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/1e27e7255bd7c02f4dc6bcb2feb35436ace7cf59"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "88bc8ee73601d10510899a0fc2919c0da0576dc8",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/88bc8ee73601d10510899a0fc2919c0da0576dc8"
+    },
+    {
+      "path": "scripts/sheet.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5619cfae2569d3e6b8bcc37b183da8304054dab0",
+      "size": 4367,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/5619cfae2569d3e6b8bcc37b183da8304054dab0"
+    },
+    {
+      "path": "scripts/wave.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "115f58b509c4a1b08fa9f0dc3be127ea192e2aca",
+      "size": 2969,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/115f58b509c4a1b08fa9f0dc3be127ea192e2aca"
+    },
+    {
+      "path": "sfx",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2f43d41dd274337557d20aacb89cf5d851cf42f4",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/2f43d41dd274337557d20aacb89cf5d851cf42f4"
+    },
+    {
+      "path": "sfx/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd8be6e550ce46e851e4838a3d43c1397b1278d8",
+      "size": 295,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/fd8be6e550ce46e851e4838a3d43c1397b1278d8"
+    },
+    {
+      "path": "sfx/__main__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9399f2472e82af34eb3270f8d5e634131555121f",
+      "size": 2078,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/9399f2472e82af34eb3270f8d5e634131555121f"
+    },
+    {
+      "path": "sfx/cues",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3286185b3b047bf0ae43516a48f3c0eb12e6ea65",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/3286185b3b047bf0ae43516a48f3c0eb12e6ea65"
+    },
+    {
+      "path": "sfx/cues/effort.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0517a42785ac4dddc8874003169672c1daf9f38f",
+      "size": 4706,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/0517a42785ac4dddc8874003169672c1daf9f38f"
+    },
+    {
+      "path": "sfx/dsp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63631608a5be19bc94c77690215ee3a35aa53451",
+      "size": 13741,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/63631608a5be19bc94c77690215ee3a35aa53451"
+    },
+    {
+      "path": "sfx/loudness.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6dce8971f3a3171560d6d4329a698f05e1ea2b78",
+      "size": 2285,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/6dce8971f3a3171560d6d4329a698f05e1ea2b78"
+    },
+    {
+      "path": "sfx/mix.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "358294bb95f375fab94d91303120c7610351b446",
+      "size": 4659,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/358294bb95f375fab94d91303120c7610351b446"
+    },
+    {
+      "path": "sfx/synth.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50dc4570ca9411448bee02c195a33e09c9838afc",
+      "size": 6413,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/50dc4570ca9411448bee02c195a33e09c9838afc"
+    },
+    {
+      "path": "sims",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fa62077d6c619407383921685345be96d052a4f1",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/fa62077d6c619407383921685345be96d052a4f1"
+    },
+    {
+      "path": "sims/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0975ee2d0cab03ff8d6e8b273c2023f1d1dd959b",
+      "size": 5252,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/0975ee2d0cab03ff8d6e8b273c2023f1d1dd959b"
+    },
+    {
+      "path": "sims/beats.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b2716b10e62a09eb9b30245fa8160e90412b6ae",
+      "size": 7044,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/1b2716b10e62a09eb9b30245fa8160e90412b6ae"
+    },
+    {
+      "path": "sims/build.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2c3025a67f7f8a3003b6bd362dcfa3ddaad78b2",
+      "size": 2635,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/a2c3025a67f7f8a3003b6bd362dcfa3ddaad78b2"
+    },
+    {
+      "path": "sims/capture.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7be4a868d8a06ec3e8f653cbf276995841375fb",
+      "size": 7163,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/e7be4a868d8a06ec3e8f653cbf276995841375fb"
+    },
+    {
+      "path": "sims/crawlers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "576595bd19ca784bef1275b9f7a264201ec3cac6",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/576595bd19ca784bef1275b9f7a264201ec3cac6"
+    },
+    {
+      "path": "sims/crawlers/main.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fb6e7721e8d37ffe60870f586e91098e3eec0c5",
+      "size": 22680,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/8fb6e7721e8d37ffe60870f586e91098e3eec0c5"
+    },
+    {
+      "path": "sims/crawlers/sites.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9d334c7d02f971cb77aee4aa4303f1ceffaf07c",
+      "size": 26464,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/c9d334c7d02f971cb77aee4aa4303f1ceffaf07c"
+    },
+    {
+      "path": "sims/crawlers/style.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d22f19cb37bf9248f0b062954ff6b1fd2c1fc009",
+      "size": 18087,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/d22f19cb37bf9248f0b062954ff6b1fd2c1fc009"
+    },
+    {
+      "path": "sims/dossier",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dc59b199830bcafdcdfdd4a2d1b6ca0fcd4e6b54",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/dc59b199830bcafdcdfdd4a2d1b6ca0fcd4e6b54"
+    },
+    {
+      "path": "sims/dossier/main.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f98d49c04f190a0168f50621aef122da9ea9a85",
+      "size": 31317,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/2f98d49c04f190a0168f50621aef122da9ea9a85"
+    },
+    {
+      "path": "sims/dossier/sites.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbe88cce5e876a3bae739634050c84561d5bb954",
+      "size": 16355,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/dbe88cce5e876a3bae739634050c84561d5bb954"
+    },
+    {
+      "path": "sims/dossier/style.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a00ef85f0a6926202f46f588642ecab3f962d781",
+      "size": 30159,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/a00ef85f0a6926202f46f588642ecab3f962d781"
+    },
+    {
+      "path": "sims/engine",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "826e07832d969494359772f219e63b2ef8551bba",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/826e07832d969494359772f219e63b2ef8551bba"
+    },
+    {
+      "path": "sims/engine/main.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1596f1e39701510e3df7a377b3c295370df1f96c",
+      "size": 35690,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/1596f1e39701510e3df7a377b3c295370df1f96c"
+    },
+    {
+      "path": "sims/engine/sound.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13e778544a39bc1431719c48e06755cd42650cab",
+      "size": 6621,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/13e778544a39bc1431719c48e06755cd42650cab"
+    },
+    {
+      "path": "sims/engine/style.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32f8eeb7c1373493743afb53ea7abc5851368a9d",
+      "size": 2582,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/32f8eeb7c1373493743afb53ea7abc5851368a9d"
+    },
+    {
+      "path": "sims/engine/timeline.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3688b7902ddbfe14aa7523ae010f9ba113789f99",
+      "size": 227,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/3688b7902ddbfe14aa7523ae010f9ba113789f99"
+    },
+    {
+      "path": "sims/kit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "243291d7e5ac9b1bab738a7c363b5f3739308911",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/243291d7e5ac9b1bab738a7c363b5f3739308911"
+    },
+    {
+      "path": "sims/kit/director.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aacf2d90ef83a37f09a146f06fda6af04337fda0",
+      "size": 11670,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/aacf2d90ef83a37f09a146f06fda6af04337fda0"
+    },
+    {
+      "path": "sims/kit/hud.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "289f0f548f67701b8069e3dab88eafba18b00e34",
+      "size": 6949,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/289f0f548f67701b8069e3dab88eafba18b00e34"
+    },
+    {
+      "path": "sims/kit/runtime.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82b60445c8fbaa0cc3222d30dbaa103435143ed9",
+      "size": 5160,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/82b60445c8fbaa0cc3222d30dbaa103435143ed9"
+    },
+    {
+      "path": "sims/kit/stage3d.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c69fffe0dee3e7ccaa0e3401d8a7359e8d6f8cb3",
+      "size": 3668,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/c69fffe0dee3e7ccaa0e3401d8a7359e8d6f8cb3"
+    },
+    {
+      "path": "sims/kit/style.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7bf7ca8f3402f8376cb873852d02018ee8a31d01",
+      "size": 6878,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/7bf7ca8f3402f8376cb873852d02018ee8a31d01"
+    },
+    {
+      "path": "sims/kit/util.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dbf9d0c6d87c9375d424f4ae24e0b225cfa6e5a",
+      "size": 2721,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/1dbf9d0c6d87c9375d424f4ae24e0b225cfa6e5a"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3db51484135341ac76411fa21d310f3d0804800a",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/3db51484135341ac76411fa21d310f3d0804800a"
+    },
+    {
+      "path": "src/ArticleCover.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b66baec507c8827038286f36ca0f97e5d6313d7",
+      "size": 4237,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/7b66baec507c8827038286f36ca0f97e5d6313d7"
+    },
+    {
+      "path": "src/EffortVideo.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd21433c9a37064de01ca3fdcb070c58b87e51b8",
+      "size": 10711,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/cd21433c9a37064de01ca3fdcb070c58b87e51b8"
+    },
+    {
+      "path": "src/Root.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d3f9134ea03212ca3514cfa633b224b0491dcac",
+      "size": 514,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/6d3f9134ea03212ca3514cfa633b224b0491dcac"
+    },
+    {
+      "path": "src/components",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eb9cd3a3bc2eb5065540f51191a9858ad91eacdd",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/eb9cd3a3bc2eb5065540f51191a9858ad91eacdd"
+    },
+    {
+      "path": "src/components/Background.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb85cd86e3a128390aed0eb041b17c93009a8d3e",
+      "size": 1734,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/cb85cd86e3a128390aed0eb041b17c93009a8d3e"
+    },
+    {
+      "path": "src/components/ConfigMockup.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c5b0404bd2e88a2c05711a766bbf28184942568",
+      "size": 16015,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/1c5b0404bd2e88a2c05711a766bbf28184942568"
+    },
+    {
+      "path": "src/components/EffortSlider.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eae5b1a7cd5df3564b92772259843001972b3320",
+      "size": 3837,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/eae5b1a7cd5df3564b92772259843001972b3320"
+    },
+    {
+      "path": "src/components/PromptBar.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "695a9f352d87812c3cafca12d1d12863895c1e5b",
+      "size": 2334,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/695a9f352d87812c3cafca12d1d12863895c1e5b"
+    },
+    {
+      "path": "src/components/primitives.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3eaaa8185d12097c6358607beb46ef7ac0655a88",
+      "size": 4091,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/3eaaa8185d12097c6358607beb46ef7ac0655a88"
+    },
+    {
+      "path": "src/components/useFonts.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "223cb55ab7ff44bf26a5323a9dc53e7158421f6e",
+      "size": 580,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/223cb55ab7ff44bf26a5323a9dc53e7158421f6e"
+    },
+    {
+      "path": "src/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "596380ffc6b37dc867283702ccf26e2026a9ab43",
+      "size": 327,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/596380ffc6b37dc867283702ccf26e2026a9ab43"
+    },
+    {
+      "path": "src/lib.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ba8e1362e5e933971b9f504ce708fc4a858823b",
+      "size": 2585,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/2ba8e1362e5e933971b9f504ce708fc4a858823b"
+    },
+    {
+      "path": "src/scenes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bd5613298d66989b01104829832d50b621c6f6b8",
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/trees/bd5613298d66989b01104829832d50b621c6f6b8"
+    },
+    {
+      "path": "src/scenes/Finale.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40bd064518757d64d8c6a55f4c67c27ba6132f1b",
+      "size": 7207,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/40bd064518757d64d8c6a55f4c67c27ba6132f1b"
+    },
+    {
+      "path": "src/scenes/Sanitizer.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c90a162e9380ccd46e5912210199569835e4d839",
+      "size": 7451,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/c90a162e9380ccd46e5912210199569835e4d839"
+    },
+    {
+      "path": "timeline.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3b93b449ed200499d62fafe4d3550ad08188dc2",
+      "size": 853,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/d3b93b449ed200499d62fafe4d3550ad08188dc2"
+    },
+    {
+      "path": "tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e68ea02c32cb887db8570bea425b6349cd45e95d",
+      "size": 332,
+      "url": "https://api.github.com/repos/whaleyxbt/claude-motion/git/blobs/e68ea02c32cb887db8570bea425b6349cd45e95d"
+    }
+  ],
+  "truncated": false
+}

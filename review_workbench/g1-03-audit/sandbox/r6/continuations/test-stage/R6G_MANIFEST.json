@@ -1,0 +1,66 @@
+{
+ "at": "2026-10-19T11:35:24Z",
+ "count": 10,
+ "items": [
+  {
+   "path": "continuations/test-adapter/artifact.bin",
+   "absolute_path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-03-audit\\sandbox\\r6\\continuations\\test-adapter\\artifact.bin",
+   "bytes": 5,
+   "sha256": "003c1b7f85dfba51c1e7d71e794938be66f7925ac342a2527bebadd3cbb871d9"
+  },
+  {
+   "path": "continuations/test-adapter/checkpoint.dat",
+   "absolute_path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-03-audit\\sandbox\\r6\\continuations\\test-adapter\\checkpoint.dat",
+   "bytes": 19,
+   "sha256": "d3976d052c05670b37c0583b9b3a9bacc4899ebe24ef7221415e997a32ca8211"
+  },
+  {
+   "path": "continuations/test-adapter/comparison.dat",
+   "absolute_path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-03-audit\\sandbox\\r6\\continuations\\test-adapter\\comparison.dat",
+   "bytes": 19,
+   "sha256": "eb433fed3c0c668f9abbece1b7e6249a57d711c3773f8affa3ef4e2cbf71a45d"
+  },
+  {
+   "path": "continuations/test-adapter/master.dat",
+   "absolute_path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-03-audit\\sandbox\\r6\\continuations\\test-adapter\\master.dat",
+   "bytes": 15,
+   "sha256": "d8d7227b66b8449208c83950d0846a24dc2c41f4cbae1e0c0a4c2ea5d65b3268"
+  },
+  {
+   "path": "continuations/test-adapter/matrix.dat",
+   "absolute_path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-03-audit\\sandbox\\r6\\continuations\\test-adapter\\matrix.dat",
+   "bytes": 15,
+   "sha256": "75690aebdf3d62cd679602ed4ff582546e5ac4f489e8ef66a0270589e9364b96"
+  },
+  {
+   "path": "continuations/test-adapter/R6_MATRIX_EVIDENCE.json",
+   "absolute_path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-03-audit\\sandbox\\r6\\continuations\\test-adapter\\R6_MATRIX_EVIDENCE.json",
+   "bytes": 730,
+   "sha256": "0c1333aad5f083fca0245c50b191cde717d99961242cd36c77ec36d7ebb32464"
+  },
+  {
+   "path": "continuations/test-adapter/receipts.dat",
+   "absolute_path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-03-audit\\sandbox\\r6\\continuations\\test-adapter\\receipts.dat",
+   "bytes": 17,
+   "sha256": "5482a72b52ebed0e9d3d91025d2e79cea7132e272ccd73de7394fdf2d62e8740"
+  },
+  {
+   "path": "continuations/test-adapter/terminal-positive.json",
+   "absolute_path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-03-audit\\sandbox\\r6\\continuations\\test-adapter\\terminal-positive.json",
+   "bytes": 771,
+   "sha256": "d2fc87de4614910acbbcb0ffb189dd1ae3bf5f89847f5404743bdb00288c6dc7"
+  },
+  {
+   "path": "continuations/test-adapter/terminal-tampered.json",
+   "absolute_path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-03-audit\\sandbox\\r6\\continuations\\test-adapter\\terminal-tampered.json",
+   "bytes": 771,
+   "sha256": "d2fc87de4614910acbbcb0ffb189dd1ae3bf5f89847f5404743bdb00288c6dc7"
+  },
+  {
+   "path": "continuations/test-stage/R6_MATRIX_EVIDENCE.json",
+   "absolute_path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-03-audit\\sandbox\\r6\\continuations\\test-stage\\R6_MATRIX_EVIDENCE.json",
+   "bytes": 773,
+   "sha256": "a256cc50b76e6b6b58ad8299a4e5b0924f7fc6778ef78a23aa02aede9d2a9ec4"
+  }
+ ]
+}

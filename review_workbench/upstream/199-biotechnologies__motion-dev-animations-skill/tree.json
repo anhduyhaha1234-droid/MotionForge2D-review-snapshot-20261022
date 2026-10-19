@@ -1,0 +1,210 @@
+{
+  "sha": "3feedfb4dba8adae40fc9a5f9a23e3dda2121205",
+  "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/trees/3feedfb4dba8adae40fc9a5f9a23e3dda2121205",
+  "tree": [
+    {
+      "path": "ACTIVATION_TEST.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12ea1ba09f2d4005ed19681945123be6855579b7",
+      "size": 9668,
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/blobs/12ea1ba09f2d4005ed19681945123be6855579b7"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2859eb287ea46eb47d89e7917fa6d1ce9948a42",
+      "size": 2126,
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/blobs/b2859eb287ea46eb47d89e7917fa6d1ce9948a42"
+    },
+    {
+      "path": "DEPLOYMENT_STATUS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6222c4e8cb98780f59a89b50582d6c7b2728023",
+      "size": 9775,
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/blobs/f6222c4e8cb98780f59a89b50582d6c7b2728023"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f10757ba218117fdfb985ec7fde57370d599d36",
+      "size": 1076,
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/blobs/2f10757ba218117fdfb985ec7fde57370d599d36"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1455dd2de2d5cb88e7156c66d32bcb93490a8ea4",
+      "size": 7941,
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/blobs/1455dd2de2d5cb88e7156c66d32bcb93490a8ea4"
+    },
+    {
+      "path": "RESEARCH_SYNTHESIS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "745e9c7976353fb460d8db896ba9dca6c52fa885",
+      "size": 13728,
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/blobs/745e9c7976353fb460d8db896ba9dca6c52fa885"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78146956db0c13d6b845e77dfa1cc4433b9faf9d",
+      "size": 11328,
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/blobs/78146956db0c13d6b845e77dfa1cc4433b9faf9d"
+    },
+    {
+      "path": "SKILL.md.backup",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34ea05e6bee638e521a484a53caacdeb7941f759",
+      "size": 15439,
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/blobs/34ea05e6bee638e521a484a53caacdeb7941f759"
+    },
+    {
+      "path": "VALIDATION_V3.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76c4eaff220764d6c9e4b64777e7f589f1f6f662",
+      "size": 17164,
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/blobs/76c4eaff220764d6c9e4b64777e7f589f1f6f662"
+    },
+    {
+      "path": "examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "da109878b8d85f9de0e120e1243149da65da00a9",
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/trees/da109878b8d85f9de0e120e1243149da65da00a9"
+    },
+    {
+      "path": "examples/card-hover.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fbf8aa1fd1ac66a9ca377bf67b85e9549ff62ea3",
+      "size": 7291,
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/blobs/fbf8aa1fd1ac66a9ca377bf67b85e9549ff62ea3"
+    },
+    {
+      "path": "examples/example-config.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6a43e886e7150176809276b14e3baca1ae07189",
+      "size": 631,
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/blobs/a6a43e886e7150176809276b14e3baca1ae07189"
+    },
+    {
+      "path": "examples/hero-fade-up.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06618b8a44323f813a08cf1eb314307d754c9e31",
+      "size": 4223,
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/blobs/06618b8a44323f813a08cf1eb314307d754c9e31"
+    },
+    {
+      "path": "examples/magnetic-button.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "379effaf9eea41700057784bef28ebf927080632",
+      "size": 9167,
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/blobs/379effaf9eea41700057784bef28ebf927080632"
+    },
+    {
+      "path": "examples/parallax-layers.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89021ac338bf8547bbc41866afc5cf8c12d727b3",
+      "size": 9452,
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/blobs/89021ac338bf8547bbc41866afc5cf8c12d727b3"
+    },
+    {
+      "path": "examples/scroll-reveal.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffd1ef40e114eab47d5cc80273412b3953068a7d",
+      "size": 7006,
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/blobs/ffd1ef40e114eab47d5cc80273412b3953068a7d"
+    },
+    {
+      "path": "reference",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dd51621303b6207cad13f6cea8eaeac857dd8389",
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/trees/dd51621303b6207cad13f6cea8eaeac857dd8389"
+    },
+    {
+      "path": "reference/api-reference.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d2a7df2d86012352217cbd18f780c021c00e0e1",
+      "size": 9323,
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/blobs/9d2a7df2d86012352217cbd18f780c021c00e0e1"
+    },
+    {
+      "path": "reference/spring-physics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78abb45e85b45c5c45ad86e2879c9532782daa29",
+      "size": 7062,
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/blobs/78abb45e85b45c5c45ad86e2879c9532782daa29"
+    },
+    {
+      "path": "schema",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "569a8258ee1a96064977840982aaa0183f050027",
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/trees/569a8258ee1a96064977840982aaa0183f050027"
+    },
+    {
+      "path": "schema/motion-config.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a99c360b3d17605c311b1cb1b3e8d9c2c6b453e3",
+      "size": 6289,
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/blobs/a99c360b3d17605c311b1cb1b3e8d9c2c6b453e3"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5274661efe61d5032dfdcf7cdaae8c49e863dfbc",
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/trees/5274661efe61d5032dfdcf7cdaae8c49e863dfbc"
+    },
+    {
+      "path": "scripts/validate_motion_config.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "46496546bf8bdde45bb9a4c421d6b7aae8aa822f",
+      "size": 4881,
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/blobs/46496546bf8bdde45bb9a4c421d6b7aae8aa822f"
+    },
+    {
+      "path": "templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "65f87d9070d9f58bd2057dd57e498f3c13ec189a",
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/trees/65f87d9070d9f58bd2057dd57e498f3c13ec189a"
+    },
+    {
+      "path": "templates/component-library.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4dc88890a7421c200990a4071ed7b8ef2fb2a077",
+      "size": 10423,
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/blobs/4dc88890a7421c200990a4071ed7b8ef2fb2a077"
+    },
+    {
+      "path": "templates/nextjs-page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df12aefbb6df69202a17804c94db8587702c57ff",
+      "size": 7467,
+      "url": "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill/git/blobs/df12aefbb6df69202a17804c94db8587702c57ff"
+    }
+  ],
+  "truncated": false
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "run_id": "20261005T1643Z-wan-long",
+  "task_id": "MF-DEMO-LONG-01",
+  "revision": "r6",
+  "invocation_id": "test-adapter",
+  "status": "TASK_SUBMITTED",
+  "mode": "engineering",
+  "matrix": {
+    "Q01": "UNKNOWN",
+    "Q02": "UNKNOWN",
+    "Q03": "UNKNOWN",
+    "Q04": "UNKNOWN",
+    "Q05": "PASS",
+    "Q06": "UNKNOWN",
+    "Q07": "PASS",
+    "Q08": "UNKNOWN",
+    "Q09": "UNKNOWN",
+    "Q10": "UNKNOWN",
+    "Q11": "UNKNOWN",
+    "Q12": "UNKNOWN"
+  },
+  "manifest": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-03-audit\\sandbox\\r6\\continuations\\test-adapter\\R6G_MANIFEST.json",
+  "manifest_items_count": 1,
+  "gate_batch_conformance": true,
+  "at": "2026-10-19T00:00:00Z"
+}

@@ -1,0 +1,151 @@
+[
+  {
+    "repo": "AbubakrChan/product-launch-motion",
+    "commit": "951d6149d2748a15058f79dcf8e8c4bf00824121",
+    "path": "references/01-renderer-contract.md",
+    "url": "https://raw.githubusercontent.com/AbubakrChan/product-launch-motion/951d6149d2748a15058f79dcf8e8c4bf00824121/references/01-renderer-contract.md",
+    "sha256": "2517c76003ba376f410b44cfc048e2d264bbd015252be13ffab29814c9cbeda2",
+    "bytes": 15108,
+    "local": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\upstream\\AbubakrChan__product-launch-motion\\references\\01-renderer-contract.md"
+  },
+  {
+    "repo": "AbubakrChan/product-launch-motion",
+    "commit": "951d6149d2748a15058f79dcf8e8c4bf00824121",
+    "path": "references/08-qa-and-direction.md",
+    "url": "https://raw.githubusercontent.com/AbubakrChan/product-launch-motion/951d6149d2748a15058f79dcf8e8c4bf00824121/references/08-qa-and-direction.md",
+    "sha256": "60c93c09dbe85fe3643b5d30f48f5d70b515bb43c74b7ef7fd07f29378b64bd2",
+    "bytes": 11984,
+    "local": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\upstream\\AbubakrChan__product-launch-motion\\references\\08-qa-and-direction.md"
+  },
+  {
+    "repo": "AbubakrChan/product-launch-motion",
+    "commit": "951d6149d2748a15058f79dcf8e8c4bf00824121",
+    "path": "scripts/word-timings.mjs",
+    "url": "https://raw.githubusercontent.com/AbubakrChan/product-launch-motion/951d6149d2748a15058f79dcf8e8c4bf00824121/scripts/word-timings.mjs",
+    "sha256": "e632afa2ff53998084ae3c3390bb7b35efce30345472ec88d0bed2e6f8700ab4",
+    "bytes": 4698,
+    "local": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\upstream\\AbubakrChan__product-launch-motion\\scripts\\word-timings.mjs"
+  },
+  {
+    "repo": "howseen-ai/claude-motion-design",
+    "commit": "3d90d349ef3fdde9b7e89de4df4a2159c9e8697f",
+    "path": "skill/motion-design/scripts/render_template.py",
+    "url": "https://raw.githubusercontent.com/howseen-ai/claude-motion-design/3d90d349ef3fdde9b7e89de4df4a2159c9e8697f/skill/motion-design/scripts/render_template.py",
+    "sha256": "247c6b5c81927c2d36abe486be6c6b958b045ee7f1228fbe39e42140720b0483",
+    "bytes": 8143,
+    "local": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\upstream\\howseen-ai__claude-motion-design\\skill\\motion-design\\scripts\\render_template.py"
+  },
+  {
+    "repo": "howseen-ai/claude-motion-design",
+    "commit": "3d90d349ef3fdde9b7e89de4df4a2159c9e8697f",
+    "path": "skill/motion-design/scripts/remake/remake_qa.py",
+    "url": "https://raw.githubusercontent.com/howseen-ai/claude-motion-design/3d90d349ef3fdde9b7e89de4df4a2159c9e8697f/skill/motion-design/scripts/remake/remake_qa.py",
+    "sha256": "042335f59bf5dd5d436b4c4d66b1bba9104bdb8183722adf3f4dca022fc1851f",
+    "bytes": 1523,
+    "local": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\upstream\\howseen-ai__claude-motion-design\\skill\\motion-design\\scripts\\remake\\remake_qa.py"
+  },
+  {
+    "repo": "nateherkai/hyperframes-student-kit",
+    "commit": "0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86",
+    "path": ".agents/skills/cut-silences/scripts/cut-silences.mjs",
+    "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/.agents/skills/cut-silences/scripts/cut-silences.mjs",
+    "sha256": "3166c987f715c460d91825dbda4a355a9a9c04a098de5a7fff0496c4fcdffbfd",
+    "bytes": 11779,
+    "local": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\upstream\\nateherkai__hyperframes-student-kit\\.agents\\skills\\cut-silences\\scripts\\cut-silences.mjs"
+  },
+  {
+    "repo": "nateherkai/hyperframes-student-kit",
+    "commit": "0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86",
+    "path": "scripts/validate-beat-sync.mjs",
+    "url": "https://raw.githubusercontent.com/nateherkai/hyperframes-student-kit/0d30152a82b9ceb93cfdd9bdbf46f0d5ab3cde86/scripts/validate-beat-sync.mjs",
+    "sha256": "ed53185330177bcefb2a61c08b70abaae06b36bc90790e2537d078e283045f07",
+    "bytes": 10480,
+    "local": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\upstream\\nateherkai__hyperframes-student-kit\\scripts\\validate-beat-sync.mjs"
+  },
+  {
+    "repo": "cth9191/animate",
+    "commit": "7e5eb56feb2dd573f890e1b7b34748af43d58263",
+    "path": "plugins/animate/skills/animate/tools/review.mjs",
+    "url": "https://raw.githubusercontent.com/cth9191/animate/7e5eb56feb2dd573f890e1b7b34748af43d58263/plugins/animate/skills/animate/tools/review.mjs",
+    "sha256": "7e03d692cc647562c03bed715b06e6ec8a7661e74fc5f392a269b04774b2c6ee",
+    "bytes": 31352,
+    "local": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\upstream\\cth9191__animate\\plugins\\animate\\skills\\animate\\tools\\review.mjs"
+  },
+  {
+    "repo": "heygen-com/hyperframes",
+    "commit": "86521b94f592bcf0ca86aba63068893cf658af16",
+    "path": "skills/hyperframes-core/SKILL.md",
+    "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/skills/hyperframes-core/SKILL.md",
+    "sha256": "18ac7784765cc29af5a4d88f2a63a15deaf5395985009af188b5e3718edcfe3d",
+    "bytes": 12643,
+    "local": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\upstream\\heygen-com__hyperframes\\skills\\hyperframes-core\\SKILL.md"
+  },
+  {
+    "repo": "heygen-com/hyperframes",
+    "commit": "86521b94f592bcf0ca86aba63068893cf658af16",
+    "path": "skills/hyperframes-animation/SKILL.md",
+    "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/skills/hyperframes-animation/SKILL.md",
+    "sha256": "b35f1f8eff68e9ff480a5d5d343a1bf5a40ebb7d0d9be20b0b980cfdb36047f3",
+    "bytes": 8471,
+    "local": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\upstream\\heygen-com__hyperframes\\skills\\hyperframes-animation\\SKILL.md"
+  },
+  {
+    "repo": "heygen-com/hyperframes",
+    "commit": "86521b94f592bcf0ca86aba63068893cf658af16",
+    "path": "skills/hyperframes-cli/SKILL.md",
+    "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/skills/hyperframes-cli/SKILL.md",
+    "sha256": "0026e6402ee0b9bfd8cb85bb3b96e3fecb496947a9a588e950abb54e238af92d",
+    "bytes": 24378,
+    "local": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\upstream\\heygen-com__hyperframes\\skills\\hyperframes-cli\\SKILL.md"
+  },
+  {
+    "repo": "heygen-com/hyperframes",
+    "commit": "86521b94f592bcf0ca86aba63068893cf658af16",
+    "path": "packages/cli/src/commands/render/execute.ts",
+    "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/packages/cli/src/commands/render/execute.ts",
+    "sha256": "ac91474f7a4756d4b6e9635c05d56909be26f79e11cb32e2397abfd444676b6b",
+    "bytes": 13969,
+    "local": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\upstream\\heygen-com__hyperframes\\packages\\cli\\src\\commands\\render\\execute.ts"
+  },
+  {
+    "repo": "heygen-com/hyperframes",
+    "commit": "86521b94f592bcf0ca86aba63068893cf658af16",
+    "path": "packages/cli/package.json",
+    "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/86521b94f592bcf0ca86aba63068893cf658af16/packages/cli/package.json",
+    "sha256": "74339de69b32af00f76538ba3c132ffd22d8114a2c0ffec088c62ace7f2f18ad",
+    "bytes": 2637,
+    "local": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\upstream\\heygen-com__hyperframes\\packages\\cli\\package.json"
+  },
+  {
+    "repo": "remotion-dev/skills",
+    "commit": "7ba4dcf8ebe1626b00baa41e1f2478113719b60b",
+    "path": "skills/remotion-markup/rules/animations.md",
+    "url": "https://raw.githubusercontent.com/remotion-dev/skills/7ba4dcf8ebe1626b00baa41e1f2478113719b60b/skills/remotion-markup/rules/animations.md",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "repo": "remotion-dev/skills",
+    "commit": "7ba4dcf8ebe1626b00baa41e1f2478113719b60b",
+    "path": "skills/remotion-markup/rules/timing.md",
+    "url": "https://raw.githubusercontent.com/remotion-dev/skills/7ba4dcf8ebe1626b00baa41e1f2478113719b60b/skills/remotion-markup/rules/timing.md",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "repo": "motiondivision/motion",
+    "commit": "e6bf03ead39cae7a2c5f8fe902ce8a9c1a9a22e8",
+    "path": "packages/motion/package.json",
+    "url": "https://raw.githubusercontent.com/motiondivision/motion/e6bf03ead39cae7a2c5f8fe902ce8a9c1a9a22e8/packages/motion/package.json",
+    "sha256": "94db8d98a77bfa439c249b38b751f79e2c749af053777221ba8585d5f5824da4",
+    "bytes": 3904,
+    "local": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\upstream\\motiondivision__motion\\packages\\motion\\package.json"
+  },
+  {
+    "repo": "LottieFiles/motion-design-skill",
+    "commit": "f9a8a041b85185ee4881b3471d3415e939aac772",
+    "path": "skills/motion-design/director/context-adaptation.md",
+    "url": "https://raw.githubusercontent.com/LottieFiles/motion-design-skill/f9a8a041b85185ee4881b3471d3415e939aac772/skills/motion-design/director/context-adaptation.md",
+    "sha256": "550e96a1c8c369513304ee74c0e89b63168bc7287b83e9ed5685bb65609986b3",
+    "bytes": 3066,
+    "local": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\upstream\\LottieFiles__motion-design-skill\\skills\\motion-design\\director\\context-adaptation.md"
+  }
+]

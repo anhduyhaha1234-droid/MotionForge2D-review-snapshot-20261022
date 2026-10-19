@@ -1,0 +1,103 @@
+{
+  "hash_checks": [
+    {
+      "relative": "scripts/r6_gate.py",
+      "sha256": "3907e9e0ced22ff952c592c1ba61ac52242061bf93687b3e97f872adaa7a1819",
+      "match": true
+    },
+    {
+      "relative": "scripts/r6_matrix.py",
+      "sha256": "b0a288fc357ca063334a782d30b7c2b89c6762fe410f4b08aa4f559d48e1b610",
+      "match": true
+    },
+    {
+      "relative": "scripts/r6_evidence_contract.py",
+      "sha256": "f08c8bfd6392ebbcd6ce4cebd1259bb9763a5ae58faf4059aa2951c8759c7df6",
+      "match": true
+    },
+    {
+      "relative": "dependencies_snapshot/r6_submission_adapter.py",
+      "sha256": "19ee08eb9c75dab104130ac1affd158c05b5e6febd335afde09d47e25e57a880",
+      "match": true,
+      "binding": "packet snapshot; not listed in MANIFEST.files"
+    }
+  ],
+  "isolation": "Exact source copies; K.R6/K.sha scratch config; unused r6_cache stub; no production imports, models, GPU, or shared writes",
+  "engineering_label_only_proof": {
+    "returned": true,
+    "error": null,
+    "stdout": "",
+    "stderr": ""
+  },
+  "engineering_missing_proof_control": {
+    "returned": null,
+    "error": "GateBlock: ENGINEERING_BATCH_NO_PROOF: missing supporting proof",
+    "stdout": "",
+    "stderr": ""
+  },
+  "adapter_engineering_positive": {
+    "returned": true,
+    "error": null,
+    "stdout": "RECORD_OK: terminal-positive.json | status TASK_SUBMITTED | gate=PASS\n",
+    "stderr": ""
+  },
+  "adapter_same_size_hash_tamper": {
+    "returned": true,
+    "error": null,
+    "stdout": "RECORD_OK: terminal-tampered.json | status TASK_SUBMITTED | gate=PASS\n",
+    "stderr": "",
+    "manifest_sha256": "e12e115acf4552b2568b55e93cbd39394c4ef81c82447fafc997882a02d23677",
+    "actual_sha256": "21e32f5321cad49ab4cf78ba5ed231e0f36d0c78d34108fda1be939f33fba149",
+    "terminal_published": true
+  },
+  "adapter_size_mismatch_control": {
+    "returned": false,
+    "error": null,
+    "stdout": "",
+    "stderr": "SUBMIT BLOCKED: artifact size mismatch for C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\work\\g1-03-audit\\sandbox\\r6\\continuations\\test-adapter\\artifact.bin: 5 vs 4\n",
+    "terminal_published": false
+  },
+  "final_gate_valid_artifacts_control": {
+    "returned": true,
+    "error": null,
+    "stdout": "",
+    "stderr": ""
+  },
+  "adapter_final_same_valid_artifacts": {
+    "returned": false,
+    "error": null,
+    "stdout": "",
+    "stderr": "SUBMIT GATE BLOCKED: ARTIFACT_KIND master=None\n",
+    "terminal_published": false
+  },
+  "stage_empty_manifest_labels": {
+    "returned": null,
+    "error": null,
+    "stdout": "",
+    "stderr": "",
+    "matrix_published": true,
+    "manifest_published": true
+  },
+  "manifest_after_publication": {
+    "manifest_matrix_sha256": "a256cc50b76e6b6b58ad8299a4e5b0924f7fc6778ef78a23aa02aede9d2a9ec4",
+    "published_matrix_sha256": "542a637f3cf1500a19af042dae1af2a516130892597878d744ea3bbb77355ee7",
+    "matches": false
+  },
+  "non_video_magic_and_labels": {
+    "video_validation": [
+      true,
+      "ok"
+    ],
+    "Q08": {
+      "name": "frames/cuts/AV/timeline",
+      "verdict": "PASS",
+      "evidence": "AV checks rerun on exact new candidate; old master not reused as evidence"
+    },
+    "Q05": {
+      "name": "semantic gate actual consumers",
+      "verdict": "PASS",
+      "evidence": "gate mandatory fields + gate_assemble wired + encoder-spy negative tests"
+    },
+    "note": "File is ftyp plus repeated x, not an MP4 container; test is non-Python garbage never executed"
+  }
+}

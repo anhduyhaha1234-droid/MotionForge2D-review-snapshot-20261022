@@ -1,0 +1,38 @@
+{
+  "name": "effort-video",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Motion design pipeline for coding agents: taste rules, timeline-synced sound, a visual self-review loop (Remotion), and web sims captured frame by frame to 60 fps video.",
+  "scripts": {
+    "studio": "remotion studio",
+    "still": "remotion still EffortVideo",
+    "draft": "remotion render EffortVideo out/draft.mp4 --scale=0.5 --crf=28",
+    "render": "remotion render EffortVideo out/effort-silent.mp4",
+    "sfx": "python3 -m sfx sfx/cues/effort.py",
+    "mux": "ffmpeg -loglevel error -y -i out/effort-silent.mp4 -i public/sfx.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k -movflags +faststart -shortest out/effort.mp4",
+    "build": "npm run sfx && npm run render && npm run mux",
+    "sheet": "node scripts/sheet.mjs",
+    "wave": "node scripts/wave.mjs",
+    "cover": "remotion still ArticleCover out/article-cover.png",
+    "gif": "ffmpeg -loglevel error -y -i out/effort.mp4 -vf \"fps=12,scale=420:-1:flags=lanczos,hqdn3d=4:4:6:6,split[a][b];[a]palettegen=max_colors=64:stats_mode=diff[p];[b][p]paletteuse=dither=none:diff_mode=rectangle\" media/preview.gif",
+    "typecheck": "tsc",
+    "sims": "node sims/build.mjs",
+    "capture": "node sims/capture.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "5.3.0",
+    "@fontsource/instrument-serif": "5.3.0",
+    "@fontsource/jetbrains-mono": "5.3.0",
+    "@remotion/cli": "4.0.529",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "remotion": "4.0.529"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.2",
+    "esbuild": "0.28.1",
+    "playwright": "1.63.0",
+    "three": "0.186.1",
+    "typescript": "5.9.3"
+  }
+}
