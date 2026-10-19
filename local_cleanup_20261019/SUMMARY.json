@@ -1,0 +1,12 @@
+{
+  "status": "COMPLETE",
+  "completed_utc": "2026-10-19T16:47:01.915919Z",
+  "deleted_targets": 208,
+  "failed_targets": 0,
+  "measured_deleted_bytes": 75893132154,
+  "measured_deleted_files": 745707,
+  "disk_free_before_bytes": 345246908416,
+  "disk_free_after_bytes": 421885513728,
+  "disk_free_delta_bytes": 76638605312,
+  "receipt": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\mf-local-cleanup-20261019\\RECEIPT.jsonl"
+}
