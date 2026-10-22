@@ -1,6 +1,6 @@
 {
   "schema": "motionforge.private-snapshot.v1",
-  "created_utc": "2026-10-22T15:33:33.527156+00:00",
+  "created_utc": "2026-10-22T15:35:41.721265+00:00",
   "source_note": "Selected local source snapshot plus frozen G1 C16 and selected G2 receipts; full integrated source is separate branch review/20261002-full-code@f3917d1525b9c10dfb0d2483a791bf16315762a2; no raw media, model weights or runtime venv",
   "files": [
     {
@@ -3705,13 +3705,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 4155,
-      "sha256": "c42604e8e5a44c4b036f78ee7cf7dd0ca68e31e18f2b2a036ded541a943b2181"
+      "bytes": 4292,
+      "sha256": "ce6846a79f37ad9050c2bf62c104c9f93c7ccb4da36efe473c41f026d287c3e4"
     },
     {
       "path": "REVIEW_CODE_20261022_VI.md",
-      "bytes": 16394,
-      "sha256": "9b0d29f3a5084cee6bc8009afafc9647356f1bf93903e56fce6b69331bd145f2"
+      "bytes": 16710,
+      "sha256": "1cb77bba8063d97be205d64ec3ddb71717bb9c9d9150d185bafcaa63616ccdbe"
     }
   ]
 }

@@ -18,7 +18,7 @@ Xem [biên bản dọn máy cũ](./local_cleanup_20261019/REPORT_VI.md) để bi
 - `review_tools/`: script kiểm chứng của reviewer, lưu để tái lập bằng chứng.
 - `conversation_history/`: bản xuất các tin nhắn người dùng/trợ lý hiển thị cùng manifest kiểm tra; không chứa log công cụ hay session database.
 - `local_cleanup_20261019/`: kế hoạch, receipt từng mục và số đo dung lượng sau khi dọn máy cũ.
-- `ASSET_RELEASE_MANIFEST.json`: tên và SHA-256 của các phần ZIP dữ liệu lớn trong GitHub Release `v2026-10-19-portable`.
+- `ASSET_RELEASE_MANIFEST.json`: tên và SHA-256 của các phần ZIP dữ liệu lớn trong GitHub Release `v2026-10-19-portable` **ở repo private bàn giao cũ** `MotionForge2D-handoff-20261019`; các ZIP đó không được sao chép vào repo review mới này.
 - `PORTABLE_SOURCE_MANIFEST.json`: hash byte của source/rules/handoff trong repo này.
 - `PAUSE_STATE_20261019.json`: trạng thái gate, owner và tiến trình khi dừng máy cũ.
 - `REMOTE_RELEASE_AUDIT.json` và `ARCHIVE_VERIFY_RECEIPT_FINAL.json`: xác nhận 31/31 asset trên GitHub khớp digest và CRC ZIP.
