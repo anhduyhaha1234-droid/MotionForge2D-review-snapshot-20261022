@@ -1,0 +1,63 @@
+{
+  "schema": "motionforge.g2.checkpoint.v1",
+  "task": "G2-B2-RECOVER-01_ROOT_REVIEWED",
+  "g1": {
+    "candidate": "g1-candidate-16",
+    "manifest_sha256": "4df7de9ccc81dff7a82a9b9d70d90a48eae2bb17cd9ff455748b041f20a0ba82",
+    "verdict": "G1_APPROVED_FOR_EXACT_BYTES"
+  },
+  "transport": {
+    "pilot_path": "C:/Users/Admin/Documents/Codex/g2p01-transport/pilot-g2p01-001",
+    "root_review": "C:/Users/Admin/Documents/Codex/g2-readiness-audit/ROOT_REVIEW_G2P01.md",
+    "status": "TRANSPORT_APPROVED",
+    "candidate_files_including_manifest": 75,
+    "pilot_files_including_source": 76
+  },
+  "source": {
+    "original_path": "C:/Users/Admin/.gemini/antigravity/scratch/goha_mmo_clone/backend/downloads/Tại sao thật tệ khi ĐỨNG TÊN HỘ công ty？.mp4",
+    "bytes": 36971916,
+    "sha256": "5a175454c2c2965bac5013a53926e210a9f70a185d802d0f2e0083a6fb399fa2",
+    "status": "RECOVERED_AND_COPIED"
+  },
+  "pilot_contract": {
+    "source_start_frame": 2820,
+    "source_end_frame_exclusive": 11820,
+    "fps": 30,
+    "frames": 9000,
+    "seconds": 300,
+    "touched_shots": 54,
+    "last_shot": "S0074",
+    "last_shot_used_frames": 141,
+    "last_shot_excluded_frames": 160
+  },
+  "known_gaps": [
+    "14 historical CAST PNG hashes: 0 matches in accessible C-drive PNG sweep; probe files are fixtures",
+    "pilot task/input and task/output contain no media assets",
+    "historical video14b venv path absent",
+    "ComfyUI 8188 endpoint unavailable and historical server defaults to 8210",
+    "old lease file refers to dead PID; controller reconciliation has not run",
+    "G2 exact 300-second media pilot NOT_RUN"
+  ],
+  "cast_search": "C:/Users/Admin/Documents/Codex/g2-readiness-audit/CAST_HASH_SEARCH.json",
+  "active_agent": "none; g2_transport_coder B2 terminal",
+  "next": "User requested whole-project/GitHub code review report. No media task active; G2 blocked by CAST/storyboard/runtime and lease audit.",
+  "b1": {
+    "status": "DIAGNOSTIC_APPROVED_G2_MEDIA_BLOCKED",
+    "readiness": "C:/Users/Admin/Documents/Codex/g2b1-readiness/READINESS.json",
+    "root_review": "C:/Users/Admin/Documents/Codex/g2-readiness-audit/ROOT_REVIEW_G2B1.md",
+    "pass": 19,
+    "fail": 25,
+    "unknown": 7,
+    "tests": "9/9 PASS",
+    "media": "NOT_RUN"
+  },
+  "b2": {
+    "status": "EXACT_INPUT_RECOVERY_APPROVED_G2_MEDIA_BLOCKED",
+    "receipt": "C:/Users/Admin/Documents/Codex/g2b2-recovery/RECEIPT.json",
+    "vault": "C:/Users/Admin/Documents/Codex/g2b2-recovery/vault-g2b2-001",
+    "root_review": "C:/Users/Admin/Documents/Codex/g2-readiness-audit/ROOT_REVIEW_G2B2.md",
+    "tests": "6/6 PASS",
+    "files": 3,
+    "media": "NOT_RUN"
+  }
+}

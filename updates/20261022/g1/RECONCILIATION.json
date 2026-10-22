@@ -1,0 +1,612 @@
+{
+  "schema": "motionforge.g1-report-reconciliation.v1",
+  "observed_utc": "2026-10-22T03:59:13.457443+00:00",
+  "gate": "G1",
+  "candidate_id": "g1-candidate-16",
+  "candidate": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-04-20261020\\submissions\\g1-candidate-16",
+  "guard": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r1\\VERIFICATION.json",
+  "input_hashes": {
+    "manifest_sha256": "4df7de9ccc81dff7a82a9b9d70d90a48eae2bb17cd9ff455748b041f20a0ba82",
+    "guard_sha256": "d3047899b7a41494c1918ccdc46f587e4865dfc6d209748b1bbcf01094f4392d"
+  },
+  "expected_hashes": {
+    "manifest_sha256": "4df7de9ccc81dff7a82a9b9d70d90a48eae2bb17cd9ff455748b041f20a0ba82",
+    "guard_sha256": "d3047899b7a41494c1918ccdc46f587e4865dfc6d209748b1bbcf01094f4392d"
+  },
+  "inventory": {
+    "declared_files": 74,
+    "actual_files": 74,
+    "guard_copy_files": 74,
+    "guard_copy_matches_historical_record": true,
+    "files": {
+      "BUILD_SOURCE.py": {
+        "bytes": 5661,
+        "sha256": "d5b32c2c0993a0d21a8ce952637687990a5c43f15889b01f8dd826ceef4cf3c1"
+      },
+      "CHECKPOINT.json": {
+        "bytes": 300,
+        "sha256": "4b392618105dde9b8eb345821c54f72aee560bfa1c7b42b35b97594ff5f0596a"
+      },
+      "DIFF.patch": {
+        "bytes": 39454,
+        "sha256": "4f0379792c68d8f9221aa82dccebeb989995b86e665f97e69b6656afebf94f03"
+      },
+      "REPORT_VI.md": {
+        "bytes": 810,
+        "sha256": "6aa10790338e63d6c29873c99b4ffb4e88d01046e5a3462f9a2b072570195d2f"
+      },
+      "SOURCE_CHANGES.json": {
+        "bytes": 1736,
+        "sha256": "bfc86c1e5ccd8d5f1ab4e5011b0ea6fd1d06b0bffdd560a311802dc6181114c5"
+      },
+      "dependencies_snapshot/r6g_blend_review.py": {
+        "bytes": 2439,
+        "sha256": "27bf20bcd096b291678743297c20d9751993fcf6b376930d702f6d20b4547270"
+      },
+      "dependencies_snapshot/r6_adapter.py": {
+        "bytes": 6493,
+        "sha256": "2b16108c5d92264b5e686d6aedeb5d357fc5ee9539be3cfff3b8979c17f9b5b3"
+      },
+      "dependencies_snapshot/r6_common.py": {
+        "bytes": 10578,
+        "sha256": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc"
+      },
+      "dependencies_snapshot/r6_graph.py": {
+        "bytes": 5508,
+        "sha256": "832d5d44df486c3f10ec8194e7ab170ac4f5a77af0ab46ede176005904981d21"
+      },
+      "dependencies_snapshot/r6_probes.py": {
+        "bytes": 10969,
+        "sha256": "739a1eaed3dd8bb200219d2ef93a353d0fa88a95695f9316bfd1c20f02acea15"
+      },
+      "dependencies_snapshot/r6_qa.py": {
+        "bytes": 3165,
+        "sha256": "220a63574a5fce3b60e4dda3fca7b3779b65a96044199cbfe9f528d26ee58098"
+      },
+      "dependencies_snapshot/r6_sam2.py": {
+        "bytes": 13054,
+        "sha256": "30c8279602a1355f64beecbb23895bf8a26a1d63fa317e17518466cef2b2bfe6"
+      },
+      "dependencies_snapshot/r6_submission_adapter.py": {
+        "bytes": 6573,
+        "sha256": "41da1873bba6e222303a94ebd72194e917d75f1d9b701bf71f2f67f13ae7115a"
+      },
+      "dependencies_snapshot/r6_upload.py": {
+        "bytes": 1469,
+        "sha256": "057179db2b539965d88aed3e3f25a0251cf7e6d9959a6f9ce1f7514783e04967"
+      },
+      "dependencies_snapshot/r6_vace.py": {
+        "bytes": 7784,
+        "sha256": "1f3d8e00062f6c1f22503e17ca7ed9ff1c7f266f45796586ce4458a7eea02140"
+      },
+      "dependencies_snapshot/r6_validate_masks.py": {
+        "bytes": 2062,
+        "sha256": "d5862e81ae29c95d0254aa7590aaf3d992179e5f35d8fa1e34a98f4bc6e067c4"
+      },
+      "dependencies_snapshot/r6_write_reviews.py": {
+        "bytes": 2600,
+        "sha256": "c16285f5fb987e866555ae645f163c2ad1737ad27d22b0654acdec945ed27658"
+      },
+      "source_snapshot/r6_assemble.py": {
+        "bytes": 4245,
+        "sha256": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910"
+      },
+      "source_snapshot/r6_cache.py": {
+        "bytes": 33094,
+        "sha256": "e90c24abd1148544785f1855034de6c1d9ce2329ddcf54103331458bcb4cf422"
+      },
+      "source_snapshot/r6_cotracker.py": {
+        "bytes": 10858,
+        "sha256": "1b4c1322ce41d98d5105f1c1707c9d280f29a9ea87a77441a52dd43b1417701c"
+      },
+      "source_snapshot/r6_event_contract.py": {
+        "bytes": 4903,
+        "sha256": "3a69215d5e58873cabaad7f99e3088ce5e38720ffde5d2140a85b8f28f54a788"
+      },
+      "source_snapshot/r6_evidence_contract.py": {
+        "bytes": 12644,
+        "sha256": "279a2e3813a879ea533d87acf3a8363e237ad1686754ed6b2b0adef939bbfca2"
+      },
+      "source_snapshot/r6_gate.py": {
+        "bytes": 26890,
+        "sha256": "5ca0b457c3c202d68d572b29ed995ec8b8cbd08d666e93635b859b81e2f35c41"
+      },
+      "source_snapshot/r6_keygen.py": {
+        "bytes": 9004,
+        "sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282"
+      },
+      "source_snapshot/r6_keygen_asset.py": {
+        "bytes": 6467,
+        "sha256": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e"
+      },
+      "source_snapshot/r6_key_recipe.py": {
+        "bytes": 10608,
+        "sha256": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9"
+      },
+      "source_snapshot/r6_ledger.py": {
+        "bytes": 9806,
+        "sha256": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200"
+      },
+      "source_snapshot/r6_matrix.py": {
+        "bytes": 11907,
+        "sha256": "1543a13caf97e5abdbb89d036a7e0ea6459066517bd6e2d1390fae232636e9ab"
+      },
+      "source_snapshot/r6_propagate.py": {
+        "bytes": 12500,
+        "sha256": "65bd738883d904b64697b1fe410f44b9cddd99dcaaa7e71134d4e1b005eb485c"
+      },
+      "source_snapshot/r6_submission_adapter.py": {
+        "bytes": 6660,
+        "sha256": "141c372eb2fdf6d65504451d3d67e613f963568cff4a6122e520761d18647cae"
+      },
+      "source_snapshot/test_codex_c02b2_per_actor_reuse.py": {
+        "bytes": 24521,
+        "sha256": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24"
+      },
+      "source_snapshot/test_g1_r1_correction.py": {
+        "bytes": 45622,
+        "sha256": "07f396263ef8d63e30300070a782ae7d32c0e1e067be3206a08551b08fe6995f"
+      },
+      "source_snapshot/test_gemini_a3_event_tracking.py": {
+        "bytes": 8695,
+        "sha256": "cc9fe10b065738dd18fa9c6626f54c4d0da3f996833145fe45db031aaa6a6584"
+      },
+      "source_snapshot/test_gemini_a4_evidence_conformance.py": {
+        "bytes": 9672,
+        "sha256": "bba447b5100943cea7e26fcf66116b76993eedf53f458551f8b206c39d21f836"
+      },
+      "source_snapshot/test_gemini_c02b3_asset_reuse.py": {
+        "bytes": 14696,
+        "sha256": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b"
+      },
+      "task/chunk_plan.json": {
+        "bytes": 81325,
+        "sha256": "3678d0e1e6e50d3ea42e1b698b65641b6bed8602b0b0f45bfb4f5b7c6fbc719a"
+      },
+      "task/corrections/identity/r5/vendor/cropandstitch_8584b08d/inpaint_cropandstitch.py": {
+        "bytes": 99875,
+        "sha256": "3ac0453d65ec9aff6f176c070d15c73715073c63a530975f5ffa2e1d4143bbf8"
+      },
+      "task/corrections/identity/r6/historical_proof_snapshot/evidence/r6/Q11_R6_HARNESS_TEST_RESULTS.json": {
+        "bytes": 7610,
+        "sha256": "26445ec5c2e7f97c9ae7985569bef87201622e861e4aa46980828a07eb609258"
+      },
+      "task/corrections/identity/r6/historical_proof_snapshot/evidence/r6/q11/Q11_R6_RACE_RESULTS.json": {
+        "bytes": 14482,
+        "sha256": "5f2636fe568aa7d7c666c5932dfe3e6da862e3f1bb3fd7eb5b3c1c7bb13717b1"
+      },
+      "task/corrections/identity/r6/historical_proof_snapshot/tools/dispatch_long.py": {
+        "bytes": 28619,
+        "sha256": "78d1bc1fafc65868e07a5c64687716b1f64d577002e28216437db43265cb16fa"
+      },
+      "task/corrections/identity/r6/historical_proof_snapshot/tools/invocation_runtime.py": {
+        "bytes": 25380,
+        "sha256": "86fc59156a357da7aa6b8691dfccc983b009548e7af4e2ea9ad9b226336b1775"
+      },
+      "task/corrections/identity/r6/historical_proof_snapshot/tools/terminal_contract.py": {
+        "bytes": 6032,
+        "sha256": "96ca2f934fe50dfc27dd98cc6b4eb612538044af19afa71daf65d88bf93428bd"
+      },
+      "task/corrections/identity/r6/scripts/r6g_blend_review.py": {
+        "bytes": 2439,
+        "sha256": "27bf20bcd096b291678743297c20d9751993fcf6b376930d702f6d20b4547270"
+      },
+      "task/corrections/identity/r6/scripts/r6_adapter.py": {
+        "bytes": 6493,
+        "sha256": "2b16108c5d92264b5e686d6aedeb5d357fc5ee9539be3cfff3b8979c17f9b5b3"
+      },
+      "task/corrections/identity/r6/scripts/r6_assemble.py": {
+        "bytes": 4245,
+        "sha256": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910"
+      },
+      "task/corrections/identity/r6/scripts/r6_cache.py": {
+        "bytes": 33094,
+        "sha256": "e90c24abd1148544785f1855034de6c1d9ce2329ddcf54103331458bcb4cf422"
+      },
+      "task/corrections/identity/r6/scripts/r6_common.py": {
+        "bytes": 10578,
+        "sha256": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc"
+      },
+      "task/corrections/identity/r6/scripts/r6_cotracker.py": {
+        "bytes": 10858,
+        "sha256": "1b4c1322ce41d98d5105f1c1707c9d280f29a9ea87a77441a52dd43b1417701c"
+      },
+      "task/corrections/identity/r6/scripts/r6_event_contract.py": {
+        "bytes": 4903,
+        "sha256": "3a69215d5e58873cabaad7f99e3088ce5e38720ffde5d2140a85b8f28f54a788"
+      },
+      "task/corrections/identity/r6/scripts/r6_evidence_contract.py": {
+        "bytes": 12644,
+        "sha256": "279a2e3813a879ea533d87acf3a8363e237ad1686754ed6b2b0adef939bbfca2"
+      },
+      "task/corrections/identity/r6/scripts/r6_gate.py": {
+        "bytes": 26890,
+        "sha256": "5ca0b457c3c202d68d572b29ed995ec8b8cbd08d666e93635b859b81e2f35c41"
+      },
+      "task/corrections/identity/r6/scripts/r6_graph.py": {
+        "bytes": 5508,
+        "sha256": "832d5d44df486c3f10ec8194e7ab170ac4f5a77af0ab46ede176005904981d21"
+      },
+      "task/corrections/identity/r6/scripts/r6_keygen.py": {
+        "bytes": 9004,
+        "sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282"
+      },
+      "task/corrections/identity/r6/scripts/r6_keygen_asset.py": {
+        "bytes": 6467,
+        "sha256": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e"
+      },
+      "task/corrections/identity/r6/scripts/r6_key_recipe.py": {
+        "bytes": 10608,
+        "sha256": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9"
+      },
+      "task/corrections/identity/r6/scripts/r6_ledger.py": {
+        "bytes": 9806,
+        "sha256": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200"
+      },
+      "task/corrections/identity/r6/scripts/r6_matrix.py": {
+        "bytes": 11907,
+        "sha256": "1543a13caf97e5abdbb89d036a7e0ea6459066517bd6e2d1390fae232636e9ab"
+      },
+      "task/corrections/identity/r6/scripts/r6_probes.py": {
+        "bytes": 10969,
+        "sha256": "739a1eaed3dd8bb200219d2ef93a353d0fa88a95695f9316bfd1c20f02acea15"
+      },
+      "task/corrections/identity/r6/scripts/r6_propagate.py": {
+        "bytes": 12500,
+        "sha256": "65bd738883d904b64697b1fe410f44b9cddd99dcaaa7e71134d4e1b005eb485c"
+      },
+      "task/corrections/identity/r6/scripts/r6_qa.py": {
+        "bytes": 3165,
+        "sha256": "220a63574a5fce3b60e4dda3fca7b3779b65a96044199cbfe9f528d26ee58098"
+      },
+      "task/corrections/identity/r6/scripts/r6_sam2.py": {
+        "bytes": 13054,
+        "sha256": "30c8279602a1355f64beecbb23895bf8a26a1d63fa317e17518466cef2b2bfe6"
+      },
+      "task/corrections/identity/r6/scripts/r6_submission_adapter.py": {
+        "bytes": 6660,
+        "sha256": "141c372eb2fdf6d65504451d3d67e613f963568cff4a6122e520761d18647cae"
+      },
+      "task/corrections/identity/r6/scripts/r6_upload.py": {
+        "bytes": 1469,
+        "sha256": "057179db2b539965d88aed3e3f25a0251cf7e6d9959a6f9ce1f7514783e04967"
+      },
+      "task/corrections/identity/r6/scripts/r6_vace.py": {
+        "bytes": 7784,
+        "sha256": "1f3d8e00062f6c1f22503e17ca7ed9ff1c7f266f45796586ce4458a7eea02140"
+      },
+      "task/corrections/identity/r6/scripts/r6_validate_masks.py": {
+        "bytes": 2062,
+        "sha256": "d5862e81ae29c95d0254aa7590aaf3d992179e5f35d8fa1e34a98f4bc6e067c4"
+      },
+      "task/corrections/identity/r6/scripts/r6_write_reviews.py": {
+        "bytes": 2600,
+        "sha256": "c16285f5fb987e866555ae645f163c2ad1737ad27d22b0654acdec945ed27658"
+      },
+      "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py": {
+        "bytes": 14693,
+        "sha256": "351c39e764e53d67466688d9ec032cf9e352167e105ee0be580129f1db38fdf7"
+      },
+      "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py": {
+        "bytes": 23075,
+        "sha256": "195ead0031f16098087df5f56b5b9ac0e5ddc7a58a733ea6a0e0c22168650219"
+      },
+      "task/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py": {
+        "bytes": 14350,
+        "sha256": "61bfe454456c452756ddbbf05b55678e146114cb6d2653bff77f4ee92af46aec"
+      },
+      "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py": {
+        "bytes": 24521,
+        "sha256": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24"
+      },
+      "task/corrections/identity/r6/tests/test_g1_r1_correction.py": {
+        "bytes": 45622,
+        "sha256": "07f396263ef8d63e30300070a782ae7d32c0e1e067be3206a08551b08fe6995f"
+      },
+      "task/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py": {
+        "bytes": 8695,
+        "sha256": "cc9fe10b065738dd18fa9c6626f54c4d0da3f996833145fe45db031aaa6a6584"
+      },
+      "task/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py": {
+        "bytes": 9672,
+        "sha256": "bba447b5100943cea7e26fcf66116b76993eedf53f458551f8b206c39d21f836"
+      },
+      "task/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py": {
+        "bytes": 14696,
+        "sha256": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b"
+      }
+    }
+  },
+  "guard_inventories": {
+    "before": {
+      "manifest_sha256": "4df7de9ccc81dff7a82a9b9d70d90a48eae2bb17cd9ff455748b041f20a0ba82",
+      "declared_files": 74,
+      "actual_files": 74,
+      "issues": [],
+      "ok": true
+    },
+    "after": {
+      "manifest_sha256": "4df7de9ccc81dff7a82a9b9d70d90a48eae2bb17cd9ff455748b041f20a0ba82",
+      "declared_files": 74,
+      "actual_files": 74,
+      "issues": [],
+      "ok": true
+    }
+  },
+  "guard_recorded_verdict": "VERIFY_PASS",
+  "guard_recomputed_verdict": "VERIFY_PASS",
+  "guard_process_exit": null,
+  "suites": [
+    {
+      "suite": "task/corrections/identity/r6/tests/test_g1_r1_correction.py",
+      "collected": 16,
+      "passed": 16,
+      "failed": 0,
+      "skipped": 0,
+      "subtests_passed": 0,
+      "subtest_events_individual": "NOT_EMITTED",
+      "ok": true,
+      "node_ids": [
+        "task/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m01_asset_missing_grey_ref_rejected",
+        "task/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m02_asset_graph_sampler_and_wrong_grey_rejected",
+        "task/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m03_m04_asset_actual_contract_and_controls",
+        "task/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m05_cotracker_cli_help",
+        "task/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m06_cotracker_invalid_tensor_matrix",
+        "task/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m07_cotracker_window_coverage_and_actual_cli",
+        "task/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m08_m09_propagate_upstream_naming_and_failures",
+        "task/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m10_m11_event_transitions_and_strict_types",
+        "task/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m12_m14_matrix_and_submission_adapter",
+        "task/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m15_m16_manifest_relative_filtering",
+        "task/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m17_q11_historical_proof_binding",
+        "task/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m18_q11_historical_and_multiprocess_race_barrier",
+        "task/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m19_m20_candidate_identity_and_state",
+        "task/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m21_adapter_rejects_unrun_test_and_claimed_shots",
+        "task/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m22_actual_runner_and_54_dependency_coverage",
+        "task/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m23_nested_q05_runner_is_blocked"
+      ],
+      "summary": "16 passed in 13.92s",
+      "subtests_failed": 0,
+      "progress_events": 16,
+      "collection_exit_code": 0,
+      "test_exit_code": 0,
+      "run_exit_code": 0
+    },
+    {
+      "suite": "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py",
+      "collected": 17,
+      "passed": 17,
+      "failed": 0,
+      "skipped": 0,
+      "subtests_passed": 14,
+      "subtest_events_individual": "NOT_EMITTED",
+      "ok": true,
+      "node_ids": [
+        "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_bad_json_and_non_object_are_gate_blocks",
+        "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_blend_producer_schema_and_full_mapping",
+        "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_changed_dependency_blocks",
+        "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_current_producer_record_passes",
+        "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_expected_and_reviewed_frame_identity",
+        "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_extra_recorded_and_current_dependencies_block",
+        "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_false_and_numeric_dependency_values_do_not_bind",
+        "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_missing_current_dependency_blocks",
+        "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_missing_recorded_dependency_blocks",
+        "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_nonstandard_json_constant_is_malformed",
+        "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_numeric_sha_and_missing_verdict_are_gate_blocks",
+        "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_other_path_with_identical_bytes_blocks",
+        "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_real_assembler_main_rejects_before_copy_and_encoder",
+        "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_real_gate_assemble_binds_review_to_consumed_blend_frames",
+        "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_required_field_types_and_frames",
+        "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_review_identity_must_match_requested_kind_and_name",
+        "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_stale_artifact_blocks"
+      ],
+      "summary": "17 passed, 14 subtests passed in 0.50s",
+      "subtests_failed": 0,
+      "progress_events": 17,
+      "collection_exit_code": 0,
+      "test_exit_code": 0,
+      "run_exit_code": 0
+    },
+    {
+      "suite": "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py",
+      "collected": 13,
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0,
+      "subtests_passed": 83,
+      "subtest_events_individual": "NOT_EMITTED",
+      "ok": true,
+      "node_ids": [
+        "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_consumer_identity_matrix_with_resealed_digest",
+        "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_digest_and_same_size_file_mutation_matrix",
+        "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_empty_record_fails_closed",
+        "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_gate_key_blocks_missing_deps",
+        "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_invalid_json_blocks_real_key_consumer",
+        "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_nested_json_matrix_through_loader_verify_key_and_skip",
+        "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_omitted_source_and_hash_block_real_consumer_and_assembler",
+        "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_parsed_nested_deps_block_actual_assembly_before_copy",
+        "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_real_builder_record_verifies",
+        "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_record_shape_and_type_matrix",
+        "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_skip_keeps_current_settings_comparison",
+        "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_strict_json_loader_matrix",
+        "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_valid_record_through_real_key_and_assembly_gates"
+      ],
+      "summary": "13 passed, 83 subtests passed in 0.55s",
+      "subtests_failed": 0,
+      "progress_events": 13,
+      "collection_exit_code": 0,
+      "test_exit_code": 0,
+      "run_exit_code": 0
+    },
+    {
+      "suite": "task/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py",
+      "collected": 10,
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0,
+      "subtests_passed": 19,
+      "subtest_events_individual": "NOT_EMITTED",
+      "ok": true,
+      "node_ids": [
+        "task/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py::StagedSourceTests::test_failed_extractor_and_empty_result_preserve_previous_pair",
+        "task/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py::StagedSourceTests::test_first_extract_and_unchanged_reuse",
+        "task/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py::StagedSourceTests::test_legacy_empty_missing_and_copied_receipts",
+        "task/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py::StagedSourceTests::test_malformed_and_wrong_receipts_reextract",
+        "task/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py::StagedSourceTests::test_missing_unreadable_source_and_invalid_frames",
+        "task/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py::StagedSourceTests::test_partial_publication_cannot_bless_old_receipt",
+        "task/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py::StagedSourceTests::test_real_ffmpeg_30fps_640x360_frame_mapping_and_replacement",
+        "task/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py::StagedSourceTests::test_same_path_same_size_source_mutation_reextracts",
+        "task/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py::StagedSourceTests::test_source_change_during_extraction_preserves_previous_pair",
+        "task/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py::StagedSourceTests::test_source_path_frame_output_and_restore_invalidate"
+      ],
+      "summary": "10 passed, 19 subtests passed in 0.65s",
+      "subtests_failed": 0,
+      "progress_events": 10,
+      "collection_exit_code": 0,
+      "test_exit_code": 0,
+      "run_exit_code": 0
+    },
+    {
+      "suite": "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py",
+      "collected": 14,
+      "passed": 14,
+      "failed": 0,
+      "skipped": 0,
+      "subtests_passed": 0,
+      "subtest_events_individual": "NOT_EMITTED",
+      "ok": true,
+      "node_ids": [
+        "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::SingleActorVerifiedReuseTests::test_p1_missing_review_blocks_skip",
+        "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::SingleActorVerifiedReuseTests::test_p1_single_actor_replay_unchanged",
+        "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::SingleActorVerifiedReuseTests::test_p1_wrong_review_blocks_skip",
+        "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::SingleActorVerifiedReuseTests::test_p2_effective_settings_independent_mutations",
+        "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::SingleActorVerifiedReuseTests::test_p3_same_path_same_size_mutations_and_restores",
+        "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::SingleActorVerifiedReuseTests::test_p4_malformed_and_truncated_records",
+        "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::SingleActorVerifiedReuseTests::test_p5_blank_edit_failure_does_not_publish_deps",
+        "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::SingleActorVerifiedReuseTests::test_p5_bound_check_failure_does_not_publish_deps",
+        "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::SingleActorVerifiedReuseTests::test_p5_injected_generation_failure_does_not_publish_deps",
+        "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::SingleActorVerifiedReuseTests::test_p5_standalone_gate_import",
+        "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::MultiActorVerifiedReuseTests::test_p1_multi_actor_replay_unchanged",
+        "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::MultiActorVerifiedReuseTests::test_p3_multi_actor_nonfirst_graph_mutation",
+        "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::NoVisibleActorVerifiedReuseTests::test_no_visible_actor_positive",
+        "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::FullyCoveredActorReuseTests::test_fully_covered_actor_fewer_graphs"
+      ],
+      "summary": "14 passed in 4.50s",
+      "subtests_failed": 0,
+      "progress_events": 14,
+      "collection_exit_code": 0,
+      "test_exit_code": 0,
+      "run_exit_code": 0
+    },
+    {
+      "suite": "task/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py",
+      "collected": 10,
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0,
+      "subtests_passed": 0,
+      "subtest_events_individual": "NOT_EMITTED",
+      "ok": true,
+      "node_ids": [
+        "task/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py::AssetRestyleVerifiedReuseTests::test_t1_asset_restyle_replay_unchanged",
+        "task/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py::AssetRestyleVerifiedReuseTests::test_t1_missing_review_blocks_skip",
+        "task/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py::AssetRestyleVerifiedReuseTests::test_t1_wrong_review_blocks_skip",
+        "task/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py::AssetRestyleVerifiedReuseTests::test_t2_same_path_same_size_mutations_and_restores",
+        "task/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py::AssetRestyleVerifiedReuseTests::test_t2_settings_and_storyboard_mutations",
+        "task/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py::AssetRestyleVerifiedReuseTests::test_t4_legacy_v3_asset_record_denial",
+        "task/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py::AssetRestyleVerifiedReuseTests::test_t5_blank_edit_failure_does_not_publish_deps",
+        "task/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py::AssetRestyleVerifiedReuseTests::test_t5_injected_post_failure_does_not_publish_deps",
+        "task/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py::AssetBlackPassthroughTests::test_t3_black_passthrough_rejects_non_flat_source",
+        "task/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py::AssetBlackPassthroughTests::test_t3_black_passthrough_replay_unchanged"
+      ],
+      "summary": "10 passed in 3.12s",
+      "subtests_failed": 0,
+      "progress_events": 10,
+      "collection_exit_code": 0,
+      "test_exit_code": 0,
+      "run_exit_code": 0
+    },
+    {
+      "suite": "task/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py",
+      "collected": 7,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "subtests_passed": 0,
+      "subtest_events_individual": "NOT_EMITTED",
+      "ok": true,
+      "node_ids": [
+        "task/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py::EventTimingAndTrackingTests::test_e1_event_fids_mapping_both_f_and_frame",
+        "task/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py::EventTimingAndTrackingTests::test_e2_plan_runs_split_at_hard_cuts",
+        "task/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py::EventTimingAndTrackingTests::test_e3_child_outcome_nonzero_rc_fails",
+        "task/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py::EventTimingAndTrackingTests::test_e3_child_outcome_partial_frames_fails",
+        "task/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py::EventTimingAndTrackingTests::test_e4_cotracker_tensor_contract",
+        "task/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py::EventTimingAndTrackingTests::test_e5_cotracker_strip_pastes_both_frames",
+        "task/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py::EventTimingAndTrackingTests::test_e6_crop_stitch_landmark_roundtrip_and_bounds"
+      ],
+      "summary": "7 passed in 3.38s",
+      "subtests_failed": 0,
+      "progress_events": 7,
+      "collection_exit_code": 0,
+      "test_exit_code": 0,
+      "run_exit_code": 0
+    },
+    {
+      "suite": "task/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py",
+      "collected": 5,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "subtests_passed": 0,
+      "subtest_events_individual": "NOT_EMITTED",
+      "ok": true,
+      "node_ids": [
+        "task/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py::EvidenceGateConformanceTests::test_g1_engineering_batch_conformance",
+        "task/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py::EvidenceGateConformanceTests::test_invalid_matrix_keys_and_values",
+        "task/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py::EvidenceGateConformanceTests::test_r6_assemble_pre_encoder_gate_blocked",
+        "task/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py::EvidenceGateConformanceTests::test_r6_matrix_compute_rows",
+        "task/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py::EvidenceGateConformanceTests::test_t13_two_controller_barrier_race_simulation"
+      ],
+      "summary": "5 passed in 1.63s",
+      "subtests_failed": 0,
+      "progress_events": 5,
+      "collection_exit_code": 0,
+      "test_exit_code": 0,
+      "run_exit_code": 0
+    }
+  ],
+  "totals": {
+    "suites": 8,
+    "collected": 92,
+    "passed": 92,
+    "failed": 0,
+    "skipped": 0,
+    "subtests_passed": 116
+  },
+  "source_claims": {
+    "source_changes": 6,
+    "report_source_changes": 6
+  },
+  "chronology": {
+    "created_utc": "2026-10-22T03:52:54.629681+00:00",
+    "verified_utc": "2026-10-22T03:53:44.213022+00:00",
+    "report_mtime_utc": "2026-10-22T03:52:54.630681+00:00",
+    "manifest_mtime_utc": "2026-10-22T03:52:54.798174+00:00",
+    "guard_mtime_utc": "2026-10-22T03:53:44.214015+00:00"
+  },
+  "findings": [
+    {
+      "severity": "UNKNOWN",
+      "code": "GUARD_PROCESS_EXIT_UNOBSERVED",
+      "detail": "VERIFICATION.json has no raw guard process exit"
+    },
+    {
+      "severity": "UNKNOWN",
+      "code": "SUBTEST_NODE_EVENTS_UNOBSERVED",
+      "detail": "pytest summaries give subtest counts without individual node IDs"
+    }
+  ],
+  "fail_count": 0,
+  "unknown_count": 2,
+  "verdict": "OBSERVED_CONSISTENT_WITH_GAPS",
+  "gate_approval": "PENDING_CODEX_REVIEW"
+}

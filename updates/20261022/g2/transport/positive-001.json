@@ -1,0 +1,1390 @@
+{
+  "ended_utc": "2026-10-22T04:28:26.024580+00:00",
+  "g2_exact_300s_pilot": "NOT_RUN",
+  "inputs": {
+    "candidate": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-04-20261020\\submissions\\g1-candidate-16",
+    "source": "C:\\Users\\Admin\\.gemini\\antigravity\\scratch\\goha_mmo_clone\\backend\\downloads\\Tại sao thật tệ khi ĐỨNG TÊN HỘ công ty？.mp4"
+  },
+  "media_readiness": "NOT_ASSESSED",
+  "observed": {
+    "authority": {
+      "guard": {
+        "actual_sha256": "ccc43a4808f10772128c490c2aa227d3708714fceaf9f275160e61acb35799a7",
+        "expected_sha256": "ccc43a4808f10772128c490c2aa227d3708714fceaf9f275160e61acb35799a7",
+        "path": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\VERIFICATION.json"
+      },
+      "guard_process": {
+        "actual_sha256": "47d092661bf5c86c61ffc569ffe02861bf60f67ae1d2b608e20debafbee1c47e",
+        "expected_sha256": "47d092661bf5c86c61ffc569ffe02861bf60f67ae1d2b608e20debafbee1c47e",
+        "path": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-review\\GUARD_PROCESS_RECEIPT.json"
+      },
+      "review": {
+        "actual_sha256": "8a466b1aa14b1a1761b69c75540213bcd631c5add749ea8e9acdceb90f8fcfdc",
+        "expected_sha256": "8a466b1aa14b1a1761b69c75540213bcd631c5add749ea8e9acdceb90f8fcfdc",
+        "path": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-review\\REVIEW_G1_C16_VI.md"
+      }
+    },
+    "authority_after_copy": {
+      "authority": {
+        "guard": {
+          "actual_sha256": "ccc43a4808f10772128c490c2aa227d3708714fceaf9f275160e61acb35799a7",
+          "expected_sha256": "ccc43a4808f10772128c490c2aa227d3708714fceaf9f275160e61acb35799a7",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\VERIFICATION.json"
+        },
+        "guard_process": {
+          "actual_sha256": "47d092661bf5c86c61ffc569ffe02861bf60f67ae1d2b608e20debafbee1c47e",
+          "expected_sha256": "47d092661bf5c86c61ffc569ffe02861bf60f67ae1d2b608e20debafbee1c47e",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-review\\GUARD_PROCESS_RECEIPT.json"
+        },
+        "review": {
+          "actual_sha256": "8a466b1aa14b1a1761b69c75540213bcd631c5add749ea8e9acdceb90f8fcfdc",
+          "expected_sha256": "8a466b1aa14b1a1761b69c75540213bcd631c5add749ea8e9acdceb90f8fcfdc",
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-review\\REVIEW_G1_C16_VI.md"
+        }
+      }
+    },
+    "candidate": {
+      "actual_inventory": [
+        "BUILD_SOURCE.py",
+        "CHECKPOINT.json",
+        "DIFF.patch",
+        "MANIFEST.json",
+        "REPORT_VI.md",
+        "SOURCE_CHANGES.json",
+        "dependencies_snapshot/r6_adapter.py",
+        "dependencies_snapshot/r6_common.py",
+        "dependencies_snapshot/r6_graph.py",
+        "dependencies_snapshot/r6_probes.py",
+        "dependencies_snapshot/r6_qa.py",
+        "dependencies_snapshot/r6_sam2.py",
+        "dependencies_snapshot/r6_submission_adapter.py",
+        "dependencies_snapshot/r6_upload.py",
+        "dependencies_snapshot/r6_vace.py",
+        "dependencies_snapshot/r6_validate_masks.py",
+        "dependencies_snapshot/r6_write_reviews.py",
+        "dependencies_snapshot/r6g_blend_review.py",
+        "source_snapshot/r6_assemble.py",
+        "source_snapshot/r6_cache.py",
+        "source_snapshot/r6_cotracker.py",
+        "source_snapshot/r6_event_contract.py",
+        "source_snapshot/r6_evidence_contract.py",
+        "source_snapshot/r6_gate.py",
+        "source_snapshot/r6_key_recipe.py",
+        "source_snapshot/r6_keygen.py",
+        "source_snapshot/r6_keygen_asset.py",
+        "source_snapshot/r6_ledger.py",
+        "source_snapshot/r6_matrix.py",
+        "source_snapshot/r6_propagate.py",
+        "source_snapshot/r6_submission_adapter.py",
+        "source_snapshot/test_codex_c02b2_per_actor_reuse.py",
+        "source_snapshot/test_g1_r1_correction.py",
+        "source_snapshot/test_gemini_a3_event_tracking.py",
+        "source_snapshot/test_gemini_a4_evidence_conformance.py",
+        "source_snapshot/test_gemini_c02b3_asset_reuse.py",
+        "task/chunk_plan.json",
+        "task/corrections/identity/r5/vendor/cropandstitch_8584b08d/inpaint_cropandstitch.py",
+        "task/corrections/identity/r6/historical_proof_snapshot/evidence/r6/Q11_R6_HARNESS_TEST_RESULTS.json",
+        "task/corrections/identity/r6/historical_proof_snapshot/evidence/r6/q11/Q11_R6_RACE_RESULTS.json",
+        "task/corrections/identity/r6/historical_proof_snapshot/tools/dispatch_long.py",
+        "task/corrections/identity/r6/historical_proof_snapshot/tools/invocation_runtime.py",
+        "task/corrections/identity/r6/historical_proof_snapshot/tools/terminal_contract.py",
+        "task/corrections/identity/r6/scripts/r6_adapter.py",
+        "task/corrections/identity/r6/scripts/r6_assemble.py",
+        "task/corrections/identity/r6/scripts/r6_cache.py",
+        "task/corrections/identity/r6/scripts/r6_common.py",
+        "task/corrections/identity/r6/scripts/r6_cotracker.py",
+        "task/corrections/identity/r6/scripts/r6_event_contract.py",
+        "task/corrections/identity/r6/scripts/r6_evidence_contract.py",
+        "task/corrections/identity/r6/scripts/r6_gate.py",
+        "task/corrections/identity/r6/scripts/r6_graph.py",
+        "task/corrections/identity/r6/scripts/r6_key_recipe.py",
+        "task/corrections/identity/r6/scripts/r6_keygen.py",
+        "task/corrections/identity/r6/scripts/r6_keygen_asset.py",
+        "task/corrections/identity/r6/scripts/r6_ledger.py",
+        "task/corrections/identity/r6/scripts/r6_matrix.py",
+        "task/corrections/identity/r6/scripts/r6_probes.py",
+        "task/corrections/identity/r6/scripts/r6_propagate.py",
+        "task/corrections/identity/r6/scripts/r6_qa.py",
+        "task/corrections/identity/r6/scripts/r6_sam2.py",
+        "task/corrections/identity/r6/scripts/r6_submission_adapter.py",
+        "task/corrections/identity/r6/scripts/r6_upload.py",
+        "task/corrections/identity/r6/scripts/r6_vace.py",
+        "task/corrections/identity/r6/scripts/r6_validate_masks.py",
+        "task/corrections/identity/r6/scripts/r6_write_reviews.py",
+        "task/corrections/identity/r6/scripts/r6g_blend_review.py",
+        "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py",
+        "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py",
+        "task/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py",
+        "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py",
+        "task/corrections/identity/r6/tests/test_g1_r1_correction.py",
+        "task/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py",
+        "task/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py",
+        "task/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py"
+      ],
+      "manifest_sha256": "4df7de9ccc81dff7a82a9b9d70d90a48eae2bb17cd9ff455748b041f20a0ba82",
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-04-20261020\\submissions\\g1-candidate-16",
+      "verified_files": [
+        {
+          "bytes": 5661,
+          "relative": "BUILD_SOURCE.py",
+          "sha256": "d5b32c2c0993a0d21a8ce952637687990a5c43f15889b01f8dd826ceef4cf3c1"
+        },
+        {
+          "bytes": 300,
+          "relative": "CHECKPOINT.json",
+          "sha256": "4b392618105dde9b8eb345821c54f72aee560bfa1c7b42b35b97594ff5f0596a"
+        },
+        {
+          "bytes": 39454,
+          "relative": "DIFF.patch",
+          "sha256": "4f0379792c68d8f9221aa82dccebeb989995b86e665f97e69b6656afebf94f03"
+        },
+        {
+          "bytes": 810,
+          "relative": "REPORT_VI.md",
+          "sha256": "6aa10790338e63d6c29873c99b4ffb4e88d01046e5a3462f9a2b072570195d2f"
+        },
+        {
+          "bytes": 1736,
+          "relative": "SOURCE_CHANGES.json",
+          "sha256": "bfc86c1e5ccd8d5f1ab4e5011b0ea6fd1d06b0bffdd560a311802dc6181114c5"
+        },
+        {
+          "bytes": 6493,
+          "relative": "dependencies_snapshot/r6_adapter.py",
+          "sha256": "2b16108c5d92264b5e686d6aedeb5d357fc5ee9539be3cfff3b8979c17f9b5b3"
+        },
+        {
+          "bytes": 10578,
+          "relative": "dependencies_snapshot/r6_common.py",
+          "sha256": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc"
+        },
+        {
+          "bytes": 5508,
+          "relative": "dependencies_snapshot/r6_graph.py",
+          "sha256": "832d5d44df486c3f10ec8194e7ab170ac4f5a77af0ab46ede176005904981d21"
+        },
+        {
+          "bytes": 10969,
+          "relative": "dependencies_snapshot/r6_probes.py",
+          "sha256": "739a1eaed3dd8bb200219d2ef93a353d0fa88a95695f9316bfd1c20f02acea15"
+        },
+        {
+          "bytes": 3165,
+          "relative": "dependencies_snapshot/r6_qa.py",
+          "sha256": "220a63574a5fce3b60e4dda3fca7b3779b65a96044199cbfe9f528d26ee58098"
+        },
+        {
+          "bytes": 13054,
+          "relative": "dependencies_snapshot/r6_sam2.py",
+          "sha256": "30c8279602a1355f64beecbb23895bf8a26a1d63fa317e17518466cef2b2bfe6"
+        },
+        {
+          "bytes": 6573,
+          "relative": "dependencies_snapshot/r6_submission_adapter.py",
+          "sha256": "41da1873bba6e222303a94ebd72194e917d75f1d9b701bf71f2f67f13ae7115a"
+        },
+        {
+          "bytes": 1469,
+          "relative": "dependencies_snapshot/r6_upload.py",
+          "sha256": "057179db2b539965d88aed3e3f25a0251cf7e6d9959a6f9ce1f7514783e04967"
+        },
+        {
+          "bytes": 7784,
+          "relative": "dependencies_snapshot/r6_vace.py",
+          "sha256": "1f3d8e00062f6c1f22503e17ca7ed9ff1c7f266f45796586ce4458a7eea02140"
+        },
+        {
+          "bytes": 2062,
+          "relative": "dependencies_snapshot/r6_validate_masks.py",
+          "sha256": "d5862e81ae29c95d0254aa7590aaf3d992179e5f35d8fa1e34a98f4bc6e067c4"
+        },
+        {
+          "bytes": 2600,
+          "relative": "dependencies_snapshot/r6_write_reviews.py",
+          "sha256": "c16285f5fb987e866555ae645f163c2ad1737ad27d22b0654acdec945ed27658"
+        },
+        {
+          "bytes": 2439,
+          "relative": "dependencies_snapshot/r6g_blend_review.py",
+          "sha256": "27bf20bcd096b291678743297c20d9751993fcf6b376930d702f6d20b4547270"
+        },
+        {
+          "bytes": 4245,
+          "relative": "source_snapshot/r6_assemble.py",
+          "sha256": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910"
+        },
+        {
+          "bytes": 33094,
+          "relative": "source_snapshot/r6_cache.py",
+          "sha256": "e90c24abd1148544785f1855034de6c1d9ce2329ddcf54103331458bcb4cf422"
+        },
+        {
+          "bytes": 10858,
+          "relative": "source_snapshot/r6_cotracker.py",
+          "sha256": "1b4c1322ce41d98d5105f1c1707c9d280f29a9ea87a77441a52dd43b1417701c"
+        },
+        {
+          "bytes": 4903,
+          "relative": "source_snapshot/r6_event_contract.py",
+          "sha256": "3a69215d5e58873cabaad7f99e3088ce5e38720ffde5d2140a85b8f28f54a788"
+        },
+        {
+          "bytes": 12644,
+          "relative": "source_snapshot/r6_evidence_contract.py",
+          "sha256": "279a2e3813a879ea533d87acf3a8363e237ad1686754ed6b2b0adef939bbfca2"
+        },
+        {
+          "bytes": 26890,
+          "relative": "source_snapshot/r6_gate.py",
+          "sha256": "5ca0b457c3c202d68d572b29ed995ec8b8cbd08d666e93635b859b81e2f35c41"
+        },
+        {
+          "bytes": 10608,
+          "relative": "source_snapshot/r6_key_recipe.py",
+          "sha256": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9"
+        },
+        {
+          "bytes": 9004,
+          "relative": "source_snapshot/r6_keygen.py",
+          "sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282"
+        },
+        {
+          "bytes": 6467,
+          "relative": "source_snapshot/r6_keygen_asset.py",
+          "sha256": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e"
+        },
+        {
+          "bytes": 9806,
+          "relative": "source_snapshot/r6_ledger.py",
+          "sha256": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200"
+        },
+        {
+          "bytes": 11907,
+          "relative": "source_snapshot/r6_matrix.py",
+          "sha256": "1543a13caf97e5abdbb89d036a7e0ea6459066517bd6e2d1390fae232636e9ab"
+        },
+        {
+          "bytes": 12500,
+          "relative": "source_snapshot/r6_propagate.py",
+          "sha256": "65bd738883d904b64697b1fe410f44b9cddd99dcaaa7e71134d4e1b005eb485c"
+        },
+        {
+          "bytes": 6660,
+          "relative": "source_snapshot/r6_submission_adapter.py",
+          "sha256": "141c372eb2fdf6d65504451d3d67e613f963568cff4a6122e520761d18647cae"
+        },
+        {
+          "bytes": 24521,
+          "relative": "source_snapshot/test_codex_c02b2_per_actor_reuse.py",
+          "sha256": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24"
+        },
+        {
+          "bytes": 45622,
+          "relative": "source_snapshot/test_g1_r1_correction.py",
+          "sha256": "07f396263ef8d63e30300070a782ae7d32c0e1e067be3206a08551b08fe6995f"
+        },
+        {
+          "bytes": 8695,
+          "relative": "source_snapshot/test_gemini_a3_event_tracking.py",
+          "sha256": "cc9fe10b065738dd18fa9c6626f54c4d0da3f996833145fe45db031aaa6a6584"
+        },
+        {
+          "bytes": 9672,
+          "relative": "source_snapshot/test_gemini_a4_evidence_conformance.py",
+          "sha256": "bba447b5100943cea7e26fcf66116b76993eedf53f458551f8b206c39d21f836"
+        },
+        {
+          "bytes": 14696,
+          "relative": "source_snapshot/test_gemini_c02b3_asset_reuse.py",
+          "sha256": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b"
+        },
+        {
+          "bytes": 81325,
+          "relative": "task/chunk_plan.json",
+          "sha256": "3678d0e1e6e50d3ea42e1b698b65641b6bed8602b0b0f45bfb4f5b7c6fbc719a"
+        },
+        {
+          "bytes": 99875,
+          "relative": "task/corrections/identity/r5/vendor/cropandstitch_8584b08d/inpaint_cropandstitch.py",
+          "sha256": "3ac0453d65ec9aff6f176c070d15c73715073c63a530975f5ffa2e1d4143bbf8"
+        },
+        {
+          "bytes": 7610,
+          "relative": "task/corrections/identity/r6/historical_proof_snapshot/evidence/r6/Q11_R6_HARNESS_TEST_RESULTS.json",
+          "sha256": "26445ec5c2e7f97c9ae7985569bef87201622e861e4aa46980828a07eb609258"
+        },
+        {
+          "bytes": 14482,
+          "relative": "task/corrections/identity/r6/historical_proof_snapshot/evidence/r6/q11/Q11_R6_RACE_RESULTS.json",
+          "sha256": "5f2636fe568aa7d7c666c5932dfe3e6da862e3f1bb3fd7eb5b3c1c7bb13717b1"
+        },
+        {
+          "bytes": 28619,
+          "relative": "task/corrections/identity/r6/historical_proof_snapshot/tools/dispatch_long.py",
+          "sha256": "78d1bc1fafc65868e07a5c64687716b1f64d577002e28216437db43265cb16fa"
+        },
+        {
+          "bytes": 25380,
+          "relative": "task/corrections/identity/r6/historical_proof_snapshot/tools/invocation_runtime.py",
+          "sha256": "86fc59156a357da7aa6b8691dfccc983b009548e7af4e2ea9ad9b226336b1775"
+        },
+        {
+          "bytes": 6032,
+          "relative": "task/corrections/identity/r6/historical_proof_snapshot/tools/terminal_contract.py",
+          "sha256": "96ca2f934fe50dfc27dd98cc6b4eb612538044af19afa71daf65d88bf93428bd"
+        },
+        {
+          "bytes": 6493,
+          "relative": "task/corrections/identity/r6/scripts/r6_adapter.py",
+          "sha256": "2b16108c5d92264b5e686d6aedeb5d357fc5ee9539be3cfff3b8979c17f9b5b3"
+        },
+        {
+          "bytes": 4245,
+          "relative": "task/corrections/identity/r6/scripts/r6_assemble.py",
+          "sha256": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910"
+        },
+        {
+          "bytes": 33094,
+          "relative": "task/corrections/identity/r6/scripts/r6_cache.py",
+          "sha256": "e90c24abd1148544785f1855034de6c1d9ce2329ddcf54103331458bcb4cf422"
+        },
+        {
+          "bytes": 10578,
+          "relative": "task/corrections/identity/r6/scripts/r6_common.py",
+          "sha256": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc"
+        },
+        {
+          "bytes": 10858,
+          "relative": "task/corrections/identity/r6/scripts/r6_cotracker.py",
+          "sha256": "1b4c1322ce41d98d5105f1c1707c9d280f29a9ea87a77441a52dd43b1417701c"
+        },
+        {
+          "bytes": 4903,
+          "relative": "task/corrections/identity/r6/scripts/r6_event_contract.py",
+          "sha256": "3a69215d5e58873cabaad7f99e3088ce5e38720ffde5d2140a85b8f28f54a788"
+        },
+        {
+          "bytes": 12644,
+          "relative": "task/corrections/identity/r6/scripts/r6_evidence_contract.py",
+          "sha256": "279a2e3813a879ea533d87acf3a8363e237ad1686754ed6b2b0adef939bbfca2"
+        },
+        {
+          "bytes": 26890,
+          "relative": "task/corrections/identity/r6/scripts/r6_gate.py",
+          "sha256": "5ca0b457c3c202d68d572b29ed995ec8b8cbd08d666e93635b859b81e2f35c41"
+        },
+        {
+          "bytes": 5508,
+          "relative": "task/corrections/identity/r6/scripts/r6_graph.py",
+          "sha256": "832d5d44df486c3f10ec8194e7ab170ac4f5a77af0ab46ede176005904981d21"
+        },
+        {
+          "bytes": 10608,
+          "relative": "task/corrections/identity/r6/scripts/r6_key_recipe.py",
+          "sha256": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9"
+        },
+        {
+          "bytes": 9004,
+          "relative": "task/corrections/identity/r6/scripts/r6_keygen.py",
+          "sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282"
+        },
+        {
+          "bytes": 6467,
+          "relative": "task/corrections/identity/r6/scripts/r6_keygen_asset.py",
+          "sha256": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e"
+        },
+        {
+          "bytes": 9806,
+          "relative": "task/corrections/identity/r6/scripts/r6_ledger.py",
+          "sha256": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200"
+        },
+        {
+          "bytes": 11907,
+          "relative": "task/corrections/identity/r6/scripts/r6_matrix.py",
+          "sha256": "1543a13caf97e5abdbb89d036a7e0ea6459066517bd6e2d1390fae232636e9ab"
+        },
+        {
+          "bytes": 10969,
+          "relative": "task/corrections/identity/r6/scripts/r6_probes.py",
+          "sha256": "739a1eaed3dd8bb200219d2ef93a353d0fa88a95695f9316bfd1c20f02acea15"
+        },
+        {
+          "bytes": 12500,
+          "relative": "task/corrections/identity/r6/scripts/r6_propagate.py",
+          "sha256": "65bd738883d904b64697b1fe410f44b9cddd99dcaaa7e71134d4e1b005eb485c"
+        },
+        {
+          "bytes": 3165,
+          "relative": "task/corrections/identity/r6/scripts/r6_qa.py",
+          "sha256": "220a63574a5fce3b60e4dda3fca7b3779b65a96044199cbfe9f528d26ee58098"
+        },
+        {
+          "bytes": 13054,
+          "relative": "task/corrections/identity/r6/scripts/r6_sam2.py",
+          "sha256": "30c8279602a1355f64beecbb23895bf8a26a1d63fa317e17518466cef2b2bfe6"
+        },
+        {
+          "bytes": 6660,
+          "relative": "task/corrections/identity/r6/scripts/r6_submission_adapter.py",
+          "sha256": "141c372eb2fdf6d65504451d3d67e613f963568cff4a6122e520761d18647cae"
+        },
+        {
+          "bytes": 1469,
+          "relative": "task/corrections/identity/r6/scripts/r6_upload.py",
+          "sha256": "057179db2b539965d88aed3e3f25a0251cf7e6d9959a6f9ce1f7514783e04967"
+        },
+        {
+          "bytes": 7784,
+          "relative": "task/corrections/identity/r6/scripts/r6_vace.py",
+          "sha256": "1f3d8e00062f6c1f22503e17ca7ed9ff1c7f266f45796586ce4458a7eea02140"
+        },
+        {
+          "bytes": 2062,
+          "relative": "task/corrections/identity/r6/scripts/r6_validate_masks.py",
+          "sha256": "d5862e81ae29c95d0254aa7590aaf3d992179e5f35d8fa1e34a98f4bc6e067c4"
+        },
+        {
+          "bytes": 2600,
+          "relative": "task/corrections/identity/r6/scripts/r6_write_reviews.py",
+          "sha256": "c16285f5fb987e866555ae645f163c2ad1737ad27d22b0654acdec945ed27658"
+        },
+        {
+          "bytes": 2439,
+          "relative": "task/corrections/identity/r6/scripts/r6g_blend_review.py",
+          "sha256": "27bf20bcd096b291678743297c20d9751993fcf6b376930d702f6d20b4547270"
+        },
+        {
+          "bytes": 14693,
+          "relative": "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py",
+          "sha256": "351c39e764e53d67466688d9ec032cf9e352167e105ee0be580129f1db38fdf7"
+        },
+        {
+          "bytes": 23075,
+          "relative": "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py",
+          "sha256": "195ead0031f16098087df5f56b5b9ac0e5ddc7a58a733ea6a0e0c22168650219"
+        },
+        {
+          "bytes": 14350,
+          "relative": "task/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py",
+          "sha256": "61bfe454456c452756ddbbf05b55678e146114cb6d2653bff77f4ee92af46aec"
+        },
+        {
+          "bytes": 24521,
+          "relative": "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py",
+          "sha256": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24"
+        },
+        {
+          "bytes": 45622,
+          "relative": "task/corrections/identity/r6/tests/test_g1_r1_correction.py",
+          "sha256": "07f396263ef8d63e30300070a782ae7d32c0e1e067be3206a08551b08fe6995f"
+        },
+        {
+          "bytes": 8695,
+          "relative": "task/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py",
+          "sha256": "cc9fe10b065738dd18fa9c6626f54c4d0da3f996833145fe45db031aaa6a6584"
+        },
+        {
+          "bytes": 9672,
+          "relative": "task/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py",
+          "sha256": "bba447b5100943cea7e26fcf66116b76993eedf53f458551f8b206c39d21f836"
+        },
+        {
+          "bytes": 14696,
+          "relative": "task/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py",
+          "sha256": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b"
+        }
+      ]
+    },
+    "copied_files": [
+      {
+        "bytes": 5661,
+        "relative": "BUILD_SOURCE.py",
+        "sha256": "d5b32c2c0993a0d21a8ce952637687990a5c43f15889b01f8dd826ceef4cf3c1"
+      },
+      {
+        "bytes": 300,
+        "relative": "CHECKPOINT.json",
+        "sha256": "4b392618105dde9b8eb345821c54f72aee560bfa1c7b42b35b97594ff5f0596a"
+      },
+      {
+        "bytes": 39454,
+        "relative": "DIFF.patch",
+        "sha256": "4f0379792c68d8f9221aa82dccebeb989995b86e665f97e69b6656afebf94f03"
+      },
+      {
+        "bytes": 14469,
+        "relative": "MANIFEST.json",
+        "sha256": "4df7de9ccc81dff7a82a9b9d70d90a48eae2bb17cd9ff455748b041f20a0ba82"
+      },
+      {
+        "bytes": 810,
+        "relative": "REPORT_VI.md",
+        "sha256": "6aa10790338e63d6c29873c99b4ffb4e88d01046e5a3462f9a2b072570195d2f"
+      },
+      {
+        "bytes": 1736,
+        "relative": "SOURCE_CHANGES.json",
+        "sha256": "bfc86c1e5ccd8d5f1ab4e5011b0ea6fd1d06b0bffdd560a311802dc6181114c5"
+      },
+      {
+        "bytes": 6493,
+        "relative": "dependencies_snapshot/r6_adapter.py",
+        "sha256": "2b16108c5d92264b5e686d6aedeb5d357fc5ee9539be3cfff3b8979c17f9b5b3"
+      },
+      {
+        "bytes": 10578,
+        "relative": "dependencies_snapshot/r6_common.py",
+        "sha256": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc"
+      },
+      {
+        "bytes": 5508,
+        "relative": "dependencies_snapshot/r6_graph.py",
+        "sha256": "832d5d44df486c3f10ec8194e7ab170ac4f5a77af0ab46ede176005904981d21"
+      },
+      {
+        "bytes": 10969,
+        "relative": "dependencies_snapshot/r6_probes.py",
+        "sha256": "739a1eaed3dd8bb200219d2ef93a353d0fa88a95695f9316bfd1c20f02acea15"
+      },
+      {
+        "bytes": 3165,
+        "relative": "dependencies_snapshot/r6_qa.py",
+        "sha256": "220a63574a5fce3b60e4dda3fca7b3779b65a96044199cbfe9f528d26ee58098"
+      },
+      {
+        "bytes": 13054,
+        "relative": "dependencies_snapshot/r6_sam2.py",
+        "sha256": "30c8279602a1355f64beecbb23895bf8a26a1d63fa317e17518466cef2b2bfe6"
+      },
+      {
+        "bytes": 6573,
+        "relative": "dependencies_snapshot/r6_submission_adapter.py",
+        "sha256": "41da1873bba6e222303a94ebd72194e917d75f1d9b701bf71f2f67f13ae7115a"
+      },
+      {
+        "bytes": 1469,
+        "relative": "dependencies_snapshot/r6_upload.py",
+        "sha256": "057179db2b539965d88aed3e3f25a0251cf7e6d9959a6f9ce1f7514783e04967"
+      },
+      {
+        "bytes": 7784,
+        "relative": "dependencies_snapshot/r6_vace.py",
+        "sha256": "1f3d8e00062f6c1f22503e17ca7ed9ff1c7f266f45796586ce4458a7eea02140"
+      },
+      {
+        "bytes": 2062,
+        "relative": "dependencies_snapshot/r6_validate_masks.py",
+        "sha256": "d5862e81ae29c95d0254aa7590aaf3d992179e5f35d8fa1e34a98f4bc6e067c4"
+      },
+      {
+        "bytes": 2600,
+        "relative": "dependencies_snapshot/r6_write_reviews.py",
+        "sha256": "c16285f5fb987e866555ae645f163c2ad1737ad27d22b0654acdec945ed27658"
+      },
+      {
+        "bytes": 2439,
+        "relative": "dependencies_snapshot/r6g_blend_review.py",
+        "sha256": "27bf20bcd096b291678743297c20d9751993fcf6b376930d702f6d20b4547270"
+      },
+      {
+        "bytes": 4245,
+        "relative": "source_snapshot/r6_assemble.py",
+        "sha256": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910"
+      },
+      {
+        "bytes": 33094,
+        "relative": "source_snapshot/r6_cache.py",
+        "sha256": "e90c24abd1148544785f1855034de6c1d9ce2329ddcf54103331458bcb4cf422"
+      },
+      {
+        "bytes": 10858,
+        "relative": "source_snapshot/r6_cotracker.py",
+        "sha256": "1b4c1322ce41d98d5105f1c1707c9d280f29a9ea87a77441a52dd43b1417701c"
+      },
+      {
+        "bytes": 4903,
+        "relative": "source_snapshot/r6_event_contract.py",
+        "sha256": "3a69215d5e58873cabaad7f99e3088ce5e38720ffde5d2140a85b8f28f54a788"
+      },
+      {
+        "bytes": 12644,
+        "relative": "source_snapshot/r6_evidence_contract.py",
+        "sha256": "279a2e3813a879ea533d87acf3a8363e237ad1686754ed6b2b0adef939bbfca2"
+      },
+      {
+        "bytes": 26890,
+        "relative": "source_snapshot/r6_gate.py",
+        "sha256": "5ca0b457c3c202d68d572b29ed995ec8b8cbd08d666e93635b859b81e2f35c41"
+      },
+      {
+        "bytes": 10608,
+        "relative": "source_snapshot/r6_key_recipe.py",
+        "sha256": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9"
+      },
+      {
+        "bytes": 9004,
+        "relative": "source_snapshot/r6_keygen.py",
+        "sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282"
+      },
+      {
+        "bytes": 6467,
+        "relative": "source_snapshot/r6_keygen_asset.py",
+        "sha256": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e"
+      },
+      {
+        "bytes": 9806,
+        "relative": "source_snapshot/r6_ledger.py",
+        "sha256": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200"
+      },
+      {
+        "bytes": 11907,
+        "relative": "source_snapshot/r6_matrix.py",
+        "sha256": "1543a13caf97e5abdbb89d036a7e0ea6459066517bd6e2d1390fae232636e9ab"
+      },
+      {
+        "bytes": 12500,
+        "relative": "source_snapshot/r6_propagate.py",
+        "sha256": "65bd738883d904b64697b1fe410f44b9cddd99dcaaa7e71134d4e1b005eb485c"
+      },
+      {
+        "bytes": 6660,
+        "relative": "source_snapshot/r6_submission_adapter.py",
+        "sha256": "141c372eb2fdf6d65504451d3d67e613f963568cff4a6122e520761d18647cae"
+      },
+      {
+        "bytes": 24521,
+        "relative": "source_snapshot/test_codex_c02b2_per_actor_reuse.py",
+        "sha256": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24"
+      },
+      {
+        "bytes": 45622,
+        "relative": "source_snapshot/test_g1_r1_correction.py",
+        "sha256": "07f396263ef8d63e30300070a782ae7d32c0e1e067be3206a08551b08fe6995f"
+      },
+      {
+        "bytes": 8695,
+        "relative": "source_snapshot/test_gemini_a3_event_tracking.py",
+        "sha256": "cc9fe10b065738dd18fa9c6626f54c4d0da3f996833145fe45db031aaa6a6584"
+      },
+      {
+        "bytes": 9672,
+        "relative": "source_snapshot/test_gemini_a4_evidence_conformance.py",
+        "sha256": "bba447b5100943cea7e26fcf66116b76993eedf53f458551f8b206c39d21f836"
+      },
+      {
+        "bytes": 14696,
+        "relative": "source_snapshot/test_gemini_c02b3_asset_reuse.py",
+        "sha256": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b"
+      },
+      {
+        "bytes": 81325,
+        "relative": "task/chunk_plan.json",
+        "sha256": "3678d0e1e6e50d3ea42e1b698b65641b6bed8602b0b0f45bfb4f5b7c6fbc719a"
+      },
+      {
+        "bytes": 99875,
+        "relative": "task/corrections/identity/r5/vendor/cropandstitch_8584b08d/inpaint_cropandstitch.py",
+        "sha256": "3ac0453d65ec9aff6f176c070d15c73715073c63a530975f5ffa2e1d4143bbf8"
+      },
+      {
+        "bytes": 7610,
+        "relative": "task/corrections/identity/r6/historical_proof_snapshot/evidence/r6/Q11_R6_HARNESS_TEST_RESULTS.json",
+        "sha256": "26445ec5c2e7f97c9ae7985569bef87201622e861e4aa46980828a07eb609258"
+      },
+      {
+        "bytes": 14482,
+        "relative": "task/corrections/identity/r6/historical_proof_snapshot/evidence/r6/q11/Q11_R6_RACE_RESULTS.json",
+        "sha256": "5f2636fe568aa7d7c666c5932dfe3e6da862e3f1bb3fd7eb5b3c1c7bb13717b1"
+      },
+      {
+        "bytes": 28619,
+        "relative": "task/corrections/identity/r6/historical_proof_snapshot/tools/dispatch_long.py",
+        "sha256": "78d1bc1fafc65868e07a5c64687716b1f64d577002e28216437db43265cb16fa"
+      },
+      {
+        "bytes": 25380,
+        "relative": "task/corrections/identity/r6/historical_proof_snapshot/tools/invocation_runtime.py",
+        "sha256": "86fc59156a357da7aa6b8691dfccc983b009548e7af4e2ea9ad9b226336b1775"
+      },
+      {
+        "bytes": 6032,
+        "relative": "task/corrections/identity/r6/historical_proof_snapshot/tools/terminal_contract.py",
+        "sha256": "96ca2f934fe50dfc27dd98cc6b4eb612538044af19afa71daf65d88bf93428bd"
+      },
+      {
+        "bytes": 6493,
+        "relative": "task/corrections/identity/r6/scripts/r6_adapter.py",
+        "sha256": "2b16108c5d92264b5e686d6aedeb5d357fc5ee9539be3cfff3b8979c17f9b5b3"
+      },
+      {
+        "bytes": 4245,
+        "relative": "task/corrections/identity/r6/scripts/r6_assemble.py",
+        "sha256": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910"
+      },
+      {
+        "bytes": 33094,
+        "relative": "task/corrections/identity/r6/scripts/r6_cache.py",
+        "sha256": "e90c24abd1148544785f1855034de6c1d9ce2329ddcf54103331458bcb4cf422"
+      },
+      {
+        "bytes": 10578,
+        "relative": "task/corrections/identity/r6/scripts/r6_common.py",
+        "sha256": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc"
+      },
+      {
+        "bytes": 10858,
+        "relative": "task/corrections/identity/r6/scripts/r6_cotracker.py",
+        "sha256": "1b4c1322ce41d98d5105f1c1707c9d280f29a9ea87a77441a52dd43b1417701c"
+      },
+      {
+        "bytes": 4903,
+        "relative": "task/corrections/identity/r6/scripts/r6_event_contract.py",
+        "sha256": "3a69215d5e58873cabaad7f99e3088ce5e38720ffde5d2140a85b8f28f54a788"
+      },
+      {
+        "bytes": 12644,
+        "relative": "task/corrections/identity/r6/scripts/r6_evidence_contract.py",
+        "sha256": "279a2e3813a879ea533d87acf3a8363e237ad1686754ed6b2b0adef939bbfca2"
+      },
+      {
+        "bytes": 26890,
+        "relative": "task/corrections/identity/r6/scripts/r6_gate.py",
+        "sha256": "5ca0b457c3c202d68d572b29ed995ec8b8cbd08d666e93635b859b81e2f35c41"
+      },
+      {
+        "bytes": 5508,
+        "relative": "task/corrections/identity/r6/scripts/r6_graph.py",
+        "sha256": "832d5d44df486c3f10ec8194e7ab170ac4f5a77af0ab46ede176005904981d21"
+      },
+      {
+        "bytes": 10608,
+        "relative": "task/corrections/identity/r6/scripts/r6_key_recipe.py",
+        "sha256": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9"
+      },
+      {
+        "bytes": 9004,
+        "relative": "task/corrections/identity/r6/scripts/r6_keygen.py",
+        "sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282"
+      },
+      {
+        "bytes": 6467,
+        "relative": "task/corrections/identity/r6/scripts/r6_keygen_asset.py",
+        "sha256": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e"
+      },
+      {
+        "bytes": 9806,
+        "relative": "task/corrections/identity/r6/scripts/r6_ledger.py",
+        "sha256": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200"
+      },
+      {
+        "bytes": 11907,
+        "relative": "task/corrections/identity/r6/scripts/r6_matrix.py",
+        "sha256": "1543a13caf97e5abdbb89d036a7e0ea6459066517bd6e2d1390fae232636e9ab"
+      },
+      {
+        "bytes": 10969,
+        "relative": "task/corrections/identity/r6/scripts/r6_probes.py",
+        "sha256": "739a1eaed3dd8bb200219d2ef93a353d0fa88a95695f9316bfd1c20f02acea15"
+      },
+      {
+        "bytes": 12500,
+        "relative": "task/corrections/identity/r6/scripts/r6_propagate.py",
+        "sha256": "65bd738883d904b64697b1fe410f44b9cddd99dcaaa7e71134d4e1b005eb485c"
+      },
+      {
+        "bytes": 3165,
+        "relative": "task/corrections/identity/r6/scripts/r6_qa.py",
+        "sha256": "220a63574a5fce3b60e4dda3fca7b3779b65a96044199cbfe9f528d26ee58098"
+      },
+      {
+        "bytes": 13054,
+        "relative": "task/corrections/identity/r6/scripts/r6_sam2.py",
+        "sha256": "30c8279602a1355f64beecbb23895bf8a26a1d63fa317e17518466cef2b2bfe6"
+      },
+      {
+        "bytes": 6660,
+        "relative": "task/corrections/identity/r6/scripts/r6_submission_adapter.py",
+        "sha256": "141c372eb2fdf6d65504451d3d67e613f963568cff4a6122e520761d18647cae"
+      },
+      {
+        "bytes": 1469,
+        "relative": "task/corrections/identity/r6/scripts/r6_upload.py",
+        "sha256": "057179db2b539965d88aed3e3f25a0251cf7e6d9959a6f9ce1f7514783e04967"
+      },
+      {
+        "bytes": 7784,
+        "relative": "task/corrections/identity/r6/scripts/r6_vace.py",
+        "sha256": "1f3d8e00062f6c1f22503e17ca7ed9ff1c7f266f45796586ce4458a7eea02140"
+      },
+      {
+        "bytes": 2062,
+        "relative": "task/corrections/identity/r6/scripts/r6_validate_masks.py",
+        "sha256": "d5862e81ae29c95d0254aa7590aaf3d992179e5f35d8fa1e34a98f4bc6e067c4"
+      },
+      {
+        "bytes": 2600,
+        "relative": "task/corrections/identity/r6/scripts/r6_write_reviews.py",
+        "sha256": "c16285f5fb987e866555ae645f163c2ad1737ad27d22b0654acdec945ed27658"
+      },
+      {
+        "bytes": 2439,
+        "relative": "task/corrections/identity/r6/scripts/r6g_blend_review.py",
+        "sha256": "27bf20bcd096b291678743297c20d9751993fcf6b376930d702f6d20b4547270"
+      },
+      {
+        "bytes": 14693,
+        "relative": "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py",
+        "sha256": "351c39e764e53d67466688d9ec032cf9e352167e105ee0be580129f1db38fdf7"
+      },
+      {
+        "bytes": 23075,
+        "relative": "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py",
+        "sha256": "195ead0031f16098087df5f56b5b9ac0e5ddc7a58a733ea6a0e0c22168650219"
+      },
+      {
+        "bytes": 14350,
+        "relative": "task/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py",
+        "sha256": "61bfe454456c452756ddbbf05b55678e146114cb6d2653bff77f4ee92af46aec"
+      },
+      {
+        "bytes": 24521,
+        "relative": "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py",
+        "sha256": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24"
+      },
+      {
+        "bytes": 45622,
+        "relative": "task/corrections/identity/r6/tests/test_g1_r1_correction.py",
+        "sha256": "07f396263ef8d63e30300070a782ae7d32c0e1e067be3206a08551b08fe6995f"
+      },
+      {
+        "bytes": 8695,
+        "relative": "task/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py",
+        "sha256": "cc9fe10b065738dd18fa9c6626f54c4d0da3f996833145fe45db031aaa6a6584"
+      },
+      {
+        "bytes": 9672,
+        "relative": "task/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py",
+        "sha256": "bba447b5100943cea7e26fcf66116b76993eedf53f458551f8b206c39d21f836"
+      },
+      {
+        "bytes": 14696,
+        "relative": "task/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py",
+        "sha256": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b"
+      },
+      {
+        "bytes": 36971916,
+        "relative": "task/source/source_full.mp4",
+        "sha256": "5a175454c2c2965bac5013a53926e210a9f70a185d802d0f2e0083a6fb399fa2"
+      }
+    ],
+    "origin_after_copy": {
+      "candidate": {
+        "actual_inventory": [
+          "BUILD_SOURCE.py",
+          "CHECKPOINT.json",
+          "DIFF.patch",
+          "MANIFEST.json",
+          "REPORT_VI.md",
+          "SOURCE_CHANGES.json",
+          "dependencies_snapshot/r6_adapter.py",
+          "dependencies_snapshot/r6_common.py",
+          "dependencies_snapshot/r6_graph.py",
+          "dependencies_snapshot/r6_probes.py",
+          "dependencies_snapshot/r6_qa.py",
+          "dependencies_snapshot/r6_sam2.py",
+          "dependencies_snapshot/r6_submission_adapter.py",
+          "dependencies_snapshot/r6_upload.py",
+          "dependencies_snapshot/r6_vace.py",
+          "dependencies_snapshot/r6_validate_masks.py",
+          "dependencies_snapshot/r6_write_reviews.py",
+          "dependencies_snapshot/r6g_blend_review.py",
+          "source_snapshot/r6_assemble.py",
+          "source_snapshot/r6_cache.py",
+          "source_snapshot/r6_cotracker.py",
+          "source_snapshot/r6_event_contract.py",
+          "source_snapshot/r6_evidence_contract.py",
+          "source_snapshot/r6_gate.py",
+          "source_snapshot/r6_key_recipe.py",
+          "source_snapshot/r6_keygen.py",
+          "source_snapshot/r6_keygen_asset.py",
+          "source_snapshot/r6_ledger.py",
+          "source_snapshot/r6_matrix.py",
+          "source_snapshot/r6_propagate.py",
+          "source_snapshot/r6_submission_adapter.py",
+          "source_snapshot/test_codex_c02b2_per_actor_reuse.py",
+          "source_snapshot/test_g1_r1_correction.py",
+          "source_snapshot/test_gemini_a3_event_tracking.py",
+          "source_snapshot/test_gemini_a4_evidence_conformance.py",
+          "source_snapshot/test_gemini_c02b3_asset_reuse.py",
+          "task/chunk_plan.json",
+          "task/corrections/identity/r5/vendor/cropandstitch_8584b08d/inpaint_cropandstitch.py",
+          "task/corrections/identity/r6/historical_proof_snapshot/evidence/r6/Q11_R6_HARNESS_TEST_RESULTS.json",
+          "task/corrections/identity/r6/historical_proof_snapshot/evidence/r6/q11/Q11_R6_RACE_RESULTS.json",
+          "task/corrections/identity/r6/historical_proof_snapshot/tools/dispatch_long.py",
+          "task/corrections/identity/r6/historical_proof_snapshot/tools/invocation_runtime.py",
+          "task/corrections/identity/r6/historical_proof_snapshot/tools/terminal_contract.py",
+          "task/corrections/identity/r6/scripts/r6_adapter.py",
+          "task/corrections/identity/r6/scripts/r6_assemble.py",
+          "task/corrections/identity/r6/scripts/r6_cache.py",
+          "task/corrections/identity/r6/scripts/r6_common.py",
+          "task/corrections/identity/r6/scripts/r6_cotracker.py",
+          "task/corrections/identity/r6/scripts/r6_event_contract.py",
+          "task/corrections/identity/r6/scripts/r6_evidence_contract.py",
+          "task/corrections/identity/r6/scripts/r6_gate.py",
+          "task/corrections/identity/r6/scripts/r6_graph.py",
+          "task/corrections/identity/r6/scripts/r6_key_recipe.py",
+          "task/corrections/identity/r6/scripts/r6_keygen.py",
+          "task/corrections/identity/r6/scripts/r6_keygen_asset.py",
+          "task/corrections/identity/r6/scripts/r6_ledger.py",
+          "task/corrections/identity/r6/scripts/r6_matrix.py",
+          "task/corrections/identity/r6/scripts/r6_probes.py",
+          "task/corrections/identity/r6/scripts/r6_propagate.py",
+          "task/corrections/identity/r6/scripts/r6_qa.py",
+          "task/corrections/identity/r6/scripts/r6_sam2.py",
+          "task/corrections/identity/r6/scripts/r6_submission_adapter.py",
+          "task/corrections/identity/r6/scripts/r6_upload.py",
+          "task/corrections/identity/r6/scripts/r6_vace.py",
+          "task/corrections/identity/r6/scripts/r6_validate_masks.py",
+          "task/corrections/identity/r6/scripts/r6_write_reviews.py",
+          "task/corrections/identity/r6/scripts/r6g_blend_review.py",
+          "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py",
+          "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py",
+          "task/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py",
+          "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py",
+          "task/corrections/identity/r6/tests/test_g1_r1_correction.py",
+          "task/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py",
+          "task/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py",
+          "task/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py"
+        ],
+        "manifest_sha256": "4df7de9ccc81dff7a82a9b9d70d90a48eae2bb17cd9ff455748b041f20a0ba82",
+        "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-04-20261020\\submissions\\g1-candidate-16",
+        "verified_files": [
+          {
+            "bytes": 5661,
+            "relative": "BUILD_SOURCE.py",
+            "sha256": "d5b32c2c0993a0d21a8ce952637687990a5c43f15889b01f8dd826ceef4cf3c1"
+          },
+          {
+            "bytes": 300,
+            "relative": "CHECKPOINT.json",
+            "sha256": "4b392618105dde9b8eb345821c54f72aee560bfa1c7b42b35b97594ff5f0596a"
+          },
+          {
+            "bytes": 39454,
+            "relative": "DIFF.patch",
+            "sha256": "4f0379792c68d8f9221aa82dccebeb989995b86e665f97e69b6656afebf94f03"
+          },
+          {
+            "bytes": 810,
+            "relative": "REPORT_VI.md",
+            "sha256": "6aa10790338e63d6c29873c99b4ffb4e88d01046e5a3462f9a2b072570195d2f"
+          },
+          {
+            "bytes": 1736,
+            "relative": "SOURCE_CHANGES.json",
+            "sha256": "bfc86c1e5ccd8d5f1ab4e5011b0ea6fd1d06b0bffdd560a311802dc6181114c5"
+          },
+          {
+            "bytes": 6493,
+            "relative": "dependencies_snapshot/r6_adapter.py",
+            "sha256": "2b16108c5d92264b5e686d6aedeb5d357fc5ee9539be3cfff3b8979c17f9b5b3"
+          },
+          {
+            "bytes": 10578,
+            "relative": "dependencies_snapshot/r6_common.py",
+            "sha256": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc"
+          },
+          {
+            "bytes": 5508,
+            "relative": "dependencies_snapshot/r6_graph.py",
+            "sha256": "832d5d44df486c3f10ec8194e7ab170ac4f5a77af0ab46ede176005904981d21"
+          },
+          {
+            "bytes": 10969,
+            "relative": "dependencies_snapshot/r6_probes.py",
+            "sha256": "739a1eaed3dd8bb200219d2ef93a353d0fa88a95695f9316bfd1c20f02acea15"
+          },
+          {
+            "bytes": 3165,
+            "relative": "dependencies_snapshot/r6_qa.py",
+            "sha256": "220a63574a5fce3b60e4dda3fca7b3779b65a96044199cbfe9f528d26ee58098"
+          },
+          {
+            "bytes": 13054,
+            "relative": "dependencies_snapshot/r6_sam2.py",
+            "sha256": "30c8279602a1355f64beecbb23895bf8a26a1d63fa317e17518466cef2b2bfe6"
+          },
+          {
+            "bytes": 6573,
+            "relative": "dependencies_snapshot/r6_submission_adapter.py",
+            "sha256": "41da1873bba6e222303a94ebd72194e917d75f1d9b701bf71f2f67f13ae7115a"
+          },
+          {
+            "bytes": 1469,
+            "relative": "dependencies_snapshot/r6_upload.py",
+            "sha256": "057179db2b539965d88aed3e3f25a0251cf7e6d9959a6f9ce1f7514783e04967"
+          },
+          {
+            "bytes": 7784,
+            "relative": "dependencies_snapshot/r6_vace.py",
+            "sha256": "1f3d8e00062f6c1f22503e17ca7ed9ff1c7f266f45796586ce4458a7eea02140"
+          },
+          {
+            "bytes": 2062,
+            "relative": "dependencies_snapshot/r6_validate_masks.py",
+            "sha256": "d5862e81ae29c95d0254aa7590aaf3d992179e5f35d8fa1e34a98f4bc6e067c4"
+          },
+          {
+            "bytes": 2600,
+            "relative": "dependencies_snapshot/r6_write_reviews.py",
+            "sha256": "c16285f5fb987e866555ae645f163c2ad1737ad27d22b0654acdec945ed27658"
+          },
+          {
+            "bytes": 2439,
+            "relative": "dependencies_snapshot/r6g_blend_review.py",
+            "sha256": "27bf20bcd096b291678743297c20d9751993fcf6b376930d702f6d20b4547270"
+          },
+          {
+            "bytes": 4245,
+            "relative": "source_snapshot/r6_assemble.py",
+            "sha256": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910"
+          },
+          {
+            "bytes": 33094,
+            "relative": "source_snapshot/r6_cache.py",
+            "sha256": "e90c24abd1148544785f1855034de6c1d9ce2329ddcf54103331458bcb4cf422"
+          },
+          {
+            "bytes": 10858,
+            "relative": "source_snapshot/r6_cotracker.py",
+            "sha256": "1b4c1322ce41d98d5105f1c1707c9d280f29a9ea87a77441a52dd43b1417701c"
+          },
+          {
+            "bytes": 4903,
+            "relative": "source_snapshot/r6_event_contract.py",
+            "sha256": "3a69215d5e58873cabaad7f99e3088ce5e38720ffde5d2140a85b8f28f54a788"
+          },
+          {
+            "bytes": 12644,
+            "relative": "source_snapshot/r6_evidence_contract.py",
+            "sha256": "279a2e3813a879ea533d87acf3a8363e237ad1686754ed6b2b0adef939bbfca2"
+          },
+          {
+            "bytes": 26890,
+            "relative": "source_snapshot/r6_gate.py",
+            "sha256": "5ca0b457c3c202d68d572b29ed995ec8b8cbd08d666e93635b859b81e2f35c41"
+          },
+          {
+            "bytes": 10608,
+            "relative": "source_snapshot/r6_key_recipe.py",
+            "sha256": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9"
+          },
+          {
+            "bytes": 9004,
+            "relative": "source_snapshot/r6_keygen.py",
+            "sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282"
+          },
+          {
+            "bytes": 6467,
+            "relative": "source_snapshot/r6_keygen_asset.py",
+            "sha256": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e"
+          },
+          {
+            "bytes": 9806,
+            "relative": "source_snapshot/r6_ledger.py",
+            "sha256": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200"
+          },
+          {
+            "bytes": 11907,
+            "relative": "source_snapshot/r6_matrix.py",
+            "sha256": "1543a13caf97e5abdbb89d036a7e0ea6459066517bd6e2d1390fae232636e9ab"
+          },
+          {
+            "bytes": 12500,
+            "relative": "source_snapshot/r6_propagate.py",
+            "sha256": "65bd738883d904b64697b1fe410f44b9cddd99dcaaa7e71134d4e1b005eb485c"
+          },
+          {
+            "bytes": 6660,
+            "relative": "source_snapshot/r6_submission_adapter.py",
+            "sha256": "141c372eb2fdf6d65504451d3d67e613f963568cff4a6122e520761d18647cae"
+          },
+          {
+            "bytes": 24521,
+            "relative": "source_snapshot/test_codex_c02b2_per_actor_reuse.py",
+            "sha256": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24"
+          },
+          {
+            "bytes": 45622,
+            "relative": "source_snapshot/test_g1_r1_correction.py",
+            "sha256": "07f396263ef8d63e30300070a782ae7d32c0e1e067be3206a08551b08fe6995f"
+          },
+          {
+            "bytes": 8695,
+            "relative": "source_snapshot/test_gemini_a3_event_tracking.py",
+            "sha256": "cc9fe10b065738dd18fa9c6626f54c4d0da3f996833145fe45db031aaa6a6584"
+          },
+          {
+            "bytes": 9672,
+            "relative": "source_snapshot/test_gemini_a4_evidence_conformance.py",
+            "sha256": "bba447b5100943cea7e26fcf66116b76993eedf53f458551f8b206c39d21f836"
+          },
+          {
+            "bytes": 14696,
+            "relative": "source_snapshot/test_gemini_c02b3_asset_reuse.py",
+            "sha256": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b"
+          },
+          {
+            "bytes": 81325,
+            "relative": "task/chunk_plan.json",
+            "sha256": "3678d0e1e6e50d3ea42e1b698b65641b6bed8602b0b0f45bfb4f5b7c6fbc719a"
+          },
+          {
+            "bytes": 99875,
+            "relative": "task/corrections/identity/r5/vendor/cropandstitch_8584b08d/inpaint_cropandstitch.py",
+            "sha256": "3ac0453d65ec9aff6f176c070d15c73715073c63a530975f5ffa2e1d4143bbf8"
+          },
+          {
+            "bytes": 7610,
+            "relative": "task/corrections/identity/r6/historical_proof_snapshot/evidence/r6/Q11_R6_HARNESS_TEST_RESULTS.json",
+            "sha256": "26445ec5c2e7f97c9ae7985569bef87201622e861e4aa46980828a07eb609258"
+          },
+          {
+            "bytes": 14482,
+            "relative": "task/corrections/identity/r6/historical_proof_snapshot/evidence/r6/q11/Q11_R6_RACE_RESULTS.json",
+            "sha256": "5f2636fe568aa7d7c666c5932dfe3e6da862e3f1bb3fd7eb5b3c1c7bb13717b1"
+          },
+          {
+            "bytes": 28619,
+            "relative": "task/corrections/identity/r6/historical_proof_snapshot/tools/dispatch_long.py",
+            "sha256": "78d1bc1fafc65868e07a5c64687716b1f64d577002e28216437db43265cb16fa"
+          },
+          {
+            "bytes": 25380,
+            "relative": "task/corrections/identity/r6/historical_proof_snapshot/tools/invocation_runtime.py",
+            "sha256": "86fc59156a357da7aa6b8691dfccc983b009548e7af4e2ea9ad9b226336b1775"
+          },
+          {
+            "bytes": 6032,
+            "relative": "task/corrections/identity/r6/historical_proof_snapshot/tools/terminal_contract.py",
+            "sha256": "96ca2f934fe50dfc27dd98cc6b4eb612538044af19afa71daf65d88bf93428bd"
+          },
+          {
+            "bytes": 6493,
+            "relative": "task/corrections/identity/r6/scripts/r6_adapter.py",
+            "sha256": "2b16108c5d92264b5e686d6aedeb5d357fc5ee9539be3cfff3b8979c17f9b5b3"
+          },
+          {
+            "bytes": 4245,
+            "relative": "task/corrections/identity/r6/scripts/r6_assemble.py",
+            "sha256": "f786f69bd88c2ca6e154e3265d70fa8189caa5e05d8cb5cb17bd530eb2a5a910"
+          },
+          {
+            "bytes": 33094,
+            "relative": "task/corrections/identity/r6/scripts/r6_cache.py",
+            "sha256": "e90c24abd1148544785f1855034de6c1d9ce2329ddcf54103331458bcb4cf422"
+          },
+          {
+            "bytes": 10578,
+            "relative": "task/corrections/identity/r6/scripts/r6_common.py",
+            "sha256": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc"
+          },
+          {
+            "bytes": 10858,
+            "relative": "task/corrections/identity/r6/scripts/r6_cotracker.py",
+            "sha256": "1b4c1322ce41d98d5105f1c1707c9d280f29a9ea87a77441a52dd43b1417701c"
+          },
+          {
+            "bytes": 4903,
+            "relative": "task/corrections/identity/r6/scripts/r6_event_contract.py",
+            "sha256": "3a69215d5e58873cabaad7f99e3088ce5e38720ffde5d2140a85b8f28f54a788"
+          },
+          {
+            "bytes": 12644,
+            "relative": "task/corrections/identity/r6/scripts/r6_evidence_contract.py",
+            "sha256": "279a2e3813a879ea533d87acf3a8363e237ad1686754ed6b2b0adef939bbfca2"
+          },
+          {
+            "bytes": 26890,
+            "relative": "task/corrections/identity/r6/scripts/r6_gate.py",
+            "sha256": "5ca0b457c3c202d68d572b29ed995ec8b8cbd08d666e93635b859b81e2f35c41"
+          },
+          {
+            "bytes": 5508,
+            "relative": "task/corrections/identity/r6/scripts/r6_graph.py",
+            "sha256": "832d5d44df486c3f10ec8194e7ab170ac4f5a77af0ab46ede176005904981d21"
+          },
+          {
+            "bytes": 10608,
+            "relative": "task/corrections/identity/r6/scripts/r6_key_recipe.py",
+            "sha256": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9"
+          },
+          {
+            "bytes": 9004,
+            "relative": "task/corrections/identity/r6/scripts/r6_keygen.py",
+            "sha256": "4082b9d59afbab5416ed6c4784e713612d16553b98a307ccc428a0e7975bd282"
+          },
+          {
+            "bytes": 6467,
+            "relative": "task/corrections/identity/r6/scripts/r6_keygen_asset.py",
+            "sha256": "0e5af533943ce5b408c54187d3ae6dd94d77503aca224138f28b1c14e4b5978e"
+          },
+          {
+            "bytes": 9806,
+            "relative": "task/corrections/identity/r6/scripts/r6_ledger.py",
+            "sha256": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200"
+          },
+          {
+            "bytes": 11907,
+            "relative": "task/corrections/identity/r6/scripts/r6_matrix.py",
+            "sha256": "1543a13caf97e5abdbb89d036a7e0ea6459066517bd6e2d1390fae232636e9ab"
+          },
+          {
+            "bytes": 10969,
+            "relative": "task/corrections/identity/r6/scripts/r6_probes.py",
+            "sha256": "739a1eaed3dd8bb200219d2ef93a353d0fa88a95695f9316bfd1c20f02acea15"
+          },
+          {
+            "bytes": 12500,
+            "relative": "task/corrections/identity/r6/scripts/r6_propagate.py",
+            "sha256": "65bd738883d904b64697b1fe410f44b9cddd99dcaaa7e71134d4e1b005eb485c"
+          },
+          {
+            "bytes": 3165,
+            "relative": "task/corrections/identity/r6/scripts/r6_qa.py",
+            "sha256": "220a63574a5fce3b60e4dda3fca7b3779b65a96044199cbfe9f528d26ee58098"
+          },
+          {
+            "bytes": 13054,
+            "relative": "task/corrections/identity/r6/scripts/r6_sam2.py",
+            "sha256": "30c8279602a1355f64beecbb23895bf8a26a1d63fa317e17518466cef2b2bfe6"
+          },
+          {
+            "bytes": 6660,
+            "relative": "task/corrections/identity/r6/scripts/r6_submission_adapter.py",
+            "sha256": "141c372eb2fdf6d65504451d3d67e613f963568cff4a6122e520761d18647cae"
+          },
+          {
+            "bytes": 1469,
+            "relative": "task/corrections/identity/r6/scripts/r6_upload.py",
+            "sha256": "057179db2b539965d88aed3e3f25a0251cf7e6d9959a6f9ce1f7514783e04967"
+          },
+          {
+            "bytes": 7784,
+            "relative": "task/corrections/identity/r6/scripts/r6_vace.py",
+            "sha256": "1f3d8e00062f6c1f22503e17ca7ed9ff1c7f266f45796586ce4458a7eea02140"
+          },
+          {
+            "bytes": 2062,
+            "relative": "task/corrections/identity/r6/scripts/r6_validate_masks.py",
+            "sha256": "d5862e81ae29c95d0254aa7590aaf3d992179e5f35d8fa1e34a98f4bc6e067c4"
+          },
+          {
+            "bytes": 2600,
+            "relative": "task/corrections/identity/r6/scripts/r6_write_reviews.py",
+            "sha256": "c16285f5fb987e866555ae645f163c2ad1737ad27d22b0654acdec945ed27658"
+          },
+          {
+            "bytes": 2439,
+            "relative": "task/corrections/identity/r6/scripts/r6g_blend_review.py",
+            "sha256": "27bf20bcd096b291678743297c20d9751993fcf6b376930d702f6d20b4547270"
+          },
+          {
+            "bytes": 14693,
+            "relative": "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py",
+            "sha256": "351c39e764e53d67466688d9ec032cf9e352167e105ee0be580129f1db38fdf7"
+          },
+          {
+            "bytes": 23075,
+            "relative": "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py",
+            "sha256": "195ead0031f16098087df5f56b5b9ac0e5ddc7a58a733ea6a0e0c22168650219"
+          },
+          {
+            "bytes": 14350,
+            "relative": "task/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py",
+            "sha256": "61bfe454456c452756ddbbf05b55678e146114cb6d2653bff77f4ee92af46aec"
+          },
+          {
+            "bytes": 24521,
+            "relative": "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py",
+            "sha256": "af7d783ea510bb6323123662122e646da0e2d6c9170dbfb47f8eb0993edd7e24"
+          },
+          {
+            "bytes": 45622,
+            "relative": "task/corrections/identity/r6/tests/test_g1_r1_correction.py",
+            "sha256": "07f396263ef8d63e30300070a782ae7d32c0e1e067be3206a08551b08fe6995f"
+          },
+          {
+            "bytes": 8695,
+            "relative": "task/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py",
+            "sha256": "cc9fe10b065738dd18fa9c6626f54c4d0da3f996833145fe45db031aaa6a6584"
+          },
+          {
+            "bytes": 9672,
+            "relative": "task/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py",
+            "sha256": "bba447b5100943cea7e26fcf66116b76993eedf53f458551f8b206c39d21f836"
+          },
+          {
+            "bytes": 14696,
+            "relative": "task/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py",
+            "sha256": "3d95a5909fd437a4b6aed7122c587b40b2b1fa831382992574bac87867d0f75b"
+          }
+        ]
+      },
+      "source": {
+        "bytes": 36971916,
+        "expected_bytes": 36971916,
+        "path": "C:\\Users\\Admin\\.gemini\\antigravity\\scratch\\goha_mmo_clone\\backend\\downloads\\Tại sao thật tệ khi ĐỨNG TÊN HỘ công ty？.mp4",
+        "sha256": "5a175454c2c2965bac5013a53926e210a9f70a185d802d0f2e0083a6fb399fa2"
+      }
+    },
+    "pilot_path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001",
+    "source": {
+      "bytes": 36971916,
+      "expected_bytes": 36971916,
+      "ffprobe": {
+        "command": [
+          "ffprobe",
+          "-v",
+          "error",
+          "-show_entries",
+          "format=duration:stream=index,codec_type,codec_name,width,height,r_frame_rate,avg_frame_rate",
+          "-of",
+          "json",
+          "C:\\Users\\Admin\\.gemini\\antigravity\\scratch\\goha_mmo_clone\\backend\\downloads\\Tại sao thật tệ khi ĐỨNG TÊN HỘ công ty？.mp4"
+        ],
+        "exit_code": 0,
+        "stderr": "",
+        "stdout": "{\n    \"programs\": [\n\n    ],\n    \"stream_groups\": [\n\n    ],\n    \"streams\": [\n        {\n            \"index\": 0,\n            \"codec_name\": \"h264\",\n            \"codec_type\": \"video\",\n            \"width\": 640,\n            \"height\": 360,\n            \"r_frame_rate\": \"30/1\",\n            \"avg_frame_rate\": \"30/1\"\n        },\n        {\n            \"index\": 1,\n            \"codec_name\": \"aac\",\n            \"codec_type\": \"audio\",\n            \"r_frame_rate\": \"0/0\",\n            \"avg_frame_rate\": \"0/0\"\n        }\n    ],\n    \"format\": {\n        \"duration\": \"1321.215420\"\n    }\n}\n"
+      },
+      "path": "C:\\Users\\Admin\\.gemini\\antigravity\\scratch\\goha_mmo_clone\\backend\\downloads\\Tại sao thật tệ khi ĐỨNG TÊN HỘ công ty？.mp4",
+      "sha256": "5a175454c2c2965bac5013a53926e210a9f70a185d802d0f2e0083a6fb399fa2"
+    }
+  },
+  "outputs": {
+    "actual_receipt": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\receipts\\positive-001.json",
+    "pilot": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001",
+    "receipt": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\receipts\\positive-001.json"
+  },
+  "pins": {
+    "audio": "aac",
+    "candidate_id": "g1-candidate-16",
+    "duration_seconds": "1321.215420",
+    "gate": "G1_APPROVED",
+    "guard_path": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\VERIFICATION.json",
+    "guard_process_path": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-review\\GUARD_PROCESS_RECEIPT.json",
+    "guard_process_sha256": "47d092661bf5c86c61ffc569ffe02861bf60f67ae1d2b608e20debafbee1c47e",
+    "guard_sha256": "ccc43a4808f10772128c490c2aa227d3708714fceaf9f275160e61acb35799a7",
+    "manifest_sha256": "4df7de9ccc81dff7a82a9b9d70d90a48eae2bb17cd9ff455748b041f20a0ba82",
+    "review_path": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-review\\REVIEW_G1_C16_VI.md",
+    "review_sha256": "8a466b1aa14b1a1761b69c75540213bcd631c5add749ea8e9acdceb90f8fcfdc",
+    "source_bytes": 36971916,
+    "source_sha256": "5a175454c2c2965bac5013a53926e210a9f70a185d802d0f2e0083a6fb399fa2",
+    "video": "h264 640x360 30/1"
+  },
+  "process_exit_code": 0,
+  "started_utc": "2026-10-22T04:28:25.484431+00:00",
+  "task_id": "G2-PREP-01",
+  "transport_status": "SELF_VERIFIED_PENDING_ROOT_REVIEW"
+}

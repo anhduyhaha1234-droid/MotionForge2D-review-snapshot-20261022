@@ -1,0 +1,11 @@
+test_01_tampered_source_refused_before_copy (test_recover.RecoveryTests.test_01_tampered_source_refused_before_copy) ... ok
+test_02_path_escape_refused_before_copy (test_recover.RecoveryTests.test_02_path_escape_refused_before_copy) ... ok
+test_03_duplicate_destination_refused_before_copy (test_recover.RecoveryTests.test_03_duplicate_destination_refused_before_copy) ... ok
+test_04_invalid_graph_schema (test_recover.RecoveryTests.test_04_invalid_graph_schema) ... ok
+test_05_positive_exact_sources (test_recover.RecoveryTests.test_05_positive_exact_sources) ... ok
+test_06_no_overwrite (test_recover.RecoveryTests.test_06_no_overwrite) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.079s
+
+OK

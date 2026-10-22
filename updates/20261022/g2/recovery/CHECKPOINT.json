@@ -1,0 +1,39 @@
+{
+  "schema": "motionforge.g2b2.checkpoint.v1",
+  "created_utc": "2026-10-22T04:48:33Z",
+  "task": "G2-B2-RECOVER-01",
+  "owner": "g2_transport_coder",
+  "model": "gpt-6-sol/max",
+  "fallback": "disabled",
+  "gate": "DIAGNOSTIC_APPROVED_G2_MEDIA_BLOCKED",
+  "rules": "RULES_LOADED: full HERMES_AUTOPILOT_RULES.md (996 lines) and AGENTS.md reread this turn",
+  "exclusive_write_set": "C:/Users/Admin/Documents/Codex/g2b2-recovery/",
+  "write_set_preimage": "ABSENT",
+  "immutable_inputs": {
+    "ledger": {"bytes": 36876, "sha256": "1012a20a03b10e91a22e1e7a588e4f6b7f8259599f90f0d4fd855bec9f9c3715"},
+    "atlas": {"bytes": 4120, "sha256": "e847acb8d30f120bcaffb81b1e5048baf3e32280bcd74e9e5688b20a56149a4e"},
+    "graph": {"bytes": 16804, "sha256": "0ff8ed9c92441230d76d42f2d3eeffb92e70f1b8749f663b170d1566a3df7f4e"}
+  },
+  "authority_sha256": {
+    "g2b1_root_review": "99e2f6b3db28c413bc8eefc6483d75e7ad2a42e5723af45e3e56ca55cb72c0ab",
+    "root_checkpoint": "a7e24fca7281808917694d73285eb2ef34c0aa6b2d987018962a22ad99e9b484",
+    "r6_packet_manifest": "0f8785bda71c1fd8ea2374da7adc10eee5775eaeb79ad00ceaae586e691ae5e8",
+    "graph_provenance": "7b536305b093b10827a5e4732de6ff23057e830e433d2e5b6c209000b82f1971",
+    "pilot_manifest": "4df7de9ccc81dff7a82a9b9d70d90a48eae2bb17cd9ff455748b041f20a0ba82"
+  },
+  "acceptance": "Exact-byte vault of three named files, provenance/schema audit, negative tamper/path/duplicate tests, postimage hash, raw receipt, self-review; stop for root review",
+  "forbidden": "No writes to g2p01 pilot, C16, MAIN, owner_work, original source, runtime/leases, g2b1, or other agents; no storyboard fixture, CAST PNG repin, GPU, service, inference, render, or G2 PASS",
+  "terminal": {
+    "status": "SELF_VERIFIED_PENDING_ROOT_REVIEW",
+    "vault": "C:/Users/Admin/Documents/Codex/g2b2-recovery/vault-g2b2-001",
+    "receipt": "C:/Users/Admin/Documents/Codex/g2b2-recovery/RECEIPT.json",
+    "receipt_sha256": "d0ff8b2a33b3fd6bacb4839d0c633a0293f8a5a0d70f7f8b3093a4d8e79da70e",
+    "tests": "6/6 PASS; python -B -m unittest -v test_recover; exit 0",
+    "copy_command": "python -B recover.py --vault C:/Users/Admin/Documents/Codex/g2b2-recovery/vault-g2b2-001 --receipt C:/Users/Admin/Documents/Codex/g2b2-recovery/RECEIPT.json; exit 0",
+    "copied_files": 3,
+    "graph_runtime_compatibility": "UNVERIFIED",
+    "media": "NOT_RUN",
+    "live_jobs_started": 0
+  },
+  "next": "Stop for independent root review of exact vault and receipt. No media work until separate gate."
+}

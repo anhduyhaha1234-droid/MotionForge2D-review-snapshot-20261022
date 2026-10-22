@@ -1,0 +1,374 @@
+{
+  "schema": "motionforge.g1-submission-guard.v1",
+  "candidate": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-04-20261020\\submissions\\g1-candidate-16",
+  "output": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2",
+  "verified_utc": "2026-10-22T04:01:10.935467+00:00",
+  "environment": {
+    "python": "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "PYTHONPATH": "REMOVED",
+    "PYTEST_ADDOPTS": "REMOVED",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "C02B1_WORKER_DIR": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\c02b1-worker"
+  },
+  "inventory_before": {
+    "manifest_sha256": "4df7de9ccc81dff7a82a9b9d70d90a48eae2bb17cd9ff455748b041f20a0ba82",
+    "declared_files": 74,
+    "actual_files": 74,
+    "issues": [],
+    "ok": true
+  },
+  "inventory_after": {
+    "manifest_sha256": "4df7de9ccc81dff7a82a9b9d70d90a48eae2bb17cd9ff455748b041f20a0ba82",
+    "declared_files": 74,
+    "actual_files": 74,
+    "issues": [],
+    "ok": true
+  },
+  "runs": [
+    {
+      "suite": "task/corrections/identity/r6/tests/test_g1_r1_correction.py",
+      "collection": {
+        "command": [
+          "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "--collect-only",
+          "-q",
+          "-p",
+          "no:cacheprovider",
+          "task/corrections/identity/r6/tests/test_g1_r1_correction.py"
+        ],
+        "cwd": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\candidate_copy",
+        "started_utc": "2026-10-22T04:00:26.966418+00:00",
+        "ended_utc": "2026-10-22T04:00:27.726996+00:00",
+        "duration_seconds": 0.75,
+        "exit_code": 0,
+        "stdout": "task/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m01_asset_missing_grey_ref_rejected\ntask/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m02_asset_graph_sampler_and_wrong_grey_rejected\ntask/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m03_m04_asset_actual_contract_and_controls\ntask/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m05_cotracker_cli_help\ntask/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m06_cotracker_invalid_tensor_matrix\ntask/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m07_cotracker_window_coverage_and_actual_cli\ntask/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m08_m09_propagate_upstream_naming_and_failures\ntask/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m10_m11_event_transitions_and_strict_types\ntask/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m12_m14_matrix_and_submission_adapter\ntask/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m15_m16_manifest_relative_filtering\ntask/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m17_q11_historical_proof_binding\ntask/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m18_q11_historical_and_multiprocess_race_barrier\ntask/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m19_m20_candidate_identity_and_state\ntask/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m21_adapter_rejects_unrun_test_and_claimed_shots\ntask/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m22_actual_runner_and_54_dependency_coverage\ntask/corrections/identity/r6/tests/test_g1_r1_correction.py::G1R1CorrectionMatrixTests::test_m23_nested_q05_runner_is_blocked\n\n16 tests collected in 0.11s\n",
+        "stderr": ""
+      },
+      "test": {
+        "command": [
+          "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "-q",
+          "-p",
+          "no:cacheprovider",
+          "task/corrections/identity/r6/tests/test_g1_r1_correction.py"
+        ],
+        "cwd": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\candidate_copy",
+        "started_utc": "2026-10-22T04:00:27.726996+00:00",
+        "ended_utc": "2026-10-22T04:00:41.902177+00:00",
+        "duration_seconds": 14.188,
+        "exit_code": 0,
+        "stdout": "................                                                         [100%]\n16 passed in 13.54s\n",
+        "stderr": ""
+      },
+      "exit_code": 0
+    },
+    {
+      "suite": "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py",
+      "collection": {
+        "command": [
+          "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "--collect-only",
+          "-q",
+          "-p",
+          "no:cacheprovider",
+          "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py"
+        ],
+        "cwd": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\candidate_copy",
+        "started_utc": "2026-10-22T04:00:41.902177+00:00",
+        "ended_utc": "2026-10-22T04:00:42.545493+00:00",
+        "duration_seconds": 0.64,
+        "exit_code": 0,
+        "stdout": "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_bad_json_and_non_object_are_gate_blocks\ntask/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_blend_producer_schema_and_full_mapping\ntask/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_changed_dependency_blocks\ntask/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_current_producer_record_passes\ntask/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_expected_and_reviewed_frame_identity\ntask/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_extra_recorded_and_current_dependencies_block\ntask/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_false_and_numeric_dependency_values_do_not_bind\ntask/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_missing_current_dependency_blocks\ntask/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_missing_recorded_dependency_blocks\ntask/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_nonstandard_json_constant_is_malformed\ntask/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_numeric_sha_and_missing_verdict_are_gate_blocks\ntask/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_other_path_with_identical_bytes_blocks\ntask/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_real_assembler_main_rejects_before_copy_and_encoder\ntask/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_real_gate_assemble_binds_review_to_consumed_blend_frames\ntask/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_required_field_types_and_frames\ntask/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_review_identity_must_match_requested_kind_and_name\ntask/corrections/identity/r6/tests/test_codex_c01_review_binding.py::ReviewBindingTests::test_stale_artifact_blocks\n\n17 tests collected in 0.02s\n",
+        "stderr": ""
+      },
+      "test": {
+        "command": [
+          "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "-q",
+          "-p",
+          "no:cacheprovider",
+          "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py"
+        ],
+        "cwd": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\candidate_copy",
+        "started_utc": "2026-10-22T04:00:42.545493+00:00",
+        "ended_utc": "2026-10-22T04:00:43.638919+00:00",
+        "duration_seconds": 1.094,
+        "exit_code": 0,
+        "stdout": ".................                                          [100%]\n17 passed, 14 subtests passed in 0.47s\n",
+        "stderr": ""
+      },
+      "exit_code": 0
+    },
+    {
+      "suite": "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py",
+      "collection": {
+        "command": [
+          "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "--collect-only",
+          "-q",
+          "-p",
+          "no:cacheprovider",
+          "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py"
+        ],
+        "cwd": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\candidate_copy",
+        "started_utc": "2026-10-22T04:00:43.638919+00:00",
+        "ended_utc": "2026-10-22T04:00:44.282624+00:00",
+        "duration_seconds": 0.641,
+        "exit_code": 0,
+        "stdout": "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_consumer_identity_matrix_with_resealed_digest\ntask/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_digest_and_same_size_file_mutation_matrix\ntask/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_empty_record_fails_closed\ntask/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_gate_key_blocks_missing_deps\ntask/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_invalid_json_blocks_real_key_consumer\ntask/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_nested_json_matrix_through_loader_verify_key_and_skip\ntask/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_omitted_source_and_hash_block_real_consumer_and_assembler\ntask/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_parsed_nested_deps_block_actual_assembly_before_copy\ntask/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_real_builder_record_verifies\ntask/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_record_shape_and_type_matrix\ntask/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_skip_keeps_current_settings_comparison\ntask/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_strict_json_loader_matrix\ntask/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py::DependencyVerificationTests::test_valid_record_through_real_key_and_assembly_gates\n\n13 tests collected in 0.02s\n",
+        "stderr": ""
+      },
+      "test": {
+        "command": [
+          "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "-q",
+          "-p",
+          "no:cacheprovider",
+          "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py"
+        ],
+        "cwd": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\candidate_copy",
+        "started_utc": "2026-10-22T04:00:44.282624+00:00",
+        "ended_utc": "2026-10-22T04:00:45.456027+00:00",
+        "duration_seconds": 1.172,
+        "exit_code": 0,
+        "stdout": ".............                                                 [100%]\n13 passed, 83 subtests passed in 0.55s\n",
+        "stderr": ""
+      },
+      "exit_code": 0
+    },
+    {
+      "suite": "task/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py",
+      "collection": {
+        "command": [
+          "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "--collect-only",
+          "-q",
+          "-p",
+          "no:cacheprovider",
+          "task/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py"
+        ],
+        "cwd": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\candidate_copy",
+        "started_utc": "2026-10-22T04:00:45.456027+00:00",
+        "ended_utc": "2026-10-22T04:00:46.107883+00:00",
+        "duration_seconds": 0.656,
+        "exit_code": 0,
+        "stdout": "task/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py::StagedSourceTests::test_failed_extractor_and_empty_result_preserve_previous_pair\ntask/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py::StagedSourceTests::test_first_extract_and_unchanged_reuse\ntask/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py::StagedSourceTests::test_legacy_empty_missing_and_copied_receipts\ntask/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py::StagedSourceTests::test_malformed_and_wrong_receipts_reextract\ntask/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py::StagedSourceTests::test_missing_unreadable_source_and_invalid_frames\ntask/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py::StagedSourceTests::test_partial_publication_cannot_bless_old_receipt\ntask/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py::StagedSourceTests::test_real_ffmpeg_30fps_640x360_frame_mapping_and_replacement\ntask/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py::StagedSourceTests::test_same_path_same_size_source_mutation_reextracts\ntask/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py::StagedSourceTests::test_source_change_during_extraction_preserves_previous_pair\ntask/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py::StagedSourceTests::test_source_path_frame_output_and_restore_invalidate\n\n10 tests collected in 0.03s\n",
+        "stderr": ""
+      },
+      "test": {
+        "command": [
+          "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "-q",
+          "-p",
+          "no:cacheprovider",
+          "task/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py"
+        ],
+        "cwd": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\candidate_copy",
+        "started_utc": "2026-10-22T04:00:46.107883+00:00",
+        "ended_utc": "2026-10-22T04:00:47.305890+00:00",
+        "duration_seconds": 1.187,
+        "exit_code": 0,
+        "stdout": "..........                                            [100%]\n10 passed, 19 subtests passed in 0.57s\n",
+        "stderr": ""
+      },
+      "exit_code": 0
+    },
+    {
+      "suite": "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py",
+      "collection": {
+        "command": [
+          "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "--collect-only",
+          "-q",
+          "-p",
+          "no:cacheprovider",
+          "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py"
+        ],
+        "cwd": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\candidate_copy",
+        "started_utc": "2026-10-22T04:00:47.305890+00:00",
+        "ended_utc": "2026-10-22T04:00:49.724862+00:00",
+        "duration_seconds": 2.422,
+        "exit_code": 0,
+        "stdout": "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::SingleActorVerifiedReuseTests::test_p1_missing_review_blocks_skip\ntask/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::SingleActorVerifiedReuseTests::test_p1_single_actor_replay_unchanged\ntask/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::SingleActorVerifiedReuseTests::test_p1_wrong_review_blocks_skip\ntask/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::SingleActorVerifiedReuseTests::test_p2_effective_settings_independent_mutations\ntask/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::SingleActorVerifiedReuseTests::test_p3_same_path_same_size_mutations_and_restores\ntask/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::SingleActorVerifiedReuseTests::test_p4_malformed_and_truncated_records\ntask/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::SingleActorVerifiedReuseTests::test_p5_blank_edit_failure_does_not_publish_deps\ntask/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::SingleActorVerifiedReuseTests::test_p5_bound_check_failure_does_not_publish_deps\ntask/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::SingleActorVerifiedReuseTests::test_p5_injected_generation_failure_does_not_publish_deps\ntask/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::SingleActorVerifiedReuseTests::test_p5_standalone_gate_import\ntask/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::MultiActorVerifiedReuseTests::test_p1_multi_actor_replay_unchanged\ntask/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::MultiActorVerifiedReuseTests::test_p3_multi_actor_nonfirst_graph_mutation\ntask/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::NoVisibleActorVerifiedReuseTests::test_no_visible_actor_positive\ntask/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py::FullyCoveredActorReuseTests::test_fully_covered_actor_fewer_graphs\n\n14 tests collected in 1.54s\n",
+        "stderr": ""
+      },
+      "test": {
+        "command": [
+          "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "-q",
+          "-p",
+          "no:cacheprovider",
+          "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py"
+        ],
+        "cwd": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\candidate_copy",
+        "started_utc": "2026-10-22T04:00:49.724862+00:00",
+        "ended_utc": "2026-10-22T04:00:54.881670+00:00",
+        "duration_seconds": 5.156,
+        "exit_code": 0,
+        "stdout": "..............                                                           [100%]\n14 passed in 4.26s\n",
+        "stderr": ""
+      },
+      "exit_code": 0
+    },
+    {
+      "suite": "task/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py",
+      "collection": {
+        "command": [
+          "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "--collect-only",
+          "-q",
+          "-p",
+          "no:cacheprovider",
+          "task/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py"
+        ],
+        "cwd": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\candidate_copy",
+        "started_utc": "2026-10-22T04:00:54.881670+00:00",
+        "ended_utc": "2026-10-22T04:00:57.313741+00:00",
+        "duration_seconds": 2.438,
+        "exit_code": 0,
+        "stdout": "task/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py::AssetRestyleVerifiedReuseTests::test_t1_asset_restyle_replay_unchanged\ntask/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py::AssetRestyleVerifiedReuseTests::test_t1_missing_review_blocks_skip\ntask/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py::AssetRestyleVerifiedReuseTests::test_t1_wrong_review_blocks_skip\ntask/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py::AssetRestyleVerifiedReuseTests::test_t2_same_path_same_size_mutations_and_restores\ntask/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py::AssetRestyleVerifiedReuseTests::test_t2_settings_and_storyboard_mutations\ntask/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py::AssetRestyleVerifiedReuseTests::test_t4_legacy_v3_asset_record_denial\ntask/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py::AssetRestyleVerifiedReuseTests::test_t5_blank_edit_failure_does_not_publish_deps\ntask/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py::AssetRestyleVerifiedReuseTests::test_t5_injected_post_failure_does_not_publish_deps\ntask/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py::AssetBlackPassthroughTests::test_t3_black_passthrough_rejects_non_flat_source\ntask/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py::AssetBlackPassthroughTests::test_t3_black_passthrough_replay_unchanged\n\n10 tests collected in 1.53s\n",
+        "stderr": ""
+      },
+      "test": {
+        "command": [
+          "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "-q",
+          "-p",
+          "no:cacheprovider",
+          "task/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py"
+        ],
+        "cwd": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\candidate_copy",
+        "started_utc": "2026-10-22T04:00:57.313741+00:00",
+        "ended_utc": "2026-10-22T04:01:01.203734+00:00",
+        "duration_seconds": 3.891,
+        "exit_code": 0,
+        "stdout": "..........                                                               [100%]\n10 passed in 3.01s\n",
+        "stderr": ""
+      },
+      "exit_code": 0
+    },
+    {
+      "suite": "task/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py",
+      "collection": {
+        "command": [
+          "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "--collect-only",
+          "-q",
+          "-p",
+          "no:cacheprovider",
+          "task/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py"
+        ],
+        "cwd": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\candidate_copy",
+        "started_utc": "2026-10-22T04:01:01.203734+00:00",
+        "ended_utc": "2026-10-22T04:01:03.605155+00:00",
+        "duration_seconds": 2.406,
+        "exit_code": 0,
+        "stdout": "task/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py::EventTimingAndTrackingTests::test_e1_event_fids_mapping_both_f_and_frame\ntask/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py::EventTimingAndTrackingTests::test_e2_plan_runs_split_at_hard_cuts\ntask/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py::EventTimingAndTrackingTests::test_e3_child_outcome_nonzero_rc_fails\ntask/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py::EventTimingAndTrackingTests::test_e3_child_outcome_partial_frames_fails\ntask/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py::EventTimingAndTrackingTests::test_e4_cotracker_tensor_contract\ntask/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py::EventTimingAndTrackingTests::test_e5_cotracker_strip_pastes_both_frames\ntask/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py::EventTimingAndTrackingTests::test_e6_crop_stitch_landmark_roundtrip_and_bounds\n\n7 tests collected in 1.53s\n",
+        "stderr": ""
+      },
+      "test": {
+        "command": [
+          "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "-q",
+          "-p",
+          "no:cacheprovider",
+          "task/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py"
+        ],
+        "cwd": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\candidate_copy",
+        "started_utc": "2026-10-22T04:01:03.605155+00:00",
+        "ended_utc": "2026-10-22T04:01:08.069434+00:00",
+        "duration_seconds": 4.453,
+        "exit_code": 0,
+        "stdout": ".......                                                                  [100%]\n7 passed in 3.32s\n",
+        "stderr": ""
+      },
+      "exit_code": 0
+    },
+    {
+      "suite": "task/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py",
+      "collection": {
+        "command": [
+          "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "--collect-only",
+          "-q",
+          "-p",
+          "no:cacheprovider",
+          "task/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py"
+        ],
+        "cwd": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\candidate_copy",
+        "started_utc": "2026-10-22T04:01:08.069434+00:00",
+        "ended_utc": "2026-10-22T04:01:08.703505+00:00",
+        "duration_seconds": 0.641,
+        "exit_code": 0,
+        "stdout": "task/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py::EvidenceGateConformanceTests::test_g1_engineering_batch_conformance\ntask/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py::EvidenceGateConformanceTests::test_invalid_matrix_keys_and_values\ntask/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py::EvidenceGateConformanceTests::test_r6_assemble_pre_encoder_gate_blocked\ntask/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py::EvidenceGateConformanceTests::test_r6_matrix_compute_rows\ntask/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py::EvidenceGateConformanceTests::test_t13_two_controller_barrier_race_simulation\n\n5 tests collected in 0.02s\n",
+        "stderr": ""
+      },
+      "test": {
+        "command": [
+          "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "-q",
+          "-p",
+          "no:cacheprovider",
+          "task/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py"
+        ],
+        "cwd": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\candidate_copy",
+        "started_utc": "2026-10-22T04:01:08.703505+00:00",
+        "ended_utc": "2026-10-22T04:01:10.902596+00:00",
+        "duration_seconds": 2.203,
+        "exit_code": 0,
+        "stdout": ".....                                                                    [100%]\n5 passed in 1.55s\n",
+        "stderr": ""
+      },
+      "exit_code": 0
+    }
+  ],
+  "overall_verdict": "VERIFY_PASS"
+}

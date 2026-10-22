@@ -1,0 +1,80 @@
+{
+  "cases": [
+    {
+      "actual_block": "INPUT_MISSING",
+      "case": "missing_source",
+      "expected_block": "INPUT_MISSING",
+      "pilot_exists": false,
+      "receipt": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\negative-repros\\23798ccf12e1\\missing-source-receipt.json",
+      "stdout": "BLOCKED exit=2 receipt=C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\negative-repros\\23798ccf12e1\\missing-source-receipt.json",
+      "transport_exit": 2
+    },
+    {
+      "actual_block": "SOURCE_SHA_MISMATCH",
+      "case": "tampered_source_same_size",
+      "expected_block": "SOURCE_SHA_MISMATCH",
+      "pilot_exists": false,
+      "receipt": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\negative-repros\\23798ccf12e1\\tampered-source-receipt.json",
+      "stdout": "BLOCKED exit=2 receipt=C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\negative-repros\\23798ccf12e1\\tampered-source-receipt.json",
+      "transport_exit": 2
+    },
+    {
+      "actual_block": "CANDIDATE_INVENTORY_MISMATCH",
+      "case": "candidate_extra_pyc",
+      "expected_block": "CANDIDATE_INVENTORY_MISMATCH",
+      "pilot_exists": false,
+      "receipt": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\negative-repros\\23798ccf12e1\\extra-inventory-receipt.json",
+      "stdout": "BLOCKED exit=2 receipt=C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\negative-repros\\23798ccf12e1\\extra-inventory-receipt.json",
+      "transport_exit": 2
+    },
+    {
+      "actual_block": "CANDIDATE_INVENTORY_MISMATCH",
+      "case": "candidate_missing_file",
+      "expected_block": "CANDIDATE_INVENTORY_MISMATCH",
+      "pilot_exists": false,
+      "receipt": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\negative-repros\\23798ccf12e1\\missing-inventory-receipt.json",
+      "stdout": "BLOCKED exit=2 receipt=C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\negative-repros\\23798ccf12e1\\missing-inventory-receipt.json",
+      "transport_exit": 2
+    },
+    {
+      "actual_block": "CANDIDATE_BYTES_MISMATCH",
+      "case": "candidate_tampered_same_size",
+      "expected_block": "CANDIDATE_BYTES_MISMATCH",
+      "pilot_exists": false,
+      "receipt": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\negative-repros\\23798ccf12e1\\tampered-inventory-receipt.json",
+      "stdout": "BLOCKED exit=2 receipt=C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\negative-repros\\23798ccf12e1\\tampered-inventory-receipt.json",
+      "transport_exit": 2
+    },
+    {
+      "actual_block": "OUTPUT_PATH_ESCAPE",
+      "case": "pilot_path_escape",
+      "expected_block": "OUTPUT_PATH_ESCAPE",
+      "pilot_exists": false,
+      "receipt": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\negative-repros\\23798ccf12e1\\escape-receipt.json",
+      "stdout": "BLOCKED exit=2 receipt=C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\negative-repros\\23798ccf12e1\\escape-receipt.json",
+      "transport_exit": 2
+    },
+    {
+      "actual_block": "PILOT_EXISTS",
+      "case": "duplicate_pilot",
+      "expected_block": "PILOT_EXISTS",
+      "receipt": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\negative-repros\\23798ccf12e1\\duplicate-pilot-receipt.json",
+      "sentinel": "KEEP\n",
+      "stdout": "BLOCKED exit=2 receipt=C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\negative-repros\\23798ccf12e1\\duplicate-pilot-receipt.json",
+      "transport_exit": 2
+    },
+    {
+      "actual_block": "RECEIPT_EXISTS",
+      "case": "duplicate_receipt",
+      "expected_block": "RECEIPT_EXISTS",
+      "pilot_exists": false,
+      "receipt": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\receipts\\blocked-fe8088aa8f3949ebbfa67d0ee6e9eb39.json",
+      "stdout": "BLOCKED exit=2 receipt=C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\receipts\\blocked-fe8088aa8f3949ebbfa67d0ee6e9eb39.json",
+      "transport_exit": 2
+    }
+  ],
+  "command": "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\negative_repros.py",
+  "created_utc": "2026-10-22T04:28:20.300001+00:00",
+  "result": "NEGATIVE_CHALLENGES_PASSED",
+  "task_id": "G2-PREP-01"
+}

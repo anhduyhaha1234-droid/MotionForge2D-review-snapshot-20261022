@@ -1,0 +1,14 @@
+test_absent_runtime_python (test_readiness.ReadinessTests.test_absent_runtime_python) ... ok
+test_bad_plan_gap (test_readiness.ReadinessTests.test_bad_plan_gap) ... ok
+test_candidate_inventory_extra (test_readiness.ReadinessTests.test_candidate_inventory_extra) ... ok
+test_duplicate_and_escape_paths (test_readiness.ReadinessTests.test_duplicate_and_escape_paths) ... ok
+test_missing_cast (test_readiness.ReadinessTests.test_missing_cast) ... ok
+test_positive_synthetic (test_readiness.ReadinessTests.test_positive_synthetic) ... ok
+test_source_mismatch (test_readiness.ReadinessTests.test_source_mismatch) ... ok
+test_tampered_cast (test_readiness.ReadinessTests.test_tampered_cast) ... ok
+test_tiny_fixture_rejected (test_readiness.ReadinessTests.test_tiny_fixture_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.965s
+
+OK

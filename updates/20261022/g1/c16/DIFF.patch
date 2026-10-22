@@ -1,0 +1,703 @@
+--- C11/task/corrections/identity/r6/scripts/r6_evidence_contract.py
++++ new/task/corrections/identity/r6/scripts/r6_evidence_contract.py
+@@ -13,6 +13,9 @@
+ import os
+ import shutil
+ import subprocess
++import sys
++import tempfile
++import xml.etree.ElementTree as ET
+ from pathlib import Path
+ from typing import Any
+ from PIL import Image
+@@ -120,6 +123,52 @@
+         return False, f"deps verification error: {exc}"
+ 
+ 
++def run_q05_tests(test_file: Path, invocation_id: str) -> dict[str, Any]:
++    """Run the exact test bytes and derive results from pytest's process and JUnit XML."""
++    if not test_file.is_file() or not invocation_id:
++        raise ValueError("Q05 test file or invocation missing")
++    if os.environ.get("R6_Q05_RUNNER_ACTIVE"):
++        raise RuntimeError("nested Q05 runner invocation blocked")
++    with tempfile.TemporaryDirectory(prefix="r6-q05-") as temp_dir:
++        junit = Path(temp_dir) / "junit.xml"
++        command = [sys.executable, "-m", "pytest", "-q", "-p", "no:cacheprovider",
++                   f"--junitxml={junit}", str(test_file)]
++        runner_env = os.environ.copy()
++        runner_env["R6_Q05_RUNNER_ACTIVE"] = invocation_id
++        result = subprocess.run(command, cwd=str(test_file.parent), env=runner_env, capture_output=True,
++                                text=True, encoding="utf-8", errors="replace",
++                                timeout=120, check=False)
++        cases: list[str] = []
++        failed = 0
++        skipped = 0
++        if junit.is_file():
++            root = ET.parse(junit).getroot()
++            for case in root.iter("testcase"):
++                name = case.get("name")
++                if not name:
++                    raise ValueError("Q05 JUnit testcase has no name")
++                cases.append(f"{test_file.name}::{name}")
++                failed += any(case.find(tag) is not None for tag in ("failure", "error"))
++                skipped += case.find("skipped") is not None
++        return {
++            "schema": "r6-q05-pytest-v1",
++            "invocation_id": invocation_id,
++            "test_file": str(test_file.resolve()),
++            "test_file_sha256": sha256_file(test_file),
++            "verifier": "pytest-junit-v1",
++            "exit_code": result.returncode,
++            "tests_run": len(cases),
++            "node_ids": sorted(cases),
++            "failed": failed,
++            "skipped": skipped,
++            "stdout_sha256": hashlib.sha256(result.stdout.encode("utf-8")).hexdigest(),
++            "stderr_sha256": hashlib.sha256(result.stderr.encode("utf-8")).hexdigest(),
++            "stdout": result.stdout,
++            "stderr": result.stderr,
++            "all_passed": result.returncode == 0 and bool(cases) and failed == 0 and skipped == 0,
++        }
++
++
+ def stage_and_publish_matrix(rows: dict[str, Any], manifest_data: dict[str, Any], ns_dir: Path, batch_mode: str = "engineering") -> None:
+     """Atomic stage-validate-publish protocol ensuring manifest hashes match published matrix exactly.
+     
+@@ -183,7 +232,9 @@
+         # 4. Validate gate on staged matrix and manifest items
+         verdicts = {q: v["verdict"] for q, v in rows.items()}
+         proof = {q: v.get("proof", {}) for q, v in rows.items() if "proof" in v}
+-        G.gate_batch_conformance({"matrix": verdicts, "evidence": rows, "proof": proof, "artifacts": updated_items}, mode=batch_mode)
++        G.gate_batch_conformance({"invocation_id": ns_dir.name, "invocation_dir": str(ns_dir.resolve()), "matrix": verdicts,
++                                  "evidence": rows, "proof": proof,
++                                  "artifacts": updated_items}, mode=batch_mode)
+         
+         # 5. Publish atomically
+         shutil.move(str(matrix_tmp), str(matrix_final))
+--- C11/task/corrections/identity/r6/scripts/r6_gate.py
++++ new/task/corrections/identity/r6/scripts/r6_gate.py
+@@ -389,75 +389,77 @@
+         if not isinstance(q05_p, dict) or not isinstance(q07_p, dict):
+             raise GateBlock("ENGINEERING_BATCH_PROOF_INVALID: Q05 and Q07 proof must be dict objects")
+ 
+-        # Q05 proof validation: reject self-labels without verifiable evidence
+-        q05_path = q05_p.get("artifact_path") or q05_p.get("test_file")
+-        q05_hash = q05_p.get("artifact_hash") or q05_p.get("test_file_sha256")
+-        q05_inv = q05_p.get("current_invocation") or q05_p.get("invocation_id")
+-        q05_verifier = q05_p.get("actual_verifier") or q05_p.get("verifier")
+-        q05_ok = bool(
+-            q05_p.get("all_passed") is True
+-            and q05_p.get("exit_code") == 0
+-            and q05_p.get("tests_run", 0) > 0
+-            and q05_p.get("node_ids")
+-            and q05_path
+-            and q05_hash
+-            and q05_inv
+-            and q05_verifier
+-        )
+-        if not q05_ok:
+-            raise GateBlock(
+-                "ENGINEERING_BATCH_PROOF_INVALID: Q05 proof must bind artifact path/hash, current invocation, and actual verifier"
+-            )
+-
+-        # Q05 disk check: artifact must exist on disk and match sha256
+-        p5 = Path(q05_path)
+-        if not p5.is_file():
+-            if not p5.is_absolute() and (K.R6 / q05_path).is_file():
+-                p5 = K.R6 / q05_path
+-            else:
+-                raise GateBlock(f"ENGINEERING_BATCH_PROOF_INVALID: Q05 artifact file does not exist on disk: {q05_path}")
++        import r6_evidence_contract as EVC
++        invocation = record.get("invocation_id")
++        invocation_dir = record.get("invocation_dir")
++        if (not isinstance(invocation, str) or not invocation or
++                not isinstance(invocation_dir, str) or
++                Path(invocation_dir).resolve().name != invocation):
++            raise GateBlock("ENGINEERING_BATCH_PROOF_INVALID: invocation identity missing/mismatch")
++        q05_path = q05_p.get("artifact_path")
++        q05_hash = q05_p.get("artifact_hash")
++        rec_path = q05_p.get("receipt_path")
++        rec_hash = q05_p.get("receipt_hash")
++        if not all(isinstance(x, str) and x for x in (q05_path, q05_hash, rec_path, rec_hash)):
++            raise GateBlock("ENGINEERING_BATCH_PROOF_INVALID: Q05 test and runner receipt required")
++        p5 = Path(q05_path).resolve()
++        pr = Path(rec_path).resolve()
++        if not p5.is_relative_to(Path(invocation_dir).resolve()) or not pr.is_relative_to(Path(invocation_dir).resolve()):
++            raise GateBlock("ENGINEERING_BATCH_PROOF_INVALID: Q05 artifacts outside invocation")
++        if not p5.is_file() or EVC.sha256_file(p5) != q05_hash:
++            raise GateBlock("ENGINEERING_BATCH_PROOF_INVALID: Q05 test bytes mismatch")
++        if not pr.is_file() or EVC.sha256_file(pr) != rec_hash:
++            raise GateBlock("ENGINEERING_BATCH_PROOF_INVALID: Q05 runner receipt bytes mismatch")
+         try:
+-            actual_hash5 = hashlib.sha256(p5.read_bytes()).hexdigest()
+-        except Exception as e:
+-            raise GateBlock(f"ENGINEERING_BATCH_PROOF_INVALID: Q05 artifact cannot be read: {e}")
+-        if actual_hash5 != q05_hash:
+-            raise GateBlock(f"ENGINEERING_BATCH_PROOF_INVALID: Q05 artifact hash mismatch: {actual_hash5} vs {q05_hash}")
+-
+-        # Q05 receipt check if receipt_path is provided
+-        q05_rec = q05_p.get("receipt_path")
+-        q05_rec_hash = q05_p.get("receipt_hash")
+-        if q05_rec:
+-            pr = Path(q05_rec)
+-            if not pr.is_file():
+-                if not pr.is_absolute() and (K.R6 / q05_rec).is_file():
+-                    pr = K.R6 / q05_rec
+-                else:
+-                    raise GateBlock(f"ENGINEERING_BATCH_PROOF_INVALID: Q05 receipt file does not exist on disk: {q05_rec}")
+-            if q05_rec_hash:
+-                try:
+-                    actual_rhash = hashlib.sha256(pr.read_bytes()).hexdigest()
+-                except Exception as e:
+-                    raise GateBlock(f"ENGINEERING_BATCH_PROOF_INVALID: Q05 receipt cannot be read: {e}")
+-                if actual_rhash != q05_rec_hash:
+-                    raise GateBlock(f"ENGINEERING_BATCH_PROOF_INVALID: Q05 receipt hash mismatch: {actual_rhash} vs {q05_rec_hash}")
++            receipt = json.loads(pr.read_text(encoding="utf-8"))
++        except (ValueError, OSError) as exc:
++            raise GateBlock(f"ENGINEERING_BATCH_PROOF_INVALID: Q05 runner receipt unreadable: {exc}")
++        required = ("schema", "invocation_id", "test_file", "test_file_sha256",
++                    "verifier", "exit_code", "tests_run", "node_ids", "failed",
++                    "skipped", "all_passed", "stdout", "stderr", "stdout_sha256",
++                    "stderr_sha256")
++        if (not isinstance(receipt, dict) or
++                any(key not in receipt for key in required) or
++                receipt["schema"] != "r6-q05-pytest-v1" or
++                receipt["invocation_id"] != invocation or
++                receipt["test_file"] != str(p5) or
++                receipt["test_file_sha256"] != q05_hash or
++                receipt["verifier"] != "pytest-junit-v1" or
++                not isinstance(receipt["stdout"], str) or
++                not isinstance(receipt["stderr"], str) or
++                hashlib.sha256(receipt["stdout"].encode("utf-8")).hexdigest() != receipt["stdout_sha256"] or
++                hashlib.sha256(receipt["stderr"].encode("utf-8")).hexdigest() != receipt["stderr_sha256"]):
++            raise GateBlock("ENGINEERING_BATCH_PROOF_INVALID: Q05 runner receipt binding invalid")
++        # A self-written receipt is insufficient: re-execute the exact test bytes.
++        try:
++            observed = EVC.run_q05_tests(p5, invocation)
++        except Exception as exc:
++            raise GateBlock(f"ENGINEERING_BATCH_PROOF_INVALID: Q05 test execution failed: {exc}")
++        if EVC.sha256_file(p5) != q05_hash or EVC.sha256_file(pr) != rec_hash:
++            raise GateBlock("ENGINEERING_BATCH_PROOF_INVALID: Q05 evidence changed during verification")
++        compared = ("schema", "invocation_id", "test_file", "test_file_sha256",
++                    "verifier", "exit_code", "tests_run", "node_ids", "failed",
++                    "skipped", "all_passed")
++        if (not observed["all_passed"] or
++                any(receipt[key] != observed[key] for key in compared) or
++                q05_p.get("current_invocation") != invocation or
++                q05_p.get("actual_verifier") != observed["verifier"] or
++                q05_p.get("exit_code") != observed["exit_code"] or
++                q05_p.get("tests_run") != observed["tests_run"] or
++                q05_p.get("node_ids") != observed["node_ids"] or
++                q05_p.get("all_passed") is not True):
++            raise GateBlock("ENGINEERING_BATCH_PROOF_INVALID: Q05 claims differ from actual pytest run")
+ 
+         # Q07 proof validation: reject self-labels and incomplete coverage
+-        q07_inv = q07_p.get("current_invocation") or q07_p.get("invocation_id")
+-        q07_verifier = q07_p.get("actual_verifier") or q07_p.get("verifier")
+-        q07_count = q07_p.get("verified_deps_count", 0)
+-        req_shots = set(q07_p.get("required_shots") or [])
+-        ver_shots = set(q07_p.get("verified_shots") or [])
+-        q07_ok = bool(
+-            q07_inv
+-            and q07_verifier
+-            and q07_count > 0
+-            and req_shots
+-            and req_shots.issubset(ver_shots)
+-        )
+-        if not q07_ok:
+-            raise GateBlock(
+-                "ENGINEERING_BATCH_PROOF_INVALID: Q07 proof must bind artifact path/hash, current invocation, actual verifier, and full coverage of required scope shots"
+-            )
++        required_list = q07_p.get("required_shots")
++        deps_to_check = q07_p.get("valid_deps")
++        if (q07_p.get("current_invocation") != invocation or
++                q07_p.get("actual_verifier") != "r6-cache-v4" or
++                not isinstance(required_list, list) or not required_list or
++                len(required_list) != len(set(required_list)) or
++                not isinstance(deps_to_check, list) or not deps_to_check):
++            raise GateBlock("ENGINEERING_BATCH_PROOF_INVALID: Q07 complete dependency proof required")
++        req_shots = set(required_list)
+ 
+         # Q07 plan scope check: required_shots must match plan scope
+         if hasattr(K, "PLAN") and isinstance(K.PLAN, dict) and K.PLAN:
+@@ -470,21 +472,38 @@
+                     f"ENGINEERING_BATCH_PROOF_INVALID: Q07 required_shots {sorted(req_shots)} does not match plan scope {sorted(expected_shots)}"
+                 )
+ 
+-        # Q07 disk check for sample/valid deps if provided
+-        deps_to_check = q07_p.get("valid_deps") or q07_p.get("samples") or []
+-        if isinstance(deps_to_check, list):
+-            for dep in deps_to_check:
+-                if isinstance(dep, dict) and "path" in dep:
+-                    dp = Path(dep["path"])
+-                    if not dp.is_file():
+-                        if not dp.is_absolute() and (K.R6 / dep["path"]).is_file():
+-                            dp = K.R6 / dep["path"]
+-                        else:
+-                            raise GateBlock(f"ENGINEERING_BATCH_PROOF_INVALID: Q07 dep file does not exist on disk: {dep['path']}")
+-                    if "hash" in dep:
+-                        d_hash = hashlib.sha256(dp.read_bytes()).hexdigest()
+-                        if d_hash != dep["hash"]:
+-                            raise GateBlock(f"ENGINEERING_BATCH_PROOF_INVALID: Q07 dep hash mismatch: {d_hash} vs {dep['hash']}")
++        # Every declared shot needs a current, byte-verified v4 record.
++        seen_paths: set[Path] = set()
++        verified: set[str] = set()
++        for dep in deps_to_check:
++            if not isinstance(dep, dict) or not all(k in dep for k in ("path", "hash", "shot", "fid", "kind")):
++                raise GateBlock("ENGINEERING_BATCH_PROOF_INVALID: Q07 dependency entry incomplete")
++            shot, fid = dep["shot"], dep["fid"]
++            if shot not in req_shots or type(fid) is not int or fid < 1:
++                raise GateBlock("ENGINEERING_BATCH_PROOF_INVALID: Q07 dependency shot/frame invalid")
++            dp = Path(dep["path"]).resolve()
++            expected = (K.R6 / "work" / shot / f"f_{fid:04d}.deps.json").resolve()
++            if dp != expected or dp in seen_paths or not dp.is_file():
++                raise GateBlock("ENGINEERING_BATCH_PROOF_INVALID: Q07 dependency path missing/duplicate")
++            seen_paths.add(dp)
++            if EVC.sha256_file(dp) != dep["hash"]:
++                raise GateBlock("ENGINEERING_BATCH_PROOF_INVALID: Q07 dependency hash mismatch")
++            try:
++                payload = json.loads(dp.read_text(encoding="utf-8"))
++            except (ValueError, OSError) as exc:
++                raise GateBlock(f"ENGINEERING_BATCH_PROOF_INVALID: Q07 dependency unreadable: {exc}")
++            if payload.get("shot") != shot or payload.get("fid") != fid or payload.get("kind") != dep["kind"]:
++                raise GateBlock("ENGINEERING_BATCH_PROOF_INVALID: Q07 dependency identity mismatch")
++            valid, why = EVC.validate_deps_evidence(dp, shot, fid)
++            if not valid:
++                raise GateBlock(f"ENGINEERING_BATCH_PROOF_INVALID: Q07 dependency validator: {why}")
++            if EVC.sha256_file(dp) != dep["hash"]:
++                raise GateBlock("ENGINEERING_BATCH_PROOF_INVALID: Q07 dependency changed during verification")
++            verified.add(shot)
++        if (verified != req_shots or
++                q07_p.get("verified_shots") != sorted(verified) or
++                q07_p.get("verified_deps_count") != len(deps_to_check)):
++            raise GateBlock("ENGINEERING_BATCH_PROOF_INVALID: Q07 claimed coverage differs from verified records")
+     elif mode == "final":
+         bad = {k: v for k, v in matrix.items() if v != "PASS"}
+         if bad:
+--- C11/task/corrections/identity/r6/scripts/r6_matrix.py
++++ new/task/corrections/identity/r6/scripts/r6_matrix.py
+@@ -4,7 +4,6 @@
+ Emits R6_MATRIX_EVIDENCE.json + R6G_MANIFEST.json (recursive; manifest hash AFTER final record).
+ """
+ from __future__ import annotations
+-import ast
+ import hashlib
+ import json
+ import os
+@@ -60,23 +59,17 @@
+     # Q04 ghost/props/background
+     R("Q04", "ghost/props/background", "UNKNOWN", "S33/S61 portraits + S73 book + S57 car re-render under review")
+ 
+-    # Q05 semantic gate actual consumers: requires verified parseable test file + gate receipt with all_passed, exit_code 0, node_ids
++    # Q05: derive proof from an actual test process, never from a caller-written PASS.
+     q05_v = "UNKNOWN"
+     q05_proof = None
+     test_file = NS / "tests/test_r6g_microfixes.py"
+     q05_rec = NS / "receipts/R6_GATE_EVIDENCE.json"
+-    if test_file.exists() and test_file.stat().st_size > 100:
++    if test_file.is_file():
+         try:
+-            ast.parse(test_file.read_text(encoding="utf-8"))
+-            test_syntax_ok = True
+-        except Exception:
+-            test_syntax_ok = False
+-        if test_syntax_ok:
+-            ok_rec, g_data, _ = EVC.validate_evidence_json(q05_rec, {"all_passed", "tests_run", "exit_code", "test_file_sha256", "node_ids"})
+-            if (ok_rec and g_data.get("all_passed") is True and
+-                    g_data.get("tests_run", 0) > 0 and g_data.get("exit_code") == 0 and
+-                    g_data.get("test_file_sha256") == EVC.sha256_file(test_file) and
+-                    isinstance(g_data.get("node_ids"), list) and len(g_data["node_ids"]) > 0):
++            g_data = EVC.run_q05_tests(test_file, NS.name)
++            q05_rec.parent.mkdir(parents=True, exist_ok=True)
++            q05_rec.write_text(json.dumps(g_data, ensure_ascii=False, indent=2), encoding="utf-8")
++            if g_data["all_passed"]:
+                 q05_v = "PASS"
+                 q05_proof = {
+                     "artifact_path": str(test_file),
+@@ -91,9 +84,11 @@
+                     "node_ids": g_data["node_ids"],
+                     "current_invocation": NS.name,
+                     "invocation_id": NS.name,
+-                    "actual_verifier": "ast.parse+validate_evidence_json",
+-                    "verifier": "ast.parse+validate_evidence_json",
++                    "actual_verifier": g_data["verifier"],
++                    "verifier": g_data["verifier"],
+                 }
++        except Exception:
++            q05_v = "UNKNOWN"
+     R("Q05", "semantic gate actual consumers", q05_v,
+       "gate mandatory fields + gate_assemble wired + encoder-spy negative tests", proof=q05_proof)
+ 
+@@ -121,6 +116,7 @@
+                         "path": str(dp),
+                         "hash": EVC.sha256_file(dp),
+                         "shot": shot,
++                        "fid": dep_obj.get("fid"),
+                         "kind": kind
+                     })
+                 except Exception:
+@@ -157,6 +153,7 @@
+             scope_name = "engineering_fixture"
+ 
+     req_set = set(required_shots)
++    valid_deps = [d for d in valid_deps if d["shot"] in req_set]
+     ver_set = verified_shots & req_set
+     all_required_verified = bool(req_set and req_set.issubset(verified_shots) and len(valid_deps) >= len(req_set))
+     if all_required_verified:
+@@ -173,9 +170,10 @@
+         "kinds": sorted(valid_kinds),
+         "current_invocation": NS.name,
+         "invocation_id": NS.name,
+-        "actual_verifier": "r6_cache.verify_complete_*_deps",
+-        "verifier": "r6_cache.verify_complete_*_deps",
++        "actual_verifier": "r6-cache-v4",
++        "verifier": "r6-cache-v4",
+         "missing_shots": sorted(list(req_set - verified_shots)),
++        "valid_deps": valid_deps,
+         "samples": valid_deps[:5]
+     }
+     R("Q07", "dependency/cache consumed bytes", q07_v,
+--- C11/task/corrections/identity/r6/scripts/r6_submission_adapter.py
++++ new/task/corrections/identity/r6/scripts/r6_submission_adapter.py
+@@ -108,6 +108,8 @@
+     # 3. Validate gate_batch_conformance with wired artifacts and proof
+     try:
+         G.gate_batch_conformance({
++            "invocation_id": ns.name,
++            "invocation_dir": str(ns.resolve()),
+             "matrix": verdicts,
+             "evidence": rows,
+             "proof": proof,
+--- C11/task/corrections/identity/r6/tests/test_g1_r1_correction.py
++++ new/task/corrections/identity/r6/tests/test_g1_r1_correction.py
+@@ -40,7 +40,7 @@
+ MODULES = (
+     "r6_common", "r6_cache", "r6_cotracker", "r6_propagate",
+     "r6_ledger", "r6_gate", "r6_matrix", "r6_key_recipe",
+-    "r6_event_contract", "r6_evidence_contract"
++    "r6_event_contract", "r6_evidence_contract", "r6_submission_adapter"
+ )
+ 
+ 
+@@ -460,33 +460,49 @@
+         self.assertIn("ENGINEERING_BATCH_PROOF_INVALID", str(cm.exception))
+ 
+         # Valid engineering proof with artifact path/hash, invocation, verifier, and full coverage must PASS
+-        real_test_file = self.root / "test.py"
+-        real_test_file.write_bytes(b"# valid test content for gate proof\n")
++        invocation_dir = self.root / "test_inv"
++        invocation_dir.mkdir()
++        real_test_file = invocation_dir / "test.py"
++        real_test_file.write_text("def test_actual():\n    assert True\n", encoding="utf-8")
+         real_test_hash = hashlib.sha256(real_test_file.read_bytes()).hexdigest()
++        run = self.evidence_contract.run_q05_tests(real_test_file, "test_inv")
++        receipt = invocation_dir / "q05_receipt.json"
++        receipt.write_text(json.dumps(run), encoding="utf-8")
++        deps = []
++        for shot in ("S0021", "S0035"):
++            path = self.r6 / "work" / shot / "f_0001.deps.json"
++            path.parent.mkdir(parents=True, exist_ok=True)
++            path.write_text(json.dumps({"kind": "r6_key_deps_v4_asset", "shot": shot, "fid": 1}), encoding="utf-8")
++            deps.append({"path": str(path), "hash": hashlib.sha256(path.read_bytes()).hexdigest(),
++                         "shot": shot, "fid": 1, "kind": "r6_key_deps_v4_asset"})
+ 
+         valid_eng_proof = {
+             "Q05": {
+                 "artifact_path": str(real_test_file),
+                 "artifact_hash": real_test_hash,
++                "receipt_path": str(receipt),
++                "receipt_hash": hashlib.sha256(receipt.read_bytes()).hexdigest(),
+                 "current_invocation": "test_inv",
+-                "actual_verifier": "ast.parse+validate_evidence_json",
++                "actual_verifier": "pytest-junit-v1",
+                 "exit_code": 0,
+                 "all_passed": True,
+-                "tests_run": 5,
+-                "node_ids": ["test_1"]
++                "tests_run": 1,
++                "node_ids": ["test.py::test_actual"]
+             },
+             "Q07": {
+                 "current_invocation": "test_inv",
+-                "actual_verifier": "r6_cache.verify_complete_*_deps",
++                "actual_verifier": "r6-cache-v4",
+                 "verified_deps_count": 2,
+                 "required_shots": ["S0021", "S0035"],
+-                "verified_shots": ["S0021", "S0035"]
++                "verified_shots": ["S0021", "S0035"],
++                "valid_deps": deps,
+             }
+         }
+-        res_eng = self.gate.gate_batch_conformance({
+-            "matrix": eng_matrix,
+-            "proof": valid_eng_proof
+-        }, mode="engineering")
++        with mock.patch.object(self.evidence_contract, "validate_deps_evidence", return_value=(True, "ok")):
++            res_eng = self.gate.gate_batch_conformance({
++                "invocation_id": "test_inv", "invocation_dir": str(invocation_dir),
++                "matrix": eng_matrix, "proof": valid_eng_proof
++            }, mode="engineering")
+         self.assertTrue(res_eng, "valid engineering proof must be accepted by engineering gate")
+ 
+         # Q07 coverage: 1 of 54 shots with verified dep must NOT pass
+@@ -548,6 +564,194 @@
+             # Same size tamper must return False
+             ok = SA.validate_and_submit(mode="engineering", manifest_path=man_p)
+             self.assertFalse(ok, "submission adapter must reject same-size hash tamper")
++
++    def test_m21_adapter_rejects_unrun_test_and_claimed_shots(self):
++        """A hashed test file and 54 shot names are not execution or dependency evidence."""
++        ns = self.root / "fake-invocation"
++        ns.mkdir()
++        test_file = ns / "test_unrun.py"
++        test_file.write_text("def test_never_ran():\n    assert True\n", encoding="utf-8")
++        digest = hashlib.sha256(test_file.read_bytes()).hexdigest()
++        verdicts = {f"Q{i:02d}": "UNKNOWN" for i in range(1, 13)}
++        verdicts.update(Q05="PASS", Q07="PASS")
++        proof = {
++            "Q05": {"artifact_path": str(test_file), "artifact_hash": digest,
++                    "current_invocation": ns.name, "actual_verifier": "made-up",
++                    "all_passed": True, "exit_code": 0, "tests_run": 1,
++                    "node_ids": ["test_never_ran"]},
++            "Q07": {"current_invocation": ns.name, "actual_verifier": "made-up",
++                    "required_shots": sorted(self.k.PLAN),
++                    "verified_shots": sorted(self.k.PLAN),
++                    "verified_deps_count": len(self.k.PLAN), "valid_deps": []},
++        }
++        rows = {q: {"verdict": verdicts[q], "proof": proof.get(q, {})}
++                for q in verdicts}
++        (ns / "R6_MATRIX_EVIDENCE.json").write_text(json.dumps({"rows": rows}), encoding="utf-8")
++        (ns / "R6G_MANIFEST.json").write_text(json.dumps({"items": [{
++            "absolute_path": str(test_file), "path": test_file.name,
++            "bytes": test_file.stat().st_size, "sha256": digest,
++        }]}), encoding="utf-8")
++        adapter = importlib.import_module("r6_submission_adapter")
++        terminal = ns / "terminal.json"
++        with mock.patch.dict(os.environ, {"R6_INVOCATION_DIR": str(ns)}):
++            self.assertFalse(adapter.validate_and_submit(
++                terminal_path=terminal, manifest_path=ns / "R6G_MANIFEST.json"))
++        self.assertFalse(terminal.exists())
++
++    def test_m22_actual_runner_and_54_dependency_coverage(self):
++        """Exercise the adapter boundary, including stale, missing and tampered proof."""
++        ns = self.root / "actual-invocation"
++        ns.mkdir()
++        test_file = ns / "test_semantic.py"
++        test_file.write_text("def test_semantic():\n    assert True\n", encoding="utf-8")
++        run = self.evidence_contract.run_q05_tests(test_file, ns.name)
++        self.assertTrue(run["all_passed"])
++        receipt_path = ns / "runner_receipt.json"
++        receipt_path.write_text(json.dumps(run), encoding="utf-8")
++        plan = {f"S{i:04d}": {"unit_id": f"S{i:04d}",
++                              "start_frame": (i - 21) * 2, "frames": 2}
++                for i in range(21, 75)}
++        self.k.PLAN = plan
++        ledger_rows = []
++        deps = []
++        for shot in sorted(plan):
++            start = plan[shot]["start_frame"]
++            ledger_rows.append({"shot": shot, "zero_explicit": True, "n": 2,
++                                "src": [start, start + 2], "actors": [],
++                                "events": [], "contacts": []})
++            (self.r6 / "storyboard" / f"{shot}.json").write_text(
++                json.dumps({"shot": shot, "zero_explicit": True, "n": 2, "keys": []}),
++                encoding="utf-8")
++        (self.r6 / "source_actor_ledger.jsonl").write_text(
++            "\n".join(json.dumps(row) for row in ledger_rows) + "\n", encoding="utf-8")
++        for shot in sorted(plan):
++            path = self.r6 / "work" / shot / "f_0001.deps.json"
++            path.parent.mkdir(parents=True, exist_ok=True)
++            staged = path.parent / "f_0001_src.png"
++            Image.new("RGB", (640, 360), (0, 0, 0)).save(staged)
++            stage_receipt = staged.with_name(staged.name + ".stage.json")
++            stage_receipt.write_text(json.dumps({
++                "contract": self.k._STAGE_CONTRACT,
++                "source_path": str(self.k.SRC.resolve()),
++                "source_sha256": self.k.sha(self.k.SRC),
++                "sid": shot, "gframe": plan[shot]["start_frame"],
++                "output_path": str(staged.resolve()),
++                "output_sha256": self.k.sha(staged),
++                "output_size": staged.stat().st_size,
++            }), encoding="utf-8")
++            recipe = self.recipe.current_asset_recipe(shot, 1, self.model)
++            dep_payload = self.cache.build_complete_asset_deps(
++                shot, 1, recipe, {"staged_source": staged,
++                                  "stage_receipt": stage_receipt},
++                "asset_black_passthrough")
++            path.write_text(json.dumps(dep_payload), encoding="utf-8")
++            deps.append({"path": str(path), "hash": hashlib.sha256(path.read_bytes()).hexdigest(),
++                         "shot": shot, "fid": 1, "kind": "r6_key_deps_v4_asset"})
++        verdicts = {f"Q{i:02d}": "UNKNOWN" for i in range(1, 13)}
++        verdicts.update(Q05="PASS", Q07="PASS")
++        proof = {
++            "Q05": {
++                "artifact_path": str(test_file), "artifact_hash": run["test_file_sha256"],
++                "receipt_path": str(receipt_path),
++                "receipt_hash": hashlib.sha256(receipt_path.read_bytes()).hexdigest(),
++                "current_invocation": ns.name, "actual_verifier": run["verifier"],
++                "all_passed": True, "exit_code": 0, "tests_run": run["tests_run"],
++                "node_ids": run["node_ids"],
++            },
++            "Q07": {
++                "current_invocation": ns.name, "actual_verifier": "r6-cache-v4",
++                "required_shots": sorted(plan), "verified_shots": sorted(plan),
++                "verified_deps_count": len(deps), "valid_deps": deps,
++            },
++        }
++        record = {"invocation_id": ns.name, "invocation_dir": str(ns),
++                  "matrix": verdicts, "proof": proof}
++        rows = {q: {"verdict": verdicts[q], "proof": proof.get(q, {})} for q in verdicts}
++        matrix_path = ns / "R6_MATRIX_EVIDENCE.json"
++        matrix_path.write_text(json.dumps({"rows": rows}), encoding="utf-8")
++        manifest_path = ns / "R6G_MANIFEST.json"
++        manifest_path.write_text(json.dumps({"items": [{
++            "absolute_path": str(test_file), "path": test_file.name,
++            "bytes": test_file.stat().st_size, "sha256": run["test_file_sha256"],
++        }]}), encoding="utf-8")
++        adapter = importlib.import_module("r6_submission_adapter")
++        terminal = ns / "terminal.json"
++        with mock.patch.dict(os.environ, {"R6_INVOCATION_DIR": str(ns)}):
++            self.assertTrue(adapter.validate_and_submit(
++                terminal_path=terminal, manifest_path=manifest_path))
++            self.assertEqual(json.loads(terminal.read_text())["status"], "TASK_SUBMITTED")
++            terminal.unlink()
++
++            # The caller cannot substitute an old invocation, verifier or node list.
++            for key, bad_value in (("current_invocation", "stale-invocation"),
++                                   ("actual_verifier", "made-up"),
++                                   ("node_ids", []),
++                                   ("artifact_path", str(ns / "missing-test.py"))):
++                original = rows["Q05"]["proof"][key]
++                rows["Q05"]["proof"][key] = bad_value
++                matrix_path.write_text(json.dumps({"rows": rows}), encoding="utf-8")
++                self.assertFalse(adapter.validate_and_submit(
++                    terminal_path=terminal, manifest_path=manifest_path), key)
++                self.assertFalse(terminal.exists())
++                rows["Q05"]["proof"][key] = original
++            for key, bad_value in (("current_invocation", "stale-invocation"),
++                                   ("actual_verifier", "made-up")):
++                original = rows["Q07"]["proof"][key]
++                rows["Q07"]["proof"][key] = bad_value
++                matrix_path.write_text(json.dumps({"rows": rows}), encoding="utf-8")
++                self.assertFalse(adapter.validate_and_submit(
++                    terminal_path=terminal, manifest_path=manifest_path), key)
++                self.assertFalse(terminal.exists())
++                rows["Q07"]["proof"][key] = original
++            matrix_path.write_text(json.dumps({"rows": rows}), encoding="utf-8")
++
++            # A matching file hash alone must not replace the v4 consumed-byte validator.
++            with mock.patch.object(self.evidence_contract, "validate_deps_evidence",
++                                   return_value=(False, "consumed bytes changed")):
++                self.assertFalse(adapter.validate_and_submit(
++                    terminal_path=terminal, manifest_path=manifest_path))
++            self.assertFalse(terminal.exists())
++
++            # One missing record out of 54 must block before terminal publication.
++            rows["Q07"]["proof"]["valid_deps"] = deps[:-1]
++            matrix_path.write_text(json.dumps({"rows": rows}), encoding="utf-8")
++            self.assertFalse(adapter.validate_and_submit(
++                terminal_path=terminal, manifest_path=manifest_path))
++            self.assertFalse(terminal.exists())
++            rows["Q07"]["proof"]["valid_deps"] = deps
++
++            # Same-size changed bytes invalidate the declared SHA.
++            dep_path = Path(deps[0]["path"])
++            old = dep_path.read_bytes()
++            dep_path.write_bytes(old.replace(b"asset", b"other"))
++            matrix_path.write_text(json.dumps({"rows": rows}), encoding="utf-8")
++            self.assertFalse(adapter.validate_and_submit(
++                terminal_path=terminal, manifest_path=manifest_path))
++            self.assertFalse(terminal.exists())
++            dep_path.write_bytes(old)
++
++            # A fabricated successful receipt for a failing test is rejected on replay.
++            test_file.write_text("def test_semantic():\n    assert False\n", encoding="utf-8")
++            new_sha = hashlib.sha256(test_file.read_bytes()).hexdigest()
++            forged = dict(run, test_file_sha256=new_sha)
++            receipt_path.write_text(json.dumps(forged), encoding="utf-8")
++            rows["Q05"]["proof"]["artifact_hash"] = new_sha
++            rows["Q05"]["proof"]["receipt_hash"] = hashlib.sha256(receipt_path.read_bytes()).hexdigest()
++            matrix_path.write_text(json.dumps({"rows": rows}), encoding="utf-8")
++            manifest_path.write_text(json.dumps({"items": [{
++                "absolute_path": str(test_file), "path": test_file.name,
++                "bytes": test_file.stat().st_size, "sha256": new_sha,
++            }]}), encoding="utf-8")
++            self.assertFalse(adapter.validate_and_submit(
++                terminal_path=terminal, manifest_path=manifest_path))
++            self.assertFalse(terminal.exists())
++
++    def test_m23_nested_q05_runner_is_blocked(self):
++        test_file = self.root / "test_nested.py"
++        test_file.write_text("def test_ok():\n    assert True\n", encoding="utf-8")
++        with mock.patch.dict(os.environ, {"R6_Q05_RUNNER_ACTIVE": "outer-invocation"}):
++            with self.assertRaisesRegex(RuntimeError, "nested Q05 runner"):
++                self.evidence_contract.run_q05_tests(test_file, "inner-invocation")
+ 
+     # M15-M16 (R07): Manifest relative filtering and unique namespace
+     def test_m15_m16_manifest_relative_filtering(self):
+--- C11/task/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py
++++ new/task/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py
+@@ -12,6 +12,7 @@
+ import threading
+ import time
+ import unittest
++from unittest import mock
+ from pathlib import Path
+ 
+ SOURCE_SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
+@@ -100,30 +101,47 @@
+         self.assertIn("ENGINEERING_BATCH_PROOF_INVALID", str(cm_fake.exception))
+ 
+         # With verified proof complying with contract, engineering batch conforms
+-        real_test = self.root / "test_sample.py"
+-        real_test.write_bytes(b"# valid test sample content\n")
++        import r6_evidence_contract as evc
++        invocation_dir = self.root / "inv-001"
++        invocation_dir.mkdir()
++        real_test = invocation_dir / "test_sample.py"
++        real_test.write_text("def test_sample():\n    assert True\n", encoding="utf-8")
+         real_hash = hashlib.sha256(real_test.read_bytes()).hexdigest()
++        run = evc.run_q05_tests(real_test, "inv-001")
++        receipt = invocation_dir / "q05_receipt.json"
++        receipt.write_text(json.dumps(run), encoding="utf-8")
++        dep_path = self.r6 / "work/S0021/f_0001.deps.json"
++        dep_path.parent.mkdir(parents=True, exist_ok=True)
++        dep_path.write_text(json.dumps({"kind": "r6_key_deps_v4_asset", "shot": "S0021", "fid": 1}), encoding="utf-8")
++        dep = {"path": str(dep_path), "hash": hashlib.sha256(dep_path.read_bytes()).hexdigest(),
++               "shot": "S0021", "fid": 1, "kind": "r6_key_deps_v4_asset"}
+ 
+         verified_proof = {
+             "Q05": {
+                 "artifact_path": str(real_test),
+                 "artifact_hash": real_hash,
+-                "current_invocation": "inv-001",
+-                "actual_verifier": "verifier-agent",
++                "receipt_path": str(receipt),
++                "receipt_hash": hashlib.sha256(receipt.read_bytes()).hexdigest(),
++                "current_invocation": "inv-001",
++                "actual_verifier": "pytest-junit-v1",
+                 "all_passed": True,
+                 "exit_code": 0,
+-                "tests_run": 5,
+-                "node_ids": ["test_sample"],
++                "tests_run": 1,
++                "node_ids": ["test_sample.py::test_sample"],
+             },
+             "Q07": {
+                 "current_invocation": "inv-001",
+-                "actual_verifier": "verifier-agent",
++                "actual_verifier": "r6-cache-v4",
+                 "verified_deps_count": 1,
+                 "required_shots": ["S0021"],
+                 "verified_shots": ["S0021"],
++                "valid_deps": [dep],
+             },
+         }
+-        res = self.gate.gate_batch_conformance({"matrix": valid_matrix, "proof": verified_proof}, mode="engineering")
++        with mock.patch.object(evc, "validate_deps_evidence", return_value=(True, "ok")):
++            res = self.gate.gate_batch_conformance(
++                {"invocation_id": "inv-001", "invocation_dir": str(invocation_dir),
++                 "matrix": valid_matrix, "proof": verified_proof}, mode="engineering")
+         self.assertTrue(res)
+ 
+         # Premature media PASS rejected in engineering batch

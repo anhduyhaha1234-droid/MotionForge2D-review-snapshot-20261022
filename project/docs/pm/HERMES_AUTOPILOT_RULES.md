@@ -53,6 +53,151 @@ Mục0.12 ưu tiên các owner/model/microtask-orchestration chỉ dẫn cũ ri�
 lane này; không giảm các yêu cầu source fidelity, quality và evidence. File
 rules này vẫn là nguồn canonical duy nhất; handoff file là execution contract.
 
+### 0.13. Telegram heartbeat cho G1 đang chạy — user20/10/2026
+
+User yêu cầu bật lại heartbeat và báo công việc tiếp theo qua Telegram như trước.
+Cho phép **một monitor chỉ đọc, không gọi model** theo dõi đúng owner/session G1
+đang active và gửi trạng thái thực cùng next action tối đa mỗi20phút tới kênh
+Telegram đã cấu hình. Báo ngay khi candidate nộp hoặc owner terminal/blocker,
+rồi dừng monitor; không tự review G1, resume writer, mở G2 hay render. Không
+bật lại heartbeat Codex theo giờ hoặc cron/model polling để đợi quota/review.
+Monitor phải phân biệt process còn sống với tiến độ file/test thật và không
+được dùng state/heartbeat tự ghi làm bằng chứng sản phẩm. Chỉ thị này thay phần
+"không tạo heartbeat" ở §0.12 đối với monitor Telegram G1 chỉ đọc; các gate,
+WIP1/GPU1, một writer và quyền Codex review độc lập vẫn giữ nguyên.
+
+### 0.14. Siết chặt giao việc Gemini và sprint theo user20/10/2026
+
+User yêu cầu Hermes quản lý trọn một sprint và chia subagent khi thật sự độc lập;
+Gemini coding phải tuân thủ đúng rules, còn Codex review tổng cuối. Overlay này
+áp dụng cho lane Gemini §0.12; không tự mở gate, không đổi owner/model hoặc biến
+việc chuẩn bị sprint thành quyền render/media.
+Các câu `chưa dispatch`/`PAUSED_BY_USER` trong §0.12 ghi trạng thái tại thời
+điểm bàn giao cũ: tạo prompt mới không tự dispatch; khi user gửi prompt sprint
+S0 hiện hành cho Hermes, quyền dispatch chỉ giới hạn đúng các task S0 được Codex
+liệt kê. Không suy từ đó quyền cho G2, media hay toàn backlog.
+
+- Mỗi worker packet phải ghi Task ID, owner/session/model/route/fallback, gate
+  hiện tại, immutable base, đường dẫn tuyệt đối, exact write-set và preimage
+  hash/size, acceptance, lệnh test, output/evidence, vùng cấm và điều kiện dừng.
+  Worker phải nhắc lại phạm vi đó trước patch đầu; Manager đối chiếu actual
+  bytes/process/queue/lease, không suy quyền từ prompt cũ hay trạng thái tự ghi.
+- Một Task ID correction phải resume đúng session owner cũ nếu còn truy cập
+  được. Chỉ có một implementation writer ở G1; không tạo coding subagent thứ
+  hai cho cùng code/packaging. Các agent đọc nguồn, kiểm thử độc lập hoặc lập
+  kế hoạch được song song khi có output riêng, không sửa production files và
+  không dùng GPU. Các coding task độc lập ở sprint sau chỉ được song song khi
+  gate đã mở, base bất biến, write-set không giao nhau và Manager chứng minh
+  không tranh GPU/process/queue/lease; GPU vẫn một.
+- G1 candidate phải tự kiểm được từ **frozen submission** ở một đường dẫn độc
+  lập với owner worktree: khai báo dependency và import path, chạy đúng lệnh
+  test đã công bố, lưu raw stdout/stderr/exit code, đối chiếu tổng số test và
+  hash manifest với actual bytes. PASS trong owner worktree, JSON tự ghi hoặc
+  self-review không thay thế phép thử này. Nếu package fail, verdict còn
+  PENDING/CHANGES_REQUESTED; không được ghi APPROVED hoặc mở G2.
+- Report/manifest phải dùng giá trị timestamp thực, kết quả test và artifact
+  tồn tại; không chứa template expression chưa render, đếm thiếu case, log cắt
+  cụt hoặc evidence trỏ ra source không đóng gói. Candidate đã freeze là
+  immutable; correction tạo candidate mới và giữ nguyên bản cũ.
+- Gemini không được tự đổi sang DeepSeek/model khác, đổi tài khoản để né quota,
+  bật fallback, tạo session mới để lách context/quota, hoặc tuyên bố chất lượng
+  video khi chưa có media thực được review. Sau mỗi coherent patch/test unit,
+  lưu checkpoint gọn gồm file/hash, test/exit, live jobs, lỗi, next command;
+  Manager cấp context packet nhỏ theo task, không nạp lại toàn lịch sử.
+- Kết thúc sprint bằng Manager self-review đối chiếu từng acceptance với bằng
+  chứng actual bytes, nộp một frozen handoff `PENDING_CODEX_REVIEW`, rồi dừng.
+  Chỉ verdict Codex cho chính candidate/bytes đó mới mở gate tiếp theo. Monitor
+  Telegram đã dừng không tự bật lại bởi mục này.
+
+### 0.15. Chống báo cáo PASS sai cho Gemini/Hermes — user20/10/2026
+
+Áp dụng ngay cho mọi candidate/sprint Gemini tiếp theo, gồm correction G1-C06.
+Các quy tắc evidence ở đây bổ sung §0.12/0.14; không mở thêm write-set, session,
+model, G2 hoặc quyền media. Manager phải đưa nguyên mục này vào worker packet
+và tự kiểm; worker phải nhắc lại trước khi sửa. Nếu thiếu bằng chứng, ghi
+`UNKNOWN`/`BLOCKED`, không dùng lời văn để thay kết quả máy.
+
+- Tách bốn mức: `CLAIMED` (worker tự báo), `OBSERVED` (raw command/log/artifact),
+  `MANAGER_VERIFIED` (Manager tái chạy độc lập trên đúng bytes) và
+  `CODEX_APPROVED` (Codex duyệt đúng manifest/hash). Không viết “hoàn thành trọn
+  vẹn”, “VERIFIED_PASS”, “G1 PASS” hoặc “đã có video” nếu chỉ đạt mức thấp hơn.
+  Đầu báo cáo phải có gate, candidate ID, manifest SHA-256, trạng thái thuộc một
+  trong bốn mức, số FAIL/UNKNOWN còn lại và đường dẫn raw evidence.
+- Candidate sau freeze là chỉ đọc. Trước chạy test, liệt kê **toàn bộ file**,
+  đối chiếu relative path, bytes và SHA-256 với manifest; `MANIFEST.json` được
+  loại trừ khỏi danh sách tự khai, mọi file khác thiếu/thừa (kể cả `.pyc`, cache)
+  đều làm fail inventory. Dùng bản sao trong thư mục cô lập, không chạy import/
+  pytest trực tiếp trên frozen candidate. Sau test kiểm lại hash/inventory của
+  frozen candidate. Test được pass trong owner tree không thay phép replay này.
+- Chạy **toàn bộ suite đã công bố** và mọi required test trước đó, không chọn
+  subset xanh. Lưu cho từng suite: exact command, cwd, env quan trọng, UTC start/
+  end, raw stdout/stderr, exit code, collected tests, pass/fail/skip và subtest
+  events tách riêng. Exit khác 0, zero tests, import error, thiếu dependency,
+  timeout hoặc chưa chạy = FAIL/UNKNOWN; không được gọi “expected fail-closed”
+  là PASS. Nếu test cũ mâu thuẫn contract mới, ghi FAIL và đề nghị sửa test theo
+  quyền riêng; không âm thầm loại khỏi denominator.
+- Với G1, chạy guard độc lập `docs/pm/tools/g1_submission_guard.py` trên frozen
+  candidate cùng danh sách suite/đường dẫn được pin trong prompt. Raw JSON của
+  guard và process exit là điều kiện cần trước nhãn `MANAGER_VERIFIED`. Nếu guard
+  chưa sẵn hoặc có bug, lưu kết quả FAIL hiện tại, sửa verifier trong allowlist
+  được cấp, chạy lại bằng phiên bản mới; không tự sửa kết quả hoặc override FAIL
+  trong báo cáo. Đây là chốt kỹ thuật, không thay review Codex.
+- Một nguồn kết quả: machine verdict là authoritative cho cùng run. Manager
+  phải tự động đối chiếu `verifier.exit`, `verifier.overall_verdict`, receipt,
+  matrix và câu kết luận; bất kỳ cặp nào mâu thuẫn thì báo `EVIDENCE_CONFLICT`,
+  dừng submission PASS và giữ nguyên raw evidence. Không lấy số học đúng, test
+  tập con xanh, hoặc nhãn PASS trong prose để bù một run FAIL.
+- `created_utc`, `verified_utc`, `submitted_utc` lấy từ clock lúc sự kiện xảy ra;
+  phải có thứ tự hợp lý cùng mtime/file hashes. Không backdate hoặc hard-code
+  thời gian. Report chỉ được chốt sau verifier, không ghi submit trước candidate
+  hay trước raw test. Lỗi chronology là FAIL provenance cho tới khi giải thích
+  bằng evidence, không sửa lịch sử cũ.
+- Khi verifier FAIL, worker tự sửa trong allowlist và tạo candidate ID mới;
+  Manager giữ bản lỗi immutable, resume đúng owner/session, kiểm lại. Nếu đã
+  hai lượt cùng cơ chế mà report vẫn trái raw log, dừng nhãn verified, audit
+  context/owner theo §4 và báo Codex; không tiếp tục phát “đã xong” tự động.
+- Báo cáo tiến độ phải tách `CODE_DONE`, `PACKAGE_REPLAYED`, `MEDIA_RENDERED`,
+  `MEDIA_QC_REVIEWED`, `PRODUCT_E2E_VERIFIED` và `CODEX_APPROVED`. Phần nào chưa
+  làm ghi `NOT_RUN` hoặc `BLOCKED_DEPENDENCY`, không suy “sản phẩm xong” từ G1.
+  Telegram/heartbeat chỉ báo trạng thái evidence đã xác minh và không được gửi
+  thông điệp trái prompt hiện hành hoặc diễn đạt pending Codex là accepted.
+
+### 0.16. Tự đóng lỗi G1 trước khi nộp Codex — user21/10/2026
+
+User muốn giảm các vòng review lặp. Trong đúng correction G1 đã được Codex cấp
+quyền, Hermes Manager phải điều phối một vòng **nội bộ** `repro -> root cause ->
+bounded patch -> negative/positive tests -> package -> independent replay ->
+manager challenge` đến khi mọi điều kiện dưới đây đạt hoặc gặp blocker thật.
+Mỗi candidate đã freeze giữ immutable; lượt sửa tạo ID mới, resume đúng owner
+và giữ counters/preimages. Không lấy số vòng làm lý do tự dừng hoặc mở scope.
+
+- Trước khi nói `MANAGER_VERIFIED`, Manager chạy guard trên bản sao frozen ở path
+  ngắn, đọc **raw** `VERIFICATION.json` và process exit, rồi đối chiếu từng
+  suite/row với receipt/report. Exit khác 0, A4 còn FAIL, suite thiếu/zero tests,
+  matrix hard-code, chronology mâu thuẫn hoặc proof không truy tới actual bytes
+  đều là FAIL/UNKNOWN; không gửi Codex một nhãn verified để reviewer tìm lại.
+- Với G1-R1, Manager phải có bảng challenge chạy qua **actual gate và adapter**:
+  artifact thiếu, SHA sai, invocation/verifier bịa hoặc cũ, thiếu node IDs,
+  thiếu một shot trong plan, dependency đổi bytes và receipt tự khai PASS đều
+  phải fail trước publish; positive proof từ artifact/receipt thật phải pass.
+  Unit test kiểm riêng helper hoặc JSON tự khai không thay challenge đường gọi.
+- Test authority cũ mâu thuẫn contract mới phải được sửa **chỉ trong allowlist
+  đã cấp**, với RED/positive/negative proof. Không skip/xfail/xóa hoặc bỏ suite
+  khỏi denominator. Nếu cần path/quyền mới, báo blocker và dừng phần ghi.
+- Sau một lỗi guard, Manager không viết prose bù lỗi: giao chính finding/raw
+  command/exit cho đúng owner, yêu cầu nguyên nhân và vì sao self-test bỏ sót,
+  kiểm lại phần ảnh hưởng rồi full frozen replay. Nếu hai lượt cùng cơ chế vẫn
+  báo trái raw log, áp §0.15 context/owner audit; chỉ xin Codex quyết định khi
+  thật sự cần đổi owner/quyền/contract, không xin full G1 review cho mỗi bản đỏ.
+- Giữ Codex review độc lập cuối trên **một** frozen candidate có guard PASS và
+  manager challenge PASS. Đây là điều kiện để **nộp**, không là tự APPROVE G1
+  hay mở G2/media. Không chạy Hermes hay bật monitor chỉ vì rules được cập nhật.
+- Chọn skill theo failure mode, thường 1-3 skill cho packet nhỏ; nguồn/bản pin
+  ở `docs/pm/AUTOPILOT_SKILLS.md`. Ưu tiên skill Hermes đang có cho TDD/debug/
+  evidence; 5 skill bổ sung chỉ cho review-feedback, test oracle/mocks, biến thể
+  lỗi hoặc tooling Python khi liên quan. Skill không được đổi scope, xóa file
+  hiện hữu, migration toolchain, thêm dependency hay dispatch agent trái rules.
+
 ### 0.11. Codex coding takeover theo user15/10/2026
 
 User yêu cầu nạp skills Hermes, bổ sung5 skills, tạo sub-agent coding và root

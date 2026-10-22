@@ -1,0 +1,599 @@
+{
+  "started_utc": "2026-10-22T04:01:11.015522+00:00",
+  "ended_utc": "2026-10-22T04:01:12.409638+00:00",
+  "source": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\candidate_copy",
+  "source_manifest_sha256": "4df7de9ccc81dff7a82a9b9d70d90a48eae2bb17cd9ff455748b041f20a0ba82",
+  "suites": [
+    "test_codex_c01_review_binding.py",
+    "test_codex_c02a_dependency_verification.py",
+    "test_codex_c02b1_staged_source.py"
+  ],
+  "tests_run": 40,
+  "failures": 0,
+  "errors": 0,
+  "subtests": 116,
+  "subtest_events": [
+    {
+      "parent": "test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_expected_and_reviewed_frame_identity",
+      "subtest": "test_expected_and_reviewed_frame_identity (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_expected_and_reviewed_frame_identity) (field='shot')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_expected_and_reviewed_frame_identity",
+      "subtest": "test_expected_and_reviewed_frame_identity (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_expected_and_reviewed_frame_identity) (field='fid')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_real_gate_assemble_binds_review_to_consumed_blend_frames",
+      "subtest": "test_real_gate_assemble_binds_review_to_consumed_blend_frames (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_real_gate_assemble_binds_review_to_consumed_blend_frames) (case='full')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_real_gate_assemble_binds_review_to_consumed_blend_frames",
+      "subtest": "test_real_gate_assemble_binds_review_to_consumed_blend_frames (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_real_gate_assemble_binds_review_to_consumed_blend_frames) (case='truncated')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_real_gate_assemble_binds_review_to_consumed_blend_frames",
+      "subtest": "test_real_gate_assemble_binds_review_to_consumed_blend_frames (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_real_gate_assemble_binds_review_to_consumed_blend_frames) (case='overlong')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_real_gate_assemble_binds_review_to_consumed_blend_frames",
+      "subtest": "test_real_gate_assemble_binds_review_to_consumed_blend_frames (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_real_gate_assemble_binds_review_to_consumed_blend_frames) (case='reordered')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_required_field_types_and_frames",
+      "subtest": "test_required_field_types_and_frames (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_required_field_types_and_frames) (field='reviewer', value=7)",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_required_field_types_and_frames",
+      "subtest": "test_required_field_types_and_frames (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_required_field_types_and_frames) (field='evidence', value=['text'])",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_required_field_types_and_frames",
+      "subtest": "test_required_field_types_and_frames (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_required_field_types_and_frames) (field='reviewed_at', value=False)",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_required_field_types_and_frames",
+      "subtest": "test_required_field_types_and_frames (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_required_field_types_and_frames) (field='frames', value=['1'])",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_required_field_types_and_frames",
+      "subtest": "test_required_field_types_and_frames (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_required_field_types_and_frames) (field='frames', value=[True])",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_required_field_types_and_frames",
+      "subtest": "test_required_field_types_and_frames (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_required_field_types_and_frames) (field='frames', value=[0])",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_required_field_types_and_frames",
+      "subtest": "test_required_field_types_and_frames (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_required_field_types_and_frames) (field='expected', value={'shot': 'S0099', 'fid': False})",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_required_field_types_and_frames",
+      "subtest": "test_required_field_types_and_frames (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_required_field_types_and_frames) (field='artifact', value={'path': False, 'sha256': 'e832750a4ae613cd533b1efbccdb2d181885aa94ae813f386ebeac2b6c5ff812'})",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_consumer_identity_matrix_with_resealed_digest",
+      "subtest": "test_consumer_identity_matrix_with_resealed_digest (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_consumer_identity_matrix_with_resealed_digest) (case='wrong_kind')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_consumer_identity_matrix_with_resealed_digest",
+      "subtest": "test_consumer_identity_matrix_with_resealed_digest (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_consumer_identity_matrix_with_resealed_digest) (case='wrong_shot')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_consumer_identity_matrix_with_resealed_digest",
+      "subtest": "test_consumer_identity_matrix_with_resealed_digest (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_consumer_identity_matrix_with_resealed_digest) (case='wrong_fid')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_consumer_identity_matrix_with_resealed_digest",
+      "subtest": "test_consumer_identity_matrix_with_resealed_digest (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_consumer_identity_matrix_with_resealed_digest) (case='wrong_source_path_same_bytes')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_consumer_identity_matrix_with_resealed_digest",
+      "subtest": "test_consumer_identity_matrix_with_resealed_digest (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_consumer_identity_matrix_with_resealed_digest) (case='wrong_model_path_same_bytes')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_consumer_identity_matrix_with_resealed_digest",
+      "subtest": "test_consumer_identity_matrix_with_resealed_digest (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_consumer_identity_matrix_with_resealed_digest) (case='wrong_gframe')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_consumer_identity_matrix_with_resealed_digest",
+      "subtest": "test_consumer_identity_matrix_with_resealed_digest (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_consumer_identity_matrix_with_resealed_digest) (case='wrong_span')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix",
+      "subtest": "test_digest_and_same_size_file_mutation_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix) (case='source')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix",
+      "subtest": "test_digest_and_same_size_file_mutation_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix) (case='model')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix",
+      "subtest": "test_digest_and_same_size_file_mutation_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix) (case='cast')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix",
+      "subtest": "test_digest_and_same_size_file_mutation_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix) (case='mask')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix",
+      "subtest": "test_digest_and_same_size_file_mutation_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix) (case='graph')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix",
+      "subtest": "test_digest_and_same_size_file_mutation_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix) (case='source_missing')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix",
+      "subtest": "test_digest_and_same_size_file_mutation_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix) (case='model_missing')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix",
+      "subtest": "test_digest_and_same_size_file_mutation_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix) (case='cast_missing')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix",
+      "subtest": "test_digest_and_same_size_file_mutation_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix) (case='mask_missing')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix",
+      "subtest": "test_digest_and_same_size_file_mutation_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix) (case='graph_missing')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_invalid_json_blocks_real_key_consumer",
+      "subtest": "test_invalid_json_blocks_real_key_consumer (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_invalid_json_blocks_real_key_consumer) (case='syntax')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_invalid_json_blocks_real_key_consumer",
+      "subtest": "test_invalid_json_blocks_real_key_consumer (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_invalid_json_blocks_real_key_consumer) (case='duplicate')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_invalid_json_blocks_real_key_consumer",
+      "subtest": "test_invalid_json_blocks_real_key_consumer (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_invalid_json_blocks_real_key_consumer) (case='non_json_constant')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip",
+      "subtest": "test_nested_json_matrix_through_loader_verify_key_and_skip (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip) (location='settings', depth=10)",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip",
+      "subtest": "test_nested_json_matrix_through_loader_verify_key_and_skip (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip) (location='settings', depth=200)",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip",
+      "subtest": "test_nested_json_matrix_through_loader_verify_key_and_skip (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip) (location='settings', depth=400)",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip",
+      "subtest": "test_nested_json_matrix_through_loader_verify_key_and_skip (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip) (location='settings', depth=800)",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip",
+      "subtest": "test_nested_json_matrix_through_loader_verify_key_and_skip (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip) (location='settings', depth=1200)",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip",
+      "subtest": "test_nested_json_matrix_through_loader_verify_key_and_skip (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip) (location='extra_top_level', depth=10)",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip",
+      "subtest": "test_nested_json_matrix_through_loader_verify_key_and_skip (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip) (location='extra_top_level', depth=200)",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip",
+      "subtest": "test_nested_json_matrix_through_loader_verify_key_and_skip (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip) (location='extra_top_level', depth=400)",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip",
+      "subtest": "test_nested_json_matrix_through_loader_verify_key_and_skip (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip) (location='extra_top_level', depth=800)",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip",
+      "subtest": "test_nested_json_matrix_through_loader_verify_key_and_skip (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip) (location='extra_top_level', depth=1200)",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_omitted_source_and_hash_block_real_consumer_and_assembler",
+      "subtest": "test_omitted_source_and_hash_block_real_consumer_and_assembler (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_omitted_source_and_hash_block_real_consumer_and_assembler) (case='omitted_source')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_omitted_source_and_hash_block_real_consumer_and_assembler",
+      "subtest": "test_omitted_source_and_hash_block_real_consumer_and_assembler (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_omitted_source_and_hash_block_real_consumer_and_assembler) (case='omitted_source_hash')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_real_builder_record_verifies",
+      "subtest": "test_real_builder_record_verifies (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_real_builder_record_verifies) (passthrough=False)",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_real_builder_record_verifies",
+      "subtest": "test_real_builder_record_verifies (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_real_builder_record_verifies) (passthrough=True)",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='missing_kind')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='missing_shot')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='missing_fid')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='missing_source')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='missing_model')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='missing_casts')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='missing_masks')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='missing_graph')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='missing_settings')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='missing_deps_sha')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='kind_number')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='shot_list')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='fid_bool')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='fid_float')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='source_list')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='model_list')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='casts_object')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='masks_null')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='graph_list')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='settings_empty')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='settings_list')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='deps_sha_bool')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='source_path_missing')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='source_hash_missing')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='source_hash_empty')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='source_hash_nonhex')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='source_gframe_bool')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='source_span_bool')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='source_span_short')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='model_path_missing')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='model_hash_missing')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='cast_path_missing')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='cast_hash_missing')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='mask_record_number')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='graph_hash_missing')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='generated_graph_null')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='source_relative_path')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='settings_mode_bool')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='settings_mode_null')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='null_record')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='list_record')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='string_record')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix",
+      "subtest": "test_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) (case='bool_record')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_strict_json_loader_matrix",
+      "subtest": "test_strict_json_loader_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_strict_json_loader_matrix) (case='syntax')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_strict_json_loader_matrix",
+      "subtest": "test_strict_json_loader_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_strict_json_loader_matrix) (case='duplicate')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_strict_json_loader_matrix",
+      "subtest": "test_strict_json_loader_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_strict_json_loader_matrix) (case='nan')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_strict_json_loader_matrix",
+      "subtest": "test_strict_json_loader_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_strict_json_loader_matrix) (case='infinity')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_strict_json_loader_matrix",
+      "subtest": "test_strict_json_loader_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_strict_json_loader_matrix) (case='nonobject')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_strict_json_loader_matrix",
+      "subtest": "test_strict_json_loader_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_strict_json_loader_matrix) (case='excessive_nesting')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_failed_extractor_and_empty_result_preserve_previous_pair",
+      "subtest": "test_failed_extractor_and_empty_result_preserve_previous_pair (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_failed_extractor_and_empty_result_preserve_previous_pair) (injected='failed')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_failed_extractor_and_empty_result_preserve_previous_pair",
+      "subtest": "test_failed_extractor_and_empty_result_preserve_previous_pair (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_failed_extractor_and_empty_result_preserve_previous_pair) (injected='missing')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_failed_extractor_and_empty_result_preserve_previous_pair",
+      "subtest": "test_failed_extractor_and_empty_result_preserve_previous_pair (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_failed_extractor_and_empty_result_preserve_previous_pair) (injected='empty')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract",
+      "subtest": "test_malformed_and_wrong_receipts_reextract (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract) (receipt=b'{bad')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract",
+      "subtest": "test_malformed_and_wrong_receipts_reextract (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract) (receipt=b'[]')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract",
+      "subtest": "test_malformed_and_wrong_receipts_reextract (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract) (receipt=b'{\"contract\":\"x\",\"contract\":\"y\"}')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract",
+      "subtest": "test_malformed_and_wrong_receipts_reextract (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract) (receipt=b'[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract",
+      "subtest": "test_malformed_and_wrong_receipts_reextract (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract) (receipt=b'                                        ')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract",
+      "subtest": "test_malformed_and_wrong_receipts_reextract (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract) (receipt=b'{\"contract\": \"r6.stage_frame.v1.ffmpeg-s')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract",
+      "subtest": "test_malformed_and_wrong_receipts_reextract (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract) (receipt=b'{\"contract\": \"r6.stage_frame.v1.ffmpeg-s')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract",
+      "subtest": "test_malformed_and_wrong_receipts_reextract (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract) (receipt=b'{\"contract\": \"r6.stage_frame.v1.ffmpeg-s')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract",
+      "subtest": "test_malformed_and_wrong_receipts_reextract (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract) (receipt=b'{\"contract\": \"r6.stage_frame.v1.ffmpeg-s')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract",
+      "subtest": "test_malformed_and_wrong_receipts_reextract (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract) (receipt=b'{\"contract\": \"r6.stage_frame.v1.ffmpeg-s')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract",
+      "subtest": "test_malformed_and_wrong_receipts_reextract (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract) (receipt=b'{\"contract\": \"r6.stage_frame.v1.ffmpeg-s')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract",
+      "subtest": "test_malformed_and_wrong_receipts_reextract (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract) (receipt=b'{\"contract\": \"r6.stage_frame.v1.ffmpeg-s')",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_missing_unreadable_source_and_invalid_frames",
+      "subtest": "test_missing_unreadable_source_and_invalid_frames (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_missing_unreadable_source_and_invalid_frames) (frame=True)",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_missing_unreadable_source_and_invalid_frames",
+      "subtest": "test_missing_unreadable_source_and_invalid_frames (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_missing_unreadable_source_and_invalid_frames) (frame=-1)",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_missing_unreadable_source_and_invalid_frames",
+      "subtest": "test_missing_unreadable_source_and_invalid_frames (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_missing_unreadable_source_and_invalid_frames) (frame=10)",
+      "status": "PASS"
+    },
+    {
+      "parent": "test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_missing_unreadable_source_and_invalid_frames",
+      "subtest": "test_missing_unreadable_source_and_invalid_frames (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_missing_unreadable_source_and_invalid_frames) (frame=1.0)",
+      "status": "PASS"
+    }
+  ],
+  "raw_output": "test_bad_json_and_non_object_are_gate_blocks (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_bad_json_and_non_object_are_gate_blocks) ... ok\ntest_blend_producer_schema_and_full_mapping (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_blend_producer_schema_and_full_mapping) ... ok\ntest_changed_dependency_blocks (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_changed_dependency_blocks) ... ok\ntest_current_producer_record_passes (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_current_producer_record_passes) ... ok\ntest_expected_and_reviewed_frame_identity (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_expected_and_reviewed_frame_identity) ... ok\ntest_extra_recorded_and_current_dependencies_block (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_extra_recorded_and_current_dependencies_block) ... ok\ntest_false_and_numeric_dependency_values_do_not_bind (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_false_and_numeric_dependency_values_do_not_bind) ... ok\ntest_missing_current_dependency_blocks (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_missing_current_dependency_blocks) ... ok\ntest_missing_recorded_dependency_blocks (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_missing_recorded_dependency_blocks) ... ok\ntest_nonstandard_json_constant_is_malformed (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_nonstandard_json_constant_is_malformed) ... ok\ntest_numeric_sha_and_missing_verdict_are_gate_blocks (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_numeric_sha_and_missing_verdict_are_gate_blocks) ... ok\ntest_other_path_with_identical_bytes_blocks (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_other_path_with_identical_bytes_blocks) ... ok\ntest_real_assembler_main_rejects_before_copy_and_encoder (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_real_assembler_main_rejects_before_copy_and_encoder) ... ok\ntest_real_gate_assemble_binds_review_to_consumed_blend_frames (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_real_gate_assemble_binds_review_to_consumed_blend_frames) ... ok\ntest_required_field_types_and_frames (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_required_field_types_and_frames) ... ok\ntest_review_identity_must_match_requested_kind_and_name (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_review_identity_must_match_requested_kind_and_name) ... ok\ntest_stale_artifact_blocks (test_codex_c01_review_binding_supplemental.ReviewBindingTests.test_stale_artifact_blocks) ... ok\ntest_consumer_identity_matrix_with_resealed_digest (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_consumer_identity_matrix_with_resealed_digest) ... ok\ntest_digest_and_same_size_file_mutation_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_digest_and_same_size_file_mutation_matrix) ... ok\ntest_empty_record_fails_closed (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_empty_record_fails_closed) ... ok\ntest_gate_key_blocks_missing_deps (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_gate_key_blocks_missing_deps) ... ok\ntest_invalid_json_blocks_real_key_consumer (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_invalid_json_blocks_real_key_consumer) ... ok\ntest_nested_json_matrix_through_loader_verify_key_and_skip (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_nested_json_matrix_through_loader_verify_key_and_skip) ... ok\ntest_omitted_source_and_hash_block_real_consumer_and_assembler (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_omitted_source_and_hash_block_real_consumer_and_assembler) ... ok\ntest_parsed_nested_deps_block_actual_assembly_before_copy (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_parsed_nested_deps_block_actual_assembly_before_copy) ... ok\ntest_real_builder_record_verifies (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_real_builder_record_verifies) ... ok\ntest_record_shape_and_type_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_record_shape_and_type_matrix) ... ok\ntest_skip_keeps_current_settings_comparison (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_skip_keeps_current_settings_comparison) ... ok\ntest_strict_json_loader_matrix (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_strict_json_loader_matrix) ... ok\ntest_valid_record_through_real_key_and_assembly_gates (test_codex_c02a_dependency_verification_supplemental.DependencyVerificationTests.test_valid_record_through_real_key_and_assembly_gates) ... ok\ntest_failed_extractor_and_empty_result_preserve_previous_pair (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_failed_extractor_and_empty_result_preserve_previous_pair) ... ok\ntest_first_extract_and_unchanged_reuse (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_first_extract_and_unchanged_reuse) ... ok\ntest_legacy_empty_missing_and_copied_receipts (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_legacy_empty_missing_and_copied_receipts) ... ok\ntest_malformed_and_wrong_receipts_reextract (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_malformed_and_wrong_receipts_reextract) ... ok\ntest_missing_unreadable_source_and_invalid_frames (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_missing_unreadable_source_and_invalid_frames) ... ok\ntest_partial_publication_cannot_bless_old_receipt (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_partial_publication_cannot_bless_old_receipt) ... ok\ntest_real_ffmpeg_30fps_640x360_frame_mapping_and_replacement (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_real_ffmpeg_30fps_640x360_frame_mapping_and_replacement) ... ok\ntest_same_path_same_size_source_mutation_reextracts (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_same_path_same_size_source_mutation_reextracts) ... ok\ntest_source_change_during_extraction_preserves_previous_pair (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_source_change_during_extraction_preserves_previous_pair) ... ok\ntest_source_path_frame_output_and_restore_invalidate (test_codex_c02b1_staged_source_supplemental.StagedSourceTests.test_source_path_frame_output_and_restore_invalidate) ... ok\n\n----------------------------------------------------------------------\nRan 40 tests in 1.394s\n\nOK\n",
+  "all_passed": true
+}

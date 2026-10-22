@@ -1,0 +1,110 @@
+{
+ "at": "2026-10-12",
+ "board_sha256": "95572075bd72010854b5e82c5d97e1a5d83199409999370e0a506821dda95415",
+ "entities": {
+  "E1": {
+   "cast": "B01_Khang_front_bust.png",
+   "desc": "B01 Khang (wide square face, short black coily hair, straight brows, short wide nose, small chin stubble; forest-green shirt)",
+   "front": {
+    "file": "B01_Khang_front_bust.png",
+    "sha256": "86aa300820a1e8243eb4f21a5c1ade67fc52ceaf3b4db015837074714a6a0285"
+   },
+   "profile": {
+    "file": "B01_Khang_profile.png",
+    "sha256": "fd2fae2e3babb207d5e3f25f0fdabdd632b14c7de46bcba2715ab6af339947b8"
+   },
+   "provisional": false
+  },
+  "E2": {
+   "cast": "B02_Lam_front_bust.png",
+   "desc": "B02 Lam (long narrow face, prominent ears, short copper-brown hair, thin slanted brows, long nose; be jacket / grey-blue shirt; HOME state = light-blue tee + messy silver)",
+   "front": {
+    "file": "B02_Lam_front_bust.png",
+    "sha256": "cebba2d68670ca6d4a8c7034c0b29d0d5f7fcc62fe33c1b31fae2d0af08eefe6"
+   },
+   "profile": {
+    "file": "B02_Lam_profile.png",
+    "sha256": "6d5093d7b309a14a2d29f02e9892abee6d09a47d0f2951a6406e3dc7f163cf3d"
+   },
+   "provisional": false
+  },
+  "E8": {
+   "cast": "B02_Lam_front_bust.png",
+   "desc": "B02 Lam (long narrow face, prominent ears, short copper-brown hair, thin slanted brows, long nose; be jacket / grey-blue shirt; HOME state = light-blue tee + messy silver)",
+   "front": {
+    "file": "B02_Lam_front_bust.png",
+    "sha256": "cebba2d68670ca6d4a8c7034c0b29d0d5f7fcc62fe33c1b31fae2d0af08eefe6"
+   },
+   "profile": {
+    "file": "B02_Lam_profile.png",
+    "sha256": "6d5093d7b309a14a2d29f02e9892abee6d09a47d0f2951a6406e3dc7f163cf3d"
+   },
+   "provisional": true
+  },
+  "E3": {
+   "cast": "B03_Mai_front_bust.png",
+   "desc": "B03 Mai (round face, black bob with straight fringe, wide-set eyes, round nose; terracotta top)",
+   "front": {
+    "file": "B03_Mai_front_bust.png",
+    "sha256": "e30cc53fee1645694f126219bc16c54d43e976d4aff9d50fcbe13aa2faa53ec9"
+   },
+   "profile": {
+    "file": "B03_Mai_profile.png",
+    "sha256": "2ca1c972b8006195d694c537782a03a117306f7d83d3db4823d9b54c84a94867"
+   },
+   "provisional": false
+  },
+  "E4": {
+   "cast": "B04_Phuc_front_bust.png",
+   "desc": "B04 Phuc (rectangular face, shaved head, thick brows, short moustache, round ears; slate-blue shirt)",
+   "front": {
+    "file": "B04_Phuc_front_bust.png",
+    "sha256": "0565e65ab3ccac10b80f714fd891014570aaf7a8981a256671b14c39479e3341"
+   },
+   "profile": {
+    "file": "B04_Phuc_profile.png",
+    "sha256": "87ddf783905c3bd516798ce1c31a10cac7e0dcdf6d974b2045ab97b1d2c5302f"
+   },
+   "provisional": true
+  },
+  "E5": {
+   "cast": "B05_Van_front_bust.png",
+   "desc": "B05 Van (heart-shaped face, shoulder-length wavy brown hair, high cheekbones; earth-yellow dress)",
+   "front": {
+    "file": "B05_Van_front_bust.png",
+    "sha256": "397b29393642f08f7bfd12ac68b8b8cebfbefb5159493198f299dc43d2c946e6"
+   },
+   "profile": {
+    "file": "B05_Van_profile.png",
+    "sha256": "2f5e9c6ce3c616b314fe25516f3f9abeb613d8a33e2ed3bf8611fadf8f8fcfe2"
+   },
+   "provisional": false
+  },
+  "E6": {
+   "cast": "B06_Linh_front_bust.png",
+   "desc": "B06 Linh (compact oval face, black pixie cut off-centre, low thick brows; cream/teal vest)",
+   "front": {
+    "file": "B06_Linh_front_bust.png",
+    "sha256": "a88e78348591da0ced0e110a11058d1698b134d1f5fc5b9932f509a7fd0cb877"
+   },
+   "profile": {
+    "file": "B06_Linh_profile.png",
+    "sha256": "df179ad2a65cd8fe9ece828670b03069f4dae6515cb1e734da82b7e581619721"
+   },
+   "provisional": false
+  },
+  "E7": {
+   "cast": "B07_Thu_front_bust.png",
+   "desc": "B07 Thu (wide oval face, auburn hair in high bun, arched brows; plum-violet dress)",
+   "front": {
+    "file": "B07_Thu_front_bust.png",
+    "sha256": "92880cf705570d4dc19b811464417c362e212d3e0111ed27be312a4c6c0d9c2b"
+   },
+   "profile": {
+    "file": "B07_Thu_profile.png",
+    "sha256": "d7e9c368e75d65a4db3cfc12a6e789ff033d3182d7ef47e71c957c442d1583c2"
+   },
+   "provisional": false
+  }
+ }
+}

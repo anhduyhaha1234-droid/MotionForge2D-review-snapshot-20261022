@@ -1,0 +1,1065 @@
+{
+  "task": "G2-B1-PREFLIGHT-01",
+  "created_utc": "2026-10-22T04:45:10.914294+00:00",
+  "status": "BLOCKED",
+  "execution": "READ_ONLY_CPU",
+  "pilot": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001",
+  "runtime": "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b",
+  "pins": {
+    "manifest_sha256": "4df7de9ccc81dff7a82a9b9d70d90a48eae2bb17cd9ff455748b041f20a0ba82",
+    "source_sha256": "5a175454c2c2965bac5013a53926e210a9f70a185d802d0f2e0083a6fb399fa2",
+    "source_bytes": 36971916,
+    "atlas_sha256": "e847acb8d30f120bcaffb81b1e5048baf3e32280bcd74e9e5688b20a56149a4e",
+    "transport_receipt_sha256": "e9bf67facc7e6a0debc0d8251460551a26d7cface9a264ae8d78f3ec388bb47f",
+    "root_review_sha256": "6bfb1d71b900a84ca84df0e765c839202a24c96cf90738577c1c1c36aaa082ce"
+  },
+  "pilot_contract": {
+    "span_frames": [
+      2820,
+      11820
+    ],
+    "fps": 30,
+    "duration_seconds": 300,
+    "shots": [
+      "S0021",
+      "S0074"
+    ],
+    "last_shot_is_partial": true
+  },
+  "checks": [
+    {
+      "id": "transport_receipt",
+      "status": "PASS",
+      "reason": "pinned authority bytes",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\receipts\\positive-001.json",
+          "exists": true,
+          "bytes": 63023,
+          "sha256": "e9bf67facc7e6a0debc0d8251460551a26d7cface9a264ae8d78f3ec388bb47f"
+        },
+        "expected_sha256": "e9bf67facc7e6a0debc0d8251460551a26d7cface9a264ae8d78f3ec388bb47f"
+      }
+    },
+    {
+      "id": "root_review",
+      "status": "PASS",
+      "reason": "pinned authority bytes",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2-readiness-audit\\ROOT_REVIEW_G2P01.md",
+          "exists": true,
+          "bytes": 2855,
+          "sha256": "6bfb1d71b900a84ca84df0e765c839202a24c96cf90738577c1c1c36aaa082ce"
+        },
+        "expected_sha256": "6bfb1d71b900a84ca84df0e765c839202a24c96cf90738577c1c1c36aaa082ce"
+      }
+    },
+    {
+      "id": "transport_receipt_contract",
+      "status": "PASS",
+      "reason": "transport receipt verdict and pins",
+      "evidence": {
+        "receipt_status": "SELF_VERIFIED_PENDING_ROOT_REVIEW",
+        "receipt_exit": 0
+      }
+    },
+    {
+      "id": "frozen_c16_bytes",
+      "status": "PASS",
+      "reason": "exact manifest inventory and source bytes",
+      "evidence": {
+        "root": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-04-20261020\\submissions\\g1-candidate-16",
+        "manifest": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-04-20261020\\submissions\\g1-candidate-16\\MANIFEST.json",
+          "exists": true,
+          "bytes": 14469,
+          "sha256": "4df7de9ccc81dff7a82a9b9d70d90a48eae2bb17cd9ff455748b041f20a0ba82"
+        },
+        "file_count": 75,
+        "missing": [],
+        "extra": [],
+        "mismatches": []
+      }
+    },
+    {
+      "id": "pilot_bytes",
+      "status": "PASS",
+      "reason": "exact manifest inventory and source bytes",
+      "evidence": {
+        "root": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001",
+        "manifest": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\MANIFEST.json",
+          "exists": true,
+          "bytes": 14469,
+          "sha256": "4df7de9ccc81dff7a82a9b9d70d90a48eae2bb17cd9ff455748b041f20a0ba82"
+        },
+        "file_count": 76,
+        "missing": [],
+        "extra": [],
+        "mismatches": [],
+        "source": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\source\\source_full.mp4",
+          "exists": true,
+          "bytes": 36971916,
+          "sha256": "5a175454c2c2965bac5013a53926e210a9f70a185d802d0f2e0083a6fb399fa2"
+        },
+        "source_expected": {
+          "bytes": 36971916,
+          "sha256": "5a175454c2c2965bac5013a53926e210a9f70a185d802d0f2e0083a6fb399fa2"
+        }
+      }
+    },
+    {
+      "id": "source_probe",
+      "status": "PASS",
+      "reason": "source H.264/AAC shape, FPS and duration",
+      "evidence": {
+        "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\source\\source_full.mp4",
+        "command": [
+          "ffprobe",
+          "-v",
+          "error",
+          "-show_entries",
+          "format=duration:stream=index,codec_type,codec_name,width,height,r_frame_rate,avg_frame_rate",
+          "-of",
+          "json",
+          "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\source\\source_full.mp4"
+        ],
+        "exit_code": 0,
+        "stdout": "{\n    \"programs\": [\n\n    ],\n    \"stream_groups\": [\n\n    ],\n    \"streams\": [\n        {\n            \"index\": 0,\n            \"codec_name\": \"h264\",\n            \"codec_type\": \"video\",\n            \"width\": 640,\n            \"height\": 360,\n            \"r_frame_rate\": \"30/1\",\n            \"avg_frame_rate\": \"30/1\"\n        },\n        {\n            \"index\": 1,\n            \"codec_name\": \"aac\",\n            \"codec_type\": \"audio\",\n            \"r_frame_rate\": \"0/0\",\n            \"avg_frame_rate\": \"0/0\"\n        }\n    ],\n    \"format\": {\n        \"duration\": \"1321.215420\"\n    }\n}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "id": "plan_300s",
+      "status": "PASS",
+      "reason": "54 contiguous shots cover [2820,11820); final S0074 is explicitly clipped",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\chunk_plan.json",
+          "exists": true,
+          "bytes": 81325,
+          "sha256": "3678d0e1e6e50d3ea42e1b698b65641b6bed8602b0b0f45bfb4f5b7c6fbc719a"
+        },
+        "span": [
+          2820,
+          11820
+        ],
+        "fps": 30,
+        "expected_shots": [
+          "S0021",
+          "S0022",
+          "S0023",
+          "S0024",
+          "S0025",
+          "S0026",
+          "S0027",
+          "S0028",
+          "S0029",
+          "S0030",
+          "S0031",
+          "S0032",
+          "S0033",
+          "S0034",
+          "S0035",
+          "S0036",
+          "S0037",
+          "S0038",
+          "S0039",
+          "S0040",
+          "S0041",
+          "S0042",
+          "S0043",
+          "S0044",
+          "S0045",
+          "S0046",
+          "S0047",
+          "S0048",
+          "S0049",
+          "S0050",
+          "S0051",
+          "S0052",
+          "S0053",
+          "S0054",
+          "S0055",
+          "S0056",
+          "S0057",
+          "S0058",
+          "S0059",
+          "S0060",
+          "S0061",
+          "S0062",
+          "S0063",
+          "S0064",
+          "S0065",
+          "S0066",
+          "S0067",
+          "S0068",
+          "S0069",
+          "S0070",
+          "S0071",
+          "S0072",
+          "S0073",
+          "S0074"
+        ],
+        "touched_shots": 54,
+        "used_frames": 9000,
+        "last_shot": {
+          "shot": "S0074",
+          "full": [
+            11679,
+            11980
+          ],
+          "pilot": [
+            11679,
+            11820
+          ],
+          "pilot_frames": 141
+        },
+        "last_shot_excluded_tail_frames": 160,
+        "pilot_cut_seconds": [
+          94.0,
+          394.0
+        ]
+      }
+    },
+    {
+      "id": "r6_timebase",
+      "status": "PASS",
+      "reason": "R6 source constants match 300-second contract",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r6\\scripts\\r6_common.py",
+          "exists": true,
+          "bytes": 10578,
+          "sha256": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc"
+        },
+        "parsed": {
+          "FPS": 30.0,
+          "SPAN_A": 2820,
+          "SPAN_B": 11820
+        }
+      }
+    },
+    {
+      "id": "r6_runtime_paths",
+      "status": "PASS",
+      "reason": "R6 endpoint and Python declarations parsed",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r6\\scripts\\r6_common.py",
+          "exists": true,
+          "bytes": 10578,
+          "sha256": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc"
+        },
+        "base": "http://127.0.0.1:8188",
+        "envpy": "C:/Users/Admin/Documents/Codex/work/mfv1/runtime/video14b/venv/Scripts/python.exe"
+      }
+    },
+    {
+      "id": "cast_atlas",
+      "status": "PASS",
+      "reason": "14 unique front/profile hash pins parsed",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-portable-handoff-20261019\\review_and_handoff\\motionforge-r6-checkpoint-review-20261014\\snapshot\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\cast_atlas.json",
+          "exists": true,
+          "bytes": 4120,
+          "sha256": "e847acb8d30f120bcaffb81b1e5048baf3e32280bcd74e9e5688b20a56149a4e"
+        },
+        "expected_sha256": "e847acb8d30f120bcaffb81b1e5048baf3e32280bcd74e9e5688b20a56149a4e",
+        "cast_dir": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r4\\assets\\cast_b",
+        "unique_assets": 14
+      }
+    },
+    {
+      "id": "cast:B01_Khang_front_bust.png",
+      "status": "FAIL",
+      "reason": "missing, changed, tiny, or undecodable CAST",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r4\\assets\\cast_b\\B01_Khang_front_bust.png",
+          "exists": false,
+          "bytes": null,
+          "sha256": null
+        },
+        "expected_sha256": "86aa300820a1e8243eb4f21a5c1ade67fc52ceaf3b4db015837074714a6a0285",
+        "entities": [
+          "E1:front"
+        ],
+        "image": {},
+        "minimum_bytes": 1024
+      }
+    },
+    {
+      "id": "cast:B01_Khang_profile.png",
+      "status": "FAIL",
+      "reason": "missing, changed, tiny, or undecodable CAST",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r4\\assets\\cast_b\\B01_Khang_profile.png",
+          "exists": false,
+          "bytes": null,
+          "sha256": null
+        },
+        "expected_sha256": "fd2fae2e3babb207d5e3f25f0fdabdd632b14c7de46bcba2715ab6af339947b8",
+        "entities": [
+          "E1:profile"
+        ],
+        "image": {},
+        "minimum_bytes": 1024
+      }
+    },
+    {
+      "id": "cast:B02_Lam_front_bust.png",
+      "status": "FAIL",
+      "reason": "missing, changed, tiny, or undecodable CAST",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r4\\assets\\cast_b\\B02_Lam_front_bust.png",
+          "exists": false,
+          "bytes": null,
+          "sha256": null
+        },
+        "expected_sha256": "cebba2d68670ca6d4a8c7034c0b29d0d5f7fcc62fe33c1b31fae2d0af08eefe6",
+        "entities": [
+          "E2:front",
+          "E8:front"
+        ],
+        "image": {},
+        "minimum_bytes": 1024
+      }
+    },
+    {
+      "id": "cast:B02_Lam_profile.png",
+      "status": "FAIL",
+      "reason": "missing, changed, tiny, or undecodable CAST",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r4\\assets\\cast_b\\B02_Lam_profile.png",
+          "exists": false,
+          "bytes": null,
+          "sha256": null
+        },
+        "expected_sha256": "6d5093d7b309a14a2d29f02e9892abee6d09a47d0f2951a6406e3dc7f163cf3d",
+        "entities": [
+          "E2:profile",
+          "E8:profile"
+        ],
+        "image": {},
+        "minimum_bytes": 1024
+      }
+    },
+    {
+      "id": "cast:B03_Mai_front_bust.png",
+      "status": "FAIL",
+      "reason": "missing, changed, tiny, or undecodable CAST",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r4\\assets\\cast_b\\B03_Mai_front_bust.png",
+          "exists": false,
+          "bytes": null,
+          "sha256": null
+        },
+        "expected_sha256": "e30cc53fee1645694f126219bc16c54d43e976d4aff9d50fcbe13aa2faa53ec9",
+        "entities": [
+          "E3:front"
+        ],
+        "image": {},
+        "minimum_bytes": 1024
+      }
+    },
+    {
+      "id": "cast:B03_Mai_profile.png",
+      "status": "FAIL",
+      "reason": "missing, changed, tiny, or undecodable CAST",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r4\\assets\\cast_b\\B03_Mai_profile.png",
+          "exists": false,
+          "bytes": null,
+          "sha256": null
+        },
+        "expected_sha256": "2ca1c972b8006195d694c537782a03a117306f7d83d3db4823d9b54c84a94867",
+        "entities": [
+          "E3:profile"
+        ],
+        "image": {},
+        "minimum_bytes": 1024
+      }
+    },
+    {
+      "id": "cast:B04_Phuc_front_bust.png",
+      "status": "FAIL",
+      "reason": "missing, changed, tiny, or undecodable CAST",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r4\\assets\\cast_b\\B04_Phuc_front_bust.png",
+          "exists": false,
+          "bytes": null,
+          "sha256": null
+        },
+        "expected_sha256": "0565e65ab3ccac10b80f714fd891014570aaf7a8981a256671b14c39479e3341",
+        "entities": [
+          "E4:front"
+        ],
+        "image": {},
+        "minimum_bytes": 1024
+      }
+    },
+    {
+      "id": "cast:B04_Phuc_profile.png",
+      "status": "FAIL",
+      "reason": "missing, changed, tiny, or undecodable CAST",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r4\\assets\\cast_b\\B04_Phuc_profile.png",
+          "exists": false,
+          "bytes": null,
+          "sha256": null
+        },
+        "expected_sha256": "87ddf783905c3bd516798ce1c31a10cac7e0dcdf6d974b2045ab97b1d2c5302f",
+        "entities": [
+          "E4:profile"
+        ],
+        "image": {},
+        "minimum_bytes": 1024
+      }
+    },
+    {
+      "id": "cast:B05_Van_front_bust.png",
+      "status": "FAIL",
+      "reason": "missing, changed, tiny, or undecodable CAST",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r4\\assets\\cast_b\\B05_Van_front_bust.png",
+          "exists": false,
+          "bytes": null,
+          "sha256": null
+        },
+        "expected_sha256": "397b29393642f08f7bfd12ac68b8b8cebfbefb5159493198f299dc43d2c946e6",
+        "entities": [
+          "E5:front"
+        ],
+        "image": {},
+        "minimum_bytes": 1024
+      }
+    },
+    {
+      "id": "cast:B05_Van_profile.png",
+      "status": "FAIL",
+      "reason": "missing, changed, tiny, or undecodable CAST",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r4\\assets\\cast_b\\B05_Van_profile.png",
+          "exists": false,
+          "bytes": null,
+          "sha256": null
+        },
+        "expected_sha256": "2f5e9c6ce3c616b314fe25516f3f9abeb613d8a33e2ed3bf8611fadf8f8fcfe2",
+        "entities": [
+          "E5:profile"
+        ],
+        "image": {},
+        "minimum_bytes": 1024
+      }
+    },
+    {
+      "id": "cast:B06_Linh_front_bust.png",
+      "status": "FAIL",
+      "reason": "missing, changed, tiny, or undecodable CAST",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r4\\assets\\cast_b\\B06_Linh_front_bust.png",
+          "exists": false,
+          "bytes": null,
+          "sha256": null
+        },
+        "expected_sha256": "a88e78348591da0ced0e110a11058d1698b134d1f5fc5b9932f509a7fd0cb877",
+        "entities": [
+          "E6:front"
+        ],
+        "image": {},
+        "minimum_bytes": 1024
+      }
+    },
+    {
+      "id": "cast:B06_Linh_profile.png",
+      "status": "FAIL",
+      "reason": "missing, changed, tiny, or undecodable CAST",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r4\\assets\\cast_b\\B06_Linh_profile.png",
+          "exists": false,
+          "bytes": null,
+          "sha256": null
+        },
+        "expected_sha256": "df179ad2a65cd8fe9ece828670b03069f4dae6515cb1e734da82b7e581619721",
+        "entities": [
+          "E6:profile"
+        ],
+        "image": {},
+        "minimum_bytes": 1024
+      }
+    },
+    {
+      "id": "cast:B07_Thu_front_bust.png",
+      "status": "FAIL",
+      "reason": "missing, changed, tiny, or undecodable CAST",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r4\\assets\\cast_b\\B07_Thu_front_bust.png",
+          "exists": false,
+          "bytes": null,
+          "sha256": null
+        },
+        "expected_sha256": "92880cf705570d4dc19b811464417c362e212d3e0111ed27be312a4c6c0d9c2b",
+        "entities": [
+          "E7:front"
+        ],
+        "image": {},
+        "minimum_bytes": 1024
+      }
+    },
+    {
+      "id": "cast:B07_Thu_profile.png",
+      "status": "FAIL",
+      "reason": "missing, changed, tiny, or undecodable CAST",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r4\\assets\\cast_b\\B07_Thu_profile.png",
+          "exists": false,
+          "bytes": null,
+          "sha256": null
+        },
+        "expected_sha256": "d7e9c368e75d65a4db3cfc12a6e789ff033d3182d7ef47e71c957c442d1583c2",
+        "entities": [
+          "E7:profile"
+        ],
+        "image": {},
+        "minimum_bytes": 1024
+      }
+    },
+    {
+      "id": "pilot_input",
+      "status": "FAIL",
+      "reason": "directory absent or empty",
+      "evidence": {
+        "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\input",
+        "exists": false,
+        "entry_count": 0
+      }
+    },
+    {
+      "id": "r6_ledger",
+      "status": "FAIL",
+      "reason": "required file absent or empty",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r6\\source_actor_ledger.jsonl",
+          "exists": false,
+          "bytes": null,
+          "sha256": null
+        }
+      }
+    },
+    {
+      "id": "r6_atlas",
+      "status": "FAIL",
+      "reason": "required file absent or empty",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r6\\cast_atlas.json",
+          "exists": false,
+          "bytes": null,
+          "sha256": null
+        }
+      }
+    },
+    {
+      "id": "r6_storyboard",
+      "status": "FAIL",
+      "reason": "required per-shot storyboard unavailable",
+      "evidence": {
+        "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r6\\storyboard",
+        "exists": false,
+        "entry_count": 0,
+        "missing": [
+          "S0021.json",
+          "S0022.json",
+          "S0023.json",
+          "S0024.json",
+          "S0025.json",
+          "S0026.json",
+          "S0027.json",
+          "S0028.json",
+          "S0029.json",
+          "S0030.json",
+          "S0031.json",
+          "S0032.json",
+          "S0033.json",
+          "S0034.json",
+          "S0035.json",
+          "S0036.json",
+          "S0037.json",
+          "S0038.json",
+          "S0039.json",
+          "S0040.json",
+          "S0041.json",
+          "S0042.json",
+          "S0043.json",
+          "S0044.json",
+          "S0045.json",
+          "S0046.json",
+          "S0047.json",
+          "S0048.json",
+          "S0049.json",
+          "S0050.json",
+          "S0051.json",
+          "S0052.json",
+          "S0053.json",
+          "S0054.json",
+          "S0055.json",
+          "S0056.json",
+          "S0057.json",
+          "S0058.json",
+          "S0059.json",
+          "S0060.json",
+          "S0061.json",
+          "S0062.json",
+          "S0063.json",
+          "S0064.json",
+          "S0065.json",
+          "S0066.json",
+          "S0067.json",
+          "S0068.json",
+          "S0069.json",
+          "S0070.json",
+          "S0071.json",
+          "S0072.json",
+          "S0073.json",
+          "S0074.json"
+        ]
+      }
+    },
+    {
+      "id": "r5_storyboard",
+      "status": "FAIL",
+      "reason": "required per-shot storyboard unavailable",
+      "evidence": {
+        "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r5\\storyboard",
+        "exists": false,
+        "entry_count": 0,
+        "missing": [
+          "S0021.json",
+          "S0022.json",
+          "S0023.json",
+          "S0024.json",
+          "S0025.json",
+          "S0026.json",
+          "S0027.json",
+          "S0028.json",
+          "S0029.json",
+          "S0030.json",
+          "S0031.json",
+          "S0032.json",
+          "S0033.json",
+          "S0034.json",
+          "S0035.json",
+          "S0036.json",
+          "S0037.json",
+          "S0038.json",
+          "S0039.json",
+          "S0040.json",
+          "S0041.json",
+          "S0042.json",
+          "S0043.json",
+          "S0044.json",
+          "S0045.json",
+          "S0046.json",
+          "S0047.json",
+          "S0048.json",
+          "S0049.json",
+          "S0050.json",
+          "S0051.json",
+          "S0052.json",
+          "S0053.json",
+          "S0054.json",
+          "S0055.json",
+          "S0056.json",
+          "S0057.json",
+          "S0058.json",
+          "S0059.json",
+          "S0060.json",
+          "S0061.json",
+          "S0062.json",
+          "S0063.json",
+          "S0064.json",
+          "S0065.json",
+          "S0066.json",
+          "S0067.json",
+          "S0068.json",
+          "S0069.json",
+          "S0070.json",
+          "S0071.json",
+          "S0072.json",
+          "S0073.json",
+          "S0074.json"
+        ]
+      }
+    },
+    {
+      "id": "graph_template",
+      "status": "FAIL",
+      "reason": "required file absent or empty",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\graph\\reuse_bundle\\shot_anchor_v1.baseline.api.json",
+          "exists": false,
+          "bytes": null,
+          "sha256": null
+        }
+      }
+    },
+    {
+      "id": "r4_cast_dir",
+      "status": "FAIL",
+      "reason": "directory absent or empty",
+      "evidence": {
+        "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r4\\assets\\cast_b",
+        "exists": false,
+        "entry_count": 0
+      }
+    },
+    {
+      "id": "r4_sam2_large",
+      "status": "FAIL",
+      "reason": "required file absent or empty",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r4\\models\\sam2.1_hiera_large.pt",
+          "exists": false,
+          "bytes": null,
+          "sha256": null
+        }
+      }
+    },
+    {
+      "id": "r5_cotracker",
+      "status": "FAIL",
+      "reason": "required file absent or empty",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r5\\models\\co-tracker\\scaled_offline.pth",
+          "exists": false,
+          "bytes": null,
+          "sha256": null
+        }
+      }
+    },
+    {
+      "id": "historical_ledger_reference",
+      "status": "PASS",
+      "reason": "read-only historical reference; pilot ledger remains independent",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-portable-handoff-20261019\\review_and_handoff\\motionforge-r6-checkpoint-review-20261014\\snapshot\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\source_actor_ledger.jsonl",
+          "exists": true,
+          "bytes": 36876,
+          "sha256": "1012a20a03b10e91a22e1e7a588e4f6b7f8259599f90f0d4fd855bec9f9c3715"
+        }
+      }
+    },
+    {
+      "id": "comfyui_code",
+      "status": "PASS",
+      "reason": "Python source exists and parses; imports untested",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\ComfyUI\\main.py",
+          "exists": true,
+          "bytes": 25024,
+          "sha256": "5a958d6975d8b6096887df7f5160cecf760e5b434a5471bb5f8efaae73bcfd96"
+        },
+        "import_status": "UNKNOWN"
+      }
+    },
+    {
+      "id": "historical_server_code",
+      "status": "PASS",
+      "reason": "Python source exists and parses; imports untested",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\tools\\serve_video14b.py",
+          "exists": true,
+          "bytes": 2058,
+          "sha256": "dd973c67762d31ec7f98d38e7266a884e9bba3085470759acc7e8fb5ea921e3d"
+        },
+        "import_status": "UNKNOWN"
+      }
+    },
+    {
+      "id": "endpoint_configuration",
+      "status": "FAIL",
+      "reason": "R6 targets 8188; historical server defaults to 8210",
+      "evidence": {
+        "r6_common": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r6\\scripts\\r6_common.py",
+          "exists": true,
+          "bytes": 10578,
+          "sha256": "9c4ba658d0f1455d96c8038f8a1703f9b091d78a3d1506d02e05cc7120c481dc"
+        },
+        "historical_server": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\tools\\serve_video14b.py",
+          "exists": true,
+          "bytes": 2058,
+          "sha256": "dd973c67762d31ec7f98d38e7266a884e9bba3085470759acc7e8fb5ea921e3d"
+        },
+        "r6_base": "http://127.0.0.1:8188",
+        "historical_default_port": 8210
+      }
+    },
+    {
+      "id": "runtime_python",
+      "status": "FAIL",
+      "reason": "declared runtime Python absent",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\venv\\Scripts\\python.exe",
+          "exists": false,
+          "bytes": null,
+          "sha256": null
+        },
+        "command": null,
+        "exit_code": null
+      }
+    },
+    {
+      "id": "runtime_imports",
+      "status": "UNKNOWN",
+      "reason": "cannot validate runtime imports without declared Python",
+      "evidence": {
+        "python_check": "runtime_python",
+        "command": null,
+        "exit_code": null
+      }
+    },
+    {
+      "id": "weight:models/diffusion_models/flux-2-klein-4b-fp8.safetensors",
+      "status": "PASS",
+      "reason": "file and safetensors header present; loadability untested",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\models\\diffusion_models\\flux-2-klein-4b-fp8.safetensors",
+          "exists": true,
+          "bytes": 4070624520,
+          "sha256": "97ed34fe0567e436200f2faee3939b88f2b5d99f8af2a4dc16532c4245c0ccb6"
+        },
+        "header": {
+          "header_bytes": 36480,
+          "entries": 310
+        },
+        "error": null,
+        "model_loadability": "UNKNOWN"
+      }
+    },
+    {
+      "id": "weight:models/vae/flux2-vae.safetensors",
+      "status": "PASS",
+      "reason": "file and safetensors header present; loadability untested",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\models\\vae\\flux2-vae.safetensors",
+          "exists": true,
+          "bytes": 336211292,
+          "sha256": "868fe7b343cc8f3a19dbcfcafbc3d5f888802be3f89bd81b65b3621a066ce8f3"
+        },
+        "header": {
+          "header_bytes": 25792,
+          "entries": 251
+        },
+        "error": null,
+        "model_loadability": "UNKNOWN"
+      }
+    },
+    {
+      "id": "weight:models/diffusion_models/wan2.1_vace_1.3B_fp16.safetensors",
+      "status": "PASS",
+      "reason": "file and safetensors header present; loadability untested",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\models\\diffusion_models\\wan2.1_vace_1.3B_fp16.safetensors",
+          "exists": true,
+          "bytes": 4309519800,
+          "sha256": "640ccc0577e6a5d4bb15cd91b11b699ef914fc55f126c5a1c544e152130784f2"
+        },
+        "header": {
+          "header_bytes": 193328,
+          "entries": 1265
+        },
+        "error": null,
+        "model_loadability": "UNKNOWN"
+      }
+    },
+    {
+      "id": "weight:models/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "status": "PASS",
+      "reason": "file and safetensors header present; loadability untested",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\models\\text_encoders\\umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+          "exists": true,
+          "bytes": 6735906897,
+          "sha256": "c3355d30191f1f066b26d93fba017ae9809dce6c627dda5f6a66eaa651204f68"
+        },
+        "header": {
+          "header_bytes": 48848,
+          "entries": 412
+        },
+        "error": null,
+        "model_loadability": "UNKNOWN"
+      }
+    },
+    {
+      "id": "weight:models/vae/Wan2_1_VAE_bf16.safetensors",
+      "status": "PASS",
+      "reason": "file and safetensors header present; loadability untested",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\models\\vae\\Wan2_1_VAE_bf16.safetensors",
+          "exists": true,
+          "bytes": 253806278,
+          "sha256": "1ab9a32cc2c740f6e39d80d367ce5dcc28db8c71b79b28670546b8973e9d75f9"
+        },
+        "header": {
+          "header_bytes": 21208,
+          "entries": 195
+        },
+        "error": null,
+        "model_loadability": "UNKNOWN"
+      }
+    },
+    {
+      "id": "model_loadability",
+      "status": "UNKNOWN",
+      "reason": "weights have headers and hashes, but no runtime import or model load is permitted in this preflight",
+      "evidence": {
+        "command": null,
+        "exit_code": null
+      }
+    },
+    {
+      "id": "comfyui_endpoint_8188",
+      "status": "UNKNOWN",
+      "reason": "loopback TCP port unavailable; HTTP GET not attempted: timed out",
+      "evidence": {
+        "url": "http://127.0.0.1:8188/system_stats",
+        "method": "GET",
+        "proxy": "disabled",
+        "socket_command": "create_connection(127.0.0.1,8188,timeout=2)",
+        "socket_exit_code": null,
+        "http_status": null
+      }
+    },
+    {
+      "id": "node_api_8188",
+      "status": "UNKNOWN",
+      "reason": "loopback TCP port unavailable; HTTP GET not attempted: timed out",
+      "evidence": {
+        "url": "http://127.0.0.1:8188/object_info",
+        "method": "GET",
+        "proxy": "disabled",
+        "socket_command": "create_connection(127.0.0.1,8188,timeout=2)",
+        "socket_exit_code": null,
+        "http_status": null
+      }
+    },
+    {
+      "id": "queue_8188",
+      "status": "UNKNOWN",
+      "reason": "loopback TCP port unavailable; HTTP GET not attempted: timed out",
+      "evidence": {
+        "url": "http://127.0.0.1:8188/queue",
+        "method": "GET",
+        "proxy": "disabled",
+        "socket_command": "create_connection(127.0.0.1,8188,timeout=2)",
+        "socket_exit_code": null,
+        "http_status": null
+      }
+    },
+    {
+      "id": "historical_endpoint_8210",
+      "status": "UNKNOWN",
+      "reason": "loopback TCP port unavailable; HTTP GET not attempted: timed out",
+      "evidence": {
+        "url": "http://127.0.0.1:8210/system_stats",
+        "method": "GET",
+        "proxy": "disabled",
+        "socket_command": "create_connection(127.0.0.1,8210,timeout=2)",
+        "socket_exit_code": null,
+        "http_status": null
+      }
+    },
+    {
+      "id": "process_snapshot",
+      "status": "PASS",
+      "reason": "read-only process inventory only; ownership unresolved",
+      "evidence": {
+        "matches": [],
+        "command": "psutil.process_iter",
+        "exit_code": 0
+      }
+    },
+    {
+      "id": "lease_ownership",
+      "status": "UNKNOWN",
+      "reason": "lease presence and PID snapshot do not establish current ownership; controller audit required",
+      "evidence": {
+        "lease_dir": "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\leases",
+        "leases": [
+          {
+            "file": {
+              "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\leases\\instance-528dd2ac758a48018cca0bac52e93b8e.lease",
+              "exists": true,
+              "bytes": 324,
+              "sha256": "739d4d761ec49f4e4428992cc46525469191b7a43950ad9c1c3c1977cb22df02"
+            },
+            "pid": 21092,
+            "pid_alive_snapshot": false,
+            "acquired_at": 1790058684.405174,
+            "owner": "video14b"
+          }
+        ],
+        "unresolved_reservations": [
+          {
+            "file": {
+              "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\reservations\\528dd2ac758a48018cca0bac52e93b8e__attempt-7b93021b12c9.reservation.json",
+              "exists": true,
+              "bytes": 631,
+              "sha256": "011443314fc4788d3467a3b5fcf50ab0248cf4a07d9a5f0ceef4bdb1eb3de58f"
+            },
+            "state": "unresolved",
+            "server_pid": 31024,
+            "server_pid_alive_snapshot": false,
+            "base_url": "http://127.0.0.1:8210"
+          }
+        ],
+        "gpu_stage_lock": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mfv1\\runtime\\video14b\\leases\\gpu_stage.lock",
+          "exists": true,
+          "bytes": 0,
+          "sha256": null
+        }
+      }
+    }
+  ],
+  "counts": {
+    "PASS": 19,
+    "FAIL": 25,
+    "UNKNOWN": 7
+  },
+  "g2_pilot": "NOT_RUN",
+  "media_render": "NOT_RUN",
+  "model_inference": "NOT_RUN"
+}

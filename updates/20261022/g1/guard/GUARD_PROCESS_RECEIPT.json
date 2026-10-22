@@ -1,0 +1,38 @@
+{
+  "started_utc": "2026-10-22T04:00:26.844823+00:00",
+  "ended_utc": "2026-10-22T04:01:10.939974+00:00",
+  "command": [
+    "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "-B",
+    "C:\\Users\\Admin\\MotionForge2D\\docs\\pm\\tools\\g1_submission_guard.py",
+    "--candidate",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-04-20261020\\submissions\\g1-candidate-16",
+    "--output",
+    "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2",
+    "--suite",
+    "task/corrections/identity/r6/tests/test_g1_r1_correction.py",
+    "--suite",
+    "task/corrections/identity/r6/tests/test_codex_c01_review_binding.py",
+    "--suite",
+    "task/corrections/identity/r6/tests/test_codex_c02a_dependency_verification.py",
+    "--suite",
+    "task/corrections/identity/r6/tests/test_codex_c02b1_staged_source.py",
+    "--suite",
+    "task/corrections/identity/r6/tests/test_codex_c02b2_per_actor_reuse.py",
+    "--suite",
+    "task/corrections/identity/r6/tests/test_gemini_c02b3_asset_reuse.py",
+    "--suite",
+    "task/corrections/identity/r6/tests/test_gemini_a3_event_tracking.py",
+    "--suite",
+    "task/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py"
+  ],
+  "cwd": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-review",
+  "env": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exit_code": 0,
+  "stdout": "VERIFY_PASS C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\VERIFICATION.json\n",
+  "stderr": "",
+  "guard_json": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r2\\VERIFICATION.json",
+  "guard_json_sha256": "ccc43a4808f10772128c490c2aa227d3708714fceaf9f275160e61acb35799a7"
+}

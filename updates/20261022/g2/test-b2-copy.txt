@@ -1,0 +1,33 @@
+test_01_tampered_source_refused_before_copy (test_recover.RecoveryTests.test_01_tampered_source_refused_before_copy) ... ok
+test_02_path_escape_refused_before_copy (test_recover.RecoveryTests.test_02_path_escape_refused_before_copy) ... ok
+test_03_duplicate_destination_refused_before_copy (test_recover.RecoveryTests.test_03_duplicate_destination_refused_before_copy) ... ok
+test_04_invalid_graph_schema (test_recover.RecoveryTests.test_04_invalid_graph_schema) ... ok
+test_05_positive_exact_sources (test_recover.RecoveryTests.test_05_positive_exact_sources) ... FAIL
+test_06_no_overwrite (test_recover.RecoveryTests.test_06_no_overwrite) ... FAIL
+
+======================================================================
+FAIL: test_05_positive_exact_sources (test_recover.RecoveryTests.test_05_positive_exact_sources)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\2026-10-12\a-l-m-video-ra-m-2\outputs\motionforge-code-review-20261022\private-handoff-repo\updates\20261022\g2\recovery\test_recover.py", line 65, in test_05_positive_exact_sources
+    self.assertEqual(receipt["status"], "SELF_VERIFIED_PENDING_ROOT_REVIEW", [row for row in receipt["checks"] if row["status"] == "FAIL"])
+AssertionError: 'BLOCKED' != 'SELF_VERIFIED_PENDING_ROOT_REVIEW'
+- BLOCKED
++ SELF_VERIFIED_PENDING_ROOT_REVIEW
+ : [{'check': 'root_checkpoint', 'status': 'FAIL', 'reason': 'authority SHA-256', 'evidence': {'file': {'path': 'C:\\Users\\Admin\\Documents\\Codex\\g2-readiness-audit\\CHECKPOINT.json', 'exists': True, 'bytes': 2725, 'sha256': 'd23187396c28a5352c53518d5bfacc6a643cd1f58f65baf9a8a627e86938be15'}, 'expected_sha256': 'a7e24fca7281808917694d73285eb2ef34c0aa6b2d987018962a22ad99e9b484'}}]
+
+======================================================================
+FAIL: test_06_no_overwrite (test_recover.RecoveryTests.test_06_no_overwrite)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\2026-10-12\a-l-m-video-ra-m-2\outputs\motionforge-code-review-20261022\private-handoff-repo\updates\20261022\g2\recovery\test_recover.py", line 71, in test_06_no_overwrite
+    self.assertEqual(R.recover(vault)["status"], "SELF_VERIFIED_PENDING_ROOT_REVIEW")
+AssertionError: 'BLOCKED' != 'SELF_VERIFIED_PENDING_ROOT_REVIEW'
+- BLOCKED
++ SELF_VERIFIED_PENDING_ROOT_REVIEW
+
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.034s
+
+FAILED (failures=2)

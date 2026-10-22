@@ -1,0 +1,8 @@
+{
+  "candidate": "g1-candidate-16",
+  "status": "CODE_DONE_PENDING_FROZEN_REPLAY",
+  "created_utc": "2026-10-22T03:52:54.629681+00:00",
+  "base_manifest_sha256": "dcfd666e3c061402cb899b05f1ada23f1a40274b7cfb1e348e45b264118c351f",
+  "source_changes": 6,
+  "media_status": "BLOCKED_DEPENDENCY"
+}

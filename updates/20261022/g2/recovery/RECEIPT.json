@@ -1,0 +1,451 @@
+{
+  "task": "G2-B2-RECOVER-01",
+  "created_utc": "2026-10-22T04:50:44.229790+00:00",
+  "status": "SELF_VERIFIED_PENDING_ROOT_REVIEW",
+  "vault": "C:\\Users\\Admin\\Documents\\Codex\\g2b2-recovery\\vault-g2b2-001",
+  "checks": [
+    {
+      "check": "source:ledger",
+      "status": "PASS",
+      "reason": "exact source bytes",
+      "evidence": {
+        "source": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-portable-handoff-20261019\\review_and_handoff\\motionforge-r6-checkpoint-review-20261014\\snapshot\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\source_actor_ledger.jsonl",
+          "exists": true,
+          "bytes": 36876,
+          "sha256": "1012a20a03b10e91a22e1e7a588e4f6b7f8259599f90f0d4fd855bec9f9c3715"
+        },
+        "expected_bytes": 36876,
+        "expected_sha256": "1012a20a03b10e91a22e1e7a588e4f6b7f8259599f90f0d4fd855bec9f9c3715",
+        "vault_relative": "task/corrections/identity/r6/source_actor_ledger.jsonl"
+      }
+    },
+    {
+      "check": "source:atlas",
+      "status": "PASS",
+      "reason": "exact source bytes",
+      "evidence": {
+        "source": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-portable-handoff-20261019\\review_and_handoff\\motionforge-r6-checkpoint-review-20261014\\snapshot\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\cast_atlas.json",
+          "exists": true,
+          "bytes": 4120,
+          "sha256": "e847acb8d30f120bcaffb81b1e5048baf3e32280bcd74e9e5688b20a56149a4e"
+        },
+        "expected_bytes": 4120,
+        "expected_sha256": "e847acb8d30f120bcaffb81b1e5048baf3e32280bcd74e9e5688b20a56149a4e",
+        "vault_relative": "task/corrections/identity/r6/cast_atlas.json"
+      }
+    },
+    {
+      "check": "source:graph",
+      "status": "PASS",
+      "reason": "exact source bytes",
+      "evidence": {
+        "source": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-09-22\\tr-ng-th-i-terminal-gi\\outputs\\mf-rebuild-skills-20261001\\reuse_bundle\\shot_anchor_v1.baseline.api.json",
+          "exists": true,
+          "bytes": 16804,
+          "sha256": "0ff8ed9c92441230d76d42f2d3eeffb92e70f1b8749f663b170d1566a3df7f4e"
+        },
+        "expected_bytes": 16804,
+        "expected_sha256": "0ff8ed9c92441230d76d42f2d3eeffb92e70f1b8749f663b170d1566a3df7f4e",
+        "vault_relative": "task/graph/reuse_bundle/shot_anchor_v1.baseline.api.json"
+      }
+    },
+    {
+      "check": "root_review",
+      "status": "PASS",
+      "reason": "authority SHA-256",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2-readiness-audit\\ROOT_REVIEW_G2B1.md",
+          "exists": true,
+          "bytes": 3040,
+          "sha256": "99e2f6b3db28c413bc8eefc6483d75e7ad2a42e5723af45e3e56ca55cb72c0ab"
+        },
+        "expected_sha256": "99e2f6b3db28c413bc8eefc6483d75e7ad2a42e5723af45e3e56ca55cb72c0ab"
+      }
+    },
+    {
+      "check": "root_checkpoint",
+      "status": "PASS",
+      "reason": "authority SHA-256",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2-readiness-audit\\CHECKPOINT.json",
+          "exists": true,
+          "bytes": 2415,
+          "sha256": "a7e24fca7281808917694d73285eb2ef34c0aa6b2d987018962a22ad99e9b484"
+        },
+        "expected_sha256": "a7e24fca7281808917694d73285eb2ef34c0aa6b2d987018962a22ad99e9b484"
+      }
+    },
+    {
+      "check": "packet_manifest",
+      "status": "PASS",
+      "reason": "authority SHA-256",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-portable-handoff-20261019\\review_and_handoff\\motionforge-r6-checkpoint-review-20261014\\PACKET_MANIFEST.json",
+          "exists": true,
+          "bytes": 90554,
+          "sha256": "0f8785bda71c1fd8ea2374da7adc10eee5775eaeb79ad00ceaae586e691ae5e8"
+        },
+        "expected_sha256": "0f8785bda71c1fd8ea2374da7adc10eee5775eaeb79ad00ceaae586e691ae5e8"
+      }
+    },
+    {
+      "check": "graph_provenance",
+      "status": "PASS",
+      "reason": "authority SHA-256",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-09-22\\tr-ng-th-i-terminal-gi\\outputs\\mf-rebuild-skills-20261001\\reuse_bundle\\PROVENANCE.json",
+          "exists": true,
+          "bytes": 4864,
+          "sha256": "7b536305b093b10827a5e4732de6ff23057e830e433d2e5b6c209000b82f1971"
+        },
+        "expected_sha256": "7b536305b093b10827a5e4732de6ff23057e830e433d2e5b6c209000b82f1971"
+      }
+    },
+    {
+      "check": "pilot_manifest",
+      "status": "PASS",
+      "reason": "authority SHA-256",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\MANIFEST.json",
+          "exists": true,
+          "bytes": 14469,
+          "sha256": "4df7de9ccc81dff7a82a9b9d70d90a48eae2bb17cd9ff455748b041f20a0ba82"
+        },
+        "expected_sha256": "4df7de9ccc81dff7a82a9b9d70d90a48eae2bb17cd9ff455748b041f20a0ba82"
+      }
+    },
+    {
+      "check": "packet_lineage:ledger",
+      "status": "PASS",
+      "reason": "packet manifest matches exact R6 snapshot file",
+      "evidence": {
+        "manifest": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-portable-handoff-20261019\\review_and_handoff\\motionforge-r6-checkpoint-review-20261014\\PACKET_MANIFEST.json",
+        "relative": "snapshot\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\source_actor_ledger.jsonl",
+        "rows": [
+          {
+            "path": "snapshot\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\source_actor_ledger.jsonl",
+            "bytes": 36876,
+            "sha256": "1012a20a03b10e91a22e1e7a588e4f6b7f8259599f90f0d4fd855bec9f9c3715"
+          }
+        ]
+      }
+    },
+    {
+      "check": "packet_lineage:atlas",
+      "status": "PASS",
+      "reason": "packet manifest matches exact R6 snapshot file",
+      "evidence": {
+        "manifest": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-portable-handoff-20261019\\review_and_handoff\\motionforge-r6-checkpoint-review-20261014\\PACKET_MANIFEST.json",
+        "relative": "snapshot\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\cast_atlas.json",
+        "rows": [
+          {
+            "path": "snapshot\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\cast_atlas.json",
+            "bytes": 4120,
+            "sha256": "e847acb8d30f120bcaffb81b1e5048baf3e32280bcd74e9e5688b20a56149a4e"
+          }
+        ]
+      }
+    },
+    {
+      "check": "graph_lineage_record",
+      "status": "PASS",
+      "reason": "PROVENANCE graph binding",
+      "evidence": {
+        "provenance": "C:\\Users\\Admin\\Documents\\Codex\\2026-09-22\\tr-ng-th-i-terminal-gi\\outputs\\mf-rebuild-skills-20261001\\reuse_bundle\\PROVENANCE.json",
+        "entries": [
+          {
+            "source": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-20260927\\INTEGRATION\\app\\media_workflows\\shot_anchor_v1.json",
+            "source_sha256": "e02574f799cfac6477be455aa18ff68e02f5ba5ed34c2651dba55d8496f266c6",
+            "snapshot": "C:\\Users\\Admin\\Documents\\Codex\\2026-09-22\\tr-ng-th-i-terminal-gi\\outputs\\mf-rebuild-skills-20261001\\reuse_bundle\\shot_anchor_v1.wrapper.original.json",
+            "snapshot_sha256": "e02574f799cfac6477be455aa18ff68e02f5ba5ed34c2651dba55d8496f266c6",
+            "api_graph": "C:\\Users\\Admin\\Documents\\Codex\\2026-09-22\\tr-ng-th-i-terminal-gi\\outputs\\mf-rebuild-skills-20261001\\reuse_bundle\\shot_anchor_v1.baseline.api.json",
+            "api_sha256": "0ff8ed9c92441230d76d42f2d3eeffb92e70f1b8749f663b170d1566a3df7f4e",
+            "nodes": 48,
+            "requires_per_shot_bindings": true
+          }
+        ]
+      }
+    },
+    {
+      "check": "wrapper_original",
+      "status": "PASS",
+      "reason": "wrapper provenance bytes",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-20260927\\INTEGRATION\\app\\media_workflows\\shot_anchor_v1.json",
+          "exists": true,
+          "bytes": 33713,
+          "sha256": "e02574f799cfac6477be455aa18ff68e02f5ba5ed34c2651dba55d8496f266c6"
+        },
+        "expected_sha256": "e02574f799cfac6477be455aa18ff68e02f5ba5ed34c2651dba55d8496f266c6"
+      }
+    },
+    {
+      "check": "wrapper_snapshot",
+      "status": "PASS",
+      "reason": "wrapper provenance bytes",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-09-22\\tr-ng-th-i-terminal-gi\\outputs\\mf-rebuild-skills-20261001\\reuse_bundle\\shot_anchor_v1.wrapper.original.json",
+          "exists": true,
+          "bytes": 33713,
+          "sha256": "e02574f799cfac6477be455aa18ff68e02f5ba5ed34c2651dba55d8496f266c6"
+        },
+        "expected_sha256": "e02574f799cfac6477be455aa18ff68e02f5ba5ed34c2651dba55d8496f266c6"
+      }
+    },
+    {
+      "check": "graph_mirror_1",
+      "status": "PASS",
+      "reason": "independent historical graph copy",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-external-review-20260929\\docs\\external-review\\updates\\20261002\\reuse_bundle\\shot_anchor_v1.baseline.api.json",
+          "exists": true,
+          "bytes": 16804,
+          "sha256": "0ff8ed9c92441230d76d42f2d3eeffb92e70f1b8749f663b170d1566a3df7f4e"
+        },
+        "expected_sha256": "0ff8ed9c92441230d76d42f2d3eeffb92e70f1b8749f663b170d1566a3df7f4e"
+      }
+    },
+    {
+      "check": "graph_mirror_2",
+      "status": "PASS",
+      "reason": "independent historical graph copy",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-delivery-runs\\20261002\\20261002T031500Z-wan-shotwise\\tasks\\MF-DEMO-E2E-R5\\WAN-PROTOTYPE-01\\reuse_bundle\\shot_anchor_v1.baseline.api.json",
+          "exists": true,
+          "bytes": 16804,
+          "sha256": "0ff8ed9c92441230d76d42f2d3eeffb92e70f1b8749f663b170d1566a3df7f4e"
+        },
+        "expected_sha256": "0ff8ed9c92441230d76d42f2d3eeffb92e70f1b8749f663b170d1566a3df7f4e"
+      }
+    },
+    {
+      "check": "historical_code:r6_graph.py",
+      "status": "PASS",
+      "reason": "approved pilot manifest pins historical R6 code",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r6\\scripts\\r6_graph.py",
+          "exists": true,
+          "bytes": 5508,
+          "sha256": "832d5d44df486c3f10ec8194e7ab170ac4f5a77af0ab46ede176005904981d21"
+        },
+        "manifest_row": [
+          {
+            "relative": "task/corrections/identity/r6/scripts/r6_graph.py",
+            "bytes": 5508,
+            "sha256": "832d5d44df486c3f10ec8194e7ab170ac4f5a77af0ab46ede176005904981d21"
+          }
+        ]
+      }
+    },
+    {
+      "check": "historical_code:r6_key_recipe.py",
+      "status": "PASS",
+      "reason": "approved pilot manifest pins historical R6 code",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r6\\scripts\\r6_key_recipe.py",
+          "exists": true,
+          "bytes": 10608,
+          "sha256": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9"
+        },
+        "manifest_row": [
+          {
+            "relative": "task/corrections/identity/r6/scripts/r6_key_recipe.py",
+            "bytes": 10608,
+            "sha256": "5d8fdb7030c6472a58a7011909adc270362551bd250613b24464bda287fcb6a9"
+          }
+        ]
+      }
+    },
+    {
+      "check": "historical_code:r6_ledger.py",
+      "status": "PASS",
+      "reason": "approved pilot manifest pins historical R6 code",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2p01-transport\\pilot-g2p01-001\\task\\corrections\\identity\\r6\\scripts\\r6_ledger.py",
+          "exists": true,
+          "bytes": 9806,
+          "sha256": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200"
+        },
+        "manifest_row": [
+          {
+            "relative": "task/corrections/identity/r6/scripts/r6_ledger.py",
+            "bytes": 9806,
+            "sha256": "624bd36cd80f4556201016bcbefd7f93ae56f76a67ae30249259714294a0d200"
+          }
+        ]
+      }
+    },
+    {
+      "check": "ledger_structure",
+      "status": "PASS",
+      "reason": "54 contiguous source-shot rows",
+      "evidence": {
+        "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-portable-handoff-20261019\\review_and_handoff\\motionforge-r6-checkpoint-review-20261014\\snapshot\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\source_actor_ledger.jsonl",
+        "rows": 54,
+        "span": [
+          2820,
+          11980
+        ],
+        "first": "S0021",
+        "last": "S0074"
+      }
+    },
+    {
+      "check": "atlas_ledger_structure",
+      "status": "PASS",
+      "reason": "14 unique CAST pins; ledger names bind atlas",
+      "evidence": {
+        "path": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-portable-handoff-20261019\\review_and_handoff\\motionforge-r6-checkpoint-review-20261014\\snapshot\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\cast_atlas.json",
+        "unique_cast_pins": 14,
+        "used_fronts": [
+          "B01_Khang_front_bust.png",
+          "B02_Lam_front_bust.png",
+          "B03_Mai_front_bust.png",
+          "B04_Phuc_front_bust.png",
+          "B05_Van_front_bust.png",
+          "B06_Linh_front_bust.png",
+          "B07_Thu_front_bust.png"
+        ],
+        "cast_png_bytes": "NOT_STAGED"
+      }
+    },
+    {
+      "check": "graph_static_schema",
+      "status": "PASS",
+      "reason": "48 nodes, links, baseline settings and R6 rewire pass static checks",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-09-22\\tr-ng-th-i-terminal-gi\\outputs\\mf-rebuild-skills-20261001\\reuse_bundle\\shot_anchor_v1.baseline.api.json",
+          "exists": true,
+          "bytes": 16804,
+          "sha256": "0ff8ed9c92441230d76d42f2d3eeffb92e70f1b8749f663b170d1566a3df7f4e"
+        },
+        "nodes": 48,
+        "refs_reachable": [
+          "KEY_LOAD",
+          "R1_LOAD",
+          "R2_LOAD"
+        ],
+        "r3_reachable": false,
+        "model_names": {
+          "unet": "flux-2-klein-4b-fp8.safetensors",
+          "clip": "qwen_3_4b.safetensors",
+          "vae": "flux2-vae.safetensors"
+        }
+      }
+    },
+    {
+      "check": "graph_runtime_compatibility",
+      "status": "UNVERIFIED",
+      "reason": "no node API, graph execution, model load or inference in this task",
+      "evidence": {
+        "template": "C:\\Users\\Admin\\Documents\\Codex\\2026-09-22\\tr-ng-th-i-terminal-gi\\outputs\\mf-rebuild-skills-20261001\\reuse_bundle\\shot_anchor_v1.baseline.api.json",
+        "process_exit_code": null
+      }
+    },
+    {
+      "check": "postimage:ledger",
+      "status": "PASS",
+      "reason": "copied bytes match pin",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2b2-recovery\\vault-g2b2-001\\task\\corrections\\identity\\r6\\source_actor_ledger.jsonl",
+          "exists": true,
+          "bytes": 36876,
+          "sha256": "1012a20a03b10e91a22e1e7a588e4f6b7f8259599f90f0d4fd855bec9f9c3715"
+        },
+        "source": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-portable-handoff-20261019\\review_and_handoff\\motionforge-r6-checkpoint-review-20261014\\snapshot\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\source_actor_ledger.jsonl",
+        "expected_bytes": 36876,
+        "expected_sha256": "1012a20a03b10e91a22e1e7a588e4f6b7f8259599f90f0d4fd855bec9f9c3715"
+      }
+    },
+    {
+      "check": "postimage:atlas",
+      "status": "PASS",
+      "reason": "copied bytes match pin",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2b2-recovery\\vault-g2b2-001\\task\\corrections\\identity\\r6\\cast_atlas.json",
+          "exists": true,
+          "bytes": 4120,
+          "sha256": "e847acb8d30f120bcaffb81b1e5048baf3e32280bcd74e9e5688b20a56149a4e"
+        },
+        "source": "C:\\Users\\Admin\\Documents\\Codex\\work\\mf-portable-handoff-20261019\\review_and_handoff\\motionforge-r6-checkpoint-review-20261014\\snapshot\\tasks\\MF-DEMO-LONG-01\\corrections\\identity5m_20261008\\r6\\cast_atlas.json",
+        "expected_bytes": 4120,
+        "expected_sha256": "e847acb8d30f120bcaffb81b1e5048baf3e32280bcd74e9e5688b20a56149a4e"
+      }
+    },
+    {
+      "check": "postimage:graph",
+      "status": "PASS",
+      "reason": "copied bytes match pin",
+      "evidence": {
+        "file": {
+          "path": "C:\\Users\\Admin\\Documents\\Codex\\g2b2-recovery\\vault-g2b2-001\\task\\graph\\reuse_bundle\\shot_anchor_v1.baseline.api.json",
+          "exists": true,
+          "bytes": 16804,
+          "sha256": "0ff8ed9c92441230d76d42f2d3eeffb92e70f1b8749f663b170d1566a3df7f4e"
+        },
+        "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-09-22\\tr-ng-th-i-terminal-gi\\outputs\\mf-rebuild-skills-20261001\\reuse_bundle\\shot_anchor_v1.baseline.api.json",
+        "expected_bytes": 16804,
+        "expected_sha256": "0ff8ed9c92441230d76d42f2d3eeffb92e70f1b8749f663b170d1566a3df7f4e"
+      }
+    },
+    {
+      "check": "vault_inventory",
+      "status": "PASS",
+      "reason": "exact three-file vault inventory",
+      "evidence": {
+        "actual": [
+          "task/corrections/identity/r6/cast_atlas.json",
+          "task/corrections/identity/r6/source_actor_ledger.jsonl",
+          "task/graph/reuse_bundle/shot_anchor_v1.baseline.api.json"
+        ],
+        "expected": [
+          "task/corrections/identity/r6/cast_atlas.json",
+          "task/corrections/identity/r6/source_actor_ledger.jsonl",
+          "task/graph/reuse_bundle/shot_anchor_v1.baseline.api.json"
+        ]
+      }
+    }
+  ],
+  "copied": [
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\g2b2-recovery\\vault-g2b2-001\\task\\corrections\\identity\\r6\\source_actor_ledger.jsonl",
+      "exists": true,
+      "bytes": 36876,
+      "sha256": "1012a20a03b10e91a22e1e7a588e4f6b7f8259599f90f0d4fd855bec9f9c3715"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\g2b2-recovery\\vault-g2b2-001\\task\\corrections\\identity\\r6\\cast_atlas.json",
+      "exists": true,
+      "bytes": 4120,
+      "sha256": "e847acb8d30f120bcaffb81b1e5048baf3e32280bcd74e9e5688b20a56149a4e"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\g2b2-recovery\\vault-g2b2-001\\task\\graph\\reuse_bundle\\shot_anchor_v1.baseline.api.json",
+      "exists": true,
+      "bytes": 16804,
+      "sha256": "0ff8ed9c92441230d76d42f2d3eeffb92e70f1b8749f663b170d1566a3df7f4e"
+    }
+  ],
+  "g2_media": "BLOCKED",
+  "render": "NOT_RUN",
+  "inference": "NOT_RUN",
+  "verified_utc": "2026-10-22T04:50:44.260650+00:00"
+}

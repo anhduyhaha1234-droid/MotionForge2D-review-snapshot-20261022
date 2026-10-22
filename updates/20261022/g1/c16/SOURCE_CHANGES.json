@@ -1,0 +1,38 @@
+[
+  {
+    "relative": "task/corrections/identity/r6/scripts/r6_evidence_contract.py",
+    "base_sha256": "84badfc988821018c8d157e8aba4a19bff6c8d64e5978422172a334e296facef",
+    "current_sha256": "279a2e3813a879ea533d87acf3a8363e237ad1686754ed6b2b0adef939bbfca2",
+    "bytes": 12644
+  },
+  {
+    "relative": "task/corrections/identity/r6/scripts/r6_gate.py",
+    "base_sha256": "201a363d86cd6cdd0ee92de11fb4281ec0d46dc1f8b9e8770d69ed97d8c2e043",
+    "current_sha256": "5ca0b457c3c202d68d572b29ed995ec8b8cbd08d666e93635b859b81e2f35c41",
+    "bytes": 26890
+  },
+  {
+    "relative": "task/corrections/identity/r6/scripts/r6_matrix.py",
+    "base_sha256": "08d5479a2254c319b916d8073c81d8fc3b6af6b2291fb8026db240fb6865b836",
+    "current_sha256": "1543a13caf97e5abdbb89d036a7e0ea6459066517bd6e2d1390fae232636e9ab",
+    "bytes": 11907
+  },
+  {
+    "relative": "task/corrections/identity/r6/scripts/r6_submission_adapter.py",
+    "base_sha256": "41da1873bba6e222303a94ebd72194e917d75f1d9b701bf71f2f67f13ae7115a",
+    "current_sha256": "141c372eb2fdf6d65504451d3d67e613f963568cff4a6122e520761d18647cae",
+    "bytes": 6660
+  },
+  {
+    "relative": "task/corrections/identity/r6/tests/test_g1_r1_correction.py",
+    "base_sha256": "643259722003ddea9920d7ea7310bc1d47fe05d06ae6a5a5b7134ffe03c3671b",
+    "current_sha256": "07f396263ef8d63e30300070a782ae7d32c0e1e067be3206a08551b08fe6995f",
+    "bytes": 45622
+  },
+  {
+    "relative": "task/corrections/identity/r6/tests/test_gemini_a4_evidence_conformance.py",
+    "base_sha256": "31f8f224409bd9c23d2ed673afb13d4238f796fb9e208fef38f3579d4090a9df",
+    "current_sha256": "bba447b5100943cea7e26fcf66116b76993eedf53f458551f8b206c39d21f836",
+    "bytes": 9672
+  }
+]

@@ -1,0 +1,266 @@
+{
+  "schema": "motionforge.g1-independent-challenge.v1",
+  "created_utc": "2026-10-22T03:59:08.422652+00:00",
+  "candidate": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-12\\a-l-m-video-ra-m-2\\outputs\\motionforge-g1-review-04-20261020\\submissions\\g1-candidate-16",
+  "candidate_manifest_expected": "4df7de9ccc81dff7a82a9b9d70d90a48eae2bb17cd9ff455748b041f20a0ba82",
+  "guard": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-r1\\VERIFICATION.json",
+  "guard_sha256": "d3047899b7a41494c1918ccdc46f587e4865dfc6d209748b1bbcf01094f4392d",
+  "guard_overall_verdict": "VERIFY_PASS",
+  "inventory_before": {
+    "manifest_sha256": "4df7de9ccc81dff7a82a9b9d70d90a48eae2bb17cd9ff455748b041f20a0ba82",
+    "declared": 74,
+    "actual": 74,
+    "missing": [],
+    "unexpected": [],
+    "mismatched": [],
+    "declared_bytes_ok": true,
+    "issues": [],
+    "ok": true
+  },
+  "inventory_after": {
+    "manifest_sha256": "4df7de9ccc81dff7a82a9b9d70d90a48eae2bb17cd9ff455748b041f20a0ba82",
+    "declared": 74,
+    "actual": 74,
+    "missing": [],
+    "unexpected": [],
+    "mismatched": [],
+    "declared_bytes_ok": true,
+    "issues": [],
+    "ok": true
+  },
+  "manifest_exact_copy": {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-independent-challenge\\run-01\\manifest_exact_source",
+    "inventory": {
+      "manifest_sha256": "4df7de9ccc81dff7a82a9b9d70d90a48eae2bb17cd9ff455748b041f20a0ba82",
+      "declared": 74,
+      "actual": 74,
+      "missing": [],
+      "unexpected": [],
+      "mismatched": [],
+      "declared_bytes_ok": true,
+      "issues": [],
+      "ok": true
+    }
+  },
+  "cli_no_preload": {
+    "pass": true,
+    "exit_code": 1,
+    "finding": "imports from its own script directory; default invocation has no matrix and blocks",
+    "raw": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-independent-challenge\\run-01\\raw\\cli_without_path_preload.json"
+  },
+  "cases": [
+    {
+      "case": "positive_54_real_v4",
+      "expected": "ALLOW",
+      "observed_exit": 0,
+      "terminal_exists": true,
+      "diagnostic": "",
+      "pass": true,
+      "raw": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-independent-challenge\\run-01\\raw\\positive_54_real_v4.json",
+      "fixture": {
+        "synthetic": true,
+        "plan_shots": 54,
+        "candidate_cache_validator": "r6_cache.verify_deps",
+        "q05_real_pytest_tests": 2
+      },
+      "terminal_status": "TASK_SUBMITTED"
+    },
+    {
+      "case": "missing_manifest_artifact",
+      "expected": "BLOCK",
+      "observed_exit": 1,
+      "terminal_exists": false,
+      "diagnostic": "SUBMIT BLOCKED: artifact missing: C:\\Users\\Admin\\Documents\\Codex\\g1c16-independent-challenge\\run-01\\cases\\missing_manifest_artifact\\candidate_copy\\task\\corrections\\identity\\r6\\continuations\\challenge-missing_manifest_artifact\\checkpoint.bin",
+      "pass": true,
+      "raw": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-independent-challenge\\run-01\\raw\\missing_manifest_artifact.json",
+      "fixture": {
+        "synthetic": true,
+        "plan_shots": 54,
+        "candidate_cache_validator": "r6_cache.verify_deps",
+        "q05_real_pytest_tests": 2
+      },
+      "terminal_status": null
+    },
+    {
+      "case": "wrong_declared_artifact_sha",
+      "expected": "BLOCK",
+      "observed_exit": 1,
+      "terminal_exists": false,
+      "diagnostic": "SUBMIT BLOCKED: artifact hash mismatch for C:\\Users\\Admin\\Documents\\Codex\\g1c16-independent-challenge\\run-01\\cases\\wrong_declared_artifact_sha\\candidate_copy\\task\\corrections\\identity\\r6\\continuations\\challenge-wrong_declared_artifact_sha\\checkpoint.bin: 62be557c05b3140884093b9900fad244d4254f3910d884220ddf8f7def18bacf vs 0000000000000000000000000000000000000000000000000000000000000000",
+      "pass": true,
+      "raw": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-independent-challenge\\run-01\\raw\\wrong_declared_artifact_sha.json",
+      "fixture": {
+        "synthetic": true,
+        "plan_shots": 54,
+        "candidate_cache_validator": "r6_cache.verify_deps",
+        "q05_real_pytest_tests": 2
+      },
+      "terminal_status": null
+    },
+    {
+      "case": "same_size_artifact_tamper",
+      "expected": "BLOCK",
+      "observed_exit": 1,
+      "terminal_exists": false,
+      "diagnostic": "SUBMIT BLOCKED: artifact hash mismatch for C:\\Users\\Admin\\Documents\\Codex\\g1c16-independent-challenge\\run-01\\cases\\same_size_artifact_tamper\\candidate_copy\\task\\corrections\\identity\\r6\\continuations\\challenge-same_size_artifact_tamper\\checkpoint.bin: 3d5462c29e9332c8f1aa66b90744a12262180ed9cfb79915f89dd149ea8c752e vs 62be557c05b3140884093b9900fad244d4254f3910d884220ddf8f7def18bacf",
+      "pass": true,
+      "raw": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-independent-challenge\\run-01\\raw\\same_size_artifact_tamper.json",
+      "fixture": {
+        "synthetic": true,
+        "plan_shots": 54,
+        "candidate_cache_validator": "r6_cache.verify_deps",
+        "q05_real_pytest_tests": 2
+      },
+      "terminal_status": null
+    },
+    {
+      "case": "stale_receipt_invocation",
+      "expected": "BLOCK",
+      "observed_exit": 1,
+      "terminal_exists": false,
+      "diagnostic": "SUBMIT GATE BLOCKED: ENGINEERING_BATCH_PROOF_INVALID: Q05 runner receipt binding invalid",
+      "pass": true,
+      "raw": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-independent-challenge\\run-01\\raw\\stale_receipt_invocation.json",
+      "fixture": {
+        "synthetic": true,
+        "plan_shots": 54,
+        "candidate_cache_validator": "r6_cache.verify_deps",
+        "q05_real_pytest_tests": 2
+      },
+      "terminal_status": null
+    },
+    {
+      "case": "fictitious_proof_invocation",
+      "expected": "BLOCK",
+      "observed_exit": 1,
+      "terminal_exists": false,
+      "diagnostic": "SUBMIT GATE BLOCKED: ENGINEERING_BATCH_PROOF_INVALID: Q05 claims differ from actual pytest run",
+      "pass": true,
+      "raw": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-independent-challenge\\run-01\\raw\\fictitious_proof_invocation.json",
+      "fixture": {
+        "synthetic": true,
+        "plan_shots": 54,
+        "candidate_cache_validator": "r6_cache.verify_deps",
+        "q05_real_pytest_tests": 2
+      },
+      "terminal_status": null
+    },
+    {
+      "case": "fictitious_q05_verifier",
+      "expected": "BLOCK",
+      "observed_exit": 1,
+      "terminal_exists": false,
+      "diagnostic": "SUBMIT GATE BLOCKED: ENGINEERING_BATCH_PROOF_INVALID: Q05 runner receipt binding invalid",
+      "pass": true,
+      "raw": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-independent-challenge\\run-01\\raw\\fictitious_q05_verifier.json",
+      "fixture": {
+        "synthetic": true,
+        "plan_shots": 54,
+        "candidate_cache_validator": "r6_cache.verify_deps",
+        "q05_real_pytest_tests": 2
+      },
+      "terminal_status": null
+    },
+    {
+      "case": "fictitious_q07_verifier",
+      "expected": "BLOCK",
+      "observed_exit": 1,
+      "terminal_exists": false,
+      "diagnostic": "SUBMIT GATE BLOCKED: ENGINEERING_BATCH_PROOF_INVALID: Q07 complete dependency proof required",
+      "pass": true,
+      "raw": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-independent-challenge\\run-01\\raw\\fictitious_q07_verifier.json",
+      "fixture": {
+        "synthetic": true,
+        "plan_shots": 54,
+        "candidate_cache_validator": "r6_cache.verify_deps",
+        "q05_real_pytest_tests": 2
+      },
+      "terminal_status": null
+    },
+    {
+      "case": "missing_receipt_node_ids",
+      "expected": "BLOCK",
+      "observed_exit": 1,
+      "terminal_exists": false,
+      "diagnostic": "SUBMIT GATE BLOCKED: ENGINEERING_BATCH_PROOF_INVALID: Q05 runner receipt binding invalid",
+      "pass": true,
+      "raw": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-independent-challenge\\run-01\\raw\\missing_receipt_node_ids.json",
+      "fixture": {
+        "synthetic": true,
+        "plan_shots": 54,
+        "candidate_cache_validator": "r6_cache.verify_deps",
+        "q05_real_pytest_tests": 2
+      },
+      "terminal_status": null
+    },
+    {
+      "case": "forged_pass_for_failing_pytest",
+      "expected": "BLOCK",
+      "observed_exit": 1,
+      "terminal_exists": false,
+      "diagnostic": "SUBMIT GATE BLOCKED: ENGINEERING_BATCH_PROOF_INVALID: Q05 claims differ from actual pytest run",
+      "pass": true,
+      "raw": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-independent-challenge\\run-01\\raw\\forged_pass_for_failing_pytest.json",
+      "fixture": {
+        "synthetic": true,
+        "plan_shots": 54,
+        "candidate_cache_validator": "r6_cache.verify_deps",
+        "q05_real_pytest_tests": 2
+      },
+      "terminal_status": null
+    },
+    {
+      "case": "missing_one_of_54_dependency_files",
+      "expected": "BLOCK",
+      "observed_exit": 1,
+      "terminal_exists": false,
+      "diagnostic": "SUBMIT GATE BLOCKED: ENGINEERING_BATCH_PROOF_INVALID: Q07 dependency path missing/duplicate",
+      "pass": true,
+      "raw": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-independent-challenge\\run-01\\raw\\missing_one_of_54_dependency_files.json",
+      "fixture": {
+        "synthetic": true,
+        "plan_shots": 54,
+        "candidate_cache_validator": "r6_cache.verify_deps",
+        "q05_real_pytest_tests": 2
+      },
+      "terminal_status": null
+    },
+    {
+      "case": "missing_one_of_54_dependency_entries",
+      "expected": "BLOCK",
+      "observed_exit": 1,
+      "terminal_exists": false,
+      "diagnostic": "SUBMIT GATE BLOCKED: ENGINEERING_BATCH_PROOF_INVALID: Q07 claimed coverage differs from verified records",
+      "pass": true,
+      "raw": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-independent-challenge\\run-01\\raw\\missing_one_of_54_dependency_entries.json",
+      "fixture": {
+        "synthetic": true,
+        "plan_shots": 54,
+        "candidate_cache_validator": "r6_cache.verify_deps",
+        "q05_real_pytest_tests": 2
+      },
+      "terminal_status": null
+    },
+    {
+      "case": "changed_consumed_dependency_bytes",
+      "expected": "BLOCK",
+      "observed_exit": 1,
+      "terminal_exists": false,
+      "diagnostic": "SUBMIT GATE BLOCKED: ENGINEERING_BATCH_PROOF_INVALID: Q07 dependency validator: complete asset deps invalid: source hash changed",
+      "pass": true,
+      "raw": "C:\\Users\\Admin\\Documents\\Codex\\g1c16-independent-challenge\\run-01\\raw\\changed_consumed_dependency_bytes.json",
+      "fixture": {
+        "synthetic": true,
+        "plan_shots": 54,
+        "candidate_cache_validator": "r6_cache.verify_deps",
+        "q05_real_pytest_tests": 2
+      },
+      "terminal_status": null
+    }
+  ],
+  "behavioral_challenges_pass": true,
+  "candidate_inventory_pass": true,
+  "all_challenges_pass": true,
+  "overall_verdict": "PASS",
+  "scope": "synthetic CPU fixture only; no media, GPU, or product acceptance"
+}
